@@ -1,0 +1,579 @@
+[
+ {
+  "name": "step_block",
+  "title": "Step block",
+  "criteria": "3.1",
+  "uses": "Isometric drawing, first and third angle projection, the glass box, Activity 1.",
+  "description": "The step block used in the criterion 3.1 lesson (Activity 1): 60 long, 40 deep, 40 high, a 10 mm hole through the lower step.",
+  "parts": [
+   {
+    "name": "step block",
+    "colour": "#5B8DEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   40.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/step_block.step",
+   "stl": "stl/step_block.stl",
+   "glb": "glb/step_block.glb",
+   "edges": "edges/step_block.json"
+  },
+  "drawings": {
+   "third": "drawings/step_block_third_angle",
+   "first": "drawings/step_block_first_angle"
+  }
+ },
+ {
+  "name": "sloping_block",
+  "title": "Sloping block",
+  "criteria": "3.1",
+  "uses": "Auxiliary views: why a hole on a sloping face looks oval until it is viewed square on.",
+  "description": "A block with a 45 degree sloping face and a 12 mm hole drilled square to the slope. The hole only shows its true shape in an auxiliary view.",
+  "parts": [
+   {
+    "name": "sloping block",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   40.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/sloping_block.step",
+   "stl": "stl/sloping_block.stl",
+   "glb": "glb/sloping_block.glb",
+   "edges": "edges/sloping_block.json"
+  },
+  "drawings": {
+   "third": "drawings/sloping_block_third_angle",
+   "first": "drawings/sloping_block_first_angle"
+  }
+ },
+ {
+  "name": "flanged_bush",
+  "title": "Flanged bush",
+  "criteria": "3.1, 3.2",
+  "uses": "Full section A-A, hatching, centre lines, repeated holes on a PCD.",
+  "description": "Flanged bush: a classic part for a full section. Flange 70 diameter, body 40 diameter, bore 24.",
+  "parts": [
+   {
+    "name": "flanged bush",
+    "colour": "#D4B25A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   70.0,
+   50.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/flanged_bush.step",
+   "stl": "stl/flanged_bush.stl",
+   "glb": "glb/flanged_bush.glb",
+   "edges": "edges/flanged_bush.json"
+  },
+  "drawings": {
+   "third": "drawings/flanged_bush_third_angle",
+   "first": "drawings/flanged_bush_first_angle",
+   "section": "drawings/flanged_bush_section"
+  }
+ },
+ {
+  "name": "bolted_joint",
+  "title": "Bolted joint",
+  "criteria": "3.1",
+  "uses": "Assembly and general arrangement drawings, exploded views, parts lists, standard fasteners.",
+  "description": "Two plates held by an M8 bolt, washer and nut. Used for assembly drawings, GA drawings and exploded views.",
+  "parts": [
+   {
+    "name": "lower plate",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "upper plate",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     22.4,
+     0.0
+    ]
+   },
+   {
+    "name": "washer",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     44.8,
+     0.0
+    ]
+   },
+   {
+    "name": "hex bolt M8 x 40",
+    "colour": "#4A5562",
+    "explode": [
+     -0.0,
+     -22.4,
+     -0.0
+    ]
+   },
+   {
+    "name": "hex nut M8",
+    "colour": "#9AA6B2",
+    "explode": [
+     -0.0,
+     -44.8,
+     -0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   80.0,
+   40.0,
+   45.3
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/bolted_joint.step",
+   "stl": "stl/bolted_joint.stl",
+   "glb": "glb/bolted_joint.glb",
+   "edges": "edges/bolted_joint.json"
+  },
+  "drawings": {
+   "third": "drawings/bolted_joint_third_angle",
+   "first": "drawings/bolted_joint_first_angle",
+   "section": "drawings/bolted_joint_section"
+  }
+ },
+ {
+  "name": "threaded_shaft",
+  "title": "Threaded shaft",
+  "criteria": "3.1, 3.2",
+  "uses": "Screw thread conventions, undercuts, chamfers, keyways, detail views.",
+  "description": "Stepped shaft with a keyway, an M16 thread, a thread undercut and chamfers.",
+  "parts": [
+   {
+    "name": "threaded shaft",
+    "colour": "#9AA6B2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   128.0,
+   30.0,
+   30.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/threaded_shaft.step",
+   "stl": "stl/threaded_shaft.stl",
+   "glb": "glb/threaded_shaft.glb",
+   "edges": "edges/threaded_shaft.json"
+  },
+  "drawings": {
+   "third": "drawings/threaded_shaft_third_angle",
+   "first": "drawings/threaded_shaft_first_angle"
+  }
+ },
+ {
+  "name": "pcd_flange",
+  "title": "PCD flange",
+  "criteria": "3.1, 3.2",
+  "uses": "Pitch circle diameter, equally spaced holes, centre marks, half sections.",
+  "description": "Flange with six holes equally spaced on a 90 mm pitch circle diameter (PCD).",
+  "parts": [
+   {
+    "name": "PCD flange",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   120.0,
+   120.0,
+   35.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/pcd_flange.step",
+   "stl": "stl/pcd_flange.stl",
+   "glb": "glb/pcd_flange.glb",
+   "edges": "edges/pcd_flange.json"
+  },
+  "drawings": {
+   "third": "drawings/pcd_flange_third_angle",
+   "first": "drawings/pcd_flange_first_angle",
+   "section": "drawings/pcd_flange_section"
+  }
+ },
+ {
+  "name": "annotation_plate",
+  "title": "Annotation plate",
+  "criteria": "3.1, 3.2",
+  "uses": "Activity 5: countersinks, a bore with a chamfer, centre marks, hole notes and abbreviations.",
+  "description": "The 100 x 60 x 10 plate from Activity 5: four 6.6 mm holes countersunk to 13 mm at 90 degrees, a 40 mm bore with a 1 x 45 degree chamfer.",
+  "parts": [
+   {
+    "name": "annotation plate",
+    "colour": "#5B8DEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   100.0,
+   60.0,
+   10.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/annotation_plate.step",
+   "stl": "stl/annotation_plate.stl",
+   "glb": "glb/annotation_plate.glb",
+   "edges": "edges/annotation_plate.json"
+  },
+  "drawings": {
+   "third": "drawings/annotation_plate_third_angle",
+   "first": "drawings/annotation_plate_first_angle",
+   "section": "drawings/annotation_plate_section"
+  }
+ },
+ {
+  "name": "hole_features",
+  "title": "Hole features block",
+  "criteria": "3.1",
+  "uses": "Clearance hole, counterbore (CBORE), countersink (CSK) and a blind tapping drill hole, side by side.",
+  "description": "One block, four holes: plain clearance, counterbore, countersink and a blind tapping drill hole.",
+  "parts": [
+   {
+    "name": "hole features block",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   110.0,
+   40.0,
+   20.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/hole_features.step",
+   "stl": "stl/hole_features.stl",
+   "glb": "glb/hole_features.glb",
+   "edges": "edges/hole_features.json"
+  },
+  "drawings": {
+   "third": "drawings/hole_features_third_angle",
+   "first": "drawings/hole_features_first_angle",
+   "section": "drawings/hole_features_section"
+  }
+ },
+ {
+  "name": "vee_block",
+  "title": "Vee block",
+  "criteria": "3.1",
+  "uses": "Orthographic practice: a vee, a relief slot and hidden detail.",
+  "description": "Vee block: a standard workshop item and a good orthographic exercise (a vee, a slot, hidden detail).",
+  "parts": [
+   {
+    "name": "vee block",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   80.0,
+   50.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/vee_block.step",
+   "stl": "stl/vee_block.stl",
+   "glb": "glb/vee_block.glb",
+   "edges": "edges/vee_block.json"
+  },
+  "drawings": {
+   "third": "drawings/vee_block_third_angle",
+   "first": "drawings/vee_block_first_angle"
+  }
+ },
+ {
+  "name": "l_bracket",
+  "title": "L bracket",
+  "criteria": "3.1, 3.2",
+  "uses": "Bent plate with an inside radius, a slot and a hole: views, hidden detail and dimensioning.",
+  "description": "Bent L bracket, 5 mm plate, a slot in the base and a hole in the upright, with a 6 mm inside bend radius.",
+  "parts": [
+   {
+    "name": "L bracket",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   40.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/l_bracket.step",
+   "stl": "stl/l_bracket.stl",
+   "glb": "glb/l_bracket.glb",
+   "edges": "edges/l_bracket.json"
+  },
+  "drawings": {
+   "third": "drawings/l_bracket_third_angle",
+   "first": "drawings/l_bracket_first_angle"
+  }
+ },
+ {
+  "name": "fit_pair",
+  "title": "Pin and housing fit",
+  "criteria": "3.2",
+  "uses": "Limits and fits: a 20 H7 hole and a 20 g6 pin, clearance fit.",
+  "description": "A 20 mm H7 hole in a housing and a 20 mm g6 pin: the pair used for limits and fits in criterion 3.2. The model is at nominal size; the tolerances are on the drawing.",
+  "parts": [
+   {
+    "name": "housing (hole 20 H7)",
+    "colour": "#C9D3DD",
+    "explode": [
+     -0.0,
+     -8.4,
+     -0.0
+    ]
+   },
+   {
+    "name": "pin (shaft 20 g6)",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     8.4,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   40.0,
+   45.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/fit_pair.step",
+   "stl": "stl/fit_pair.stl",
+   "glb": "glb/fit_pair.glb",
+   "edges": "edges/fit_pair.json"
+  },
+  "drawings": {
+   "third": "drawings/fit_pair_third_angle",
+   "first": "drawings/fit_pair_first_angle",
+   "section": "drawings/fit_pair_section"
+  }
+ },
+ {
+  "name": "pneumatic_cylinder",
+  "title": "Pneumatic cylinder",
+  "criteria": "3.1",
+  "uses": "The real component behind the single-acting, spring-return cylinder symbol (ISO 1219-1:2012).",
+  "description": "Single-acting pneumatic cylinder with spring return: the real thing behind the symbol in Part 2.",
+  "parts": [
+   {
+    "name": "barrel",
+    "colour": "#C9D3DD",
+    "explode": [
+     -19.61,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "name": "rear cap with air port",
+    "colour": "#4A5562",
+    "explode": [
+     -98.03,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "name": "front cap",
+    "colour": "#4A5562",
+    "explode": [
+     98.03,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "piston",
+    "colour": "#E8A33D",
+    "explode": [
+     -58.82,
+     -0.0,
+     -0.0
+    ]
+   },
+   {
+    "name": "piston rod",
+    "colour": "#9AA6B2",
+    "explode": [
+     58.82,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "return spring",
+    "colour": "#D4B25A",
+    "explode": [
+     19.61,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   140.0,
+   44.0,
+   44.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "step/pneumatic_cylinder.step",
+   "stl": "stl/pneumatic_cylinder.stl",
+   "glb": "glb/pneumatic_cylinder.glb",
+   "edges": "edges/pneumatic_cylinder.json"
+  },
+  "drawings": {
+   "third": "drawings/pneumatic_cylinder_third_angle",
+   "first": "drawings/pneumatic_cylinder_first_angle",
+   "section": "drawings/pneumatic_cylinder_section"
+  }
+ }
+]

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 3 CAD viewer</title>
+<style>
+:root{--bg:#F4F6F8;--panel:#FFFFFF;--ink:#16335B;--muted:#4E5A68;--line:#D5DCE4;--accent:#1565D8;--amber:#E8A33D}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+#stage{position:fixed;inset:0}
+canvas{display:block}
+header{position:fixed;left:16px;top:12px;right:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;pointer-events:none}
+header>*{pointer-events:auto}
+h1{font-size:20px;margin:0}
+a.back{color:var(--accent);font-size:14px;text-decoration:none}
+#bar{position:fixed;left:16px;right:16px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button,select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 12px;cursor:pointer}
+button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+#info{position:fixed;right:16px;top:56px;width:min(340px,calc(100% - 32px));background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.45}
+#info h2{font-size:15px;margin:0 0 6px}
+#info ul{margin:6px 0 0;padding-left:18px}
+#caption{position:fixed;left:0;right:0;top:46%;text-align:center;font-weight:bold;font-size:40px;color:var(--ink);opacity:0;transition:opacity .25s;pointer-events:none;text-shadow:0 0 8px var(--bg)}
+body.render header,body.render #bar,body.render #info{display:none}
+body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
+@media (max-width:640px){#info{display:none}#caption{font-size:28px}}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<div id="stage"></div>
+<header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1></header>
+<div id="info"></div>
+<div id="caption"></div>
+<div id="bar">
+  <button data-view="iso" class="on">Isometric</button>
+  <button data-view="front">Front view</button>
+  <button data-view="plan">Plan</button>
+  <button data-view="right">End view (right)</button>
+  <button data-view="left">End view (left)</button>
+  <label><input type="checkbox" id="persp"> Perspective</label>
+  <label><input type="checkbox" id="edges" checked> Edges</label>
+  <label id="explodeL"><span>Explode</span><input type="range" id="explode" min="0" max="1" step="0.01" value="0"></label>
+  <label id="sectionL"><input type="checkbox" id="section"> Section A-A</label>
+  <button id="spin">Spin</button>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from './vendor/controls/OrbitControls.js';
+import { GLTFLoader } from './vendor/loaders/GLTFLoader.js';
+
+const q = new URLSearchParams(location.search);
+const NAME = q.get('m') || 'step_block';
+const RENDER = q.has('render');
+const BG = '#' + (q.get('bg') || 'F4F6F8');
+if (RENDER) document.body.classList.add('render');
+document.documentElement.style.setProperty('--bg', BG);
+
+const stage = document.getElementById('stage');
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(RENDER ? 1 : Math.min(2, window.devicePixelRatio));
+renderer.localClippingEnabled = true;
+stage.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(BG);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8a96a3, 1.6));
+const sun = new THREE.DirectionalLight(0xffffff, 1.7); sun.position.set(2, 3, 2.5); scene.add(sun);
+const fill = new THREE.DirectionalLight(0xffffff, 0.6); fill.position.set(-3, 1, -2); scene.add(fill);
+
+let cam, ortho, persp, controls, size = 100, sizeA = 100, sizeE = 100, centre = new THREE.Vector3();
+const root = new THREE.Group(); scene.add(root);
+const parts = [];             // {node, edges, offset}
+let catalogueEntry = null;
+
+// clipping for section A-A: cut on the CAD XZ plane (glTF XY plane), keep the back half
+const clip = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
+let sectionOn = false;
+
+function setSize() {
+  const w = RENDER ? +(q.get('w') || 1280) : innerWidth, h = RENDER ? +(q.get('h') || 720) : innerHeight;
+  renderer.setSize(w, h, false);
+  renderer.domElement.style.width = w + 'px'; renderer.domElement.style.height = h + 'px';
+  const a = w / h, s = size * 0.92;
+  ortho.left = -s * a; ortho.right = s * a; ortho.top = s; ortho.bottom = -s; ortho.updateProjectionMatrix();
+  persp.aspect = a; persp.updateProjectionMatrix();
+}
+
+const VIEWS = {
+  iso: new THREE.Vector3(1, 1, 1),        // CAD (1,-1,1) in glTF axes
+  front: new THREE.Vector3(0, 0, 1),
+  plan: new THREE.Vector3(0, 1, 0.0001),
+  right: new THREE.Vector3(1, 0, 0),
+  left: new THREE.Vector3(-1, 0, 0),
+};
+const CAPTIONS = { iso: 'Isometric view', front: 'Front view', plan: 'Plan', right: 'End view from the right', left: 'End view from the left' };
+
+function camPos(dir, dist) { return centre.clone().add(dir.clone().normalize().multiplyScalar(dist)); }
+function placeCamera(dir) {
+  for (const c of [ortho, persp]) {
+    c.position.copy(camPos(dir, size * 3));
+    c.up.set(0, 1, 0);
+    c.lookAt(centre);
+  }
+  controls.target.copy(centre); controls.update();
+}
+function useCamera(c) { const d = cam ? cam.position.clone().sub(centre) : VIEWS.iso.clone(); cam = c; controls.object = c; c.position.copy(camPos(d, size * 3)); c.lookAt(centre); controls.update(); }
+
+function applyExplode(t) {
+  if (ortho) { size = sizeA + (sizeE - sizeA) * t; setSize(); }
+  for (const p of parts) {
+    const o = p.offset;
+    p.node.position.set(o[0] * t, o[1] * t, o[2] * t);
+    if (p.edges) p.edges.position.copy(p.node.position);
+  }
+}
+function applySection(on, depth = 0) {
+  sectionOn = on;
+  clip.constant = centre.z + depth;   // keeps glTF z <= centre + depth, that is the back half
+  for (const p of parts) {
+    const cut = on && !p.standard;          // standard parts (bolts, pins, rods, springs) are not sectioned
+    for (const m of p.mats) m.clippingPlanes = cut ? [clip] : [];
+    if (p.edges) p.edges.material.clippingPlanes = cut ? [clip] : [];
+    p.cap.visible = cut;
+  }
+}
+function caption(text) {
+  const c = document.getElementById('caption');
+  c.textContent = text || ''; c.style.opacity = text ? 1 : 0;
+}
+
+async function load() {
+  const cat = await (await fetch('models.json')).json();
+  catalogueEntry = cat.find(e => e.name === NAME) || cat[0];
+  document.getElementById('title').textContent = catalogueEntry.title;
+  document.title = catalogueEntry.title + ' · Unit 3 CAD viewer';
+  const info = document.getElementById('info');
+  info.innerHTML = `<h2>${catalogueEntry.title}</h2><div>${catalogueEntry.description}</div>
+    <div style="margin-top:6px"><b>Criteria:</b> ${catalogueEntry.criteria}</div>
+    <div><b>Use it for:</b> ${catalogueEntry.uses}</div>
+    <ul>${catalogueEntry.parts.map(p => `<li><span style="color:${p.colour}">&#9632;</span> ${p.name}</li>`).join('')}</ul>
+    <div style="margin-top:6px"><a href="${catalogueEntry.files.step}">STEP</a> · <a href="${catalogueEntry.files.stl}">STL</a></div>`;
+  if (!catalogueEntry.exploded) document.getElementById('explodeL').style.display = 'none';
+  if (!catalogueEntry.section) document.getElementById('sectionL').style.display = 'none';
+
+  const gltf = await new GLTFLoader().loadAsync(catalogueEntry.files.glb);
+  const edges = await (await fetch(catalogueEntry.files.edges)).json();
+  const nodes = [];
+  gltf.scene.traverse(o => { if (o.isMesh) nodes.push(o); });
+  for (const spec of catalogueEntry.parts) {
+    const mesh = nodes.find(n => n.name === spec.name || (n.parent && n.parent.name === spec.name)) || nodes[parts.length];
+    const col = new THREE.Color(spec.colour);
+    const mat = new THREE.MeshStandardMaterial({ color: col, metalness: 0.15, roughness: 0.55, side: THREE.FrontSide,
+                                                 polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+    const geom = mesh.geometry;
+    const node = new THREE.Mesh(geom, mat);
+    // section cap: back faces drawn flat in a darker tone show the cut material
+    const capMat = new THREE.MeshBasicMaterial({ color: col.clone().lerp(new THREE.Color(0xffffff), 0.25), side: THREE.BackSide });
+    // hatching on the cut face: thin dark lines at 45 degrees, drawn in screen space
+    const hatchSign = parts.filter(pp => !pp.standard).length % 2 ? '-' : '+';   // touching parts hatch in opposite directions
+    capMat.onBeforeCompile = sh => {
+      sh.fragmentShader = sh.fragmentShader.replace('#include <dithering_fragment>',
+        'float hk = mod(gl_FragCoord.x ' + hatchSign + ' gl_FragCoord.y + 2000.0, 10.0);\n if (hk < 1.6) gl_FragColor.rgb *= 0.25;\n#include <dithering_fragment>');
+    };
+    capMat.customProgramCacheKey = () => 'hatch' + hatchSign;
+    const cap = new THREE.Mesh(geom, capMat); cap.visible = false; node.add(cap);
+    root.add(node);
+    let eLines = null;
+    const pls = edges[spec.name] || [];
+    if (pls.length) {
+      const pos = [];
+      for (const pl of pls) for (let i = 0; i + 5 < pl.length; i += 3) pos.push(pl[i], pl[i + 1], pl[i + 2], pl[i + 3], pl[i + 4], pl[i + 5]);
+      const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+      eLines = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0x1D2B3A }));
+      root.add(eLines);
+    }
+    const standard = /bolt|nut|washer|pin|rod|spring/i.test(spec.name) && catalogueEntry.parts.length > 1;
+    parts.push({ node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard });
+  }
+  if (catalogueEntry.iso) VIEWS.iso = new THREE.Vector3(...catalogueEntry.iso);
+  const box = new THREE.Box3().setFromObject(root);
+  box.getCenter(centre);
+  const solid = box.getSize(new THREE.Vector3()).length();
+  sizeA = solid * 0.62; sizeE = sizeA;
+  if (catalogueEntry.exploded) {
+    applyExplode(1); const eb = new THREE.Box3().setFromObject(root); applyExplode(0);
+    sizeE = Math.max(sizeA, eb.getSize(new THREE.Vector3()).length() * 0.58);
+  }
+  size = sizeA;
+  ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, size * 20);
+  persp = new THREE.PerspectiveCamera(35, 1, 0.1, size * 20);
+  cam = ortho;
+  controls = new OrbitControls(cam, renderer.domElement);
+  controls.enableDamping = !RENDER;
+  setSize(); placeCamera(VIEWS.iso);
+  window.addEventListener('resize', setSize);
+  loop();
+  const bz = box.max.z - centre.z;
+  window.U3 = { ready: true, setState, size, front: bz, iso: VIEWS.iso.toArray(), frame: () => renderer.render(scene, cam) };
+}
+
+let spinning = false;
+function loop() {
+  requestAnimationFrame(loop);
+  if (RENDER) return;
+  if (spinning) { const p = cam.position.clone().sub(centre); p.applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.01); cam.position.copy(centre.clone().add(p)); cam.lookAt(centre); }
+  controls.update(); renderer.render(scene, cam);
+}
+
+// used by the render tool: one call per frame
+function setState(s) {
+  if (s.dir) { const d = s.dir === 'iso' ? VIEWS.iso.clone() : new THREE.Vector3(...s.dir); placeCamera(d); }
+  if (s.blend) { const d = VIEWS.iso.clone().normalize().lerp(new THREE.Vector3(...s.blend[0]).normalize(), s.blend[1]); placeCamera(d); }
+  if (s.zoom) { ortho.zoom = s.zoom; ortho.updateProjectionMatrix(); }
+  if (s.explode !== undefined) applyExplode(s.explode);
+  if (s.section !== undefined) applySection(s.section, s.depth ?? 0);
+  if (s.edges !== undefined) for (const p of parts) if (p.edges) p.edges.visible = s.edges;
+  caption(s.caption || '');
+  renderer.render(scene, cam);
+}
+
+document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('[data-view]').forEach(x => x.classList.remove('on')); b.classList.add('on');
+  placeCamera(VIEWS[b.dataset.view]); caption(CAPTIONS[b.dataset.view]); setTimeout(() => caption(''), 1400);
+});
+document.getElementById('persp').onchange = e => useCamera(e.target.checked ? persp : ortho);
+document.getElementById('edges').onchange = e => parts.forEach(p => p.edges && (p.edges.visible = e.target.checked));
+document.getElementById('explode').oninput = e => applyExplode(+e.target.value);
+document.getElementById('section').onchange = e => applySection(e.target.checked, 0);
+document.getElementById('spin').onclick = e => { spinning = !spinning; e.target.classList.toggle('on', spinning); };
+load();
+</script>
+</body>
+</html>
