@@ -57,6 +57,7 @@ footer{color:var(--muted);font-size:13px;padding:0 0 30px}
     <h2>Using the hub in a lesson</h2>
     <p><b>3D viewer:</b> open a model, then use the view buttons to jump between the isometric view, the front view, the plan and the end views. Ask learners to sketch each view before you click to it. Tick Section A-A to cut the part in half, or drag Explode to pull an assembly apart.</p>
     <p><b>Build steps (Inventor):</b> open the Build steps tab in the viewer to rebuild a model one stage at a time. Each step names the Autodesk Inventor command, where it is on the ribbon and what to click and type. The 3D model shows the part as it stands after that step, with the material the step adds in amber and the material it cuts away in red. Use the arrow keys or Next step to move on.</p>
+    <p><b>FEA (Stress Analysis):</b> the FEA tab walks through a static stress analysis in Autodesk Inventor: material, fixed constraints, loads, mesh settings, running the study, and reading the von Mises stress, displacement and safety factor. Every model has a realistic load case, and the colour plots come from a real finite element solve of that case, so learners can repeat the study in Inventor and compare their numbers.</p>
     <p><b>Drawings:</b> each model has a third angle sheet and a first angle sheet (front view, plan, end view, isometric, centre lines, hidden detail and an ISO 7200 style title block), and a section A-A sheet where a section is useful. The SVG files can be edited; the PNG files print well.</p>
     <p><b>Animations:</b> short silent MP4 clips (a turntable spin, the move from isometric into each view, the exploded view and the section cut). They play in PowerPoint and Teams.</p>
     <p><b>Downloads:</b> STEP files open in Fusion, Inventor, SolidWorks, Onshape and FreeCAD. STL files are for 3D printing or quick viewing.</p>
@@ -81,7 +82,7 @@ function card(m) {
         ${m.parts.length > 1 ? `<span class="chip">${m.parts.length} parts</span>` : ''}</div>
       <p class="uses">${m.uses}</p>
       <div class="links">
-        <a class="btn" href="viewer.html?m=${m.name}">Open in 3D</a> <a class="btn" style="background:var(--ink)" href="viewer.html?m=${m.name}&tab=steps">Build steps (Inventor)</a>
+        <a class="btn" href="viewer.html?m=${m.name}">Open in 3D</a> <a class="btn" style="background:var(--ink)" href="viewer.html?m=${m.name}&tab=steps">Build steps (Inventor)</a> <a class="btn" style="background:#7A4A00" href="viewer.html?m=${m.name}&tab=fea">FEA</a>
         <b>Drawings</b>
         ${d.third ? `<a href="${d.third}.png">Third angle</a> <a href="${d.third}.svg">(SVG)</a>` : ''}
         ${d.first ? `<a href="${d.first}.png">First angle</a> <a href="${d.first}.svg">(SVG)</a>` : ''}

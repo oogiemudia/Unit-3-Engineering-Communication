@@ -13,6 +13,7 @@ The website lives in the `docs` folder. To publish it (once): on GitHub open **S
 - `index.html`: the catalogue, with a spinning preview of each model
 - `viewer.html?m=<model>`: the 3D viewer (isometric, front, plan and end views, perspective, edges, explode and section A-A)
 - `viewer.html?m=<model>&tab=steps`: the Build steps tab, which rebuilds the model one stage at a time with the Autodesk Inventor command for each step (add `&step=3` to open a given step)
+- `viewer.html?m=<model>&tab=fea`: the FEA tab, an Inventor Stress Analysis study of the model, step by step, with real results
 
 ## What is in it
 
@@ -40,6 +41,7 @@ For each model the `docs` folder holds:
 | `glb/` | glTF file used by the web viewer |
 | `drawings/` | A3 drawing sheets as SVG (editable) and PNG: third angle, first angle, and section A-A where useful |
 | `media/` | Isometric still (PNG) and silent MP4 clips, 1280 x 720 |
+| `fea/` | The FEA tab: one JSON file per model with the load case, the Inventor steps, the surface mesh and the results |
 | `steps/` | The Build steps tab: one JSON file per model with the Inventor commands, and a GLB and edges file for every stage |
 
 ## Drawing conventions used
@@ -59,6 +61,12 @@ The Build steps tab in the viewer takes a learner through making each model in A
 
 The steps are written in `models/inventor_steps.py`. Plane names follow Inventor's default (Y up): the XY Plane is the front, the XZ Plane is the top and the YZ Plane is the side. The stage models are made in CadQuery with the same operations as `models/parts.py`, so they are a guide to the Inventor workflow rather than Inventor files. To change a step, edit `models/inventor_steps.py` and run `python3 tools/build_steps.py <model>`.
 
+## FEA (Inventor Stress Analysis)
+
+The FEA tab takes a learner through a static stress analysis in Autodesk Inventor: open the Stress Analysis environment, create a study, assign the material, fix the part, apply the load, set up and view the mesh, run it, then read the von Mises stress, displacement and safety factor and write the report. Each step shows the matching picture: fixed faces in blue, loaded faces in amber with arrows, the mesh, and colour plots of the results on the deformed shape.
+
+The load cases are in `models/fea_cases.py` (which part, material, fixed faces and loads, with a one line story). `tools/build_fea.py` meshes each part with gmsh, solves linear elasticity with 10 node tetrahedra in scikit-fem, and writes `docs/fea/<model>.json`. The solver was checked against a cantilever hand calculation (tip deflection within 0.2 %). Inventor's own answers will be close but not identical, because its mesh is different: that is a useful discussion point.
+
 ## Rebuild everything
 
 ```bash
@@ -67,6 +75,7 @@ pip install cadquery trimesh playwright   # Playwright needs Chromium: python -m
 python3 tools/build_models.py   # STEP, STL, GLB, edges, docs/models.json
 python3 tools/drawings.py       # drawing sheets (SVG and PNG)
 python3 tools/build_steps.py    # Build steps tab: a model of every stage (checks the last stage matches the finished model)
+python3 tools/build_fea.py      # FEA tab: mesh and solve each load case (needs gmsh and scikit-fem)
 python3 tools/render.py         # stills and MP4 animations
 python3 tools/render.py step_block --bg FDF6E3 --suffix _cream   # cream background for the dyslexia friendly decks
 ```
