@@ -46,6 +46,20 @@ label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--pa
 #dots button{width:26px;height:26px;padding:0;border-radius:50%;font-size:12px}
 #dots button.done{background:#E2EDFC}
 #steps label{border:0;padding:0}
+#steps .sum{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;background:#F4F6F8;border-radius:8px;padding:8px 10px;font-size:13px}
+#steps .sum b{display:block;color:var(--muted);font-weight:normal;font-size:12px}
+#steps .scale{width:100%}
+#steps .scale .bar{height:12px;border-radius:6px;margin:4px 0 2px}
+#steps .scale .ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+#steps .slider{display:flex;flex-direction:column;align-items:stretch;gap:2px}
+#steps .hint{font-size:12px;color:var(--muted);margin:-4px 0 4px}
+#feaCtl[hidden],#summary[hidden],#changesL[hidden],#simCtl[hidden],#tabs button[hidden]{display:none}
+#simCtl .simrow{display:flex;gap:8px;align-items:center}
+#simCtl .simrow input{flex:1}
+#simCtl .simrow span{font-variant-numeric:tabular-nums;font-size:13px;width:52px;text-align:right}
+#simGraph{width:100%;height:150px;display:block;margin-top:6px}
+#simVals{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px}
+#steps .story{background:#F4F6F8;border-radius:8px;padding:8px 10px;font-size:13.5px}
 body.steps #info,body.steps #explodeL,body.steps #sectionL{display:none!important}
 body.render header,body.render #bar,body.render #info{display:none}
 body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
@@ -56,18 +70,23 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
 <body>
 <div id="stage"></div>
 <header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1>
-  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button></nav></header>
+  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button><button data-tab="sim">Simulation (Inventor)</button><button data-tab="fea">FEA (Stress Analysis)</button></nav></header>
 <div id="info"></div>
 <div id="caption"></div>
 <div id="steps" hidden>
-  <div class="sh"><span id="stepCount"></span><span class="sw">Autodesk Inventor</span></div>
+  <div class="sh"><span id="stepCount"></span><span class="sw" id="badge">Autodesk Inventor</span></div>
   <h2 id="stepTitle"></h2>
   <div class="cmd"><b id="cmdName"></b><span id="cmdPath"></span></div>
   <ol id="stepActions"></ol>
   <p id="stepNote" class="note"></p>
   <div id="legend"></div>
+  <div id="feaCtl" hidden><label class="slider">Deformation scale <input type="range" id="defScale" min="0" max="3" step="0.05" value="1"></label><div id="defLabel" class="hint"></div>
+    <label><input type="checkbox" id="showMesh"> Show the mesh</label></div>
+  <div id="simCtl" hidden><div class="simrow"><button id="simPlay">Play</button><input type="range" id="simTime" min="0" max="6" step="0.01" value="0"><span id="simTimeL">0.00 s</span></div>
+    <canvas id="simGraph" height="150"></canvas><div id="simVals"></div></div>
+  <div id="summary" hidden></div>
   <p id="stepNext" class="next"></p>
-  <label><input type="checkbox" id="changes" checked> Highlight what this step changes</label>
+  <label id="changesL"><input type="checkbox" id="changes" checked> Highlight what this step changes</label>
   <div class="nav"><button id="prev">Previous</button><div id="dots"></div><button id="next" class="primary">Next step</button></div>
 </div>
 <div id="bar">
@@ -124,7 +143,10 @@ function setSize() {
   if (!RENDER && document.body.classList.contains('steps') && !panel.hidden) {
     const r = panel.getBoundingClientRect();
     if (w > 640) { sx = (r.width + 16) / 2; k = Math.min(2, w / Math.max(1, w - r.width - 32)); }
-    else { sy = (r.height + 12) / 2; k = Math.min(2.2, h / Math.max(1, h - r.height - 100)); }
+    else {
+      const top = document.querySelector('header').getBoundingClientRect().bottom + 8, bottom = r.top - 8;
+      sy = h / 2 - (top + bottom) / 2; k = Math.min(3, h / Math.max(80, bottom - top));
+    }
   }
   const a = w / h, s = size * 0.92 * k;
   ortho.left = -s * a; ortho.right = s * a; ortho.top = s; ortho.bottom = -s; ortho.updateProjectionMatrix();
@@ -221,7 +243,7 @@ async function load() {
       root.add(eLines);
     }
     const standard = /bolt|nut|washer|pin|rod|spring/i.test(spec.name) && catalogueEntry.parts.length > 1;
-    parts.push({ node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard });
+    parts.push({ name: spec.name, node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard, base: col.clone() });
   }
   if (catalogueEntry.iso) VIEWS.iso = new THREE.Vector3(...catalogueEntry.iso);
   const box = new THREE.Box3().setFromObject(root);
@@ -249,6 +271,7 @@ let spinning = false;
 function loop() {
   requestAnimationFrame(loop);
   if (RENDER) return;
+  if (tab === 'sim' && sim && simPlaying) { const now = performance.now(); simT += (now - simLast) / 1000; simLast = now; if (simT > sim.duration) simT = 0; simFrame(); }
   if (spinning) { const p = cam.position.clone().sub(centre); p.applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.01); cam.position.copy(centre.clone().add(p)); cam.lookAt(centre); }
   controls.update(); renderer.render(scene, cam);
 }
@@ -348,24 +371,14 @@ async function showStep(i) {
   const steps = stepsMeta.steps;
   stepIdx = Math.max(0, Math.min(steps.length - 1, i));
   const s = steps[stepIdx];
-  document.getElementById('stepCount').textContent = `Step ${stepIdx + 1} of ${steps.length}`;
-  document.getElementById('stepTitle').textContent = s.title;
-  document.getElementById('cmdName').textContent = 'Command: ' + commandName(s.command);
-  document.getElementById('cmdPath').textContent = s.command;
-  document.getElementById('stepActions').innerHTML = s.actions.map(a => `<li>${esc(a)}</li>`).join('');
-  const note = document.getElementById('stepNote'); note.textContent = s.note || ''; note.hidden = !s.note;
+  fillPanel(steps, stepIdx, 'Autodesk Inventor');
+  const nx = steps[stepIdx + 1];
   const leg = [];
   if (s.overlay) leg.push(`<span><i style="background:#F3CF97;border:1px solid #9A5B00"></i>${/thread/i.test(s.title) ? 'Cosmetic thread' : 'Sketch'}</span>`);
   if (s.parts.some(p => p.added || (p.new && stepIdx > 0))) leg.push('<span><i style="background:#E8A33D"></i>Added in this step</span>');
   if (stepIdx > 0 && s.parts.some(p => p.new) && s.parts.some(p => !p.new)) leg.push('<span><i style="background:#C9D3DD;opacity:.5;border:1px solid #9AA6B2"></i>Parts already placed, see through</span>');
   if (s.parts.some(p => p.removed)) leg.push('<span><i style="background:#D64545;opacity:.6"></i>Cut away in this step</span>');
   document.getElementById('legend').innerHTML = leg.join('');
-  const nx = steps[stepIdx + 1];
-  document.getElementById('stepNext').innerHTML = nx ? `<b>Next:</b> ${esc(nx.title)} (${esc(commandName(nx.command))})` : '<b>Finished:</b> this is the complete model.';
-  document.getElementById('prev').disabled = stepIdx === 0;
-  const nb = document.getElementById('next'); nb.disabled = !nx; nb.textContent = nx ? 'Next step' : 'Done';
-  document.querySelectorAll('#dots button').forEach((b, k) => { b.classList.toggle('on', k === stepIdx); b.classList.toggle('done', k < stepIdx); });
-  if (!RENDER) { q.set('tab', 'steps'); q.set('step', stepIdx + 1); history.replaceState(null, '', '?' + q.toString()); }
   const want = stepIdx;
   const o = await stepObjects(want);
   if (want !== stepIdx) return;
@@ -373,37 +386,290 @@ async function showStep(i) {
   if (nx) stepObjects(stepIdx + 1);
 }
 
-async function setTab(t) {
-  if (t === 'steps' && !stepsMeta) {
-    try { stepsMeta = await (await fetch(`steps/${NAME}.json`)).json(); }
-    catch (e) { caption('No build steps for this model yet'); setTimeout(() => caption(''), 1800); return; }
-    document.getElementById('dots').innerHTML = stepsMeta.steps.map((s, k) => `<button title="${esc(s.title)}">${k + 1}</button>`).join('');
-    document.querySelectorAll('#dots button').forEach((b, k) => b.onclick = () => showStep(k));
+// ---------------------------------------------------------------- FEA tab
+const feaRoot = new THREE.Group(); feaRoot.visible = false; scene.add(feaRoot);
+let fea = null, feaIdx = 0;
+const FIXED_C = new THREE.Color('#2F6BFF'), NEUTRAL = new THREE.Color('#C3CBD3'), LOAD_C = new THREE.Color('#E8A33D');
+function ramp(t) { // blue, cyan, green, yellow, red: the usual FEA colour scale
+  t = Math.min(1, Math.max(0, t));
+  return new THREE.Color().setHSL((1 - t) * 0.667, 0.85, 0.5);
+}
+const RAMP_CSS = 'linear-gradient(90deg,' + [0, 0.25, 0.5, 0.75, 1].map(t => '#' + ramp(t).getHexString()).join(',') + ')';
+
+function buildFea() {
+  const S = fea.surface, n = S.vm.length;
+  const base = new Float32Array(S.pos), U = new Float32Array(S.u);
+  const idx = S.tri;
+  // one vertex per triangle corner, so each triangle can be flat shaded and coloured by its group
+  const pos = new Float32Array(idx.length * 3), col = new Float32Array(idx.length * 3);
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  geom.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  const mat = new THREE.MeshStandardMaterial({ vertexColors: true, metalness: 0.05, roughness: 0.7, flatShading: true, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+  const mesh = new THREE.Mesh(geom, mat);
+  // mesh lines: the edges of the surface triangles
+  const seen = new Set(), lp = [];
+  for (let t = 0; t < idx.length; t += 3) for (let k = 0; k < 3; k++) {
+    const a = idx[t + k], b = idx[t + (k + 1) % 3], key = a < b ? a * n + b : b * n + a;
+    if (!seen.has(key)) { seen.add(key); lp.push(a, b); }
   }
+  const wpos = new Float32Array(lp.length * 3);
+  const wg = new THREE.BufferGeometry(); wg.setAttribute('position', new THREE.BufferAttribute(wpos, 3));
+  const wire = new THREE.LineSegments(wg, new THREE.LineBasicMaterial({ color: 0x1D2B3A, transparent: true, opacity: 0.55 }));
+  // arrows for the loads
+  const arrows = new THREE.Group();
+  const len = sizeA * 0.22;
+  for (const a of fea.arrows) {
+    const d = new THREE.Vector3(...a.d), p = new THREE.Vector3(...a.p);
+    arrows.add(new THREE.ArrowHelper(d, p.clone().sub(d.clone().multiplyScalar(len)), len, 0xC25E00, len * 0.3, len * 0.18));
+  }
+  // marker at the highest stress
+  let iMax = 0; for (let i = 1; i < n; i++) if (S.vm[i] > S.vm[iMax]) iMax = i;
+  const marker = new THREE.Mesh(new THREE.SphereGeometry(sizeA * 0.025, 16, 12), new THREE.MeshBasicMaterial({ color: 0x111111 }));
+  feaRoot.add(mesh, wire, arrows, marker);
+  let umax = 0; for (let i = 0; i < n; i++) umax = Math.max(umax, Math.hypot(U[3 * i], U[3 * i + 1], U[3 * i + 2]));
+  const auto = umax > 0 ? sizeA * 0.05 / umax : 0;
+  fea.gfx = { mesh, wire, arrows, marker, base, U, idx, pos, col, wpos, lp, iMax, umax, auto, geom, wg };
+}
+
+function feaColours(view) {
+  const S = fea.surface, g = fea.gfx, part = new THREE.Color(catalogueEntry.parts.find(p => p.name === fea.part)?.colour || '#9AA6B2');
+  const sfMax = 15;
+  let vals = null, lo = 0, hi = 1;
+  if (view === 'vm') { vals = S.vm; hi = fea.results.vm_max; }
+  if (view === 'disp' || view === 'deformed') { vals = S.vm.map((_, i) => Math.hypot(g.U[3 * i], g.U[3 * i + 1], g.U[3 * i + 2])); hi = g.umax; }
+  if (view === 'sf') { vals = S.vm.map(v => Math.min(sfMax, fea.material.yield_strength / Math.max(v, 1e-9))); lo = 0; hi = sfMax; }
+  const c = new THREE.Color();
+  for (let t = 0; t < g.idx.length; t++) {
+    const tri = Math.floor(t / 3), grp = S.group[tri];
+    if (vals) { const v = (vals[g.idx[t]] - lo) / ((hi - lo) || 1); c.copy(view === 'sf' ? ramp(1 - v) : ramp(v)); }
+    else if (grp === 1 && view !== 'part') c.copy(FIXED_C);
+    else if (grp === 2 && (view === 'load' || view === 'mesh')) c.copy(LOAD_C);
+    else c.copy(view === 'part' ? part : NEUTRAL);
+    g.col.set([c.r, c.g, c.b], t * 3);
+  }
+  g.geom.attributes.color.needsUpdate = true;
+  return { lo, hi };
+}
+
+function feaDeform(scale) {
+  const g = fea.gfx, S = fea.surface;
+  const P = i => [g.base[3 * i] + scale * g.U[3 * i], g.base[3 * i + 1] + scale * g.U[3 * i + 1], g.base[3 * i + 2] + scale * g.U[3 * i + 2]];
+  for (let t = 0; t < g.idx.length; t++) g.pos.set(P(g.idx[t]), t * 3);
+  for (let k = 0; k < g.lp.length; k++) g.wpos.set(P(g.lp[k]), k * 3);
+  g.geom.attributes.position.needsUpdate = true; g.geom.computeVertexNormals(); g.geom.computeBoundingSphere();
+  g.wg.attributes.position.needsUpdate = true; g.wg.computeBoundingSphere();
+  g.marker.position.set(...P(g.iMax));
+}
+
+function fmt(x, unit) {
+  if (x === 0) return '0 ' + unit;
+  if (unit === 'mm' && x < 0.01) return x.toExponential(2) + ' mm';
+  return (x >= 100 ? x.toFixed(0) : x >= 10 ? x.toFixed(1) : x.toPrecision(3)) + ' ' + unit;
+}
+
+function feaView() {
+  const st = fea.steps[feaIdx], v = st.view, g = fea.gfx;
+  const results = ['vm', 'disp', 'sf', 'deformed'].includes(v);
+  const range = feaColours(v);
+  const k = results ? +document.getElementById('defScale').value : 0;
+  feaDeform(k * g.auto);
+  g.wire.visible = v === 'mesh' || (results && document.getElementById('showMesh').checked);
+  g.arrows.visible = v === 'load' || v === 'mesh';
+  g.marker.visible = v === 'vm';
+  document.getElementById('feaCtl').hidden = !results;
+  document.getElementById('defLabel').textContent = k ? `Deformation shown ${Math.round(k * g.auto).toLocaleString()} times real size` : 'Deformation off (real size)';
+  const leg = [];
+  if (['fixed', 'load', 'mesh'].includes(v)) leg.push('<span><i style="background:#2F6BFF"></i>Fixed</span>');
+  if (v === 'load' || v === 'mesh') leg.push('<span><i style="background:#E8A33D"></i>Loaded face</span><span><i style="background:#C25E00;height:3px;width:16px;vertical-align:3px"></i>Load direction</span>');
+  if (v === 'mesh') leg.push('<span><i style="border:1px solid #1D2B3A"></i>Mesh elements</span>');
+  if (['vm', 'disp', 'sf', 'deformed'].includes(v)) {
+    const name = { vm: 'Von Mises stress', disp: 'Displacement', deformed: 'Displacement', sf: 'Safety factor' }[v];
+    const unit = { vm: 'MPa', disp: 'mm', deformed: 'mm', sf: '' }[v];
+    const lo = v === 'sf' ? '0' : fmt(range.lo, unit), hi = v === 'sf' ? '15 or more' : fmt(range.hi, unit);
+    const grad = v === 'sf' ? RAMP_CSS.replace('90deg', '270deg') : RAMP_CSS;
+    leg.push(`<div class="scale"><b>${name}</b><div class="bar" style="background:${grad}"></div><div class="ends"><span>${lo}</span><span>${hi}</span></div></div>`);
+    if (v === 'vm') leg.push('<span><i style="background:#111;border-radius:50%"></i>Maximum stress</span>');
+  }
+  document.getElementById('legend').innerHTML = leg.join('');
+}
+
+function feaSummary() {
+  const r = fea.results, m = fea.material;
+  return `<div class="sum"><div><b>Part</b> ${esc(fea.part)}</div><div><b>Material</b> ${esc(m.name)}, yield ${m.yield_strength} MPa</div>
+    <div><b>Max stress</b> ${fmt(r.vm_max, 'MPa')}</div><div><b>Max displacement</b> ${fmt(r.disp_max, 'mm')}</div>
+    <div><b>Min safety factor</b> ${r.sf_min > 1000 ? 'over 1000' : r.sf_min.toFixed(1)}</div><div><b>Mesh</b> ${fea.mesh.elements.toLocaleString()} elements</div></div>`;
+}
+
+
+// ---------------------------------------------------------------- Simulation tab (Inventor Dynamic Simulation)
+let sim = null, simIdx = 0, simT = 0, simPlaying = false, simLast = 0;
+const SERIES_C = ['#1565D8', '#C25E00', '#2E9E5B'];
+function keyAt(keys, t, step) {
+  if (t <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [t0, v0] = keys[i - 1], [t1, v1] = keys[i];
+    if (t <= t1) { if (step) return v0; const u = (t - t0) / ((t1 - t0) || 1), e = u * u * (3 - 2 * u); return v0 + (v1 - v0) * e; }
+  }
+  return keys[keys.length - 1][1];
+}
+const glAxis = a => new THREE.Vector3(a[0], a[2], -a[1]);
+function simReset() {
+  for (const p of parts) {
+    p.node.position.set(0, 0, 0); p.node.quaternion.identity(); p.node.scale.set(1, 1, 1);
+    if (p.edges) { p.edges.position.set(0, 0, 0); p.edges.quaternion.identity(); p.edges.scale.set(1, 1, 1); }
+    const m = p.mats[0]; m.color.copy(p.base); m.emissive.setRGB(0, 0, 0); m.transparent = false; m.opacity = 1; m.depthWrite = true; m.needsUpdate = true;
+  }
+}
+function simPose(t) {
+  for (const p of parts) { p.node.position.set(0, 0, 0); p.node.quaternion.identity(); p.node.scale.set(1, 1, 1); }
+  for (const mo of sim.motion) {
+    const p = parts.find(x => x.name === mo.part); if (!p) continue;
+    const v = keyAt(mo.keys, t), ax = glAxis(mo.axis);
+    if (mo.kind === 'move') p.node.position.add(ax.multiplyScalar(v));
+    if (mo.kind === 'turn') p.node.quaternion.setFromAxisAngle(ax.normalize(), THREE.MathUtils.degToRad(v));
+    if (mo.kind === 'stretch') {
+      const k = v / mo.length0;
+      p.node.scale.set(ax.x ? k : 1, ax.y ? k : 1, ax.z ? k : 1);
+      p.node.position.add(ax.clone().multiplyScalar(mo.anchor * (1 - k)));
+    }
+  }
+  for (const p of parts) if (p.edges) { p.edges.position.copy(p.node.position); p.edges.quaternion.copy(p.node.quaternion); p.edges.scale.copy(p.node.scale); }
+}
+function simLook(view) {
+  const hl = view !== 'model';
+  for (const p of parts) {
+    const moving = sim.moving.includes(p.name), m = p.mats[0];
+    m.color.copy(hl && moving ? p.base.clone().lerp(new THREE.Color('#E8A33D'), 0.55) : p.base);
+    m.emissive.copy(hl && moving ? new THREE.Color('#E8A33D').multiplyScalar(0.15) : new THREE.Color(0));
+    const ghost = hl && !moving;
+    m.transparent = ghost; m.opacity = ghost ? 0.25 : 1; m.depthWrite = !ghost; m.needsUpdate = true;
+    if (p.edges) p.edges.material.opacity = 1;
+  }
+}
+function drawGraph() {
+  const c = document.getElementById('simGraph'), W = c.clientWidth, H = 150, dpr = Math.min(2, devicePixelRatio || 1);
+  if (c.width !== W * dpr) { c.width = W * dpr; c.height = H * dpr; }
+  const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+  const L = 8, R = W - 8, T = 8, B = H - 20, D = sim.duration;
+  g.strokeStyle = '#D5DCE4'; g.lineWidth = 1; g.strokeRect(L, T, R - L, B - T);
+  g.fillStyle = '#4E5A68'; g.font = '11px Arial';
+  for (let s = 0; s <= D; s++) { const x = L + (R - L) * s / D; g.fillText(s + ' s', Math.min(x - 6, R - 18), H - 6); }
+  const vals = [];
+  sim.graph.forEach((se, i) => {
+    const ys = se.keys.map(k => k[1]); let lo = Math.min(...ys), hi = Math.max(...ys); if (hi === lo) hi = lo + 1;
+    g.strokeStyle = SERIES_C[i]; g.lineWidth = 2; g.setLineDash(i === 1 ? [6, 4] : i === 2 ? [2, 3] : []); g.beginPath();
+    for (let k = 0; k <= 200; k++) { const t = D * k / 200, v = keyAt(se.keys, t, se.step), x = L + (R - L) * t / D, y = B - (B - T - 6) * (v - lo) / (hi - lo) - 3; k ? g.lineTo(x, y) : g.moveTo(x, y); }
+    g.stroke();
+    vals.push(`<span style="color:${SERIES_C[i]}"><b>${esc(se.name)}</b> ${keyAt(se.keys, simT, se.step).toFixed(se.unit === 'bar' || se.unit === '' ? 1 : 1)} ${se.unit}</span>`);
+  });
+  g.setLineDash([]); const x = L + (R - L) * simT / D; g.strokeStyle = '#16335B'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, T); g.lineTo(x, B); g.stroke();
+  document.getElementById('simVals').innerHTML = vals.join('');
+}
+function simFrame() {
+  simPose(simT);
+  document.getElementById('simTime').value = simT;
+  document.getElementById('simTimeL').textContent = simT.toFixed(2) + ' s';
+  if (!document.getElementById('simCtl').hidden) drawGraph();
+}
+function showSim(i) {
+  simIdx = Math.max(0, Math.min(sim.steps.length - 1, i));
+  const st = sim.steps[simIdx];
+  fillPanel(sim.steps, simIdx, 'Inventor Dynamic Simulation');
+  const leg = [];
+  if (st.view !== 'model') leg.push('<span><i style="background:#E8A33D"></i>Moving parts</span><span><i style="background:#C9D3DD;opacity:.5;border:1px solid #9AA6B2"></i>Fixed parts, see through</span>');
+  document.getElementById('legend').innerHTML = leg.join('');
+  document.getElementById('summary').innerHTML = `<div class="story">${esc(sim.story)}</div>`;
+  const ctl = ['motion', 'play', 'graph'].includes(st.view);
+  document.getElementById('simCtl').hidden = !ctl;
+  simLook(st.view);
+  if (st.view === 'play' && !simPlaying) togglePlay(true);
+  if (!ctl && simPlaying) togglePlay(false);
+  if (!ctl) simT = 0;
+  simFrame();
+}
+function togglePlay(on) {
+  simPlaying = on ?? !simPlaying; simLast = performance.now();
+  document.getElementById('simPlay').textContent = simPlaying ? 'Pause' : 'Play';
+}
+document.getElementById('simPlay').onclick = () => togglePlay();
+document.getElementById('simTime').oninput = e => { simT = +e.target.value; togglePlay(false); simFrame(); };
+// ---------------------------------------------------------------- shared step panel
+function fillPanel(list, i, badge) {
+  const s = list[i], nx = list[i + 1];
+  document.getElementById('stepCount').textContent = `Step ${i + 1} of ${list.length}`;
+  document.getElementById('badge').textContent = badge;
+  document.getElementById('stepTitle').textContent = s.title;
+  document.getElementById('cmdName').textContent = 'Command: ' + commandName(s.command);
+  document.getElementById('cmdPath').textContent = s.command;
+  document.getElementById('stepActions').innerHTML = s.actions.map(a => `<li>${esc(a)}</li>`).join('');
+  const note = document.getElementById('stepNote'); note.textContent = s.note || ''; note.hidden = !s.note;
+  document.getElementById('stepNext').innerHTML = nx ? `<b>Next:</b> ${esc(nx.title)} (${esc(commandName(nx.command))})` : '<b>Finished:</b> that is the last step.';
+  document.getElementById('prev').disabled = i === 0;
+  const nb = document.getElementById('next'); nb.disabled = !nx; nb.textContent = nx ? 'Next step' : 'Done';
+  document.querySelectorAll('#dots button').forEach((b, k) => { b.classList.toggle('on', k === i); b.classList.toggle('done', k < i); });
+  if (!RENDER) { q.set('tab', tab); q.set('step', i + 1); history.replaceState(null, '', '?' + q.toString()); }
+}
+function makeDots(list, go) {
+  document.getElementById('dots').innerHTML = list.map((s, k) => `<button title="${esc(s.title)}">${k + 1}</button>`).join('');
+  document.querySelectorAll('#dots button').forEach((b, k) => b.onclick = () => go(k));
+}
+
+async function showFea(i) {
+  feaIdx = Math.max(0, Math.min(fea.steps.length - 1, i));
+  fillPanel(fea.steps, feaIdx, 'Inventor Stress Analysis');
+  document.getElementById('summary').innerHTML = feaSummary();
+  feaView();
+}
+const go = d => tab === 'steps' ? showStep(stepIdx + d) : tab === 'fea' ? showFea(feaIdx + d) : tab === 'sim' ? showSim(simIdx + d) : null;
+
+async function setTab(t) {
+  try {
+    if (t === 'steps' && !stepsMeta) stepsMeta = await (await fetch(`steps/${NAME}.json`)).json();
+    if (t === 'fea' && !fea) { fea = await (await fetch(`fea/${NAME}.json`)).json(); buildFea(); }
+    if (t === 'sim' && !sim) { sim = await (await fetch(`sim/${NAME}.json`)).json(); document.getElementById('simTime').max = sim.duration; }
+  } catch (e) { caption('Not ready for this model yet'); setTimeout(() => caption(''), 1800); return; }
+  if (tab === 'sim' && t !== 'sim') { togglePlay(false); simReset(); }
   tab = t;
+  const guide = t === 'steps' || t === 'fea' || t === 'sim';
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
-  document.body.classList.toggle('steps', t === 'steps');
-  document.getElementById('steps').hidden = t !== 'steps';
-  root.visible = t !== 'steps'; stepRoot.visible = t === 'steps';
-  if (t === 'steps') {
+  document.body.classList.toggle('steps', guide);
+  document.getElementById('steps').hidden = !guide;
+  document.getElementById('changesL').hidden = t !== 'steps';
+  document.getElementById('summary').hidden = t !== 'fea' && t !== 'sim';
+  if (t !== 'sim') document.getElementById('simCtl').hidden = true;
+  if (t !== 'fea') document.getElementById('feaCtl').hidden = true;
+  root.visible = !guide || t === 'sim'; stepRoot.visible = t === 'steps'; feaRoot.visible = t === 'fea';
+  if (guide) {
     applyExplode(0); document.getElementById('explode').value = 0;
     applySection(false); document.getElementById('section').checked = false;
-    await showStep(stepIdx);
-    setSize();
-  } else if (!RENDER) { setSize(); q.delete('tab'); q.delete('step'); history.replaceState(null, '', '?' + q.toString()); }
+  }
+  if (t === 'steps') { makeDots(stepsMeta.steps, showStep); await showStep(stepIdx); }
+  if (t === 'fea') { makeDots(fea.steps, showFea); await showFea(feaIdx); }
+  if (t === 'sim') { makeDots(sim.steps, showSim); showSim(simIdx); }
+  setSize();
+  if (!guide && !RENDER) { q.delete('tab'); q.delete('step'); history.replaceState(null, '', '?' + q.toString()); }
 }
 document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 new ResizeObserver(() => { if (ortho) setSize(); }).observe(document.getElementById('steps'));
-document.getElementById('prev').onclick = () => showStep(stepIdx - 1);
-document.getElementById('next').onclick = () => showStep(stepIdx + 1);
+document.getElementById('prev').onclick = () => go(-1);
+document.getElementById('next').onclick = () => go(1);
 document.getElementById('changes').onchange = async () => applyChanges(await stepObjects(stepIdx));
 document.getElementById('edges').addEventListener('change', async () => { if (stepsMeta) applyChanges(await stepObjects(stepIdx)); });
+document.getElementById('defScale').oninput = () => fea && feaView();
+document.getElementById('showMesh').onchange = () => fea && feaView();
 window.addEventListener('keydown', e => {
-  if (tab !== 'steps' || e.target.closest('input')) return;
-  if (e.key === 'ArrowRight') showStep(stepIdx + 1);
-  if (e.key === 'ArrowLeft') showStep(stepIdx - 1);
+  if (!['steps', 'fea', 'sim'].includes(tab) || e.target.closest('input')) return;
+  if (e.key === 'ArrowRight') go(1);
+  if (e.key === 'ArrowLeft') go(-1);
 });
-load().then(() => { if (q.get('tab') === 'steps') { stepIdx = Math.max(0, (+q.get('step') || 1) - 1); setTab('steps'); } });
+load().then(() => {
+  const t = q.get('tab'), n = Math.max(0, (+q.get('step') || 1) - 1);
+  if (t === 'steps') { stepIdx = n; setTab('steps'); }
+  if (t === 'fea') { feaIdx = n; setTab('fea'); }
+  if (t === 'sim') { simIdx = n; setTab('sim'); }
+});
+fetch(`sim/${NAME}.json`, { method: 'HEAD' }).then(r => { if (!r.ok) throw 0; }).catch(() => { document.querySelector('#tabs [data-tab=sim]').hidden = true; });
 </script>
 </body>
 </html>

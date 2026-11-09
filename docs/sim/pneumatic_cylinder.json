@@ -1,0 +1,291 @@
+{
+ "name": "pneumatic_cylinder",
+ "duration": 6,
+ "story": "Air at 6 bar pushes the piston out 20 mm. When the air is let out, the spring pushes it back.",
+ "moving": [
+  "piston",
+  "piston rod",
+  "return spring"
+ ],
+ "motion": [
+  {
+   "part": "piston",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2.5,
+     20
+    ],
+    [
+     3.5,
+     20
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "piston rod",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2.5,
+     20
+    ],
+    [
+     3.5,
+     20
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "return spring",
+   "kind": "stretch",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "anchor": 70,
+   "length0": 54,
+   "keys": [
+    [
+     0,
+     54
+    ],
+    [
+     1,
+     54
+    ],
+    [
+     2.5,
+     34
+    ],
+    [
+     3.5,
+     34
+    ],
+    [
+     5,
+     54
+    ],
+    [
+     6,
+     54
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Rod position",
+   "unit": "mm",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2.5,
+     20
+    ],
+    [
+     3.5,
+     20
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "Spring force",
+   "unit": "N",
+   "keys": [
+    [
+     0,
+     20.0
+    ],
+    [
+     1,
+     20.0
+    ],
+    [
+     2.5,
+     36.0
+    ],
+    [
+     3.5,
+     36.0
+    ],
+    [
+     5,
+     20.0
+    ],
+    [
+     6,
+     20.0
+    ]
+   ]
+  },
+  {
+   "name": "Air pressure",
+   "unit": "bar",
+   "step": true,
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3.5,
+     0
+    ],
+    [
+     6,
+     0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open pneumatic_cylinder.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the sliding joint",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Find the Prismatic joint between the barrel and the piston in Standard Joints.",
+    "If it is missing, click Insert Joint, choose Prismatic, pick the barrel bore and then the piston edge. Click OK.",
+    "The piston and rod should be one Welded group, so they move together."
+   ],
+   "note": "A prismatic joint lets a part slide along one line and nothing else: one degree of freedom."
+  },
+  {
+   "view": "joints",
+   "title": "Add the return spring",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Click Insert Joint. Under Force Joints choose Spring / Damper / Jack.",
+    "Pick a point on the front face of the piston, then a point on the inside face of the front cap.",
+    "Stiffness 0.8 N/mm, Free Length 89 mm (the two points are 64 mm apart, so the spring already pushes 20 N when the piston is back). Click OK."
+   ],
+   "note": "Turn off the spring part itself (right click > Enabled) so it does not get in the way: the force joint does its job."
+  },
+  {
+   "view": "motion",
+   "title": "Drive the piston",
+   "command": "Right click the Prismatic joint > Properties > dof 1 > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "Click the graph button to open the Input Grapher and enter the points: 0 mm at 1 s, 20 mm at 2.5 s, 20 mm at 3.5 s, 0 mm at 5 s.",
+    "Click OK twice."
+   ],
+   "note": "This stands in for the air: out stroke when the valve opens, back stroke when it closes."
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 6 s and Images to 300.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the position of the Prismatic joint and the force in the spring.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}
