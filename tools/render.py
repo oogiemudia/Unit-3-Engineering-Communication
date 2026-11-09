@@ -10,8 +10,6 @@ from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, 'docs')
-MEDIA = os.path.join(DOCS, 'media')
-os.makedirs(MEDIA, exist_ok=True)
 FPS = 24
 W, H = 1280, 720
 
@@ -74,6 +72,17 @@ def section(front):
     return out
 
 
+def simulation(iso, duration, view=None):
+    """Play the Simulation tab motion once, in real time, from a fixed viewpoint."""
+    d = view or [iso[0] * 0.6, 1.6, iso[2] * 0.6]
+    n = int(duration * FPS)
+    out = []
+    for k in range(n + 1):
+        t = duration * k / n
+        out.append(dict(dir=d, simT=t, caption='t = %.1f s' % t))
+    return out
+
+
 def encode(frames_dir, out):
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(FPS), '-i', os.path.join(frames_dir, 'f%04d.png'),
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '23', '-pix_fmt', 'yuv420p', '-movflags', '+faststart',
@@ -91,6 +100,8 @@ def run(names, bg='F4F6F8', suffix='', kinds=None):
         for m in cat:
             if names and m['name'] not in names:
                 continue
+            MEDIA = os.path.join(DOCS, m.get('base', ''), 'media')
+            os.makedirs(MEDIA, exist_ok=True)
             pg.goto('http://127.0.0.1:%d/viewer.html?m=%s&render=1&w=%d&h=%d&bg=%s' % (port, m['name'], W, H, bg))
             pg.wait_for_function('window.U3 && window.U3.ready', timeout=120000)
             front = pg.evaluate('window.U3.front')
@@ -100,6 +111,10 @@ def run(names, bg='F4F6F8', suffix='', kinds=None):
                 jobs.append(('explode', explode(iso)))
             if m.get('section'):
                 jobs.append(('section', section(front)))
+            if m.get('sim'):
+                pg.evaluate('window.U3.loadSim()')
+                dur = pg.evaluate('fetch(%r).then(r => r.json()).then(s => s.duration)' % (m.get('base', '') + 'sim/%s.json' % m['name']))
+                jobs.append(('sim', simulation(iso, dur, m.get('sim_view'))))
             pg.evaluate('s => window.U3.setState(s)', dict(dir=iso, explode=0, section=False, caption=''))
             pg.screenshot(path=os.path.join(MEDIA, '%s_iso%s.png' % (m['name'], suffix)))
             for kind, frames in jobs:
@@ -107,7 +122,7 @@ def run(names, bg='F4F6F8', suffix='', kinds=None):
                     continue
                 d = os.path.join(tmp, m['name'] + '_' + kind + suffix)
                 os.makedirs(d, exist_ok=True)
-                pg.evaluate('s => window.U3.setState(s)', dict(explode=0, section=False))
+                pg.evaluate('s => window.U3.setState(s)', dict(explode=0, section=False, simT=0) if kind == 'sim' else dict(explode=0, section=False))
                 for k, st in enumerate(frames):
                     pg.evaluate('s => window.U3.setState(s)', st)
                     pg.screenshot(path=os.path.join(d, 'f%04d.png' % k))

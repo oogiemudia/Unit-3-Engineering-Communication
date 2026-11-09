@@ -525,3 +525,9 @@ STEPS = dict(step_block=step_block, sloping_block=sloping_block, flanged_bush=fl
              bolted_joint=bolted_joint, threaded_shaft=threaded_shaft, pcd_flange=pcd_flange,
              annotation_plate=annotation_plate, hole_features=hole_features, vee_block=vee_block,
              l_bracket=l_bracket, fit_pair=fit_pair, pneumatic_cylinder=pneumatic_cylinder)
+
+
+# ESP 2023 lock gate project: its steps live in their own file
+from esp2023_steps import STEPS as ESP2023_STEPS  # noqa: E402
+
+STEPS.update(ESP2023_STEPS)

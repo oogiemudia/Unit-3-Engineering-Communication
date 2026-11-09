@@ -1,0 +1,462 @@
+{
+ "name": "esp2023_gate_leaf",
+ "title": "ESP 2023 gate leaf",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Heel post: sketch the section",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gate_leaf_frame.ipt.",
+    "Start 2D Sketch on the XZ Plane (the ground). Draw a circle of diameter 450 on the origin: this is the round back of the heel post, and the origin is the pivot axis.",
+    "Draw a rectangle from the centre of the circle, 400 along the leaf (X) and 450 wide (225 each side of X).",
+    "Add the dimensions (Sketch tab > Constrain panel > Dimension): diameter 450, 400 and 450. Click Finish Sketch."
+   ],
+   "note": "Every gate size comes from the brief: a 4.2 m opening, 6 m high, holding up to 5.5 m of water. The leaf is 450 thick.",
+   "parts": [],
+   "overlay": true,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Heel post: extrude it",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude and pick both regions of the sketch (the circle and the rectangle).",
+    "Distance A: 5800 mm, upwards. Then in the Extrude dialog open Advanced and set a 50 mm start offset, so the post runs from 50 to 5850 above the cill (the bottom 50 mm is the cill seal).",
+    "Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Heel post: make it hollow",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on a Work Plane 350 mm above the base (Work Features panel > Plane > Offset from Plane).",
+    "Offset the outline 25 mm inwards (Sketch tab > Modify panel > Offset): the post is made from 25 mm plate.",
+    "Extrude the inner profile, Cut, Distance 5475 mm, upwards. Click OK."
+   ],
+   "note": "The bottom 300 mm stays solid: it is the bearing block that sits on the pintle.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Heel post: bore for the pintle",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and pick the bottom face of the heel post, on the pivot axis (the origin).",
+    "Simple Hole. Diameter 160 mm. Termination: Distance, 250 mm. Click OK."
+   ],
+   "note": "The 150 mm stainless pintle fits in this bore with a bronze bush: the leaf turns on it.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Heel post: top journal",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the top face of the heel post. Circle, diameter 200, on the pivot axis. Finish Sketch.",
+    "Extrude 150 mm upwards. Click OK."
+   ],
+   "note": "The anchor collar (the top hinge) fits round this journal.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_05.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Mitre post",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XZ Plane: a rectangle from X = 2160 to X = 2860, 450 wide. Extrude from 50 to 5960 mm.",
+    "Make it a hollow box: sketch the inner rectangle (25 mm walls, ending 90 mm before the mitre) and Extrude Cut.",
+    "The extra length past 2460 is trimmed to the mitre angle at the end."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_06.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Horizontal girders",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on a Work Plane at X = 400 (the face of the heel post).",
+    "Draw the eight T sections: web 20 thick from the downstream flange to the skin, flange 200 x 20, at heights 150, 800, 1450, 2150, 2900, 3750, 4700, 5860 mm.",
+    "Extrude all eight profiles 1760 mm along X, to the mitre post. Click OK."
+   ],
+   "note": "The girders are closer together near the bottom because the water pressure grows with depth: p = 1000 x 9.81 x depth, about 54 kPa at 5.5 m.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_07.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Vertical stiffeners",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XZ Plane at Z = 50: two rectangles 15 wide (X 980 to 995 and 1565 to 1580), between the flange and the skin.",
+    "Extrude them up to 5960 mm. Click OK."
+   ],
+   "note": "The stiffeners split the skin plate into panels about 580 x 630, which keeps the plate stress low.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_08.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Skin plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XZ Plane: a rectangle 12 mm thick on the chamber (upstream) face, from X = 400 to 2860.",
+    "Extrude from 50 to 5960 mm. Click OK."
+   ],
+   "note": "The 12 mm skin plate on the chamber face holds back the water.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_09.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Actuator bracket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the skin plate face: a rectangle 100 wide (centred 1000 mm from the pivot) and 200 high (5700 to 5900).",
+    "Extrude it 125 mm out from the skin. Click OK."
+   ],
+   "note": "The electric actuator rod eye bolts to this bracket.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_10.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Trim the mitre end",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "Click Work Features panel > Plane > Angle to Plane around Edge. Pick the end face of the mitre post and the vertical edge where the leaf centre line meets X = 2460. Angle 18.43 degrees (1 in 3).",
+    "Click Split. Split Tool: the new work plane. Choose Trim Solid and pick the side beyond the mitre to remove.",
+    "Click OK. Save gate_leaf_frame.ipt."
+   ],
+   "note": "Both leaves are cut at 1 in 3 so they meet at the mitre, pointing upstream. The water pushes the mitre faces together.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_11.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Oak fenders: one fender",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as oak_fenders.ipt.",
+    "Sketch a 150 x 200 rectangle on a Work Plane at X = 500, against the skin plate face, with its centre at 2600 mm high.",
+    "Extrude it 1610 mm along the leaf. Fillet the four long edges, radius 20 mm."
+   ],
+   "note": "FSC certified oak: a sustainable, replaceable rubbing face for boats.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "oak fenders",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_12.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Oak fenders: pattern them",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Click Rectangular Pattern and pick the fender.",
+    "Direction 1: the Y axis (up). Count 3. Spacing 900 mm. Click OK.",
+    "Save oak_fenders.ipt."
+   ],
+   "note": "Fenders at 2.6 m, 3.5 m and 4.4 m cover the water levels a boat sits at as the lock fills and empties.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_13.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Walkway and handrail",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as walkway.ipt.",
+    "Sketch a 1760 x 450 rectangle on the XZ Plane and Extrude 40 mm: the galvanised grating.",
+    "Sketch three circles, diameter 48.3, near the downstream edge and Extrude 1100 mm: the handrail posts.",
+    "Sketch two circles diameter 48.3 on a plane square to the leaf and Extrude 1608 mm: the mid rail and top rail."
+   ],
+   "note": "The walkway lets the lock keeper cross the lock and look at the moving parts.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_14.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Seals",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "File > New > Standard (mm).ipt for each seal: cill_seal.ipt (85 x 50 strip under the chamber face, trimmed at the mitre with Split), heel_seal.ipt (30 x 80 strip down the back of the heel post) and mitre_seal.ipt (30 wide strip on the mitre face).",
+    "Use the material EPDM rubber (Manage tab > Styles Editor if it is not in your library)."
+   ],
+   "note": "Three seals stop water passing the gate: along the cill, behind the heel post in the quoin, and between the mitre posts.",
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cill seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "heel seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_15.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Put the leaf together",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as gate_leaf.iam.",
+    "Place gate_leaf_frame.ipt and right click, Place Grounded at Origin.",
+    "Place the fenders, walkway and seals. Constrain each with Mate (face to face) and Flush, using the sizes above.",
+    "Check with Inspect tab > Interference > Analyze Interference: no parts should overlap."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gate leaf (welded S355 steel)",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_gate_leaf/step_16.glb",
+   "edges": "ESP 2023/steps/esp2023_gate_leaf/step_16.json"
+  }
+ ]
+}

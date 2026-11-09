@@ -232,7 +232,7 @@ def proj_symbol(sh, x, y, angle, s=1.0):
     sh.line(cx, cy - D / 2 - 1.5, cx, cy + D / 2 + 1.5, 'ctr')
 
 
-def frame(sh, title, number, scale, angle, material, doctype):
+def frame(sh, title, number, scale, angle, material, doctype, owner='T Level Engineering, Unit 3', date=None):
     sh.add('<rect class="bord" x="10" y="10" width="400" height="277"/>')
     x0, y0, w, h = 230, 252, 180, 35
     sh.add('<rect class="thin" x="%d" y="%d" width="%d" height="%d"/>' % (x0, y0, w, h))
@@ -245,7 +245,7 @@ def frame(sh, title, number, scale, angle, material, doctype):
     def cell(cx, cy, lab, val, bold=False):
         sh.text(cx + 1.5, cy + 2.6, lab, size=1.8, anchor='start')
         sh.text(cx + 1.5, cy + 6.1, val, size=2.9 if not bold else 3.2, anchor='start', weight='bold' if bold else 'normal')
-    cell(x0, y0, 'Legal owner', 'T Level Engineering, Unit 3')
+    cell(x0, y0, 'Legal owner', owner)
     cell(x0 + 60, y0, 'Document type', doctype)
     cell(x0 + 120, y0, 'Identification number', number, True)
     cell(x0, y0 + 7, 'Title', title, True)
@@ -253,7 +253,7 @@ def frame(sh, title, number, scale, angle, material, doctype):
     cell(x0 + 120, y0 + 7, 'Revision', 'A')
     cell(x0, y0 + 14, 'Created by', 'Unit 3 CAD hub')
     cell(x0 + 60, y0 + 14, 'Approved by', '(tutor)')
-    cell(x0 + 120, y0 + 14, 'Date of issue', DATE)
+    cell(x0 + 120, y0 + 14, 'Date of issue', date or DATE)
     cell(x0, y0 + 21, 'Scale', scale, True)
     cell(x0 + 60, y0 + 21, 'Units', 'mm')
     cell(x0 + 120, y0 + 21, 'Sheet', '1 of 1')
@@ -263,7 +263,7 @@ def frame(sh, title, number, scale, angle, material, doctype):
             size=2.2, anchor='start')
 
 
-STD_SCALES = [(5, 1), (2, 1), (1, 1), (1, 2), (1, 5), (1, 10)]
+STD_SCALES = [(5, 1), (2, 1), (1, 1), (1, 2), (1, 5), (1, 10), (1, 20), (1, 25), (1, 50), (1, 100)]
 
 
 def pick_scale(wmm, hmm, aw, ah):
@@ -271,7 +271,7 @@ def pick_scale(wmm, hmm, aw, ah):
         s = a / b
         if wmm * s <= aw and hmm * s <= ah:
             return s, '%d:%d' % (a, b)
-    return 0.1, '1:10'
+    return 0.01, '1:100'
 
 
 def draw_view(sh, data, ox, oy, s, label=None):
@@ -300,7 +300,21 @@ def view_data(shape, view, hidden=True):
     return dict(vis=vis, hid=hid, marks=marks, lines=lines, bb=bbox(vis + hid))
 
 
+ESP_MATERIAL = {'esp2023_lock_gates': 'See parts list', 'esp2023_gate_leaf': 'S355 steel, see parts list',
+                'esp2023_skin_panel': 'S355 steel plate', 'esp2023_lift_gate': 'Concept, see notes'}
+
+
+def owner_of(m):
+    return 'Lock Restoration Ltd' if m.get('folder') == 'ESP 2023' else 'T Level Engineering, Unit 3'
+
+
+def date_of(m):
+    return '2026-11-09' if m.get('folder') == 'ESP 2023' else None
+
+
 def material_of(m):
+    if m['name'] in ESP_MATERIAL:
+        return ESP_MATERIAL[m['name']]
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
             'bolted_joint': 'See parts list', 'fit_pair': 'See parts list', 'pneumatic_cylinder': 'See parts list'
             }.get(m['name'], 'S275 steel' if m['name'] in ('l_bracket', 'vee_block') else '6082-T6 aluminium')
@@ -366,7 +380,7 @@ def ortho_sheet(m, shape, angle, number):
             anchor='start')
     sh.text(22, 254, 'Centre lines are shown in blue. Hidden detail is shown dashed.', size=2.8, anchor='start')
     doctype = 'Assembly drawing' if len(m['parts']) > 1 else 'Detail drawing'
-    frame(sh, m['title'], number, sc, angle, material_of(m), doctype)
+    frame(sh, m['title'], number, sc, angle, material_of(m), doctype, owner_of(m), date_of(m))
     return sh
 
 
@@ -479,15 +493,16 @@ def section_sheet(m, items, number):
     if note:
         sh.text(22, 254, note + 'Adjacent parts are hatched in opposite directions.', size=2.8, anchor='start')
     doctype = 'Assembly drawing' if len(items) > 1 else 'Detail drawing'
-    frame(sh, m['title'] + ', section A-A', number, sc, 'third', material_of(m), doctype)
+    frame(sh, m['title'] + ', section A-A', number, sc, 'third', material_of(m), doctype, owner_of(m), date_of(m))
     return sh
 
 
-def save(sh, base):
-    svg = os.path.join(OUT, base + '.svg')
+def save(sh, base, out=OUT):
+    os.makedirs(out, exist_ok=True)
+    svg = os.path.join(out, base + '.svg')
     with open(svg, 'w') as f:
         f.write(sh.svg())
-    subprocess.run(['rsvg-convert', '-w', '2480', '-b', 'white', '-o', os.path.join(OUT, base + '.png'), svg], check=True)
+    subprocess.run(['rsvg-convert', '-w', '2480', '-b', 'white', '-o', os.path.join(out, base + '.png'), svg], check=True)
 
 
 def main(only=None):
@@ -499,18 +514,23 @@ def main(only=None):
         ISO_DIR['d'] = spec.get('iso', (1, -1, 1))
         items = spec['fn']()
         comp = cq.Compound.makeCompound([w.val() for n, w, c in items])
-        number = 'U3-%03d' % (k + 1)
+        base = parts.base_of(spec)
+        out = os.path.join(ROOT, 'docs', base, 'drawings')
+        if base:
+            esp = [x['name'] for x in parts.MODELS if x.get('folder') == spec['folder']]
+            number = 'ESP23-%02d' % (esp.index(m['name']) + 1)
+        else:
+            number = 'U3-%03d' % (k + 1)
         print('drawing', m['name'])
-        save(ortho_sheet(m, comp, 'third', number + '-3'), m['name'] + '_third_angle')
-        save(ortho_sheet(m, comp, 'first', number + '-1'), m['name'] + '_first_angle')
-        files = dict(third='drawings/%s_third_angle' % m['name'], first='drawings/%s_first_angle' % m['name'])
+        save(ortho_sheet(m, comp, 'third', number + '-3'), m['name'] + '_third_angle', out)
+        save(ortho_sheet(m, comp, 'first', number + '-1'), m['name'] + '_first_angle', out)
+        files = dict(third=base + 'drawings/%s_third_angle' % m['name'], first=base + 'drawings/%s_first_angle' % m['name'])
         if m.get('section'):
-            save(section_sheet(m, items, number + '-S'), m['name'] + '_section')
-            files['section'] = 'drawings/%s_section' % m['name']
+            save(section_sheet(m, items, number + '-S'), m['name'] + '_section', out)
+            files['section'] = base + 'drawings/%s_section' % m['name']
         m['drawings'] = files
-    if not only:
-        with open(os.path.join(ROOT, 'docs', 'models.json'), 'w') as f:
-            json.dump(cat, f, indent=1)
+    with open(os.path.join(ROOT, 'docs', 'models.json'), 'w') as f:
+        json.dump(cat, f, indent=1)
 
 
 if __name__ == '__main__':

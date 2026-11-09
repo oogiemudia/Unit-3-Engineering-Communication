@@ -1,6 +1,6 @@
 """Build every model: STEP, STL, GLB (for the web viewer and the renders), B-rep edges and the catalogue.
 
-Run from the repository root:  python3 tools/build_models.py
+Run from the repository root:  python3 tools/build_models.py [model ...]   (no names: every model)
 """
 import json, os, sys, math
 import numpy as np
@@ -18,8 +18,6 @@ sys.path.insert(0, os.path.join(ROOT, 'models'))
 import parts  # noqa: E402
 
 DOCS = os.path.join(ROOT, 'docs')
-for d in ('step', 'stl', 'glb', 'edges'):
-    os.makedirs(os.path.join(DOCS, d), exist_ok=True)
 
 
 def to_gl(p):
@@ -102,20 +100,30 @@ def explode_offsets(items, axis):
     return [list(np.round(ax * (r - mid) * size * 0.28, 2)) for r in rank]
 
 
-def build():
+def build(only=None):
+    old = {}
+    if os.path.exists(os.path.join(DOCS, 'models.json')):
+        old = {e['name']: e for e in json.load(open(os.path.join(DOCS, 'models.json')))}
     catalogue = []
     for m in parts.MODELS:
         name = m['name']
+        base = parts.base_of(m)
+        if only and name not in only:
+            if name in old:
+                catalogue.append(old[name])
+            continue
+        for d in ('step', 'stl', 'glb', 'edges'):
+            os.makedirs(os.path.join(DOCS, base, d), exist_ok=True)
         items = m['fn']()
         print('building', name, len(items), 'parts')
         # STEP (an assembly keeps the part names and colours)
         assy = cq.Assembly(name=name)
         for pname, wp, col in items:
             assy.add(wp, name=pname, color=cq.Color(*[c / 255 for c in hex_rgba(col)[:3]]))
-        assy.save(os.path.join(DOCS, 'step', name + '.step'))
+        assy.save(os.path.join(DOCS, base, 'step', name + '.step'))
         comp = cq.Compound.makeCompound([wp.val() for n, wp, c in items])
         coarse = any('spring' in n for n, w, c in items)
-        cq.exporters.export(comp, os.path.join(DOCS, 'stl', name + '.stl'), tolerance=0.1 if coarse else 0.02,
+        cq.exporters.export(comp, os.path.join(DOCS, base, 'stl', name + '.stl'), tolerance=0.1 if coarse else 0.02,
                             angularTolerance=0.4 if coarse else 0.1)
         # GLB, one node per part
         scene = trimesh.Scene()
@@ -123,26 +131,35 @@ def build():
             coarse = 'spring' in pname
             scene.add_geometry(mesh_of(wp.val(), col, *( (0.12, 0.5) if coarse else (0.03, 0.15))),
                                node_name=pname, geom_name=pname)
-        scene.export(os.path.join(DOCS, 'glb', name + '.glb'))
+        scene.export(os.path.join(DOCS, base, 'glb', name + '.glb'))
         # edges
         edges = {pname: edges_of(wp.val(), 0.15 if 'spring' in pname else 0.03) for pname, wp, col in items}
-        with open(os.path.join(DOCS, 'edges', name + '.json'), 'w') as f:
+        with open(os.path.join(DOCS, base, 'edges', name + '.json'), 'w') as f:
             json.dump(edges, f, separators=(',', ':'))
         bb = comp.BoundingBox()
         offs = explode_offsets(items, m.get('explode'))
-        catalogue.append(dict(
+        entry = dict(
             name=name, title=m['title'], criteria=m['criteria'], uses=m['uses'],
             description=(m['fn'].__doc__ or '').strip().replace('\n', ' '),
             parts=[dict(name=p, colour='#' + c, explode=o) for (p, w, c), o in zip(items, offs)],
             size_mm=[round(bb.xlen, 1), round(bb.ylen, 1), round(bb.zlen, 1)],
             section=m.get('section'), exploded=bool(m.get('explode')),
             iso=list(to_gl(m.get('iso', (1, -1, 1)))),
-            files=dict(step='step/%s.step' % name, stl='stl/%s.stl' % name, glb='glb/%s.glb' % name,
-                       edges='edges/%s.json' % name)))
+            files=dict(step=base + 'step/%s.step' % name, stl=base + 'stl/%s.stl' % name, glb=base + 'glb/%s.glb' % name,
+                       edges=base + 'edges/%s.json' % name))
+        if base:
+            entry.update(base=base, folder=m['folder'])
+        if m.get('fea') is False:
+            entry['fea'] = False
+        if m.get('sim'):
+            entry['sim'] = True
+        if old.get(name, {}).get('drawings'):
+            entry['drawings'] = old[name]['drawings']
+        catalogue.append(entry)
     with open(os.path.join(DOCS, 'models.json'), 'w') as f:
         json.dump(catalogue, f, indent=1)
     print('done', len(catalogue))
 
 
 if __name__ == '__main__':
-    build()
+    build(sys.argv[1:] or None)

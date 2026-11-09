@@ -33,6 +33,19 @@ The website lives in the `docs` folder. To publish it (once): on GitHub open **S
 | Pin and housing fit | 3.2 | Limits and fits: a 20 H7 hole and a 20 g6 pin, clearance fit. | third angle, first angle, section A-A | turntable, views, explode, section |
 | Pneumatic cylinder | 3.1 | The real component behind the single-acting, spring-return cylinder symbol (ISO 1219-1:2012). | third angle, first angle, section A-A | turntable, views, explode, section |
 
+## ESP 2023 lock gates (Employer-Set Project, Task 2)
+
+The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal Heritage) keeps every file it generates in one folder, `docs/ESP 2023/`, with its own project page (`docs/ESP 2023/index.html`). Its models also appear in the catalogue under the ESP 2023 filter.
+
+| Model | Criteria | Use it for | Drawings | Animations |
+|---|---|---|---|---|
+| ESP 2023 lock gates (GA) | 3.1, 3.2 | The preferred design: a pair of steel mitre gates with hinges, seals, electric drive, fenders, CCTV and call points. Simulation of the gates opening, FEA of the bottom pintle. | dimensioned GA at 1:50, hinge and seal details, third angle, first angle | turntable, views, simulation |
+| ESP 2023 gate leaf | 3.1, 3.2 | One welded leaf with girders, stiffeners, fenders and seals. | dimensioned leaf sheet, third angle, first angle, section A-A | turntable, views, section |
+| ESP 2023 skin plate panel | 3.2 | FEA with true hydrostatic pressure, checked against Roark (within 2 %). | third angle, first angle | turntable, views |
+| ESP 2023 concept B: lift gate | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
+
+The folder also holds the supporting calculations and design notes (PDF). See `docs/ESP 2023/README.md`. A model joins a project folder by setting `folder` in its `MODELS` entry: the build tools then write all its files there.
+
 For each model the `docs` folder holds:
 
 | Folder | Contents |
