@@ -22,17 +22,54 @@ label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--pa
 #info h2{font-size:15px;margin:0 0 6px}
 #info ul{margin:6px 0 0;padding-left:18px}
 #caption{position:fixed;left:0;right:0;top:46%;text-align:center;font-weight:bold;font-size:40px;color:var(--ink);opacity:0;transition:opacity .25s;pointer-events:none;text-shadow:0 0 8px var(--bg)}
+#tabs{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+#tabs button{border:0;padding:6px 12px}
+#steps{position:fixed;right:16px;top:56px;bottom:72px;width:min(400px,calc(100% - 32px));background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.45;overflow:auto;display:flex;flex-direction:column;gap:8px}
+#steps[hidden]{display:none}
+#steps .sh{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+#steps .sw{background:#FCEFD9;color:#7A4A00;border-radius:10px;padding:2px 8px;font-size:12px}
+#steps h2{font-size:18px;margin:0}
+#steps .cmd{background:#E2EDFC;border-radius:8px;padding:8px 10px}
+#steps .cmd b{display:block;font-size:16px}
+#steps .cmd span{font-size:12.5px;color:var(--muted)}
+#steps ol{margin:0;padding-left:20px}
+#steps ol li{margin:3px 0}
+#steps .note{margin:0;border-left:3px solid var(--amber);padding:2px 0 2px 10px;color:var(--muted)}
+#legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+#legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+#steps .next{margin:0;color:var(--muted)}
+#steps .nav{display:flex;align-items:center;gap:8px;margin-top:auto;padding:6px 0 2px;position:sticky;bottom:-14px;background:var(--panel)}
+#steps .nav button{flex:none}
+#steps .nav button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+#steps .nav button:disabled{opacity:.4;cursor:default}
+#dots{display:flex;flex-wrap:wrap;gap:4px;flex:1;justify-content:center}
+#dots button{width:26px;height:26px;padding:0;border-radius:50%;font-size:12px}
+#dots button.done{background:#E2EDFC}
+#steps label{border:0;padding:0}
+body.steps #info,body.steps #explodeL,body.steps #sectionL{display:none!important}
 body.render header,body.render #bar,body.render #info{display:none}
 body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
-@media (max-width:640px){#info{display:none}#caption{font-size:28px}}
+@media (max-width:640px){#info{display:none}#caption{font-size:28px}#steps{top:auto;bottom:12px;left:16px;right:16px;width:auto;max-height:52vh}body.steps #bar{display:none}h1{font-size:16px}}
 </style>
 <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
 </head>
 <body>
 <div id="stage"></div>
-<header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1></header>
+<header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1>
+  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button></nav></header>
 <div id="info"></div>
 <div id="caption"></div>
+<div id="steps" hidden>
+  <div class="sh"><span id="stepCount"></span><span class="sw">Autodesk Inventor</span></div>
+  <h2 id="stepTitle"></h2>
+  <div class="cmd"><b id="cmdName"></b><span id="cmdPath"></span></div>
+  <ol id="stepActions"></ol>
+  <p id="stepNote" class="note"></p>
+  <div id="legend"></div>
+  <p id="stepNext" class="next"></p>
+  <label><input type="checkbox" id="changes" checked> Highlight what this step changes</label>
+  <div class="nav"><button id="prev">Previous</button><div id="dots"></div><button id="next" class="primary">Next step</button></div>
+</div>
 <div id="bar">
   <button data-view="iso" class="on">Isometric</button>
   <button data-view="front">Front view</button>
@@ -81,9 +118,18 @@ function setSize() {
   const w = RENDER ? +(q.get('w') || 1280) : innerWidth, h = RENDER ? +(q.get('h') || 720) : innerHeight;
   renderer.setSize(w, h, false);
   renderer.domElement.style.width = w + 'px'; renderer.domElement.style.height = h + 'px';
-  const a = w / h, s = size * 0.92;
+  // in the Build steps tab, centre the model in the space the step panel leaves free
+  let sx = 0, sy = 0, k = 1;
+  const panel = document.getElementById('steps');
+  if (!RENDER && document.body.classList.contains('steps') && !panel.hidden) {
+    const r = panel.getBoundingClientRect();
+    if (w > 640) { sx = (r.width + 16) / 2; k = Math.min(2, w / Math.max(1, w - r.width - 32)); }
+    else { sy = (r.height + 12) / 2; k = Math.min(2.2, h / Math.max(1, h - r.height - 100)); }
+  }
+  const a = w / h, s = size * 0.92 * k;
   ortho.left = -s * a; ortho.right = s * a; ortho.top = s; ortho.bottom = -s; ortho.updateProjectionMatrix();
   persp.aspect = a; persp.updateProjectionMatrix();
+  for (const c of [ortho, persp]) { if (sx || sy) c.setViewOffset(w, h, sx, sy, w, h); else c.clearViewOffset(); }
 }
 
 const VIEWS = {
@@ -228,7 +274,136 @@ document.getElementById('edges').onchange = e => parts.forEach(p => p.edges && (
 document.getElementById('explode').oninput = e => applyExplode(+e.target.value);
 document.getElementById('section').onchange = e => applySection(e.target.checked, 0);
 document.getElementById('spin').onclick = e => { spinning = !spinning; e.target.classList.toggle('on', spinning); };
-load();
+
+// ---------------------------------------------------------------- build steps tab
+const stepRoot = new THREE.Group(); stepRoot.visible = false; scene.add(stepRoot);
+const HL = new THREE.Color('#E8A33D'), CUT = new THREE.Color('#D64545');
+let stepsMeta = null, stepIdx = 0, tab = 'view';
+const stepCache = new Map();
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const sanitize = k => THREE.PropertyBinding.sanitizeNodeName(k);
+
+function lines(pls, color, mat) {
+  if (!pls || !pls.length) return null;
+  const pos = [];
+  for (const pl of pls) for (let i = 0; i + 5 < pl.length; i += 3) pos.push(pl[i], pl[i + 1], pl[i + 2], pl[i + 3], pl[i + 4], pl[i + 5]);
+  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  return new THREE.LineSegments(g, mat || new THREE.LineBasicMaterial({ color }));
+}
+
+async function stepObjects(i) {
+  if (stepCache.has(i)) return stepCache.get(i);
+  const p = (async () => {
+    const s = stepsMeta.steps[i];
+    const meshes = {};
+    if (s.glb) {
+      const g = await new GLTFLoader().loadAsync(s.glb);
+      g.scene.traverse(o => { if (o.isMesh) { meshes[o.name] = o; if (o.parent && o.parent.name) meshes[o.parent.name] ??= o; } });
+    }
+    const edges = await (await fetch(s.edges)).json();
+    const group = new THREE.Group(), changes = [], edgeObjs = [];
+    const geomOf = key => (meshes[sanitize(key)] || {}).geometry;
+    for (const pt of s.parts) {
+      const base = new THREE.Color(pt.colour);
+      const mat = new THREE.MeshStandardMaterial({ color: base, metalness: 0.15, roughness: 0.55, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+      const geom = geomOf('part__' + pt.name);
+      if (geom) group.add(new THREE.Mesh(geom, mat));
+      const e = lines(edges['part__' + pt.name], 0x1D2B3A); if (e) { group.add(e); edgeObjs.push(e); }
+      if (pt.new && i > 0) changes.push({ tint: mat, base });
+      else if (s.parts.some(o => o.new) && i > 0) changes.push({ ghost: mat });
+      if (pt.added) {
+        const m = new THREE.Mesh(geomOf('added__' + pt.name), new THREE.MeshStandardMaterial({ color: HL, emissive: HL.clone().multiplyScalar(0.25), metalness: 0.1, roughness: 0.5, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -4 }));
+        group.add(m); changes.push({ obj: m });
+      }
+      if (pt.removed) {
+        const m = new THREE.Mesh(geomOf('removed__' + pt.name), new THREE.MeshBasicMaterial({ color: CUT, transparent: true, opacity: 0.38, depthWrite: false, side: THREE.DoubleSide }));
+        m.renderOrder = 2; group.add(m); changes.push({ obj: m });
+      }
+    }
+    if (s.overlay) {
+      const m = new THREE.Mesh(geomOf('overlay'), new THREE.MeshBasicMaterial({ color: HL, transparent: true, opacity: 0.5, depthWrite: false, side: THREE.DoubleSide }));
+      m.renderOrder = 3; group.add(m);
+      const e = lines(edges.overlay, 0x9A5B00); if (e) { e.renderOrder = 4; group.add(e); }
+    }
+    return { group, changes, edgeObjs };
+  })();
+  stepCache.set(i, p);
+  return p;
+}
+
+function applyChanges(o) {
+  const on = document.getElementById('changes').checked;
+  for (const c of o.changes) {
+    if (c.obj) c.obj.visible = on;
+    if (c.ghost) { c.ghost.transparent = on; c.ghost.opacity = on ? 0.28 : 1; c.ghost.depthWrite = !on; c.ghost.needsUpdate = true; }
+    if (c.tint) { c.tint.color.copy(on ? c.base.clone().lerp(HL, 0.55) : c.base); c.tint.emissive.copy(on ? HL.clone().multiplyScalar(0.18) : new THREE.Color(0)); }
+  }
+  const edgesOn = document.getElementById('edges').checked;
+  for (const e of o.edgeObjs) e.visible = edgesOn;
+}
+
+function commandName(path) { return path.split('>').pop().trim(); }
+
+async function showStep(i) {
+  const steps = stepsMeta.steps;
+  stepIdx = Math.max(0, Math.min(steps.length - 1, i));
+  const s = steps[stepIdx];
+  document.getElementById('stepCount').textContent = `Step ${stepIdx + 1} of ${steps.length}`;
+  document.getElementById('stepTitle').textContent = s.title;
+  document.getElementById('cmdName').textContent = 'Command: ' + commandName(s.command);
+  document.getElementById('cmdPath').textContent = s.command;
+  document.getElementById('stepActions').innerHTML = s.actions.map(a => `<li>${esc(a)}</li>`).join('');
+  const note = document.getElementById('stepNote'); note.textContent = s.note || ''; note.hidden = !s.note;
+  const leg = [];
+  if (s.overlay) leg.push(`<span><i style="background:#F3CF97;border:1px solid #9A5B00"></i>${/thread/i.test(s.title) ? 'Cosmetic thread' : 'Sketch'}</span>`);
+  if (s.parts.some(p => p.added || (p.new && stepIdx > 0))) leg.push('<span><i style="background:#E8A33D"></i>Added in this step</span>');
+  if (stepIdx > 0 && s.parts.some(p => p.new) && s.parts.some(p => !p.new)) leg.push('<span><i style="background:#C9D3DD;opacity:.5;border:1px solid #9AA6B2"></i>Parts already placed, see through</span>');
+  if (s.parts.some(p => p.removed)) leg.push('<span><i style="background:#D64545;opacity:.6"></i>Cut away in this step</span>');
+  document.getElementById('legend').innerHTML = leg.join('');
+  const nx = steps[stepIdx + 1];
+  document.getElementById('stepNext').innerHTML = nx ? `<b>Next:</b> ${esc(nx.title)} (${esc(commandName(nx.command))})` : '<b>Finished:</b> this is the complete model.';
+  document.getElementById('prev').disabled = stepIdx === 0;
+  const nb = document.getElementById('next'); nb.disabled = !nx; nb.textContent = nx ? 'Next step' : 'Done';
+  document.querySelectorAll('#dots button').forEach((b, k) => { b.classList.toggle('on', k === stepIdx); b.classList.toggle('done', k < stepIdx); });
+  if (!RENDER) { q.set('tab', 'steps'); q.set('step', stepIdx + 1); history.replaceState(null, '', '?' + q.toString()); }
+  const want = stepIdx;
+  const o = await stepObjects(want);
+  if (want !== stepIdx) return;
+  stepRoot.clear(); stepRoot.add(o.group); applyChanges(o);
+  if (nx) stepObjects(stepIdx + 1);
+}
+
+async function setTab(t) {
+  if (t === 'steps' && !stepsMeta) {
+    try { stepsMeta = await (await fetch(`steps/${NAME}.json`)).json(); }
+    catch (e) { caption('No build steps for this model yet'); setTimeout(() => caption(''), 1800); return; }
+    document.getElementById('dots').innerHTML = stepsMeta.steps.map((s, k) => `<button title="${esc(s.title)}">${k + 1}</button>`).join('');
+    document.querySelectorAll('#dots button').forEach((b, k) => b.onclick = () => showStep(k));
+  }
+  tab = t;
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
+  document.body.classList.toggle('steps', t === 'steps');
+  document.getElementById('steps').hidden = t !== 'steps';
+  root.visible = t !== 'steps'; stepRoot.visible = t === 'steps';
+  if (t === 'steps') {
+    applyExplode(0); document.getElementById('explode').value = 0;
+    applySection(false); document.getElementById('section').checked = false;
+    await showStep(stepIdx);
+    setSize();
+  } else if (!RENDER) { setSize(); q.delete('tab'); q.delete('step'); history.replaceState(null, '', '?' + q.toString()); }
+}
+document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
+new ResizeObserver(() => { if (ortho) setSize(); }).observe(document.getElementById('steps'));
+document.getElementById('prev').onclick = () => showStep(stepIdx - 1);
+document.getElementById('next').onclick = () => showStep(stepIdx + 1);
+document.getElementById('changes').onchange = async () => applyChanges(await stepObjects(stepIdx));
+document.getElementById('edges').addEventListener('change', async () => { if (stepsMeta) applyChanges(await stepObjects(stepIdx)); });
+window.addEventListener('keydown', e => {
+  if (tab !== 'steps' || e.target.closest('input')) return;
+  if (e.key === 'ArrowRight') showStep(stepIdx + 1);
+  if (e.key === 'ArrowLeft') showStep(stepIdx - 1);
+});
+load().then(() => { if (q.get('tab') === 'steps') { stepIdx = Math.max(0, (+q.get('step') || 1) - 1); setTab('steps'); } });
 </script>
 </body>
 </html>

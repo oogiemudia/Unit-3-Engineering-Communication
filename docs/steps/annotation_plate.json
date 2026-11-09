@@ -1,0 +1,131 @@
+{
+ "name": "annotation_plate",
+ "title": "Annotation plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the plate",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XZ Plane (the top).",
+    "Rectangle (Two Point Center) on the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 100 by 60. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/annotation_plate/step_01.glb",
+   "edges": "steps/annotation_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 10 mm. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "annotation plate",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/annotation_plate/step_02.glb",
+   "edges": "steps/annotation_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Sketch the hole centres",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "Start 2D Sketch on the top face.",
+    "Draw a 76 by 36 rectangle on the centre and make it Construction (Format panel).",
+    "Point: put a point on each corner of the construction rectangle. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "annotation plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "steps/annotation_plate/step_03.glb",
+   "edges": "steps/annotation_plate/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Countersink the four holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole. Inventor picks all four sketch points.",
+    "Type: Countersink. Diameter 6.6 mm, countersink diameter 13 mm, angle 90 degrees. Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "annotation plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/annotation_plate/step_04.glb",
+   "edges": "steps/annotation_plate/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Bore the 40 mm hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and place it on the centre of the plate. Simple Hole. Diameter 40 mm. Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "annotation plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/annotation_plate/step_05.glb",
+   "edges": "steps/annotation_plate/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Chamfer the bore",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Click Chamfer. Distance 1 mm (1 x 45 degrees). Pick the top edge of the 40 mm bore. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "annotation plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/annotation_plate/step_06.glb",
+   "edges": "steps/annotation_plate/step_06.json"
+  }
+ ]
+}

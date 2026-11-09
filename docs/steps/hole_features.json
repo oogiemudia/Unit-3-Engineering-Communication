@@ -1,0 +1,132 @@
+{
+ "name": "hole_features",
+ "title": "Hole features block",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the block",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XZ Plane (the top).",
+    "Rectangle (Two Point): start at the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 110 by 40. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/hole_features/step_01.glb",
+   "edges": "steps/hole_features/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 20 mm. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hole features block",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/hole_features/step_02.glb",
+   "edges": "steps/hole_features/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Clearance hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face. Place the centre on the centre line of the top face, 15 from the left end.",
+    "Type: Simple Hole. Diameter 6.6 mm (clearance for M6). Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hole features block",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/hole_features/step_03.glb",
+   "edges": "steps/hole_features/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Counterbored hole (CBORE)",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face. Place the centre on the centre line of the top face, 40 from the left end.",
+    "Type: Counterbore. Diameter 6.6 mm, counterbore diameter 11 mm, counterbore depth 6.5 mm. Through All. Click OK."
+   ],
+   "note": "A counterbore lets a cap head screw sit below the surface.",
+   "parts": [
+    {
+     "name": "hole features block",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/hole_features/step_04.glb",
+   "edges": "steps/hole_features/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Countersunk hole (CSK)",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face. Place the centre on the centre line of the top face, 68 from the left end.",
+    "Type: Countersink. Diameter 6.6 mm, countersink diameter 13 mm, angle 90 degrees. Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hole features block",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/hole_features/step_05.glb",
+   "edges": "steps/hole_features/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Blind tapping drill hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face. Place the centre on the centre line of the top face, 95 from the left end.",
+    "Type: Simple Hole. Diameter 5 mm (tapping drill for M6). Termination: Distance, 15 mm. Drill Point: Flat. Click OK."
+   ],
+   "note": "For a real tapped hole choose Tapped Hole, M6x1, and Inventor adds the 5 mm drill and a cosmetic thread.",
+   "parts": [
+    {
+     "name": "hole features block",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/hole_features/step_06.glb",
+   "edges": "steps/hole_features/step_06.json"
+  }
+ ]
+}

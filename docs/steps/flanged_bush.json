@@ -1,0 +1,179 @@
+{
+ "name": "flanged_bush",
+ "title": "Flanged bush",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the flange circle",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XZ Plane (the top).",
+    "Sketch tab > Create panel > Circle (Center Point): click the origin and drag out a circle.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): diameter 70. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/flanged_bush/step_01.glb",
+   "edges": "steps/flanged_bush/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 10 mm, upwards. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_02.glb",
+   "edges": "steps/flanged_bush/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Sketch the body circle",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "Start 2D Sketch and click the top face of the flange.",
+    "Circle (Center Point) on the projected centre point.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): diameter 40. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "steps/flanged_bush/step_03.glb",
+   "edges": "steps/flanged_bush/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Extrude the body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 40 mm, upwards. Boolean: Join. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_04.glb",
+   "edges": "steps/flanged_bush/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Bore the 24 mm hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face of the body.",
+    "Click the circular edge to make the hole concentric.",
+    "Simple Hole. Diameter 24 mm. Termination: Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_05.glb",
+   "edges": "steps/flanged_bush/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Drill one bolt hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face of the flange.",
+    "Place the centre on a 55 mm pitch circle (27.5 from the centre) at 45 degrees.",
+    "Simple Hole. Diameter 8 mm. Termination: Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_06.glb",
+   "edges": "steps/flanged_bush/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Pattern the bolt holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Click Circular Pattern. Features: pick the 8 mm hole in the browser.",
+    "Rotation Axis: pick the outside face of the body (its axis is used).",
+    "Placement: 4 occurrences over 360 degrees. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_07.glb",
+   "edges": "steps/flanged_bush/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Chamfer the bore",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Click Chamfer. Method: Distance. Distance 1 mm.",
+    "Pick the top edge of the 24 mm bore. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged bush",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/flanged_bush/step_08.glb",
+   "edges": "steps/flanged_bush/step_08.json"
+  }
+ ]
+}
