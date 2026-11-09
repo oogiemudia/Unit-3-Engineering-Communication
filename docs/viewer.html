@@ -53,7 +53,13 @@ label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--pa
 #steps .scale .ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
 #steps .slider{display:flex;flex-direction:column;align-items:stretch;gap:2px}
 #steps .hint{font-size:12px;color:var(--muted);margin:-4px 0 4px}
-#feaCtl[hidden],#summary[hidden],#changesL[hidden]{display:none}
+#feaCtl[hidden],#summary[hidden],#changesL[hidden],#simCtl[hidden],#tabs button[hidden]{display:none}
+#simCtl .simrow{display:flex;gap:8px;align-items:center}
+#simCtl .simrow input{flex:1}
+#simCtl .simrow span{font-variant-numeric:tabular-nums;font-size:13px;width:52px;text-align:right}
+#simGraph{width:100%;height:150px;display:block;margin-top:6px}
+#simVals{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px}
+#steps .story{background:#F4F6F8;border-radius:8px;padding:8px 10px;font-size:13.5px}
 body.steps #info,body.steps #explodeL,body.steps #sectionL{display:none!important}
 body.render header,body.render #bar,body.render #info{display:none}
 body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
@@ -64,7 +70,7 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
 <body>
 <div id="stage"></div>
 <header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1>
-  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button><button data-tab="fea">FEA (Stress Analysis)</button></nav></header>
+  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button><button data-tab="sim">Simulation (Inventor)</button><button data-tab="fea">FEA (Stress Analysis)</button></nav></header>
 <div id="info"></div>
 <div id="caption"></div>
 <div id="steps" hidden>
@@ -76,6 +82,8 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
   <div id="legend"></div>
   <div id="feaCtl" hidden><label class="slider">Deformation scale <input type="range" id="defScale" min="0" max="3" step="0.05" value="1"></label><div id="defLabel" class="hint"></div>
     <label><input type="checkbox" id="showMesh"> Show the mesh</label></div>
+  <div id="simCtl" hidden><div class="simrow"><button id="simPlay">Play</button><input type="range" id="simTime" min="0" max="6" step="0.01" value="0"><span id="simTimeL">0.00 s</span></div>
+    <canvas id="simGraph" height="150"></canvas><div id="simVals"></div></div>
   <div id="summary" hidden></div>
   <p id="stepNext" class="next"></p>
   <label id="changesL"><input type="checkbox" id="changes" checked> Highlight what this step changes</label>
@@ -235,7 +243,7 @@ async function load() {
       root.add(eLines);
     }
     const standard = /bolt|nut|washer|pin|rod|spring/i.test(spec.name) && catalogueEntry.parts.length > 1;
-    parts.push({ node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard });
+    parts.push({ name: spec.name, node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard, base: col.clone() });
   }
   if (catalogueEntry.iso) VIEWS.iso = new THREE.Vector3(...catalogueEntry.iso);
   const box = new THREE.Box3().setFromObject(root);
@@ -263,6 +271,7 @@ let spinning = false;
 function loop() {
   requestAnimationFrame(loop);
   if (RENDER) return;
+  if (tab === 'sim' && sim && simPlaying) { const now = performance.now(); simT += (now - simLast) / 1000; simLast = now; if (simT > sim.duration) simT = 0; simFrame(); }
   if (spinning) { const p = cam.position.clone().sub(centre); p.applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.01); cam.position.copy(centre.clone().add(p)); cam.lookAt(centre); }
   controls.update(); renderer.render(scene, cam);
 }
@@ -492,6 +501,99 @@ function feaSummary() {
     <div><b>Min safety factor</b> ${r.sf_min > 1000 ? 'over 1000' : r.sf_min.toFixed(1)}</div><div><b>Mesh</b> ${fea.mesh.elements.toLocaleString()} elements</div></div>`;
 }
 
+
+// ---------------------------------------------------------------- Simulation tab (Inventor Dynamic Simulation)
+let sim = null, simIdx = 0, simT = 0, simPlaying = false, simLast = 0;
+const SERIES_C = ['#1565D8', '#C25E00', '#2E9E5B'];
+function keyAt(keys, t, step) {
+  if (t <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [t0, v0] = keys[i - 1], [t1, v1] = keys[i];
+    if (t <= t1) { if (step) return v0; const u = (t - t0) / ((t1 - t0) || 1), e = u * u * (3 - 2 * u); return v0 + (v1 - v0) * e; }
+  }
+  return keys[keys.length - 1][1];
+}
+const glAxis = a => new THREE.Vector3(a[0], a[2], -a[1]);
+function simReset() {
+  for (const p of parts) {
+    p.node.position.set(0, 0, 0); p.node.quaternion.identity(); p.node.scale.set(1, 1, 1);
+    if (p.edges) { p.edges.position.set(0, 0, 0); p.edges.quaternion.identity(); p.edges.scale.set(1, 1, 1); }
+    const m = p.mats[0]; m.color.copy(p.base); m.emissive.setRGB(0, 0, 0); m.transparent = false; m.opacity = 1; m.depthWrite = true; m.needsUpdate = true;
+  }
+}
+function simPose(t) {
+  for (const p of parts) { p.node.position.set(0, 0, 0); p.node.quaternion.identity(); p.node.scale.set(1, 1, 1); }
+  for (const mo of sim.motion) {
+    const p = parts.find(x => x.name === mo.part); if (!p) continue;
+    const v = keyAt(mo.keys, t), ax = glAxis(mo.axis);
+    if (mo.kind === 'move') p.node.position.add(ax.multiplyScalar(v));
+    if (mo.kind === 'turn') p.node.quaternion.setFromAxisAngle(ax.normalize(), THREE.MathUtils.degToRad(v));
+    if (mo.kind === 'stretch') {
+      const k = v / mo.length0;
+      p.node.scale.set(ax.x ? k : 1, ax.y ? k : 1, ax.z ? k : 1);
+      p.node.position.add(ax.clone().multiplyScalar(mo.anchor * (1 - k)));
+    }
+  }
+  for (const p of parts) if (p.edges) { p.edges.position.copy(p.node.position); p.edges.quaternion.copy(p.node.quaternion); p.edges.scale.copy(p.node.scale); }
+}
+function simLook(view) {
+  const hl = view !== 'model';
+  for (const p of parts) {
+    const moving = sim.moving.includes(p.name), m = p.mats[0];
+    m.color.copy(hl && moving ? p.base.clone().lerp(new THREE.Color('#E8A33D'), 0.55) : p.base);
+    m.emissive.copy(hl && moving ? new THREE.Color('#E8A33D').multiplyScalar(0.15) : new THREE.Color(0));
+    const ghost = hl && !moving;
+    m.transparent = ghost; m.opacity = ghost ? 0.25 : 1; m.depthWrite = !ghost; m.needsUpdate = true;
+    if (p.edges) p.edges.material.opacity = 1;
+  }
+}
+function drawGraph() {
+  const c = document.getElementById('simGraph'), W = c.clientWidth, H = 150, dpr = Math.min(2, devicePixelRatio || 1);
+  if (c.width !== W * dpr) { c.width = W * dpr; c.height = H * dpr; }
+  const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+  const L = 8, R = W - 8, T = 8, B = H - 20, D = sim.duration;
+  g.strokeStyle = '#D5DCE4'; g.lineWidth = 1; g.strokeRect(L, T, R - L, B - T);
+  g.fillStyle = '#4E5A68'; g.font = '11px Arial';
+  for (let s = 0; s <= D; s++) { const x = L + (R - L) * s / D; g.fillText(s + ' s', Math.min(x - 6, R - 18), H - 6); }
+  const vals = [];
+  sim.graph.forEach((se, i) => {
+    const ys = se.keys.map(k => k[1]); let lo = Math.min(...ys), hi = Math.max(...ys); if (hi === lo) hi = lo + 1;
+    g.strokeStyle = SERIES_C[i]; g.lineWidth = 2; g.setLineDash(i === 1 ? [6, 4] : i === 2 ? [2, 3] : []); g.beginPath();
+    for (let k = 0; k <= 200; k++) { const t = D * k / 200, v = keyAt(se.keys, t, se.step), x = L + (R - L) * t / D, y = B - (B - T - 6) * (v - lo) / (hi - lo) - 3; k ? g.lineTo(x, y) : g.moveTo(x, y); }
+    g.stroke();
+    vals.push(`<span style="color:${SERIES_C[i]}"><b>${esc(se.name)}</b> ${keyAt(se.keys, simT, se.step).toFixed(se.unit === 'bar' || se.unit === '' ? 1 : 1)} ${se.unit}</span>`);
+  });
+  g.setLineDash([]); const x = L + (R - L) * simT / D; g.strokeStyle = '#16335B'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, T); g.lineTo(x, B); g.stroke();
+  document.getElementById('simVals').innerHTML = vals.join('');
+}
+function simFrame() {
+  simPose(simT);
+  document.getElementById('simTime').value = simT;
+  document.getElementById('simTimeL').textContent = simT.toFixed(2) + ' s';
+  if (!document.getElementById('simCtl').hidden) drawGraph();
+}
+function showSim(i) {
+  simIdx = Math.max(0, Math.min(sim.steps.length - 1, i));
+  const st = sim.steps[simIdx];
+  fillPanel(sim.steps, simIdx, 'Inventor Dynamic Simulation');
+  const leg = [];
+  if (st.view !== 'model') leg.push('<span><i style="background:#E8A33D"></i>Moving parts</span><span><i style="background:#C9D3DD;opacity:.5;border:1px solid #9AA6B2"></i>Fixed parts, see through</span>');
+  document.getElementById('legend').innerHTML = leg.join('');
+  document.getElementById('summary').innerHTML = `<div class="story">${esc(sim.story)}</div>`;
+  const ctl = ['motion', 'play', 'graph'].includes(st.view);
+  document.getElementById('simCtl').hidden = !ctl;
+  simLook(st.view);
+  if (st.view === 'play' && !simPlaying) togglePlay(true);
+  if (!ctl && simPlaying) togglePlay(false);
+  if (!ctl) simT = 0;
+  simFrame();
+}
+function togglePlay(on) {
+  simPlaying = on ?? !simPlaying; simLast = performance.now();
+  document.getElementById('simPlay').textContent = simPlaying ? 'Pause' : 'Play';
+}
+document.getElementById('simPlay').onclick = () => togglePlay();
+document.getElementById('simTime').oninput = e => { simT = +e.target.value; togglePlay(false); simFrame(); };
 // ---------------------------------------------------------------- shared step panel
 function fillPanel(list, i, badge) {
   const s = list[i], nx = list[i + 1];
@@ -519,28 +621,32 @@ async function showFea(i) {
   document.getElementById('summary').innerHTML = feaSummary();
   feaView();
 }
-const go = d => tab === 'steps' ? showStep(stepIdx + d) : tab === 'fea' ? showFea(feaIdx + d) : null;
+const go = d => tab === 'steps' ? showStep(stepIdx + d) : tab === 'fea' ? showFea(feaIdx + d) : tab === 'sim' ? showSim(simIdx + d) : null;
 
 async function setTab(t) {
   try {
     if (t === 'steps' && !stepsMeta) stepsMeta = await (await fetch(`steps/${NAME}.json`)).json();
     if (t === 'fea' && !fea) { fea = await (await fetch(`fea/${NAME}.json`)).json(); buildFea(); }
+    if (t === 'sim' && !sim) { sim = await (await fetch(`sim/${NAME}.json`)).json(); document.getElementById('simTime').max = sim.duration; }
   } catch (e) { caption('Not ready for this model yet'); setTimeout(() => caption(''), 1800); return; }
+  if (tab === 'sim' && t !== 'sim') { togglePlay(false); simReset(); }
   tab = t;
-  const guide = t === 'steps' || t === 'fea';
+  const guide = t === 'steps' || t === 'fea' || t === 'sim';
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
   document.body.classList.toggle('steps', guide);
   document.getElementById('steps').hidden = !guide;
   document.getElementById('changesL').hidden = t !== 'steps';
-  document.getElementById('summary').hidden = t !== 'fea';
+  document.getElementById('summary').hidden = t !== 'fea' && t !== 'sim';
+  if (t !== 'sim') document.getElementById('simCtl').hidden = true;
   if (t !== 'fea') document.getElementById('feaCtl').hidden = true;
-  root.visible = !guide; stepRoot.visible = t === 'steps'; feaRoot.visible = t === 'fea';
+  root.visible = !guide || t === 'sim'; stepRoot.visible = t === 'steps'; feaRoot.visible = t === 'fea';
   if (guide) {
     applyExplode(0); document.getElementById('explode').value = 0;
     applySection(false); document.getElementById('section').checked = false;
   }
   if (t === 'steps') { makeDots(stepsMeta.steps, showStep); await showStep(stepIdx); }
   if (t === 'fea') { makeDots(fea.steps, showFea); await showFea(feaIdx); }
+  if (t === 'sim') { makeDots(sim.steps, showSim); showSim(simIdx); }
   setSize();
   if (!guide && !RENDER) { q.delete('tab'); q.delete('step'); history.replaceState(null, '', '?' + q.toString()); }
 }
@@ -553,7 +659,7 @@ document.getElementById('edges').addEventListener('change', async () => { if (st
 document.getElementById('defScale').oninput = () => fea && feaView();
 document.getElementById('showMesh').onchange = () => fea && feaView();
 window.addEventListener('keydown', e => {
-  if ((tab !== 'steps' && tab !== 'fea') || e.target.closest('input')) return;
+  if (!['steps', 'fea', 'sim'].includes(tab) || e.target.closest('input')) return;
   if (e.key === 'ArrowRight') go(1);
   if (e.key === 'ArrowLeft') go(-1);
 });
@@ -561,7 +667,9 @@ load().then(() => {
   const t = q.get('tab'), n = Math.max(0, (+q.get('step') || 1) - 1);
   if (t === 'steps') { stepIdx = n; setTab('steps'); }
   if (t === 'fea') { feaIdx = n; setTab('fea'); }
+  if (t === 'sim') { simIdx = n; setTab('sim'); }
 });
+fetch(`sim/${NAME}.json`, { method: 'HEAD' }).then(r => { if (!r.ok) throw 0; }).catch(() => { document.querySelector('#tabs [data-tab=sim]').hidden = true; });
 </script>
 </body>
 </html>

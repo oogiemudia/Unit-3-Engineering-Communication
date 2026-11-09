@@ -1,0 +1,162 @@
+{
+ "name": "fit_pair",
+ "duration": 5,
+ "story": "The pin slides down into the 20 H7 hole. With a clearance fit it goes in by hand.",
+ "moving": [
+  "pin (shaft 20 g6)"
+ ],
+ "motion": [
+  {
+   "part": "pin (shaft 20 g6)",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     50
+    ],
+    [
+     0.5,
+     50
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Pin height",
+   "unit": "mm",
+   "keys": [
+    [
+     0,
+     50
+    ],
+    [
+     0.5,
+     50
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "Pin speed",
+   "unit": "mm/s",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     1.75,
+     -30
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open fit_pair.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the pin joint",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Find the Cylindrical joint between the housing hole and the pin.",
+    "If it is missing, click Insert Joint, choose Cylindrical and pick the hole, then the pin. Click OK."
+   ],
+   "note": "A cylindrical joint allows two movements: sliding along the axis and turning about it."
+  },
+  {
+   "view": "motion",
+   "title": "Push the pin in",
+   "command": "Right click the Cylindrical joint > Properties > dof 2 (T) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "In the Input Grapher: 50 mm at 0.5 s and 0 mm at 3 s (fully home).",
+    "Click OK twice."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 5 s and Images to 250.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the position and the velocity of the Cylindrical joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}
