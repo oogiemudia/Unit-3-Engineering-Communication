@@ -1,0 +1,296 @@
+{
+ "name": "pneumatic_cylinder",
+ "title": "Pneumatic cylinder",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Barrel: a tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as barrel.ipt.",
+    "Start 2D Sketch on the YZ Plane. Two circles on the origin: diameter 36 and diameter 32. Finish Sketch.",
+    "Extrude: click inside the ring so only the ring is picked. Distance A: 80 mm. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "barrel",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_01.glb",
+   "edges": "steps/pneumatic_cylinder/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Rear cap: square end plate",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as rear_cap.ipt.",
+    "Sketch a 44 by 44 Rectangle (Two Point Center) on the YZ Plane and Extrude it 12 mm.",
+    "Fillet: radius 3 mm on the four edges along the thickness. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "rear cap with air port",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_02.glb",
+   "edges": "steps/pneumatic_cylinder/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Rear cap: air port",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click a side face of the cap, half way through its 12 mm thickness and in the middle.",
+    "Simple Hole. Diameter 6 mm. Through All. Click OK. Save rear_cap.ipt."
+   ],
+   "note": "This is the port where the air comes in on the cylinder symbol.",
+   "parts": [
+    {
+     "name": "rear cap with air port",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_03.glb",
+   "edges": "steps/pneumatic_cylinder/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Front cap with rod hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Make front_cap.ipt the same way: 44 by 44 square, Extrude 12 mm, Fillet 3 mm.",
+    "Hole on the centre of the face. Simple Hole. Diameter 13 mm. Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "front cap",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_04.glb",
+   "edges": "steps/pneumatic_cylinder/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Piston and piston rod",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "piston.ipt: Circle diameter 31 on the YZ Plane, Extrude 10 mm.",
+    "rod.ipt: Circle diameter 12 on the YZ Plane, Extrude 122 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston rod",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_05.glb",
+   "edges": "steps/pneumatic_cylinder/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Return spring",
+   "command": "3D Model tab > Create panel > Coil",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as spring.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a centre line along the X axis, and a circle of diameter 2.4 with its centre 11 from the line. Finish Sketch.",
+    "Click Coil. Profile: the circle. Axis: the centre line.",
+    "Coil Size tab: Type Pitch and Height. Pitch 7.71 mm, Height 54 mm (7 turns). Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "return spring",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_06.glb",
+   "edges": "steps/pneumatic_cylinder/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Assembly: barrel and caps",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as pneumatic_cylinder.iam.",
+    "Place barrel.ipt and right click, Place Grounded at Origin.",
+    "Place rear_cap.ipt and front_cap.ipt. For each: Constrain > Mate the cap face to the end of the barrel, then Mate the cap centre axis to the barrel axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "barrel",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear cap with air port",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front cap",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_07.glb",
+   "edges": "steps/pneumatic_cylinder/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Assembly: piston and rod",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place piston.ipt and rod.ipt.",
+    "Constrain > Insert: the rod end into the piston face, so they share an axis.",
+    "Constrain > Mate: the piston axis to the barrel axis, and the back of the piston 6 mm from the rear cap."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "barrel",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear cap with air port",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front cap",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston rod",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_08.glb",
+   "edges": "steps/pneumatic_cylinder/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Assembly: the spring",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place spring.ipt.",
+    "Constrain > Mate: the spring axis to the rod axis.",
+    "Constrain > Mate: one end of the spring against the front of the piston. Save the assembly."
+   ],
+   "note": "Spring return: air pushes the piston out, and the spring pushes it back when the air is let out.",
+   "parts": [
+    {
+     "name": "barrel",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear cap with air port",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front cap",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston rod",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "return spring",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pneumatic_cylinder/step_09.glb",
+   "edges": "steps/pneumatic_cylinder/step_09.json"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "name": "step_block",
+ "title": "Step block",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the step profile",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch and click the XY Plane (the front).",
+    "Sketch tab > Create panel > Line: draw the six sided step outline from the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 60 long, 40 high overall, the step 30 long and 20 high. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/step_block/step_01.glb",
+   "edges": "steps/step_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. The profile is picked for you.",
+    "Distance A: 40 mm, direction into the screen.",
+    "Output: Solid. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "step block",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/step_block/step_02.glb",
+   "edges": "steps/step_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Drill the 10 mm hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face of the lower step.",
+    "Position the centre 15 from the left end and 20 from the front edge (half the depth).",
+    "Type: Simple Hole. Diameter 10 mm. Termination: Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "step block",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/step_block/step_03.glb",
+   "edges": "steps/step_block/step_03.json"
+  }
+ ]
+}

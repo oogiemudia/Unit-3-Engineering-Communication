@@ -12,6 +12,7 @@ The website lives in the `docs` folder. To publish it (once): on GitHub open **S
 
 - `index.html`: the catalogue, with a spinning preview of each model
 - `viewer.html?m=<model>`: the 3D viewer (isometric, front, plan and end views, perspective, edges, explode and section A-A)
+- `viewer.html?m=<model>&tab=steps`: the Build steps tab, which rebuilds the model one stage at a time with the Autodesk Inventor command for each step (add `&step=3` to open a given step)
 
 ## What is in it
 
@@ -39,6 +40,7 @@ For each model the `docs` folder holds:
 | `glb/` | glTF file used by the web viewer |
 | `drawings/` | A3 drawing sheets as SVG (editable) and PNG: third angle, first angle, and section A-A where useful |
 | `media/` | Isometric still (PNG) and silent MP4 clips, 1280 x 720 |
+| `steps/` | The Build steps tab: one JSON file per model with the Inventor commands, and a GLB and edges file for every stage |
 
 ## Drawing conventions used
 
@@ -51,6 +53,12 @@ For each model the `docs` folder holds:
 
 Simplifications: bolts and nuts are simplified (no thread helix), and the threaded shaft is modelled at the major diameter, which is how CAD packages show a cosmetic thread.
 
+## Build steps (Autodesk Inventor)
+
+The Build steps tab in the viewer takes a learner through making each model in Autodesk Inventor, one feature at a time. Each step gives the command (for example Extrude, Hole, Circular Pattern, Coil or Constrain), where it sits on the ribbon, and the clicks and values to enter. The 3D view shows the model after that step: sketches appear as a flat amber profile, material the step adds is amber, material it cuts away is shown in see-through red, and in assembly steps the parts already placed turn see-through so the new part stands out.
+
+The steps are written in `models/inventor_steps.py`. Plane names follow Inventor's default (Y up): the XY Plane is the front, the XZ Plane is the top and the YZ Plane is the side. The stage models are made in CadQuery with the same operations as `models/parts.py`, so they are a guide to the Inventor workflow rather than Inventor files. To change a step, edit `models/inventor_steps.py` and run `python3 tools/build_steps.py <model>`.
+
 ## Rebuild everything
 
 ```bash
@@ -58,6 +66,7 @@ pip install cadquery trimesh playwright   # Playwright needs Chromium: python -m
 # also needed: ffmpeg and rsvg-convert (librsvg)
 python3 tools/build_models.py   # STEP, STL, GLB, edges, docs/models.json
 python3 tools/drawings.py       # drawing sheets (SVG and PNG)
+python3 tools/build_steps.py    # Build steps tab: a model of every stage (checks the last stage matches the finished model)
 python3 tools/render.py         # stills and MP4 animations
 python3 tools/render.py step_block --bg FDF6E3 --suffix _cream   # cream background for the dyslexia friendly decks
 ```

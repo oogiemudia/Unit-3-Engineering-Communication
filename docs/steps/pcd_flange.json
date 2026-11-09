@@ -1,0 +1,154 @@
+{
+ "name": "pcd_flange",
+ "title": "PCD flange",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the flange circle",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XZ Plane (the top).",
+    "Circle (Center Point) on the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): diameter 120. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/pcd_flange/step_01.glb",
+   "edges": "steps/pcd_flange/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 15 mm, upwards. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_02.glb",
+   "edges": "steps/pcd_flange/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Sketch and extrude the hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the top face of the flange. Circle on the centre, diameter 50. Finish Sketch.",
+    "Extrude. Distance A: 20 mm, upwards. Boolean: Join. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_03.glb",
+   "edges": "steps/pcd_flange/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bore the 30 mm hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole, click the top face of the hub, then click its circular edge to make the hole concentric.",
+    "Simple Hole. Diameter 30 mm. Termination: Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_04.glb",
+   "edges": "steps/pcd_flange/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Drill one hole on the PCD",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Start 2D Sketch on the top face of the flange. Draw a construction circle of diameter 90 (the PCD).",
+    "Sketch tab > Create panel > Point: put a point on the PCD, in line with the X axis. Finish Sketch.",
+    "Hole: pick the point. Simple Hole. Diameter 10 mm. Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_05.glb",
+   "edges": "steps/pcd_flange/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Pattern six holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Click Circular Pattern. Features: the 10 mm hole. Rotation Axis: the bore.",
+    "Placement: 6 occurrences over 360 degrees, so they are 60 degrees apart. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_06.glb",
+   "edges": "steps/pcd_flange/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Chamfer the bore",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Click Chamfer. Distance 1.5 mm. Pick the top edge of the bore. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PCD flange",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/pcd_flange/step_07.glb",
+   "edges": "steps/pcd_flange/step_07.json"
+  }
+ ]
+}

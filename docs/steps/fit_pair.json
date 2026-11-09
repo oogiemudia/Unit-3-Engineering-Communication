@@ -1,0 +1,148 @@
+{
+ "name": "fit_pair",
+ "title": "Pin and housing fit",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Housing: sketch and extrude",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as housing.ipt.",
+    "Start 2D Sketch on the XZ Plane. Rectangle (Two Point Center) 60 by 40 on the origin. Finish Sketch.",
+    "Extrude. Distance A: 30 mm. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_01.glb",
+   "edges": "steps/fit_pair/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Housing: the 20 H7 hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and place it on the centre of the top face. Simple Hole. Diameter 20 mm. Through All. Click OK.",
+    "In the Parameters dialog (Manage tab) you can give the hole diameter the H7 tolerance so the drawing shows it."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_02.glb",
+   "edges": "steps/fit_pair/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Housing: round the corners",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Click Fillet. Radius 3 mm. Pick the four vertical corner edges. Click OK. Save housing.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_03.glb",
+   "edges": "steps/fit_pair/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Pin: sketch and extrude",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pin.ipt.",
+    "Start 2D Sketch on the XZ Plane. Circle on the origin, diameter 20. Finish Sketch.",
+    "Extrude. Distance A: 45 mm. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pin",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_04.glb",
+   "edges": "steps/fit_pair/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Pin: chamfer the ends",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Click Chamfer. Distance 0.8 mm. Pick the edge at each end. Click OK. Save pin.ipt."
+   ],
+   "note": "The g6 tolerance goes on the drawing: the model is at the nominal 20 mm.",
+   "parts": [
+    {
+     "name": "pin",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_05.glb",
+   "edges": "steps/fit_pair/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Assembly: fit the pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as fit_pair.iam.",
+    "Place housing.ipt and right click, Place Grounded at Origin.",
+    "Place pin.ipt. Constrain > Mate: pick the pin axis and the hole axis.",
+    "Constrain > Flush with an offset of 5 mm: the bottom of the pin 5 below the bottom of the housing. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing (hole 20 H7)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pin (shaft 20 g6)",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/fit_pair/step_06.glb",
+   "edges": "steps/fit_pair/step_06.json"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "name": "vee_block",
+ "title": "Vee block",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the vee profile",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XY Plane (the front).",
+    "Line: draw the outline with the vee in the top, starting at the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 80 wide, 50 high, the vee 40 across the top and 20 deep, centred. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/vee_block/step_01.glb",
+   "edges": "steps/vee_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 50 mm, into the screen. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee block",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/vee_block/step_02.glb",
+   "edges": "steps/vee_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cut the relief slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Rectangle 8 wide, centred on the vee, from 8 below the bottom of the vee to above it.",
+    "Finish Sketch. Extrude, Boolean: Cut, Extents: Through All. Click OK."
+   ],
+   "note": "The relief slot gives clearance so a round bar sits on the two faces of the vee.",
+   "parts": [
+    {
+     "name": "vee block",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/vee_block/step_03.glb",
+   "edges": "steps/vee_block/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cut the base slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Rectangle 30 wide and 6 high, centred on the bottom edge.",
+    "Finish Sketch. Extrude, Boolean: Cut, Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee block",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/vee_block/step_04.glb",
+   "edges": "steps/vee_block/step_04.json"
+  }
+ ]
+}

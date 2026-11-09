@@ -1,0 +1,130 @@
+{
+ "name": "l_bracket",
+ "title": "L bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the L profile",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XY Plane (the front).",
+    "Line: draw the L shape from the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): base 60 long, upright 50 high, both 5 thick. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/l_bracket/step_01.glb",
+   "edges": "steps/l_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the bracket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 40 mm, into the screen. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "L bracket",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/l_bracket/step_02.glb",
+   "edges": "steps/l_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Inside bend radius",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Click Fillet. Radius 6 mm. Pick the inside corner edge. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "L bracket",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/l_bracket/step_03.glb",
+   "edges": "steps/l_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Outside bend radius",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Click Fillet. Radius 11 mm (6 inside + 5 thickness). Pick the outside corner edge. Click OK."
+   ],
+   "note": "Inside radius plus thickness gives an even 5 mm wall round the bend, as bent plate has.",
+   "parts": [
+    {
+     "name": "L bracket",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/l_bracket/step_04.glb",
+   "edges": "steps/l_bracket/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Cut the slot in the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the top of the base. Slot (Center to Center): centres 11 apart (18 long overall), 7 wide, centred 40 from the back and in the middle of the width.",
+    "Finish Sketch. Extrude, Boolean: Cut, Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "L bracket",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/l_bracket/step_05.glb",
+   "edges": "steps/l_bracket/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Drill the hole in the upright",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the outside face of the upright. Centre 32 up from the bottom, in the middle of the width.",
+    "Simple Hole. Diameter 8 mm. Through All. Click OK."
+   ],
+   "note": "You can also make this part with the Sheet Metal tools: Face, then Flange, with a 5 mm thickness and a 6 mm bend radius.",
+   "parts": [
+    {
+     "name": "L bracket",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/l_bracket/step_06.glb",
+   "edges": "steps/l_bracket/step_06.json"
+  }
+ ]
+}

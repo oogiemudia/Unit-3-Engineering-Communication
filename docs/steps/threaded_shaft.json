@@ -1,0 +1,137 @@
+{
+ "name": "threaded_shaft",
+ "title": "Threaded shaft",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch half the shaft profile",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XY Plane (the front).",
+    "Line: draw half of the stepped outline above a horizontal centre line through the origin.",
+    "Format panel > Centerline: change the bottom line to a centre line, so Inventor dimensions diameters.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): diameters 30, 20 and 16; lengths 60, 40 and 28. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/threaded_shaft/step_01.glb",
+   "edges": "steps/threaded_shaft/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Revolve the shaft",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Click Revolve. Profile: the sketch. Axis: the centre line.",
+    "Extents: Full (360 degrees). Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "threaded shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/threaded_shaft/step_02.glb",
+   "edges": "steps/threaded_shaft/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cut the thread undercut",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 3 wide at the start of the 16 mm diameter, from 13 mm diameter up past the outside.",
+    "Finish Sketch, then Revolve. Axis: the shaft centre line. Boolean: Cut. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "threaded shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/threaded_shaft/step_03.glb",
+   "edges": "steps/threaded_shaft/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Chamfer both ends",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Click Chamfer. Distance 1 mm.",
+    "Pick the outside edge at each end of the shaft. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "threaded shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/threaded_shaft/step_04.glb",
+   "edges": "steps/threaded_shaft/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Cut the keyway",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "3D Model tab > Work Features panel > Plane: Tangent to Surface and Parallel to Plane. Pick the 30 mm diameter and the XZ Plane.",
+    "Start 2D Sketch on that work plane.",
+    "Sketch tab > Create panel > Slot (Center to Center): centres 24 apart (30 long overall), 6 wide, centred 30 from the left end.",
+    "Finish Sketch. Extrude, Boolean: Cut, Distance 3.5 mm, into the shaft. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "threaded shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/threaded_shaft/step_05.glb",
+   "edges": "steps/threaded_shaft/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Add the M16 thread",
+   "command": "3D Model tab > Modify panel > Thread",
+   "actions": [
+    "Click Thread and pick the 16 mm diameter face.",
+    "Specification: ISO Metric profile, size 16, designation M16x2. Untick Full Length and set 24 mm from the undercut.",
+    "Leave Display in Model ticked. Click OK."
+   ],
+   "note": "Inventor threads are cosmetic: the solid stays at the 16 mm major diameter and the drawing shows the thread by convention.",
+   "parts": [
+    {
+     "name": "threaded shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "steps/threaded_shaft/step_06.glb",
+   "edges": "steps/threaded_shaft/step_06.json"
+  }
+ ]
+}

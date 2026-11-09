@@ -1,0 +1,271 @@
+{
+ "name": "bolted_joint",
+ "title": "Bolted joint",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Plate part: sketch the rectangle",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as plate.ipt.",
+    "Start 2D Sketch on the XZ Plane (the top).",
+    "Sketch tab > Create panel > Rectangle (Two Point Center): click the origin and drag.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 80 by 40. Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/bolted_joint/step_01.glb",
+   "edges": "steps/bolted_joint/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Plate part: extrude",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 10 mm, upwards. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "plate",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_02.glb",
+   "edges": "steps/bolted_joint/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Plate part: clearance hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the top face. Place the centre on the centre of the plate.",
+    "Simple Hole. Diameter 9 mm (clearance for M8). Termination: Through All. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_03.glb",
+   "edges": "steps/bolted_joint/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Plate part: round the corners",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Click Fillet. Radius 4 mm.",
+    "Pick the four vertical corner edges. Click OK. Save plate.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_04.glb",
+   "edges": "steps/bolted_joint/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Assembly: place the lower plate",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as bolted_joint.iam.",
+    "Click Place and choose plate.ipt.",
+    "Right click and pick Place Grounded at Origin, then press Esc."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower plate",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_05.glb",
+   "edges": "steps/bolted_joint/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Assembly: place the upper plate",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Click Place, choose plate.ipt again and click once in the window to add a second copy.",
+    "Click Constrain. Type: Insert. Pick the top edge of the hole in the lower plate, then the bottom edge of the hole in the upper plate. Click OK.",
+    "Add a Mate constraint between a side face of each plate so they line up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper plate",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_06.glb",
+   "edges": "steps/bolted_joint/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Assembly: add the washer",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Click Place from Content Center. Fasteners > Washers > Plain. Pick an M8 plain washer (8.4 x 17 x 1.6).",
+    "Constrain > Insert: the washer bore onto the top edge of the hole in the upper plate."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_07.glb",
+   "edges": "steps/bolted_joint/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Assembly: add the bolt",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center. Fasteners > Bolts > Hex Head. Pick an M8 x 40 hex head bolt.",
+    "Constrain > Insert: the underside of the bolt head onto the top of the washer."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt M8 x 40",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_08.glb",
+   "edges": "steps/bolted_joint/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Assembly: add the nut",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center. Fasteners > Nuts > Hex. Pick an M8 hex nut.",
+    "Constrain > Insert: the nut onto the bottom edge of the hole in the lower plate.",
+    "Save bolted_joint.iam."
+   ],
+   "note": "Content Center parts come with their threads and exact standard sizes. The hub models them simplified.",
+   "parts": [
+    {
+     "name": "lower plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt M8 x 40",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex nut M8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/bolted_joint/step_09.glb",
+   "edges": "steps/bolted_joint/step_09.json"
+  }
+ ]
+}

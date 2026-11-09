@@ -1,0 +1,67 @@
+{
+ "name": "sloping_block",
+ "title": "Sloping block",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the side profile",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt to start a new part.",
+    "Start 2D Sketch on the XY Plane (the front).",
+    "Line: draw the five sided outline starting at the origin.",
+    "Add the dimensions with Dimension (Sketch tab > Constrain panel): 70 long, 50 high, 20 high at the right hand end, the slope 30 across and 30 up (45 degrees). Click Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "steps/sloping_block/step_01.glb",
+   "edges": "steps/sloping_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance A: 40 mm, into the screen. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "sloping block",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/sloping_block/step_02.glb",
+   "edges": "steps/sloping_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Drill a hole square to the slope",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole and click the sloping face. Inventor drills square to the face you pick.",
+    "Position the centre in the middle of the face: half way along the slope and 20 from the front edge.",
+    "Type: Simple Hole. Diameter 12 mm. Termination: Distance, 30 mm. Drill Point: Flat. Click OK."
+   ],
+   "note": "Look at the front view: the hole is not seen as a circle until you add an auxiliary view square to the slope.",
+   "parts": [
+    {
+     "name": "sloping block",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "steps/sloping_block/step_03.glb",
+   "edges": "steps/sloping_block/step_03.json"
+  }
+ ]
+}
