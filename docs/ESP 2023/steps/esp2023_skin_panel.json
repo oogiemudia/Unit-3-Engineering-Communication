@@ -1,0 +1,44 @@
+{
+ "name": "esp2023_skin_panel",
+ "title": "ESP 2023 skin plate panel",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the panel",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as skin_panel.ipt.",
+    "Start 2D Sketch on the XY Plane (the front).",
+    "Draw a rectangle 580 wide and 630 high, its bottom left corner 400 along and 160 up from the origin, so the panel sits where it does in the leaf.",
+    "Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "ESP 2023/steps/esp2023_skin_panel/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_skin_panel/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Click Extrude. Distance 12 mm. Click OK."
+   ],
+   "note": "The panel is held on all four edges by the girders, the heel post and a stiffener, so in the FEA all four edge faces are fixed.",
+   "parts": [
+    {
+     "name": "skin plate panel",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_skin_panel/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_skin_panel/step_02.json"
+  }
+ ]
+}

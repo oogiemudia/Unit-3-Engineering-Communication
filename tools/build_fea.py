@@ -116,7 +116,7 @@ def solve_case(name, case):
         assert g, (name, f['where'])
     bb = shape.BoundingBox()
     diag = math.sqrt(bb.xlen ** 2 + bb.ylen ** 2 + bb.zlen ** 2)
-    size = diag / 24
+    size = case.get('mesh_size', diag / 24)
     nodes, tets, tris = gmsh_mesh(shape, fixed_faces + load_faces, size)
     m = MeshTet(nodes.T.copy(), tets.T.copy())
     e = ElementVector(ElementTetP2())
@@ -141,6 +141,10 @@ def solve_case(name, case):
         if load['kind'] == 'pressure':
             P = load['value']
             f += asm(LinearForm(lambda v, w: -P * (v[0] * w.n[0] + v[1] * w.n[1] + v[2] * w.n[2])), fb)
+        elif load['kind'] == 'hydrostatic':
+            # water pressure grows with depth: p = rho g (surface level - z), and is zero above the surface
+            level, rg = load['value'], load.get('rho_g', 9.81e-6)
+            f += asm(LinearForm(lambda v, w: -rg * np.maximum(level - w.x[2], 0) * (v[0] * w.n[0] + v[1] * w.n[1] + v[2] * w.n[2])), fb)
         elif load['dir'] == 'normal':
             t = load['value'] / A
             f += asm(LinearForm(lambda v, w: -t * (v[0] * w.n[0] + v[1] * w.n[1] + v[2] * w.n[2])), fb)
@@ -164,12 +168,12 @@ def solve_case(name, case):
             dmin = np.min(np.linalg.norm(cen[:, None, :] - cen[sel][None, :, :], axis=2), axis=1)
             sel.append(int(np.argmax(dmin)))
         for i in sel:
-            if load['kind'] == 'pressure' or load['dir'] == 'normal':
+            if load['kind'] in ('pressure', 'hydrostatic') or load['dir'] == 'normal':
                 dv = -nrm[i]
             else:
                 dv = np.array(load['dir'], float)
             arrows.append(dict(p=np.round(to_gl(cen[i]), 2).tolist(), d=np.round(to_gl(dv / np.linalg.norm(dv)), 3).tolist(),
-                               out=bool(load['kind'] == 'pressure')))
+                               out=bool(load['kind'] in ('pressure', 'hydrostatic'))))
     D = ib.get_dofs(fixed_facets).all()
     u = solve(*condense(K, f, D=D))
 
@@ -245,20 +249,20 @@ def inventor_steps(model, case, res, mesh):
              note='A fixed constraint stops the face moving in any direction. It stands in for the bolts, the bench or the wall.'),
     ]
     for l in case['loads']:
-        cmd = 'Pressure' if l['kind'] == 'pressure' else 'Force'
+        cmd = 'Pressure' if l['kind'] in ('pressure', 'hydrostatic') else 'Force'
         steps.append(dict(view='load', title='Apply the load: ' + cmd.lower(),
                           command='Stress Analysis tab > Loads panel > ' + cmd,
                           actions=['Click %s and pick %s.' % (cmd, l['where']),
                                    'Set: %s. Use the Direction button and Flip if the arrow points the wrong way.' % l['how'],
                                    'Click OK.'],
-                          note='The arrows show where the load acts and which way.'))
+                          note=l.get('note') or 'The arrows show where the load acts and which way.'))
     steps += [
         dict(view='mesh', title='Set up and view the mesh', command='Stress Analysis tab > Prepare panel > Mesh Settings, then Mesh View',
              actions=['Click Mesh Settings. Average Element Size 0.1, Minimum Element Size 0.2, Grading Factor 1.5, Maximum Turn Angle 60 degrees. Tick Create Curved Mesh Elements. Click OK.',
                       'Click Mesh View. Inventor splits the part into small tetrahedra (four sided elements).',
                       'Look for small elements round holes and fillets: that is where stress changes fastest.'],
-             note='Sizes in Mesh Settings are a fraction of the part size, not millimetres. The hub mesh: %d elements, %d nodes, about %s mm across.' % (
-                 mesh['elements'], mesh['solid_nodes_p2'], mesh['size'])),
+             note=(case.get('mesh_note', '') + 'Sizes in Mesh Settings are a fraction of the part size, not millimetres. The hub mesh: %d elements, %d nodes, about %s mm across.' % (
+                 mesh['elements'], mesh['solid_nodes_p2'], mesh['size']))),
         dict(view='mesh', title='Converge the answer (optional)', command='Stress Analysis tab > Prepare panel > Convergence Settings',
              actions=['Click Convergence Settings. Set Maximum Number of h Refinements to 2 and Stop Criteria to 10 %.',
                       'Inventor then refines the mesh where the stress is highest and solves again, until the answer changes by less than 10 %.'],
@@ -297,8 +301,11 @@ def build(name):
                fixed=[f['where'] for f in case['fixed']],
                loads=[dict(kind=l['kind'], value=l['value'], where=l['where'], how=l['how']) for l in case['loads']],
                results=res, mesh=mesh, steps=steps, surface=surf, arrows=arrows)
-    os.makedirs(OUT, exist_ok=True)
-    with open(os.path.join(OUT, name + '.json'), 'w') as f:
+    if case.get('hand_check'):
+        out['hand_check'] = case['hand_check']
+    out_dir = os.path.join(ROOT, 'docs', parts.base_of(model), 'fea')
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, name + '.json'), 'w') as f:
         json.dump(out, f, separators=(',', ':'))
     print('%-20s %6d elems  vm %8.2f MPa  disp %.4f mm  SF %.1f' % (name, mesh['elements'], res['vm_max'], res['disp_max'], res['sf_min']))
 

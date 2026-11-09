@@ -237,3 +237,16 @@ MODELS = [
          uses='The real component behind the single-acting, spring-return cylinder symbol (ISO 1219-1:2012).',
          section='y', explode=(1, 0, 0)),
 ]
+
+
+# ------------------------------------------------------------------ project folders
+# Projects such as ESP 2023 keep every file they generate (models, drawings, animations, steps, simulation and
+# FEA) together in their own folder under docs/, named by the model's 'folder' key.
+from esp2023 import MODELS as ESP2023_MODELS  # noqa: E402
+
+MODELS += ESP2023_MODELS
+
+
+def base_of(m):
+    """The folder under docs/ that holds a model's files, with a trailing slash ('' for the hub's own models)."""
+    return m['folder'] + '/' if m.get('folder') else ''

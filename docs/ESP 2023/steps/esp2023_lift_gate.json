@@ -1,0 +1,135 @@
+{
+ "name": "esp2023_lift_gate",
+ "title": "ESP 2023 concept B: lift gate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Gate panel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lift_gate_panel.ipt.",
+    "Sketch a 4600 x 400 rectangle on the XZ Plane and Extrude it 6000 mm up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lift gate panel",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lift_gate/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_lift_gate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Lighten the panel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch four 4000 x 700 rectangles on the downstream face, at 1000, 2500, 4000 and 5400 mm.",
+    "Extrude Cut 150 mm deep. Click OK."
+   ],
+   "note": "The pockets show where the stiffening girders would be.",
+   "parts": [
+    {
+     "name": "lift gate panel",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lift_gate/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_lift_gate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Towers, beam and counterweights",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for the guide towers (700 x 900, 11 m high, with a 150 mm slot for the gate), the lifting beam and the counterweights."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lift gate panel",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "guide towers",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lifting beam and winch house",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "counterweights",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lift_gate/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_lift_gate/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Assemble the concept",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as lift_gate.iam. Place the towers grounded, then Mate the panel into the slots."
+   ],
+   "note": "Rejected for the final design: the 11 m towers would tower over a heritage canal, and the gate must lift high enough for boats to pass under, so it is slow and needs a large winch.",
+   "parts": [
+    {
+     "name": "lift gate panel",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "guide towers",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lifting beam and winch house",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "counterweights",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lift_gate/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_lift_gate/step_04.json"
+  }
+ ]
+}

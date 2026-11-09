@@ -124,10 +124,10 @@ scene.add(new THREE.HemisphereLight(0xffffff, 0x8a96a3, 1.6));
 const sun = new THREE.DirectionalLight(0xffffff, 1.7); sun.position.set(2, 3, 2.5); scene.add(sun);
 const fill = new THREE.DirectionalLight(0xffffff, 0.6); fill.position.set(-3, 1, -2); scene.add(fill);
 
-let cam, ortho, persp, controls, size = 100, sizeA = 100, sizeE = 100, centre = new THREE.Vector3();
+let cam, ortho, persp, controls, size = 100, sizeA = 100, sizeE = 100, centre = new THREE.Vector3(), centre0 = new THREE.Vector3();
 const root = new THREE.Group(); scene.add(root);
 const parts = [];             // {node, edges, offset}
-let catalogueEntry = null;
+let catalogueEntry = null, BASE = '';   // BASE: the project folder holding this model's files ('' for hub models)
 
 // clipping for section A-A: cut on the CAD XZ plane (glTF XY plane), keep the back half
 const clip = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
@@ -200,6 +200,7 @@ function caption(text) {
 async function load() {
   const cat = await (await fetch('models.json')).json();
   catalogueEntry = cat.find(e => e.name === NAME) || cat[0];
+  BASE = catalogueEntry.base || '';
   document.getElementById('title').textContent = catalogueEntry.title;
   document.title = catalogueEntry.title + ' · Unit 3 CAD viewer';
   const info = document.getElementById('info');
@@ -247,7 +248,7 @@ async function load() {
   }
   if (catalogueEntry.iso) VIEWS.iso = new THREE.Vector3(...catalogueEntry.iso);
   const box = new THREE.Box3().setFromObject(root);
-  box.getCenter(centre);
+  box.getCenter(centre); centre0 = centre.clone();
   const solid = box.getSize(new THREE.Vector3()).length();
   sizeA = solid * 0.62; sizeE = sizeA;
   if (catalogueEntry.exploded) {
@@ -264,7 +265,7 @@ async function load() {
   window.addEventListener('resize', setSize);
   loop();
   const bz = box.max.z - centre.z;
-  window.U3 = { ready: true, setState, size, front: bz, iso: VIEWS.iso.toArray(), frame: () => renderer.render(scene, cam) };
+  window.U3 = { ready: true, setState, loadSim, size, front: bz, iso: VIEWS.iso.toArray(), frame: () => renderer.render(scene, cam) };
 }
 
 let spinning = false;
@@ -284,6 +285,7 @@ function setState(s) {
   if (s.explode !== undefined) applyExplode(s.explode);
   if (s.section !== undefined) applySection(s.section, s.depth ?? 0);
   if (s.edges !== undefined) for (const p of parts) if (p.edges) p.edges.visible = s.edges;
+  if (s.simT !== undefined && sim) { simPose(s.simT); simLook(s.simView || 'model'); }
   caption(s.caption || '');
   renderer.render(scene, cam);
 }
@@ -399,6 +401,9 @@ const RAMP_CSS = 'linear-gradient(90deg,' + [0, 0.25, 0.5, 0.75, 1].map(t => '#'
 function buildFea() {
   const S = fea.surface, n = S.vm.length;
   const base = new Float32Array(S.pos), U = new Float32Array(S.u);
+  // when the analysed part is a small part of a big assembly, frame the camera on that part
+  const fbox = new THREE.Box3().setFromArray(base), fsz = fbox.getSize(new THREE.Vector3()).length() * 0.62;
+  const own = fsz < sizeA * 0.35, sizeF = own ? fsz : sizeA;
   const idx = S.tri;
   // one vertex per triangle corner, so each triangle can be flat shaded and coloured by its group
   const pos = new Float32Array(idx.length * 3), col = new Float32Array(idx.length * 3);
@@ -418,18 +423,18 @@ function buildFea() {
   const wire = new THREE.LineSegments(wg, new THREE.LineBasicMaterial({ color: 0x1D2B3A, transparent: true, opacity: 0.55 }));
   // arrows for the loads
   const arrows = new THREE.Group();
-  const len = sizeA * 0.22;
+  const len = sizeF * 0.22;
   for (const a of fea.arrows) {
     const d = new THREE.Vector3(...a.d), p = new THREE.Vector3(...a.p);
     arrows.add(new THREE.ArrowHelper(d, p.clone().sub(d.clone().multiplyScalar(len)), len, 0xC25E00, len * 0.3, len * 0.18));
   }
   // marker at the highest stress
   let iMax = 0; for (let i = 1; i < n; i++) if (S.vm[i] > S.vm[iMax]) iMax = i;
-  const marker = new THREE.Mesh(new THREE.SphereGeometry(sizeA * 0.025, 16, 12), new THREE.MeshBasicMaterial({ color: 0x111111 }));
+  const marker = new THREE.Mesh(new THREE.SphereGeometry(sizeF * 0.025, 16, 12), new THREE.MeshBasicMaterial({ color: 0x111111 }));
   feaRoot.add(mesh, wire, arrows, marker);
   let umax = 0; for (let i = 0; i < n; i++) umax = Math.max(umax, Math.hypot(U[3 * i], U[3 * i + 1], U[3 * i + 2]));
-  const auto = umax > 0 ? sizeA * 0.05 / umax : 0;
-  fea.gfx = { mesh, wire, arrows, marker, base, U, idx, pos, col, wpos, lp, iMax, umax, auto, geom, wg };
+  const auto = umax > 0 ? sizeF * 0.05 / umax : 0;
+  fea.gfx = { own, fbox, fsz, mesh, wire, arrows, marker, base, U, idx, pos, col, wpos, lp, iMax, umax, auto, geom, wg };
 }
 
 function feaColours(view) {
@@ -498,18 +503,18 @@ function feaSummary() {
   const r = fea.results, m = fea.material;
   return `<div class="sum"><div><b>Part</b> ${esc(fea.part)}</div><div><b>Material</b> ${esc(m.name)}, yield ${m.yield_strength} MPa</div>
     <div><b>Max stress</b> ${fmt(r.vm_max, 'MPa')}</div><div><b>Max displacement</b> ${fmt(r.disp_max, 'mm')}</div>
-    <div><b>Min safety factor</b> ${r.sf_min > 1000 ? 'over 1000' : r.sf_min.toFixed(1)}</div><div><b>Mesh</b> ${fea.mesh.elements.toLocaleString()} elements</div></div>`;
+    <div><b>Min safety factor</b> ${r.sf_min > 1000 ? 'over 1000' : r.sf_min.toFixed(1)}</div><div><b>Mesh</b> ${fea.mesh.elements.toLocaleString()} elements</div>${fea.hand_check ? `<div style="grid-column:1/-1"><b>Hand check</b> ${esc(fea.hand_check)}</div>` : ''}</div>`;
 }
 
 
 // ---------------------------------------------------------------- Simulation tab (Inventor Dynamic Simulation)
 let sim = null, simIdx = 0, simT = 0, simPlaying = false, simLast = 0;
 const SERIES_C = ['#1565D8', '#C25E00', '#2E9E5B'];
-function keyAt(keys, t, step) {
+function keyAt(keys, t, step, lin) {
   if (t <= keys[0][0]) return keys[0][1];
   for (let i = 1; i < keys.length; i++) {
     const [t0, v0] = keys[i - 1], [t1, v1] = keys[i];
-    if (t <= t1) { if (step) return v0; const u = (t - t0) / ((t1 - t0) || 1), e = u * u * (3 - 2 * u); return v0 + (v1 - v0) * e; }
+    if (t <= t1) { if (step) return v0; const u = (t - t0) / ((t1 - t0) || 1), e = lin ? u : u * u * (3 - 2 * u); return v0 + (v1 - v0) * e; }
   }
   return keys[keys.length - 1][1];
 }
@@ -521,20 +526,30 @@ function simReset() {
     const m = p.mats[0]; m.color.copy(p.base); m.emissive.setRGB(0, 0, 0); m.transparent = false; m.opacity = 1; m.depthWrite = true; m.needsUpdate = true;
   }
 }
+const glPoint = a => new THREE.Vector3(a[0], a[2], -a[1]);
 function simPose(t) {
-  for (const p of parts) { p.node.position.set(0, 0, 0); p.node.quaternion.identity(); p.node.scale.set(1, 1, 1); }
+  // each part's motions are applied in order, each one on top of the last (move, turn about a centre, stretch)
+  const mats = new Map();
   for (const mo of sim.motion) {
     const p = parts.find(x => x.name === mo.part); if (!p) continue;
-    const v = keyAt(mo.keys, t), ax = glAxis(mo.axis);
-    if (mo.kind === 'move') p.node.position.add(ax.multiplyScalar(v));
-    if (mo.kind === 'turn') p.node.quaternion.setFromAxisAngle(ax.normalize(), THREE.MathUtils.degToRad(v));
-    if (mo.kind === 'stretch') {
-      const k = v / mo.length0;
-      p.node.scale.set(ax.x ? k : 1, ax.y ? k : 1, ax.z ? k : 1);
-      p.node.position.add(ax.clone().multiplyScalar(mo.anchor * (1 - k)));
+    const v = keyAt(mo.keys, t, false, mo.lin), ax = glAxis(mo.axis), M = new THREE.Matrix4();
+    if (mo.kind === 'move') M.makeTranslation(ax.x * v, ax.y * v, ax.z * v);
+    if (mo.kind === 'turn') {
+      const c = glPoint(mo.centre || [0, 0, 0]);
+      M.makeTranslation(c.x, c.y, c.z).multiply(new THREE.Matrix4().makeRotationAxis(ax.normalize(), THREE.MathUtils.degToRad(v)))
+       .multiply(new THREE.Matrix4().makeTranslation(-c.x, -c.y, -c.z));
     }
+    if (mo.kind === 'stretch') {
+      const k = v / mo.length0, o = ax.clone().multiplyScalar(mo.anchor * (1 - k));
+      M.makeTranslation(o.x, o.y, o.z).multiply(new THREE.Matrix4().makeScale(ax.x ? k : 1, ax.y ? k : 1, ax.z ? k : 1));
+    }
+    mats.set(p, M.multiply(mats.get(p) || new THREE.Matrix4()));
   }
-  for (const p of parts) if (p.edges) { p.edges.position.copy(p.node.position); p.edges.quaternion.copy(p.node.quaternion); p.edges.scale.copy(p.node.scale); }
+  for (const p of parts) {
+    const M = mats.get(p) || new THREE.Matrix4();
+    M.decompose(p.node.position, p.node.quaternion, p.node.scale);
+    if (p.edges) { p.edges.position.copy(p.node.position); p.edges.quaternion.copy(p.node.quaternion); p.edges.scale.copy(p.node.scale); }
+  }
 }
 function simLook(view) {
   const hl = view !== 'model';
@@ -559,9 +574,9 @@ function drawGraph() {
   sim.graph.forEach((se, i) => {
     const ys = se.keys.map(k => k[1]); let lo = Math.min(...ys), hi = Math.max(...ys); if (hi === lo) hi = lo + 1;
     g.strokeStyle = SERIES_C[i]; g.lineWidth = 2; g.setLineDash(i === 1 ? [6, 4] : i === 2 ? [2, 3] : []); g.beginPath();
-    for (let k = 0; k <= 200; k++) { const t = D * k / 200, v = keyAt(se.keys, t, se.step), x = L + (R - L) * t / D, y = B - (B - T - 6) * (v - lo) / (hi - lo) - 3; k ? g.lineTo(x, y) : g.moveTo(x, y); }
+    for (let k = 0; k <= 200; k++) { const t = D * k / 200, v = keyAt(se.keys, t, se.step, se.lin), x = L + (R - L) * t / D, y = B - (B - T - 6) * (v - lo) / (hi - lo) - 3; k ? g.lineTo(x, y) : g.moveTo(x, y); }
     g.stroke();
-    vals.push(`<span style="color:${SERIES_C[i]}"><b>${esc(se.name)}</b> ${keyAt(se.keys, simT, se.step).toFixed(se.unit === 'bar' || se.unit === '' ? 1 : 1)} ${se.unit}</span>`);
+    vals.push(`<span style="color:${SERIES_C[i]}"><b>${esc(se.name)}</b> ${keyAt(se.keys, simT, se.step, se.lin).toFixed(se.unit === 'bar' || se.unit === '' ? 1 : 1)} ${se.unit}</span>`);
   });
   g.setLineDash([]); const x = L + (R - L) * simT / D; g.strokeStyle = '#16335B'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, T); g.lineTo(x, B); g.stroke();
   document.getElementById('simVals').innerHTML = vals.join('');
@@ -625,11 +640,13 @@ const go = d => tab === 'steps' ? showStep(stepIdx + d) : tab === 'fea' ? showFe
 
 async function setTab(t) {
   try {
-    if (t === 'steps' && !stepsMeta) stepsMeta = await (await fetch(`steps/${NAME}.json`)).json();
-    if (t === 'fea' && !fea) { fea = await (await fetch(`fea/${NAME}.json`)).json(); buildFea(); }
-    if (t === 'sim' && !sim) { sim = await (await fetch(`sim/${NAME}.json`)).json(); document.getElementById('simTime').max = sim.duration; }
+    if (t === 'steps' && !stepsMeta) stepsMeta = await (await fetch(`${BASE}steps/${NAME}.json`)).json();
+    if (t === 'fea' && !fea) { fea = await (await fetch(`${BASE}fea/${NAME}.json`)).json(); buildFea(); }
+    if (t === 'sim' && !sim) await loadSim();
   } catch (e) { caption('Not ready for this model yet'); setTimeout(() => caption(''), 1800); return; }
   if (tab === 'sim' && t !== 'sim') { togglePlay(false); simReset(); }
+  if (t === 'fea' && fea.gfx.own) fea.gfx.fbox.getCenter(centre);
+  else if (tab === 'fea' && fea && fea.gfx.own) { centre.copy(centre0); size = sizeA; placeCamera(VIEWS.iso); }
   tab = t;
   const guide = t === 'steps' || t === 'fea' || t === 'sim';
   document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === t));
@@ -644,6 +661,7 @@ async function setTab(t) {
     applyExplode(0); document.getElementById('explode').value = 0;
     applySection(false); document.getElementById('section').checked = false;
   }
+  if (t === 'fea' && fea.gfx.own) { size = fea.gfx.fsz; placeCamera(VIEWS.iso); }
   if (t === 'steps') { makeDots(stepsMeta.steps, showStep); await showStep(stepIdx); }
   if (t === 'fea') { makeDots(fea.steps, showFea); await showFea(feaIdx); }
   if (t === 'sim') { makeDots(sim.steps, showSim); showSim(simIdx); }
@@ -664,12 +682,17 @@ window.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') go(-1);
 });
 load().then(() => {
+  hideMissingTabs();
   const t = q.get('tab'), n = Math.max(0, (+q.get('step') || 1) - 1);
   if (t === 'steps') { stepIdx = n; setTab('steps'); }
   if (t === 'fea') { feaIdx = n; setTab('fea'); }
   if (t === 'sim') { simIdx = n; setTab('sim'); }
 });
-fetch(`sim/${NAME}.json`, { method: 'HEAD' }).then(r => { if (!r.ok) throw 0; }).catch(() => { document.querySelector('#tabs [data-tab=sim]').hidden = true; });
+async function loadSim() { sim = await (await fetch(`${BASE}sim/${NAME}.json`)).json(); document.getElementById('simTime').max = sim.duration; }
+function hideMissingTabs() {
+  fetch(`${BASE}sim/${NAME}.json`, { method: 'HEAD' }).then(r => { if (!r.ok) throw 0; }).catch(() => { document.querySelector('#tabs [data-tab=sim]').hidden = true; });
+  if (catalogueEntry.fea === false) document.querySelector('#tabs [data-tab=fea]').hidden = true;
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,684 @@
+{
+ "name": "esp2023_lock_gates",
+ "title": "ESP 2023 lock gates (GA)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Lay out the lock and the chambers",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as esp2023_lock_gates.iam.",
+    "Place inspection_chamber.ipt and right click, Place Grounded. Place a second copy for the other side.",
+    "The lock walls are 4200 apart. Each chamber starts 300 mm behind the pivot, and is 2350 x 1800 x 1000 deep with 150 mm walls, a slot for the actuator rod and a plinth for the actuator pivot."
+   ],
+   "note": "The drive goes in a purpose-built chamber beside each gate, out of sight under a grating cover (left off here so you can see in).",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Place the hinges",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place bottom_pintle.ipt twice and anchor_collar.ipt twice.",
+    "The pivot axes are 2349 mm each side of the lock centre line, in the hollow quoins.",
+    "Constrain > Mate each pintle axis to the collar axis above it, and Flush the pintle base with the cill (Z = 0)."
+   ],
+   "note": "The bottom pintle takes the weight of the leaf. The anchor collar at the top stops the leaf toppling forwards.",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Place the left leaf",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place gate_leaf.iam (the sub-assembly from the gate leaf build steps).",
+    "Constrain > Insert: the heel post bore onto the left pintle. Mate the top journal axis to the collar axis.",
+    "Constrain > Angle: 18.43 degrees between the leaf and the line across the lock, so the mitre points upstream."
+   ],
+   "note": "Suppress the Angle constraint later so the leaf can turn on its hinge for the simulation.",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate leaf",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fenders",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Mirror the right leaf",
+   "command": "Assemble tab > Pattern panel > Mirror",
+   "actions": [
+    "Click Mirror. Pick the parts of the left leaf. Mirror plane: the YZ Plane (the lock centre line).",
+    "Leave the mitre seal out (it belongs to the left leaf only). Choose Mirror for the parts, so Inventor makes right hand copies, and click Next, then OK.",
+    "Constrain the right leaf to its pintle and collar the same way."
+   ],
+   "note": "The two mitre posts close on to the 30 mm mitre seal. Check with Analyze Interference that nothing overlaps.",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate leaf",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right gate leaf",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fenders",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cill seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Fit the actuators",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place actuator_body.ipt and actuator_rod.ipt for each side.",
+    "Constrain > Mate the body pivot axis to the plinth axis, 250 mm above it.",
+    "Constrain > Mate the rod axis to the body axis, and Mate the rod eye centre to the bracket on the leaf.",
+    "Shut, the pivot to eye length is 3301 mm."
+   ],
+   "note": "An electric actuator needs only the mains supply that the brief offers, and has no hydraulic oil to leak into the canal.",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate leaf",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right gate leaf",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator body",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator body",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_05.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Add the CCTV masts and call points",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "Place cctv_mast.ipt on the far corner of each chamber and call_point.ipt on the near corner.",
+    "Constrain each with Mate to the top of the chamber wall. Save the assembly."
+   ],
+   "note": "The cameras let the control centre watch each gate. The call point lets anyone stop the gates in an emergency.",
+   "parts": [
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate leaf",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right gate leaf",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fenders",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway and handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left CCTV mast",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left call point",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right CCTV mast",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right call point",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_06.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_06.json"
+  }
+ ]
+}

@@ -5,10 +5,12 @@ Only assemblies with parts that move get a Simulation tab. Single parts have the
 Motion keys are (time s, value) pairs, eased between keys. Distances in mm, angles in degrees, CAD axes
 (Z up). Run from the repository root:  python3 tools/build_sim.py
 """
-import json, os
+import json, math, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'docs', 'sim')
+sys.path.insert(0, os.path.join(ROOT, 'models'))
+import esp2023 as esp  # noqa: E402
 
 ENV = 'Environments tab > Begin panel > Dynamic Simulation'
 SETTINGS = 'Dynamic Simulation tab > Manage panel > Simulation Settings'
@@ -125,12 +127,99 @@ SIMS = dict(
 )
 
 
+# ------------------------------------------------------------------ ESP 2023 lock gates
+def smooth(t, t0, t1):
+    u = max(0.0, min(1.0, (t - t0) / (t1 - t0)))
+    return u * u * (3 - 2 * u)
+
+
+def esp_gate_sim():
+    """Both leaves open, wait, then shut again, each on its own timetable (the brief asks for gates that work
+    independently). The real gates take about 60 s each way; the simulation runs 10 times faster."""
+    D, OPEN = 16, esp.OPEN_DEG
+    times = {-1: (1.5, 7.5, 9.5, 15.5), 1: (1.0, 7.0, 9.0, 15.0)}
+
+    def angle(side, t):
+        a, b, c, d = times[side]
+        return OPEN * (smooth(t, a, b) - smooth(t, c, d))
+
+    motion, graph = [], []
+    for side in (-1, 1):
+        n = 'left' if side < 0 else 'right'
+        sg = 1 if side < 0 else -1          # the left leaf turns anticlockwise seen from above, the right clockwise
+        a, b, c, d = times[side]
+        keys = ease_keys([(0, 0), (a, 0), (b, sg * OPEN), (c, sg * OPEN), (d, 0), (D, 0)])
+        piv = [side * esp.PIV, 0, 0]
+        leaf = (['%s gate leaf' % n, '%s oak fenders' % n, '%s walkway and handrail' % n, '%s cill seal' % n, '%s heel seal' % n]
+            + (['mitre seal'] if side < 0 else []))
+        for p in leaf:
+            motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=piv, keys=keys))
+        # the actuator follows the leaf: its body swings about the rear pivot and the rod slides out of it
+        w, g0, d0 = esp.actuator_geometry(side, 0)
+        a0 = math.atan2(g0[1] - w[1], g0[0] - w[0])
+        u0 = [(g0[0] - w[0]) / d0, (g0[1] - w[1]) / d0, 0]
+        ts = [round(k * 0.1, 2) for k in range(D * 10 + 1)]
+        swing, slide = [], []
+        for t in ts:
+            ww, g, dd = esp.actuator_geometry(side, angle(side, t))
+            at = math.atan2(g[1] - ww[1], g[0] - ww[0])
+            swing.append((t, math.degrees(at - a0)))
+            slide.append((t, dd - d0))
+        motion.append(dict(part='%s actuator body' % n, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
+        motion.append(dict(part='%s actuator rod' % n, kind='move', axis=u0, keys=ease_keys(slide), lin=True))
+        motion.append(dict(part='%s actuator rod' % n, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
+        graph.append(dict(name='%s leaf angle' % n.capitalize(), unit='deg', keys=[[t, abs(v)] for t, v in keys]))
+        if side > 0:
+            graph.append(dict(name='Right actuator length', unit='mm', lin=True,
+                              keys=ease_keys([(t, d0 + v) for t, v in slide][::5])))
+    moving = sorted({m['part'] for m in motion})
+    w, g0, d0 = esp.actuator_geometry(1, 0)
+    _, g1, d1 = esp.actuator_geometry(1, OPEN)
+    steps = common_start('esp2023_lock_gates.iam') + [
+        step('joints', 'Check the hinge joints', JOINT,
+             ['In Standard Joints find the Revolution joint for each leaf: the heel post journal in the anchor collar, '
+              'and the heel post bore on the bottom pintle.',
+              'If a leaf has two joints (one at the top and one at the bottom) Inventor shows the second as redundant. '
+              'Keep one Revolution joint per leaf, on the pivot axis, and delete the other.',
+              'Each leaf, with its fenders, seals and walkway, should be one Welded group.'],
+             'A revolution joint lets a part turn about one axis and nothing else: one degree of freedom.'),
+        step('joints', 'Join the actuators', JOINT,
+             ['Each actuator needs three joints. Insert Joint, Revolution: the actuator body rear pivot on the plinth axis.',
+              'Insert Joint, Cylindrical: the rod inside the body bore, so the rod can slide out.',
+              'Insert Joint, Spherical: the rod eye centre on the leaf bracket.'],
+             'The rod eye is a spherical bearing, so the actuator can follow the leaf as it swings.'),
+        step('motion', 'Drive the leaves', 'Right click a leaf Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.',
+              'Right leaf, in the Input Grapher: 0 degrees at 1 s, -71.6 degrees (fully open) at 7 s, hold to 9 s, back to 0 at 15 s.',
+              'Left leaf: the same, but +71.6 degrees, starting half a second later, so you can see the leaves work independently.',
+              'Click OK twice.'],
+             'The real gates take about 60 s to open. This simulation runs 10 times faster. '
+             'Each leaf turns %.1f degrees, from the mitre (1 in 3) into its recess in the lock wall.' % OPEN),
+        step('motion', 'Check the actuator stroke', JOINT,
+             ['Right click the actuator Cylindrical joint > Properties and look at dof 2 (T): Inventor works out how far the rod '
+              'slides as the leaf turns.',
+              'Pin to pin length: %.0f mm with the gate shut and %.0f mm with it open, a stroke of %.0f mm.' % (d0, d1, d0 - d1),
+              'Check the rod never pulls out of the body: at full length %.0f mm of the rod is still inside.' % (esp.ACT_BODY - (d0 - esp.ROD_LEN))],
+             'Choose an actuator with at least this stroke. A 1300 mm stroke electric actuator gives some spare.'),
+    ] + common_end(D, 'the angle of each leaf Revolution joint and the position and force of the actuator Cylindrical joint')
+    return dict(duration=D,
+                story='The two leaves open into their recesses and shut again, each driven by its own electric actuator '
+                      'in the inspection chamber. Real time is about 60 s each way; this runs 10 times faster.',
+                moving=moving, motion=motion, graph=graph, steps=steps)
+
+
+SIMS['esp2023_lock_gates'] = esp_gate_sim()
+FOLDER = {'esp2023_lock_gates': 'ESP 2023'}
+
+
 def build():
-    os.makedirs(OUT, exist_ok=True)
     for name, s in SIMS.items():
+        steps = s['steps']() if callable(s['steps']) else s['steps']
         out = dict(name=name, duration=s['duration'], story=s['story'], moving=s['moving'], motion=s['motion'],
-                   graph=s['graph'], steps=s['steps']())
-        with open(os.path.join(OUT, name + '.json'), 'w') as f:
+                   graph=s['graph'], steps=steps)
+        out_dir = os.path.join(ROOT, 'docs', FOLDER[name], 'sim') if name in FOLDER else OUT
+        os.makedirs(out_dir, exist_ok=True)
+        with open(os.path.join(out_dir, name + '.json'), 'w') as f:
             json.dump(out, f, indent=1)
         print(name, len(out['steps']), 'steps')
 

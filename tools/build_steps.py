@@ -44,7 +44,9 @@ def build_model(m):
         a, b = vol(final[p]), vol(last[p])
         diff = vol(final[p].cut(last[p])) + vol(last[p].cut(final[p])) if 'spring' not in p else abs(a - b)
         assert diff < 0.5, (name, p, a, b, diff)
-    os.makedirs(os.path.join(OUT, name), exist_ok=True)
+    base = parts.base_of(m)
+    out_dir = os.path.join(ROOT, 'docs', base, 'steps')
+    os.makedirs(os.path.join(out_dir, name), exist_ok=True)
     meta, prev = [], {}
     for i, s in enumerate(steps, 1):
         scene = trimesh.Scene()
@@ -64,18 +66,18 @@ def build_model(m):
             ov = s['overlay'].val()
             scene.add_geometry(mesh_of(ov, HIGHLIGHT, 0.05, 0.2), node_name='overlay', geom_name='overlay')
             edges['overlay'] = edges_of(ov, 0.05)
-        base = 'step_%02d' % i
+        fname = 'step_%02d' % i
         if len(scene.geometry):
-            scene.export(os.path.join(OUT, name, base + '.glb'))
-        with open(os.path.join(OUT, name, base + '.json'), 'w') as f:
+            scene.export(os.path.join(out_dir, name, fname + '.glb'))
+        with open(os.path.join(out_dir, name, fname + '.json'), 'w') as f:
             json.dump(edges, f, separators=(',', ':'))
         meta.append(dict(n=i, title=s['title'], command=s['command'], actions=s['actions'], note=s.get('note'),
                          parts=info, overlay=s.get('overlay') is not None,
-                         glb='steps/%s/%s.glb' % (name, base) if len(scene.geometry) else None,
-                         edges='steps/%s/%s.json' % (name, base)))
+                         glb=base + 'steps/%s/%s.glb' % (name, fname) if len(scene.geometry) else None,
+                         edges=base + 'steps/%s/%s.json' % (name, fname)))
         prev = {p: w for p, w, c in s['parts']}
         print(' ', name, i, s['title'])
-    with open(os.path.join(OUT, name + '.json'), 'w') as f:
+    with open(os.path.join(out_dir, name + '.json'), 'w') as f:
         json.dump(dict(name=name, title=m['title'], software='Autodesk Inventor', steps=meta), f, indent=1)
 
 

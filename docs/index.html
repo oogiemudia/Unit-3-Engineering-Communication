@@ -28,6 +28,7 @@ header p{margin:0;max-width:760px;color:#DCE6F2}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
 .chip{font-size:12px;background:var(--chip);color:var(--ink);border-radius:10px;padding:2px 8px}
 .uses{font-size:14px;color:var(--muted);margin:0}
+.project{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:10px 14px;margin:0 0 14px;font-size:14px}
 .links{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px;margin-top:auto}
 .links b{width:100%;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:4px}
 a{color:var(--accent)}
@@ -50,7 +51,9 @@ footer{color:var(--muted);font-size:13px;padding:0 0 30px}
     <button data-f="3.2">Criterion 3.2</button>
     <button data-f="section">Has a section</button>
     <button data-f="exploded">Has an exploded view</button>
+    <button data-f="ESP 2023">ESP 2023 lock gates</button>
   </div>
+  <p class="project" id="espNote" hidden><b>ESP 2023:</b> the Employer-Set Project (8730-035, Summer 2023) lock gate for Canal Heritage, Task 2. Every file for it, including the dimensioned A3 drawings, the hydrostatic calculations and the design notes, is in one folder: <a href="ESP%202023/index.html">open the ESP 2023 project page</a>.</p>
   <div class="grid" id="grid"></div>
 
   <section class="help">
@@ -69,27 +72,27 @@ footer{color:var(--muted);font-size:13px;padding:0 0 30px}
 const grid = document.getElementById('grid');
 let cat = [];
 function card(m) {
-  const d = m.drawings || {};
-  const vids = [['turntable', 'Spin'], ['views', 'Into the views']].concat(m.exploded ? [['explode', 'Exploded view']] : []).concat(m.section ? [['section', 'Section cut']] : []);
+  const d = m.drawings || {}, B = m.base || '';
+  const vids = [['turntable', 'Spin'], ['views', 'Into the views']].concat(m.exploded ? [['explode', 'Exploded view']] : []).concat(m.section ? [['section', 'Section cut']] : []).concat(m.sim ? [['sim', 'Simulation']] : []);
   const el = document.createElement('article');
   el.className = 'card';
   el.dataset.crit = m.criteria; el.dataset.section = !!m.section; el.dataset.exploded = !!m.exploded;
   el.innerHTML = `
-    <div class="thumb"><img src="media/${m.name}_iso.png" alt="${m.title}, isometric view" loading="lazy">
-      <video src="media/${m.name}_turntable.mp4" muted loop playsinline preload="none"></video></div>
+    <div class="thumb"><img src="${B}media/${m.name}_iso.png" alt="${m.title}, isometric view" loading="lazy">
+      <video src="${B}media/${m.name}_turntable.mp4" muted loop playsinline preload="none"></video></div>
     <div class="body">
       <h2>${m.title}</h2>
       <div class="chips">${m.criteria.split(',').map(c => `<span class="chip">Criterion ${c.trim()}</span>`).join('')}
-        ${m.parts.length > 1 ? `<span class="chip">${m.parts.length} parts</span>` : ''}</div>
+        ${m.parts.length > 1 ? `<span class="chip">${m.parts.length} parts</span>` : ''}${m.folder ? `<span class="chip" style="background:#FDEBD0">${m.folder}</span>` : ''}</div>
       <p class="uses">${m.uses}</p>
       <div class="links">
-        <a class="btn" href="viewer.html?m=${m.name}">Open in 3D</a> <a class="btn" style="background:var(--ink)" href="viewer.html?m=${m.name}&tab=steps">Build steps (Inventor)</a> <a class="btn" style="background:#7A4A00" href="viewer.html?m=${m.name}&tab=fea">FEA</a>
+        <a class="btn" href="viewer.html?m=${m.name}">Open in 3D</a> <a class="btn" style="background:var(--ink)" href="viewer.html?m=${m.name}&tab=steps">Build steps (Inventor)</a> ${m.fea === false ? '' : `<a class="btn" style="background:#7A4A00" href="viewer.html?m=${m.name}&tab=fea">FEA</a>`}${m.sim ? ` <a class="btn" style="background:#2E7D5B" href="viewer.html?m=${m.name}&tab=sim">Simulation</a>` : ''}
         <b>Drawings</b>
         ${d.third ? `<a href="${d.third}.png">Third angle</a> <a href="${d.third}.svg">(SVG)</a>` : ''}
         ${d.first ? `<a href="${d.first}.png">First angle</a> <a href="${d.first}.svg">(SVG)</a>` : ''}
         ${d.section ? `<a href="${d.section}.png">Section A-A</a> <a href="${d.section}.svg">(SVG)</a>` : ''}
         <b>Animations</b>
-        ${vids.map(v => `<a href="media/${m.name}_${v[0]}.mp4">${v[1]}</a>`).join(' ')}
+        ${vids.map(v => `<a href="${B}media/${m.name}_${v[0]}.mp4">${v[1]}</a>`).join(' ')}
         <b>Model files</b>
         <a href="${m.files.step}">STEP</a> <a href="${m.files.stl}">STL</a> <a href="${m.files.glb}">GLB</a>
       </div>
@@ -101,7 +104,8 @@ function card(m) {
 }
 function show(f) {
   grid.innerHTML = '';
-  cat.filter(m => f === 'all' || (f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f)))
+  document.getElementById('espNote').hidden = f !== 'ESP 2023';
+  cat.filter(m => f === 'all' || (f === 'ESP 2023' ? m.folder === f : f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f)))
      .forEach(m => grid.appendChild(card(m)));
 }
 document.querySelectorAll('#filters button').forEach(b => b.onclick = () => {
