@@ -89,9 +89,22 @@ def hlr(shape, view, hidden=True):
     return vis, hid
 
 
+FAR_AXES = dict(skip=False)   # set per model (model key skip_far_axes): leave out axes that do not pass through the part
+
+
+def _passes_through(o, d, sb, tol=0.5):
+    """True if the axis line (point o, direction d) comes within the bounding box sb (grown by tol)."""
+    c = ((sb.xmin + sb.xmax) / 2, (sb.ymin + sb.ymax) / 2, (sb.zmin + sb.zmax) / 2)
+    t = sum((c[i] - o[i]) * d[i] for i in range(3))
+    p = [o[i] + d[i] * t for i in range(3)]
+    lo, hi = (sb.xmin, sb.ymin, sb.zmin), (sb.xmax, sb.ymax, sb.zmax)
+    return all(lo[i] - tol <= p[i] <= hi[i] + tol for i in range(3))
+
+
 def axes_of(shape):
     """Cylindrical and conical faces: axis point, direction, radius and length along the axis."""
     found = []
+    sb = shape.BoundingBox() if FAR_AXES['skip'] else None
     for f in shape.Faces():
         ad = BRepAdaptor_Surface(f.wrapped)
         st = ad.GetType()
@@ -102,6 +115,8 @@ def axes_of(shape):
         o = ax.Location()
         d = ax.Direction()
         o, d = (o.X(), o.Y(), o.Z()), (d.X(), d.Y(), d.Z())
+        if sb is not None and not _passes_through(o, d, sb):
+            continue    # a curved face whose axis is far outside the part (a part of a large ring): no centre line
         ts = []
         for v in f.Vertices():
             p = v.toTuple()
@@ -305,11 +320,13 @@ ESP_MATERIAL = {'esp2023_lock_gates': 'See parts list', 'esp2023_gate_leaf': 'S3
                 'esp2023_skin_panel': 'S355 steel plate', 'esp2023_lift_gate': 'Concept, see notes',
                 'esp2026_seat_set': 'See parts list', 'esp2026_single_seat': 'See parts list',
                 'esp2026_shell_seats': 'Concept, see notes', 'esp2024_buoy': 'See parts list',
-                'esp2024_buoy_green': 'See parts list', 'esp2024_wind_buoy': 'Concept, see notes'}
+                'esp2024_buoy_green': 'See parts list', 'esp2024_wind_buoy': 'Concept, see notes',
+                'esp2025_dispenser': 'See parts list', 'esp2025_cassette': 'Concept, see notes'}
 # each Employer-Set Project folder: the client named in the title block, the drawing date and the drawing number prefix
 PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', prefix='ESP23'),
             'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26'),
-            'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24')}
+            'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24'),
+            'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25')}
 
 
 def owner_of(m):
@@ -541,6 +558,7 @@ def main(only=None):
             continue
         spec = [x for x in parts.MODELS if x['name'] == m['name']][0]
         ISO_DIR['d'] = spec.get('iso', (1, -1, 1))
+        FAR_AXES['skip'] = spec.get('skip_far_axes', False)
         items = spec['fn']()
         comp = cq.Compound.makeCompound([w.val() for n, w, c in items])
         base = parts.base_of(spec)

@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p35_hinge_pin",
+ "title": "ESP 2025 part 35: hinge pin",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as hinge_pin.ipt.",
+    "Circle diameter 3. Extrude 88 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hinge pin",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p35_hinge_pin/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p35_hinge_pin/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer both ends 0.3. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hinge pin",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p35_hinge_pin/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p35_hinge_pin/step_02.json"
+  }
+ ]
+}

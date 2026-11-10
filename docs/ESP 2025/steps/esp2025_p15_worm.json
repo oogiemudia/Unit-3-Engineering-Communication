@@ -1,0 +1,71 @@
+{
+ "name": "esp2025_p15_worm",
+ "title": "ESP 2025 part 15: worm",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Core",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as worm.ipt.",
+    "Circle diameter 4. Extrude 12 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "worm",
+     "colour": "#F7F3E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p15_worm/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p15_worm/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Thread",
+   "command": "3D Model tab > Create panel > Coil",
+   "actions": [
+    "Sketch the tooth profile on the XY Plane, 1.8 deep. Coil: pitch 2.513 mm, 5 turns, about the axis."
+   ],
+   "note": "Shown here as five rings at the pitch (Inventor shows the real helix).",
+   "parts": [
+    {
+     "name": "worm",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p15_worm/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p15_worm/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 3 Through All on the axis (a D bore for the motor shaft). Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "worm",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p15_worm/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p15_worm/step_03.json"
+  }
+ ]
+}

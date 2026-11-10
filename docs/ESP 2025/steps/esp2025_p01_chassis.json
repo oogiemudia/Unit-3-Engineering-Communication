@@ -1,0 +1,179 @@
+{
+ "name": "esp2025_p01_chassis",
+ "title": "ESP 2025 part 01: chassis",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Wall",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as chassis.ipt.",
+    "Start 2D Sketch on the XZ Plane: circles diameter 180 and 176. Extrude 29 mm (the wall).",
+    "Sketch a circle diameter 176 on the XZ Plane, offset 25 mm. Extrude 2 mm, Join (the deck)."
+   ],
+   "note": "One moulding in polypropylene: the same plastic as every other moulded part, so the case recycles as one.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hub hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the deck, on the centre: diameter 85, Through All."
+   ],
+   "note": "The hub of the carousel passes down through this hole to the drive gear.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Drop hole",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the deck: a ring segment from radius 44 to 78, 10.4 degrees wide, at the front. Extrude Cut Through All."
+   ],
+   "note": "Only one compartment is ever over this hole, so the patient can only ever get one dose.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Screw bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 8 at radius 60 on 45 degrees, under the deck. Extrude down to the bottom of the wall. Circular Pattern 4.",
+    "Hole diameter 2.5, 10 deep, from the bottom of each boss (for the cover screws)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Drawer opening",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 46 x 11.5 rectangle on the XY Plane at the front, 6.5 up. Extrude Cut through the front wall."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_05.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Lock hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Work plane at -55 degrees. Hole diameter 16 through the wall, 16 up from the bottom of the case, for the pharmacy cam lock."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_06.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Hinge knuckles",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the two lugs on the YZ Plane at the back and extrude them 28 mm each side of the middle, 16 to 44 mm out; add a circle radius 3.5 at y 93.5, z 34 and Extrude, Join.",
+    "Hole diameter 3 along the hinge axis, Through All."
+   ],
+   "note": "The lid knuckle fits between them.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_07.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Catch slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 21.5 x 8.3 rectangle on the deck at the edge, at -55 degrees. Extrude Cut Through All. Save."
+   ],
+   "note": "The catch on the lid passes down through this slot to the cam of the lock.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p01_chassis/step_08.glb",
+   "edges": "ESP 2025/steps/esp2025_p01_chassis/step_08.json"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p11_battery_holder",
+ "title": "ESP 2025 part 11: battery holder 2 x AAA",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as battery_holder.ipt.",
+    "Sketch 22 x 48. Extrude 12 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery holder 2 x AAA",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p11_battery_holder/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p11_battery_holder/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cell pockets",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch two circles diameter 10.6, 10.6 apart, on the end face. Extrude Cut 44.5 mm. Cut the bottom open for loading. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery holder 2 x AAA",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p11_battery_holder/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p11_battery_holder/step_02.json"
+  }
+ ]
+}

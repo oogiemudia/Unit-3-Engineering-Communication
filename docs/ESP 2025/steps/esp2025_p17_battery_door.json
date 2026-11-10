@@ -1,0 +1,71 @@
+{
+ "name": "esp2025_p17_battery_door",
+ "title": "ESP 2025 part 17: battery door",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as battery_door.ipt.",
+    "Sketch 24 x 62. Extrude 1.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery door",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p17_battery_door/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p17_battery_door/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Plug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch 17.6 x 41.6 on the top face. Extrude 2.8 mm, Join."
+   ],
+   "note": "The plug fills the opening in the cover.",
+   "parts": [
+    {
+     "name": "battery door",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p17_battery_door/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p17_battery_door/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Screw holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: countersunk 5.2 x 90 degrees, diameter 2.2, at x 67, y 27.5; Mirror. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery door",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p17_battery_door/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p17_battery_door/step_03.json"
+  }
+ ]
+}

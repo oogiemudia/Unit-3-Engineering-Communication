@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M106.15,74.42 L108.83,74.42 L111.50,74.42 L114.15,74.42 L116.78,74.42 L119.39,74.42 L121.99,74.42 L124.56,74.42 L127.12,74.42 L129.65,74.42 L132.16,74.42 L134.65,74.42 L137.12,74.42 L139.56,74.42 L141.98,74.42 M106.15,150.42 L108.83,150.42 L111.50,150.42 L114.15,150.42 L116.78,150.42 L119.39,150.42 L121.99,150.42 L124.56,150.42 L127.12,150.42 L129.65,150.42 L132.16,150.42 L134.65,150.42 L137.12,150.42 L139.56,150.42 L141.98,150.42 M144.28,157.42 L138.53,157.42 M102.56,157.42 L105.25,157.42 L107.93,157.42 L110.59,157.42 L113.24,157.42 L115.86,157.42 L118.47,157.42 L121.05,157.42 L123.62,157.42 L126.16,157.42 L128.68,157.42 L131.18,157.42 L133.66,157.42 L136.11,157.42 L138.53,157.42 M102.56,71.42 L105.25,71.42 L107.93,71.42 L110.59,71.42 L113.24,71.42 L115.86,71.42 L118.47,71.42 L121.05,71.42 L123.62,71.42 L126.16,71.42 L128.68,71.42 L131.18,71.42 L133.66,71.42 L136.11,71.42 L138.53,71.42 M143.13,71.42 L138.53,71.42 M138.53,157.42 L138.53,71.42 M144.28,150.42 L141.98,150.42 M143.13,74.42 L141.98,74.42"/>
+<path class="vis" d="M141.98,150.42 L141.98,74.42 M106.15,150.42 L106.15,74.42 M102.56,71.42 L102.56,157.42 M107.35,71.42 L102.56,71.42 M107.35,74.42 L107.35,71.42 M107.35,74.42 L106.15,74.42 M108.54,150.42 L106.15,150.42 M108.54,157.42 L108.54,150.42 M102.56,157.42 L108.54,157.42 M108.54,157.42 L111.22,157.42 L113.87,157.42 L116.52,157.42 L119.14,157.42 L121.74,157.42 L124.33,157.42 L126.90,157.42 L129.45,157.42 L131.97,157.42 L134.48,157.42 L136.96,157.42 L139.42,157.42 L141.86,157.42 L144.28,157.42 M108.54,150.42 L111.22,150.42 L113.87,150.42 L116.52,150.42 L119.14,150.42 L121.74,150.42 L124.33,150.42 L126.90,150.42 L129.45,150.42 L131.97,150.42 L134.48,150.42 L136.96,150.42 L139.42,150.42 L141.86,150.42 L144.28,150.42 M144.28,157.42 L144.28,150.42 M107.35,71.42 L110.03,71.42 L112.69,71.42 L115.33,71.42 L117.96,71.42 L120.57,71.42 L123.16,71.42 L125.73,71.42 L128.28,71.42 L130.81,71.42 L133.32,71.42 L135.81,71.42 L138.27,71.42 L140.71,71.42 L143.13,71.42 M143.13,74.42 L143.13,71.42 M107.35,74.42 L110.03,74.42 L112.69,74.42 L115.33,74.42 L117.96,74.42 L120.57,74.42 L123.16,74.42 L125.73,74.42 L128.28,74.42 L130.81,74.42 L133.32,74.42 L135.81,74.42 L138.27,74.42 L140.71,74.42 L143.13,74.42"/>
+<text x="123.42" y="165.42" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M106.15,201.17 L112.38,198.96 L118.52,196.51 L124.56,193.81 L130.49,190.88 L136.30,187.72 L141.98,184.34 M106.15,201.17 L112.38,198.96 L118.52,196.51 L124.56,193.81 L130.49,190.88 L136.30,187.72 L141.98,184.34 M107.35,202.88 L106.15,201.17 M107.35,202.88 L106.15,201.17 M102.56,196.03 L108.54,204.58 M108.54,204.58 L114.76,202.34 L120.88,199.85 L126.90,197.13 L132.81,194.18 L138.61,191.01 L144.28,187.62 M144.28,187.62 L138.53,179.42 M102.56,196.03 L108.82,193.88 L114.99,191.48 L121.05,188.83 L127.01,185.93 L132.84,182.79 L138.53,179.42 M107.35,202.88 L113.57,200.65 L119.70,198.18 L125.73,195.47 L131.65,192.53 L137.45,189.37 L143.13,185.98 M143.13,185.98 L141.98,184.34 M143.13,185.98 L141.98,184.34"/>
+<path class="vis" d="M107.35,202.88 L102.56,196.03 M108.54,204.58 L107.35,202.88 M108.54,204.58 L114.76,202.34 L120.88,199.85 L126.90,197.13 L132.81,194.18 L138.61,191.01 L144.28,187.62 M107.35,202.88 L113.57,200.65 L119.70,198.18 L125.73,195.47 L131.65,192.53 L137.45,189.37 L143.13,185.98 M102.56,196.03 L108.82,193.88 L114.99,191.48 L121.05,188.83 L127.01,185.93 L132.84,182.79 L138.53,179.42 M143.13,185.98 L138.53,179.42 M144.28,187.62 L143.13,185.98"/>
+<text x="123.42" y="212.58" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M188.03,74.42 L187.11,74.42 L186.15,74.42 L185.14,74.42 L184.09,74.42 L183.00,74.42 L181.86,74.42 L180.67,74.42 L179.45,74.42 L178.18,74.42 L176.86,74.42 L175.51,74.42 L174.11,74.42 L172.68,74.42 L171.20,74.42 M171.20,150.42 L171.20,74.42 M188.03,150.42 L187.11,150.42 L186.15,150.42 L185.14,150.42 L184.09,150.42 L183.00,150.42 L181.86,150.42 L180.67,150.42 L179.45,150.42 L178.18,150.42 L176.86,150.42 L175.51,150.42 L174.11,150.42 L172.68,150.42 L171.20,150.42 M191.44,157.42 L190.51,157.42 L189.53,157.42 L188.51,157.42 L187.44,157.42 L186.34,157.42 L185.19,157.42 L183.99,157.42 L182.76,157.42 L181.48,157.42 L180.16,157.42 L178.80,157.42 L177.40,157.42 L175.96,157.42 L174.48,157.42 M174.48,157.42 L166.28,157.42 M191.44,150.42 L190.51,150.42 L189.53,150.42 L188.51,150.42 L187.44,150.42 L186.34,150.42 L185.19,150.42 L183.99,150.42 L182.76,150.42 L181.48,150.42 L180.16,150.42 L178.80,150.42 L177.40,150.42 L175.96,150.42 L174.48,150.42 M174.48,157.42 L174.48,150.42 M189.74,71.42 L188.81,71.42 L187.84,71.42 L186.83,71.42 L185.77,71.42 L184.67,71.42 L183.52,71.42 L182.33,71.42 L181.10,71.42 L179.83,71.42 L178.51,71.42 L177.16,71.42 L175.76,71.42 L174.32,71.42 L172.84,71.42 M172.84,74.42 L172.84,71.42 M189.74,74.42 L188.81,74.42 L187.84,74.42 L186.83,74.42 L185.77,74.42 L184.67,74.42 L183.52,74.42 L182.33,74.42 L181.10,74.42 L179.83,74.42 L178.51,74.42 L177.16,74.42 L175.76,74.42 L174.32,74.42 L172.84,74.42 M172.84,71.42 L166.28,71.42 M174.48,150.42 L171.20,150.42 M172.84,74.42 L171.20,74.42"/>
+<path class="vis" d="M188.03,150.42 L188.03,74.42 M182.89,71.42 L182.89,157.42 M189.74,71.42 L182.89,71.42 M189.74,74.42 L189.74,71.42 M189.74,74.42 L188.03,74.42 M191.44,150.42 L188.03,150.42 M191.44,157.42 L191.44,150.42 M182.89,157.42 L191.44,157.42 M182.89,157.42 L182.00,157.42 L181.07,157.42 L180.08,157.42 L179.05,157.42 L177.98,157.42 L176.85,157.42 L175.69,157.42 L174.48,157.42 L173.22,157.42 L171.92,157.42 L170.57,157.42 L169.18,157.42 L167.75,157.42 L166.28,157.42 M182.89,71.42 L182.00,71.42 L181.07,71.42 L180.08,71.42 L179.05,71.42 L177.98,71.42 L176.85,71.42 L175.69,71.42 L174.48,71.42 L173.22,71.42 L171.92,71.42 L170.57,71.42 L169.18,71.42 L167.75,71.42 L166.28,71.42 M166.28,157.42 L166.28,71.42"/>
+<text x="178.86" y="165.42" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM LEFT)</text>
+<path class="vis" d="M363.46,106.42 L363.46,44.36 M326.22,98.66 L330.69,99.90 L335.22,101.07 L339.80,102.16 L344.44,103.17 L349.13,104.10 L353.87,104.96 L358.64,105.73 L363.46,106.42 M326.22,98.66 L326.22,37.90 M325.86,35.34 L327.31,30.59 M325.86,37.79 L325.86,35.34 M325.50,101.03 L326.22,98.66 M325.50,106.75 L325.50,101.03 M325.50,106.75 L329.98,107.97 L334.51,109.12 L339.10,110.20 L343.75,111.20 L348.44,112.12 L353.17,112.96 L357.95,113.72 L362.76,114.41 M362.76,114.41 L364.50,108.71 M325.50,101.03 L329.98,102.26 L334.51,103.41 L339.10,104.48 L343.75,105.48 L348.44,106.40 L353.17,107.25 L357.95,108.01 L362.76,108.69 M362.76,114.41 L362.76,108.69 M325.86,35.34 L330.33,36.58 L334.87,37.74 L339.45,38.82 L344.10,39.82 L348.79,40.75 L353.52,41.60 L358.30,42.36 L363.11,43.05 M363.11,45.50 L363.11,43.05 M325.86,37.79 L330.33,39.03 L334.87,40.19 L339.45,41.27 L344.10,42.27 L348.79,43.20 L353.52,44.05 L358.30,44.81 L363.11,45.50 M327.31,30.59 L331.76,31.86 L336.28,33.06 L340.85,34.17 L345.49,35.20 L350.17,36.15 L354.91,37.02 L359.68,37.80 L364.50,38.50 M363.11,43.05 L364.50,38.50 M364.50,108.71 L364.50,38.50 M362.76,108.69 L363.46,106.42 M363.11,45.50 L363.46,44.36"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="102.56" y1="158.92" x2="102.56" y2="176.42"/>
+<line class="dim" x1="144.28" y1="158.92" x2="144.28" y2="176.42"/>
+<line class="dim" x1="102.56" y1="174.42" x2="144.28" y2="174.42"/>
+<polygon class="arrow" points="102.56,174.42 105.06,175.17 105.06,173.67"/>
+<polygon class="arrow" points="144.28,174.42 141.78,173.67 141.78,175.17"/>
+<text x="123.42" y="173.22" font-size="3.50" text-anchor="middle" font-weight="normal">20.9</text>
+<line class="dim" x1="101.06" y1="71.42" x2="88.56" y2="71.42"/>
+<line class="dim" x1="101.06" y1="157.42" x2="88.56" y2="157.42"/>
+<line class="dim" x1="90.56" y1="71.42" x2="90.56" y2="157.42"/>
+<polygon class="arrow" points="90.56,71.42 89.81,73.92 91.31,73.92"/>
+<polygon class="arrow" points="90.56,157.42 91.31,154.92 89.81,154.92"/>
+<text x="89.36" y="114.42" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 89.36 114.42)">43</text>
+<line class="dim" x1="166.28" y1="158.92" x2="166.28" y2="176.42"/>
+<line class="dim" x1="191.44" y1="158.92" x2="191.44" y2="176.42"/>
+<line class="dim" x1="166.28" y1="174.42" x2="191.44" y2="174.42"/>
+<polygon class="arrow" points="166.28,174.42 168.78,175.17 168.78,173.67"/>
+<polygon class="arrow" points="191.44,174.42 188.94,173.67 188.94,175.17"/>
+<text x="178.86" y="173.22" font-size="3.50" text-anchor="middle" font-weight="normal">12.6</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">Tab 19.5 x 3 x 41.5</text>
+<text x="285.00" y="152.20" font-size="2.60" text-anchor="start" font-weight="normal">Hook 2 x 3.5</text>
+<text x="285.00" y="157.40" font-size="2.60" text-anchor="start" font-weight="normal">Flange 4 x 1.5</text>
+<text x="285.00" y="165.60" font-size="2.60" text-anchor="start" font-weight="normal">Material: Polypropylene, 30 % glass filled (PP-GF30), injection moulded</text>
+<text x="285.00" y="170.80" font-size="2.60" text-anchor="start" font-weight="normal">Part file: lid_catch.ipt. Item 34 on ESP25-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">WBEP Ltd for the health trust</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP25-P34-1</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP 2025 part 34: lid catch</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">Polypropylene</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">2:1</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="252.00,282.54 257.50,281.30 257.50,286.25 252.00,285.01"/>
+<circle class="vis" cx="261.90" cy="283.78" r="2.48"/>
+<circle class="vis" cx="261.90" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="261.90" y1="279.80" x2="261.90" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">First angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

@@ -1,0 +1,29 @@
+{
+ "name": "esp2025_p23_panel_pcb",
+ "title": "ESP 2025 part 23: panel circuit board",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Board",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as panel_pcb.ipt.",
+    "Circle diameter 63.6. Extrude 1.6 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "panel circuit board",
+     "colour": "#1E6B3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p23_panel_pcb/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p23_panel_pcb/step_01.json"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p14_motor_clamp",
+ "title": "ESP 2025 part 14: motor clamp",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as motor_clamp.ipt.",
+    "Sketch 16 x 12. Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "motor clamp",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p14_motor_clamp/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p14_motor_clamp/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Motor slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the 12 x 10 slot from the bottom. Extrude Cut Through All. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "motor clamp",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p14_motor_clamp/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p14_motor_clamp/step_02.json"
+  }
+ ]
+}

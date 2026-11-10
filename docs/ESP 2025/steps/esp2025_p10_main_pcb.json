@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p10_main_pcb",
+ "title": "ESP 2025 part 10: main circuit board",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Board",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as main_pcb.ipt.",
+    "Sketch 60 x 13. Extrude 1.6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "main circuit board",
+     "colour": "#1E6B3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p10_main_pcb/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p10_main_pcb/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Main components",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Microcontroller 12 x 6, motor driver 6 x 4, connector 10 x 5 x 5 for the pod cable. Extrude, Join. Save."
+   ],
+   "note": "Modelled only as blocks, to check the space. The NFC antenna is a copper track round the board.",
+   "parts": [
+    {
+     "name": "main circuit board",
+     "colour": "#1E6B3A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p10_main_pcb/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p10_main_pcb/step_02.json"
+  }
+ ]
+}

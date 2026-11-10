@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p24_lcd",
+ "title": "ESP 2025 part 24: display",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Module",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lcd.ipt.",
+    "Sketch 30 x 20. Extrude 3.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "display",
+     "colour": "#4F6F5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p24_lcd/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p24_lcd/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Glass",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the 26 x 16 viewing area. Extrude Cut 0.3 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "display",
+     "colour": "#4F6F5A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p24_lcd/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p24_lcd/step_02.json"
+  }
+ ]
+}

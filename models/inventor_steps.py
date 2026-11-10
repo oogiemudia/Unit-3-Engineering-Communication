@@ -531,7 +531,9 @@ STEPS = dict(step_block=step_block, sloping_block=sloping_block, flanged_bush=fl
 from esp2023_steps import STEPS as ESP2023_STEPS  # noqa: E402
 from esp2026_steps import STEPS as ESP2026_STEPS  # noqa: E402
 from esp2024_steps import STEPS as ESP2024_STEPS  # noqa: E402
+from esp2025_steps import STEPS as ESP2025_STEPS  # noqa: E402
 
 STEPS.update(ESP2023_STEPS)
 STEPS.update(ESP2026_STEPS)
 STEPS.update(ESP2024_STEPS)
+STEPS.update(ESP2025_STEPS)

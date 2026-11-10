@@ -224,3 +224,54 @@ CASES.update(
                        CHAIN_MBL / ((90 - 2 * _buoy.PIN_R - 2) * _EYE_T), CHAIN_MBL, 2 * _buoy.PIN_R, _EYE_T,
                        CHAIN_MBL / (2 * _buoy.PIN_R * _EYE_T))),
 )
+
+
+# ------------------------------------------------------------------ ESP 2025 automated pill dispenser (models/esp2025.py)
+import os as _os, sys as _sys  # noqa: E402
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'tools'))
+import esp2025 as _pill  # noqa: E402
+import esp2025_calcs as _pc  # noqa: E402
+
+PPGF30 = dict(name='PP, 30 % glass filled (add to the library: E 6.5 GPa, Poisson 0.38, yield 75 MPa)', E=6500, nu=0.38,
+              yield_strength=_pc.CATCH_YIELD)
+_C = _pill.CATCH
+_OZ = _pill.CATCH_ORIGIN[2]
+_FLANGE_TOP = _pill.LID_Z[1] - _pill.LID_TOP - _OZ        # flange top, heat staked to the lid (part coordinates)
+_LIP_TOP = _C['z'][1] - _OZ                               # top of the hook, where the cam bears
+
+
+def _catch_pt(x, r, z):
+    """A point on radius r (from the dispenser axis), in line with x across the catch sketch, at height z, in part
+    coordinates."""
+    import math as _m
+    a = _m.atan2(-sum(_C['r']) / 2, x)
+    px, py = _pill._rot_xy(r * _m.cos(a), r * _m.sin(a), _pill.LOCK_ANG + 90)
+    ox, oy, oz = _pill.CATCH_ORIGIN
+    return [round(px - ox, 3), round(py - oy, 3), round(z - oz, 3)]
+
+
+_xm = sum(_C['x']) / 2
+_hc = _pc.catch_hand()
+CASES.update(
+    esp2025_p34_lid_catch=dict(
+        part='lid catch', material=PPGF30, mesh_size=1.0,
+        story='Someone tries to force the locked lid open, pulling up hard on its front edge: %d N, all taken by the catch. '
+              'The cam of the pharmacy lock holds the hook down, so the tab is pulled in tension and bent, and the hook is '
+              'bent and sheared. The catch must not break or bend far enough to slip off the cam. Only the flange is held '
+              'here, so the long tab is free to bend; in the dispenser the edge of the slot in the deck is %g mm inside the '
+              'tab and stops it bending in any further, so the real catch moves less than this study shows.' % (_pc.PRY, _pill.SLOT_GAP),
+        fixed=[dict(test=plane('z', _FLANGE_TOP, 1), where='the top face of the flange (heat staked to the lid)')],
+        loads=[dict(kind='force', value=_pc.PRY, dir=(0, 0, -1), test=plane('z', _LIP_TOP, 1), where='the top face of the hook',
+                    how='Force, %d N, on the top face of the hook, straight down (the cam pushes on it as the lid is pulled up)'
+                        % _pc.PRY)],
+        probes=[dict(name='inside face of the tab, above the hook', at=_catch_pt(_xm, _C['r'][0], _C['z'][1] + 4), r=1.0),
+                dict(name='outside face of the tab, above the hook', at=_catch_pt(_xm, _C['r'][1], _C['z'][1] + 4), r=1.0)],
+        mesh_note='The tab is only %.1f mm thick, so a 1 mm mesh of quadratic (10 node) elements puts nodes on both faces and through the middle. '
+                  % (_C['r'][1] - _C['r'][0]),
+        hand_check='Tab: direct stress %d / (%g x %g) = %.1f MPa, plus bending from the hook being %.2f mm off the middle of '
+                   'the tab: 6 x %d x %.2f / (%g x %g²) = %.1f MPa, total %.1f MPa, safety factor %.1f on %d MPa. Hook: bending '
+                   '%.1f MPa, shear %.1f MPa. The inside corner where the hook meets the tab raises the stress locally. '
+                   'See the ESP 2025 calculation sheet, section 6.' % (
+                       _pc.PRY, _hc['b'], _hc['t'], _hc['direct'], _hc['e'], _pc.PRY, _hc['e'], _hc['b'], _hc['t'],
+                       _hc['bend'], _hc['total'], _hc['sf'], _pc.CATCH_YIELD, _hc['lip_bend'], _hc['lip_shear'])),
+)

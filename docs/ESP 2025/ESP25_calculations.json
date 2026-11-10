@@ -1,0 +1,89 @@
+{
+ "size": [
+  180.0000002,
+  189.0,
+  58.600000200000004
+ ],
+ "mass": 0.412851814898369,
+ "parts": 54,
+ "compartments": 28,
+ "pills": 3,
+ "battery_days": 245.76428970396574,
+ "day_mah": 3.5806666666666667,
+ "motor_sf": 241.88439942550002,
+ "step_s": 1.6,
+ "self_locking": true,
+ "catch_hand": 20.51282051282051,
+ "catch_sf": 3.6562500000000004,
+ "pry": 200,
+ "cost_variable": 31.911767407158983,
+ "fixed": 40000,
+ "cases": [
+  {
+   "units": 1500,
+   "budget": 97500,
+   "target": 65.0,
+   "weeks": 30,
+   "unit": 58.57843407382565,
+   "total": 87867.65111073847,
+   "maxn": 1801,
+   "ok": true
+  },
+  {
+   "units": 3000,
+   "budget": 120000,
+   "target": 40.0,
+   "weeks": 35,
+   "unit": 45.24510074049232,
+   "total": 135735.30222147694,
+   "maxn": 2506,
+   "ok": false
+  }
+ ],
+ "programme": [
+  {
+   "units": 1500,
+   "lines": 1,
+   "prod": 10,
+   "start": 19,
+   "end": 30,
+   "limit": 30
+  },
+  {
+   "units": 3000,
+   "lines": 2,
+   "prod": 10,
+   "start": 19,
+   "end": 30,
+   "limit": 35
+  }
+ ],
+ "recyclable": 0.6855784225676305,
+ "fea": {
+  "vm_max": 23.263802411403766,
+  "sf_min": 3.2238925810010954,
+  "disp_max": 1.439828344000205
+ },
+ "probes": [
+  {
+   "name": "inside face of the tab, above the hook",
+   "at": [
+    -0.298,
+    1.234,
+    7.5
+   ],
+   "vm": 10.716435590765542,
+   "nodes": 4
+  },
+  {
+   "name": "outside face of the tab, above the hook",
+   "at": [
+    0.979,
+    -1.481,
+    7.5
+   ],
+   "vm": 19.689447422868795,
+   "nodes": 3
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "name": "esp2025_p30_display_window",
+ "title": "ESP 2025 part 30: display window",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pane",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as display_window.ipt.",
+    "Sketch 34 x 21.5. Extrude 1.5 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "display window",
+     "colour": "#BFD9EE",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p30_display_window/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p30_display_window/step_01.json"
+  }
+ ]
+}

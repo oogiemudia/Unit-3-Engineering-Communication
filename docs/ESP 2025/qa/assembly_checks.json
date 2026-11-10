@@ -1,0 +1,85 @@
+{
+ "positions": [
+  {
+   "position": "closed, locked, carousel at home",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "carousel half way through a step (6 degrees)",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "carousel one step on (12 degrees)",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "carousel at the last dose (28 steps, 336 degrees)",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "drawer pulled out 35 mm",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "cam unlocked (90 degrees)",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 2.5 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 5 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 15 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 30 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 60 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "position": "lid open 100 degrees",
+   "parts": 54,
+   "clashes": [],
+   "floating": []
+  }
+ ],
+ "lock_holds": true,
+ "size": [
+  180.0,
+  189.0,
+  58.6
+ ],
+ "mass_kg": 0.4129,
+ "invalid": [],
+ "ok": true
+}
