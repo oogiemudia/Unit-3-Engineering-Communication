@@ -1,0 +1,19 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>ESP 2024 reflective notes</title><style>
+@page{size:A4;margin:11mm 13mm}
+body{font-family:Arial,Helvetica,sans-serif;font-size:8.3pt;line-height:1.22;color:#111}
+h1{font-size:14pt;margin:0 0 2mm} h2{font-size:10pt;margin:2.2mm 0 0.8mm;color:#16335B;border-bottom:0.3mm solid #16335B}
+table{border-collapse:collapse;width:100%;margin:1mm 0} td,th{border:0.2mm solid #888;padding:0.2mm 1.5mm;text-align:left;vertical-align:top}
+th{background:#E8EEF6} .r{text-align:right;white-space:nowrap} .ok{color:#1F7A3A;font-weight:bold}
+.hdr{display:flex;justify-content:space-between;font-size:7pt;color:#444;border-bottom:0.3mm solid #444;margin-bottom:2mm}
+.page{page-break-after:always} .small{font-size:8.2pt} .tiny{font-size:7pt} .tiny td,.tiny th{padding:0.15mm 1.2mm} ul{margin:0.5mm 0 0.5mm 5mm;padding:0}
+tr.tot td{font-weight:bold;background:#F3F6FA}
+
+body{font-size:10pt;line-height:1.45} p{margin:0 0 2mm}</style></head><body>
+<div class="hdr"><span>Oceans Technology Ltd for Harbour Shipping Ltd. ESP 2024 (8730-035) Task 2, Part B</span><span>Reflective notes on the CAD drawing. 2026-11-10</span></div>
+<h1>Reflective notes: solar powered harbour buoy</h1>
+<p><b>How my ideas developed.</b> I sketched two buoys. Design B was a steel spherical float with a lattice tower and a small wind turbine. It looked like a traditional buoy, but the turbine has bearings and blades that wear out at sea, gives nothing on calm days, and the steel float would rust unless it was painted often. Design A uses a polyethylene float and solar panels, with no moving parts, so I chose it.</p>
+<p><b>How the design meets the specification.</b> The float is 500 mm across, 524 mm over the fender, inside the 500 &plusmn; 25 mm limit. I used the CAD model to find where it floats: moored, the top of the red can is 1675 mm above the sea and the green cone 1697 mm, inside 1400 to 1800 mm. The float and topmark are moulded in red or green all the way through, so scratches never show a different colour. A load pin in the mooring shackle measures the pull of the chain; if it falls to zero the control unit sends an alert straight away, and the GNSS tracker then reports the position every minute. Three 20 W panels give 20 Wh a day in December against the 9.4 Wh the 12 V systems need, and the battery lasts 44 days with no sun. The battery and electronics sit in a stainless canister with an O-ring and tamper proof bolts: watertight, secure, and easy to reach by undoing eight bolts. Every metal part is 316 stainless or zinc protected, and the soft fender takes minor knocks from boats. The estimated cost is £1,990 a buoy, under the £2000 budget, and 100 buoys fit in the 70 weeks.</p>
+<p><b>What changed as I worked.</b> My first float was too shallow. When the CAD model added up the mass of every part, the buoy sank so far that the deck was nearly awash. I made the float deeper, used thinner stainless plates and a lighter mast, and lengthened the tail so a bigger ballast could sit lower down. Now the waterline is where I designed it, GM is 229 mm and the buoy heels only 19&deg; in a gale. The clash check found the shackle and load pin overlapping and a chain link too narrow for the sinker eye, and I fixed both.</p>
+<p><b>Checking it is safe.</b> I designed the mooring eye so it is stronger than the chain. The FEA at the chain's breaking load gave 61 MPa, a safety factor of 2.8. My hand calculation agreed with the FEA above the hole; beside the hole it was higher, because the FEA spreads the load round the whole hole, so I used the hand value.</p>
+<p><b>What I would improve.</b> The cost is only just inside the budget and the electronics are about a third of it, so I would ask the client whether a cheaper tension switch could replace the load pin. I would also test a prototype in a real harbour to check the roll, and try recycled polyethylene for the float.</p>
+</body></html>

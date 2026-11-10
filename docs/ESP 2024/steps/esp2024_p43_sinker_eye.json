@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p43_sinker_eye",
+ "title": "ESP 2024 part 43: sinker eye bar",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "U-bar",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as sinker_eye.ipt.",
+    "Sweep a circle diameter 16 along a U: two legs 250 long, 80 apart, joined by a half circle."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "sinker eye bar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p43_sinker_eye/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p43_sinker_eye/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Feet",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "Sweep the ends out 60 mm each side, so the bar cannot pull out of the concrete. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "sinker eye bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p43_sinker_eye/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p43_sinker_eye/step_02.json"
+  }
+ ]
+}

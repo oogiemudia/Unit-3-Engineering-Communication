@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p12_battery_strap",
+ "title": "ESP 2024 part 12: battery strap",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Top",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as battery_strap.ipt.",
+    "Sketch a 25 x 83 rectangle. Extrude 3 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery strap",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p12_battery_strap/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p12_battery_strap/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Legs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the two legs on the end faces, 170 long. Extrude 3 mm, Join. Save."
+   ],
+   "note": "In sheet metal: Flange the two ends down.",
+   "parts": [
+    {
+     "name": "battery strap",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p12_battery_strap/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p12_battery_strap/step_02.json"
+  }
+ ]
+}

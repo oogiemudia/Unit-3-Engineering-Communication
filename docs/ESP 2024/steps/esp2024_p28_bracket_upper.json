@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p28_bracket_upper",
+ "title": "ESP 2024 part 28: upper panel bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bracket_upper.ipt.",
+    "Sketch a 251 x 40 rectangle. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "upper panel bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p28_bracket_upper/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p28_bracket_upper/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Saddle tabs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the two 16 wide tabs back to the legs. Extrude 40, Join; Combine, Cut the leg tubes. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "upper panel bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p28_bracket_upper/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p28_bracket_upper/step_02.json"
+  }
+ ]
+}

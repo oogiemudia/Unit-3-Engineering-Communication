@@ -189,3 +189,38 @@ CASES.update(
                    'reactions at the two feet. The member forces divided by the strut areas give the stress in the '
                    'middle of each strut, away from the joints: see the ESP 2026 calculation sheet, section 6.'),
 )
+
+
+# ------------------------------------------------------------------ ESP 2024 harbour buoy (models/esp2024.py)
+import esp2024 as _buoy  # noqa: E402
+
+SS316L = dict(name='Stainless Steel 316L (add to the library if needed: E 193 GPa, yield 170 MPa)', E=193000, nu=0.27,
+              yield_strength=170)
+CHAIN_MBL = 40000                        # N, minimum breaking load of the 10 mm grade 30 mooring chain (EN 818 / ISO 1834)
+_EYE_HOLE = _buoy.EYE_Z - _buoy.BOT_PLATE[0]   # hole centre below the top of the mooring eye (part coordinates)
+_EYE_T = _buoy.EYE_T
+
+CASES.update(
+    esp2024_p23_mooring_eye=dict(
+        part='mooring eye', material=SS316L, mesh_size=3,
+        story='The worst pull the mooring can put on the buoy is the breaking load of the chain: %.0f kN. The mooring eye '
+              'must not yield before the chain breaks, so the buoy is never the weak link. The pin pulls straight down '
+              'through the hole; the top of the eye is welded to the tail bottom plate.' % (CHAIN_MBL / 1000),
+        fixed=[dict(test=plane('z', 0), where='the top face of the eye (the weld to the bottom plate)')],
+        loads=[dict(kind='force', value=CHAIN_MBL, dir=(0, 0, -1), test=cylinder(_buoy.PIN_R + 1), where='the pin hole',
+                    how='Force, %d N, straight down (Direction: pick a vertical edge, then Flip if needed)' % CHAIN_MBL,
+                    note='Inventor spreads the force over the whole hole face. In the real eye the pin bears on the bottom '
+                         'half, so the stress round the hole is higher than here: see the hand check of the bearing stress.')],
+        probes=[dict(name='plate above the hole', at=[0.0, 0.0, -12.0], r=6),
+                dict(name='side of the hole (net section)', at=[0.0, 30.0, _EYE_HOLE], r=5)],
+        mesh_note='The plate is %d mm thick and the hole %d mm across, so a 3 mm mesh puts several quadratic elements '
+                  'through the thickness and round the hole. ' % (_EYE_T, 2 * _buoy.PIN_R + 2),
+        hand_check='Plate above the hole: %d / (90 x %d) = %.1f MPa. Net section beside the hole: %d / ((90 - %d) x %d) = %.1f MPa. '
+                   'Pin bearing on the hole: %d / (%d x %d) = %.1f MPa. Round the edge of the hole the stress rises by a '
+                   'stress concentration factor of about 2 to 3. The FEA, like Inventor, spreads the force round the whole hole, so half of it '
+                   'goes straight into the plate above and the FEA beside the hole is about half the hand value; the real pin bears on '
+                   'the bottom of the hole, so design to the hand value. See the ESP 2024 calculation sheet, section 6.' % (
+                       CHAIN_MBL, _EYE_T, CHAIN_MBL / (90 * _EYE_T), CHAIN_MBL, 2 * _buoy.PIN_R + 2, _EYE_T,
+                       CHAIN_MBL / ((90 - 2 * _buoy.PIN_R - 2) * _EYE_T), CHAIN_MBL, 2 * _buoy.PIN_R, _EYE_T,
+                       CHAIN_MBL / (2 * _buoy.PIN_R * _EYE_T))),
+)

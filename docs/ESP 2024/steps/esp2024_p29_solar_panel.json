@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p29_solar_panel",
+ "title": "ESP 2024 part 29: solar panel 20 W",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Panel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as solar_panel.ipt.",
+    "Sketch a 300 x 400 rectangle. Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "solar panel 20 W",
+     "colour": "#1F2F5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p29_solar_panel/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p29_solar_panel/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Glass",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the cell area 12 in from the edges. Extrude Cut 2 mm. Save."
+   ],
+   "note": "Modelled from the maker's outline drawing.",
+   "parts": [
+    {
+     "name": "solar panel 20 W",
+     "colour": "#1F2F5A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p29_solar_panel/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p29_solar_panel/step_02.json"
+  }
+ ]
+}

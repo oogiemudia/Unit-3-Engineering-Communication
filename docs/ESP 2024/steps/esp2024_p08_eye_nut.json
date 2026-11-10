@@ -1,0 +1,70 @@
+{
+ "name": "esp2024_p08_eye_nut",
+ "title": "ESP 2024 part 08: lifting eye nut M16",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Collar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center (DIN 582 M16), or File > New > Standard (mm).ipt: circle diameter 34, Extrude 15."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lifting eye nut M16",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p08_eye_nut/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p08_eye_nut/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Eye",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "Sketch a circle diameter 13 and sweep it round a circle radius 23 standing on the collar."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lifting eye nut M16",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p08_eye_nut/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p08_eye_nut/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Thread",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M16, 15 deep, up the middle. Save."
+   ],
+   "note": "Safe working load 700 kg each.",
+   "parts": [
+    {
+     "name": "lifting eye nut M16",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p08_eye_nut/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p08_eye_nut/step_03.json"
+  }
+ ]
+}

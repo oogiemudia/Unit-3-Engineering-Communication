@@ -1,0 +1,189 @@
+{
+ "name": "esp2024_wind_buoy",
+ "title": "ESP 2024 concept B: wind powered spherical buoy",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Spherical float",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for the float: Revolve a half circle radius 250 (a 500 sphere)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "steel spherical float",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_wind_buoy/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_wind_buoy/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tail and ballast",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the tail \u00d880 down 610 mm and a ballast disc \u00d8260 x 150. Extrude."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "steel spherical float",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail and ballast",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_wind_buoy/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_wind_buoy/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Lattice tower",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Three 16 x 16 legs on a 240 circle, 1050 high, with three rings. Extrude, Circular Pattern 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "steel spherical float",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail and ballast",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lattice tower",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_wind_buoy/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_wind_buoy/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Wind turbine",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Three blades 120 x 240 on a 140 circle round a hub shaft, end plates \u00d8150."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "steel spherical float",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail and ballast",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lattice tower",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "vertical axis wind turbine",
+     "colour": "#EDEDED",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_wind_buoy/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_wind_buoy/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Lantern and topmark",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as wind_buoy.iam. Place the parts, the lantern and a can topmark on top."
+   ],
+   "note": "Rejected for the final design: the turbine has bearings and blades that wear out at sea and need servicing, the steel float must be painted to stop rust, and a wind turbine gives no power on calm days, so a big battery is still needed.",
+   "parts": [
+    {
+     "name": "steel spherical float",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail and ballast",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lattice tower",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "vertical axis wind turbine",
+     "colour": "#EDEDED",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark (can)",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_wind_buoy/step_05.glb",
+   "edges": "ESP 2024/steps/esp2024_wind_buoy/step_05.json"
+  }
+ ]
+}

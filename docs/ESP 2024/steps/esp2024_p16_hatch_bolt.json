@@ -1,0 +1,70 @@
+{
+ "name": "esp2024_p16_hatch_bolt",
+ "title": "ESP 2024 part 16: tamper proof bolt M10",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Shank",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center (ISO 7380 M10 x 20), or circle diameter 10, Extrude 16."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tamper proof bolt M10",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Button head",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 17 on the top. Extrude 6."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tamper proof bolt M10",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pin hex socket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a hexagon 6 across flats. Extrude Cut 4; a pin diameter 2.4 is left in the middle. Save."
+   ],
+   "note": "Only a pin hex key fits.",
+   "parts": [
+    {
+     "name": "tamper proof bolt M10",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p16_hatch_bolt/step_03.json"
+  }
+ ]
+}

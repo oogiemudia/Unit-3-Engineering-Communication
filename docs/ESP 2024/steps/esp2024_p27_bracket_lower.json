@@ -1,0 +1,51 @@
+{
+ "name": "esp2024_p27_bracket_lower",
+ "title": "ESP 2024 part 27: lower panel bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bracket_lower.ipt.",
+    "Sketch a 318 x 40 rectangle. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower panel bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p27_bracket_lower/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p27_bracket_lower/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Saddle tabs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the two 16 wide tabs back to the legs. Extrude 40, Join.",
+    "Cut the saddles: Combine, Cut, with the leg tubes placed as a derived part. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lower panel bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p27_bracket_lower/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p27_bracket_lower/step_02.json"
+  }
+ ]
+}

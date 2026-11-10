@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p03_fender",
+ "title": "ESP 2024 part 03: fender ring",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fender.ipt.",
+    "Sketch circles diameter 476 and 524 on the XZ Plane. Extrude 80 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fender ring",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p03_fender/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p03_fender/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the outside edges",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the two outside edges, radius 12. Save."
+   ],
+   "note": "It is stretched over the float and sits in the groove: no fixings to work loose.",
+   "parts": [
+    {
+     "name": "fender ring",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p03_fender/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p03_fender/step_02.json"
+  }
+ ]
+}

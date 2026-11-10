@@ -1,0 +1,72 @@
+{
+ "name": "esp2024_p24_tripod_leg",
+ "title": "ESP 2024 part 24: tripod leg",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Tube",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tripod_leg.ipt.",
+    "Start 2D Sketch on the XY Plane: a line from (205, 10) to (70, 914), the leg centre line (it leans in 8.5 degrees). Finish Sketch.",
+    "Sketch circles diameter 33.7 and 29.7 on a plane square to the line. Sweep along the line. Cut both ends level (Extrude Cut with a horizontal sketch)."
+   ],
+   "note": "The origin is the middle of the foot, on the deck plate.",
+   "parts": [
+    {
+     "name": "tripod leg",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p24_tripod_leg/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p24_tripod_leg/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Foot plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 54 x 92 rectangle under the tube. Extrude 10 mm, Join (welded)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tripod leg",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p24_tripod_leg/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p24_tripod_leg/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 13 Through All, 34 mm either side of the tube. Save."
+   ],
+   "note": "Two M12 bolts hold each foot to the deck plate.",
+   "parts": [
+    {
+     "name": "tripod leg",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p24_tripod_leg/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p24_tripod_leg/step_03.json"
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "name": "esp2024_p01_float_hull",
+ "title": "ESP 2024 part 01: float hull",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Revolve the float",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as float_hull.ipt.",
+    "Start 2D Sketch on the XZ Plane (the floor). Circle diameter 500 on the origin. Finish Sketch.",
+    "Extrude 1020 mm up. The origin is the bottom of the float; the design waterline is 770 mm up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the top and bottom edges",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the top edge radius 30 and the bottom edge radius 50. Click OK."
+   ],
+   "note": "Round edges shed waves and are kind to boats that touch the buoy.",
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Fender groove",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Start 2D Sketch on the XY Plane. Rectangle 12 deep by 80 high on the outside edge, from 910 to 990 mm up.",
+    "Revolve it 360 degrees about the Y axis, Cut."
+   ],
+   "note": "The rubber fender sits in this groove.",
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Equipment well",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top face, on the centre: diameter 290, depth 480. Click OK."
+   ],
+   "note": "The well holds the stainless equipment canister (sub-assembly 2).",
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Click Shell. Thickness 6 mm, Inside, no faces removed (a closed shell). Click OK."
+   ],
+   "note": "Rotomoulding makes a hollow part with an even wall. The space is then filled with foam (part 2).",
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_05.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Tie rod holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: diameter 16, Through All, at radius 195 on 30, 150 and 270 degrees (Circular Pattern of 3).",
+    "Material: Polyethylene, red (green for an entrance buoy). Save."
+   ],
+   "note": "Three stainless tie rods clamp the deck plate and the keel plate to the float.",
+   "parts": [
+    {
+     "name": "float hull",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p01_float_hull/step_06.glb",
+   "edges": "ESP 2024/steps/esp2024_p01_float_hull/step_06.json"
+  }
+ ]
+}

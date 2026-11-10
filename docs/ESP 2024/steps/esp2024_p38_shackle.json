@@ -1,0 +1,70 @@
+{
+ "name": "esp2024_p38_shackle",
+ "title": "ESP 2024 part 38: bow shackle",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ears and legs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center (bow shackle), or File > New > Standard (mm).ipt: two ears diameter 36 x 14, 22 apart, and two legs diameter 14 down 70 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p38_shackle/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p38_shackle/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bow",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "Sweep a circle diameter 14 round a half circle radius 18 joining the legs."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p38_shackle/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p38_shackle/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pin holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 28 Through All through both ears. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p38_shackle/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p38_shackle/step_03.json"
+  }
+ ]
+}

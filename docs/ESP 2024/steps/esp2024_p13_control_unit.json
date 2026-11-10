@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p13_control_unit",
+ "title": "ESP 2024 part 13: control and tracking unit",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as control_unit.ipt.",
+    "Sketch a 200 x 75 rectangle. Extrude 200 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "control and tracking unit",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p13_control_unit/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p13_control_unit/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Heat sink",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 160 x 140 rectangle on the back face. Extrude 5 mm, Join. Save."
+   ],
+   "note": "Modelled from the maker's outline drawing.",
+   "parts": [
+    {
+     "name": "control and tracking unit",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p13_control_unit/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p13_control_unit/step_02.json"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "name": "esp2024_p15_hatch_lid",
+ "title": "ESP 2024 part 15: hatch lid",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Disc",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as hatch_lid.ipt.",
+    "Circle diameter 344. Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p15_hatch_lid/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p15_hatch_lid/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "O-ring groove",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 288 and 304 on the underside. Extrude Cut 5 mm."
+   ],
+   "note": "The groove holds the O-ring in place when the lid is lifted off.",
+   "parts": [
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p15_hatch_lid/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p15_hatch_lid/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 11 Through All at radius 158; Circular Pattern 8."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p15_hatch_lid/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p15_hatch_lid/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cable gland holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M16 Through All, two at radius 92 on 90 and 270 degrees. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p15_hatch_lid/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_p15_hatch_lid/step_04.json"
+  }
+ ]
+}

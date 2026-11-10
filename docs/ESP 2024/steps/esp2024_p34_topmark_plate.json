@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p34_topmark_plate",
+ "title": "ESP 2024 part 34: topmark plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Disc",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as topmark_plate.ipt.",
+    "Circle diameter 250. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "topmark plate",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p34_topmark_plate/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p34_topmark_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cable hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 12 on the centre. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "topmark plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p34_topmark_plate/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p34_topmark_plate/step_02.json"
+  }
+ ]
+}

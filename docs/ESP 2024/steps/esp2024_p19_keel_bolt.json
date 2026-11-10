@@ -1,0 +1,49 @@
+{
+ "name": "esp2024_p19_keel_bolt",
+ "title": "ESP 2024 part 19: hex bolt M12 x 20",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Shank",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center: ISO 4017 M12 x 20, or circle diameter 12, Extrude 20."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hex bolt M12 x 20",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p19_keel_bolt/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p19_keel_bolt/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Head",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Hexagon 18 across flats. Extrude 8. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hex bolt M12 x 20",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p19_keel_bolt/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p19_keel_bolt/step_02.json"
+  }
+ ]
+}

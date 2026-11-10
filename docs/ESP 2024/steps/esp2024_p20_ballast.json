@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p20_ballast",
+ "title": "ESP 2024 part 20: ballast ring",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ballast.ipt.",
+    "Circles diameter 92 and 320. Extrude 260 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "ballast ring",
+     "colour": "#B8B3A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p20_ballast/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p20_ballast/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Chamfer",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer the top outside edge 15 mm. Save."
+   ],
+   "note": "Mass from the model: see the calculation sheet.",
+   "parts": [
+    {
+     "name": "ballast ring",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p20_ballast/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p20_ballast/step_02.json"
+  }
+ ]
+}

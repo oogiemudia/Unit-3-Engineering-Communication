@@ -1,0 +1,49 @@
+{
+ "name": "esp2024_p22_anode",
+ "title": "ESP 2024 part 22: zinc anode",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center, or File > New > Standard (mm).ipt: circles diameter 88.9 and 132, Extrude 60."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "zinc anode",
+     "colour": "#9AA3AD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p22_anode/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p22_anode/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Split",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 4 mm slot through one side of the ring. Extrude Cut Through All. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "zinc anode",
+     "colour": "#9AA3AD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p22_anode/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p22_anode/step_02.json"
+  }
+ ]
+}

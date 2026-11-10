@@ -1,0 +1,28 @@
+{
+ "name": "esp2024_p14_hatch_seal",
+ "title": "ESP 2024 part 14: hatch O-ring",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "Place from Content Center (O-ring), or File > New > Standard (mm).ipt: sketch a circle diameter 5 at radius 148 on the XY Plane, and Revolve it 360 degrees about the axis. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "hatch O-ring",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p14_hatch_seal/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p14_hatch_seal/step_01.json"
+  }
+ ]
+}

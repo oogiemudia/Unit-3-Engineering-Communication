@@ -1,0 +1,70 @@
+{
+ "name": "esp2024_p39_load_pin",
+ "title": "ESP 2024 part 39: load pin (alert sensor)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center or File > New > Standard (mm).ipt: circle diameter 28 on the YZ Plane, Extrude 54."
+   ],
+   "note": "Strain gauges in two grooves inside the pin measure the shear on it.",
+   "parts": [
+    {
+     "name": "load pin (alert sensor)",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p39_load_pin/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p39_load_pin/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Head",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 40 on one end. Extrude 6."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "load pin (alert sensor)",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p39_load_pin/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p39_load_pin/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cable connector",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 16 on the head. Extrude 20. Save."
+   ],
+   "note": "The cable runs up the tail tube to the canister.",
+   "parts": [
+    {
+     "name": "load pin (alert sensor)",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p39_load_pin/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p39_load_pin/step_03.json"
+  }
+ ]
+}

@@ -244,8 +244,9 @@ MODELS = [
 # FEA) together in their own folder under docs/, named by the model's 'folder' key.
 from esp2023 import MODELS as ESP2023_MODELS  # noqa: E402
 from esp2026 import MODELS as ESP2026_MODELS  # noqa: E402
+from esp2024 import MODELS as ESP2024_MODELS  # noqa: E402
 
-MODELS += ESP2023_MODELS + ESP2026_MODELS
+MODELS += ESP2023_MODELS + ESP2026_MODELS + ESP2024_MODELS
 
 
 def base_of(m):

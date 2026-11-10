@@ -1,0 +1,49 @@
+{
+ "name": "esp2024_p40_swivel",
+ "title": "ESP 2024 part 40: mooring swivel",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Top eye and body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Place from Content Center (swivel), or File > New > Standard (mm).ipt: an eye (circle diameter 14 round radius 20) and a body diameter 28."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "mooring swivel",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p40_swivel/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p40_swivel/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bottom eye",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "A second eye at 90 degrees to the first. Save."
+   ],
+   "note": "The two halves turn on a bearing inside the body.",
+   "parts": [
+    {
+     "name": "mooring swivel",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p40_swivel/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p40_swivel/step_02.json"
+  }
+ ]
+}

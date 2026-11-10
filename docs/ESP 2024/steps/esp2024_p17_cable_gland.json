@@ -1,0 +1,70 @@
+{
+ "name": "esp2024_p17_cable_gland",
+ "title": "ESP 2024 part 17: cable gland M16",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Thread",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center, or circle diameter 16, Extrude 10."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cable gland M16",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p17_cable_gland/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p17_cable_gland/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Hexagon 21 across flats on the top. Extrude 16."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cable gland M16",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p17_cable_gland/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p17_cable_gland/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cable bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 7 Through All. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cable gland M16",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p17_cable_gland/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p17_cable_gland/step_03.json"
+  }
+ ]
+}

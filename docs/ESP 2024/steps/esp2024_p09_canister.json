@@ -1,0 +1,92 @@
+{
+ "name": "esp2024_p09_canister",
+ "title": "ESP 2024 part 09: equipment canister",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as canister.ipt.",
+    "Sketch a circle diameter 284 on the XZ Plane. Extrude 486 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p09_canister/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p09_canister/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the top face, thickness 1.5 mm (the bottom is 4 mm). Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p09_canister/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p09_canister/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 281 and 344 on the top face. Extrude 8 mm, Join."
+   ],
+   "note": "The flange is welded on all round, so the canister is watertight.",
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p09_canister/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p09_canister/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Lid bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M10 tapped Through All at radius 158; Circular Pattern 8. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p09_canister/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_p09_canister/step_04.json"
+  }
+ ]
+}

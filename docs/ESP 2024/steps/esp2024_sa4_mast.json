@@ -1,0 +1,424 @@
+{
+ "name": "esp2024_sa4_mast",
+ "title": "ESP 2024 sub-assembly 4: mast and solar panels",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Legs",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as mast.iam.",
+    "Place tripod_leg.ipt and Place Grounded at 90 degrees.",
+    "Pattern > Circular: 3 legs round the axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tripod leg 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa4_mast/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa4_mast/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Top plate",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place top_plate.ipt: Mate its underside to the top ends of the legs and Insert it on the axis."
+   ],
+   "note": "It is welded to the legs.",
+   "parts": [
+    {
+     "name": "tripod leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mast top plate",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa4_mast/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa4_mast/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Panel brackets",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place bracket_lower.ipt and bracket_upper.ipt on the front face: Tangent the saddles to the legs.",
+    "Circular Pattern: 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tripod leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mast top plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa4_mast/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa4_mast/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Solar panels",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place solar_panel.ipt on the front brackets (Mate its back to the brackets, Flush the centre planes).",
+    "Circular Pattern: 3."
+   ],
+   "note": "One panel always faces the sun, whichever way the buoy turns.",
+   "parts": [
+    {
+     "name": "tripod leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mast top plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 1",
+     "colour": "#1F2F5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 2",
+     "colour": "#1F2F5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 3",
+     "colour": "#1F2F5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa4_mast/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_sa4_mast/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Leg bolts",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place an M12 x 16 bolt (Content Center) in each foot hole (Insert); Circular Pattern 3. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tripod leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 1a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 1b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 2a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 2b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tripod leg 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 3a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg bolt 3b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mast top plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 1",
+     "colour": "#1F2F5A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 2",
+     "colour": "#1F2F5A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lower panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "upper panel bracket 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "solar panel 3",
+     "colour": "#1F2F5A",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa4_mast/step_05.glb",
+   "edges": "ESP 2024/steps/esp2024_sa4_mast/step_05.json"
+  }
+ ]
+}

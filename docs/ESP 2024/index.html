@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESP 2024 harbour buoy</title>
+<meta name="description" content="T Level Employer-Set Project 8730-035, Summer 2024, Task 2: a solar powered harbour marker buoy for Harbour Shipping Ltd. CAD models, dimensioned drawings, simulation, FEA, calculations and reflective notes.">
+<style>
+:root{--bg:#F4F6F8;--card:#FFFFFF;--ink:#16335B;--text:#1F2A37;--muted:#4E5A68;--line:#D5DCE4;--accent:#1565D8;--amber:#E8A33D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{background:var(--ink);color:#fff;padding:26px 16px 22px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+header a{color:#BFD6F6}
+h1{margin:4px 0 6px;font-size:28px}
+header p{margin:0;max-width:800px;color:#DCE6F2}
+h2{color:var(--ink);font-size:21px;margin:26px 0 10px}
+h3.grp{color:var(--ink);font-size:16px;margin:18px 0 8px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.pcard img{width:100%;aspect-ratio:1.3;object-fit:contain;background:#F4F6F8;border-bottom:1px solid var(--line)}
+.pcard .b{padding:8px 10px;display:flex;flex-direction:column;gap:4px;flex:1;font-size:13px}
+.pcard h4{margin:0;font-size:14px;color:var(--ink)}
+.pcard .m{color:var(--muted)}
+.pcard .links{font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1.414;object-fit:contain;background:#fff;border-bottom:1px solid var(--line)}
+.card .b{padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:16px;color:var(--ink)}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px;margin-top:auto}
+a{color:var(--accent)}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;padding:6px 11px;font-weight:bold;font-size:14px}
+table{border-collapse:collapse;background:var(--card);width:100%;font-size:14px}
+td,th{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:#E8EEF6;color:var(--ink)}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:12px 16px}
+.scroll{overflow-x:auto}
+video{width:100%;display:block;background:#F4F6F8}
+footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="../index.html">Unit 3 CAD hub</a>
+  <h1>ESP 2024: harbour marker buoy</h1>
+  <p>T Level Design and Development Employer-Set Project (8730-035), Summer 2024, Task 2. Oceans Technology Ltd is designing marker buoys for Harbour Shipping Ltd: 1400 to 1800 mm above the sea on a 500 ±25 mm base, green for entering the harbour and red for leaving, an alert if the mooring cable breaks, tracking if it drifts, renewable 12 V power, a secure watertight battery space, no rust, and £2000 a buoy for 100 buoys in 70 weeks. Everything for the project is in this one folder.</p>
+</div></header>
+<main class="wrap">
+
+<h2>Task 2 submission set</h2>
+<div class="box">
+  <p style="margin:0 0 6px"><b>Part A</b> (two design ideas with the base, materials, shape, sizes, alert, tracking, renewable power and corrosion protection): sheet ESP24-GA-04, with the <b>calculations</b> (energy produced against energy needed, floating and stability, mooring loads, cost and time, every assumption) in their own document. <b>Part B</b> (the preferred design, annotated, with a title block): sheets ESP24-GA-01 to 03, the parts list ESP24-GA-05 and a drawing for every one of the 43 parts (ESP24-P01 to P43), with the <b>reflective notes</b> (about 500 words) in their own document.</p>
+  <div class="links"><a class="btn" href="ESP24_calculations.pdf">Calculations (PDF)</a> <a class="btn" href="ESP24_reflective_notes.pdf">Reflective notes (PDF)</a></div>
+</div>
+
+<h2>Drawings (A3)</h2>
+<div class="grid">
+  <div class="card"><img src="drawings/ESP24-GA-01_general_arrangement.png" alt="ESP24-GA-01 General arrangement" loading="lazy"><div class="b"><h3>ESP24-GA-01 General arrangement</h3><p>Front and side views (1:20) with the waterline and the heights above the sea, plan (1:10), isometric and notes.</p><div class="links"><a href="drawings/ESP24-GA-01_general_arrangement.png">PNG</a> <a href="drawings/ESP24-GA-01_general_arrangement.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-02_float_section.png" alt="ESP24-GA-02 Section through the float" loading="lazy"><div class="b"><h3>ESP24-GA-02 Section through the float</h3><p>Section A-A (1:8) through the float, the locked canister and the mast foot, the view on the open hatch (1:5), how the 12 V power works, and the specification check.</p><div class="links"><a href="drawings/ESP24-GA-02_float_section.png">PNG</a> <a href="drawings/ESP24-GA-02_float_section.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-03_details.png" alt="ESP24-GA-03 Details" loading="lazy"><div class="b"><h3>ESP24-GA-03 Details</h3><p>Mooring eye and load pin (1:3), the watertight locked hatch (1:2), and the lantern and topmark with the antenna inside (1:5).</p><div class="links"><a href="drawings/ESP24-GA-03_details.png">PNG</a> <a href="drawings/ESP24-GA-03_details.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-04_design_ideas.png" alt="ESP24-GA-04 Design ideas A and B" loading="lazy"><div class="b"><h3>ESP24-GA-04 Design ideas A and B</h3><p>Solar buoy with a polyethylene float against a wind powered steel sphere: 3D and front view of each, notes, and a comparison against the brief.</p><div class="links"><a href="drawings/ESP24-GA-04_design_ideas.png">PNG</a> <a href="drawings/ESP24-GA-04_design_ideas.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-05_parts_list.png" alt="ESP24-GA-05 Parts list" loading="lazy"><div class="b"><h3>ESP24-GA-05 Parts list</h3><p>All 43 parts with quantities, materials and part files, and a ballooned view of the buoy and the sinker.</p><div class="links"><a href="drawings/ESP24-GA-05_parts_list.png">PNG</a> <a href="drawings/ESP24-GA-05_parts_list.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-06_sub_assemblies.png" alt="ESP24-GA-06 Sub-assemblies, exploded" loading="lazy"><div class="b"><h3>ESP24-GA-06 Sub-assemblies, exploded</h3><p>The seven sub-assemblies pulled apart, with every part ballooned to the parts list.</p><div class="links"><a href="drawings/ESP24-GA-06_sub_assemblies.png">PNG</a> <a href="drawings/ESP24-GA-06_sub_assemblies.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP24-GA-07_assembly_order.png" alt="ESP24-GA-07 Assembly structure and order" loading="lazy"><div class="b"><h3>ESP24-GA-07 Assembly structure and order</h3><p>The assembly tree (buoy, sub-assemblies, parts) and the six stages of putting the buoy together.</p><div class="links"><a href="drawings/ESP24-GA-07_assembly_order.png">PNG</a> <a href="drawings/ESP24-GA-07_assembly_order.svg">SVG</a></div></div></div>
+</div>
+<p style="font-size:14px;color:var(--muted)">Every part also has its own sheet (third angle and first angle, with a key sizes table), listed with the parts below. All drawings are in the <a href="drawings/">drawings</a> folder.</p>
+
+<h2>Simulation: rolling in waves, then the chain breaks</h2>
+<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(360px,1fr))">
+  <div class="card"><video src="media/esp2024_buoy_sim.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2024_buoy_iso.png"></video><div class="b"><h3>Inventor Dynamic Simulation</h3><p>The moored buoy rolls in a short harbour sea. Half way through the chain breaks: the load pin pull falls to zero, which is the alert, and the buoy drifts away while the tracker reports where it is. The graphs show the roll, the load pin pull and the distance from the mooring.</p><div class="links"><a class="btn" href="../viewer.html?m=esp2024_buoy&amp;tab=sim">Open the Simulation tab</a></div></div></div>
+  <div class="card"><video src="media/esp2024_buoy_turntable.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2024_buoy_iso.png"></video><div class="b"><h3>The buoy, all round</h3><p>All 77 parts: float, fender, canister with the battery and control unit, tail and ballast, tripod mast, solar panels, lantern, topmark and the mooring with its load pin.</p><div class="links"><a class="btn" href="../viewer.html?m=esp2024_buoy">Open in 3D</a></div></div></div>
+</div>
+
+<h2>Models</h2>
+<div class="scroll"><table>
+<tr><th>Model</th><th>What it shows</th><th>Open</th><th>Files</th></tr>
+<tr><td><b>Harbour buoy, red (GA)</b></td><td>The preferred design for leaving the harbour: 43 different parts, 77 in the buoy. Parts list with show and hide, section through the float, simulation of the chain breaking.</td><td><a href="../viewer.html?m=esp2024_buoy">3D</a> · <a href="../viewer.html?m=esp2024_buoy&amp;tab=steps">Build steps</a> · <a href="../viewer.html?m=esp2024_buoy&amp;tab=sim">Simulation</a></td><td><a href="step/esp2024_buoy.step">STEP</a> · <a href="stl/esp2024_buoy.stl">STL</a></td></tr>
+<tr><td><b>Harbour buoy, green</b></td><td>The same buoy for entering the harbour: green float and lens, cone topmark.</td><td><a href="../viewer.html?m=esp2024_buoy_green">3D</a> · <a href="../viewer.html?m=esp2024_buoy_green&amp;tab=steps">Build steps</a></td><td><a href="step/esp2024_buoy_green.step">STEP</a> · <a href="stl/esp2024_buoy_green.stl">STL</a></td></tr>
+<tr><td><b>Mooring eye (part 23)</b></td><td>FEA of the mooring eye at the breaking load of the chain, checked by hand.</td><td><a href="../viewer.html?m=esp2024_p23_mooring_eye">3D</a> · <a href="../viewer.html?m=esp2024_p23_mooring_eye&amp;tab=fea">FEA</a></td><td><a href="step/esp2024_p23_mooring_eye.step">STEP</a></td></tr>
+<tr><td><b>Concept B: wind powered steel sphere</b></td><td>The second design idea, for comparison.</td><td><a href="../viewer.html?m=esp2024_wind_buoy">3D</a> · <a href="../viewer.html?m=esp2024_wind_buoy&amp;tab=steps">Build steps</a></td><td><a href="step/esp2024_wind_buoy.step">STEP</a></td></tr>
+</table></div>
+
+<h2>How it goes together: 7 sub-assemblies</h2>
+<p style="font-size:14px">As in Inventor, the parts are first put together into sub-assemblies (each its own .iam), and six of them are then placed into the buoy; the seventh, the sinker, is laid on the harbour bed and joined by the chain. Each one below has its own 3D model with an exploded view, a parts list, and Inventor build steps that add one part at a time. The buoy's own <a href="../viewer.html?m=esp2024_buoy&amp;tab=steps">Build steps</a> then place the sub-assemblies in order; the drawings ESP24-GA-06 (exploded) and GA-07 (structure and order) show the same on paper.</p>
+<div class="grid" id="subs" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))"></div>
+
+<h2>Every part (43)</h2>
+<p style="font-size:14px">Each component is its own part, as it would be in Inventor (a .ipt file): its own 3D model, Inventor build steps, drawing with a key sizes table, and STEP file. Numbers are the item numbers on the parts list, ESP24-GA-05.</p>
+<div id="parts"></div>
+
+<h2>Key results</h2>
+<p style="font-size:14px;color:var(--muted)">From the CAD model and the calculation sheet (read from <a href="ESP24_calculations.json">ESP24_calculations.json</a>).</p>
+<div class="scroll"><table id="results">
+<tr><th>Check</th><th>Brief</th><th>This design</th></tr>
+</table></div>
+
+<h2>How it was made</h2>
+<p style="font-size:14px">Every model is parametric CadQuery Python in <code>models/esp2024.py</code> in the repository: change a number (the float size, the mast height, the ballast) and rebuild; the waterline and stability are worked out again from the parts. The Inventor build steps are in <code>models/esp2024_steps.py</code>, the dimensioned sheets in <code>tools/esp2024_drawings.py</code>, the calculations and notes in <code>tools/esp2024_calcs.py</code>, and the clash and floating checks in <code>tools/esp2024_checks.py</code>. Build steps and the simulation are written as the Autodesk Inventor commands a learner would use; the stage models are CadQuery, not Inventor files.</p>
+</main>
+<footer class="wrap">Brief and Task 2: City and Guilds T Level 8730-035, Summer 2024. Design, models and drawings made for teaching with the Unit 3 CAD hub. Dimensions in millimetres.</footer>
+<script>
+const GROUPS = [['float', 'Float and deck (SA1)'], ['equipment', 'Equipment canister: battery, control and tracking (SA2)'],
+  ['tail', 'Tail tube, ballast and anode (SA3)'], ['mast', 'Tripod mast and solar panels (SA4)'], ['top', 'Lantern and topmark (SA5)'],
+  ['mooring', 'Mooring, alert load pin and chain (SA6, SA7)']];
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const parts = cat.filter(m => m.part && m.folder === 'ESP 2024').sort((a, b) => a.part.no - b.part.no);
+  const host = document.getElementById('parts');
+  for (const [g, title] of GROUPS) {
+    const mine = parts.filter(m => m.part.group === g);
+    if (!mine.length) continue;
+    host.insertAdjacentHTML('beforeend', `<h3 class="grp">${title}</h3><div class="pgrid">` + mine.map(m => {
+      const d = (m.drawings || {}).third || '';
+      return `<div class="pcard"><a href="../viewer.html?m=${m.name}"><img src="media/${m.name}_iso.png" alt="${m.part.no}. ${m.parts[0].name}" loading="lazy"></a>
+        <div class="b"><h4>${m.part.no}. ${m.parts[0].name}</h4><span class="m">${m.part.material}</span>
+        <div class="links"><a href="../viewer.html?m=${m.name}">3D</a> · <a href="../viewer.html?m=${m.name}&tab=steps">Build steps</a>${m.fea === false ? '' : ` · <a href="../viewer.html?m=${m.name}&tab=fea">FEA</a>`}
+        · <a href="../${d}.png">Drawing</a> · <a href="../${m.files.step}">STEP</a></div></div></div>`;
+    }).join('') + '</div>');
+  }
+});
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const subs = cat.filter(m => m.sub && m.folder === 'ESP 2024').sort((a, b) => a.sub.no - b.sub.no);
+  document.getElementById('subs').innerHTML = subs.map(m => {
+    const parts = (m.bom || []).map(r => r.no + ' ' + r.name + (r.qty > 1 ? ' x' + r.qty : '')).join(', ');
+    return `<div class="card"><video src="media/${m.name}_explode.mp4" muted loop playsinline preload="none" poster="media/${m.name}_iso.png" controls></video>
+      <div class="b"><h3>SA${m.sub.no} ${m.title.replace(/^ESP 2024 sub-assembly \d+: /, '')} <span style="font-weight:normal;color:var(--muted)">(${m.sub.file})</span></h3><p>${m.description}</p><p style="font-size:13px">Parts: ${parts}</p>
+      <div class="links"><a class="btn" href="../viewer.html?m=${m.name}&tab=steps">Build steps</a> <span><a href="../viewer.html?m=${m.name}">3D and exploded view</a> · <a href="step/${m.name}.step">STEP</a></span></div></div></div>`;
+  }).join('');
+});
+fetch('ESP24_calculations.json').then(r => r.json()).then(k => {
+  const gbp = v => '£' + Math.round(v).toLocaleString('en-GB');
+  const rows = [
+    ['Height of the top above the sea', '1400 to 1800 mm', Math.round(k.above_red) + ' mm red, ' + Math.round(k.above_green) + ' mm green; ' + Math.round(k.above_free) + ' mm if the chain breaks'],
+    ['Base diameter', '500 ±25 mm', k.base + ' mm float, ' + k.fender + ' mm over the fender'],
+    ['Stays upright', 'Stable', 'GM ' + Math.round(k.GM) + ' mm moored, ' + Math.round(k.GM_free) + ' mm adrift; ' + k.heel.toFixed(0) + '° heel in a gale'],
+    ['Mass (CAD)', '', k.mass.toFixed(1) + ' kg; reserve buoyancy ' + Math.round(k.reserve) + ' kg'],
+    ['Renewable 12 V power', 'Enough all year', k.energy_dec.toFixed(1) + ' Wh a day in December against ' + k.energy_need.toFixed(1) + ' Wh needed (' + k.energy_ratio.toFixed(1) + ' x); ' + Math.round(k.autonomy_days) + ' days with no sun'],
+    ['Alert if the chain breaks, tracking', 'Yes', 'Load pin in the shackle; GNSS and LTE-M, ' + Math.round(k.alert_days) + ' days of reports adrift'],
+    ['Mooring eye at the chain breaking load (' + (k.design_load / 1000) + ' kN)', 'No yield', k.fea.vm_max.toFixed(0) + ' MPa peak, safety factor ' + k.fea.sf_min.toFixed(1)],
+    ['Cost a buoy', gbp(k.budget), gbp(k.cost) + ' (' + gbp(k.order) + ' for 100)'],
+    ['Programme', '70 weeks', k.weeks + ' weeks including design and a sea trial'],
+  ];
+  document.getElementById('results').insertAdjacentHTML('beforeend', rows.map(r => '<tr><td>' + r.join('</td><td>') + '</td></tr>').join(''));
+}).catch(() => {});
+</script>
+</body>
+</html>

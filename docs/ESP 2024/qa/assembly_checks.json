@@ -1,0 +1,22 @@
+{
+ "assemblies": [
+  {
+   "assembly": "red buoy (leaving the harbour)",
+   "parts": 77,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "assembly": "green buoy (entering the harbour)",
+   "parts": 77,
+   "clashes": [],
+   "floating": []
+  },
+  {
+   "assembly": "sinker and ground chain",
+   "parts": 5,
+   "clashes": [],
+   "floating": []
+  }
+ ]
+}

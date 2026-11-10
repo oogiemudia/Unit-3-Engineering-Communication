@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p31_lantern_lens",
+ "title": "ESP 2024 part 31: lantern lens",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Lens",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lantern_lens.ipt.",
+    "Circle diameter 104. Extrude 100 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p31_lantern_lens/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p31_lantern_lens/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the bottom face, thickness 6 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p31_lantern_lens/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p31_lantern_lens/step_02.json"
+  }
+ ]
+}

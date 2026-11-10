@@ -1,0 +1,72 @@
+{
+ "name": "esp2024_p04_deck_plate",
+ "title": "ESP 2024 part 04: deck plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as deck_plate.ipt.",
+    "Sketch circles diameter 470 and 286 on the XZ Plane. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "deck plate",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p04_deck_plate/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p04_deck_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tie rod holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 16 Through All at radius 195 on 30 degrees; Circular Pattern 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "deck plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p04_deck_plate/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p04_deck_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Leg bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M12 tapped, Through All, at radius 205, 34 mm either side of 90 degrees.",
+    "Circular Pattern: 3 at 120 degrees. Save."
+   ],
+   "note": "Two M12 bolts hold each leg foot.",
+   "parts": [
+    {
+     "name": "deck plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p04_deck_plate/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p04_deck_plate/step_03.json"
+  }
+ ]
+}

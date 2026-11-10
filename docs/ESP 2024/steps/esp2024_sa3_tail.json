@@ -1,0 +1,239 @@
+{
+ "name": "esp2024_sa3_tail",
+ "title": "ESP 2024 sub-assembly 3: tail and ballast",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Tail tube",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as tail.iam.",
+    "Place tail_tube.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa3_tail/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa3_tail/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Mooring eye",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place mooring_eye.ipt under the bottom plate: Mate, then Flush its centre plane with the YZ Plane (it is welded on)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa3_tail/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa3_tail/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Ballast",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place ballast.ipt over the tube onto the bottom plate (Insert). Place ballast_collar.ipt on top (Insert)."
+   ],
+   "note": "The ballast keeps the buoy upright.",
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast ring",
+     "colour": "#B8B3A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast collar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa3_tail/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa3_tail/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Anode",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place anode.ipt on the tube 450 mm below the keel plate (Insert, Offset)."
+   ],
+   "note": "It protects the steel by corroding first.",
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast ring",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast collar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "zinc anode",
+     "colour": "#9AA3AD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa3_tail/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_sa3_tail/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Flange bolts",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place an M12 x 20 bolt (Content Center, ISO 4017) in one flange hole (Insert); Circular Pattern 6. Save."
+   ],
+   "note": "In the buoy they screw into the keel plate.",
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 4",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 5",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail flange bolt 6",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast ring",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ballast collar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "zinc anode",
+     "colour": "#9AA3AD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa3_tail/step_05.glb",
+   "edges": "ESP 2024/steps/esp2024_sa3_tail/step_05.json"
+  }
+ ]
+}

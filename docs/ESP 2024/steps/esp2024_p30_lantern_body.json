@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p30_lantern_body",
+ "title": "ESP 2024 part 30: lantern base",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lantern_body.ipt.",
+    "Circle diameter 140. Extrude 12 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p30_lantern_body/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p30_lantern_body/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 110 on top. Extrude 28 mm. Save."
+   ],
+   "note": "Three M8 bolts through the flange into the top plate.",
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p30_lantern_body/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p30_lantern_body/step_02.json"
+  }
+ ]
+}

@@ -73,6 +73,20 @@ The ESP 2026 project (8730-035, Summer 2026: an economy class three-seat set for
 
 The folder also holds the Part A calculations (cost, weight, size, seat height) and the Part B reflective notes (PDF). See `docs/ESP 2026/README.md`.
 
+## ESP 2024 harbour buoy (Employer-Set Project, Task 2)
+
+The ESP 2024 project (8730-035, Summer 2024: a solar powered harbour marker buoy for Harbour Shipping Ltd) keeps every file it generates in `docs/ESP 2024/`, with its own project page (`docs/ESP 2024/index.html`), and shows in the catalogue under the ESP 2024 filter. Every component is its own part model (43 parts, `esp2024_p01_float_hull` to `esp2024_p43_sinker_eye`), each with build steps, a drawing with a key sizes table and a STEP file. Drawing numbers use the prefix ESP24.
+
+| Model | Criteria | Use it for | Drawings | Animations |
+|---|---|---|---|---|
+| ESP 2024 harbour buoy (GA) | 3.1, 3.2 | The preferred design (red, leaving the harbour), assembled from 43 parts (77 in the buoy). Simulation of the buoy rolling and drifting off when the chain breaks. | GA, float section, details, parts list, third angle, first angle, section A-A | turntable, views, section, simulation |
+| ESP 2024 harbour buoy, green | 3.1 | The entrance buoy: green float and lens, cone topmark. | third angle, first angle | turntable, views |
+| ESP 2024 sub-assembly 1 to 7 | 3.1, 3.2 | How the buoy goes together: float, equipment canister, tail, mast, lantern and topmark, mooring, and the sinker, each built part by part, with an exploded view. | standard sheets; exploded sheet GA-06, structure and order GA-07 | turntable, views, explode |
+| ESP 2024 part 01 to 43 | 3.1 | Every component on its own. Part 23 (mooring eye) has the FEA at the chain breaking load, checked by hand. | one sheet each with a key sizes table | still |
+| ESP 2024 concept B: wind powered spherical buoy | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
+
+The folder also holds the Part A calculations (energy produced against energy needed, floating and stability, mooring loads, cost, time) and the Part B reflective notes (PDF). See `docs/ESP 2024/README.md`.
+
 For each model the `docs` folder holds:
 
 | Folder | Contents |

@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p23_mooring_eye",
+ "title": "ESP 2024 part 23: mooring eye",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as mooring_eye.ipt.",
+    "Start 2D Sketch on the YZ Plane: a 90 wide plate 54 high with a round end radius 45. Extrude 20 mm, Symmetric."
+   ],
+   "note": "The origin is the top of the plate, on the weld.",
+   "parts": [
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p23_mooring_eye/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p23_mooring_eye/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 30 Through All on the centre of the round end. Save."
+   ],
+   "note": "The 28 diameter load pin fits with 2 mm clearance.",
+   "parts": [
+    {
+     "name": "mooring eye",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p23_mooring_eye/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p23_mooring_eye/step_02.json"
+  }
+ ]
+}

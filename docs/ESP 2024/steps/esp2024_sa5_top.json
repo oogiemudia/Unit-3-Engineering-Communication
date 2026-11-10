@@ -1,0 +1,247 @@
+{
+ "name": "esp2024_sa5_top",
+ "title": "ESP 2024 sub-assembly 5: lantern and topmark",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Lantern",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as lantern_topmark.iam.",
+    "Place lantern_body.ipt and Place Grounded.",
+    "Place lantern_lens.ipt and lantern_cap.ipt on top (Mate, Insert)."
+   ],
+   "note": "Bought in as one lantern.",
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa5_top/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa5_top/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Struts",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place topmark_strut.ipt at 30 degrees, its foot Mated to the lantern mounting plane; Circular Pattern 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa5_top/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa5_top/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Topmark plate and antenna",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place topmark_plate.ipt on the struts (Mate). Place antenna.ipt on its centre (Mate, Insert)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark plate",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "antenna",
+     "colour": "#EDEDED",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa5_top/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa5_top/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Topmark",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place topmark_can.ipt (red buoy) or topmark_cone.ipt (green buoy) over the antenna: Mate, Insert. Save."
+   ],
+   "note": "Polyethylene lets the radio signals through to the antenna inside.",
+   "parts": [
+    {
+     "name": "lantern base",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern lens",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark strut 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "antenna",
+     "colour": "#EDEDED",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "topmark",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa5_top/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_sa5_top/step_04.json"
+  }
+ ]
+}
