@@ -63,6 +63,8 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
   <div class="card"><img src="drawings/ESP26-GA-03_mechanism_details.png" alt="Mechanism details" loading="lazy"><div class="b"><h3>ESP26-GA-03 Mechanism details</h3><p>Recline lock (1:2), lifting armrest (1:5), lap belt buckle (1:1) and the track fitting that fixes the seat to the floor (1:1).</p><div class="links"><a href="drawings/ESP26-GA-03_mechanism_details.png">PNG</a> <a href="drawings/ESP26-GA-03_mechanism_details.svg">SVG</a></div></div></div>
   <div class="card"><img src="drawings/ESP26-GA-04_design_ideas.png" alt="Design ideas A and B" loading="lazy"><div class="b"><h3>ESP26-GA-04 Design ideas A and B</h3><p>Beam and leg seat against fixed shell seats: 3D, side and plan of each, notes, and a comparison against the brief.</p><div class="links"><a href="drawings/ESP26-GA-04_design_ideas.png">PNG</a> <a href="drawings/ESP26-GA-04_design_ideas.svg">SVG</a></div></div></div>
   <div class="card"><img src="drawings/ESP26-GA-05_parts_list.png" alt="Parts list" loading="lazy"><div class="b"><h3>ESP26-GA-05 Parts list</h3><p>All 39 parts with quantities, materials and part files, and a ballooned view of the set.</p><div class="links"><a href="drawings/ESP26-GA-05_parts_list.png">PNG</a> <a href="drawings/ESP26-GA-05_parts_list.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP26-GA-06_sub_assemblies.png" alt="Exploded sub-assemblies" loading="lazy"><div class="b"><h3>ESP26-GA-06 Sub-assemblies, exploded</h3><p>The seven sub-assemblies pulled apart, with every part ballooned to the parts list.</p><div class="links"><a href="drawings/ESP26-GA-06_sub_assemblies.png">PNG</a> <a href="drawings/ESP26-GA-06_sub_assemblies.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP26-GA-07_assembly_order.png" alt="Assembly structure and order" loading="lazy"><div class="b"><h3>ESP26-GA-07 Assembly structure and order</h3><p>The assembly tree (set, sub-assemblies, parts) and the eight stages of putting the set together.</p><div class="links"><a href="drawings/ESP26-GA-07_assembly_order.png">PNG</a> <a href="drawings/ESP26-GA-07_assembly_order.svg">SVG</a></div></div></div>
 </div>
 <p style="font-size:14px;color:var(--muted)">Every part also has its own sheet (third angle and first angle, with a key sizes table), listed with the parts below. All drawings are in the <a href="drawings/">drawings</a> folder.</p>
 
@@ -80,6 +82,10 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
 <tr><td><b>Leg (part 4)</b></td><td>FEA of the leg in a 9 g forward emergency landing, checked by a hand truss calculation.</td><td><a href="../viewer.html?m=esp2026_p04_leg">3D</a> · <a href="../viewer.html?m=esp2026_p04_leg&amp;tab=fea">FEA</a></td><td><a href="step/esp2026_p04_leg.step">STEP</a></td></tr>
 <tr><td><b>Concept B: fixed shell seats</b></td><td>The second design idea, for comparison.</td><td><a href="../viewer.html?m=esp2026_shell_seats">3D</a> · <a href="../viewer.html?m=esp2026_shell_seats&amp;tab=steps">Build steps</a></td><td><a href="step/esp2026_shell_seats.step">STEP</a></td></tr>
 </table></div>
+
+<h2>How it goes together: 7 sub-assemblies</h2>
+<p style="font-size:14px">As in Inventor, the parts are first put together into seven sub-assemblies (each its own .iam), and the sub-assemblies are then placed into the set. Each one below has its own 3D model with an exploded view, a parts list, and Inventor build steps that add one part at a time. The set's own <a href="../viewer.html?m=esp2026_seat_set&amp;tab=steps">Build steps</a> then place the sub-assemblies in order; the drawings ESP26-GA-06 (exploded) and GA-07 (structure and order) show the same on paper.</p>
+<div class="grid" id="subs" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))"></div>
 
 <h2>Every part (39)</h2>
 <p style="font-size:14px">Each component is its own part, as it would be in Inventor (a .ipt file): its own 3D model, Inventor build steps, drawing with a key sizes table, and STEP file. The single seat and the set are assemblies of these parts. Numbers are the item numbers on the parts list, ESP26-GA-05.</p>
@@ -115,6 +121,15 @@ fetch('../models.json').then(r => r.json()).then(cat => {
         · <a href="../${d}.png">Drawing</a> · <a href="../${m.files.step}">STEP</a></div></div></div>`;
     }).join('') + '</div>');
   }
+});
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const subs = cat.filter(m => m.sub && m.folder === 'ESP 2026').sort((a, b) => a.sub.no - b.sub.no);
+  document.getElementById('subs').innerHTML = subs.map(m => {
+    const parts = (m.bom || []).map(r => r.no + ' ' + r.name + (r.qty > 1 ? ' x' + r.qty : '')).join(', ');
+    return `<div class="card"><video src="media/${m.name}_explode.mp4" muted loop playsinline preload="none" poster="media/${m.name}_iso.png" controls></video>
+      <div class="b"><h3>SA${m.sub.no} ${m.title.replace(/^ESP 2026 sub-assembly \d+: /, '')} <span style="font-weight:normal;color:var(--muted)">(${m.sub.file})</span></h3><p>${m.description}</p><p style="font-size:13px">Parts: ${parts}</p>
+      <div class="links"><a class="btn" href="../viewer.html?m=${m.name}&tab=steps">Build steps</a> <span><a href="../viewer.html?m=${m.name}">3D and exploded view</a> · <a href="step/${m.name}.step">STEP</a></span></div></div></div>`;
+  }).join('');
 });
 fetch('ESP26_calculations.json').then(r => r.json()).then(k => {
   const gbp = v => '£' + Math.round(v).toLocaleString('en-GB');

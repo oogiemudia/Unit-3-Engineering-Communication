@@ -1,0 +1,326 @@
+{
+ "name": "esp2026_sa3_seat_back",
+ "title": "ESP 2026 sub-assembly 3: seat back",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Back shell",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as seat_back.iam.",
+    "Place back_shell.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Back cushion",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place back_foam.ipt in the open front of the shell (Mate its back face to the shell rim, Flush the centre planes).",
+    "Place back_cover.ipt over the foam (Mate inside faces to the foam)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Fixed head rest",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place headrest.ipt on top of the shell: Mate its underside to the top of the shell and Flush the centre planes."
+   ],
+   "note": "Fixed, as the brief asks: there is no adjuster.",
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Literature pocket",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place literature_pocket.ipt on the lower back of the shell (Mate, then Flush the centre planes)."
+   ],
+   "note": "Holds A4 safety cards and magazines.",
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Tray table",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place tray_arm.ipt on each side of the shell (Mate), Mirror Components for the second one.",
+    "Place tray_table.ipt: Insert the hinge stubs into the tray holes. Add an Angle constraint 0 degrees (stowed); the tray turns 78 degrees to sit level.",
+    "Place tray_latch.ipt above the tray."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray latch",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Screen and power",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place ife_screen.ipt in the recess at the top of the back and usb_module.ipt beside it (Mate, Flush). Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray latch",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "power and audio module",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa3_seat_back/step_06.glb",
+   "edges": "ESP 2026/steps/esp2026_sa3_seat_back/step_06.json"
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "name": "esp2026_sa4_recline_lock",
+ "title": "ESP 2026 sub-assembly 4: recline lock",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Locking cylinder",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as recline_lock.iam.",
+    "Place recline_lock.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa4_recline_lock/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa4_recline_lock/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Rod",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place recline_rod.ipt and Insert it in the bore of the cylinder (axis to axis)."
+   ],
+   "note": "Bought in as one unit with the cylinder.",
+   "parts": [
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa4_recline_lock/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa4_recline_lock/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bracket and front pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place recline_bracket.ipt and line up its pin hole with the front eye (Insert).",
+    "Place lock_pin.ipt through the bracket and the eye (Insert)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa4_recline_lock/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa4_recline_lock/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Rear pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place lock_pin.ipt in the rod eye (Insert). In the set it also passes through the lever on the back shell. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa4_recline_lock/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_sa4_recline_lock/step_04.json"
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "name": "esp2026_sa6_lap_belt",
+ "title": "ESP 2026 sub-assembly 6: lap belt",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Anchors",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as lap_belt.iam.",
+    "Place belt_anchor.ipt twice, 450 mm apart (Mirror Components for the left one)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa6_lap_belt/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa6_lap_belt/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Webbing",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place belt_strap_buckle.ipt on the right anchor and belt_strap_adjust.ipt on the left anchor (Mate the loop to the anchor)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa6_lap_belt/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa6_lap_belt/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Buckle",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place buckle_body.ipt on the end of the buckle side webbing and buckle_lever.ipt on top of it (Mate, Flush)."
+   ],
+   "note": "Lift the lever and the tongue comes free.",
+   "parts": [
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa6_lap_belt/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa6_lap_belt/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Tongue",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place belt_tongue.ipt on the adjuster side webbing and Insert it in the buckle slot. Save."
+   ],
+   "note": "The slide bar sets the length.",
+   "parts": [
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa6_lap_belt/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_sa6_lap_belt/step_04.json"
+  }
+ ]
+}

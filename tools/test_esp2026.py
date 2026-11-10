@@ -36,6 +36,11 @@ PAGES = [
     ('part_buckle', 'viewer.html?m=esp2026_p29_buckle_body', 'canvas', None),
     ('leg_fea', 'viewer.html?m=esp2026_p04_leg&tab=fea&step=10', 'canvas', None),
     ('shell_3d', 'viewer.html?m=esp2026_shell_seats', 'canvas', None),
+    ('project_subs', 'ESP%202026/index.html', 'subs', None),
+    ('sub_frame_steps', 'viewer.html?m=esp2026_sa1_frame&tab=steps&step=6', 'canvas', None),
+    ('sub_back_3d', 'viewer.html?m=esp2026_sa3_seat_back', 'canvas', None),
+    ('sub_lock_parts_list', 'viewer.html?m=esp2026_sa4_recline_lock', 'bom', '#bomBtn'),
+    ('sub_belt_steps', 'viewer.html?m=esp2026_sa6_lap_belt&tab=steps&step=4', 'canvas', None),
     # older models, to show the shared viewer and the ESP 2023 project still work
     ('esp2023_ga', 'viewer.html?m=esp2023_lock_gates', 'canvas', None),
     ('hub_cylinder_fea', 'viewer.html?m=pneumatic_cylinder&tab=fea&step=10', 'canvas', None),
@@ -47,11 +52,12 @@ COUNT = dict(
     esp23="document.querySelectorAll('#grid .card').length",
     parts="document.querySelectorAll('#parts .pcard').length",
     results="document.querySelectorAll('#results tr, #legs tr').length",
+    subs="document.querySelectorAll('#subs .card').length",
     bom="document.querySelectorAll('table.bom tr').length",
 )
-# 42 cards under the ESP 2026 filter (3 assemblies + 39 parts), 45 under ESP 2023 as before, 39 parts in the gallery,
+# 49 cards under the ESP 2026 filter (3 assemblies + 7 sub-assemblies + 39 parts), 45 under ESP 2023 as before, 39 parts in the gallery,
 # the two results tables filled in from ESP26_calculations.json, and a parts list with rows in the viewer
-NEED = dict(esp=42, esp23=45, parts=39, results=14, bom=10)
+NEED = dict(esp=49, esp23=45, parts=39, results=14, subs=7, bom=5)
 
 DREW = """() => {
   const c = document.querySelector('canvas'); if (!c) return 0;

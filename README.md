@@ -67,6 +67,7 @@ The ESP 2026 project (8730-035, Summer 2026: an economy class three-seat set for
 |---|---|---|---|---|
 | ESP 2026 three-seat set (GA) | 3.1, 3.2 | The preferred design: beam and leg seat set assembled from 39 parts (128 in all). Simulation of the recline, armrests and trays. | GA at 1:10, single seat section, mechanism details, parts list, third angle, first angle | turntable, views, simulation |
 | ESP 2026 single seat | 3.1, 3.2 | The middle seat on its own: cushion, carbon back, head rest, recline lock, belt, tray, screen, pocket, life vest. | third angle, first angle, section A-A | turntable, views, section |
+| ESP 2026 sub-assembly 1 to 7 | 3.1, 3.2 | How the set goes together: frame, seat pan, seat back, recline lock, armrest, lap belt and life vest pouch, each built part by part, with an exploded view. | standard sheets; exploded sheet GA-06, structure and order GA-07 | turntable, views, explode |
 | ESP 2026 part 01 to 39 | 3.1 | Every component on its own. Part 4 (leg) has the FEA (9 g forward), checked by a hand truss calculation. | one sheet each with a key sizes table | still |
 | ESP 2026 concept B: fixed shell seats | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
 

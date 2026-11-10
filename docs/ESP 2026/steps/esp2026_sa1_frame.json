@@ -1,0 +1,691 @@
+{
+ "name": "esp2026_sa1_frame",
+ "title": "ESP 2026 sub-assembly 1: frame",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Place the legs",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as frame.iam.",
+    "Place leg.ipt and Place Grounded. Place a second leg 540 mm along X (Mate the faces to the work plane with an offset of 270 each side of the centre)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Track fittings and studs",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place track_fitting.ipt under each foot: Mate the top of the fitting to the underside of the foot, then Flush the sides.",
+    "Place track_stud.ipt in each fitting: Insert the stud head into the stud hole."
+   ],
+   "note": "The studs lock into the aircraft seat track; the feet are 508 mm (20 track pitches) apart.",
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Beam tubes",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place beam_tube.ipt twice. Insert each tube into its bores in the two legs (axis to axis), and Flush the tube centre plane with the assembly YZ plane so it sticks out 770 each side."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Clamp collars",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place beam_collar.ipt on each tube beside each leg boss: Insert the collar bore on the tube and Mate its face to the leg."
+   ],
+   "note": "The collars stop the legs sliding along the tubes.",
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Spreaders",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place spreader.ipt and Insert its two bores on the tubes at X = -750.",
+    "Pattern > Rectangular: 4 along X, 500 mm apart."
+   ],
+   "note": "The spreaders sit under the armrests and carry the armrest and recline pivots.",
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "End caps and baggage bar",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place beam_end_cap.ipt in each tube end (Insert).",
+    "Place baggage_bar.ipt through the holes in the front struts of the legs (Insert), centred.",
+    "Inspect tab > Analyze Interference: no overlaps. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa1_frame/step_06.glb",
+   "edges": "ESP 2026/steps/esp2026_sa1_frame/step_06.json"
+  }
+ ]
+}

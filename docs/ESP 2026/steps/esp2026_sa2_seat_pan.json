@@ -1,0 +1,92 @@
+{
+ "name": "esp2026_sa2_seat_pan",
+ "title": "ESP 2026 sub-assembly 2: seat pan",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Diaphragm",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as seat_pan.iam.",
+    "Place seat_diaphragm.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa2_seat_pan/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa2_seat_pan/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cushion foam",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place seat_foam.ipt. Mate its underside to the top of the diaphragm and Flush the front edges and the centre planes."
+   ],
+   "note": "The foam is 80 mm deep at the front and 50 at the back, so the seat slopes back 3.8 degrees.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa2_seat_pan/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa2_seat_pan/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cover",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place seat_cover.ipt over the foam: Mate the inside faces to the foam. Save."
+   ],
+   "note": "The cover is removable (hook and loop) so it can be cleaned or changed.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa2_seat_pan/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa2_seat_pan/step_03.json"
+  }
+ ]
+}

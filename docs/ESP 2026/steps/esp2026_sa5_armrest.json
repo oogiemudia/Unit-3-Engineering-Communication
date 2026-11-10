@@ -1,0 +1,134 @@
+{
+ "name": "esp2026_sa5_armrest",
+ "title": "ESP 2026 sub-assembly 5: armrest",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Armrest",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as armrest.iam.",
+    "Place armrest.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa5_armrest/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa5_armrest/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pad",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place armrest_pad.ipt on top (Mate, Flush the centre planes)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa5_armrest/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa5_armrest/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Recline button",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place recline_button.ipt in the hole at the front end (Insert)."
+   ],
+   "note": "Large and light to press, so every passenger can use it.",
+   "parts": [
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 1",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa5_armrest/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_sa5_armrest/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Pivot pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place armrest_pin.ipt in the pivot hole (Insert). In the set it passes through the spreader too. Save."
+   ],
+   "note": "The armrest lifts 90 degrees on this pin.",
+   "parts": [
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 2",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 1",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa5_armrest/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_sa5_armrest/step_04.json"
+  }
+ ]
+}

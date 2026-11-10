@@ -81,51 +81,66 @@ def single_seat():
     return staged(items, stages, lambda n: n.replace('seat 2 ', ''))
 
 
+# ------------------------------------------------------------------ the sub-assemblies
+def sub_steps(d):
+    def fn():
+        items = E.sub_items(d['key'])
+        out, keys = [], set()
+        for names, title, cmd, actions, note in d['steps']:
+            keys |= set(names)
+            out.append(step(title, cmd, actions, [(n, s, E.colour(k)) for n, k, s in items if n in keys], note=note))
+        return out
+    return fn
+
+
 # ------------------------------------------------------------------ the three-seat set
 def seat_set():
+    """The top level assembly, built from the seven sub-assemblies (and the four back pivot pins)."""
     items = E.set_instances()
+    def sub(n):
+        if n.startswith('recline pivot pin'):
+            return 'pins'
+        return E.sub_of(n)
     stages = [
-        (('beam_tube', 'leg', 'beam_collar', 'track_fitting', 'track_stud'), 'Beams and legs', PLACE,
+        ('frame', 'Place the frame', PLACE,
          [NEW_ASSY + ' and save it as esp2026_seat_set.iam.',
-          'Place beam_tube.ipt, right click and Place Grounded: the front tube, on the origin line, 330 mm up. Place '
-          'the rear tube 330 mm behind it (Mate with offset).',
-          'Place leg.ipt twice, 270 mm each side of the centre: Insert each bore on to its tube. Place beam_collar.ipt '
-          'beside each leg boss. Place track_fitting.ipt and track_stud.ipt under each foot.'],
-         'The legs stand on the aircraft seat tracks; the studs lock into the tracks every 25.4 mm.'),
-        (('spreader', 'beam_end_cap', 'baggage_bar'), 'Spreaders, end caps and baggage bar', PATTERN,
-         ['Place spreader.ipt on the tubes at x = -750 and Insert both bores. Pattern it: 4 along X, 500 mm apart.',
-          'Place beam_end_cap.ipt in the four tube ends, and baggage_bar.ipt through the front struts of the legs.'],
-         'The spreaders sit under the armrests, so each seat is 450 mm wide between the armrests.'),
-        (('seat_diaphragm', 'seat_foam', 'seat_cover'), 'Seat pans and cushions', PATTERN,
-         ['Place seat_diaphragm.ipt on the tubes of the middle seat, then seat_foam.ipt and seat_cover.ipt.',
-          'Pattern the three parts: 3 along X, 500 mm apart, centred.'], None),
-        (('back_shell', 'back_foam', 'back_cover', 'headrest', 'back_pivot_pin', 'end_pivot_pin'),
-         'Backs and pivot pins', CONSTRAIN,
-         ['Place the back sub-assembly (back shell, cushion, cover, head rest) for each seat.',
-          'Insert back_pivot_pin.ipt through the two middle spreaders and end_pivot_pin.ipt through the end ones, '
-          'through the lugs of the backs. Add an Angle constraint of 12 degrees for each back (upright).'],
-         'Each back turns on the pins: upright at 12 degrees from vertical, reclined at 17.'),
-        (('recline_bracket', 'recline_lock', 'recline_rod', 'lock_pin'), 'Recline locks', CONSTRAIN,
-         ['For each seat: place recline_bracket.ipt on the front tube, recline_lock.ipt and recline_rod.ipt, and pin '
-          'both ends with lock_pin.ipt.'], None),
-        (('armrest', 'armrest_pad', 'armrest_pin', 'recline_button'), 'Armrests', PATTERN,
-         ['Place armrest.ipt on the end spreader: Insert armrest_pin.ipt through the cheeks and the spreader. Add '
-          'armrest_pad.ipt on top. Pattern: 4 along X, 500 mm apart.',
-          'Place recline_button.ipt on the front of the three armrests to the right of each seat.'],
-         'Each armrest lifts 90 degrees for access; the end ones let a passenger transfer from an aisle wheelchair.'),
-        (('belt_anchor', 'belt_strap_buckle', 'belt_strap_adjust', 'buckle_body', 'buckle_lever', 'belt_tongue'),
-         'Seat belts', CONTENT,
-         ['Place the belt anchors on the spreaders (two per seat, M10 bolts from Content Center), then the belt '
-          'webbing, buckle, lever and tongue for each seat.'], None),
-        (('tray_table', 'tray_arm', 'tray_latch', 'ife_screen', 'usb_module', 'literature_pocket', 'vest_pouch', 'life_vest'),
-         'Trays, screens, pockets and life vests', CONSTRAIN,
-         ['Fit each back with its literature pocket, tray arms, tray, latch, screen and power module.',
-          'Place a vest_pouch.ipt with its life_vest.ipt under each seat.',
+          'Place frame.iam (sub-assembly 1: legs, track fittings, beam tubes, collars, spreaders, end caps, baggage bar) '
+          'and Place Grounded.'],
+         'Build each sub-assembly first (see its own Build steps), then place them here. The frame is the base.'),
+        ('seat_pan', 'Seat pans', PATTERN,
+         ['Place seat_pan.iam (sub-assembly 2) on the beam tubes of the middle seat: Mate the underside of the '
+          'diaphragm to the tops of the tubes and Flush its centre plane with the seat centre line.',
+          'Pattern > Rectangular: 3 along X, 500 mm apart, centred.'], None),
+        ('seat_back', 'Seat backs', CONSTRAIN,
+         ['Place seat_back.iam (sub-assembly 3) for each seat. Line up the pivot lugs with the holes in the spreaders.',
+          'Add an Angle constraint of 12 degrees between each back and the vertical (upright).'], None),
+        ('pins', 'Back pivot pins', CONSTRAIN,
+         ['Insert back_pivot_pin.ipt through the two middle spreaders and end_pivot_pin.ipt through the end ones, '
+          'through the lugs of the backs.'],
+         'Each back turns on these pins: upright at 12 degrees from vertical, reclined at 17.'),
+        ('recline_lock', 'Recline locks', CONSTRAIN,
+         ['Place recline_lock.iam (sub-assembly 4) for each seat: Mate the bracket to the underside of the front tube, '
+          '204 mm right of the seat centre, and pin the rod eye to the lever on the back shell.'],
+         'Pressing the recline button opens the lock; the passenger leans back and the rod slides in 9 mm.'),
+        ('armrest', 'Armrests', PATTERN,
+         ['Place armrest.iam (sub-assembly 5) on the first spreader: Insert its pivot pin through the spreader.',
+          'Pattern: 4 along X, 500 mm apart. Suppress the button on the left hand armrest (it has none).'],
+         'Each armrest lifts 90 degrees; the end ones let a passenger transfer from an aisle wheelchair.'),
+        ('lap_belt', 'Lap belts', PATTERN,
+         ['Place lap_belt.iam (sub-assembly 6) on the middle seat: bolt each anchor to its spreader (M10 bolts from '
+          'Content Center). Pattern: 3 along X, 500 mm apart.'], None),
+        ('life_vest', 'Life vest pouches', PATTERN,
+         ['Place life_vest_pouch.iam (sub-assembly 7) under the middle seat: Mate its top to the underside of the '
+          'beam tubes. Pattern: 3 along X, 500 mm apart.',
           'Inspect tab > Interference > Analyze Interference upright, reclined, with the trays down and the armrests '
           'up: no parts overlap. Save.'],
-         'Each seat now has everything the product design specification asks for.'),
+         'All 128 parts are now in place: 7 sub-assemblies plus the 4 pivot pins.'),
     ]
-    return staged(items, stages)
+    out, done = [], set()
+    for key, title, cmd, actions, note in stages:
+        done.add(key)
+        out.append(step(title, cmd, actions, [(n, s, E.colour(k)) for n, k, s in items if sub(n) in done], note=note))
+    return out
 
 
 # ------------------------------------------------------------------ concept B
@@ -151,5 +166,7 @@ def shell_seats():
 
 
 STEPS = dict(esp2026_seat_set=seat_set, esp2026_single_seat=single_seat, esp2026_shell_seats=shell_seats)
+for _d in E.SUBS:
+    STEPS[E.sub_model_name(_d)] = sub_steps(_d)
 for _p in E.PARTS:
     STEPS[E.part_model_name(_p)] = part_steps(_p)
