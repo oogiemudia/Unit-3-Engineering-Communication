@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p22_anchor_collar",
+ "title": "ESP 2023 part 22: anchor collar",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Collar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as anchor_collar.ipt.",
+    "Circle diameter 360 on the XZ Plane. Extrude 100 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "anchor collar",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p22_anchor_collar/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p22_anchor_collar/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Arm",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 730 x 120 rectangle from 170 mm out to 900 mm. Extrude 100 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p22_anchor_collar/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p22_anchor_collar/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the centre: diameter 240, Through All. Save."
+   ],
+   "note": "The collar bush fits in this bore.",
+   "parts": [
+    {
+     "name": "anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p22_anchor_collar/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p22_anchor_collar/step_03.json"
+  }
+ ]
+}

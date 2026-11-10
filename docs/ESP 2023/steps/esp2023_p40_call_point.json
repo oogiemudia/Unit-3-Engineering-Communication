@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p40_call_point",
+ "title": "ESP 2023 part 40: emergency call point",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as call_point.ipt.",
+    "Sketch a 220 x 250 rectangle. Extrude 85 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "emergency call point",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p40_call_point/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p40_call_point/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Stop button",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 60 on the front. Extrude 25 mm. Colour it red. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "emergency call point",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p40_call_point/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p40_call_point/step_02.json"
+  }
+ ]
+}

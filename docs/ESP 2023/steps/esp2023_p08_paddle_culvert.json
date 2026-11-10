@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p08_paddle_culvert",
+ "title": "ESP 2023 part 08: paddle culvert",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as paddle_culvert.ipt.",
+    "Sketch on the XZ Plane: square 430 x 430. Extrude 438 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle culvert",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p08_paddle_culvert/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p08_paddle_culvert/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Make it a tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on one end: square 400 x 400, centred. Extrude Cut Through All. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p08_paddle_culvert/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p08_paddle_culvert/step_02.json"
+  }
+ ]
+}

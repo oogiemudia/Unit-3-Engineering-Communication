@@ -116,8 +116,8 @@ CASES = dict(
 # ------------------------------------------------------------------ ESP 2023 lock gates (models/esp2023.py)
 S355 = dict(name='Steel S355 (add to the library: E 210 GPa, yield 355 MPa)', E=210000, nu=0.30, yield_strength=355)
 STAINLESS = dict(name='Stainless Steel', E=193000, nu=0.30, yield_strength=250)
-LEAF_WEIGHT = 85600          # N: one leaf, 8.73 t (steel frame 8.46 t, fenders, walkway and seals), from the CAD model
-LEAF_PULL = 19000            # N: leaf weight x centre of gravity 1277 mm from the pivot / 5770 mm between the hinges
+LEAF_WEIGHT = 87200          # N: one leaf and everything that turns with it, 8.89 t, from the CAD model (esp2023.leaf_mass)
+LEAF_PULL = 19500            # N: leaf weight x centre of gravity 1290 mm from the pivot / 5770 mm between the hinges
 
 CASES.update(
     esp2023_skin_panel=dict(
@@ -135,16 +135,16 @@ CASES.update(
         hand_check='Roark, rectangular plate with all edges fixed, a/b = 630/580 = 1.09: stress at the middle of the long edge '
                    '= 0.340 x p x b^2 / t^2 = 0.340 x 0.0493 x 580^2 / 12^2 = 39 MPa; deflection at the centre = 0.0160 x p x b^4 '
                    '/ (E t^3) = 0.25 mm.'),
-    esp2023_lock_gates=dict(
-        part='right bottom pintle', material=STAINLESS,
-        story='The bottom pintle carries the whole weight of a leaf (8.7 t, 85.6 kN) and the sideways push from the leaf '
-              'trying to tip forwards (19 kN). It is bolted into the cill.',
+    esp2023_p20_bottom_pintle=dict(
+        part='bottom pintle', material=STAINLESS,
+        story='The bottom pintle carries the whole weight of a leaf (8.9 t, 87.2 kN) and the sideways push from the leaf '
+              'trying to tip forwards (19.5 kN). It is held into the cill by four M24 anchor bolts.',
         fixed=[dict(test=plane('z', -80), where='the underside of the base plate')],
         loads=[dict(kind='force', value=LEAF_WEIGHT, dir=(0, 0, -1), test=plane('z', 280), where='the top of the pin',
-                    how='Force, 85600 N, straight down (the weight of the leaf)'),
+                    how='Force, 87200 N, straight down (the weight of the leaf)'),
                dict(kind='force', value=LEAF_PULL, dir=(0.9487, -0.3162, 0), test=cylinder(75), where='the side of the pin',
-                    how='Force, 19000 N, along the closed leaf towards the quoin (Direction: pick the leaf edge, then Flip if needed)')],
-        hand_check='Direct stress 85600 / (pi x 150^2 / 4) = 4.8 MPa. Bending 19000 x 140 / (pi x 150^3 / 32) = 8.0 MPa. '
+                    how='Force, 19500 N, along the closed leaf towards the quoin (Direction: pick the leaf edge, then Flip if needed)')],
+        hand_check='Direct stress 87200 / (pi x 150^2 / 4) = 4.9 MPa. Bending 19500 x 140 / (pi x 150^3 / 32) = 8.2 MPa. '
                    'Together about 13 MPa on the plain pin. The 15 mm root fillet raises this by a stress concentration factor of '
                    'about 1.6, to about 21 MPa, which is where the FEA finds its peak.'),
 )

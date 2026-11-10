@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p05_skin_plate",
+ "title": "ESP 2023 part 05: skin plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as skin_plate.ipt.",
+    "Sketch on the XY Plane (the front): rectangle 1760 wide x 5910 high, 50 mm up. Extrude 12 mm."
+   ],
+   "note": "Water pressure grows with depth: 54 kPa at the cill with 5.5 m of water.",
+   "parts": [
+    {
+     "name": "skin plate",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p05_skin_plate/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p05_skin_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Paddle opening",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the front face: square 400 x 400, its bottom left corner 1270 from the left edge and 925 up. Extrude Cut Through All. Save."
+   ],
+   "note": "The paddle opening lets water through the gate to empty the lock before the gates open.",
+   "parts": [
+    {
+     "name": "skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p05_skin_plate/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p05_skin_plate/step_02.json"
+  }
+ ]
+}

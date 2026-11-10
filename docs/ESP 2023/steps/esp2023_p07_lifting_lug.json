@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p07_lifting_lug",
+ "title": "ESP 2023 part 07: lifting lug",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the outline",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lifting_lug.ipt.",
+    "Sketch on the XZ Plane: 160 wide, 120 high, with a full round top (radius 80). Extrude 30 mm, Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lifting lug",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p07_lifting_lug/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p07_lifting_lug/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Shackle hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole concentric with the round top: diameter 60, Through All. Save."
+   ],
+   "note": "Takes a 9.5 t shackle. The leaf weighs about 9 t.",
+   "parts": [
+    {
+     "name": "lifting lug",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p07_lifting_lug/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p07_lifting_lug/step_02.json"
+  }
+ ]
+}

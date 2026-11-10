@@ -1,0 +1,92 @@
+{
+ "name": "esp2023_p06_actuator_bracket",
+ "title": "ESP 2023 part 06: actuator bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as actuator_bracket.ipt.",
+    "Sketch a 160 x 160 square on the XY Plane and Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator bracket",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on a work plane 100 mm above the plate centre: a slot 100 wide reaching 150 mm out, with a full round end (radius 50). Extrude 35 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Gusset",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the YZ Plane under the lug: rectangle 100 x 80. Extrude 20 mm, Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the lug, concentric with the round end: diameter 40, Through All. Save."
+   ],
+   "note": "The rod end eye sits on this lug and a 40 mm pin goes through both.",
+   "parts": [
+    {
+     "name": "actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_p06_actuator_bracket/step_04.json"
+  }
+ ]
+}

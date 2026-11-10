@@ -47,12 +47,13 @@ The views in the demonstrations come from the same CAD models as everything else
 
 ## ESP 2023 lock gates (Employer-Set Project, Task 2)
 
-The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal Heritage) keeps every file it generates in one folder, `docs/ESP 2023/`, with its own project page (`docs/ESP 2023/index.html`). Its models also appear in the catalogue under the ESP 2023 filter.
+The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal Heritage) keeps every file it generates in one folder, `docs/ESP 2023/`, with its own project page (`docs/ESP 2023/index.html`). Its models also appear in the catalogue under the ESP 2023 filter. Every component is its own part model (41 parts, `esp2023_p01_heel_post` to `esp2023_p41_cill`), each with build steps, a drawing with a key sizes table and a STEP file; these show only under the ESP 2023 filter. In the 3D viewer the GA and the gate leaf have a parts list: click a part to open it, or untick it to hide it.
 
 | Model | Criteria | Use it for | Drawings | Animations |
 |---|---|---|---|---|
-| ESP 2023 lock gates (GA) | 3.1, 3.2 | The preferred design: a pair of steel mitre gates with hinges, seals, electric drive, fenders, CCTV and call points. Simulation of the gates opening, FEA of the bottom pintle. | dimensioned GA at 1:50, hinge and seal details, third angle, first angle | turntable, views, simulation |
-| ESP 2023 gate leaf | 3.1, 3.2 | One welded leaf with girders, stiffeners, fenders and seals. | dimensioned leaf sheet, third angle, first angle, section A-A | turntable, views, section |
+| ESP 2023 lock gates (GA) | 3.1, 3.2 | The preferred design: a pair of steel mitre gates assembled from 41 parts (120 in all): leaves, paddles, hinges, encoders, electric drives, chambers, CCTV and call points. Simulation of the paddles and gates. | dimensioned GA at 1:50, hinge and seal details, parts list, third angle, first angle | turntable, views, simulation |
+| ESP 2023 gate leaf | 3.1, 3.2 | One leaf assembled from its 19 parts: welded frame, fenders, walkway, seals, bush and paddle. | dimensioned leaf sheet, third angle, first angle, section A-A | turntable, views, section |
+| ESP 2023 part 01 to 41 | 3.1 | Every component on its own. Part 20 (bottom pintle) has the FEA. | one sheet each with a key sizes table | still |
 | ESP 2023 skin plate panel | 3.2 | FEA with true hydrostatic pressure, checked against Roark (within 2 %). | third angle, first angle | turntable, views |
 | ESP 2023 concept B: lift gate | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
 

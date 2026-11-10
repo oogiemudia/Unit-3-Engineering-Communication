@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p31_pivot_pedestal",
+ "title": "ESP 2023 part 31: pivot pedestal",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pivot_pedestal.ipt.",
+    "Circle diameter 190. Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pedestal",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 100 on the top. Extrude 35 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the centre: diameter 40, Through All. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p31_pivot_pedestal/step_03.json"
+  }
+ ]
+}

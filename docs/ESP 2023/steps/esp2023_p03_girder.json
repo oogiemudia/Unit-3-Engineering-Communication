@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p03_girder",
+ "title": "ESP 2023 part 03: girder",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the T section",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as girder.ipt.",
+    "Sketch on the YZ Plane: the T. Web 418 x 20 (from the flange to the skin plate), flange 200 x 20 on the downstream edge. Extrude 1760 mm along X."
+   ],
+   "note": "The flange is on the downstream side. The skin plate, welded to the other edge of the web, acts as the second flange.",
+   "parts": [
+    {
+     "name": "girder",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p03_girder/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p03_girder/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Slots for the stiffeners",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top face of the web: two rectangles 15 wide and 209 long from the skin edge, 580 and 1165 mm from the left end. Extrude Cut Through All. Save."
+   ],
+   "note": "Half depth slots: the girder and the stiffener slot into each other like an egg box, then are welded.",
+   "parts": [
+    {
+     "name": "girder",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p03_girder/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p03_girder/step_02.json"
+  }
+ ]
+}

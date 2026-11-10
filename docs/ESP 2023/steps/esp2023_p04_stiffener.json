@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p04_stiffener",
+ "title": "ESP 2023 part 04: stiffener",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as stiffener.ipt.",
+    "Sketch on the YZ Plane: rectangle 418 wide x 5910 high, 50 mm up. Extrude 15 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "stiffener",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p04_stiffener/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p04_stiffener/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Slots for the girders",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the side face: eight rectangles 20 high and 209 deep from the flange edge, centred at the girder levels 150, 800, 1450, 2150, 2900, 3750, 4700, 5860. Extrude Cut Through All. Save."
+   ],
+   "note": "The stiffener slots over the girders from the downstream side.",
+   "parts": [
+    {
+     "name": "stiffener",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p04_stiffener/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p04_stiffener/step_02.json"
+  }
+ ]
+}

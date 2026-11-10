@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p34_actuator_plinth",
+ "title": "ESP 2023 part 34: actuator plinth",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Cylinder",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as actuator_plinth.ipt.",
+    "Circle diameter 300. Extrude 550 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator plinth",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p34_actuator_plinth/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p34_actuator_plinth/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Trim to the wall",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a line 100 mm from the centre and Extrude Cut the back off, where it is cast against the chamber wall. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p34_actuator_plinth/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p34_actuator_plinth/step_02.json"
+  }
+ ]
+}

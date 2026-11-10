@@ -1,0 +1,92 @@
+{
+ "name": "esp2023_p20_bottom_pintle",
+ "title": "ESP 2023 part 20: bottom pintle",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bottom_pintle.ipt.",
+    "Sketch a 600 x 600 square centred on the origin on the XZ Plane. Extrude 80 mm down."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom pintle",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top face: circle diameter 150 on the origin. Extrude 280 mm up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Fillets",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the root of the pin, radius 15 mm, and the top edge, radius 10 mm."
+   ],
+   "note": "The root fillet keeps the stress down where the pin meets the plate: see the FEA.",
+   "parts": [
+    {
+     "name": "bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top face of the plate: diameter 26, Through All, at 225 mm from the centre each way (450 mm square). Material: Stainless Steel. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_p20_bottom_pintle/step_04.json"
+  }
+ ]
+}

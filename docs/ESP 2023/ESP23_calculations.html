@@ -7,7 +7,7 @@ th{background:#E8EEF6} .r{text-align:right;white-space:nowrap} .ok{color:#1F7A3A
 .hdr{display:flex;justify-content:space-between;font-size:8pt;color:#444;border-bottom:0.3mm solid #444;margin-bottom:2mm}
 .page{page-break-after:always} .small{font-size:8.4pt} ul{margin:0.5mm 0 0.5mm 5mm;padding:0}
 </style></head><body>
-<div class="page"><div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2: canal lock gates for Canal Heritage</span><span>Calculation sheet 1 of 2. Ref ESP23-CALC. 2026-11-09</span></div>
+<div class="page"><div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2: canal lock gates for Canal Heritage</span><span>Calculation sheet 1 of 2. Ref ESP23-CALC. 2026-11-10</span></div>
 <h1>Hydrostatic pressure the lock gates must resist</h1>
 <h2>1. Data and assumptions</h2>
 <ul class="small">
@@ -41,7 +41,7 @@ p = 9.81 &times; (5.5 &minus; 0.475) = 49.3 kPa = 0.0493 MPa.</p>
 </table>
 <p class="small">The hand calculation and the FEA agree to within 2 % on stress and 1 % on deflection. <span class="ok">Panel OK.</span></p>
 </div>
-<div><div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2: canal lock gates for Canal Heritage</span><span>Calculation sheet 2 of 2. Ref ESP23-CALC. 2026-11-09</span></div>
+<div><div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2: canal lock gates for Canal Heritage</span><span>Calculation sheet 2 of 2. Ref ESP23-CALC. 2026-11-10</span></div>
 <h2>5. Bottom girder (worst girder)</h2>
 <p>Carries the water on the strip from the cill to half way to the next girder (0 to 0.475 m):
 w = &rho;g (h z &minus; z&sup2;/2) = <b>24.5 kN/m</b>. Span between the heel and mitre posts L = 1.76 m. Treated as simply supported, which ignores the arch action and so is on the safe side:
@@ -51,25 +51,25 @@ M = wL&sup2;/8 = 9.49 kNm.</p>
 The girders are governed by stiffness, the axial thrust from the mitre (577 kN shared by eight girders) and boat impact, not by bending stress.</p>
 <h2>6. Leaf weight, hinges and lifting</h2>
 <table><tr><th>Quantity</th><th>Working</th><th class="r">Result</th></tr>
-<tr><td>Leaf mass (CAD model: steel, oak, walkway, seals)</td><td>steel 7850 kg/m&sup3;, oak 750 kg/m&sup3;</td><td class="r"><b>8.73 t</b></td></tr>
-<tr><td>Weight on the bottom pintle</td><td>W = mg</td><td class="r">85.6 kN</td></tr>
-<tr><td>Centre of gravity from the pivot</td><td>from the CAD model</td><td class="r">1277 mm</td></tr>
-<tr><td>Sideways load on each hinge</td><td>H = W x / h = 85.6 &times; 1.277 / 5.78</td><td class="r">18.9 kN</td></tr>
-<tr><td>Pintle direct stress (150 mm pin)</td><td>W / (&pi;d&sup2;/4)</td><td class="r">4.8 MPa</td></tr>
-<tr><td>Pintle bending stress (load 140 mm up)</td><td>H &times; 140 / (&pi;d&sup3;/32)</td><td class="r">8.0 MPa</td></tr>
-<tr><td>FEA peak at the root fillet</td><td>hub FEA, 10 node tetrahedra</td><td class="r">21.5 MPa, SF 11.6</td></tr>
-<tr><td>Crane lift (25 % allowance for slings and dynamic load)</td><td>1.25 &times; 8.73 t</td><td class="r">10.9 t</td></tr>
+<tr><td>Leaf mass (CAD model: every part that turns with the leaf)</td><td>steel 7850 kg/m&sup3;, oak 750 kg/m&sup3;</td><td class="r"><b>8.89 t</b></td></tr>
+<tr><td>Weight on the bottom pintle</td><td>W = mg</td><td class="r">87.2 kN</td></tr>
+<tr><td>Centre of gravity from the pivot</td><td>from the CAD model</td><td class="r">1290 mm</td></tr>
+<tr><td>Sideways load on each hinge</td><td>H = W x / h = 87.2 &times; 1.290 / 5.78</td><td class="r">19.5 kN</td></tr>
+<tr><td>Pintle direct stress (150 mm pin)</td><td>W / (&pi;d&sup2;/4)</td><td class="r">4.9 MPa</td></tr>
+<tr><td>Pintle bending stress (load 140 mm up)</td><td>H &times; 140 / (&pi;d&sup3;/32)</td><td class="r">8.2 MPa</td></tr>
+<tr><td>FEA peak at the root fillet</td><td>hub FEA, 10 node tetrahedra</td><td class="r">21.0 MPa, SF 11.9</td></tr>
+<tr><td>Crane lift (25 % allowance for slings and dynamic load)</td><td>1.25 &times; 8.89 t</td><td class="r">11.1 t</td></tr>
 </table>
 <h2>7. Drive (electric actuator)</h2>
 <p>With the levels equal to within 50 mm, the most water push on a moving leaf is 9.81 &times; 0.05 &times; 5.5 &times; 2.46 = 6.64 kN at mid length, a torque of 8.2 kNm.
-Pintle friction (&mu; = 0.1 on a 75 mm radius) adds 0.64 kNm, and water drag at 0.05 m/s is negligible. Design torque 10 kNm.
+Pintle friction (&mu; = 0.1 on a 75 mm radius) adds 0.65 kNm, and water drag at 0.05 m/s is negligible. Design torque 10 kNm.
 The actuator lever arm about the pivot is 0.85 m shut and 0.90 m open, so the actuator needs <b>12 kN</b>.
 Stroke 1256 mm (pin centres 3301 to 2045 mm): a 20 kN, 1300 mm stroke electric actuator is chosen.</p>
 <h2>8. Summary</h2>
 <table class="small"><tr><th>Item</th><th class="r">Load or stress</th><th class="r">Limit</th><th class="r">Safety factor</th></tr>
 <tr><td>Skin panel (FEA)</td><td class="r">34.1 MPa</td><td class="r">355 MPa</td><td class="r">10.4</td></tr>
 <tr><td>Bottom girder (hand, simply supported)</td><td class="r">4.2 MPa</td><td class="r">355 MPa</td><td class="r">84</td></tr>
-<tr><td>Bottom pintle (FEA)</td><td class="r">21.5 MPa</td><td class="r">250 MPa</td><td class="r">11.6</td></tr>
+<tr><td>Bottom pintle (FEA)</td><td class="r">21.0 MPa</td><td class="r">250 MPa</td><td class="r">11.9</td></tr>
 <tr><td>Actuator</td><td class="r">12 kN</td><td class="r">20 kN</td><td class="r">1.7</td></tr>
 </table>
 <p class="small">All checks pass with a safety factor of at least 1.5. Further work for the detailed design: boat impact on the fenders, fatigue of the hinge welds over 100 000 cycles, and a check of the leaf twisting as it swings.</p>

@@ -5,24 +5,16 @@
  "steps": [
   {
    "n": 1,
-   "title": "Lay out the lock and the chambers",
+   "title": "Place the cill",
    "command": "Assemble tab > Component panel > Place",
    "actions": [
     "File > New > Standard (mm).iam and save it as esp2023_lock_gates.iam.",
-    "Place inspection_chamber.ipt and right click, Place Grounded. Place a second copy for the other side.",
-    "The lock walls are 4200 apart. Each chamber starts 300 mm behind the pivot, and is 2350 x 1800 x 1000 deep with 150 mm walls, a slot for the actuator rod and a plinth for the actuator pivot."
+    "Place cill.ipt, right click and Place Grounded at Origin. The origin is on the lock centre line, on top of the cill."
    ],
-   "note": "The drive goes in a purpose-built chamber beside each gate, out of sight under a grating cover (left off here so you can see in).",
+   "note": "The concrete cill is where the gates seal at the bottom, and it holds the pintles.",
    "parts": [
     {
-     "name": "left inspection chamber",
-     "colour": "#B5B0A6",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": true,
      "added": false,
@@ -35,24 +27,16 @@
   },
   {
    "n": 2,
-   "title": "Place the hinges",
+   "title": "Fit the hinges",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
-    "Place bottom_pintle.ipt twice and anchor_collar.ipt twice.",
-    "The pivot axes are 2349 mm each side of the lock centre line, in the hollow quoins.",
-    "Constrain > Mate each pintle axis to the collar axis above it, and Flush the pintle base with the cill (Z = 0)."
+    "Place bottom_pintle.ipt in each pocket, 2349 mm each side of the centre line. Insert four anchor_bolt.ipt (Content Center, or the part) through each base plate.",
+    "Place anchor_collar.ipt and collar_bush.ipt over each pivot, 5870 mm up, with the arm pointing into the wall. Place anchor_plate.ipt at the end of each arm with two more anchor bolts."
    ],
-   "note": "The bottom pintle takes the weight of the leaf. The anchor collar at the top stops the leaf toppling forwards.",
+   "note": "The pintle takes the weight of the leaf. The anchor collar at the top stops it tipping forwards.",
    "parts": [
     {
-     "name": "left inspection chamber",
-     "colour": "#B5B0A6",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": false,
      "added": false,
@@ -66,8 +50,64 @@
      "removed": false
     },
     {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "left anchor collar",
      "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
      "new": true,
      "added": false,
      "removed": false
@@ -80,8 +120,64 @@
      "removed": false
     },
     {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "right anchor collar",
      "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
      "new": true,
      "added": false,
      "removed": false
@@ -97,69 +193,174 @@
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
     "Place gate_leaf.iam (the sub-assembly from the gate leaf build steps).",
-    "Constrain > Insert: the heel post bore onto the left pintle. Mate the top journal axis to the collar axis.",
+    "Constrain > Insert: the pintle bush on to the left pintle. Mate the top journal axis to the collar axis.",
     "Constrain > Angle: 18.43 degrees between the leaf and the line across the lock, so the mitre points upstream."
    ],
    "note": "Suppress the Angle constraint later so the leaf can turn on its hinge for the simulation.",
    "parts": [
     {
-     "name": "left inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right inspection chamber",
-     "colour": "#B5B0A6",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left gate leaf",
+     "name": "left heel post",
      "colour": "#4F6D7A",
      "new": true,
      "added": false,
      "removed": false
     },
     {
-     "name": "left oak fenders",
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
      "colour": "#A0703C",
      "new": true,
      "added": false,
      "removed": false
     },
     {
-     "name": "left walkway and handrail",
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
      "colour": "#E6E6E6",
      "new": true,
      "added": false,
@@ -180,9 +381,184 @@
      "removed": false
     },
     {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "mitre seal",
      "colour": "#2B2B2B",
      "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
      "added": false,
      "removed": false
     }
@@ -196,70 +572,174 @@
    "title": "Mirror the right leaf",
    "command": "Assemble tab > Pattern panel > Mirror",
    "actions": [
-    "Click Mirror. Pick the parts of the left leaf. Mirror plane: the YZ Plane (the lock centre line).",
-    "Leave the mitre seal out (it belongs to the left leaf only). Choose Mirror for the parts, so Inventor makes right hand copies, and click Next, then OK.",
-    "Constrain the right leaf to its pintle and collar the same way."
+    "Click Mirror. Pick gate_leaf.iam. Mirror plane: the YZ Plane (the lock centre line).",
+    "Leave the mitre seal out (only the left leaf has it). Constrain the right leaf to its pintle and collar."
    ],
-   "note": "The two mitre posts close on to the 30 mm mitre seal. Check with Analyze Interference that nothing overlaps.",
+   "note": "The two mitre posts close on to the 30 mm mitre seal.",
    "parts": [
     {
-     "name": "left inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right inspection chamber",
-     "colour": "#B5B0A6",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left gate leaf",
+     "name": "left heel post",
      "colour": "#4F6D7A",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left oak fenders",
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
      "colour": "#A0703C",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left walkway and handrail",
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
      "colour": "#E6E6E6",
      "new": false,
      "added": false,
@@ -280,6 +760,41 @@
      "removed": false
     },
     {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "mitre seal",
      "colour": "#2B2B2B",
      "new": false,
@@ -287,21 +802,231 @@
      "removed": false
     },
     {
-     "name": "right gate leaf",
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel post",
      "colour": "#4F6D7A",
      "new": true,
      "added": false,
      "removed": false
     },
     {
-     "name": "right oak fenders",
+     "name": "right mitre post",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 3",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 4",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 5",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 6",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 7",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 8",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right skin plate",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator bracket",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle culvert",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pintle bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 1",
      "colour": "#A0703C",
      "new": true,
      "added": false,
      "removed": false
     },
     {
-     "name": "right walkway and handrail",
+     "name": "right oak fender 2",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 3",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway grating",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right handrail",
      "colour": "#E6E6E6",
      "new": true,
      "added": false,
@@ -318,6 +1043,111 @@
      "name": "right heel seal",
      "colour": "#2B2B2B",
      "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle door",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle actuator",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
      "added": false,
      "removed": false
     }
@@ -328,74 +1158,177 @@
   },
   {
    "n": 5,
-   "title": "Fit the actuators",
-   "command": "Assemble tab > Relationships panel > Constrain",
+   "title": "Inspection chambers",
+   "command": "Assemble tab > Component panel > Place",
    "actions": [
-    "Place actuator_body.ipt and actuator_rod.ipt for each side.",
-    "Constrain > Mate the body pivot axis to the plinth axis, 250 mm above it.",
-    "Constrain > Mate the rod axis to the body axis, and Mate the rod eye centre to the bracket on the leaf.",
-    "Shut, the pivot to eye length is 3301 mm."
+    "Place inspection_chamber.ipt beside each quoin, 300 mm behind the pivot, its top at ground level (6000).",
+    "Place actuator_plinth.ipt in each chamber against the end wall, and control_panel.ipt on the end wall."
    ],
-   "note": "An electric actuator needs only the mains supply that the brief offers, and has no hydraulic oil to leak into the canal.",
+   "note": "The drive goes in a purpose-built chamber beside each gate, out of sight, as the brief asks.",
    "parts": [
     {
-     "name": "left inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right inspection chamber",
-     "colour": "#B5B0A6",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left gate leaf",
+     "name": "left heel post",
      "colour": "#4F6D7A",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left oak fenders",
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
      "colour": "#A0703C",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left walkway and handrail",
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
      "colour": "#E6E6E6",
      "new": false,
      "added": false,
@@ -416,6 +1349,41 @@
      "removed": false
     },
     {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "mitre seal",
      "colour": "#2B2B2B",
      "new": false,
@@ -423,21 +1391,252 @@
      "removed": false
     },
     {
-     "name": "right gate leaf",
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator plinth",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left control panel",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel post",
      "colour": "#4F6D7A",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right oak fenders",
+     "name": "right mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 1",
      "colour": "#A0703C",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right walkway and handrail",
+     "name": "right oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right handrail",
      "colour": "#E6E6E6",
      "new": false,
      "added": false,
@@ -458,29 +1657,127 @@
      "removed": false
     },
     {
-     "name": "left actuator body",
-     "colour": "#3FA37C",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left actuator rod",
+     "name": "right paddle door",
      "colour": "#C9D3DD",
-     "new": true,
+     "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right actuator body",
-     "colour": "#3FA37C",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right actuator rod",
+     "name": "right paddle guide 1",
      "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator plinth",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right control panel",
+     "colour": "#D9DEE3",
      "new": true,
      "added": false,
      "removed": false
@@ -492,72 +1789,178 @@
   },
   {
    "n": 6,
-   "title": "Add the CCTV masts and call points",
-   "command": "Assemble tab > Component panel > Place",
+   "title": "Fit the actuators",
+   "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
-    "Place cctv_mast.ipt on the far corner of each chamber and call_point.ipt on the near corner.",
-    "Constrain each with Mate to the top of the chamber wall. Save the assembly."
+    "Place pivot_pedestal.ipt on each plinth. Place actuator_body.ipt and Mate its rear eye to the pedestal; place actuator_motor.ipt under the tube.",
+    "Place actuator_rod.ipt in the tube bore (Mate axis to axis) and rod_end.ipt on the end of the rod.",
+    "Pin the rod end to the bracket on the leaf and the rear eye to the pedestal with pivot_pin.ipt."
    ],
-   "note": "The cameras let the control centre watch each gate. The call point lets anyone stop the gates in an emergency.",
+   "note": "An electric actuator needs only the mains supply the brief offers, and has no hydraulic oil to leak into the canal.",
    "parts": [
     {
-     "name": "left inspection chamber",
+     "name": "cill",
      "colour": "#B5B0A6",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right inspection chamber",
-     "colour": "#B5B0A6",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right bottom pintle",
-     "colour": "#C9D3DD",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "right anchor collar",
-     "colour": "#4A5562",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "left gate leaf",
+     "name": "left heel post",
      "colour": "#4F6D7A",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left oak fenders",
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
      "colour": "#A0703C",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "left walkway and handrail",
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
      "colour": "#E6E6E6",
      "new": false,
      "added": false,
@@ -578,6 +1981,48 @@
      "removed": false
     },
     {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "mitre seal",
      "colour": "#2B2B2B",
      "new": false,
@@ -585,21 +2030,294 @@
      "removed": false
     },
     {
-     "name": "right gate leaf",
+     "name": "left actuator body",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left rod end eye",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left control panel",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pedestal",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel post",
      "colour": "#4F6D7A",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right oak fenders",
+     "name": "right mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 1",
      "colour": "#A0703C",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right walkway and handrail",
+     "name": "right oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right handrail",
      "colour": "#E6E6E6",
      "new": false,
      "added": false,
@@ -620,8 +2338,436 @@
      "removed": false
     },
     {
+     "name": "right paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator body",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right rod end eye",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right control panel",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pedestal",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_06.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Sensors, CCTV and call points",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "Place encoder_bracket.ipt on each anchor collar arm and position_encoder.ipt over the pivot, its shaft on the journal.",
+    "Place cctv_mast.ipt and cctv_camera.ipt on the far corner of each chamber, call_point_post.ipt and call_point.ipt on the near corner."
+   ],
+   "note": "The encoder tells the control centre the angle of each leaf; the cameras let it watch; the call point lets anyone stop the gates.",
+   "parts": [
+    {
+     "name": "cill",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "left actuator body",
      "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator motor and gearbox",
+     "colour": "#4A5562",
      "new": false,
      "added": false,
      "removed": false
@@ -634,15 +2780,113 @@
      "removed": false
     },
     {
-     "name": "right actuator body",
-     "colour": "#3FA37C",
+     "name": "left rod end eye",
+     "colour": "#C9D3DD",
      "new": false,
      "added": false,
      "removed": false
     },
     {
-     "name": "right actuator rod",
+     "name": "left bottom pintle",
      "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left encoder bracket",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate position encoder",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left control panel",
+     "colour": "#D9DEE3",
      "new": false,
      "added": false,
      "removed": false
@@ -655,9 +2899,387 @@
      "removed": false
     },
     {
-     "name": "left call point",
+     "name": "left CCTV camera",
+     "colour": "#F2F2F2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left call point post",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left emergency call point",
      "colour": "#E8C23D",
      "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 1",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right rod end eye",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right encoder bracket",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right gate position encoder",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right control panel",
+     "colour": "#D9DEE3",
+     "new": false,
      "added": false,
      "removed": false
     },
@@ -669,16 +3291,899 @@
      "removed": false
     },
     {
-     "name": "right call point",
+     "name": "right CCTV camera",
+     "colour": "#F2F2F2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right call point post",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right emergency call point",
      "colour": "#E8C23D",
      "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": false,
      "added": false,
      "removed": false
     }
    ],
    "overlay": false,
-   "glb": "ESP 2023/steps/esp2023_lock_gates/step_06.glb",
-   "edges": "ESP 2023/steps/esp2023_lock_gates/step_06.json"
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_07.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Cover the chambers",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place cover_panel.ipt in the rebate of each chamber and Pattern it: 3 along the chamber.",
+    "Inspect tab > Interference > Analyze Interference with the leaves shut, half open and open. Save."
+   ],
+   "note": "In the 3D viewer the covers are hidden at first so you can see the drive: tick them on in the parts list.",
+   "parts": [
+    {
+     "name": "cill",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 1",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left rod end eye",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left encoder bracket",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left gate position encoder",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cover panel 1",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cover panel 2",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left cover panel 3",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left control panel",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left CCTV mast",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left CCTV camera",
+     "colour": "#F2F2F2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left call point post",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left emergency call point",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "left pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 3",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 4",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 5",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 6",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 7",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right girder 8",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right stiffener 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right skin plate",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator bracket",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 1",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right lifting lug 2",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle culvert",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 1",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 2",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right oak fender 3",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right handrail",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right heel seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle guide 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, front",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right rod end eye",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right bottom pintle",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 1",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 2",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 3",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 4",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor collar",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right collar bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor plate",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 5",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right anchor bolt 6",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right encoder bracket",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right gate position encoder",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right actuator plinth",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cover panel 1",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cover panel 2",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right cover panel 3",
+     "colour": "#7D8B5A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right control panel",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right CCTV mast",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right CCTV camera",
+     "colour": "#F2F2F2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right call point post",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right emergency call point",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pedestal",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "right pivot pin, rear",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_lock_gates/step_08.glb",
+   "edges": "ESP 2023/steps/esp2023_lock_gates/step_08.json"
   }
  ]
 }

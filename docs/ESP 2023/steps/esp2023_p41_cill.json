@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p41_cill",
+ "title": "ESP 2023 part 41: cill",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the cill",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cill.ipt.",
+    "Sketch a 5500 x 2100 rectangle. Extrude 600 mm down."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cill",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p41_cill/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p41_cill/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pintle pockets",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch two 600 x 600 squares on the pivot axes. Extrude Cut 80 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cill",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p41_cill/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p41_cill/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Anchor holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Holes diameter 28, 400 deep, on a 450 mm square round each pivot. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cill",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p41_cill/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p41_cill/step_03.json"
+  }
+ ]
+}

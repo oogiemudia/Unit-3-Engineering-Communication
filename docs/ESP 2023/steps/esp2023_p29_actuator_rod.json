@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p29_actuator_rod",
+ "title": "ESP 2023 part 29: actuator rod",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as actuator_rod.ipt.",
+    "Circle diameter 70 on the YZ Plane, 110 mm back from the origin. Extrude 1490 mm back along X. Save."
+   ],
+   "note": "The origin is the rod end pin, so the rod is placed from the pin on the leaf.",
+   "parts": [
+    {
+     "name": "actuator rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p29_actuator_rod/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p29_actuator_rod/step_01.json"
+  }
+ ]
+}

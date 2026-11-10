@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p25_encoder_bracket",
+ "title": "ESP 2023 part 25: encoder bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Upright",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as encoder_bracket.ipt.",
+    "Sketch a 30 x 80 rectangle. Extrude 160 mm up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "encoder bracket",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p25_encoder_bracket/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p25_encoder_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Top plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 350 x 80 rectangle on the top. Extrude 20 mm down, Join. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "encoder bracket",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p25_encoder_bracket/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p25_encoder_bracket/step_02.json"
+  }
+ ]
+}

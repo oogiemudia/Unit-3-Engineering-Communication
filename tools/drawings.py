@@ -309,10 +309,12 @@ def owner_of(m):
 
 
 def date_of(m):
-    return '2026-11-09' if m.get('folder') == 'ESP 2023' else None
+    return '2026-11-10' if m.get('folder') == 'ESP 2023' else None
 
 
 def material_of(m):
+    if m.get('part'):
+        return m['part']['material'].replace('Bought in: ', '').split(',')[0][:30]
     if m['name'] in ESP_MATERIAL:
         return ESP_MATERIAL[m['name']]
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
@@ -376,8 +378,21 @@ def ortho_sheet(m, shape, angle, number):
     dim_v(sh, fy - y1 * s, fy - y0 * s, fx + x0 * s - 12, fx + x0 * s, '%g' % round(fh, 1))
     e0, f0, e1, f1 = E['bb']
     dim_h(sh, ex + e0 * s, ex + e1 * s, ey - f0 * s + 17, ey - f0 * s, '%g' % round(ew, 1))
-    sh.text(22, 248, 'Dimensions in millimetres. Overall sizes only: full dimensioning is criterion 3.2.', size=2.8,
-            anchor='start')
+    if m.get('part'):
+        # component drawing: the key sizes of every feature, from the part's own data, in a table under the iso
+        pt = m['part']
+        sh.text(285, 140, 'KEY SIZES (mm)', size=3.0, weight='bold', anchor='start')
+        yk = 147
+        for line in pt.get('sizes', []):
+            sh.text(285, yk, line, size=2.6, anchor='start')
+            yk += 5.2
+        sh.text(285, yk + 3, 'Material: ' + pt['material'], size=2.6, anchor='start')
+        sh.text(285, yk + 8.2, 'Part file: %s. Item %d on ESP23-GA-05.' % (pt['file'], pt['no']), size=2.6, anchor='start')
+        sh.text(22, 248, 'Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.', size=2.8,
+                anchor='start')
+    else:
+        sh.text(22, 248, 'Dimensions in millimetres. Overall sizes only: full dimensioning is criterion 3.2.', size=2.8,
+                anchor='start')
     sh.text(22, 254, 'Centre lines are shown in blue. Hidden detail is shown dashed.', size=2.8, anchor='start')
     doctype = 'Assembly drawing' if len(m['parts']) > 1 else 'Detail drawing'
     frame(sh, m['title'], number, sc, angle, material_of(m), doctype, owner_of(m), date_of(m))
@@ -516,8 +531,10 @@ def main(only=None):
         comp = cq.Compound.makeCompound([w.val() for n, w, c in items])
         base = parts.base_of(spec)
         out = os.path.join(ROOT, 'docs', base, 'drawings')
-        if base:
-            esp = [x['name'] for x in parts.MODELS if x.get('folder') == spec['folder']]
+        if spec.get('part'):
+            number = 'ESP23-P%02d' % spec['part']['no']
+        elif base:
+            esp = [x['name'] for x in parts.MODELS if x.get('folder') == spec['folder'] and not x.get('part')]
             number = 'ESP23-%02d' % (esp.index(m['name']) + 1)
         else:
             number = 'U3-%03d' % (k + 1)

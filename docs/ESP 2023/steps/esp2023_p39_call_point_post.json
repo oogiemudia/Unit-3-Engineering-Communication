@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p39_call_point_post",
+ "title": "ESP 2023 part 39: call point post",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the post",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as call_point_post.ipt.",
+    "Sketch a 150 x 150 square. Extrude 1200 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "call point post",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p39_call_point_post/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p39_call_point_post/step_01.json"
+  }
+ ]
+}

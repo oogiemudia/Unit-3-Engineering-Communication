@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p09_oak_fender",
+ "title": "ESP 2023 part 09: oak fender",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the timber",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as oak_fender.ipt.",
+    "Sketch a 150 x 200 rectangle on the YZ Plane. Extrude 1610 mm along X."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oak fender",
+     "colour": "#A0703C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p09_oak_fender/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p09_oak_fender/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the edges",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the four long edges, radius 20 mm. Material: Oak (or Wood). Save."
+   ],
+   "note": "FSC certified oak: sustainable, and easy to replace after a boat strike.",
+   "parts": [
+    {
+     "name": "oak fender",
+     "colour": "#A0703C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p09_oak_fender/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p09_oak_fender/step_02.json"
+  }
+ ]
+}

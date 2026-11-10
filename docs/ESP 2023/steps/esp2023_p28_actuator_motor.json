@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p28_actuator_motor",
+ "title": "ESP 2023 part 28: actuator motor and gearbox",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as actuator_motor.ipt.",
+    "Sketch a 450 x 150 rectangle. Extrude 195 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p28_actuator_motor/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p28_actuator_motor/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Saddle",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a circle diameter 140 on the end face, its centre 40 mm above the top. Extrude Cut Through All, so the motor sits on the tube. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator motor and gearbox",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p28_actuator_motor/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p28_actuator_motor/step_02.json"
+  }
+ ]
+}

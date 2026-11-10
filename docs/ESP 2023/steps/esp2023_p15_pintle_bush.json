@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p15_pintle_bush",
+ "title": "ESP 2023 part 15: pintle bush",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the cylinder",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pintle_bush.ipt.",
+    "Circle diameter 190 on the XZ Plane. Extrude 250 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pintle bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p15_pintle_bush/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p15_pintle_bush/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the bottom face: diameter 150, Distance 230 mm (a cup). Material: Bronze. Save."
+   ],
+   "note": "Bronze on stainless steel wears slowly and needs no grease under water: a durable hinge.",
+   "parts": [
+    {
+     "name": "pintle bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p15_pintle_bush/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p15_pintle_bush/step_02.json"
+  }
+ ]
+}

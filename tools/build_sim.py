@@ -134,15 +134,18 @@ def smooth(t, t0, t1):
 
 
 def esp_gate_sim():
-    """Both leaves open, wait, then shut again, each on its own timetable (the brief asks for gates that work
-    independently). The real gates take about 60 s each way; the simulation runs 10 times faster."""
-    D, OPEN = 16, esp.OPEN_DEG
-    times = {-1: (1.5, 7.5, 9.5, 15.5), 1: (1.0, 7.0, 9.0, 15.0)}
+    """The paddles lift to let the lock empty, then both leaves open, wait and shut again, each on its own
+    timetable (the brief asks for gates that work independently), and the paddles drop. The real gates take about
+    60 s each way; the simulation runs 10 times faster."""
+    D, OPEN, LIFT = 20, esp.OPEN_DEG, esp.PADDLE_LIFT
+    times = {-1: (3.5, 9.5, 11.5, 17.5), 1: (3.0, 9.0, 11.0, 17.0)}
+    paddle = ease_keys([(0, 0), (0.5, 0), (2.0, LIFT), (18.0, LIFT), (19.5, 0), (D, 0)])
 
     def angle(side, t):
         a, b, c, d = times[side]
         return OPEN * (smooth(t, a, b) - smooth(t, c, d))
 
+    names = [n for n, s, c in esp.lock_gates(0)]
     motion, graph = [], []
     for side in (-1, 1):
         n = 'left' if side < 0 else 'right'
@@ -150,10 +153,13 @@ def esp_gate_sim():
         a, b, c, d = times[side]
         keys = ease_keys([(0, 0), (a, 0), (b, sg * OPEN), (c, sg * OPEN), (d, 0), (D, 0)])
         piv = [side * esp.PIV, 0, 0]
-        leaf = (['%s gate leaf' % n, '%s oak fenders' % n, '%s walkway and handrail' % n, '%s cill seal' % n, '%s heel seal' % n]
-            + (['mitre seal'] if side < 0 else []))
-        for p in leaf:
-            motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=piv, keys=keys))
+        mine = [p for p in names if p.startswith(n + ' ') or (p == 'mitre seal' and side < 0)]
+        for p in mine:
+            g = esp.group_of(p)
+            if g == 'paddle':
+                motion.append(dict(part=p, kind='move', axis=[0, 0, 1], keys=paddle))
+            if g in ('leaf', 'paddle'):
+                motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=piv, keys=keys))
         # the actuator follows the leaf: its body swings about the rear pivot and the rod slides out of it
         w, g0, d0 = esp.actuator_geometry(side, 0)
         a0 = math.atan2(g0[1] - w[1], g0[0] - w[0])
@@ -165,32 +171,42 @@ def esp_gate_sim():
             at = math.atan2(g[1] - ww[1], g[0] - ww[0])
             swing.append((t, math.degrees(at - a0)))
             slide.append((t, dd - d0))
-        motion.append(dict(part='%s actuator body' % n, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
-        motion.append(dict(part='%s actuator rod' % n, kind='move', axis=u0, keys=ease_keys(slide), lin=True))
-        motion.append(dict(part='%s actuator rod' % n, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
+        for p in mine:
+            g = esp.group_of(p)
+            if g == 'body':
+                motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
+            if g == 'rod':
+                motion.append(dict(part=p, kind='move', axis=u0, keys=ease_keys(slide), lin=True))
+                motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=list(w), keys=ease_keys(swing), lin=True))
         graph.append(dict(name='%s leaf angle' % n.capitalize(), unit='deg', keys=[[t, abs(v)] for t, v in keys]))
         if side > 0:
             graph.append(dict(name='Right actuator length', unit='mm', lin=True,
                               keys=ease_keys([(t, d0 + v) for t, v in slide][::5])))
+    graph.append(dict(name='Paddle opening', unit='mm', keys=paddle))
     moving = sorted({m['part'] for m in motion})
     w, g0, d0 = esp.actuator_geometry(1, 0)
     _, g1, d1 = esp.actuator_geometry(1, OPEN)
     steps = common_start('esp2023_lock_gates.iam') + [
         step('joints', 'Check the hinge joints', JOINT,
-             ['In Standard Joints find the Revolution joint for each leaf: the heel post journal in the anchor collar, '
-              'and the heel post bore on the bottom pintle.',
+             ['In Standard Joints find the Revolution joint for each leaf: the pintle bush on the bottom pintle, and the '
+              'heel post journal in the collar bush.',
               'If a leaf has two joints (one at the top and one at the bottom) Inventor shows the second as redundant. '
               'Keep one Revolution joint per leaf, on the pivot axis, and delete the other.',
-              'Each leaf, with its fenders, seals and walkway, should be one Welded group.'],
+              'Every part of the leaf sub-assembly (frame, fenders, seals, walkway, paddle guides) should be one Welded group.'],
              'A revolution joint lets a part turn about one axis and nothing else: one degree of freedom.'),
         step('joints', 'Join the actuators', JOINT,
-             ['Each actuator needs three joints. Insert Joint, Revolution: the actuator body rear pivot on the plinth axis.',
+             ['Each actuator needs three joints. Insert Joint, Revolution: the actuator body rear eye on the pivot pin.',
               'Insert Joint, Cylindrical: the rod inside the body bore, so the rod can slide out.',
-              'Insert Joint, Spherical: the rod eye centre on the leaf bracket.'],
-             'The rod eye is a spherical bearing, so the actuator can follow the leaf as it swings.'),
+              'Insert Joint, Revolution: the rod end eye on the front pivot pin in the leaf bracket.'],
+             'The rod end has a spherical bearing, so the actuator can follow the leaf as it swings.'),
+        step('joints', 'Join the paddles', JOINT,
+             ['Insert Joint, Prismatic: the paddle door sliding up the paddle guides. The paddle rod is welded to the door.',
+              'Right click the joint > Properties > dof 1 (T) > Edit imposed motion: 0 at 0.5 s, %d mm at 2 s, hold, back '
+              'to 0 at 19.5 s.' % LIFT],
+             'The paddles let the lock empty through the gates first: the gates can only open when the water is level on both sides.'),
         step('motion', 'Drive the leaves', 'Right click a leaf Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
              ['Tick Enable imposed motion. Drive: Position.',
-              'Right leaf, in the Input Grapher: 0 degrees at 1 s, -71.6 degrees (fully open) at 7 s, hold to 9 s, back to 0 at 15 s.',
+              'Right leaf, in the Input Grapher: 0 degrees at 3 s, -71.6 degrees (fully open) at 9 s, hold to 11 s, back to 0 at 17 s.',
               'Left leaf: the same, but +71.6 degrees, starting half a second later, so you can see the leaves work independently.',
               'Click OK twice.'],
              'The real gates take about 60 s to open. This simulation runs 10 times faster. '
@@ -201,10 +217,11 @@ def esp_gate_sim():
               'Pin to pin length: %.0f mm with the gate shut and %.0f mm with it open, a stroke of %.0f mm.' % (d0, d1, d0 - d1),
               'Check the rod never pulls out of the body: at full length %.0f mm of the rod is still inside.' % (esp.ACT_BODY - (d0 - esp.ROD_LEN))],
              'Choose an actuator with at least this stroke. A 1300 mm stroke electric actuator gives some spare.'),
-    ] + common_end(D, 'the angle of each leaf Revolution joint and the position and force of the actuator Cylindrical joint')
+    ] + common_end(D, 'the angle of each leaf Revolution joint, the position of the actuator Cylindrical joint and the paddle Prismatic joint')
     return dict(duration=D,
-                story='The two leaves open into their recesses and shut again, each driven by its own electric actuator '
-                      'in the inspection chamber. Real time is about 60 s each way; this runs 10 times faster.',
+                story='The paddles lift to empty the lock through the gates, then the two leaves open into their recesses '
+                      'and shut again, each driven by its own electric actuator in its inspection chamber, and the paddles '
+                      'drop. Real time is about 60 s for each leaf; this runs 10 times faster.',
                 moving=moving, motion=motion, graph=graph, steps=steps)
 
 

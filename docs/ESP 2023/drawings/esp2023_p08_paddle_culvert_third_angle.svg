@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M92.60,192.40 L92.60,149.40 M92.60,149.40 L135.60,149.40 M92.60,192.40 L135.60,192.40 M135.60,192.40 L135.60,149.40 M94.10,150.90 L134.10,150.90 M134.10,150.90 L134.10,190.90 M94.10,190.90 L134.10,190.90 M94.10,150.90 L94.10,190.90"/>
+<path class="vis" d="M92.60,192.40 L92.60,149.40 M92.60,192.40 L135.60,192.40 M135.60,192.40 L135.60,149.40 M92.60,149.40 L135.60,149.40 M94.10,150.90 L134.10,150.90 M134.10,150.90 L134.10,190.90 M94.10,190.90 L134.10,190.90 M94.10,150.90 L94.10,190.90"/>
+<text x="114.10" y="200.40" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M92.60,127.40 L92.60,83.60 M92.60,127.40 L135.60,127.40 M94.10,127.40 L134.10,127.40 M94.10,127.40 L134.10,127.40 M92.60,83.60 L135.60,83.60 M94.10,83.60 L134.10,83.60 M94.10,83.60 L134.10,83.60 M135.60,127.40 L135.60,83.60 M94.10,127.40 L94.10,83.60 M134.10,127.40 L134.10,83.60 M134.10,127.40 L134.10,83.60 M94.10,127.40 L94.10,83.60"/>
+<path class="vis" d="M92.60,127.40 L92.60,83.60 M92.60,127.40 L135.60,127.40 M92.60,83.60 L135.60,83.60 M135.60,127.40 L135.60,83.60"/>
+<text x="114.10" y="135.40" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M157.60,192.40 L157.60,149.40 M157.60,149.40 L201.40,149.40 M201.40,192.40 L201.40,149.40 M157.60,192.40 L201.40,192.40 M157.60,150.90 L157.60,190.90 M157.60,150.90 L157.60,190.90 M201.40,150.90 L201.40,190.90 M201.40,150.90 L201.40,190.90 M157.60,150.90 L201.40,150.90 M157.60,150.90 L201.40,150.90 M157.60,190.90 L201.40,190.90 M157.60,190.90 L201.40,190.90"/>
+<path class="vis" d="M157.60,192.40 L157.60,149.40 M157.60,149.40 L201.40,149.40 M201.40,192.40 L201.40,149.40 M157.60,192.40 L201.40,192.40"/>
+<text x="179.50" y="200.40" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM RIGHT)</text>
+<path class="vis" d="M314.31,90.22 L314.31,55.11 M314.31,55.11 L345.28,37.23 M314.31,90.22 L344.72,107.77 M344.72,107.77 L344.72,72.66 M314.31,55.11 L344.72,72.66 M315.37,56.95 L343.66,73.28 M343.66,73.28 L343.66,105.94 M315.37,89.61 L343.66,105.94 M315.37,56.95 L315.37,89.61 M345.28,37.23 L375.69,54.78 M344.72,72.66 L375.69,54.78 M375.69,89.89 L375.69,54.78 M344.72,107.77 L375.69,89.89 M315.37,89.61 L343.66,73.28"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="92.60" y1="193.90" x2="92.60" y2="211.40"/>
+<line class="dim" x1="135.60" y1="193.90" x2="135.60" y2="211.40"/>
+<line class="dim" x1="92.60" y1="209.40" x2="135.60" y2="209.40"/>
+<polygon class="arrow" points="92.60,209.40 95.10,210.15 95.10,208.65"/>
+<polygon class="arrow" points="135.60,209.40 133.10,208.65 133.10,210.15"/>
+<text x="114.10" y="208.20" font-size="3.50" text-anchor="middle" font-weight="normal">430</text>
+<line class="dim" x1="91.10" y1="149.40" x2="78.60" y2="149.40"/>
+<line class="dim" x1="91.10" y1="192.40" x2="78.60" y2="192.40"/>
+<line class="dim" x1="80.60" y1="149.40" x2="80.60" y2="192.40"/>
+<polygon class="arrow" points="80.60,149.40 79.85,151.90 81.35,151.90"/>
+<polygon class="arrow" points="80.60,192.40 81.35,189.90 79.85,189.90"/>
+<text x="79.40" y="170.90" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 79.40 170.90)">430</text>
+<line class="dim" x1="157.60" y1="193.90" x2="157.60" y2="211.40"/>
+<line class="dim" x1="201.40" y1="193.90" x2="201.40" y2="211.40"/>
+<line class="dim" x1="157.60" y1="209.40" x2="201.40" y2="209.40"/>
+<polygon class="arrow" points="157.60,209.40 160.10,210.15 160.10,208.65"/>
+<polygon class="arrow" points="201.40,209.40 198.90,208.65 198.90,210.15"/>
+<text x="179.50" y="208.20" font-size="3.50" text-anchor="middle" font-weight="normal">438</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">Box 430 x 430 outside, 400 x 400 inside</text>
+<text x="285.00" y="152.20" font-size="2.60" text-anchor="start" font-weight="normal">Length 438 (through the leaf)</text>
+<text x="285.00" y="157.40" font-size="2.60" text-anchor="start" font-weight="normal">15 plate</text>
+<text x="285.00" y="165.60" font-size="2.60" text-anchor="start" font-weight="normal">Material: S355 steel, 15 mm plate box</text>
+<text x="285.00" y="170.80" font-size="2.60" text-anchor="start" font-weight="normal">Part file: paddle_culvert.ipt. Item 8 on ESP23-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Lock Restoration Ltd</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP23-P08-3</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP 2023 part 08: paddle culvert</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">S355 steel</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">1:10</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="258.88,282.54 264.38,281.30 264.38,286.25 258.88,285.01"/>
+<circle class="vis" cx="254.47" cy="283.78" r="2.48"/>
+<circle class="vis" cx="254.47" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="254.47" y1="279.80" x2="254.47" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">Third angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

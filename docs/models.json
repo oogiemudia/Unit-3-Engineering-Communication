@@ -580,11 +580,20 @@
   "name": "esp2023_lock_gates",
   "title": "ESP 2023 lock gates (GA)",
   "criteria": "3.1, 3.2",
-  "uses": "ESP 2023 Task 2, Part B: the preferred design, a pair of mitre gates with hinges, seals, drive, fenders and CCTV. General arrangement, simulation of the gates opening, FEA of the bottom pintle.",
-  "description": "Design A, the preferred design: a pair of steel mitre gates for a 4.2 m wide lock, 6 m high, holding up to 5.5 m of water. Each leaf turns on a stainless pintle and an anchor collar, is driven by an electric actuator in an inspection chamber, and carries oak fenders, rubber seals, a walkway, a CCTV mast and a call point.",
+  "uses": "ESP 2023 Task 2, Part B: the preferred design, a pair of mitre gates assembled from 41 separate parts. General arrangement, parts list, simulation of the gates opening.",
+  "description": "Design A, the preferred design: a pair of steel mitre gates for a 4.2 m wide lock, 6 m high, holding up to 5.5 m of water. Each leaf is a welded steel frame of separate parts (heel post, mitre post, girders, stiffeners, skin plate) carrying oak fenders, seals, a walkway, lifting lugs and a gate paddle. It turns on a stainless pintle and an anchor collar with bronze bushes, has a position encoder on its pivot, and is driven by an electric actuator in an inspection chamber with a control panel, cover panels, a CCTV mast and an emergency call point.",
   "parts": [
    {
-    "name": "left gate leaf",
+    "name": "cill",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left heel post",
     "colour": "#4F6D7A",
     "explode": [
      0,
@@ -593,7 +602,160 @@
     ]
    },
    {
-    "name": "left oak fenders",
+    "name": "left mitre post",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 3",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 4",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 5",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 6",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 7",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left girder 8",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left stiffener 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left stiffener 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left skin plate",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left actuator bracket",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left lifting lug 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left lifting lug 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left paddle culvert",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left pintle bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left oak fender 1",
     "colour": "#A0703C",
     "explode": [
      0,
@@ -602,7 +764,34 @@
     ]
    },
    {
-    "name": "left walkway and handrail",
+    "name": "left oak fender 2",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left oak fender 3",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left walkway grating",
+    "colour": "#E6E6E6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left handrail",
     "colour": "#E6E6E6",
     "explode": [
      0,
@@ -629,6 +818,60 @@
     ]
    },
    {
+    "name": "left paddle door",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left paddle guide 1",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left paddle guide 2",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left paddle rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left paddle actuator",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left pivot pin, front",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "mitre seal",
     "colour": "#2B2B2B",
     "explode": [
@@ -647,7 +890,25 @@
     ]
    },
    {
+    "name": "left actuator motor and gearbox",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "left actuator rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left rod end eye",
     "colour": "#C9D3DD",
     "explode": [
      0,
@@ -665,8 +926,98 @@
     ]
    },
    {
+    "name": "left anchor bolt 1",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor bolt 2",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor bolt 3",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor bolt 4",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "left anchor collar",
     "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left collar bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor plate",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor bolt 5",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left anchor bolt 6",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left encoder bracket",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left gate position encoder",
+    "colour": "#E8A33D",
     "explode": [
      0,
      0,
@@ -683,6 +1034,51 @@
     ]
    },
    {
+    "name": "left actuator plinth",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left cover panel 1",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left cover panel 2",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left cover panel 3",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left control panel",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "left CCTV mast",
     "colour": "#E8A33D",
     "explode": [
@@ -692,7 +1088,25 @@
     ]
    },
    {
-    "name": "left call point",
+    "name": "left CCTV camera",
+    "colour": "#F2F2F2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left call point post",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left emergency call point",
     "colour": "#E8C23D",
     "explode": [
      0,
@@ -701,7 +1115,25 @@
     ]
    },
    {
-    "name": "right gate leaf",
+    "name": "left pivot pedestal",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "left pivot pin, rear",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right heel post",
     "colour": "#4F6D7A",
     "explode": [
      0,
@@ -710,7 +1142,160 @@
     ]
    },
    {
-    "name": "right oak fenders",
+    "name": "right mitre post",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 3",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 4",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 5",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 6",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 7",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right girder 8",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right stiffener 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right stiffener 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right skin plate",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right actuator bracket",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right lifting lug 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right lifting lug 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right paddle culvert",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right pintle bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right oak fender 1",
     "colour": "#A0703C",
     "explode": [
      0,
@@ -719,7 +1304,34 @@
     ]
    },
    {
-    "name": "right walkway and handrail",
+    "name": "right oak fender 2",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right oak fender 3",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right walkway grating",
+    "colour": "#E6E6E6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right handrail",
     "colour": "#E6E6E6",
     "explode": [
      0,
@@ -746,6 +1358,60 @@
     ]
    },
    {
+    "name": "right paddle door",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right paddle guide 1",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right paddle guide 2",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right paddle rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right paddle actuator",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right pivot pin, front",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "right actuator body",
     "colour": "#3FA37C",
     "explode": [
@@ -755,7 +1421,25 @@
     ]
    },
    {
+    "name": "right actuator motor and gearbox",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "right actuator rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right rod end eye",
     "colour": "#C9D3DD",
     "explode": [
      0,
@@ -773,8 +1457,98 @@
     ]
    },
    {
+    "name": "right anchor bolt 1",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor bolt 2",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor bolt 3",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor bolt 4",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "right anchor collar",
     "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right collar bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor plate",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor bolt 5",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right anchor bolt 6",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right encoder bracket",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right gate position encoder",
+    "colour": "#E8A33D",
     "explode": [
      0,
      0,
@@ -791,6 +1565,51 @@
     ]
    },
    {
+    "name": "right actuator plinth",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right cover panel 1",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right cover panel 2",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right cover panel 3",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right control panel",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "right CCTV mast",
     "colour": "#E8A33D",
     "explode": [
@@ -800,8 +1619,44 @@
     ]
    },
    {
-    "name": "right call point",
+    "name": "right CCTV camera",
+    "colour": "#F2F2F2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right call point post",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right emergency call point",
     "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right pivot pedestal",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "right pivot pin, rear",
+    "colour": "#C9D3DD",
     "explode": [
      0,
      0,
@@ -811,8 +1666,8 @@
   ],
   "size_mm": [
    10067.5,
-   2700.0,
-   9080.0
+   3300.0,
+   9600.0
   ],
   "section": null,
   "exploded": false,
@@ -829,7 +1684,630 @@
   },
   "base": "ESP 2023/",
   "folder": "ESP 2023",
+  "fea": false,
   "sim": true,
+  "bom": [
+   {
+    "no": 1,
+    "name": "heel post",
+    "qty": 2,
+    "material": "S355 steel, 25 mm plate, welded",
+    "group": "frame",
+    "model": "esp2023_p01_heel_post",
+    "file": "heel_post.ipt",
+    "bought": false,
+    "instances": [
+     "left heel post",
+     "right heel post"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "mitre post",
+    "qty": 2,
+    "material": "S355 steel, 25 mm plate, welded",
+    "group": "frame",
+    "model": "esp2023_p02_mitre_post",
+    "file": "mitre_post.ipt",
+    "bought": false,
+    "instances": [
+     "left mitre post",
+     "right mitre post"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "girder",
+    "qty": 16,
+    "material": "S355 steel, web 20, flange 200 x 20",
+    "group": "frame",
+    "model": "esp2023_p03_girder",
+    "file": "girder.ipt",
+    "bought": false,
+    "instances": [
+     "left girder 1",
+     "left girder 2",
+     "left girder 3",
+     "left girder 4",
+     "left girder 5",
+     "left girder 6",
+     "left girder 7",
+     "left girder 8",
+     "right girder 1",
+     "right girder 2",
+     "right girder 3",
+     "right girder 4",
+     "right girder 5",
+     "right girder 6",
+     "right girder 7",
+     "right girder 8"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "stiffener",
+    "qty": 4,
+    "material": "S355 steel plate, 15 thick",
+    "group": "frame",
+    "model": "esp2023_p04_stiffener",
+    "file": "stiffener.ipt",
+    "bought": false,
+    "instances": [
+     "left stiffener 1",
+     "left stiffener 2",
+     "right stiffener 1",
+     "right stiffener 2"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "skin plate",
+    "qty": 2,
+    "material": "S355 steel plate, 12 thick",
+    "group": "frame",
+    "model": "esp2023_p05_skin_plate",
+    "file": "skin_plate.ipt",
+    "bought": false,
+    "instances": [
+     "left skin plate",
+     "right skin plate"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "actuator bracket",
+    "qty": 2,
+    "material": "S355 steel, welded",
+    "group": "frame",
+    "model": "esp2023_p06_actuator_bracket",
+    "file": "actuator_bracket.ipt",
+    "bought": false,
+    "instances": [
+     "left actuator bracket",
+     "right actuator bracket"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "lifting lug",
+    "qty": 4,
+    "material": "S355 steel plate, 30 thick",
+    "group": "frame",
+    "model": "esp2023_p07_lifting_lug",
+    "file": "lifting_lug.ipt",
+    "bought": false,
+    "instances": [
+     "left lifting lug 1",
+     "left lifting lug 2",
+     "right lifting lug 1",
+     "right lifting lug 2"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "paddle culvert",
+    "qty": 2,
+    "material": "S355 steel, 15 mm plate box",
+    "group": "frame",
+    "model": "esp2023_p08_paddle_culvert",
+    "file": "paddle_culvert.ipt",
+    "bought": false,
+    "instances": [
+     "left paddle culvert",
+     "right paddle culvert"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "oak fender",
+    "qty": 6,
+    "material": "FSC oak, 150 x 200",
+    "group": "leaf",
+    "model": "esp2023_p09_oak_fender",
+    "file": "oak_fender.ipt",
+    "bought": false,
+    "instances": [
+     "left oak fender 1",
+     "left oak fender 2",
+     "left oak fender 3",
+     "right oak fender 1",
+     "right oak fender 2",
+     "right oak fender 3"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "walkway grating",
+    "qty": 2,
+    "material": "Galvanised steel grating, 40 deep",
+    "group": "leaf",
+    "model": "esp2023_p10_walkway_grating",
+    "file": "walkway_grating.ipt",
+    "bought": false,
+    "instances": [
+     "left walkway grating",
+     "right walkway grating"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "handrail",
+    "qty": 2,
+    "material": "Galvanised steel tube, 48.3 dia",
+    "group": "leaf",
+    "model": "esp2023_p11_handrail",
+    "file": "handrail.ipt",
+    "bought": false,
+    "instances": [
+     "left handrail",
+     "right handrail"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "cill seal",
+    "qty": 2,
+    "material": "EPDM rubber, 85 x 50",
+    "group": "leaf",
+    "model": "esp2023_p12_cill_seal",
+    "file": "cill_seal.ipt",
+    "bought": false,
+    "instances": [
+     "left cill seal",
+     "right cill seal"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "heel seal",
+    "qty": 2,
+    "material": "EPDM rubber, 30 x 80",
+    "group": "leaf",
+    "model": "esp2023_p13_heel_seal",
+    "file": "heel_seal.ipt",
+    "bought": false,
+    "instances": [
+     "left heel seal",
+     "right heel seal"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "mitre seal",
+    "qty": 1,
+    "material": "EPDM rubber, 30 thick",
+    "group": "leaf",
+    "model": "esp2023_p14_mitre_seal",
+    "file": "mitre_seal.ipt",
+    "bought": false,
+    "instances": [
+     "mitre seal"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "pintle bush",
+    "qty": 2,
+    "material": "Aluminium bronze, cup bush",
+    "group": "leaf",
+    "model": "esp2023_p15_pintle_bush",
+    "file": "pintle_bush.ipt",
+    "bought": false,
+    "instances": [
+     "left pintle bush",
+     "right pintle bush"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "paddle door",
+    "qty": 2,
+    "material": "Stainless steel 316, 20 plate",
+    "group": "leaf",
+    "model": "esp2023_p16_paddle_door",
+    "file": "paddle_door.ipt",
+    "bought": false,
+    "instances": [
+     "left paddle door",
+     "right paddle door"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "paddle guide",
+    "qty": 4,
+    "material": "Stainless steel 316, angle",
+    "group": "leaf",
+    "model": "esp2023_p17_paddle_guide",
+    "file": "paddle_guide.ipt",
+    "bought": false,
+    "instances": [
+     "left paddle guide 1",
+     "left paddle guide 2",
+     "right paddle guide 1",
+     "right paddle guide 2"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "paddle rod",
+    "qty": 2,
+    "material": "Stainless steel 316 bar, 30 dia",
+    "group": "leaf",
+    "model": "esp2023_p18_paddle_rod",
+    "file": "paddle_rod.ipt",
+    "bought": false,
+    "instances": [
+     "left paddle rod",
+     "right paddle rod"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "paddle actuator",
+    "qty": 2,
+    "material": "Bought in: electric linear actuator, 500 mm stroke, IP68",
+    "group": "leaf",
+    "model": "esp2023_p19_paddle_actuator",
+    "file": "paddle_actuator.ipt",
+    "bought": true,
+    "instances": [
+     "left paddle actuator",
+     "right paddle actuator"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "bottom pintle",
+    "qty": 2,
+    "material": "Stainless steel 316, 150 dia pin",
+    "group": "hinge",
+    "model": "esp2023_p20_bottom_pintle",
+    "file": "bottom_pintle.ipt",
+    "bought": false,
+    "instances": [
+     "left bottom pintle",
+     "right bottom pintle"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "anchor bolt M24",
+    "qty": 12,
+    "material": "Stainless steel A4, M24 x 410 resin anchor and nut",
+    "group": "hinge",
+    "model": "esp2023_p21_anchor_bolt",
+    "file": "anchor_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "left anchor bolt 1",
+     "left anchor bolt 2",
+     "left anchor bolt 3",
+     "left anchor bolt 4",
+     "left anchor bolt 5",
+     "left anchor bolt 6",
+     "right anchor bolt 1",
+     "right anchor bolt 2",
+     "right anchor bolt 3",
+     "right anchor bolt 4",
+     "right anchor bolt 5",
+     "right anchor bolt 6"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "anchor collar",
+    "qty": 2,
+    "material": "S355 steel forging, galvanised",
+    "group": "hinge",
+    "model": "esp2023_p22_anchor_collar",
+    "file": "anchor_collar.ipt",
+    "bought": false,
+    "instances": [
+     "left anchor collar",
+     "right anchor collar"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "collar bush",
+    "qty": 2,
+    "material": "Aluminium bronze",
+    "group": "hinge",
+    "model": "esp2023_p23_collar_bush",
+    "file": "collar_bush.ipt",
+    "bought": false,
+    "instances": [
+     "left collar bush",
+     "right collar bush"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "anchor plate",
+    "qty": 2,
+    "material": "S355 steel plate, 25 thick, galvanised",
+    "group": "hinge",
+    "model": "esp2023_p24_anchor_plate",
+    "file": "anchor_plate.ipt",
+    "bought": false,
+    "instances": [
+     "left anchor plate",
+     "right anchor plate"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "encoder bracket",
+    "qty": 2,
+    "material": "Stainless steel 316, bent plate",
+    "group": "hinge",
+    "model": "esp2023_p25_encoder_bracket",
+    "file": "encoder_bracket.ipt",
+    "bought": false,
+    "instances": [
+     "left encoder bracket",
+     "right encoder bracket"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "gate position encoder",
+    "qty": 2,
+    "material": "Bought in: absolute rotary encoder, IP68",
+    "group": "hinge",
+    "model": "esp2023_p26_position_encoder",
+    "file": "position_encoder.ipt",
+    "bought": true,
+    "instances": [
+     "left gate position encoder",
+     "right gate position encoder"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "actuator body",
+    "qty": 2,
+    "material": "Bought in: electro-mechanical linear actuator, 20 kN, 1300 stroke, IP68",
+    "group": "drive",
+    "model": "esp2023_p27_actuator_body",
+    "file": "actuator_body.ipt",
+    "bought": true,
+    "instances": [
+     "left actuator body",
+     "right actuator body"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "actuator motor and gearbox",
+    "qty": 2,
+    "material": "Bought in: 1.1 kW motor and gearbox, 230 V",
+    "group": "drive",
+    "model": "esp2023_p28_actuator_motor",
+    "file": "actuator_motor.ipt",
+    "bought": true,
+    "instances": [
+     "left actuator motor and gearbox",
+     "right actuator motor and gearbox"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "actuator rod",
+    "qty": 2,
+    "material": "Stainless steel 316 bar, 70 dia, hard chromed",
+    "group": "drive",
+    "model": "esp2023_p29_actuator_rod",
+    "file": "actuator_rod.ipt",
+    "bought": false,
+    "instances": [
+     "left actuator rod",
+     "right actuator rod"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "rod end eye",
+    "qty": 2,
+    "material": "Stainless steel 316, with spherical bearing",
+    "group": "drive",
+    "model": "esp2023_p30_rod_end",
+    "file": "rod_end.ipt",
+    "bought": false,
+    "instances": [
+     "left rod end eye",
+     "right rod end eye"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "pivot pedestal",
+    "qty": 2,
+    "material": "S355 steel, galvanised",
+    "group": "drive",
+    "model": "esp2023_p31_pivot_pedestal",
+    "file": "pivot_pedestal.ipt",
+    "bought": false,
+    "instances": [
+     "left pivot pedestal",
+     "right pivot pedestal"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "pivot pin",
+    "qty": 4,
+    "material": "Stainless steel 316, 40 dia",
+    "group": "drive",
+    "model": "esp2023_p32_pivot_pin",
+    "file": "pivot_pin.ipt",
+    "bought": false,
+    "instances": [
+     "left pivot pin, front",
+     "left pivot pin, rear",
+     "right pivot pin, front",
+     "right pivot pin, rear"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "inspection chamber",
+    "qty": 2,
+    "material": "Precast concrete C40/50",
+    "group": "chamber",
+    "model": "esp2023_p33_inspection_chamber",
+    "file": "inspection_chamber.ipt",
+    "bought": false,
+    "instances": [
+     "left inspection chamber",
+     "right inspection chamber"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "actuator plinth",
+    "qty": 2,
+    "material": "Concrete C40/50, cast in the chamber",
+    "group": "chamber",
+    "model": "esp2023_p34_actuator_plinth",
+    "file": "actuator_plinth.ipt",
+    "bought": false,
+    "instances": [
+     "left actuator plinth",
+     "right actuator plinth"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "chamber cover panel",
+    "qty": 6,
+    "material": "GRP grating panel, 50 deep, 30 kN/m2",
+    "group": "chamber",
+    "model": "esp2023_p35_cover_panel",
+    "file": "cover_panel.ipt",
+    "bought": false,
+    "instances": [
+     "left cover panel 1",
+     "left cover panel 2",
+     "left cover panel 3",
+     "right cover panel 1",
+     "right cover panel 2",
+     "right cover panel 3"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "control panel",
+    "qty": 2,
+    "material": "Bought in: stainless IP66 enclosure, controller, mains isolator, UPS",
+    "group": "chamber",
+    "model": "esp2023_p36_control_panel",
+    "file": "control_panel.ipt",
+    "bought": true,
+    "instances": [
+     "left control panel",
+     "right control panel"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "CCTV mast",
+    "qty": 2,
+    "material": "Galvanised steel tube, 120 dia, on a base plate",
+    "group": "chamber",
+    "model": "esp2023_p37_cctv_mast",
+    "file": "cctv_mast.ipt",
+    "bought": false,
+    "instances": [
+     "left CCTV mast",
+     "right CCTV mast"
+    ]
+   },
+   {
+    "no": 38,
+    "name": "CCTV camera",
+    "qty": 2,
+    "material": "Bought in: PTZ camera with bracket, IP67",
+    "group": "chamber",
+    "model": "esp2023_p38_cctv_camera",
+    "file": "cctv_camera.ipt",
+    "bought": true,
+    "instances": [
+     "left CCTV camera",
+     "right CCTV camera"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "call point post",
+    "qty": 2,
+    "material": "Stainless steel box section 150 x 150",
+    "group": "chamber",
+    "model": "esp2023_p39_call_point_post",
+    "file": "call_point_post.ipt",
+    "bought": false,
+    "instances": [
+     "left call point post",
+     "right call point post"
+    ]
+   },
+   {
+    "no": 40,
+    "name": "emergency call point",
+    "qty": 2,
+    "material": "Bought in: stop button and intercom, IP66",
+    "group": "chamber",
+    "model": "esp2023_p40_call_point",
+    "file": "call_point.ipt",
+    "bought": true,
+    "instances": [
+     "left emergency call point",
+     "right emergency call point"
+    ]
+   },
+   {
+    "no": 41,
+    "name": "cill",
+    "qty": 1,
+    "material": "Precast concrete C40/50",
+    "group": "civil",
+    "model": "esp2023_p41_cill",
+    "file": "cill.ipt",
+    "bought": false,
+    "instances": [
+     "cill"
+    ]
+   }
+  ],
+  "hide": [
+   "left cover panel 1",
+   "left cover panel 2",
+   "left cover panel 3",
+   "right cover panel 1",
+   "right cover panel 2",
+   "right cover panel 3"
+  ],
   "drawings": {
    "third": "ESP 2023/drawings/esp2023_lock_gates_third_angle",
    "first": "ESP 2023/drawings/esp2023_lock_gates_first_angle"
@@ -839,11 +2317,11 @@
   "name": "esp2023_gate_leaf",
   "title": "ESP 2023 gate leaf",
   "criteria": "3.1, 3.2",
-  "uses": "ESP 2023 Task 2: one welded steel leaf with its girders, stiffeners, fenders and seals. Detail drawing and section A-A through the girders.",
-  "description": "One gate leaf (the left hand leaf) on its own: the welded steel frame with its skin plate, girders and stiffeners, the oak fenders, the walkway and the rubber seals. Drawn in its own coordinates: X along the leaf from the heel pivot, Y towards the chamber face.",
+  "uses": "ESP 2023 Task 2: one leaf assembled from its parts: welded frame, fenders, walkway, seals, paddle. Detail drawing and section A-A through the girders.",
+  "description": "One gate leaf (the left hand leaf) on its own: the welded frame (heel post, mitre post, eight girders, two stiffeners, skin plate, actuator bracket, lifting lugs, paddle culvert) with its oak fenders, walkway, handrail, seals, bush and gate paddle. Drawn in its own coordinates: X along the leaf from the heel pivot, Y towards the chamber face.",
   "parts": [
    {
-    "name": "gate leaf (welded S355 steel)",
+    "name": "heel post",
     "colour": "#4F6D7A",
     "explode": [
      0,
@@ -852,7 +2330,160 @@
     ]
    },
    {
-    "name": "oak fenders",
+    "name": "mitre post",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 3",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 4",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 5",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 6",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 7",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "girder 8",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "stiffener 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "stiffener 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "skin plate",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "actuator bracket",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting lug 1",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting lug 2",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "paddle culvert",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pintle bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "oak fender 1",
     "colour": "#A0703C",
     "explode": [
      0,
@@ -861,7 +2492,34 @@
     ]
    },
    {
-    "name": "walkway and handrail",
+    "name": "oak fender 2",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "oak fender 3",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "walkway grating",
+    "colour": "#E6E6E6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "handrail",
     "colour": "#E6E6E6",
     "explode": [
      0,
@@ -888,6 +2546,51 @@
     ]
    },
    {
+    "name": "paddle door",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "paddle guide 1",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "paddle guide 2",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "paddle rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "paddle actuator",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
     "name": "mitre seal",
     "colour": "#2B2B2B",
     "explode": [
@@ -899,7 +2602,7 @@
   ],
   "size_mm": [
    2790.0,
-   600.1,
+   790.0,
    7100.0
   ],
   "section": "y",
@@ -917,6 +2620,267 @@
   },
   "base": "ESP 2023/",
   "folder": "ESP 2023",
+  "bom": [
+   {
+    "no": 1,
+    "name": "heel post",
+    "qty": 1,
+    "material": "S355 steel, 25 mm plate, welded",
+    "group": "frame",
+    "model": "esp2023_p01_heel_post",
+    "file": "heel_post.ipt",
+    "bought": false,
+    "instances": [
+     "heel post"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "mitre post",
+    "qty": 1,
+    "material": "S355 steel, 25 mm plate, welded",
+    "group": "frame",
+    "model": "esp2023_p02_mitre_post",
+    "file": "mitre_post.ipt",
+    "bought": false,
+    "instances": [
+     "mitre post"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "girder",
+    "qty": 8,
+    "material": "S355 steel, web 20, flange 200 x 20",
+    "group": "frame",
+    "model": "esp2023_p03_girder",
+    "file": "girder.ipt",
+    "bought": false,
+    "instances": [
+     "girder 1",
+     "girder 2",
+     "girder 3",
+     "girder 4",
+     "girder 5",
+     "girder 6",
+     "girder 7",
+     "girder 8"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "stiffener",
+    "qty": 2,
+    "material": "S355 steel plate, 15 thick",
+    "group": "frame",
+    "model": "esp2023_p04_stiffener",
+    "file": "stiffener.ipt",
+    "bought": false,
+    "instances": [
+     "stiffener 1",
+     "stiffener 2"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "skin plate",
+    "qty": 1,
+    "material": "S355 steel plate, 12 thick",
+    "group": "frame",
+    "model": "esp2023_p05_skin_plate",
+    "file": "skin_plate.ipt",
+    "bought": false,
+    "instances": [
+     "skin plate"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "actuator bracket",
+    "qty": 1,
+    "material": "S355 steel, welded",
+    "group": "frame",
+    "model": "esp2023_p06_actuator_bracket",
+    "file": "actuator_bracket.ipt",
+    "bought": false,
+    "instances": [
+     "actuator bracket"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "lifting lug",
+    "qty": 2,
+    "material": "S355 steel plate, 30 thick",
+    "group": "frame",
+    "model": "esp2023_p07_lifting_lug",
+    "file": "lifting_lug.ipt",
+    "bought": false,
+    "instances": [
+     "lifting lug 1",
+     "lifting lug 2"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "paddle culvert",
+    "qty": 1,
+    "material": "S355 steel, 15 mm plate box",
+    "group": "frame",
+    "model": "esp2023_p08_paddle_culvert",
+    "file": "paddle_culvert.ipt",
+    "bought": false,
+    "instances": [
+     "paddle culvert"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "oak fender",
+    "qty": 3,
+    "material": "FSC oak, 150 x 200",
+    "group": "leaf",
+    "model": "esp2023_p09_oak_fender",
+    "file": "oak_fender.ipt",
+    "bought": false,
+    "instances": [
+     "oak fender 1",
+     "oak fender 2",
+     "oak fender 3"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "walkway grating",
+    "qty": 1,
+    "material": "Galvanised steel grating, 40 deep",
+    "group": "leaf",
+    "model": "esp2023_p10_walkway_grating",
+    "file": "walkway_grating.ipt",
+    "bought": false,
+    "instances": [
+     "walkway grating"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "handrail",
+    "qty": 1,
+    "material": "Galvanised steel tube, 48.3 dia",
+    "group": "leaf",
+    "model": "esp2023_p11_handrail",
+    "file": "handrail.ipt",
+    "bought": false,
+    "instances": [
+     "handrail"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "cill seal",
+    "qty": 1,
+    "material": "EPDM rubber, 85 x 50",
+    "group": "leaf",
+    "model": "esp2023_p12_cill_seal",
+    "file": "cill_seal.ipt",
+    "bought": false,
+    "instances": [
+     "cill seal"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "heel seal",
+    "qty": 1,
+    "material": "EPDM rubber, 30 x 80",
+    "group": "leaf",
+    "model": "esp2023_p13_heel_seal",
+    "file": "heel_seal.ipt",
+    "bought": false,
+    "instances": [
+     "heel seal"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "mitre seal",
+    "qty": 1,
+    "material": "EPDM rubber, 30 thick",
+    "group": "leaf",
+    "model": "esp2023_p14_mitre_seal",
+    "file": "mitre_seal.ipt",
+    "bought": false,
+    "instances": [
+     "mitre seal"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "pintle bush",
+    "qty": 1,
+    "material": "Aluminium bronze, cup bush",
+    "group": "leaf",
+    "model": "esp2023_p15_pintle_bush",
+    "file": "pintle_bush.ipt",
+    "bought": false,
+    "instances": [
+     "pintle bush"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "paddle door",
+    "qty": 1,
+    "material": "Stainless steel 316, 20 plate",
+    "group": "leaf",
+    "model": "esp2023_p16_paddle_door",
+    "file": "paddle_door.ipt",
+    "bought": false,
+    "instances": [
+     "paddle door"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "paddle guide",
+    "qty": 2,
+    "material": "Stainless steel 316, angle",
+    "group": "leaf",
+    "model": "esp2023_p17_paddle_guide",
+    "file": "paddle_guide.ipt",
+    "bought": false,
+    "instances": [
+     "paddle guide 1",
+     "paddle guide 2"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "paddle rod",
+    "qty": 1,
+    "material": "Stainless steel 316 bar, 30 dia",
+    "group": "leaf",
+    "model": "esp2023_p18_paddle_rod",
+    "file": "paddle_rod.ipt",
+    "bought": false,
+    "instances": [
+     "paddle rod"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "paddle actuator",
+    "qty": 1,
+    "material": "Bought in: electric linear actuator, 500 mm stroke, IP68",
+    "group": "leaf",
+    "model": "esp2023_p19_paddle_actuator",
+    "file": "paddle_actuator.ipt",
+    "bought": true,
+    "instances": [
+     "paddle actuator"
+    ]
+   }
+  ],
   "drawings": {
    "third": "ESP 2023/drawings/esp2023_gate_leaf_third_angle",
    "first": "ESP 2023/drawings/esp2023_gate_leaf_first_angle",
@@ -1033,6 +2997,2317 @@
   "drawings": {
    "third": "ESP 2023/drawings/esp2023_lift_gate_third_angle",
    "first": "ESP 2023/drawings/esp2023_lift_gate_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p01_heel_post",
+  "title": "ESP 2023 part 01: heel post",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 1 on the parts list: S355 steel, 25 mm plate, welded. Round backed box post the leaf turns on. Hollow, with a solid bearing block at the foot, a bore for the pintle bush and a journal at the top for the anchor collar.",
+  "description": "Round backed box post the leaf turns on. Hollow, with a solid bearing block at the foot, a bore for the pintle bush and a journal at the top for the anchor collar.",
+  "parts": [
+   {
+    "name": "heel post",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   625.0,
+   450.1,
+   5950.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p01_heel_post.step",
+   "stl": "ESP 2023/stl/esp2023_p01_heel_post.stl",
+   "glb": "ESP 2023/glb/esp2023_p01_heel_post.glb",
+   "edges": "ESP 2023/edges/esp2023_p01_heel_post.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 1,
+   "key": "heel_post",
+   "group": "frame",
+   "material": "S355 steel, 25 mm plate, welded",
+   "file": "heel_post.ipt",
+   "bought": false,
+   "sizes": [
+    "Section: R225 round back + 400 x 450 box",
+    "Height 5800 (50 to 5850 above the cill)",
+    "25 plate; solid bearing block bottom 300",
+    "Bush bore \u00d8190 x 250 deep",
+    "Top journal \u00d8200 x 150"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p01_heel_post_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p01_heel_post_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p02_mitre_post",
+  "title": "ESP 2023 part 02: mitre post",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 2 on the parts list: S355 steel, 25 mm plate, welded. Hollow box post at the free end of the leaf, cut at 1 in 3 so the two leaves meet at the mitre.",
+  "description": "Hollow box post at the free end of the leaf, cut at 1 in 3 so the two leaves meet at the mitre.",
+  "parts": [
+   {
+    "name": "mitre post",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   375.0,
+   450.0,
+   5910.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p02_mitre_post.step",
+   "stl": "ESP 2023/stl/esp2023_p02_mitre_post.stl",
+   "glb": "ESP 2023/glb/esp2023_p02_mitre_post.glb",
+   "edges": "ESP 2023/edges/esp2023_p02_mitre_post.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 2,
+   "key": "mitre_post",
+   "group": "frame",
+   "material": "S355 steel, 25 mm plate, welded",
+   "file": "mitre_post.ipt",
+   "bought": false,
+   "sizes": [
+    "Box 700 x 450 before trimming, 5910 high",
+    "25 plate, hollow 75 to 5935 high",
+    "Mitre end cut at 1 in 3 (18.43\u00b0)"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p02_mitre_post_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p02_mitre_post_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p03_girder",
+  "title": "ESP 2023 part 03: girder",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 3 on the parts list: S355 steel, web 20, flange 200 x 20. Horizontal T girder between the heel and mitre posts. Eight per leaf, closer together near the bottom. Half depth slots take the stiffeners.",
+  "description": "Horizontal T girder between the heel and mitre posts. Eight per leaf, closer together near the bottom. Half depth slots take the stiffeners.",
+  "parts": [
+   {
+    "name": "girder",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1760.0,
+   438.0,
+   200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p03_girder.step",
+   "stl": "ESP 2023/stl/esp2023_p03_girder.stl",
+   "glb": "ESP 2023/glb/esp2023_p03_girder.glb",
+   "edges": "ESP 2023/edges/esp2023_p03_girder.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 3,
+   "key": "girder",
+   "group": "frame",
+   "material": "S355 steel, web 20, flange 200 x 20",
+   "file": "girder.ipt",
+   "bought": false,
+   "sizes": [
+    "Length 1760 between the posts",
+    "Web 418 x 20, flange 200 x 20",
+    "2 slots 15 wide x 209 deep at 580 and 1165"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p03_girder_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p03_girder_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p04_stiffener",
+  "title": "ESP 2023 part 04: stiffener",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 4 on the parts list: S355 steel plate, 15 thick. Vertical stiffener plate, two per leaf. Splits the skin plate into panels about 580 x 630.",
+  "description": "Vertical stiffener plate, two per leaf. Splits the skin plate into panels about 580 x 630.",
+  "parts": [
+   {
+    "name": "stiffener",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   15.0,
+   418.0,
+   5910.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p04_stiffener.step",
+   "stl": "ESP 2023/stl/esp2023_p04_stiffener.stl",
+   "glb": "ESP 2023/glb/esp2023_p04_stiffener.glb",
+   "edges": "ESP 2023/edges/esp2023_p04_stiffener.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 4,
+   "key": "stiffener",
+   "group": "frame",
+   "material": "S355 steel plate, 15 thick",
+   "file": "stiffener.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 418 x 15 x 5910 high",
+    "8 slots 20 x 209 at the girder levels",
+    "Girder levels 150, 800, 1450, 2150, 2900, 3750, 4700, 5860"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p04_stiffener_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p04_stiffener_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p05_skin_plate",
+  "title": "ESP 2023 part 05: skin plate",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 5 on the parts list: S355 steel plate, 12 thick. The 12 mm plate on the chamber (upstream) face that holds back the water, with the opening for the gate paddle.",
+  "description": "The 12 mm plate on the chamber (upstream) face that holds back the water, with the opening for the gate paddle.",
+  "parts": [
+   {
+    "name": "skin plate",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1760.0,
+   12.0,
+   5910.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p05_skin_plate.step",
+   "stl": "ESP 2023/stl/esp2023_p05_skin_plate.stl",
+   "glb": "ESP 2023/glb/esp2023_p05_skin_plate.glb",
+   "edges": "ESP 2023/edges/esp2023_p05_skin_plate.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 5,
+   "key": "skin_plate",
+   "group": "frame",
+   "material": "S355 steel plate, 12 thick",
+   "file": "skin_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 1760 x 5910 x 12",
+    "Paddle opening 400 x 400, 1270 from the heel end, 875 up from its base"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p05_skin_plate_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p05_skin_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p06_actuator_bracket",
+  "title": "ESP 2023 part 06: actuator bracket",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 6 on the parts list: S355 steel, welded. Clevis bracket on the chamber face that the actuator rod end pins to.",
+  "description": "Clevis bracket on the chamber face that the actuator rod end pins to.",
+  "parts": [
+   {
+    "name": "actuator bracket",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   160.0,
+   220.0,
+   160.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p06_actuator_bracket.step",
+   "stl": "ESP 2023/stl/esp2023_p06_actuator_bracket.stl",
+   "glb": "ESP 2023/glb/esp2023_p06_actuator_bracket.glb",
+   "edges": "ESP 2023/edges/esp2023_p06_actuator_bracket.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 6,
+   "key": "actuator_bracket",
+   "group": "frame",
+   "material": "S355 steel, welded",
+   "file": "actuator_bracket.ipt",
+   "bought": false,
+   "sizes": [
+    "Base plate 160 x 160 x 20",
+    "Lug 100 wide x 35, R50 end, 150 out",
+    "Pin hole \u00d840",
+    "Gusset 100 x 80 x 20"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p06_actuator_bracket_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p06_actuator_bracket_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p07_lifting_lug",
+  "title": "ESP 2023 part 07: lifting lug",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 7 on the parts list: S355 steel plate, 30 thick. Crane lifting lug. Two on top of each leaf, one over the heel post and one over the mitre post, so the leaf can be lifted out by mobile crane.",
+  "description": "Crane lifting lug. Two on top of each leaf, one over the heel post and one over the mitre post, so the leaf can be lifted out by mobile crane.",
+  "parts": [
+   {
+    "name": "lifting lug",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   160.0,
+   30.0,
+   200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p07_lifting_lug.step",
+   "stl": "ESP 2023/stl/esp2023_p07_lifting_lug.stl",
+   "glb": "ESP 2023/glb/esp2023_p07_lifting_lug.glb",
+   "edges": "ESP 2023/edges/esp2023_p07_lifting_lug.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 7,
+   "key": "lifting_lug",
+   "group": "frame",
+   "material": "S355 steel plate, 30 thick",
+   "file": "lifting_lug.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 160 x 200 x 30, R80 top",
+    "Shackle hole \u00d860, 120 up"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p07_lifting_lug_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p07_lifting_lug_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p08_paddle_culvert",
+  "title": "ESP 2023 part 08: paddle culvert",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 8 on the parts list: S355 steel, 15 mm plate box. Square box that carries the water from the paddle opening in the skin plate, through the leaf, to the paddle door.",
+  "description": "Square box that carries the water from the paddle opening in the skin plate, through the leaf, to the paddle door.",
+  "parts": [
+   {
+    "name": "paddle culvert",
+    "colour": "#4F6D7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   430.0,
+   438.0,
+   430.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p08_paddle_culvert.step",
+   "stl": "ESP 2023/stl/esp2023_p08_paddle_culvert.stl",
+   "glb": "ESP 2023/glb/esp2023_p08_paddle_culvert.glb",
+   "edges": "ESP 2023/edges/esp2023_p08_paddle_culvert.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 8,
+   "key": "paddle_culvert",
+   "group": "frame",
+   "material": "S355 steel, 15 mm plate box",
+   "file": "paddle_culvert.ipt",
+   "bought": false,
+   "sizes": [
+    "Box 430 x 430 outside, 400 x 400 inside",
+    "Length 438 (through the leaf)",
+    "15 plate"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p08_paddle_culvert_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p08_paddle_culvert_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p09_oak_fender",
+  "title": "ESP 2023 part 09: oak fender",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 9 on the parts list: FSC oak, 150 x 200. Rubbing fender on the chamber face: a boat touches timber, not the steel skin. Three per leaf, replaceable.",
+  "description": "Rubbing fender on the chamber face: a boat touches timber, not the steel skin. Three per leaf, replaceable.",
+  "parts": [
+   {
+    "name": "oak fender",
+    "colour": "#A0703C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1610.0,
+   150.0,
+   200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p09_oak_fender.step",
+   "stl": "ESP 2023/stl/esp2023_p09_oak_fender.stl",
+   "glb": "ESP 2023/glb/esp2023_p09_oak_fender.glb",
+   "edges": "ESP 2023/edges/esp2023_p09_oak_fender.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 9,
+   "key": "oak_fender",
+   "group": "leaf",
+   "material": "FSC oak, 150 x 200",
+   "file": "oak_fender.ipt",
+   "bought": false,
+   "sizes": [
+    "Timber 1610 x 200 x 150",
+    "Long edges R20",
+    "Fender levels 2600, 3500, 4400"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p09_oak_fender_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p09_oak_fender_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p10_walkway_grating",
+  "title": "ESP 2023 part 10: walkway grating",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 10 on the parts list: Galvanised steel grating, 40 deep. Walkway on top of the leaf, so the lock keeper can cross and look at the moving parts.",
+  "description": "Walkway on top of the leaf, so the lock keeper can cross and look at the moving parts.",
+  "parts": [
+   {
+    "name": "walkway grating",
+    "colour": "#E6E6E6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1760.0,
+   450.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p10_walkway_grating.step",
+   "stl": "ESP 2023/stl/esp2023_p10_walkway_grating.stl",
+   "glb": "ESP 2023/glb/esp2023_p10_walkway_grating.glb",
+   "edges": "ESP 2023/edges/esp2023_p10_walkway_grating.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 10,
+   "key": "walkway_grating",
+   "group": "leaf",
+   "material": "Galvanised steel grating, 40 deep",
+   "file": "walkway_grating.ipt",
+   "bought": false,
+   "sizes": [
+    "Panel 1760 x 450 x 40",
+    "6 drainage slots 1600 x 30 at 50 pitch"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p10_walkway_grating_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p10_walkway_grating_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p11_handrail",
+  "title": "ESP 2023 part 11: handrail",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 11 on the parts list: Galvanised steel tube, 48.3 dia. Handrail on the downstream edge of the walkway: three posts and two rails, welded.",
+  "description": "Handrail on the downstream edge of the walkway: three posts and two rails, welded.",
+  "parts": [
+   {
+    "name": "handrail",
+    "colour": "#E6E6E6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1608.0,
+   48.0,
+   1100.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p11_handrail.step",
+   "stl": "ESP 2023/stl/esp2023_p11_handrail.stl",
+   "glb": "ESP 2023/glb/esp2023_p11_handrail.glb",
+   "edges": "ESP 2023/edges/esp2023_p11_handrail.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 11,
+   "key": "handrail",
+   "group": "leaf",
+   "material": "Galvanised steel tube, 48.3 dia",
+   "file": "handrail.ipt",
+   "bought": false,
+   "sizes": [
+    "Tube \u00d848.3, 3 posts 1100 high at 780 centres",
+    "Rails at 550 and 1076 above the walkway, 1608 long"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p11_handrail_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p11_handrail_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p12_cill_seal",
+  "title": "ESP 2023 part 12: cill seal",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 12 on the parts list: EPDM rubber, 85 x 50. Seal along the bottom of the leaf, against the cill.",
+  "description": "Seal along the bottom of the leaf, against the cill.",
+  "parts": [
+   {
+    "name": "cill seal",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   2135.0,
+   85.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p12_cill_seal.step",
+   "stl": "ESP 2023/stl/esp2023_p12_cill_seal.stl",
+   "glb": "ESP 2023/glb/esp2023_p12_cill_seal.glb",
+   "edges": "ESP 2023/edges/esp2023_p12_cill_seal.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 12,
+   "key": "cill_seal",
+   "group": "leaf",
+   "material": "EPDM rubber, 85 x 50",
+   "file": "cill_seal.ipt",
+   "bought": false,
+   "sizes": [
+    "Strip 85 x 50, 2460 long",
+    "Mitre end cut at 1 in 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p12_cill_seal_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p12_cill_seal_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p13_heel_seal",
+  "title": "ESP 2023 part 13: heel seal",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 13 on the parts list: EPDM rubber, 30 x 80. Seal down the back of the heel post, against the hollow quoin in the lock wall.",
+  "description": "Seal down the back of the heel post, against the hollow quoin in the lock wall.",
+  "parts": [
+   {
+    "name": "heel seal",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   30.0,
+   80.0,
+   5800.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p13_heel_seal.step",
+   "stl": "ESP 2023/stl/esp2023_p13_heel_seal.stl",
+   "glb": "ESP 2023/glb/esp2023_p13_heel_seal.glb",
+   "edges": "ESP 2023/edges/esp2023_p13_heel_seal.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 13,
+   "key": "heel_seal",
+   "group": "leaf",
+   "material": "EPDM rubber, 30 x 80",
+   "file": "heel_seal.ipt",
+   "bought": false,
+   "sizes": [
+    "Strip 30 x 80 x 5800 long"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p13_heel_seal_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p13_heel_seal_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p14_mitre_seal",
+  "title": "ESP 2023 part 14: mitre seal",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 14 on the parts list: EPDM rubber, 30 thick. Seal on the mitre face of the left leaf. The right leaf closes on to it.",
+  "description": "Seal on the mitre face of the left leaf. The right leaf closes on to it.",
+  "parts": [
+   {
+    "name": "mitre seal",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   58.3,
+   80.0,
+   5910.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p14_mitre_seal.step",
+   "stl": "ESP 2023/stl/esp2023_p14_mitre_seal.stl",
+   "glb": "ESP 2023/glb/esp2023_p14_mitre_seal.glb",
+   "edges": "ESP 2023/edges/esp2023_p14_mitre_seal.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 14,
+   "key": "mitre_seal",
+   "group": "leaf",
+   "material": "EPDM rubber, 30 thick",
+   "file": "mitre_seal.ipt",
+   "bought": false,
+   "sizes": [
+    "30 thick across the mitre, 84 wide on the slope",
+    "5910 high"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p14_mitre_seal_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p14_mitre_seal_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p15_pintle_bush",
+  "title": "ESP 2023 part 15: pintle bush",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 15 on the parts list: Aluminium bronze, cup bush. Cup bush pressed into the foot of the heel post. It turns on the pintle and carries the weight of the leaf.",
+  "description": "Cup bush pressed into the foot of the heel post. It turns on the pintle and carries the weight of the leaf.",
+  "parts": [
+   {
+    "name": "pintle bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   190.1,
+   190.0,
+   250.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p15_pintle_bush.step",
+   "stl": "ESP 2023/stl/esp2023_p15_pintle_bush.stl",
+   "glb": "ESP 2023/glb/esp2023_p15_pintle_bush.glb",
+   "edges": "ESP 2023/edges/esp2023_p15_pintle_bush.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 15,
+   "key": "pintle_bush",
+   "group": "leaf",
+   "material": "Aluminium bronze, cup bush",
+   "file": "pintle_bush.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8190 outside x 250 long",
+    "Bore \u00d8150 x 230 deep (cup)"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p15_pintle_bush_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p15_pintle_bush_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p16_paddle_door",
+  "title": "ESP 2023 part 16: paddle door",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 16 on the parts list: Stainless steel 316, 20 plate. Sliding door over the paddle culvert on the downstream face. The water pushes it on to its guides.",
+  "description": "Sliding door over the paddle culvert on the downstream face. The water pushes it on to its guides.",
+  "parts": [
+   {
+    "name": "paddle door",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   500.0,
+   100.0,
+   500.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p16_paddle_door.step",
+   "stl": "ESP 2023/stl/esp2023_p16_paddle_door.stl",
+   "glb": "ESP 2023/glb/esp2023_p16_paddle_door.glb",
+   "edges": "ESP 2023/edges/esp2023_p16_paddle_door.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 16,
+   "key": "paddle_door",
+   "group": "leaf",
+   "material": "Stainless steel 316, 20 plate",
+   "file": "paddle_door.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 500 x 500 x 20",
+    "Rod lug 50 x 80 x 75 on the top edge"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p16_paddle_door_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p16_paddle_door_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p17_paddle_guide",
+  "title": "ESP 2023 part 17: paddle guide",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 17 on the parts list: Stainless steel 316, angle. Guide each side of the paddle door. Two per leaf, handed by turning one over.",
+  "description": "Guide each side of the paddle door. Two per leaf, handed by turning one over.",
+  "parts": [
+   {
+    "name": "paddle guide",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   40.0,
+   1300.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p17_paddle_guide.step",
+   "stl": "ESP 2023/stl/esp2023_p17_paddle_guide.stl",
+   "glb": "ESP 2023/glb/esp2023_p17_paddle_guide.glb",
+   "edges": "ESP 2023/edges/esp2023_p17_paddle_guide.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 17,
+   "key": "paddle_guide",
+   "group": "leaf",
+   "material": "Stainless steel 316, angle",
+   "file": "paddle_guide.ipt",
+   "bought": false,
+   "sizes": [
+    "Angle 40 x 20 with a 60 x 20 lip",
+    "Length 1300"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p17_paddle_guide_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p17_paddle_guide_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p18_paddle_rod",
+  "title": "ESP 2023 part 18: paddle rod",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 18 on the parts list: Stainless steel 316 bar, 30 dia. Rod from the paddle door up to the paddle actuator.",
+  "description": "Rod from the paddle door up to the paddle actuator.",
+  "parts": [
+   {
+    "name": "paddle rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   30.0,
+   30.0,
+   4425.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p18_paddle_rod.step",
+   "stl": "ESP 2023/stl/esp2023_p18_paddle_rod.stl",
+   "glb": "ESP 2023/glb/esp2023_p18_paddle_rod.glb",
+   "edges": "ESP 2023/edges/esp2023_p18_paddle_rod.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 18,
+   "key": "paddle_rod",
+   "group": "leaf",
+   "material": "Stainless steel 316 bar, 30 dia",
+   "file": "paddle_rod.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar \u00d830 x 4425 long"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p18_paddle_rod_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p18_paddle_rod_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p19_paddle_actuator",
+  "title": "ESP 2023 part 19: paddle actuator",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 19 on the parts list: Bought in: electric linear actuator, 500 mm stroke, IP68. Small electric actuator on the top girder that lifts the paddle door 500 mm. Bought in; modelled as an envelope with its fixing bracket.",
+  "description": "Small electric actuator on the top girder that lifts the paddle door 500 mm. Bought in; modelled as an envelope with its fixing bracket.",
+  "parts": [
+   {
+    "name": "paddle actuator",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   100.0,
+   120.0,
+   1350.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p19_paddle_actuator.step",
+   "stl": "ESP 2023/stl/esp2023_p19_paddle_actuator.stl",
+   "glb": "ESP 2023/glb/esp2023_p19_paddle_actuator.glb",
+   "edges": "ESP 2023/edges/esp2023_p19_paddle_actuator.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 19,
+   "key": "paddle_actuator",
+   "group": "leaf",
+   "material": "Bought in: electric linear actuator, 500 mm stroke, IP68",
+   "file": "paddle_actuator.ipt",
+   "bought": true,
+   "sizes": [
+    "Body \u00d890 x 1200, bore \u00d840",
+    "Motor 80 x 80 x 150",
+    "Bracket plate 100 x 200 x 20",
+    "Stroke 500"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p19_paddle_actuator_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p19_paddle_actuator_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p20_bottom_pintle",
+  "title": "ESP 2023 part 20: bottom pintle",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 20 on the parts list: Stainless steel 316, 150 dia pin. The bottom hinge: a 150 mm pin on a base plate set in the cill and held down by four anchor bolts.",
+  "description": "The bottom hinge: a 150 mm pin on a base plate set in the cill and held down by four anchor bolts.",
+  "parts": [
+   {
+    "name": "bottom pintle",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   600.0,
+   600.0,
+   360.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p20_bottom_pintle.step",
+   "stl": "ESP 2023/stl/esp2023_p20_bottom_pintle.stl",
+   "glb": "ESP 2023/glb/esp2023_p20_bottom_pintle.glb",
+   "edges": "ESP 2023/edges/esp2023_p20_bottom_pintle.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "part": {
+   "no": 20,
+   "key": "bottom_pintle",
+   "group": "hinge",
+   "material": "Stainless steel 316, 150 dia pin",
+   "file": "bottom_pintle.ipt",
+   "bought": false,
+   "sizes": [
+    "Base plate 600 x 600 x 80",
+    "Pin \u00d8150 x 280 high",
+    "Root fillet R15, top R10",
+    "4 holes \u00d826 on a 450 square"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p20_bottom_pintle_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p20_bottom_pintle_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p21_anchor_bolt",
+  "title": "ESP 2023 part 21: anchor bolt M24",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 21 on the parts list: Stainless steel A4, M24 x 410 resin anchor and nut. Resin anchor stud and nut. Four hold each pintle into the cill and two hold each anchor plate into the lock wall.",
+  "description": "Resin anchor stud and nut. Four hold each pintle into the cill and two hold each anchor plate into the lock wall.",
+  "parts": [
+   {
+    "name": "anchor bolt M24",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   41.6,
+   36.0,
+   410.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p21_anchor_bolt.step",
+   "stl": "ESP 2023/stl/esp2023_p21_anchor_bolt.stl",
+   "glb": "ESP 2023/glb/esp2023_p21_anchor_bolt.glb",
+   "edges": "ESP 2023/edges/esp2023_p21_anchor_bolt.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 21,
+   "key": "anchor_bolt",
+   "group": "hinge",
+   "material": "Stainless steel A4, M24 x 410 resin anchor and nut",
+   "file": "anchor_bolt.ipt",
+   "bought": true,
+   "sizes": [
+    "M24 stud, 410 long",
+    "Hex nut M24 (36 A/F x 24)"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p21_anchor_bolt_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p21_anchor_bolt_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p22_anchor_collar",
+  "title": "ESP 2023 part 22: anchor collar",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 22 on the parts list: S355 steel forging, galvanised. The top hinge: a collar round the heel post journal on an arm that is anchored back into the lock wall. It stops the leaf tipping forwards. Release it and the leaf lifts straight out.",
+  "description": "The top hinge: a collar round the heel post journal on an arm that is anchored back into the lock wall. It stops the leaf tipping forwards. Release it and the leaf lifts straight out.",
+  "parts": [
+   {
+    "name": "anchor collar",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1080.0,
+   360.0,
+   100.3
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p22_anchor_collar.step",
+   "stl": "ESP 2023/stl/esp2023_p22_anchor_collar.stl",
+   "glb": "ESP 2023/glb/esp2023_p22_anchor_collar.glb",
+   "edges": "ESP 2023/edges/esp2023_p22_anchor_collar.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 22,
+   "key": "anchor_collar",
+   "group": "hinge",
+   "material": "S355 steel forging, galvanised",
+   "file": "anchor_collar.ipt",
+   "bought": false,
+   "sizes": [
+    "Collar \u00d8360 x 100, bore \u00d8240",
+    "Arm 730 x 120 x 100, to 900 from the pivot"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p22_anchor_collar_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p22_anchor_collar_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p23_collar_bush",
+  "title": "ESP 2023 part 23: collar bush",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 23 on the parts list: Aluminium bronze. Bush in the anchor collar that the heel post journal turns in.",
+  "description": "Bush in the anchor collar that the heel post journal turns in.",
+  "parts": [
+   {
+    "name": "collar bush",
+    "colour": "#B08D57",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   240.1,
+   240.0,
+   100.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p23_collar_bush.step",
+   "stl": "ESP 2023/stl/esp2023_p23_collar_bush.stl",
+   "glb": "ESP 2023/glb/esp2023_p23_collar_bush.glb",
+   "edges": "ESP 2023/edges/esp2023_p23_collar_bush.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 23,
+   "key": "collar_bush",
+   "group": "hinge",
+   "material": "Aluminium bronze",
+   "file": "collar_bush.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8240 outside, \u00d8200 bore, 100 long"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p23_collar_bush_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p23_collar_bush_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p24_anchor_plate",
+  "title": "ESP 2023 part 24: anchor plate",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 24 on the parts list: S355 steel plate, 25 thick, galvanised. Plate set into the lock wall that the anchor collar arm bears against, held by two anchor bolts.",
+  "description": "Plate set into the lock wall that the anchor collar arm bears against, held by two anchor bolts.",
+  "parts": [
+   {
+    "name": "anchor plate",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   25.0,
+   300.0,
+   200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p24_anchor_plate.step",
+   "stl": "ESP 2023/stl/esp2023_p24_anchor_plate.stl",
+   "glb": "ESP 2023/glb/esp2023_p24_anchor_plate.glb",
+   "edges": "ESP 2023/edges/esp2023_p24_anchor_plate.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 24,
+   "key": "anchor_plate",
+   "group": "hinge",
+   "material": "S355 steel plate, 25 thick, galvanised",
+   "file": "anchor_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 300 x 200 x 25",
+    "2 holes \u00d826 at 200 centres"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p24_anchor_plate_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p24_anchor_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p25_encoder_bracket",
+  "title": "ESP 2023 part 25: encoder bracket",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 25 on the parts list: Stainless steel 316, bent plate. Bracket on the anchor collar arm that holds the gate position encoder over the pivot.",
+  "description": "Bracket on the anchor collar arm that holds the gate position encoder over the pivot.",
+  "parts": [
+   {
+    "name": "encoder bracket",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   350.0,
+   80.0,
+   160.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p25_encoder_bracket.step",
+   "stl": "ESP 2023/stl/esp2023_p25_encoder_bracket.stl",
+   "glb": "ESP 2023/glb/esp2023_p25_encoder_bracket.glb",
+   "edges": "ESP 2023/edges/esp2023_p25_encoder_bracket.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 25,
+   "key": "encoder_bracket",
+   "group": "hinge",
+   "material": "Stainless steel 316, bent plate",
+   "file": "encoder_bracket.ipt",
+   "bought": false,
+   "sizes": [
+    "Upright 30 x 80 x 160",
+    "Top plate 350 x 80 x 20"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p25_encoder_bracket_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p25_encoder_bracket_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p26_position_encoder",
+  "title": "ESP 2023 part 26: gate position encoder",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 26 on the parts list: Bought in: absolute rotary encoder, IP68. Absolute rotary encoder on the pivot axis, driven by the heel post journal. It tells the control centre the exact angle of the leaf: the sensor system the brief asks for.",
+  "description": "Absolute rotary encoder on the pivot axis, driven by the heel post journal. It tells the control centre the exact angle of the leaf: the sensor system the brief asks for.",
+  "parts": [
+   {
+    "name": "gate position encoder",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   120.0,
+   100.0,
+   110.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p26_position_encoder.step",
+   "stl": "ESP 2023/stl/esp2023_p26_position_encoder.stl",
+   "glb": "ESP 2023/glb/esp2023_p26_position_encoder.glb",
+   "edges": "ESP 2023/edges/esp2023_p26_position_encoder.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 26,
+   "key": "position_encoder",
+   "group": "hinge",
+   "material": "Bought in: absolute rotary encoder, IP68",
+   "file": "position_encoder.ipt",
+   "bought": true,
+   "sizes": [
+    "Body \u00d8100 x 90",
+    "Shaft \u00d820 x 20"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p26_position_encoder_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p26_position_encoder_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p27_actuator_body",
+  "title": "ESP 2023 part 27: actuator body",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 27 on the parts list: Bought in: electro-mechanical linear actuator, 20 kN, 1300 stroke, IP68. The actuator tube with its rear pivot eye. Bought in from an actuator maker; modelled from the catalogue sizes.",
+  "description": "The actuator tube with its rear pivot eye. Bought in from an actuator maker; modelled from the catalogue sizes.",
+  "parts": [
+   {
+    "name": "actuator body",
+    "colour": "#3FA37C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1950.0,
+   140.0,
+   140.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p27_actuator_body.step",
+   "stl": "ESP 2023/stl/esp2023_p27_actuator_body.stl",
+   "glb": "ESP 2023/glb/esp2023_p27_actuator_body.glb",
+   "edges": "ESP 2023/edges/esp2023_p27_actuator_body.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 27,
+   "key": "actuator_body",
+   "group": "drive",
+   "material": "Bought in: electro-mechanical linear actuator, 20 kN, 1300 stroke, IP68",
+   "file": "actuator_body.ipt",
+   "bought": true,
+   "sizes": [
+    "Tube \u00d8140 x 1830",
+    "Bore \u00d880 x 1780",
+    "Rear eye 80 thick, R50, hole \u00d840",
+    "Pivot to tube end 1900"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p27_actuator_body_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p27_actuator_body_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p28_actuator_motor",
+  "title": "ESP 2023 part 28: actuator motor and gearbox",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 28 on the parts list: Bought in: 1.1 kW motor and gearbox, 230 V. Motor and gearbox under the actuator tube. Runs from the mains supply in the control panel.",
+  "description": "Motor and gearbox under the actuator tube. Runs from the mains supply in the control panel.",
+  "parts": [
+   {
+    "name": "actuator motor and gearbox",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   450.0,
+   150.0,
+   195.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p28_actuator_motor.step",
+   "stl": "ESP 2023/stl/esp2023_p28_actuator_motor.stl",
+   "glb": "ESP 2023/glb/esp2023_p28_actuator_motor.glb",
+   "edges": "ESP 2023/edges/esp2023_p28_actuator_motor.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 28,
+   "key": "actuator_motor",
+   "group": "drive",
+   "material": "Bought in: 1.1 kW motor and gearbox, 230 V",
+   "file": "actuator_motor.ipt",
+   "bought": true,
+   "sizes": [
+    "Block 450 x 150 x 195",
+    "Saddle R70 to suit the tube"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p28_actuator_motor_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p28_actuator_motor_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p29_actuator_rod",
+  "title": "ESP 2023 part 29: actuator rod",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 29 on the parts list: Stainless steel 316 bar, 70 dia, hard chromed. The actuator rod. It slides out of the tube as the leaf shuts.",
+  "description": "The actuator rod. It slides out of the tube as the leaf shuts.",
+  "parts": [
+   {
+    "name": "actuator rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1490.0,
+   70.0,
+   70.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p29_actuator_rod.step",
+   "stl": "ESP 2023/stl/esp2023_p29_actuator_rod.stl",
+   "glb": "ESP 2023/glb/esp2023_p29_actuator_rod.glb",
+   "edges": "ESP 2023/edges/esp2023_p29_actuator_rod.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 29,
+   "key": "actuator_rod",
+   "group": "drive",
+   "material": "Stainless steel 316 bar, 70 dia, hard chromed",
+   "file": "actuator_rod.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar \u00d870 x 1490",
+    "Ends 110 from the rod end pin"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p29_actuator_rod_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p29_actuator_rod_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p30_rod_end",
+  "title": "ESP 2023 part 30: rod end eye",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 30 on the parts list: Stainless steel 316, with spherical bearing. Eye on the end of the actuator rod. It pins to the actuator bracket on the leaf.",
+  "description": "Eye on the end of the actuator rod. It pins to the actuator bracket on the leaf.",
+  "parts": [
+   {
+    "name": "rod end eye",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   155.0,
+   90.0,
+   80.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p30_rod_end.step",
+   "stl": "ESP 2023/stl/esp2023_p30_rod_end.stl",
+   "glb": "ESP 2023/glb/esp2023_p30_rod_end.glb",
+   "edges": "ESP 2023/edges/esp2023_p30_rod_end.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 30,
+   "key": "rod_end",
+   "group": "drive",
+   "material": "Stainless steel 316, with spherical bearing",
+   "file": "rod_end.ipt",
+   "bought": false,
+   "sizes": [
+    "Eye \u00d890 x 80, hole \u00d840",
+    "Neck \u00d860 x 75"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p30_rod_end_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p30_rod_end_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p31_pivot_pedestal",
+  "title": "ESP 2023 part 31: pivot pedestal",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 31 on the parts list: S355 steel, galvanised. Pedestal on the plinth that the rear eye of the actuator pins to.",
+  "description": "Pedestal on the plinth that the rear eye of the actuator pins to.",
+  "parts": [
+   {
+    "name": "pivot pedestal",
+    "colour": "#4A5562",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   190.1,
+   190.0,
+   55.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p31_pivot_pedestal.step",
+   "stl": "ESP 2023/stl/esp2023_p31_pivot_pedestal.stl",
+   "glb": "ESP 2023/glb/esp2023_p31_pivot_pedestal.glb",
+   "edges": "ESP 2023/edges/esp2023_p31_pivot_pedestal.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 31,
+   "key": "pivot_pedestal",
+   "group": "drive",
+   "material": "S355 steel, galvanised",
+   "file": "pivot_pedestal.ipt",
+   "bought": false,
+   "sizes": [
+    "Base \u00d8190 x 20",
+    "Boss \u00d8100 x 35",
+    "Pin hole \u00d840"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p31_pivot_pedestal_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p31_pivot_pedestal_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p32_pivot_pin",
+  "title": "ESP 2023 part 32: pivot pin",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 32 on the parts list: Stainless steel 316, 40 dia. Headed pin, two per actuator: one at the rear pivot, one through the rod end eye and the leaf bracket.",
+  "description": "Headed pin, two per actuator: one at the rear pivot, one through the rod end eye and the leaf bracket.",
+  "parts": [
+   {
+    "name": "pivot pin",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   60.0,
+   120.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p32_pivot_pin.step",
+   "stl": "ESP 2023/stl/esp2023_p32_pivot_pin.stl",
+   "glb": "ESP 2023/glb/esp2023_p32_pivot_pin.glb",
+   "edges": "ESP 2023/edges/esp2023_p32_pivot_pin.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 32,
+   "key": "pivot_pin",
+   "group": "drive",
+   "material": "Stainless steel 316, 40 dia",
+   "file": "pivot_pin.ipt",
+   "bought": false,
+   "sizes": [
+    "Pin \u00d840 x 105",
+    "Head \u00d860 x 15"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p32_pivot_pin_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p32_pivot_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p33_inspection_chamber",
+  "title": "ESP 2023 part 33: inspection chamber",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 33 on the parts list: Precast concrete C40/50. Purpose built chamber beside the gate for the drive: 2350 x 1800 x 1000 deep, 150 walls, a slot in the lock side wall for the actuator rod and a rebate for the cover panels. Handed: left and right.",
+  "description": "Purpose built chamber beside the gate for the drive: 2350 x 1800 x 1000 deep, 150 walls, a slot in the lock side wall for the actuator rod and a rebate for the cover panels. Handed: left and right.",
+  "parts": [
+   {
+    "name": "inspection chamber",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   2350.0,
+   1800.0,
+   1000.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p33_inspection_chamber.step",
+   "stl": "ESP 2023/stl/esp2023_p33_inspection_chamber.stl",
+   "glb": "ESP 2023/glb/esp2023_p33_inspection_chamber.glb",
+   "edges": "ESP 2023/edges/esp2023_p33_inspection_chamber.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 33,
+   "key": "inspection_chamber",
+   "group": "chamber",
+   "material": "Precast concrete C40/50",
+   "file": "inspection_chamber.ipt",
+   "bought": false,
+   "sizes": [
+    "Outside 2350 x 1800 x 1000 deep",
+    "Walls and floor 150",
+    "Rod slot 1500 wide x 450 deep",
+    "Cover rebate 75 wide x 50 deep on the long walls"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p33_inspection_chamber_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p33_inspection_chamber_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p34_actuator_plinth",
+  "title": "ESP 2023 part 34: actuator plinth",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 34 on the parts list: Concrete C40/50, cast in the chamber. Plinth in the chamber that carries the pivot pedestal. Cast against the end wall.",
+  "description": "Plinth in the chamber that carries the pivot pedestal. Cast against the end wall.",
+  "parts": [
+   {
+    "name": "actuator plinth",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   250.0,
+   300.1,
+   550.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p34_actuator_plinth.step",
+   "stl": "ESP 2023/stl/esp2023_p34_actuator_plinth.stl",
+   "glb": "ESP 2023/glb/esp2023_p34_actuator_plinth.glb",
+   "edges": "ESP 2023/edges/esp2023_p34_actuator_plinth.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 34,
+   "key": "actuator_plinth",
+   "group": "chamber",
+   "material": "Concrete C40/50, cast in the chamber",
+   "file": "actuator_plinth.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8300 x 550 high",
+    "Trimmed flat where it is cast against the end wall"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p34_actuator_plinth_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p34_actuator_plinth_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p35_cover_panel",
+  "title": "ESP 2023 part 35: chamber cover panel",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 35 on the parts list: GRP grating panel, 50 deep, 30 kN/m2. Removable cover panel over the chamber. Three per chamber. Lift one out to inspect the drive.",
+  "description": "Removable cover panel over the chamber. Three per chamber. Lift one out to inspect the drive.",
+  "parts": [
+   {
+    "name": "chamber cover panel",
+    "colour": "#7D8B5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   682.3,
+   1650.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p35_cover_panel.step",
+   "stl": "ESP 2023/stl/esp2023_p35_cover_panel.stl",
+   "glb": "ESP 2023/glb/esp2023_p35_cover_panel.glb",
+   "edges": "ESP 2023/edges/esp2023_p35_cover_panel.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 35,
+   "key": "cover_panel",
+   "group": "chamber",
+   "material": "GRP grating panel, 50 deep, 30 kN/m2",
+   "file": "cover_panel.ipt",
+   "bought": false,
+   "sizes": [
+    "Panel 682 x 1650 x 50",
+    "2 lifting holes \u00d830, 225 in from the ends"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p35_cover_panel_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p35_cover_panel_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p36_control_panel",
+  "title": "ESP 2023 part 36: control panel",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 36 on the parts list: Bought in: stainless IP66 enclosure, controller, mains isolator, UPS. Control panel on the chamber end wall: the actuator controller, the mains isolator and a battery back up, linked to the off-site control centre.",
+  "description": "Control panel on the chamber end wall: the actuator controller, the mains isolator and a battery back up, linked to the off-site control centre.",
+  "parts": [
+   {
+    "name": "control panel",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   165.0,
+   400.0,
+   500.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p36_control_panel.step",
+   "stl": "ESP 2023/stl/esp2023_p36_control_panel.stl",
+   "glb": "ESP 2023/glb/esp2023_p36_control_panel.glb",
+   "edges": "ESP 2023/edges/esp2023_p36_control_panel.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 36,
+   "key": "control_panel",
+   "group": "chamber",
+   "material": "Bought in: stainless IP66 enclosure, controller, mains isolator, UPS",
+   "file": "control_panel.ipt",
+   "bought": true,
+   "sizes": [
+    "Enclosure 400 wide x 500 high x 150 deep",
+    "Handle 30 x 100 x 15"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p36_control_panel_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p36_control_panel_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p37_cctv_mast",
+  "title": "ESP 2023 part 37: CCTV mast",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 37 on the parts list: Galvanised steel tube, 120 dia, on a base plate. Camera mast on the far corner of the chamber.",
+  "description": "Camera mast on the far corner of the chamber.",
+  "parts": [
+   {
+    "name": "CCTV mast",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   150.0,
+   150.0,
+   3000.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p37_cctv_mast.step",
+   "stl": "ESP 2023/stl/esp2023_p37_cctv_mast.stl",
+   "glb": "ESP 2023/glb/esp2023_p37_cctv_mast.glb",
+   "edges": "ESP 2023/edges/esp2023_p37_cctv_mast.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 37,
+   "key": "cctv_mast",
+   "group": "chamber",
+   "material": "Galvanised steel tube, 120 dia, on a base plate",
+   "file": "cctv_mast.ipt",
+   "bought": false,
+   "sizes": [
+    "Base plate 150 x 150 x 20",
+    "Tube \u00d8120 x 2980"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p37_cctv_mast_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p37_cctv_mast_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p38_cctv_camera",
+  "title": "ESP 2023 part 38: CCTV camera",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 38 on the parts list: Bought in: PTZ camera with bracket, IP67. Pan, tilt and zoom camera looking down the gate, so the control centre can watch it work.",
+  "description": "Pan, tilt and zoom camera looking down the gate, so the control centre can watch it work.",
+  "parts": [
+   {
+    "name": "CCTV camera",
+    "colour": "#F2F2F2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   294.9,
+   390.9,
+   150.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p38_cctv_camera.step",
+   "stl": "ESP 2023/stl/esp2023_p38_cctv_camera.stl",
+   "glb": "ESP 2023/glb/esp2023_p38_cctv_camera.glb",
+   "edges": "ESP 2023/edges/esp2023_p38_cctv_camera.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 38,
+   "key": "cctv_camera",
+   "group": "chamber",
+   "material": "Bought in: PTZ camera with bracket, IP67",
+   "file": "cctv_camera.ipt",
+   "bought": true,
+   "sizes": [
+    "Camera 300 x 150 x 150",
+    "Bracket 80 x 150 x 120"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p38_cctv_camera_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p38_cctv_camera_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p39_call_point_post",
+  "title": "ESP 2023 part 39: call point post",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 39 on the parts list: Stainless steel box section 150 x 150. Post on the near corner of the chamber that carries the emergency call point.",
+  "description": "Post on the near corner of the chamber that carries the emergency call point.",
+  "parts": [
+   {
+    "name": "call point post",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   150.0,
+   150.0,
+   1200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p39_call_point_post.step",
+   "stl": "ESP 2023/stl/esp2023_p39_call_point_post.stl",
+   "glb": "ESP 2023/glb/esp2023_p39_call_point_post.glb",
+   "edges": "ESP 2023/edges/esp2023_p39_call_point_post.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 39,
+   "key": "call_point_post",
+   "group": "chamber",
+   "material": "Stainless steel box section 150 x 150",
+   "file": "call_point_post.ipt",
+   "bought": false,
+   "sizes": [
+    "Box section 150 x 150 x 1200 high"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p39_call_point_post_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p39_call_point_post_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p40_call_point",
+  "title": "ESP 2023 part 40: emergency call point",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 40 on the parts list: Bought in: stop button and intercom, IP66. Emergency call point: a stop button that halts the gates and an intercom to the lock keeper.",
+  "description": "Emergency call point: a stop button that halts the gates and an intercom to the lock keeper.",
+  "parts": [
+   {
+    "name": "emergency call point",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   220.0,
+   110.0,
+   250.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p40_call_point.step",
+   "stl": "ESP 2023/stl/esp2023_p40_call_point.stl",
+   "glb": "ESP 2023/glb/esp2023_p40_call_point.glb",
+   "edges": "ESP 2023/edges/esp2023_p40_call_point.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 40,
+   "key": "call_point",
+   "group": "chamber",
+   "material": "Bought in: stop button and intercom, IP66",
+   "file": "call_point.ipt",
+   "bought": true,
+   "sizes": [
+    "Box 220 x 250 x 85",
+    "Stop button \u00d860"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p40_call_point_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p40_call_point_first_angle"
+  }
+ },
+ {
+  "name": "esp2023_p41_cill",
+  "title": "ESP 2023 part 41: cill",
+  "criteria": "3.1",
+  "uses": "ESP 2023 component, item 41 on the parts list: Precast concrete C40/50. New concrete cill across the lock: the gates seal on its top and the pintles are set into it.",
+  "description": "New concrete cill across the lock: the gates seal on its top and the pintles are set into it.",
+  "parts": [
+   {
+    "name": "cill",
+    "colour": "#B5B0A6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   5500.0,
+   2100.0,
+   600.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2023/step/esp2023_p41_cill.step",
+   "stl": "ESP 2023/stl/esp2023_p41_cill.stl",
+   "glb": "ESP 2023/glb/esp2023_p41_cill.glb",
+   "edges": "ESP 2023/edges/esp2023_p41_cill.json"
+  },
+  "base": "ESP 2023/",
+  "folder": "ESP 2023",
+  "fea": false,
+  "part": {
+   "no": 41,
+   "key": "cill",
+   "group": "civil",
+   "material": "Precast concrete C40/50",
+   "file": "cill.ipt",
+   "bought": false,
+   "sizes": [
+    "5500 x 2100 x 600 deep",
+    "2 pintle pockets 600 x 600 x 80 deep at \u00b12349",
+    "8 anchor holes \u00d828 x 400 deep"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2023/drawings/esp2023_p41_cill_third_angle",
+   "first": "ESP 2023/drawings/esp2023_p41_cill_first_angle"
   }
  }
 ]

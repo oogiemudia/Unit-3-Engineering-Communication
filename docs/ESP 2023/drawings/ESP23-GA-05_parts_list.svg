@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><text x="16.00" y="16.00" font-size="3.20" text-anchor="start" font-weight="bold">PARTS LIST: ONE GATE SYSTEM (A PAIR OF LEAVES)</text>
+<rect class="tbl" x="16.00" y="18.00" width="9.00" height="4.45"/>
+<text x="17.00" y="21.20" font-size="2.15" text-anchor="start" font-weight="bold">Item</text>
+<rect class="tbl" x="25.00" y="18.00" width="50.00" height="4.45"/>
+<text x="26.00" y="21.20" font-size="2.15" text-anchor="start" font-weight="bold">Part</text>
+<rect class="tbl" x="75.00" y="18.00" width="9.00" height="4.45"/>
+<text x="76.00" y="21.20" font-size="2.15" text-anchor="start" font-weight="bold">Qty</text>
+<rect class="tbl" x="84.00" y="18.00" width="92.00" height="4.45"/>
+<text x="85.00" y="21.20" font-size="2.15" text-anchor="start" font-weight="bold">Material and finish</text>
+<rect class="tbl" x="176.00" y="18.00" width="50.00" height="4.45"/>
+<text x="177.00" y="21.20" font-size="2.15" text-anchor="start" font-weight="bold">Part file / drawing</text>
+<rect x="16.00" y="22.45" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="25.65" font-size="2.20" text-anchor="start" font-weight="bold">GATE LEAF FRAME (WELDED FABRICATION)</text>
+<rect class="tbl" x="16.00" y="26.90" width="9.00" height="4.45"/>
+<text x="17.00" y="30.10" font-size="2.15" text-anchor="start" font-weight="normal">1</text>
+<rect class="tbl" x="25.00" y="26.90" width="50.00" height="4.45"/>
+<text x="26.00" y="30.10" font-size="2.15" text-anchor="start" font-weight="normal">heel post</text>
+<rect class="tbl" x="75.00" y="26.90" width="9.00" height="4.45"/>
+<text x="76.00" y="30.10" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="26.90" width="92.00" height="4.45"/>
+<text x="85.00" y="30.10" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, 25 mm plate, welded</text>
+<rect class="tbl" x="176.00" y="26.90" width="50.00" height="4.45"/>
+<text x="177.00" y="30.10" font-size="2.15" text-anchor="start" font-weight="normal">heel_post.ipt  ESP23-P01</text>
+<rect class="tbl" x="16.00" y="31.35" width="9.00" height="4.45"/>
+<text x="17.00" y="34.55" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="25.00" y="31.35" width="50.00" height="4.45"/>
+<text x="26.00" y="34.55" font-size="2.15" text-anchor="start" font-weight="normal">mitre post</text>
+<rect class="tbl" x="75.00" y="31.35" width="9.00" height="4.45"/>
+<text x="76.00" y="34.55" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="31.35" width="92.00" height="4.45"/>
+<text x="85.00" y="34.55" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, 25 mm plate, welded</text>
+<rect class="tbl" x="176.00" y="31.35" width="50.00" height="4.45"/>
+<text x="177.00" y="34.55" font-size="2.15" text-anchor="start" font-weight="normal">mitre_post.ipt  ESP23-P02</text>
+<rect class="tbl" x="16.00" y="35.80" width="9.00" height="4.45"/>
+<text x="17.00" y="39.00" font-size="2.15" text-anchor="start" font-weight="normal">3</text>
+<rect class="tbl" x="25.00" y="35.80" width="50.00" height="4.45"/>
+<text x="26.00" y="39.00" font-size="2.15" text-anchor="start" font-weight="normal">girder</text>
+<rect class="tbl" x="75.00" y="35.80" width="9.00" height="4.45"/>
+<text x="76.00" y="39.00" font-size="2.15" text-anchor="start" font-weight="normal">16</text>
+<rect class="tbl" x="84.00" y="35.80" width="92.00" height="4.45"/>
+<text x="85.00" y="39.00" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, web 20, flange 200 x 20</text>
+<rect class="tbl" x="176.00" y="35.80" width="50.00" height="4.45"/>
+<text x="177.00" y="39.00" font-size="2.15" text-anchor="start" font-weight="normal">girder.ipt  ESP23-P03</text>
+<rect class="tbl" x="16.00" y="40.25" width="9.00" height="4.45"/>
+<text x="17.00" y="43.45" font-size="2.15" text-anchor="start" font-weight="normal">4</text>
+<rect class="tbl" x="25.00" y="40.25" width="50.00" height="4.45"/>
+<text x="26.00" y="43.45" font-size="2.15" text-anchor="start" font-weight="normal">stiffener</text>
+<rect class="tbl" x="75.00" y="40.25" width="9.00" height="4.45"/>
+<text x="76.00" y="43.45" font-size="2.15" text-anchor="start" font-weight="normal">4</text>
+<rect class="tbl" x="84.00" y="40.25" width="92.00" height="4.45"/>
+<text x="85.00" y="43.45" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel plate, 15 thick</text>
+<rect class="tbl" x="176.00" y="40.25" width="50.00" height="4.45"/>
+<text x="177.00" y="43.45" font-size="2.15" text-anchor="start" font-weight="normal">stiffener.ipt  ESP23-P04</text>
+<rect class="tbl" x="16.00" y="44.70" width="9.00" height="4.45"/>
+<text x="17.00" y="47.90" font-size="2.15" text-anchor="start" font-weight="normal">5</text>
+<rect class="tbl" x="25.00" y="44.70" width="50.00" height="4.45"/>
+<text x="26.00" y="47.90" font-size="2.15" text-anchor="start" font-weight="normal">skin plate</text>
+<rect class="tbl" x="75.00" y="44.70" width="9.00" height="4.45"/>
+<text x="76.00" y="47.90" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="44.70" width="92.00" height="4.45"/>
+<text x="85.00" y="47.90" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel plate, 12 thick</text>
+<rect class="tbl" x="176.00" y="44.70" width="50.00" height="4.45"/>
+<text x="177.00" y="47.90" font-size="2.15" text-anchor="start" font-weight="normal">skin_plate.ipt  ESP23-P05</text>
+<rect class="tbl" x="16.00" y="49.15" width="9.00" height="4.45"/>
+<text x="17.00" y="52.35" font-size="2.15" text-anchor="start" font-weight="normal">6</text>
+<rect class="tbl" x="25.00" y="49.15" width="50.00" height="4.45"/>
+<text x="26.00" y="52.35" font-size="2.15" text-anchor="start" font-weight="normal">actuator bracket</text>
+<rect class="tbl" x="75.00" y="49.15" width="9.00" height="4.45"/>
+<text x="76.00" y="52.35" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="49.15" width="92.00" height="4.45"/>
+<text x="85.00" y="52.35" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, welded</text>
+<rect class="tbl" x="176.00" y="49.15" width="50.00" height="4.45"/>
+<text x="177.00" y="52.35" font-size="2.15" text-anchor="start" font-weight="normal">actuator_bracket.ipt  ESP23-P06</text>
+<rect class="tbl" x="16.00" y="53.60" width="9.00" height="4.45"/>
+<text x="17.00" y="56.80" font-size="2.15" text-anchor="start" font-weight="normal">7</text>
+<rect class="tbl" x="25.00" y="53.60" width="50.00" height="4.45"/>
+<text x="26.00" y="56.80" font-size="2.15" text-anchor="start" font-weight="normal">lifting lug</text>
+<rect class="tbl" x="75.00" y="53.60" width="9.00" height="4.45"/>
+<text x="76.00" y="56.80" font-size="2.15" text-anchor="start" font-weight="normal">4</text>
+<rect class="tbl" x="84.00" y="53.60" width="92.00" height="4.45"/>
+<text x="85.00" y="56.80" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel plate, 30 thick</text>
+<rect class="tbl" x="176.00" y="53.60" width="50.00" height="4.45"/>
+<text x="177.00" y="56.80" font-size="2.15" text-anchor="start" font-weight="normal">lifting_lug.ipt  ESP23-P07</text>
+<rect class="tbl" x="16.00" y="58.05" width="9.00" height="4.45"/>
+<text x="17.00" y="61.25" font-size="2.15" text-anchor="start" font-weight="normal">8</text>
+<rect class="tbl" x="25.00" y="58.05" width="50.00" height="4.45"/>
+<text x="26.00" y="61.25" font-size="2.15" text-anchor="start" font-weight="normal">paddle culvert</text>
+<rect class="tbl" x="75.00" y="58.05" width="9.00" height="4.45"/>
+<text x="76.00" y="61.25" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="58.05" width="92.00" height="4.45"/>
+<text x="85.00" y="61.25" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, 15 mm plate box</text>
+<rect class="tbl" x="176.00" y="58.05" width="50.00" height="4.45"/>
+<text x="177.00" y="61.25" font-size="2.15" text-anchor="start" font-weight="normal">paddle_culvert.ipt  ESP23-P08</text>
+<rect x="16.00" y="62.50" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="65.70" font-size="2.20" text-anchor="start" font-weight="bold">FITTED TO EACH LEAF</text>
+<rect class="tbl" x="16.00" y="66.95" width="9.00" height="4.45"/>
+<text x="17.00" y="70.15" font-size="2.15" text-anchor="start" font-weight="normal">9</text>
+<rect class="tbl" x="25.00" y="66.95" width="50.00" height="4.45"/>
+<text x="26.00" y="70.15" font-size="2.15" text-anchor="start" font-weight="normal">oak fender</text>
+<rect class="tbl" x="75.00" y="66.95" width="9.00" height="4.45"/>
+<text x="76.00" y="70.15" font-size="2.15" text-anchor="start" font-weight="normal">6</text>
+<rect class="tbl" x="84.00" y="66.95" width="92.00" height="4.45"/>
+<text x="85.00" y="70.15" font-size="2.15" text-anchor="start" font-weight="normal">FSC oak, 150 x 200</text>
+<rect class="tbl" x="176.00" y="66.95" width="50.00" height="4.45"/>
+<text x="177.00" y="70.15" font-size="2.15" text-anchor="start" font-weight="normal">oak_fender.ipt  ESP23-P09</text>
+<rect class="tbl" x="16.00" y="71.40" width="9.00" height="4.45"/>
+<text x="17.00" y="74.60" font-size="2.15" text-anchor="start" font-weight="normal">10</text>
+<rect class="tbl" x="25.00" y="71.40" width="50.00" height="4.45"/>
+<text x="26.00" y="74.60" font-size="2.15" text-anchor="start" font-weight="normal">walkway grating</text>
+<rect class="tbl" x="75.00" y="71.40" width="9.00" height="4.45"/>
+<text x="76.00" y="74.60" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="71.40" width="92.00" height="4.45"/>
+<text x="85.00" y="74.60" font-size="2.15" text-anchor="start" font-weight="normal">Galvanised steel grating, 40 deep</text>
+<rect class="tbl" x="176.00" y="71.40" width="50.00" height="4.45"/>
+<text x="177.00" y="74.60" font-size="2.15" text-anchor="start" font-weight="normal">walkway_grating.ipt  ESP23-P10</text>
+<rect class="tbl" x="16.00" y="75.85" width="9.00" height="4.45"/>
+<text x="17.00" y="79.05" font-size="2.15" text-anchor="start" font-weight="normal">11</text>
+<rect class="tbl" x="25.00" y="75.85" width="50.00" height="4.45"/>
+<text x="26.00" y="79.05" font-size="2.15" text-anchor="start" font-weight="normal">handrail</text>
+<rect class="tbl" x="75.00" y="75.85" width="9.00" height="4.45"/>
+<text x="76.00" y="79.05" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="75.85" width="92.00" height="4.45"/>
+<text x="85.00" y="79.05" font-size="2.15" text-anchor="start" font-weight="normal">Galvanised steel tube, 48.3 dia</text>
+<rect class="tbl" x="176.00" y="75.85" width="50.00" height="4.45"/>
+<text x="177.00" y="79.05" font-size="2.15" text-anchor="start" font-weight="normal">handrail.ipt  ESP23-P11</text>
+<rect class="tbl" x="16.00" y="80.30" width="9.00" height="4.45"/>
+<text x="17.00" y="83.50" font-size="2.15" text-anchor="start" font-weight="normal">12</text>
+<rect class="tbl" x="25.00" y="80.30" width="50.00" height="4.45"/>
+<text x="26.00" y="83.50" font-size="2.15" text-anchor="start" font-weight="normal">cill seal</text>
+<rect class="tbl" x="75.00" y="80.30" width="9.00" height="4.45"/>
+<text x="76.00" y="83.50" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="80.30" width="92.00" height="4.45"/>
+<text x="85.00" y="83.50" font-size="2.15" text-anchor="start" font-weight="normal">EPDM rubber, 85 x 50</text>
+<rect class="tbl" x="176.00" y="80.30" width="50.00" height="4.45"/>
+<text x="177.00" y="83.50" font-size="2.15" text-anchor="start" font-weight="normal">cill_seal.ipt  ESP23-P12</text>
+<rect class="tbl" x="16.00" y="84.75" width="9.00" height="4.45"/>
+<text x="17.00" y="87.95" font-size="2.15" text-anchor="start" font-weight="normal">13</text>
+<rect class="tbl" x="25.00" y="84.75" width="50.00" height="4.45"/>
+<text x="26.00" y="87.95" font-size="2.15" text-anchor="start" font-weight="normal">heel seal</text>
+<rect class="tbl" x="75.00" y="84.75" width="9.00" height="4.45"/>
+<text x="76.00" y="87.95" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="84.75" width="92.00" height="4.45"/>
+<text x="85.00" y="87.95" font-size="2.15" text-anchor="start" font-weight="normal">EPDM rubber, 30 x 80</text>
+<rect class="tbl" x="176.00" y="84.75" width="50.00" height="4.45"/>
+<text x="177.00" y="87.95" font-size="2.15" text-anchor="start" font-weight="normal">heel_seal.ipt  ESP23-P13</text>
+<rect class="tbl" x="16.00" y="89.20" width="9.00" height="4.45"/>
+<text x="17.00" y="92.40" font-size="2.15" text-anchor="start" font-weight="normal">14</text>
+<rect class="tbl" x="25.00" y="89.20" width="50.00" height="4.45"/>
+<text x="26.00" y="92.40" font-size="2.15" text-anchor="start" font-weight="normal">mitre seal</text>
+<rect class="tbl" x="75.00" y="89.20" width="9.00" height="4.45"/>
+<text x="76.00" y="92.40" font-size="2.15" text-anchor="start" font-weight="normal">1</text>
+<rect class="tbl" x="84.00" y="89.20" width="92.00" height="4.45"/>
+<text x="85.00" y="92.40" font-size="2.15" text-anchor="start" font-weight="normal">EPDM rubber, 30 thick</text>
+<rect class="tbl" x="176.00" y="89.20" width="50.00" height="4.45"/>
+<text x="177.00" y="92.40" font-size="2.15" text-anchor="start" font-weight="normal">mitre_seal.ipt  ESP23-P14</text>
+<rect class="tbl" x="16.00" y="93.65" width="9.00" height="4.45"/>
+<text x="17.00" y="96.85" font-size="2.15" text-anchor="start" font-weight="normal">15</text>
+<rect class="tbl" x="25.00" y="93.65" width="50.00" height="4.45"/>
+<text x="26.00" y="96.85" font-size="2.15" text-anchor="start" font-weight="normal">pintle bush</text>
+<rect class="tbl" x="75.00" y="93.65" width="9.00" height="4.45"/>
+<text x="76.00" y="96.85" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="93.65" width="92.00" height="4.45"/>
+<text x="85.00" y="96.85" font-size="2.15" text-anchor="start" font-weight="normal">Aluminium bronze, cup bush</text>
+<rect class="tbl" x="176.00" y="93.65" width="50.00" height="4.45"/>
+<text x="177.00" y="96.85" font-size="2.15" text-anchor="start" font-weight="normal">pintle_bush.ipt  ESP23-P15</text>
+<rect class="tbl" x="16.00" y="98.10" width="9.00" height="4.45"/>
+<text x="17.00" y="101.30" font-size="2.15" text-anchor="start" font-weight="normal">16</text>
+<rect class="tbl" x="25.00" y="98.10" width="50.00" height="4.45"/>
+<text x="26.00" y="101.30" font-size="2.15" text-anchor="start" font-weight="normal">paddle door</text>
+<rect class="tbl" x="75.00" y="98.10" width="9.00" height="4.45"/>
+<text x="76.00" y="101.30" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="98.10" width="92.00" height="4.45"/>
+<text x="85.00" y="101.30" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, 20 plate</text>
+<rect class="tbl" x="176.00" y="98.10" width="50.00" height="4.45"/>
+<text x="177.00" y="101.30" font-size="2.15" text-anchor="start" font-weight="normal">paddle_door.ipt  ESP23-P16</text>
+<rect class="tbl" x="16.00" y="102.55" width="9.00" height="4.45"/>
+<text x="17.00" y="105.75" font-size="2.15" text-anchor="start" font-weight="normal">17</text>
+<rect class="tbl" x="25.00" y="102.55" width="50.00" height="4.45"/>
+<text x="26.00" y="105.75" font-size="2.15" text-anchor="start" font-weight="normal">paddle guide</text>
+<rect class="tbl" x="75.00" y="102.55" width="9.00" height="4.45"/>
+<text x="76.00" y="105.75" font-size="2.15" text-anchor="start" font-weight="normal">4</text>
+<rect class="tbl" x="84.00" y="102.55" width="92.00" height="4.45"/>
+<text x="85.00" y="105.75" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, angle</text>
+<rect class="tbl" x="176.00" y="102.55" width="50.00" height="4.45"/>
+<text x="177.00" y="105.75" font-size="2.15" text-anchor="start" font-weight="normal">paddle_guide.ipt  ESP23-P17</text>
+<rect class="tbl" x="16.00" y="107.00" width="9.00" height="4.45"/>
+<text x="17.00" y="110.20" font-size="2.15" text-anchor="start" font-weight="normal">18</text>
+<rect class="tbl" x="25.00" y="107.00" width="50.00" height="4.45"/>
+<text x="26.00" y="110.20" font-size="2.15" text-anchor="start" font-weight="normal">paddle rod</text>
+<rect class="tbl" x="75.00" y="107.00" width="9.00" height="4.45"/>
+<text x="76.00" y="110.20" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="107.00" width="92.00" height="4.45"/>
+<text x="85.00" y="110.20" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316 bar, 30 dia</text>
+<rect class="tbl" x="176.00" y="107.00" width="50.00" height="4.45"/>
+<text x="177.00" y="110.20" font-size="2.15" text-anchor="start" font-weight="normal">paddle_rod.ipt  ESP23-P18</text>
+<rect class="tbl" x="16.00" y="111.45" width="9.00" height="4.45"/>
+<text x="17.00" y="114.65" font-size="2.15" text-anchor="start" font-weight="normal">19</text>
+<rect class="tbl" x="25.00" y="111.45" width="50.00" height="4.45"/>
+<text x="26.00" y="114.65" font-size="2.15" text-anchor="start" font-weight="normal">paddle actuator</text>
+<rect class="tbl" x="75.00" y="111.45" width="9.00" height="4.45"/>
+<text x="76.00" y="114.65" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="111.45" width="92.00" height="4.45"/>
+<text x="85.00" y="114.65" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. electric linear actuator, 500 mm stroke, IP68</text>
+<rect class="tbl" x="176.00" y="111.45" width="50.00" height="4.45"/>
+<text x="177.00" y="114.65" font-size="2.15" text-anchor="start" font-weight="normal">paddle_actuator.ipt  ESP23-P19</text>
+<rect x="16.00" y="115.90" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="119.10" font-size="2.20" text-anchor="start" font-weight="bold">HINGES AND GATE POSITION SENSOR</text>
+<rect class="tbl" x="16.00" y="120.35" width="9.00" height="4.45"/>
+<text x="17.00" y="123.55" font-size="2.15" text-anchor="start" font-weight="normal">20</text>
+<rect class="tbl" x="25.00" y="120.35" width="50.00" height="4.45"/>
+<text x="26.00" y="123.55" font-size="2.15" text-anchor="start" font-weight="normal">bottom pintle</text>
+<rect class="tbl" x="75.00" y="120.35" width="9.00" height="4.45"/>
+<text x="76.00" y="123.55" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="120.35" width="92.00" height="4.45"/>
+<text x="85.00" y="123.55" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, 150 dia pin</text>
+<rect class="tbl" x="176.00" y="120.35" width="50.00" height="4.45"/>
+<text x="177.00" y="123.55" font-size="2.15" text-anchor="start" font-weight="normal">bottom_pintle.ipt  ESP23-P20</text>
+<rect class="tbl" x="16.00" y="124.80" width="9.00" height="4.45"/>
+<text x="17.00" y="128.00" font-size="2.15" text-anchor="start" font-weight="normal">21</text>
+<rect class="tbl" x="25.00" y="124.80" width="50.00" height="4.45"/>
+<text x="26.00" y="128.00" font-size="2.15" text-anchor="start" font-weight="normal">anchor bolt M24</text>
+<rect class="tbl" x="75.00" y="124.80" width="9.00" height="4.45"/>
+<text x="76.00" y="128.00" font-size="2.15" text-anchor="start" font-weight="normal">12</text>
+<rect class="tbl" x="84.00" y="124.80" width="92.00" height="4.45"/>
+<text x="85.00" y="128.00" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel A4, M24 x 410 resin anchor and nut (bought in)</text>
+<rect class="tbl" x="176.00" y="124.80" width="50.00" height="4.45"/>
+<text x="177.00" y="128.00" font-size="2.15" text-anchor="start" font-weight="normal">anchor_bolt.ipt  ESP23-P21</text>
+<rect class="tbl" x="16.00" y="129.25" width="9.00" height="4.45"/>
+<text x="17.00" y="132.45" font-size="2.15" text-anchor="start" font-weight="normal">22</text>
+<rect class="tbl" x="25.00" y="129.25" width="50.00" height="4.45"/>
+<text x="26.00" y="132.45" font-size="2.15" text-anchor="start" font-weight="normal">anchor collar</text>
+<rect class="tbl" x="75.00" y="129.25" width="9.00" height="4.45"/>
+<text x="76.00" y="132.45" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="129.25" width="92.00" height="4.45"/>
+<text x="85.00" y="132.45" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel forging, galvanised</text>
+<rect class="tbl" x="176.00" y="129.25" width="50.00" height="4.45"/>
+<text x="177.00" y="132.45" font-size="2.15" text-anchor="start" font-weight="normal">anchor_collar.ipt  ESP23-P22</text>
+<rect class="tbl" x="16.00" y="133.70" width="9.00" height="4.45"/>
+<text x="17.00" y="136.90" font-size="2.15" text-anchor="start" font-weight="normal">23</text>
+<rect class="tbl" x="25.00" y="133.70" width="50.00" height="4.45"/>
+<text x="26.00" y="136.90" font-size="2.15" text-anchor="start" font-weight="normal">collar bush</text>
+<rect class="tbl" x="75.00" y="133.70" width="9.00" height="4.45"/>
+<text x="76.00" y="136.90" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="133.70" width="92.00" height="4.45"/>
+<text x="85.00" y="136.90" font-size="2.15" text-anchor="start" font-weight="normal">Aluminium bronze</text>
+<rect class="tbl" x="176.00" y="133.70" width="50.00" height="4.45"/>
+<text x="177.00" y="136.90" font-size="2.15" text-anchor="start" font-weight="normal">collar_bush.ipt  ESP23-P23</text>
+<rect class="tbl" x="16.00" y="138.15" width="9.00" height="4.45"/>
+<text x="17.00" y="141.35" font-size="2.15" text-anchor="start" font-weight="normal">24</text>
+<rect class="tbl" x="25.00" y="138.15" width="50.00" height="4.45"/>
+<text x="26.00" y="141.35" font-size="2.15" text-anchor="start" font-weight="normal">anchor plate</text>
+<rect class="tbl" x="75.00" y="138.15" width="9.00" height="4.45"/>
+<text x="76.00" y="141.35" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="138.15" width="92.00" height="4.45"/>
+<text x="85.00" y="141.35" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel plate, 25 thick, galvanised</text>
+<rect class="tbl" x="176.00" y="138.15" width="50.00" height="4.45"/>
+<text x="177.00" y="141.35" font-size="2.15" text-anchor="start" font-weight="normal">anchor_plate.ipt  ESP23-P24</text>
+<rect class="tbl" x="16.00" y="142.60" width="9.00" height="4.45"/>
+<text x="17.00" y="145.80" font-size="2.15" text-anchor="start" font-weight="normal">25</text>
+<rect class="tbl" x="25.00" y="142.60" width="50.00" height="4.45"/>
+<text x="26.00" y="145.80" font-size="2.15" text-anchor="start" font-weight="normal">encoder bracket</text>
+<rect class="tbl" x="75.00" y="142.60" width="9.00" height="4.45"/>
+<text x="76.00" y="145.80" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="142.60" width="92.00" height="4.45"/>
+<text x="85.00" y="145.80" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, bent plate</text>
+<rect class="tbl" x="176.00" y="142.60" width="50.00" height="4.45"/>
+<text x="177.00" y="145.80" font-size="2.15" text-anchor="start" font-weight="normal">encoder_bracket.ipt  ESP23-P25</text>
+<rect class="tbl" x="16.00" y="147.05" width="9.00" height="4.45"/>
+<text x="17.00" y="150.25" font-size="2.15" text-anchor="start" font-weight="normal">26</text>
+<rect class="tbl" x="25.00" y="147.05" width="50.00" height="4.45"/>
+<text x="26.00" y="150.25" font-size="2.15" text-anchor="start" font-weight="normal">gate position encoder</text>
+<rect class="tbl" x="75.00" y="147.05" width="9.00" height="4.45"/>
+<text x="76.00" y="150.25" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="147.05" width="92.00" height="4.45"/>
+<text x="85.00" y="150.25" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. absolute rotary encoder, IP68</text>
+<rect class="tbl" x="176.00" y="147.05" width="50.00" height="4.45"/>
+<text x="177.00" y="150.25" font-size="2.15" text-anchor="start" font-weight="normal">position_encoder.ipt  ESP23-P26</text>
+<rect x="16.00" y="151.50" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="154.70" font-size="2.20" text-anchor="start" font-weight="bold">DRIVE (ONE PER LEAF)</text>
+<rect class="tbl" x="16.00" y="155.95" width="9.00" height="4.45"/>
+<text x="17.00" y="159.15" font-size="2.15" text-anchor="start" font-weight="normal">27</text>
+<rect class="tbl" x="25.00" y="155.95" width="50.00" height="4.45"/>
+<text x="26.00" y="159.15" font-size="2.15" text-anchor="start" font-weight="normal">actuator body</text>
+<rect class="tbl" x="75.00" y="155.95" width="9.00" height="4.45"/>
+<text x="76.00" y="159.15" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="155.95" width="92.00" height="4.45"/>
+<text x="85.00" y="159.15" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. electro-mechanical linear actuator, 20 kN, 1300 stroke, IP68</text>
+<rect class="tbl" x="176.00" y="155.95" width="50.00" height="4.45"/>
+<text x="177.00" y="159.15" font-size="2.15" text-anchor="start" font-weight="normal">actuator_body.ipt  ESP23-P27</text>
+<rect class="tbl" x="16.00" y="160.40" width="9.00" height="4.45"/>
+<text x="17.00" y="163.60" font-size="2.15" text-anchor="start" font-weight="normal">28</text>
+<rect class="tbl" x="25.00" y="160.40" width="50.00" height="4.45"/>
+<text x="26.00" y="163.60" font-size="2.15" text-anchor="start" font-weight="normal">actuator motor and gearbox</text>
+<rect class="tbl" x="75.00" y="160.40" width="9.00" height="4.45"/>
+<text x="76.00" y="163.60" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="160.40" width="92.00" height="4.45"/>
+<text x="85.00" y="163.60" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. 1.1 kW motor and gearbox, 230 V</text>
+<rect class="tbl" x="176.00" y="160.40" width="50.00" height="4.45"/>
+<text x="177.00" y="163.60" font-size="2.15" text-anchor="start" font-weight="normal">actuator_motor.ipt  ESP23-P28</text>
+<rect class="tbl" x="16.00" y="164.85" width="9.00" height="4.45"/>
+<text x="17.00" y="168.05" font-size="2.15" text-anchor="start" font-weight="normal">29</text>
+<rect class="tbl" x="25.00" y="164.85" width="50.00" height="4.45"/>
+<text x="26.00" y="168.05" font-size="2.15" text-anchor="start" font-weight="normal">actuator rod</text>
+<rect class="tbl" x="75.00" y="164.85" width="9.00" height="4.45"/>
+<text x="76.00" y="168.05" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="164.85" width="92.00" height="4.45"/>
+<text x="85.00" y="168.05" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316 bar, 70 dia, hard chromed</text>
+<rect class="tbl" x="176.00" y="164.85" width="50.00" height="4.45"/>
+<text x="177.00" y="168.05" font-size="2.15" text-anchor="start" font-weight="normal">actuator_rod.ipt  ESP23-P29</text>
+<rect class="tbl" x="16.00" y="169.30" width="9.00" height="4.45"/>
+<text x="17.00" y="172.50" font-size="2.15" text-anchor="start" font-weight="normal">30</text>
+<rect class="tbl" x="25.00" y="169.30" width="50.00" height="4.45"/>
+<text x="26.00" y="172.50" font-size="2.15" text-anchor="start" font-weight="normal">rod end eye</text>
+<rect class="tbl" x="75.00" y="169.30" width="9.00" height="4.45"/>
+<text x="76.00" y="172.50" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="169.30" width="92.00" height="4.45"/>
+<text x="85.00" y="172.50" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, with spherical bearing</text>
+<rect class="tbl" x="176.00" y="169.30" width="50.00" height="4.45"/>
+<text x="177.00" y="172.50" font-size="2.15" text-anchor="start" font-weight="normal">rod_end.ipt  ESP23-P30</text>
+<rect class="tbl" x="16.00" y="173.75" width="9.00" height="4.45"/>
+<text x="17.00" y="176.95" font-size="2.15" text-anchor="start" font-weight="normal">31</text>
+<rect class="tbl" x="25.00" y="173.75" width="50.00" height="4.45"/>
+<text x="26.00" y="176.95" font-size="2.15" text-anchor="start" font-weight="normal">pivot pedestal</text>
+<rect class="tbl" x="75.00" y="173.75" width="9.00" height="4.45"/>
+<text x="76.00" y="176.95" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="173.75" width="92.00" height="4.45"/>
+<text x="85.00" y="176.95" font-size="2.15" text-anchor="start" font-weight="normal">S355 steel, galvanised</text>
+<rect class="tbl" x="176.00" y="173.75" width="50.00" height="4.45"/>
+<text x="177.00" y="176.95" font-size="2.15" text-anchor="start" font-weight="normal">pivot_pedestal.ipt  ESP23-P31</text>
+<rect class="tbl" x="16.00" y="178.20" width="9.00" height="4.45"/>
+<text x="17.00" y="181.40" font-size="2.15" text-anchor="start" font-weight="normal">32</text>
+<rect class="tbl" x="25.00" y="178.20" width="50.00" height="4.45"/>
+<text x="26.00" y="181.40" font-size="2.15" text-anchor="start" font-weight="normal">pivot pin</text>
+<rect class="tbl" x="75.00" y="178.20" width="9.00" height="4.45"/>
+<text x="76.00" y="181.40" font-size="2.15" text-anchor="start" font-weight="normal">4</text>
+<rect class="tbl" x="84.00" y="178.20" width="92.00" height="4.45"/>
+<text x="85.00" y="181.40" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel 316, 40 dia</text>
+<rect class="tbl" x="176.00" y="178.20" width="50.00" height="4.45"/>
+<text x="177.00" y="181.40" font-size="2.15" text-anchor="start" font-weight="normal">pivot_pin.ipt  ESP23-P32</text>
+<rect x="16.00" y="182.65" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="185.85" font-size="2.20" text-anchor="start" font-weight="bold">INSPECTION CHAMBER, CONTROLS AND CCTV</text>
+<rect class="tbl" x="16.00" y="187.10" width="9.00" height="4.45"/>
+<text x="17.00" y="190.30" font-size="2.15" text-anchor="start" font-weight="normal">33</text>
+<rect class="tbl" x="25.00" y="187.10" width="50.00" height="4.45"/>
+<text x="26.00" y="190.30" font-size="2.15" text-anchor="start" font-weight="normal">inspection chamber</text>
+<rect class="tbl" x="75.00" y="187.10" width="9.00" height="4.45"/>
+<text x="76.00" y="190.30" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="187.10" width="92.00" height="4.45"/>
+<text x="85.00" y="190.30" font-size="2.15" text-anchor="start" font-weight="normal">Precast concrete C40/50</text>
+<rect class="tbl" x="176.00" y="187.10" width="50.00" height="4.45"/>
+<text x="177.00" y="190.30" font-size="2.15" text-anchor="start" font-weight="normal">inspection_chamber.ipt  ESP23-P33</text>
+<rect class="tbl" x="16.00" y="191.55" width="9.00" height="4.45"/>
+<text x="17.00" y="194.75" font-size="2.15" text-anchor="start" font-weight="normal">34</text>
+<rect class="tbl" x="25.00" y="191.55" width="50.00" height="4.45"/>
+<text x="26.00" y="194.75" font-size="2.15" text-anchor="start" font-weight="normal">actuator plinth</text>
+<rect class="tbl" x="75.00" y="191.55" width="9.00" height="4.45"/>
+<text x="76.00" y="194.75" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="191.55" width="92.00" height="4.45"/>
+<text x="85.00" y="194.75" font-size="2.15" text-anchor="start" font-weight="normal">Concrete C40/50, cast in the chamber</text>
+<rect class="tbl" x="176.00" y="191.55" width="50.00" height="4.45"/>
+<text x="177.00" y="194.75" font-size="2.15" text-anchor="start" font-weight="normal">actuator_plinth.ipt  ESP23-P34</text>
+<rect class="tbl" x="16.00" y="196.00" width="9.00" height="4.45"/>
+<text x="17.00" y="199.20" font-size="2.15" text-anchor="start" font-weight="normal">35</text>
+<rect class="tbl" x="25.00" y="196.00" width="50.00" height="4.45"/>
+<text x="26.00" y="199.20" font-size="2.15" text-anchor="start" font-weight="normal">chamber cover panel</text>
+<rect class="tbl" x="75.00" y="196.00" width="9.00" height="4.45"/>
+<text x="76.00" y="199.20" font-size="2.15" text-anchor="start" font-weight="normal">6</text>
+<rect class="tbl" x="84.00" y="196.00" width="92.00" height="4.45"/>
+<text x="85.00" y="199.20" font-size="2.15" text-anchor="start" font-weight="normal">GRP grating panel, 50 deep, 30 kN/m2</text>
+<rect class="tbl" x="176.00" y="196.00" width="50.00" height="4.45"/>
+<text x="177.00" y="199.20" font-size="2.15" text-anchor="start" font-weight="normal">cover_panel.ipt  ESP23-P35</text>
+<rect class="tbl" x="16.00" y="200.45" width="9.00" height="4.45"/>
+<text x="17.00" y="203.65" font-size="2.15" text-anchor="start" font-weight="normal">36</text>
+<rect class="tbl" x="25.00" y="200.45" width="50.00" height="4.45"/>
+<text x="26.00" y="203.65" font-size="2.15" text-anchor="start" font-weight="normal">control panel</text>
+<rect class="tbl" x="75.00" y="200.45" width="9.00" height="4.45"/>
+<text x="76.00" y="203.65" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="200.45" width="92.00" height="4.45"/>
+<text x="85.00" y="203.65" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. stainless IP66 enclosure, controller, mains isolator, UPS</text>
+<rect class="tbl" x="176.00" y="200.45" width="50.00" height="4.45"/>
+<text x="177.00" y="203.65" font-size="2.15" text-anchor="start" font-weight="normal">control_panel.ipt  ESP23-P36</text>
+<rect class="tbl" x="16.00" y="204.90" width="9.00" height="4.45"/>
+<text x="17.00" y="208.10" font-size="2.15" text-anchor="start" font-weight="normal">37</text>
+<rect class="tbl" x="25.00" y="204.90" width="50.00" height="4.45"/>
+<text x="26.00" y="208.10" font-size="2.15" text-anchor="start" font-weight="normal">CCTV mast</text>
+<rect class="tbl" x="75.00" y="204.90" width="9.00" height="4.45"/>
+<text x="76.00" y="208.10" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="204.90" width="92.00" height="4.45"/>
+<text x="85.00" y="208.10" font-size="2.15" text-anchor="start" font-weight="normal">Galvanised steel tube, 120 dia, on a base plate</text>
+<rect class="tbl" x="176.00" y="204.90" width="50.00" height="4.45"/>
+<text x="177.00" y="208.10" font-size="2.15" text-anchor="start" font-weight="normal">cctv_mast.ipt  ESP23-P37</text>
+<rect class="tbl" x="16.00" y="209.35" width="9.00" height="4.45"/>
+<text x="17.00" y="212.55" font-size="2.15" text-anchor="start" font-weight="normal">38</text>
+<rect class="tbl" x="25.00" y="209.35" width="50.00" height="4.45"/>
+<text x="26.00" y="212.55" font-size="2.15" text-anchor="start" font-weight="normal">CCTV camera</text>
+<rect class="tbl" x="75.00" y="209.35" width="9.00" height="4.45"/>
+<text x="76.00" y="212.55" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="209.35" width="92.00" height="4.45"/>
+<text x="85.00" y="212.55" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. PTZ camera with bracket, IP67</text>
+<rect class="tbl" x="176.00" y="209.35" width="50.00" height="4.45"/>
+<text x="177.00" y="212.55" font-size="2.15" text-anchor="start" font-weight="normal">cctv_camera.ipt  ESP23-P38</text>
+<rect class="tbl" x="16.00" y="213.80" width="9.00" height="4.45"/>
+<text x="17.00" y="217.00" font-size="2.15" text-anchor="start" font-weight="normal">39</text>
+<rect class="tbl" x="25.00" y="213.80" width="50.00" height="4.45"/>
+<text x="26.00" y="217.00" font-size="2.15" text-anchor="start" font-weight="normal">call point post</text>
+<rect class="tbl" x="75.00" y="213.80" width="9.00" height="4.45"/>
+<text x="76.00" y="217.00" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="213.80" width="92.00" height="4.45"/>
+<text x="85.00" y="217.00" font-size="2.15" text-anchor="start" font-weight="normal">Stainless steel box section 150 x 150</text>
+<rect class="tbl" x="176.00" y="213.80" width="50.00" height="4.45"/>
+<text x="177.00" y="217.00" font-size="2.15" text-anchor="start" font-weight="normal">call_point_post.ipt  ESP23-P39</text>
+<rect class="tbl" x="16.00" y="218.25" width="9.00" height="4.45"/>
+<text x="17.00" y="221.45" font-size="2.15" text-anchor="start" font-weight="normal">40</text>
+<rect class="tbl" x="25.00" y="218.25" width="50.00" height="4.45"/>
+<text x="26.00" y="221.45" font-size="2.15" text-anchor="start" font-weight="normal">emergency call point</text>
+<rect class="tbl" x="75.00" y="218.25" width="9.00" height="4.45"/>
+<text x="76.00" y="221.45" font-size="2.15" text-anchor="start" font-weight="normal">2</text>
+<rect class="tbl" x="84.00" y="218.25" width="92.00" height="4.45"/>
+<text x="85.00" y="221.45" font-size="2.15" text-anchor="start" font-weight="normal">Bought in. stop button and intercom, IP66</text>
+<rect class="tbl" x="176.00" y="218.25" width="50.00" height="4.45"/>
+<text x="177.00" y="221.45" font-size="2.15" text-anchor="start" font-weight="normal">call_point.ipt  ESP23-P40</text>
+<rect x="16.00" y="222.70" width="210.00" height="4.45" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>
+<text x="17.20" y="225.90" font-size="2.20" text-anchor="start" font-weight="bold">CIVIL WORKS</text>
+<rect class="tbl" x="16.00" y="227.15" width="9.00" height="4.45"/>
+<text x="17.00" y="230.35" font-size="2.15" text-anchor="start" font-weight="normal">41</text>
+<rect class="tbl" x="25.00" y="227.15" width="50.00" height="4.45"/>
+<text x="26.00" y="230.35" font-size="2.15" text-anchor="start" font-weight="normal">cill</text>
+<rect class="tbl" x="75.00" y="227.15" width="9.00" height="4.45"/>
+<text x="76.00" y="230.35" font-size="2.15" text-anchor="start" font-weight="normal">1</text>
+<rect class="tbl" x="84.00" y="227.15" width="92.00" height="4.45"/>
+<text x="85.00" y="230.35" font-size="2.15" text-anchor="start" font-weight="normal">Precast concrete C40/50</text>
+<rect class="tbl" x="176.00" y="227.15" width="50.00" height="4.45"/>
+<text x="177.00" y="230.35" font-size="2.15" text-anchor="start" font-weight="normal">cill.ipt  ESP23-P41</text>
+<text x="16.00" y="236.10" font-size="2.40" text-anchor="start" font-weight="normal">41 different parts, 120 parts in all. Quantities are for one gate system: a pair of leaves with their hinges, drives and chambers.</text>
+<path class="vis" d="M297.70,167.70 L297.70,167.73 L297.70,167.76 L297.70,167.79 L297.70,167.82 L297.70,167.85 L297.71,167.88 L297.71,167.90 L297.72,167.93 L297.72,167.96 L297.73,167.99 L297.74,168.02 L297.75,168.05 L297.76,168.08 L297.78,168.11 L297.79,168.14 L297.80,168.16 L297.82,168.19 L297.84,168.22 L297.85,168.25 L297.87,168.28 L297.89,168.31 L297.91,168.34 L297.96,168.39 L298.00,168.45 L298.06,168.51 L298.11,168.56 L298.17,168.62 L298.24,168.67 L298.30,168.73 L298.38,168.78 L298.45,168.83 L298.53,168.89 L298.61,168.94 L298.70,168.99 L298.79,169.04 L298.88,169.09 L298.97,169.13 L299.07,169.18 L299.17,169.23 L299.28,169.27 L299.39,169.32 L299.50,169.36 L299.61,169.40 M299.61,169.40 L306.43,171.85 M312.97,53.03 L313.81,53.33 M315.04,53.77 L315.66,53.99 M306.43,171.85 L314.00,58.23 M299.61,169.40 L307.17,55.79 M312.97,53.03 L312.90,53.00 L312.82,52.98 L312.74,52.95 L312.66,52.93 L312.58,52.90 L312.49,52.88 L312.33,52.83 M308.05,52.55 L307.90,52.57 L307.75,52.59 L307.61,52.61 L307.47,52.64 L307.33,52.67 L307.19,52.70 L307.06,52.74 L306.93,52.77 L306.81,52.81 L306.69,52.85 L306.57,52.89 L306.46,52.93 L306.35,52.98 L306.25,53.03 L306.20,53.05 L306.15,53.07 L306.10,53.10 L306.06,53.12 L306.01,53.15 L305.97,53.18 L305.92,53.20 L305.88,53.23 L305.84,53.26 L305.80,53.28 L305.76,53.31 L305.73,53.34 L305.69,53.37 L305.66,53.40 L305.63,53.42 L305.60,53.45 L305.57,53.48 L305.54,53.51 L305.51,53.54 L305.48,53.57 L305.46,53.60 L305.44,53.64 L305.42,53.67 L305.40,53.70 L305.38,53.73 L305.36,53.76 L305.34,53.79 L305.33,53.83 L305.32,53.86 L305.30,53.89 L305.29,53.92 L305.29,53.96 L305.28,53.99 L305.27,54.02 L305.27,54.06 L305.27,54.09 M305.27,54.09 L305.26,54.12 L305.26,54.15 L305.26,54.17 L305.27,54.20 L305.27,54.23 L305.27,54.26 L305.28,54.29 L305.28,54.32 L305.29,54.35 L305.30,54.38 L305.31,54.41 L305.32,54.43 L305.33,54.46 L305.34,54.49 L305.36,54.52 L305.37,54.55 L305.39,54.58 L305.40,54.61 L305.42,54.64 L305.44,54.66 L305.46,54.69 L305.48,54.72 L305.52,54.78 L305.57,54.84 L305.62,54.89 L305.68,54.95 L305.74,55.00 L305.80,55.06 L305.87,55.11 L305.94,55.17 L306.02,55.22 L306.10,55.27 L306.18,55.32 L306.26,55.37 L306.35,55.42 L306.45,55.47 L306.54,55.52 L306.64,55.57 L306.74,55.61 L306.84,55.66 L306.95,55.70 L307.06,55.74 L307.17,55.79 M307.17,55.79 L314.00,58.23 M311.78,55.02 L311.83,55.00 L311.87,54.97 L311.92,54.95 L311.96,54.92 L312.00,54.89 L312.03,54.86 L312.06,54.83 L312.09,54.80 L312.12,54.77 L312.14,54.74 L312.16,54.71 L312.18,54.68 L312.19,54.65 L312.20,54.62 L312.21,54.58 L312.21,54.55 M307.94,54.27 L307.94,54.30 L307.94,54.33 L307.95,54.37 L307.95,54.40 L307.97,54.44 L307.98,54.47 L308.00,54.50 L308.02,54.54 L308.05,54.57 L308.08,54.60 L308.11,54.64 L308.15,54.67 L308.18,54.70 L308.22,54.73 L308.27,54.77 L308.31,54.80 L308.36,54.83 L308.41,54.86 L308.47,54.89 L308.53,54.91 L308.59,54.94 L308.65,54.97 L308.71,54.99 L308.78,55.02 L308.84,55.04 L308.91,55.06 L308.99,55.09 L309.06,55.11 L309.13,55.13 L309.21,55.14 L309.29,55.16 L309.37,55.18 L309.45,55.19 L309.53,55.21 L309.61,55.22 L309.69,55.23 L309.78,55.24 L309.86,55.25 L309.94,55.26 L310.03,55.26 L310.11,55.27 L310.20,55.27 L310.28,55.27 L310.36,55.27 L310.45,55.27 L310.53,55.27 L310.61,55.27 L310.69,55.26 L310.77,55.26 L310.85,55.25 L310.93,55.24 L311.01,55.23 L311.08,55.22 L311.15,55.21 L311.23,55.20 L311.30,55.18 L311.36,55.16 L311.43,55.15 L311.49,55.13 L311.56,55.11 L311.62,55.09 L311.67,55.07 L311.73,55.04 L311.78,55.02 M311.98,52.08 L312.02,52.06 L312.07,52.03 L312.11,52.01 L312.15,51.98 L312.19,51.95 L312.23,51.92 L312.26,51.90 L312.29,51.87 L312.31,51.84 L312.34,51.81 L312.36,51.77 L312.37,51.74 L312.39,51.71 L312.40,51.68 L312.40,51.65 L312.41,51.61 M312.41,51.61 L312.41,51.59 L312.41,51.57 L312.40,51.55 L312.40,51.53 L312.40,51.51 L312.39,51.49 L312.38,51.46 L312.38,51.44 L312.37,51.42 L312.36,51.40 L312.34,51.38 L312.33,51.36 L312.32,51.34 L312.30,51.32 L312.28,51.30 L312.27,51.28 L312.25,51.25 L312.23,51.23 L312.20,51.21 L312.18,51.19 L312.13,51.15 L312.08,51.11 L312.02,51.08 L311.96,51.04 L311.89,51.00 L311.82,50.97 L311.75,50.93 L311.67,50.90 L311.59,50.87 L311.50,50.84 L311.42,50.81 L311.33,50.78 L311.23,50.76 L311.14,50.74 L311.04,50.71 L310.94,50.69 L310.84,50.68 L310.74,50.66 L310.64,50.65 L310.54,50.63 L310.43,50.62 L310.33,50.62 L310.22,50.61 L310.12,50.61 L310.01,50.60 L309.91,50.61 L309.81,50.61 L309.70,50.61 L309.60,50.62 L309.50,50.63 L309.41,50.64 L309.31,50.65 L309.22,50.66 L309.13,50.68 L309.04,50.70 L308.96,50.72 L308.88,50.74 L308.80,50.77 L308.72,50.79 L308.65,50.82 L308.59,50.85 L308.52,50.88 L308.47,50.91 L308.41,50.94 L308.39,50.96 L308.36,50.98 L308.34,50.99 L308.32,51.01 L308.30,51.03 L308.28,51.05 L308.26,51.07 L308.24,51.09 L308.23,51.11 L308.21,51.12 L308.20,51.14 L308.18,51.16 L308.17,51.18 L308.16,51.20 L308.16,51.22 L308.15,51.24 L308.14,51.27 L308.14,51.29 L308.13,51.31 L308.13,51.33 M308.13,51.33 L308.13,51.36 L308.13,51.40 L308.14,51.43 L308.15,51.46 L308.16,51.50 L308.18,51.53 L308.20,51.57 L308.22,51.60 L308.25,51.63 L308.27,51.67 L308.31,51.70 L308.34,51.73 L308.38,51.76 L308.42,51.80 L308.46,51.83 L308.51,51.86 L308.56,51.89 L308.61,51.92 L308.67,51.95 L308.72,51.98 L308.78,52.00 L308.84,52.03 L308.91,52.05 L308.97,52.08 L309.04,52.10 L309.11,52.13 L309.18,52.15 L309.26,52.17 L309.33,52.19 L309.41,52.21 L309.48,52.22 L309.56,52.24 L309.64,52.26 L309.72,52.27 L309.81,52.28 L309.89,52.29 L309.97,52.30 L310.06,52.31 L310.14,52.32 L310.22,52.32 L310.31,52.33 L310.39,52.33 L310.48,52.34 L310.56,52.34 L310.64,52.34 L310.73,52.33 L310.81,52.33 L310.89,52.33 L310.97,52.32 L311.05,52.31 L311.13,52.30 L311.20,52.29 L311.28,52.28 L311.35,52.27 L311.42,52.26 L311.49,52.24 L311.56,52.23 L311.63,52.21 L311.69,52.19 L311.75,52.17 L311.81,52.15 L311.87,52.13 L311.92,52.11 L311.98,52.08 M336.45,182.62 L344.16,66.85 M344.16,66.85 L347.59,65.23 M349.42,64.36 L349.55,64.29 M336.45,182.62 L340.29,184.00 M340.29,184.00 L348.00,68.23 M344.16,66.85 L348.00,68.23 M350.81,64.40 L356.36,66.39 M356.36,66.39 L348.00,68.23 M348.65,182.16 L356.36,66.39 M348.65,182.16 L345.77,182.80 M343.73,183.25 L340.29,184.00 M306.43,171.85 L306.69,167.93 M309.00,168.54 L312.22,167.01 M306.69,167.93 L306.95,167.81 M306.43,171.85 L336.45,182.62 M336.45,182.62 L336.71,178.70 M306.69,167.93 L336.71,178.70 M312.22,167.01 L317.02,168.74 M319.67,171.93 L322.37,170.66 M322.37,170.66 L327.00,172.32 M329.65,175.52 L332.35,174.24 M332.35,174.24 L336.90,175.87 M306.95,167.81 L336.73,178.50 M307.28,159.12 L307.54,155.20 M309.84,155.81 L313.07,154.28 M307.54,155.20 L307.80,155.08 M307.28,159.12 L326.92,166.16 M328.19,166.62 L335.79,169.35 M337.30,169.89 L337.56,165.97 M307.54,155.20 L327.18,162.25 M313.07,154.28 L317.87,156.00 M320.52,159.20 L323.22,157.92 M323.22,157.92 L327.37,159.41 M307.80,155.08 L327.20,162.04 M308.13,146.38 L308.39,142.47 M310.69,143.08 L313.91,141.55 M308.39,142.47 L308.65,142.34 M308.13,146.38 L327.77,153.43 M338.15,157.16 L338.41,153.24 M308.39,142.47 L328.03,149.51 M329.30,149.97 L332.24,151.02 M332.86,151.25 L336.90,152.70 M313.91,141.55 L318.71,143.27 M321.37,146.47 L324.06,145.19 M324.06,145.19 L328.22,146.68 M331.35,150.05 L332.33,149.58 M333.00,149.27 L334.04,148.77 M334.04,148.77 L337.09,149.86 M308.65,142.34 L328.04,149.30 M329.31,149.76 L332.25,150.81 M332.88,151.04 L336.91,152.49 M309.04,132.67 L309.30,128.75 M311.61,129.37 L314.83,127.84 M309.30,128.75 L309.56,128.63 M309.04,132.67 L332.89,141.23 M333.52,141.45 L339.06,143.45 M339.06,143.45 L339.32,139.53 M309.30,128.75 L333.15,137.31 M333.78,137.54 L339.32,139.53 M314.83,127.84 L319.63,129.56 M322.28,132.76 L324.98,131.48 M324.98,131.48 L329.61,133.14 M332.26,136.34 L333.24,135.87 M333.91,135.56 L334.96,135.06 M334.96,135.06 L339.51,136.69 M309.56,128.63 L333.16,137.10 M333.79,137.33 L339.34,139.32 M310.02,117.98 L310.28,114.06 M312.58,114.67 L315.81,113.14 M310.28,114.06 L310.54,113.94 M310.02,117.98 L333.87,126.54 M334.50,126.76 L340.04,128.75 M340.04,128.75 L340.30,124.84 M310.28,114.06 L334.13,122.62 M334.76,122.85 L340.30,124.84 M315.81,113.14 L320.61,114.87 M323.26,118.07 L325.96,116.79 M325.96,116.79 L330.59,118.45 M333.24,121.65 L334.22,121.18 M334.89,120.86 L335.93,120.37 M335.93,120.37 L340.49,122.00 M310.54,113.94 L334.14,122.41 M334.77,122.64 L340.32,124.63 M311.13,101.33 L311.39,97.41 M313.69,98.02 L316.91,96.49 M311.39,97.41 L311.65,97.29 M311.13,101.33 L334.98,109.89 M335.60,110.11 L341.15,112.10 M341.15,112.10 L341.41,108.19 M311.39,97.41 L335.24,105.97 M335.87,106.20 L341.41,108.19 M316.91,96.49 L321.72,98.22 M324.37,101.42 L327.06,100.14 M327.06,100.14 L331.69,101.80 M334.35,105.00 L335.33,104.53 M336.00,104.21 L337.04,103.72 M337.04,103.72 L341.60,105.35 M311.65,97.29 L335.25,105.76 M335.88,105.99 L341.43,107.98 M312.37,82.72 L312.63,78.80 M314.93,79.41 L318.15,77.88 M312.63,78.80 L312.89,78.68 M312.37,82.72 L336.21,91.28 M336.84,91.50 L342.39,93.49 M342.39,93.49 L342.65,89.58 M312.63,78.80 L336.48,87.36 M337.10,87.59 L342.65,89.58 M318.15,77.88 L322.95,79.61 M325.61,82.81 L328.30,81.53 M328.30,81.53 L332.93,83.19 M335.59,86.39 L336.57,85.92 M337.24,85.60 L338.28,85.11 M338.28,85.11 L342.84,86.74 M312.89,78.68 L336.49,87.15 M337.12,87.38 L342.66,89.37 M313.88,60.00 L314.14,56.08 M313.88,60.00 L337.10,68.33 M339.81,69.30 L343.90,70.77 M343.90,70.77 L344.16,66.85 M314.14,56.08 L337.36,64.41 M339.25,65.09 L344.16,66.85 M344.16,66.85 L344.42,66.73 M316.84,171.36 L317.42,162.75 M317.69,158.63 L318.26,150.02 M318.54,145.89 L319.18,136.31 M319.45,132.18 L320.16,121.62 M320.43,117.49 L321.27,104.97 M321.54,100.84 L322.50,86.36 M322.78,82.23 L324.02,63.64 M319.67,171.93 L319.15,172.19 M317.10,171.45 L317.67,162.85 M320.52,159.20 L319.99,159.45 M317.95,158.72 L318.52,150.11 M321.37,146.47 L320.84,146.72 M318.80,145.99 L319.43,136.40 M322.28,132.76 L321.76,133.01 M319.71,132.27 L320.41,121.71 M323.26,118.07 L322.73,118.32 M320.69,117.58 L321.52,105.06 M324.37,101.42 L323.84,101.67 M321.80,100.93 L322.76,86.45 M325.61,82.81 L325.08,83.06 M323.04,82.32 L324.27,63.73 M322.37,170.66 L322.77,164.67 M323.22,157.92 L323.61,151.94 M324.06,145.19 L324.53,138.23 M324.98,131.48 L325.51,123.54 M325.96,116.79 L326.61,106.89 M327.06,100.14 L327.85,88.28 M328.30,81.53 L329.37,65.55 M326.82,174.94 L327.37,166.75 M329.09,140.88 L329.16,139.89 M329.43,135.76 L330.14,125.20 M330.41,121.07 L331.24,108.55 M331.52,104.42 L332.48,89.94 M332.76,85.81 L334.00,67.22 M329.65,175.52 L329.13,175.77 M327.08,175.03 L327.62,166.85 M331.35,150.05 L330.82,150.30 M329.35,140.96 L329.41,139.98 M332.26,136.34 L331.73,136.59 M329.69,135.85 L330.39,125.29 M333.24,121.65 L332.71,121.90 M330.67,121.16 L331.50,108.64 M334.35,105.00 L333.82,105.25 M331.78,104.51 L332.74,90.03 M335.59,86.39 L335.06,86.64 M333.01,85.90 L334.25,67.31 M332.35,174.24 L332.74,168.25 M334.04,148.77 L334.51,141.81 M334.96,135.06 L335.48,127.12 M335.93,120.37 L336.59,110.47 M337.04,103.72 L337.83,91.86 M338.28,85.11 L339.33,69.35 M312.22,167.01 L312.62,161.03 M313.07,154.28 L313.46,148.30 M313.91,141.55 L314.38,134.59 M314.83,127.84 L315.36,119.90 M315.81,113.14 L316.46,103.24 M316.91,96.49 L317.70,84.64 M318.15,77.88 L319.22,61.91 M313.63,55.85 L313.79,53.50 M315.90,52.85 L315.86,52.80 L315.82,52.76 L315.77,52.73 L315.73,52.69 L315.68,52.65 L315.64,52.62 L315.59,52.59 L315.55,52.56 L315.50,52.53 L315.45,52.50 L315.40,52.48 L315.36,52.46 L315.31,52.44 L315.26,52.42 L315.21,52.40 L315.16,52.39 L315.11,52.38 L315.06,52.37 L315.01,52.36 L314.97,52.35 L314.92,52.35 L314.87,52.34 L314.82,52.34 L314.77,52.35 L314.73,52.35 L314.68,52.36 L314.64,52.37 L314.59,52.38 L314.55,52.39 L314.50,52.40 L314.46,52.42 L314.42,52.44 M314.42,52.44 L314.39,52.46 L314.35,52.47 L314.32,52.49 L314.29,52.51 L314.26,52.53 L314.23,52.56 L314.20,52.58 L314.17,52.61 L314.15,52.63 L314.12,52.66 L314.09,52.69 L314.07,52.72 L314.05,52.75 L314.02,52.78 L314.00,52.81 L313.98,52.85 L313.96,52.88 L313.94,52.92 L313.92,52.95 L313.91,52.99 L313.89,53.03 L313.88,53.07 L313.86,53.11 L313.85,53.15 L313.84,53.19 L313.83,53.23 L313.82,53.28 L313.81,53.32 L313.80,53.36 L313.80,53.41 L313.79,53.45 L313.79,53.50 M313.63,55.85 L314.15,56.03 M315.19,53.40 L315.23,53.41 L315.27,53.43 L315.31,53.46 L315.35,53.48 L315.39,53.51 L315.42,53.54 L315.45,53.58 L315.49,53.62 L315.52,53.66 L315.54,53.70 L315.57,53.74 L315.59,53.79 L315.61,53.83 L315.63,53.88 L315.64,53.93 L315.65,53.97 L315.66,54.02 L315.67,54.07 L315.67,54.12 L315.67,54.16 L315.66,54.21 L315.65,54.25 L315.64,54.30 L315.64,54.32 L315.63,54.34 L315.62,54.36 L315.61,54.38 L315.61,54.39 L315.60,54.41 L315.59,54.43 L315.57,54.44 L315.56,54.46 L315.55,54.48 L315.54,54.49 L315.52,54.50 L315.51,54.52 L315.49,54.53 L315.48,54.54 L315.46,54.55 L315.45,54.56 L315.43,54.57 M315.43,54.57 L315.41,54.58 L315.39,54.58 L315.36,54.59 L315.34,54.60 L315.32,54.60 L315.29,54.60 L315.27,54.60 L315.24,54.60 L315.22,54.60 L315.19,54.59 L315.17,54.59 L315.14,54.58 L315.12,54.57 L315.09,54.57 L315.07,54.55 L315.04,54.54 L315.02,54.53 L314.99,54.51 L314.97,54.50 L314.95,54.48 L314.92,54.46 L314.90,54.44 L314.88,54.42 L314.86,54.40 L314.84,54.38 L314.82,54.35 L314.80,54.33 L314.78,54.30 L314.77,54.27 L314.75,54.25 L314.74,54.22 L314.72,54.19 L314.71,54.16 L314.70,54.13 L314.69,54.10 L314.68,54.07 L314.67,54.04 L314.66,54.01 L314.65,53.98 L314.65,53.95 L314.65,53.92 L314.64,53.89 L314.64,53.86 L314.64,53.83 L314.64,53.81 L314.64,53.78 L314.65,53.75 L314.65,53.72 L314.66,53.69 L314.67,53.67 L314.68,53.64 L314.68,53.62 L314.70,53.59 L314.71,53.57 L314.72,53.55 L314.73,53.53 L314.75,53.51 L314.76,53.49 L314.78,53.47 L314.80,53.46 L314.82,53.44 L314.84,53.43 L314.86,53.42 L314.88,53.41 M314.88,53.41 L314.90,53.40 L314.91,53.39 L314.93,53.39 L314.95,53.38 L314.97,53.38 L314.99,53.37 L315.01,53.37 L315.03,53.37 L315.05,53.37 L315.07,53.37 L315.09,53.37 L315.11,53.38 L315.13,53.38 L315.15,53.39 L315.17,53.39 L315.19,53.40 M316.90,54.01 L316.90,53.95 L316.89,53.89 L316.88,53.83 L316.87,53.77 M315.93,52.37 L315.90,52.35 L315.86,52.33 L315.83,52.31 L315.79,52.30 L315.75,52.28 L315.72,52.26 L315.68,52.25 L315.64,52.24 L315.61,52.22 L315.57,52.21 L315.53,52.20 L315.50,52.19 L315.46,52.18 L315.42,52.18 L315.39,52.17 L315.35,52.17 L315.32,52.16 L315.28,52.16 L315.24,52.16 L315.21,52.16 L315.17,52.16 L315.14,52.17 L315.10,52.17 L315.07,52.17 L315.03,52.18 L315.00,52.19 L314.97,52.20 L314.93,52.21 L314.90,52.22 L314.87,52.23 L314.84,52.24 L314.81,52.26 M315.59,54.41 L315.56,54.41 L315.52,54.40 L315.49,54.39 L315.45,54.37 L315.42,54.35 L315.38,54.33 L315.35,54.31 L315.32,54.28 L315.29,54.25 L315.26,54.23 L315.23,54.19 L315.20,54.16 L315.17,54.12 L315.15,54.09 L315.13,54.05 L315.11,54.01 L315.09,53.97 L315.07,53.93 L315.06,53.88 L315.05,53.84 L315.04,53.80 L315.03,53.76 L315.03,53.71 L315.03,53.67 L315.03,53.63 L315.03,53.59 L315.04,53.55 L315.05,53.51 L315.06,53.48 L315.07,53.44 L315.08,53.41 L315.10,53.38 M347.55,65.81 L347.71,63.46 M350.28,66.79 L350.44,64.44 M350.44,64.44 L350.44,64.39 L350.44,64.33 L350.44,64.28 L350.44,64.22 L350.44,64.16 L350.43,64.11 L350.42,64.05 L350.41,63.99 L350.40,63.94 L350.39,63.88 L350.38,63.82 L350.36,63.77 L350.35,63.71 L350.33,63.66 L350.31,63.60 L350.29,63.54 L350.27,63.49 L350.24,63.44 L350.22,63.38 L350.19,63.33 L350.16,63.28 L350.13,63.23 L350.10,63.18 L350.07,63.13 L350.04,63.08 L350.00,63.03 L349.97,62.98 L349.93,62.94 L349.89,62.89 L349.86,62.85 L349.82,62.81 L349.78,62.77 L349.74,62.73 L349.69,62.69 L349.65,62.66 L349.61,62.62 L349.56,62.59 L349.52,62.56 L349.47,62.53 L349.43,62.50 L349.38,62.48 L349.34,62.45 L349.29,62.43 L349.24,62.41 L349.20,62.39 L349.15,62.38 L349.10,62.36 L349.05,62.35 L349.01,62.34 L348.96,62.33 L348.91,62.32 L348.87,62.31 L348.82,62.31 L348.77,62.31 L348.73,62.31 L348.68,62.31 L348.64,62.32 L348.59,62.32 L348.55,62.33 L348.50,62.34 L348.46,62.36 L348.42,62.37 L348.38,62.39 L348.34,62.40 M348.34,62.40 L348.30,62.42 L348.27,62.44 L348.24,62.46 L348.21,62.48 L348.18,62.50 L348.15,62.52 L348.12,62.55 L348.09,62.57 L348.06,62.60 L348.04,62.63 L348.01,62.65 L347.99,62.68 L347.96,62.71 L347.94,62.75 L347.92,62.78 L347.90,62.81 L347.88,62.85 L347.86,62.88 L347.84,62.92 L347.83,62.96 L347.81,63.00 L347.80,63.03 L347.78,63.07 L347.77,63.12 L347.76,63.16 L347.75,63.20 L347.74,63.24 L347.73,63.28 L347.72,63.33 L347.72,63.37 L347.71,63.42 L347.71,63.46 M347.55,65.81 L350.28,66.79 M349.11,63.36 L349.15,63.38 L349.19,63.40 L349.23,63.42 L349.27,63.45 L349.30,63.48 L349.34,63.51 L349.37,63.55 L349.40,63.58 L349.43,63.62 L349.46,63.66 L349.49,63.71 L349.51,63.75 L349.53,63.80 L349.55,63.84 L349.56,63.89 L349.57,63.94 L349.58,63.99 L349.58,64.04 L349.59,64.08 L349.59,64.13 L349.58,64.18 L349.57,64.22 L349.56,64.26 L349.56,64.28 L349.55,64.30 L349.54,64.32 L349.53,64.34 L349.52,64.36 L349.51,64.38 L349.50,64.39 L349.49,64.41 L349.48,64.43 L349.47,64.44 L349.46,64.46 L349.44,64.47 L349.43,64.48 L349.41,64.49 L349.40,64.50 L349.38,64.51 L349.37,64.52 L349.35,64.53 M349.35,64.53 L349.33,64.54 L349.31,64.55 L349.28,64.56 L349.26,64.56 L349.24,64.56 L349.21,64.57 L349.19,64.57 L349.16,64.57 L349.14,64.56 L349.11,64.56 L349.09,64.56 L349.06,64.55 L349.04,64.54 L349.01,64.53 L348.99,64.52 L348.96,64.51 L348.94,64.49 L348.91,64.48 L348.89,64.46 L348.87,64.45 L348.84,64.43 L348.82,64.41 L348.80,64.39 L348.78,64.36 L348.76,64.34 L348.74,64.32 L348.72,64.29 L348.70,64.27 L348.69,64.24 L348.67,64.21 L348.65,64.19 L348.64,64.16 L348.63,64.13 L348.62,64.10 L348.60,64.07 L348.59,64.04 L348.59,64.01 L348.58,63.98 L348.57,63.95 L348.57,63.92 L348.56,63.89 L348.56,63.86 L348.56,63.83 L348.56,63.80 L348.56,63.77 L348.56,63.74 L348.57,63.71 L348.57,63.69 L348.58,63.66 L348.59,63.63 L348.59,63.61 L348.60,63.58 L348.61,63.56 L348.63,63.54 L348.64,63.52 L348.65,63.49 L348.67,63.47 L348.68,63.46 L348.70,63.44 L348.72,63.42 L348.74,63.41 L348.76,63.39 L348.78,63.38 L348.80,63.37 M348.80,63.37 L348.81,63.36 L348.83,63.36 L348.85,63.35 L348.87,63.35 L348.89,63.34 L348.91,63.34 L348.93,63.34 L348.95,63.34 L348.97,63.34 L348.99,63.34 L349.01,63.34 L349.03,63.34 L349.05,63.35 L349.07,63.35 L349.09,63.36 L349.11,63.36 M350.44,64.44 L350.82,64.26 M350.82,64.26 L350.83,64.20 L350.83,64.15 L350.83,64.09 L350.83,64.04 L350.82,63.98 L350.82,63.92 L350.81,63.87 L350.80,63.81 L350.79,63.75 L350.78,63.70 L350.77,63.64 L350.75,63.58 L350.73,63.53 L350.72,63.47 L350.70,63.42 L350.68,63.36 L350.65,63.31 L350.63,63.25 L350.60,63.20 L350.58,63.15 L350.55,63.09 L350.52,63.04 L350.49,62.99 L350.46,62.94 L350.42,62.89 L350.39,62.85 L350.35,62.80 L350.32,62.75 L350.28,62.71 L350.24,62.67 L350.20,62.63 L350.16,62.59 L350.12,62.55 L350.08,62.51 L350.04,62.47 L349.99,62.44 L349.95,62.41 L349.91,62.38 L349.86,62.35 L349.82,62.32 L349.77,62.29 L349.72,62.27 L349.68,62.25 L349.63,62.23 L349.58,62.21 L349.54,62.19 L349.49,62.18 L349.44,62.16 L349.39,62.15 L349.35,62.14 L349.30,62.14 L349.25,62.13 L349.21,62.13 L349.16,62.13 L349.11,62.13 L349.07,62.13 L349.02,62.13 L348.98,62.14 L348.93,62.15 L348.89,62.16 L348.85,62.17 L348.81,62.19 L348.76,62.20 L348.72,62.22 M350.67,66.61 L350.82,64.26 M349.51,64.38 L349.48,64.37 L349.44,64.36 L349.41,64.35 L349.37,64.34 L349.34,64.32 L349.30,64.30 L349.27,64.27 L349.24,64.25 L349.21,64.22 L349.17,64.19 L349.15,64.16 L349.12,64.12 L349.09,64.09 L349.07,64.05 L349.05,64.01 L349.03,63.97 L349.01,63.93 L348.99,63.89 L348.98,63.85 L348.97,63.81 L348.96,63.76 L348.95,63.72 L348.95,63.68 L348.95,63.64 L348.95,63.60 L348.95,63.56 L348.96,63.52 L348.96,63.48 L348.97,63.44 L348.99,63.41 L349.00,63.37 L349.02,63.34 M350.28,66.79 L350.67,66.61 M314.14,56.08 L314.19,55.30 M314.19,55.30 L315.79,54.54 M316.85,54.03 L319.99,52.54 M314.14,56.08 L337.36,64.41 M339.25,65.09 L344.16,66.85 M344.16,66.85 L344.22,66.07 M314.19,55.30 L337.41,63.63 M339.30,64.31 L344.22,66.07 M319.99,52.54 L329.32,55.89 M330.33,56.25 L337.73,58.91 M339.61,59.58 L342.63,60.66 M343.63,61.03 L348.05,62.61 M344.22,66.07 L347.64,64.44 M348.97,63.81 L349.42,63.60 M343.95,65.06 L343.38,64.86 M342.37,64.49 L339.36,63.41 M337.47,62.74 L330.07,60.08 M329.07,59.72 L316.77,55.31 M343.95,65.06 L344.33,64.88 M316.77,55.21 L317.04,55.08 M344.33,64.88 L343.40,64.54 M342.39,64.18 L339.38,63.10 M337.49,62.42 L330.09,59.77 M329.09,59.41 L317.04,55.08 M344.59,64.75 L343.41,64.33 M342.41,63.97 L339.39,62.89 M337.51,62.21 L330.11,59.56 M329.10,59.20 L317.30,54.96 M344.59,64.75 L344.98,64.57 M317.30,54.96 L317.68,54.78 M344.98,64.57 L343.43,64.02 M342.43,63.66 L339.41,62.57 M337.53,61.90 L330.13,59.24 M329.12,58.88 L317.68,54.78 M345.23,64.45 L343.45,63.81 M342.44,63.45 L339.43,62.36 M337.54,61.69 L330.14,59.03 M329.14,58.67 L317.94,54.65 M345.23,64.45 L345.62,64.26 M317.94,54.65 L318.33,54.47 M345.62,64.26 L343.47,63.49 M342.46,63.13 L339.45,62.05 M337.56,61.37 L330.16,58.72 M329.16,58.36 L318.33,54.47 M345.88,64.14 L343.48,63.28 M342.48,62.92 L339.46,61.84 M337.58,61.16 L330.18,58.51 M329.17,58.15 L318.59,54.35 M345.88,64.14 L346.27,63.96 M318.59,54.35 L318.97,54.16 M346.27,63.96 L343.50,62.97 M342.50,62.61 L339.48,61.52 M337.60,60.85 L330.20,58.19 M329.19,57.83 L318.97,54.16 M346.52,63.84 L343.52,62.76 M342.51,62.40 L339.50,61.31 M337.61,60.64 L330.21,57.98 M329.21,57.62 L319.23,54.04 M346.52,63.84 L346.91,63.65 M319.23,54.04 L319.62,53.86 M346.91,63.65 L343.54,62.44 M342.53,62.08 L339.52,61.00 M337.63,60.32 L330.23,57.67 M329.23,57.31 L319.62,53.86 M347.17,63.53 L343.55,62.23 M342.55,61.87 L339.53,60.79 M337.65,60.11 L330.25,57.46 M329.24,57.10 L319.87,53.74 M347.17,63.53 L347.55,63.35 M347.55,63.35 L343.57,61.92 M342.57,61.56 L339.55,60.48 M337.67,59.80 L330.27,57.14 M329.26,56.78 L320.26,53.55 M319.87,53.74 L320.26,53.55 M344.16,66.85 L347.59,65.23 M349.42,64.36 L349.55,64.29 M317.02,55.40 L317.04,55.08 M317.66,55.09 L317.68,54.78 M318.31,54.78 L318.33,54.47 M318.95,54.48 L318.97,54.16 M319.60,54.17 L319.62,53.86 M320.24,53.87 L320.26,53.55 M316.63,45.13 L316.61,45.09 L316.58,45.04 L316.56,45.00 L316.54,44.96 L316.52,44.91 L316.51,44.87 L316.49,44.83 L316.48,44.79 L316.47,44.75 L316.46,44.71 L316.46,44.67 L316.45,44.63 L316.45,44.60 L316.45,44.56 M317.38,44.66 L317.34,44.68 L317.30,44.70 L317.25,44.72 L317.20,44.75 L317.15,44.79 L317.09,44.82 L317.03,44.86 L316.97,44.89 L316.91,44.93 L316.85,44.97 L316.79,45.01 L316.74,45.05 L316.68,45.09 L316.63,45.13 M317.81,35.29 L317.78,35.28 L317.74,35.26 L317.70,35.24 L317.67,35.21 L317.63,35.19 L317.59,35.15 L317.55,35.12 L317.52,35.08 L317.48,35.05 L317.45,35.01 L317.41,34.96 L317.38,34.92 L317.35,34.87 L317.32,34.82 M317.32,34.82 L317.29,34.85 L317.26,34.87 L317.23,34.89 L317.21,34.91 L317.19,34.92 L317.17,34.94 L317.15,34.96 L317.13,34.97 L317.12,34.98 L317.11,35.00 L317.10,35.01 L317.09,35.01 L317.09,35.02 L317.09,35.03 M317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 L317.09,35.03 M317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.48,44.63 L317.47,44.63 L317.47,44.63 L317.47,44.63 M317.47,44.63 L317.47,44.63 L317.47,44.63 L317.46,44.63 L317.46,44.63 L317.45,44.63 L317.45,44.63 L317.44,44.63 L317.44,44.63 L317.43,44.64 L317.42,44.64 L317.41,44.64 L317.40,44.65 L317.39,44.65 L317.38,44.66 M316.63,45.13 L316.60,45.15 L316.57,45.17 L316.55,45.19 L316.52,45.21 L316.50,45.23 L316.48,45.24 L316.46,45.26 L316.45,45.27 L316.43,45.29 L316.42,45.30 L316.41,45.31 L316.41,45.32 L316.40,45.32 L316.40,45.33 M316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.33 L316.40,45.34 L316.40,45.34 L316.40,45.34 L316.40,45.34 M316.46,44.44 L316.44,44.46 L316.42,44.48 L316.40,44.51 L316.38,44.54 L316.36,44.57 L316.34,44.60 L316.32,44.63 L316.31,44.66 L316.29,44.69 L316.28,44.73 L316.26,44.76 L316.25,44.80 L316.24,44.84 L316.24,44.87 L316.23,44.91 L316.22,44.94 L316.22,44.98 L316.22,45.01 L316.22,45.04 L316.22,45.08 L316.22,45.11 L316.23,45.13 L316.24,45.16 L316.24,45.19 L316.25,45.21 L316.26,45.23 L316.28,45.25 L316.29,45.27 L316.30,45.29 L316.32,45.30 L316.34,45.31 L316.36,45.32 M316.36,45.32 L316.37,45.32 L316.38,45.32 L316.39,45.33 L316.40,45.33 M329.94,49.90 L329.91,49.86 L329.89,49.82 L329.87,49.78 L329.85,49.73 L329.83,49.69 L329.81,49.65 L329.80,49.60 L329.78,49.56 L329.77,49.52 L329.77,49.48 L329.76,49.44 L329.76,49.41 L329.76,49.37 L329.76,49.34 M329.94,49.90 L329.91,49.92 L329.88,49.95 L329.85,49.97 L329.83,49.98 L329.81,50.00 L329.79,50.02 L329.77,50.03 L329.75,50.05 L329.74,50.06 L329.73,50.07 L329.72,50.08 L329.71,50.09 L329.71,50.10 L329.71,50.10 M329.71,50.10 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 L329.71,50.11 M317.13,45.59 L317.09,45.58 L317.06,45.56 L317.02,45.54 L316.98,45.52 L316.94,45.49 L316.91,45.46 L316.87,45.42 L316.83,45.39 L316.79,45.35 L316.76,45.31 L316.73,45.27 L316.69,45.22 L316.66,45.18 L316.63,45.13 M330.62,39.60 L330.60,39.56 L330.57,39.51 L330.55,39.47 L330.53,39.43 L330.51,39.39 L330.50,39.34 L330.48,39.30 L330.47,39.26 L330.46,39.22 L330.45,39.18 L330.45,39.14 L330.44,39.10 L330.44,39.07 L330.44,39.04 M330.44,39.04 L330.44,39.03 L330.44,39.03 L330.44,39.02 L330.45,39.02 L330.45,39.01 L330.45,39.01 L330.45,39.00 L330.45,39.00 L330.45,39.00 L330.45,38.99 L330.45,38.99 L330.45,38.98 L330.45,38.98 L330.45,38.98 M330.62,39.60 L330.59,39.62 L330.56,39.64 L330.54,39.66 L330.51,39.68 L330.49,39.70 L330.47,39.72 L330.45,39.73 L330.44,39.75 L330.42,39.76 L330.41,39.77 L330.40,39.78 L330.40,39.79 L330.39,39.80 L330.39,39.80 M330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.80 L330.39,39.81 L330.39,39.81 L330.39,39.81 L330.39,39.81 L330.40,39.81 L330.40,39.81 L330.40,39.81 M318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.33 L318.16,34.32 L318.16,34.32 L318.16,34.32 L318.16,34.32 L318.16,34.32 M318.16,34.32 L318.16,34.32 L318.15,34.32 L318.15,34.32 L318.15,34.32 L318.14,34.33 L318.13,34.33 L318.13,34.33 L318.12,34.33 L318.11,34.33 L318.11,34.34 L318.10,34.34 L318.09,34.35 L318.08,34.35 L318.07,34.35 M318.07,34.35 L318.03,34.37 L317.99,34.40 L317.94,34.42 L317.89,34.45 L317.83,34.48 L317.78,34.52 L317.72,34.55 L317.66,34.59 L317.60,34.63 L317.54,34.67 L317.48,34.71 L317.42,34.75 L317.37,34.79 L317.32,34.82 M317.32,34.82 L317.29,34.78 L317.27,34.74 L317.25,34.70 L317.23,34.65 L317.21,34.61 L317.19,34.57 L317.18,34.53 L317.17,34.48 L317.16,34.44 L317.15,34.40 L317.14,34.37 L317.14,34.33 L317.14,34.29 L317.14,34.26 M317.14,34.26 L317.14,34.26 L317.14,34.25 L317.14,34.25 L317.14,34.24 L317.14,34.24 L317.14,34.23 L317.14,34.23 L317.14,34.23 L317.14,34.22 L317.14,34.22 L317.14,34.21 L317.15,34.21 L317.15,34.21 L317.15,34.20 M317.25,34.06 L317.22,34.07 L317.20,34.09 L317.17,34.11 L317.15,34.13 L317.12,34.16 L317.10,34.19 L317.07,34.22 L317.05,34.25 L317.03,34.29 L317.01,34.32 L316.99,34.36 L316.97,34.40 L316.96,34.44 L316.95,34.48 L316.93,34.52 L316.92,34.56 L316.92,34.60 L316.91,34.64 L316.91,34.68 L316.91,34.72 L316.91,34.75 L316.91,34.79 L316.91,34.82 L316.92,34.86 L316.93,34.89 L316.94,34.91 L316.95,34.94 L316.97,34.96 L316.98,34.98 L317.00,34.99 L317.01,35.00 L317.02,35.01 L317.03,35.01 L317.04,35.01 M317.04,35.01 L317.05,35.02 L317.06,35.02 L317.08,35.02 L317.09,35.02 M316.63,55.90 L316.65,55.89 L316.67,55.88 L316.69,55.86 L316.71,55.85 L316.72,55.84 L316.73,55.82 L316.73,55.81 L316.73,55.79 M315.71,55.72 L315.71,55.74 L315.71,55.75 L315.72,55.77 L315.73,55.79 L315.74,55.80 L315.76,55.82 L315.78,55.83 L315.80,55.85 L315.82,55.86 L315.85,55.88 L315.88,55.89 L315.91,55.90 L315.94,55.91 L315.98,55.92 L316.01,55.93 L316.05,55.94 L316.09,55.95 L316.13,55.95 L316.17,55.96 L316.21,55.96 L316.25,55.96 L316.29,55.96 L316.33,55.96 L316.37,55.96 L316.41,55.96 L316.45,55.95 L316.48,55.95 L316.52,55.94 L316.55,55.93 L316.58,55.92 L316.61,55.91 L316.63,55.90 M330.69,49.43 L330.65,49.45 L330.61,49.47 L330.56,49.50 L330.51,49.53 L330.45,49.56 L330.40,49.60 L330.34,49.63 L330.28,49.67 L330.22,49.71 L330.16,49.75 L330.10,49.79 L330.04,49.83 L329.99,49.87 L329.94,49.90 M331.12,40.07 L331.08,40.05 L331.05,40.03 L331.01,40.01 L330.97,39.99 L330.93,39.96 L330.90,39.93 L330.86,39.90 L330.82,39.86 L330.79,39.82 L330.75,39.78 L330.72,39.74 L330.68,39.69 L330.65,39.65 L330.62,39.60 M330.78,49.41 L330.78,49.41 L330.78,49.41 L330.78,49.41 L330.78,49.41 L330.78,49.41 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 L330.78,49.40 M330.78,49.40 L330.78,49.40 L330.77,49.40 L330.77,49.40 L330.76,49.40 L330.76,49.40 L330.75,49.41 L330.75,49.41 L330.74,49.41 L330.73,49.41 L330.72,49.42 L330.72,49.42 L330.71,49.42 L330.70,49.43 L330.69,49.43 M330.43,50.37 L330.40,50.36 L330.36,50.34 L330.32,50.32 L330.29,50.29 L330.25,50.26 L330.21,50.23 L330.17,50.20 L330.14,50.16 L330.10,50.12 L330.06,50.08 L330.03,50.04 L330.00,50.00 L329.97,49.95 L329.94,49.90 M329.94,60.68 L329.96,60.67 L329.98,60.65 L330.00,60.64 L330.01,60.63 L330.02,60.61 L330.03,60.60 L330.04,60.58 L330.04,60.56 M329.01,60.50 L329.01,60.51 L329.02,60.53 L329.03,60.54 L329.04,60.56 L329.05,60.58 L329.06,60.59 L329.08,60.61 L329.10,60.62 L329.13,60.64 L329.16,60.65 L329.18,60.66 L329.22,60.68 L329.25,60.69 L329.28,60.70 L329.32,60.71 L329.36,60.71 L329.40,60.72 L329.44,60.73 L329.48,60.73 L329.52,60.74 L329.56,60.74 L329.60,60.74 L329.64,60.74 L329.68,60.74 L329.71,60.73 L329.75,60.73 L329.79,60.72 L329.82,60.72 L329.85,60.71 L329.88,60.70 L329.91,60.69 L329.94,60.68 M330.55,38.84 L330.53,38.85 L330.51,38.86 L330.49,38.87 L330.48,38.89 L330.47,38.90 L330.46,38.92 L330.45,38.93 L330.45,38.95 M330.45,38.95 L330.45,38.96 L330.45,38.98 L330.46,39.00 L330.47,39.01 L330.48,39.03 L330.50,39.05 L330.52,39.06 L330.54,39.08 L330.56,39.09 L330.59,39.10 L330.62,39.12 L330.65,39.13 L330.68,39.14 L330.72,39.15 L330.76,39.16 L330.79,39.17 L330.83,39.17 L330.87,39.18 L330.91,39.18 L330.95,39.19 L330.99,39.19 L331.03,39.19 L331.07,39.19 L331.11,39.19 L331.15,39.18 L331.19,39.18 L331.22,39.17 L331.26,39.17 L331.29,39.16 L331.32,39.15 L331.35,39.14 L331.37,39.13 M331.37,39.13 L331.33,39.15 L331.29,39.17 L331.24,39.20 L331.19,39.23 L331.14,39.26 L331.08,39.29 L331.02,39.33 L330.96,39.37 L330.90,39.41 L330.84,39.44 L330.78,39.48 L330.73,39.52 L330.67,39.56 L330.62,39.60 M331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 L331.47,39.10 M331.47,39.10 L331.46,39.10 L331.46,39.10 L331.46,39.10 L331.45,39.10 L331.45,39.10 L331.44,39.10 L331.43,39.10 L331.43,39.11 L331.42,39.11 L331.41,39.11 L331.40,39.12 L331.39,39.12 L331.38,39.12 L331.37,39.13 M331.37,39.13 L331.39,39.12 L331.41,39.10 L331.43,39.09 L331.45,39.08 L331.46,39.06 L331.47,39.05 L331.47,39.03 L331.48,39.02 M331.48,39.02 L331.47,39.00 L331.47,38.98 L331.46,38.97 L331.45,38.95 L331.44,38.94 L331.43,38.92 L331.41,38.90 L331.38,38.89 L331.36,38.87 L331.33,38.86 L331.30,38.85 L331.27,38.84 L331.24,38.83 L331.21,38.81 L331.17,38.81 L331.13,38.80 L331.09,38.79 L331.05,38.79 L331.01,38.78 L330.97,38.78 L330.93,38.78 L330.89,38.77 L330.85,38.78 L330.81,38.78 L330.78,38.78 L330.74,38.78 L330.70,38.79 L330.67,38.80 L330.64,38.81 L330.61,38.81 L330.58,38.82 L330.55,38.84 M318.07,34.35 L318.09,34.34 L318.11,34.33 L318.13,34.32 L318.14,34.30 L318.15,34.29 L318.16,34.27 L318.17,34.26 L318.17,34.24 M318.17,34.24 L318.17,34.23 L318.17,34.21 L318.16,34.19 L318.15,34.18 L318.14,34.16 L318.12,34.14 L318.10,34.13 L318.08,34.11 L318.06,34.10 L318.03,34.09 L318.00,34.07 L317.97,34.06 L317.94,34.05 L317.90,34.04 L317.86,34.03 L317.83,34.02 L317.79,34.02 L317.75,34.01 L317.71,34.01 L317.67,34.00 L317.63,34.00 L317.59,34.00 L317.55,34.00 L317.51,34.00 L317.47,34.01 L317.43,34.01 L317.40,34.02 L317.36,34.02 L317.33,34.03 L317.30,34.04 L317.27,34.05 L317.25,34.06 M317.25,34.06 L317.22,34.07 L317.20,34.09 L317.19,34.10 L317.17,34.11 L317.16,34.13 L317.15,34.14 L317.15,34.16 L317.14,34.17 M317.14,34.17 L317.14,34.19 L317.15,34.21 L317.16,34.22 L317.17,34.24 L317.18,34.25 L317.19,34.27 L317.21,34.29 L317.23,34.30 L317.26,34.32 L317.29,34.33 L317.31,34.34 L317.35,34.35 L317.38,34.37 L317.41,34.38 L317.45,34.38 L317.49,34.39 L317.53,34.40 L317.57,34.41 L317.61,34.41 L317.65,34.41 L317.69,34.41 L317.73,34.42 L317.77,34.41 L317.81,34.41 L317.84,34.41 L317.88,34.41 L317.92,34.40 L317.95,34.39 L317.98,34.39 L318.01,34.38 L318.04,34.37 L318.07,34.35 M343.24,54.68 L343.22,54.64 L343.19,54.59 L343.17,54.55 L343.15,54.51 L343.13,54.46 L343.12,54.42 L343.10,54.38 L343.09,54.34 L343.08,54.30 L343.07,54.26 L343.07,54.22 L343.06,54.18 L343.06,54.15 L343.06,54.11 M343.24,54.68 L343.21,54.70 L343.18,54.72 L343.16,54.74 L343.13,54.76 L343.11,54.78 L343.09,54.79 L343.07,54.81 L343.06,54.82 L343.04,54.84 L343.03,54.85 L343.02,54.86 L343.02,54.87 L343.01,54.87 L343.01,54.88 M343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.01,54.88 L343.02,54.89 L343.02,54.89 M343.93,44.37 L343.90,44.33 L343.88,44.29 L343.86,44.25 L343.84,44.20 L343.82,44.16 L343.80,44.12 L343.79,44.08 L343.78,44.03 L343.77,43.99 L343.76,43.95 L343.75,43.92 L343.75,43.88 L343.75,43.84 L343.75,43.81 M343.75,43.81 L343.75,43.81 L343.75,43.80 L343.75,43.80 L343.75,43.79 L343.75,43.79 L343.75,43.78 L343.75,43.78 L343.75,43.78 L343.75,43.77 L343.75,43.77 L343.75,43.76 L343.76,43.76 L343.76,43.75 L343.76,43.75 M343.93,44.37 L343.90,44.40 L343.87,44.42 L343.84,44.44 L343.82,44.46 L343.80,44.47 L343.78,44.49 L343.76,44.51 L343.74,44.52 L343.73,44.53 L343.72,44.54 L343.71,44.55 L343.70,44.56 L343.70,44.57 L343.70,44.58 M343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 L343.70,44.58 M343.99,54.21 L343.95,54.23 L343.91,54.25 L343.86,54.27 L343.81,54.30 L343.76,54.34 L343.70,54.37 L343.64,54.41 L343.58,54.44 L343.52,54.48 L343.46,54.52 L343.40,54.56 L343.35,54.60 L343.29,54.64 L343.24,54.68 M344.45,44.85 L344.45,44.85 L344.45,44.85 L344.45,44.85 L344.45,44.85 L344.44,44.85 L344.44,44.85 L344.44,44.85 L344.44,44.85 L344.43,44.84 L344.43,44.84 L344.43,44.84 L344.43,44.84 L344.43,44.84 L344.42,44.84 M344.42,44.84 L344.39,44.83 L344.35,44.81 L344.32,44.79 L344.28,44.76 L344.24,44.73 L344.20,44.70 L344.17,44.67 L344.13,44.63 L344.09,44.60 L344.06,44.55 L344.02,44.51 L343.99,44.47 L343.96,44.42 L343.93,44.37 M344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.09,54.18 L344.08,54.18 M344.08,54.18 L344.08,54.18 L344.08,54.18 L344.07,54.18 L344.07,54.18 L344.07,54.18 L344.06,54.18 L344.05,54.18 L344.05,54.18 L344.04,54.19 L344.03,54.19 L344.02,54.19 L344.01,54.20 L344.00,54.20 L343.99,54.21 M343.77,55.15 L343.77,55.15 L343.76,55.15 L343.76,55.15 L343.76,55.15 L343.76,55.15 L343.76,55.15 L343.75,55.15 L343.75,55.15 L343.75,55.15 L343.75,55.15 L343.74,55.15 L343.74,55.15 L343.74,55.15 L343.74,55.14 M343.74,55.14 L343.70,55.13 L343.67,55.11 L343.63,55.09 L343.59,55.07 L343.55,55.04 L343.52,55.01 L343.48,54.97 L343.44,54.94 L343.41,54.90 L343.37,54.86 L343.34,54.82 L343.30,54.77 L343.27,54.73 L343.24,54.68 M343.24,65.45 L343.26,65.44 L343.28,65.43 L343.30,65.41 L343.32,65.40 L343.33,65.39 L343.34,65.37 L343.34,65.35 L343.35,65.34 M342.32,65.27 L342.32,65.29 L342.32,65.30 L342.33,65.32 L342.34,65.34 L342.35,65.35 L342.37,65.37 L342.39,65.38 L342.41,65.40 L342.43,65.41 L342.46,65.43 L342.49,65.44 L342.52,65.45 L342.55,65.46 L342.59,65.47 L342.63,65.48 L342.66,65.49 L342.70,65.50 L342.74,65.50 L342.78,65.51 L342.82,65.51 L342.86,65.51 L342.90,65.51 L342.94,65.51 L342.98,65.51 L343.02,65.51 L343.06,65.50 L343.09,65.50 L343.13,65.49 L343.16,65.48 L343.19,65.47 L343.22,65.46 L343.24,65.45 M343.86,43.61 L343.84,43.62 L343.82,43.63 L343.80,43.65 L343.78,43.66 L343.77,43.68 L343.76,43.69 L343.76,43.71 L343.75,43.72 M343.75,43.72 L343.76,43.74 L343.76,43.76 L343.77,43.77 L343.78,43.79 L343.79,43.80 L343.80,43.82 L343.82,43.84 L343.85,43.85 L343.87,43.86 L343.90,43.88 L343.93,43.89 L343.96,43.90 L343.99,43.91 L344.02,43.92 L344.06,43.93 L344.10,43.94 L344.14,43.95 L344.18,43.95 L344.22,43.96 L344.26,43.96 L344.30,43.96 L344.34,43.97 L344.38,43.96 L344.42,43.96 L344.45,43.96 L344.49,43.95 L344.53,43.95 L344.56,43.94 L344.59,43.93 L344.62,43.93 L344.65,43.92 L344.68,43.90 M344.68,43.90 L344.64,43.92 L344.60,43.94 L344.55,43.97 L344.50,44.00 L344.44,44.03 L344.39,44.07 L344.33,44.10 L344.27,44.14 L344.21,44.18 L344.15,44.22 L344.09,44.26 L344.03,44.30 L343.98,44.34 L343.93,44.37 M344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.88 L344.77,43.87 L344.77,43.87 L344.77,43.87 L344.77,43.87 L344.77,43.87 L344.77,43.87 L344.77,43.87 M344.77,43.87 L344.77,43.87 L344.76,43.87 L344.76,43.87 L344.76,43.87 L344.75,43.87 L344.75,43.88 L344.74,43.88 L344.73,43.88 L344.72,43.88 L344.72,43.89 L344.71,43.89 L344.70,43.89 L344.69,43.90 L344.68,43.90 M344.68,43.90 L344.70,43.89 L344.72,43.88 L344.74,43.87 L344.75,43.85 L344.76,43.84 L344.77,43.82 L344.78,43.81 L344.78,43.79 M344.78,43.79 L344.78,43.78 L344.78,43.76 L344.77,43.74 L344.76,43.73 L344.75,43.71 L344.73,43.69 L344.71,43.68 L344.69,43.66 L344.67,43.65 L344.64,43.64 L344.61,43.62 L344.58,43.61 L344.55,43.60 L344.51,43.59 L344.47,43.58 L344.44,43.57 L344.40,43.57 L344.36,43.56 L344.32,43.56 L344.28,43.55 L344.24,43.55 L344.20,43.55 L344.16,43.55 L344.12,43.55 L344.08,43.56 L344.04,43.56 L344.01,43.57 L343.97,43.57 L343.94,43.58 L343.91,43.59 L343.88,43.60 L343.86,43.61 M343.99,54.21 L343.97,54.22 L343.94,54.24 L343.91,54.26 L343.89,54.28 L343.86,54.31 L343.84,54.33 L343.82,54.37 L343.79,54.40 L343.77,54.43 L343.75,54.47 L343.73,54.51 L343.72,54.54 L343.70,54.58 L343.69,54.62 L343.68,54.67 L343.67,54.71 L343.66,54.75 L343.65,54.79 L343.65,54.83 L343.65,54.86 L343.65,54.90 L343.65,54.94 L343.66,54.97 L343.66,55.00 L343.67,55.03 L343.68,55.06 L343.70,55.08 L343.71,55.11 L343.73,55.12 L343.75,55.14 L343.76,55.15 L343.77,55.15 L343.78,55.16 L343.79,55.16 M343.79,55.16 L343.80,55.17 L343.82,55.17 L343.84,55.17 L343.85,55.17 L343.87,55.17 L343.89,55.16 L343.91,55.16 L343.93,55.15 M344.68,43.90 L344.65,43.92 L344.63,43.93 L344.60,43.95 L344.57,43.98 L344.55,44.00 L344.53,44.03 L344.50,44.06 L344.48,44.09 L344.46,44.13 L344.44,44.16 L344.42,44.20 L344.40,44.24 L344.39,44.28 L344.37,44.32 L344.36,44.36 L344.35,44.40 L344.35,44.44 L344.34,44.48 L344.34,44.52 L344.33,44.56 L344.34,44.60 L344.34,44.63 L344.34,44.67 L344.35,44.70 L344.36,44.73 L344.37,44.76 L344.38,44.78 L344.40,44.80 L344.41,44.82 L344.43,44.84 L344.44,44.84 L344.45,44.85 L344.46,44.85 L344.47,44.86 M344.47,44.86 L344.49,44.86 L344.51,44.87 L344.52,44.87 L344.54,44.87 L344.56,44.86 L344.58,44.86 L344.60,44.85 L344.61,44.84 M344.61,44.84 L344.64,44.83 L344.67,44.81 L344.69,44.79 L344.72,44.77 L344.74,44.75 L344.77,44.72 L344.79,44.69 L344.81,44.65 L344.83,44.62 L344.85,44.58 L344.87,44.55 L344.89,44.51 L344.90,44.47 L344.92,44.43 L344.93,44.39 L344.94,44.35 L344.95,44.31 L344.95,44.27 L344.95,44.23 L344.96,44.19 L344.96,44.15 L344.95,44.12 L344.95,44.08 L344.94,44.05 L344.93,44.02 L344.92,43.99 L344.91,43.97 L344.89,43.95 L344.88,43.93 L344.86,43.91 L344.85,43.91 L344.84,43.90 L344.83,43.89 L344.82,43.89 M344.82,43.89 L344.80,43.89 L344.79,43.88 L344.77,43.88 L344.75,43.88 L344.73,43.89 L344.71,43.89 L344.70,43.90 L344.68,43.90 M343.93,55.15 L343.95,55.13 L343.98,55.12 L344.01,55.10 L344.03,55.07 L344.06,55.05 L344.08,55.02 L344.10,54.99 L344.12,54.96 L344.15,54.92 L344.17,54.89 L344.18,54.85 L344.20,54.81 L344.22,54.77 L344.23,54.73 L344.24,54.69 L344.25,54.65 L344.26,54.61 L344.27,54.57 L344.27,54.53 L344.27,54.49 L344.27,54.45 L344.27,54.42 L344.26,54.39 L344.25,54.35 L344.25,54.32 L344.23,54.30 L344.22,54.27 L344.21,54.25 L344.19,54.23 L344.17,54.22 L344.16,54.21 L344.15,54.20 L344.14,54.20 L344.13,54.19 M344.13,54.19 L344.12,54.19 L344.10,54.19 L344.08,54.19 L344.07,54.19 L344.05,54.19 L344.03,54.19 L344.01,54.20 L343.99,54.21 M345.76,183.04 L347.00,183.49 M347.00,183.49 L347.07,182.51 M348.65,182.16 L347.07,182.51 M348.58,183.14 L348.65,182.16 M348.58,183.14 L347.00,183.49 M297.64,166.71 L305.21,53.09 M305.21,53.09 L306.24,52.60 M305.72,53.35 L305.72,53.28 M305.72,53.28 L306.75,52.79 M306.75,52.83 L306.75,52.79 M297.64,166.71 L297.76,166.75 M305.21,53.09 L305.72,53.28 M306.24,52.60 L306.75,52.79 M333.40,155.17 L336.66,156.34 M333.31,156.64 L333.40,155.17 M329.05,153.61 L331.99,154.66 M328.40,163.40 L336.01,166.13 M331.52,155.35 L331.96,155.14 M331.52,155.35 L332.37,155.66 M332.37,155.66 L333.40,155.17 M329.07,153.40 L332.01,154.45 M332.64,154.68 L336.67,156.13 M332.28,157.13 L332.37,155.66 M332.28,157.13 L333.31,156.64 M331.42,156.82 L332.28,157.13 M331.42,156.82 L331.52,155.35 M328.59,141.12 L329.10,140.87 M326.89,166.58 L328.59,141.12 M329.77,141.33 L329.79,141.12 M329.10,140.87 L329.79,141.12 M329.53,141.24 L329.79,141.12 M328.17,166.83 L329.87,141.36 M329.53,141.24 L329.87,141.36 M327.92,166.95 L329.61,141.49 M329.61,141.49 L329.87,141.36 M327.92,166.95 L328.17,166.83 M326.89,166.58 L327.92,166.95 M328.59,141.12 L329.61,141.49 M338.48,144.67 L339.00,144.42 M336.79,170.13 L338.48,144.67 M337.30,169.89 L336.79,170.13 M337.30,169.89 L339.00,144.42 M339.00,144.42 L338.32,144.18 M338.06,144.30 L338.32,144.18 M338.06,144.30 L337.72,144.18 M335.76,169.77 L337.46,144.30 M337.46,144.30 L337.72,144.18 M336.79,170.13 L335.76,169.77 M338.48,144.67 L337.46,144.30 M332.53,155.44 L332.54,155.44 L332.55,155.43 L332.56,155.42 L332.57,155.41 L332.58,155.40 L332.58,155.39 L332.59,155.38 L332.59,155.37 M331.95,155.33 L331.95,155.34 L331.95,155.35 L331.96,155.36 L331.96,155.37 L331.97,155.38 L331.98,155.39 L331.99,155.40 L332.01,155.41 L332.02,155.42 L332.04,155.43 L332.06,155.44 L332.07,155.44 L332.10,155.45 L332.12,155.46 L332.16,155.47 L332.21,155.47 L332.26,155.48 L332.31,155.48 L332.36,155.48 L332.41,155.48 L332.43,155.47 L332.45,155.47 L332.47,155.46 L332.49,155.46 L332.51,155.45 L332.53,155.44 M338.03,80.70 L338.05,80.69 L338.07,80.68 L338.09,80.67 L338.11,80.65 L338.12,80.64 L338.14,80.63 L338.15,80.62 L338.17,80.60 L338.18,80.59 L338.19,80.58 L338.20,80.56 L338.21,80.55 L338.21,80.53 L338.22,80.52 L338.22,80.50 L338.22,80.49 M336.30,80.36 L336.30,80.38 L336.30,80.39 L336.30,80.41 L336.31,80.42 L336.31,80.44 L336.32,80.45 L336.33,80.47 L336.34,80.48 L336.35,80.50 L336.36,80.51 L336.38,80.53 L336.39,80.54 L336.41,80.56 L336.43,80.57 L336.45,80.59 L336.47,80.60 L336.49,80.61 L336.51,80.63 L336.56,80.65 L336.62,80.68 L336.68,80.70 L336.74,80.72 L336.80,80.74 L336.87,80.76 L336.94,80.77 L337.01,80.78 L337.09,80.79 L337.16,80.80 L337.24,80.81 L337.31,80.81 L337.39,80.81 L337.46,80.81 L337.54,80.81 L337.61,80.80 L337.68,80.80 L337.75,80.78 L337.81,80.77 L337.87,80.76 L337.93,80.74 L337.98,80.72 L338.00,80.71 L338.03,80.70 M339.24,57.29 L339.29,57.28 L339.34,57.27 L339.39,57.26 L339.43,57.25 L339.48,57.24 L339.52,57.22 L339.56,57.21 L339.59,57.19 M337.96,57.04 L337.98,57.06 L338.01,57.08 L338.05,57.10 L338.08,57.12 L338.12,57.14 L338.16,57.16 L338.20,57.18 L338.25,57.19 L338.29,57.21 L338.34,57.22 L338.39,57.24 L338.44,57.25 L338.50,57.26 L338.55,57.27 L338.61,57.28 L338.66,57.29 M339.59,57.19 L339.63,57.18 L339.66,57.16 L339.68,57.14 L339.71,57.12 L339.73,57.10 L339.75,57.08 L339.76,57.06 L339.77,57.04 M339.24,57.29 L339.77,57.04 M338.99,57.41 L339.24,57.29 M338.66,57.29 L338.99,57.41 M337.96,57.04 L338.66,57.29 M337.63,56.92 L337.96,57.04 M339.77,57.04 L340.02,56.92 M339.15,66.53 L339.22,66.50 M339.20,65.75 L339.27,65.71 M339.22,66.50 L339.27,65.71 M339.21,65.69 L339.27,65.71 M339.05,68.04 L339.12,68.07 M339.05,68.10 L339.12,68.07 M338.99,68.88 L339.07,68.85 M339.07,68.85 L339.12,68.07 M338.99,57.41 L339.19,54.47 M339.19,54.47 L340.22,53.98 M340.02,56.92 L340.22,53.98 M337.82,53.98 L339.19,54.47 M337.63,56.92 L337.82,53.98 M337.82,53.98 L338.85,53.49 M338.85,53.49 L340.22,53.98 M338.97,69.22 L339.55,69.42 M339.55,69.42 L339.81,65.51 M339.23,65.30 L339.81,65.51 M339.55,69.42 L339.81,69.30 M339.81,65.51 L340.07,65.38 M339.81,69.30 L340.07,65.38 M339.25,65.09 L340.07,65.38 M343.73,183.25 L344.27,183.44 M351.98,67.67 L344.27,183.44 M351.44,67.48 L351.98,67.67 M351.44,67.48 L343.73,183.25 M344.27,183.44 L345.75,183.11 M351.98,67.67 L353.46,67.34 M353.46,67.34 L345.75,183.11 M352.92,67.15 L353.46,67.34 M351.44,67.48 L352.92,67.15 M305.27,54.09 L297.70,167.70 M308.13,51.33 L307.94,54.27 M312.41,51.61 L312.21,54.55 M314.42,52.44 L314.81,52.26 M348.34,62.40 L348.72,62.22 M317.09,35.03 L316.45,44.56 M318.09,35.39 L317.48,44.63 M316.36,45.32 L316.40,45.33 M317.13,45.59 L329.71,50.11 M317.47,44.63 L329.78,49.04 M317.81,35.29 L330.39,39.81 M318.16,34.32 L330.64,38.80 M317.04,35.01 L317.09,35.03 M316.40,45.33 L315.71,55.72 M317.41,45.70 L316.73,55.79 M330.39,39.80 L329.76,49.34 M331.40,40.17 L330.78,49.40 M329.71,50.10 L329.01,60.50 M330.71,50.47 L330.04,60.56 M330.45,38.95 L330.44,39.04 M331.48,39.02 L331.47,39.10 M318.17,34.24 L318.16,34.33 M317.14,34.17 L317.14,34.26 M330.43,50.37 L343.01,54.88 M330.78,49.40 L343.08,53.82 M331.12,40.07 L343.70,44.58 M331.47,39.10 L343.95,43.58 M343.70,44.58 L343.06,54.11 M344.72,44.77 L344.09,54.18 M343.01,54.88 L342.32,65.27 M344.03,55.08 L343.35,65.34 M343.75,43.72 L343.75,43.81 M344.78,43.79 L344.77,43.87 M343.74,55.14 L343.79,55.16 M344.42,44.84 L344.47,44.86 M344.77,43.87 L344.82,43.89 M344.08,54.18 L344.13,54.19 M336.91,80.77 L331.95,155.33 M337.56,80.81 L332.59,155.37 M337.85,57.00 L336.30,80.36 M339.78,57.03 L338.22,80.49"/>
+<text x="327.00" y="22.00" font-size="3.00" text-anchor="middle" font-weight="bold">ONE LEAF FROM DOWNSTREAM, ITEMS 1 TO 19</text>
+<line class="lead" x1="318.80" y1="51.12" x2="265.00" y2="40.00"/>
+<circle cx="318.80" cy="51.12" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="40.00" r="3"/>
+<text x="262.00" y="41.00" font-size="2.60" text-anchor="middle" font-weight="bold">11</text>
+<line class="lead" x1="306.98" y1="55.60" x2="265.00" y2="50.77"/>
+<circle cx="306.98" cy="55.60" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="50.77" r="3"/>
+<text x="262.00" y="51.77" font-size="2.60" text-anchor="middle" font-weight="bold">7</text>
+<line class="lead" x1="321.83" y1="60.95" x2="265.00" y2="61.54"/>
+<circle cx="321.83" cy="60.95" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="61.54" r="3"/>
+<text x="262.00" y="62.54" font-size="2.60" text-anchor="middle" font-weight="bold">10</text>
+<line class="lead" x1="322.66" y1="62.65" x2="265.00" y2="72.31"/>
+<circle cx="322.66" cy="62.65" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="72.31" r="3"/>
+<text x="262.00" y="73.31" font-size="2.60" text-anchor="middle" font-weight="bold">6</text>
+<line class="lead" x1="326.44" y1="68.27" x2="265.00" y2="83.08"/>
+<circle cx="326.44" cy="68.27" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="83.08" r="3"/>
+<text x="262.00" y="84.08" font-size="2.60" text-anchor="middle" font-weight="bold">19</text>
+<line class="lead" x1="318.42" y1="105.49" x2="265.00" y2="93.85"/>
+<circle cx="318.42" cy="105.49" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="93.85" r="3"/>
+<text x="262.00" y="94.85" font-size="2.60" text-anchor="middle" font-weight="bold">3</text>
+<line class="lead" x1="298.81" y1="110.42" x2="265.00" y2="104.62"/>
+<circle cx="298.81" cy="110.42" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="104.62" r="3"/>
+<text x="262.00" y="105.62" font-size="2.60" text-anchor="middle" font-weight="bold">13</text>
+<line class="lead" x1="303.77" y1="110.95" x2="265.00" y2="115.38"/>
+<circle cx="303.77" cy="110.95" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="115.38" r="3"/>
+<text x="262.00" y="116.38" font-size="2.60" text-anchor="middle" font-weight="bold">1</text>
+<line class="lead" x1="326.22" y1="112.66" x2="265.00" y2="126.15"/>
+<circle cx="326.22" cy="112.66" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="126.15" r="3"/>
+<text x="262.00" y="127.15" font-size="2.60" text-anchor="middle" font-weight="bold">18</text>
+<line class="lead" x1="326.75" y1="124.74" x2="265.00" y2="136.92"/>
+<circle cx="326.75" cy="124.74" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="136.92" r="3"/>
+<text x="262.00" y="137.92" font-size="2.60" text-anchor="middle" font-weight="bold">9</text>
+<line class="lead" x1="314.28" y1="127.80" x2="265.00" y2="147.69"/>
+<circle cx="314.28" cy="127.80" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="147.69" r="3"/>
+<text x="262.00" y="148.69" font-size="2.60" text-anchor="middle" font-weight="bold">4</text>
+<line class="lead" x1="323.11" y1="154.09" x2="265.00" y2="158.46"/>
+<circle cx="323.11" cy="154.09" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="158.46" r="3"/>
+<text x="262.00" y="159.46" font-size="2.60" text-anchor="middle" font-weight="bold">17</text>
+<line class="lead" x1="326.60" y1="160.20" x2="265.00" y2="169.23"/>
+<circle cx="326.60" cy="160.20" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="169.23" r="3"/>
+<text x="262.00" y="170.23" font-size="2.60" text-anchor="middle" font-weight="bold">16</text>
+<line class="lead" x1="302.44" y1="165.61" x2="265.00" y2="180.00"/>
+<circle cx="302.44" cy="165.61" r="0.6" fill="#111"/>
+<circle class="box" cx="262.00" cy="180.00" r="3"/>
+<text x="262.00" y="181.00" font-size="2.60" text-anchor="middle" font-weight="bold">15</text>
+<line class="lead" x1="338.47" y1="116.84" x2="389.00" y2="40.00"/>
+<circle cx="338.47" cy="116.84" r="0.6" fill="#111"/>
+<circle class="box" cx="392.00" cy="40.00" r="3"/>
+<text x="392.00" y="41.00" font-size="2.60" text-anchor="middle" font-weight="bold">5</text>
+<line class="lead" x1="337.99" y1="125.02" x2="389.00" y2="75.00"/>
+<circle cx="337.99" cy="125.02" r="0.6" fill="#111"/>
+<circle class="box" cx="392.00" cy="75.00" r="3"/>
+<text x="392.00" y="76.00" font-size="2.60" text-anchor="middle" font-weight="bold">2</text>
+<line class="lead" x1="339.93" y1="125.79" x2="389.00" y2="110.00"/>
+<circle cx="339.93" cy="125.79" r="0.6" fill="#111"/>
+<circle class="box" cx="392.00" cy="110.00" r="3"/>
+<text x="392.00" y="111.00" font-size="2.60" text-anchor="middle" font-weight="bold">14</text>
+<line class="lead" x1="330.67" y1="158.57" x2="389.00" y2="145.00"/>
+<circle cx="330.67" cy="158.57" r="0.6" fill="#111"/>
+<circle class="box" cx="392.00" cy="145.00" r="3"/>
+<text x="392.00" y="146.00" font-size="2.60" text-anchor="middle" font-weight="bold">8</text>
+<line class="lead" x1="327.43" y1="176.29" x2="389.00" y2="180.00"/>
+<circle cx="327.43" cy="176.29" r="0.6" fill="#111"/>
+<circle class="box" cx="392.00" cy="180.00" r="3"/>
+<text x="392.00" y="181.00" font-size="2.60" text-anchor="middle" font-weight="bold">12</text>
+<text x="262.00" y="196.00" font-size="2.30" text-anchor="start" font-weight="normal">NOTES</text>
+<text x="262.00" y="199.34" font-size="2.30" text-anchor="start" font-weight="normal">1. Items 1 to 8 are welded into one leaf frame (6 mm fillet welds minimum).</text>
+<text x="262.00" y="202.67" font-size="2.30" text-anchor="start" font-weight="normal">2. Bought in items are modelled from the maker's catalogue sizes.</text>
+<text x="262.00" y="206.00" font-size="2.30" text-anchor="start" font-weight="normal">3. Fixed items (20 to 41) are shown on ESP23-GA-01 and GA-03.</text>
+<text x="262.00" y="209.34" font-size="2.30" text-anchor="start" font-weight="normal">4. Each part has its own drawing, ESP23-Pnn (nn = item), and its own</text>
+<text x="262.00" y="212.68" font-size="2.30" text-anchor="start" font-weight="normal">    STEP file and Inventor build steps on the ESP 2023 project page.</text>
+<style>.ph{fill:none;stroke:#555;stroke-width:0.25;stroke-dasharray:6,1.2,1,1.2,1,1.2}.wat{fill:none;stroke:#1565D8;stroke-width:0.35}.watf{fill:#DCEBFB;stroke:#1565D8;stroke-width:0.3}.note{font-size:2.6px}.box{fill:none;stroke:#111;stroke-width:0.3}.tbl{fill:none;stroke:#111;stroke-width:0.25}.lead{fill:none;stroke:#111;stroke-width:0.2}</style>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Lock Restoration Ltd</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Parts list</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP23-GA-05</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP 2023 parts list</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">See parts list</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">NTS</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="258.88,282.54 264.38,281.30 264.38,286.25 258.88,285.01"/>
+<circle class="vis" cx="254.47" cy="283.78" r="2.48"/>
+<circle class="vis" cx="254.47" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="254.47" y1="279.80" x2="254.47" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">Third angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

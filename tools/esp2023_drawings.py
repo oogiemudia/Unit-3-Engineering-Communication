@@ -5,6 +5,7 @@
   ESP23-GA-02  Gate leaf: elevation with girder levels, plan, section C-C through the girders
   ESP23-GA-03  Hinge, seal and mitre details, 1:10 and 1:20
   ESP23-GA-04  Part A design ideas: design A (mitre gates) and design B (lift gate), with notes
+  ESP23-GA-05  Parts list (bill of materials) for all 41 parts, with a ballooned view of one leaf
 
 Output: docs/ESP 2023/drawings/ESP23-GA-0n_*.svg and .png.
 Run from the repository root:  python3 tools/esp2023_drawings.py
@@ -21,11 +22,23 @@ from OCP.BRepAdaptor import BRepAdaptor_Curve  # noqa: E402
 from OCP.GCPnts import GCPnts_QuasiUniformDeflection  # noqa: E402
 
 OUT = os.path.join(ROOT, 'docs', 'ESP 2023', 'drawings')
-OWNER, DATE = 'Lock Restoration Ltd', '2026-11-09'
+OWNER, DATE = 'Lock Restoration Ltd', '2026-11-10'
 EXTRA_STYLE = ('<style>.ph{fill:none;stroke:#555;stroke-width:0.25;stroke-dasharray:6,1.2,1,1.2,1,1.2}'
                '.wat{fill:none;stroke:#1565D8;stroke-width:0.35}.watf{fill:#DCEBFB;stroke:#1565D8;stroke-width:0.3}'
                '.note{font-size:2.6px}.box{fill:none;stroke:#111;stroke-width:0.3}.tbl{fill:none;stroke:#111;stroke-width:0.25}'
                '.lead{fill:none;stroke:#111;stroke-width:0.2}</style>')
+
+
+def _pintle_fea():
+    import json
+    f = os.path.join(ROOT, 'docs', 'ESP 2023', 'fea', 'esp2023_p20_bottom_pintle.json')
+    if os.path.exists(f):
+        r = json.load(open(f))['results']
+        return r['vm_max'], r['sf_min']
+    return 21.0, 11.0
+
+
+PINTLE_FEA = _pintle_fea()
 
 
 def comp(items):
@@ -198,35 +211,32 @@ def finish(sh, name, title, number, scale, doctype='Assembly drawing', material=
 
 
 # ------------------------------------------------------------------ GA-01 general arrangement
+def _range(group):
+    nos = [p['no'] for p in E.PARTS if p['group'] == group]
+    return '%d-%d' % (nos[0], nos[-1]) if len(nos) > 1 else str(nos[0])
+
+
 GA_ROWS = [
-    (1, 'Gate leaf, left and right hand', 2, 'S355 steel, welded; blast cleaned, epoxy painted'),
-    (2, 'Oak rubbing fenders (3 per leaf)', 6, 'FSC oak, bolted on, replaceable'),
-    (3, 'Walkway and handrail', 2, 'Galvanised steel grating and tube'),
-    (4, 'Cill seal', 2, 'EPDM rubber'),
-    (5, 'Heel seal', 2, 'EPDM rubber'),
-    (6, 'Mitre seal', 1, 'EPDM rubber, 30 mm'),
-    (7, 'Bottom pintle, 150 dia', 2, '316 stainless steel, bronze bush'),
-    (8, 'Anchor collar and strap', 2, 'S355 steel, galvanised'),
-    (9, 'Electric linear actuator', 2, '1300 mm stroke, 20 kN, IP68, mains'),
-    (10, 'Actuator rod with eye', 2, '316 stainless, spherical bearing'),
-    (11, 'Inspection chamber', 2, 'Precast concrete, GRP grating cover'),
-    (12, 'CCTV mast and camera', 2, 'Galvanised steel, PTZ camera'),
-    (13, 'Emergency call point', 2, 'Stainless post, stop button, intercom'),
+    (_range('frame'), 'Gate leaf frame, welded (L and R)', 2, 'S355 steel; blast cleaned, epoxy painted'),
+    (_range('leaf'), 'Fenders, walkway, seals, bush, paddle', '2 sets', 'Oak, galvanised steel, EPDM, bronze, 316'),
+    (_range('hinge'), 'Pintle, collar, anchors, encoder', '2 sets', '316 stainless, bronze, S355 galvanised'),
+    (_range('drive'), 'Electric actuator, pedestal, pins', '2 sets', '1300 stroke, 20 kN, IP68, mains'),
+    (_range('chamber'), 'Chamber, covers, panel, CCTV, call point', '2 sets', 'Precast concrete, GRP, stainless'),
+    (_range('civil'), 'Cill', 1, 'Precast concrete C40/50'),
 ]
 
 
 def ga01():
     sh = D.Sheet()
     s = 1 / 50
-    shut = E.lock_gates(0)
+    shut = [it for it in E.lock_gates(0) if it[0] != 'cill']      # the cill is shown on GA-03; here it is the CILL line
     no_mast = [it for it in shut if 'CCTV' not in it[0] and 'call point' not in it[0]]
     allc = comp(shut)
     # plan, top left
     P_data, pox, poy = place(allc, 'plan', s, 30, 22)
     walls_y = (-450, 3500)
     P = View(sh, None, 'plan', s, pox, poy, label=None, data=P_data)
-    moving = [it for it in E.lock_gates(E.OPEN_DEG) if 'leaf' in it[0] or 'fender' in it[0] or 'walkway' in it[0]
-              or 'actuator' in it[0]]
+    moving = [it for it in E.lock_gates(E.OPEN_DEG) if E.group_of(it[0]) != 'fixed']
     phantom(sh, comp(moving), 'plan', pox, poy, s)
     # lock walls (thin lines) with the quoin recess
     for sx in (-1, 1):
@@ -301,7 +311,7 @@ def ga01():
     sh.line(base[0] - 0.5, zr[1], base[0] + pw + 4, zr[1], 'vis')
     text_block(sh, base[0] + 3, topw[1] - 14, ['HYDROSTATIC', 'PRESSURE', 'F = ½ρgh² = 148 kN/m', 'acts h/3 = 1.83 m', 'above the cill'], size=2.3)
     a = F.P((E.PIV - 400, 0, E.TOP))
-    leader(sh, a[0], a[1] + 6, a[0] + 22, a[1] - 10, 'WALKWAY (3)', 2.3)
+    leader(sh, a[0], a[1] + 6, a[0] + 22, a[1] - 10, 'WALKWAY (10)', 2.3)
 
     # isometric, right column
     iso_shape = comp(shut)
@@ -312,16 +322,18 @@ def ga01():
     ix, iy = 287 - I['bb'][0] * si, 20 + I['bb'][3] * si
     D.draw_view(sh, I, ix, iy, si)
     sh.text(347, 104, 'ISOMETRIC VIEW (NOT TO SCALE)', size=3.0, weight='bold')
-    yb = parts_list(sh, 287, 114, [list(r) for r in GA_ROWS], widths=(9, 46, 8, 57))
+    yb = parts_list(sh, 287, 114, [list(r) for r in GA_ROWS], widths=(10, 52, 10, 48), title='PARTS (FULL LIST ON ESP23-GA-05)')
     text_block(sh, 287, yb + 6, [
         'NOTES',
         '1. Dimensions in millimetres. Levels are above the cill. Do not scale.',
         '2. Gates hold a head of 2.0 to 5.5 m; water on the upstream (chamber) side.',
-        '3. Each leaf has its own actuator, sensors and controller, so the gates work',
-        '    independently. Interlock: a gate may only move when the levels are equal.',
-        '4. Leaf 8.7 t each: lifted out by mobile crane from two lifting eyes on the',
-        '    walkway, after the anchor collar is released.',
-        '5. Hydrostatic calculations: see ESP23 calculation sheets.',
+        '3. Each leaf has its own actuator, position encoder and control panel, so the',
+        '    gates work independently. A gate only opens once its paddles have levelled',
+        '    the water either side.',
+        '4. Leaf %.1f t each: lifted out by mobile crane on its two lifting lugs (7),' % (E.leaf_mass()[0] / 1000),
+        '    after the anchor collar (22) is released.',
+        '5. Chamber cover panels (35) shown fitted. Hydrostatic calculations: see the',
+        '    ESP23 calculation sheets. Every part has its own drawing ESP23-Pnn.',
     ], size=2.3)
     finish(sh, 'ESP23-GA-01_general_arrangement', 'ESP 2023 lock gates, GA', 'ESP23-GA-01', '1:50')
 
@@ -355,9 +367,9 @@ def ga02():
         D.dim_h(sh, a[0], b[0], yb + dy, fy1, lab)
     leader(sh, *F.P((E.LEAF - E.MITRE_BOX + 20, 0, 6550)), F.P((E.LEAF, 0, 6900))[0] + 10, F.P((E.LEAF, 0, 6900))[1], 'HANDRAIL 48.3 DIA, 1100 HIGH', 2.3)
     p = F.P((900, 0, 150))
-    leader(sh, p[0], p[1] - 1, p[0] + 60, p[1] - 22, 'GIRDER: WEB 20, FLANGE 200 x 20', 2.3)
+    leader(sh, p[0], p[1] - 1, p[0] + 54, p[1] - 22, 'GIRDER: WEB 20, FLANGE 200 x 20', 2.3)
     p = F.P((990, 0, 3000))
-    leader(sh, p[0], p[1], p[0] + 58, p[1] - 10, 'STIFFENER 15 PLATE', 2.3)
+    leader(sh, p[0], p[1], p[0] + 58, p[1] + 6, 'STIFFENER 15 PLATE', 2.3)
     p = F.P((0, 0, 5925))
     leader(sh, p[0], p[1], p[0] - 4, p[1] - 14, 'JOURNAL 200 DIA', 2.3, anchor='end')
     # plan, 1:25, top right
@@ -407,7 +419,7 @@ def ga02():
         'NOTES',
         '1. Welded S355 steel (EN 10025), all welds continuous fillet, 6 mm minimum.',
         '2. Blast clean to Sa 2.5, three coat epoxy paint, 300 microns, black and white.',
-        '3. Leaf mass 8.7 t. Centre of gravity 1277 mm from the pivot.',
+        '3. Leaf mass %.1f t. Centre of gravity %.0f mm from the pivot.' % (E.leaf_mass()[0] / 1000, E.leaf_mass()[1]),
         '4. Girders closer together near the bottom, where the water pressure is greatest.',
         '5. Bottom panel 580 x 630 x 12: bending stress 39 MPa (hand), 34 MPa',
         '    von Mises (FEA). Safety factor 10 on S355.',
@@ -426,7 +438,7 @@ def ga03():
     X = E.PIV
     # D: bottom pintle, section on the pivot (plane y = 0, looking from downstream)
     Dv = section_view(sh, right, 'y', 0, 1, 'front', ((X - 450, X + 450), (-400, 400), (-90, 420)), s, 70, 30, None,
-                      skip=('pintle',))
+                      skip=('bottom pintle', 'anchor bolt'))
     x0, y0, x1, y1 = Dv.bb()
     sh.text((x0 + x1) / 2, y1 + 16, 'DETAIL D: BOTTOM PINTLE (SECTION ON PIVOT), 1:10', size=3, weight='bold')
     a, b = Dv.P((X - 75, 0, 200)), Dv.P((X + 75, 0, 200))
@@ -438,20 +450,22 @@ def ga03():
     a, b = Dv.P((X + 75, 0, 0)), Dv.P((X + 75, 0, 280))
     D.dim_v(sh, b[1], a[1], x1 + 14, a[0], '280')
     p = Dv.P((X - 78, 0, 270))
-    leader(sh, p[0], p[1], x0 - 4, p[1] - 8, 'BORE Ø160 x 250, BRONZE BUSH', 2.3, anchor='end')
+    leader(sh, p[0], p[1], x0 - 4, p[1] - 8, 'BRONZE BUSH Ø190/Ø150 (15)', 2.3, anchor='end')
     p = Dv.P((X - 300, 0, -40))
-    leader(sh, p[0], p[1], x0 - 4, p[1] + 8, '316 STAINLESS PINTLE', 2.3, anchor='end')
-    sh.text(x0 - 11, p[1] + 12.5, 'BOLTED INTO THE CILL', size=2.3, anchor='end')
+    leader(sh, p[0], p[1], x0 - 4, p[1] + 8, '316 STAINLESS PINTLE (20)', 2.3, anchor='end')
+    sh.text(x0 - 11, p[1] + 12.5, '4 x M24 ANCHORS (21) INTO THE CILL (41)', size=2.3, anchor='end')
     # E: top anchor collar, section on the pivot
-    Ev = section_view(sh, right, 'y', 0, 1, 'front', ((X - 450, X + 950), (-400, 400), (5650, 6120)), s, 160, 22, None)
+    Ev = section_view(sh, right, 'y', 0, 1, 'front', ((X - 450, X + 950), (-400, 400), (5650, 6200)), s, 160, 22, None)
     x0, y0, x1, y1 = Ev.bb()
     sh.text((x0 + x1) / 2, y1 + 16, 'DETAIL E: TOP ANCHOR COLLAR (SECTION ON PIVOT), 1:10', size=3, weight='bold')
     a, b = Ev.P((X - 100, 0, 6000)), Ev.P((X + 100, 0, 6000))
     D.dim_h(sh, a[0], b[0], y0 - 5, a[1], 'Ø200')
     a, b = Ev.P((X + 180, 0, 5870)), Ev.P((X + 900, 0, 5870))
-    D.dim_h(sh, a[0], b[0], y1 + 7, y1, '720 STRAP INTO WALL')
+    D.dim_h(sh, a[0], b[0], y1 + 7, y1, '720 ARM TO ANCHOR PLATE (24)')
     p = Ev.P((X - 180, 0, 5920))
-    leader(sh, p[0], p[1], p[0] - 6, p[1] - 12, 'COLLAR Ø360/Ø210 x 100', 2.3, anchor='end')
+    leader(sh, p[0], p[1], p[0] + 1, y0 - 6, 'COLLAR Ø360 (22), BRONZE BUSH Ø240/Ø200 (23)', 2.3, anchor='end')
+    p = Ev.P((X + 50, 0, 6080))
+    leader(sh, p[0], p[1], p[0] + 26, p[1] - 8, 'POSITION ENCODER (26) ON BRACKET (25)', 2.3)
     # F: mitre joint, plan section at z = 3000
     Fv = section_view(sh, right + left, 'z', 3000, -1, 'plan', ((-450, 450), (380, 1200), (2700, 3000)), s, 30, 140, None)
     x0, y0, x1, y1 = Fv.bb()
@@ -478,8 +492,8 @@ def ga03():
         'NOTES',
         '1. Hinges are the critical parts: stainless pintle and bronze bush do not',
         '    corrode together, and the bush is replaced at each lift out.',
-        '2. Pintle loads: 85.6 kN down (leaf weight) and 19 kN sideways.',
-        '    FEA peak 21 MPa at the root fillet, safety factor 11.6.',
+        '2. Pintle loads: 87.2 kN down (leaf weight) and 19.5 kN sideways.',
+        '    FEA peak %.1f MPa at the root fillet, safety factor %.1f.' % PINTLE_FEA,
         '3. Water pushes the leaves into the mitre and the quoins, so the seals',
         '    tighten as the head rises: no water is lost through the gates.',
         '4. EPDM seals are bolted on in lengths and replaced without welding.',
@@ -506,11 +520,11 @@ def ga04():
         'so the mitre and quoin seals get tighter as the head rises (2 to 5.5 m).',
         'Hinges: 316 stainless pintle in a bronze bush, anchor collar at the top.',
         'Drive: one electric actuator per leaf, hidden in an inspection chamber.',
-        'Surveillance: CCTV mast per side, leaf position and water level sensors,',
+        'Surveillance: CCTV mast per side, a position encoder on each pivot,',
         'emergency call point. Boats: oak fenders on the chamber face.',
         'Looks: the traditional shape, black and white paint, oak, walkway.',
         'Sustainable: steel and oak recycled or reused; no hydraulic oil.',
-        'Lift out: 8.7 t leaf by mobile crane after releasing the collar.',
+        'Lift out: %.1f t leaf by mobile crane on two lifting lugs.' % (E.leaf_mass()[0] / 1000),
     ], size=2.5)
     text_block(sh, 215, 164, [
         'One steel gate 4.6 m wide lifts straight up between two concrete towers,',
@@ -533,7 +547,7 @@ def ga04():
     # comparison table
     rows = [('Meets 4.2 m x 6 m, 5.5 m head', 'Yes', 'Yes'), ('Drive hidden in a chamber', 'Yes', 'No'),
             ('Heritage appearance', 'Good', 'Poor'), ('Sealing', 'Good, self tightening', 'Good'),
-            ('Crane removal', '8.7 t per leaf', 'About 15 t, high lift'), ('Independent operation', 'Yes, per leaf', 'One gate'),
+            ('Crane removal', '%.1f t per leaf' % (E.leaf_mass()[0] / 1000), 'About 15 t, high lift'), ('Independent operation', 'Yes, per leaf', 'One gate'),
             ('Estimated cost per gate system', 'About £95,000', 'About £130,000')]
     x, y, wds = 20, 222, (70, 50, 50)
     sh.text(x, y - 2, 'COMPARISON AGAINST THE BRIEF', size=3, anchor='start', weight='bold')
@@ -548,8 +562,95 @@ def ga04():
            'See notes')
 
 
+# ------------------------------------------------------------------ GA-05 parts list
+def ga05():
+    sh = D.Sheet()
+    rows = E.bom([n for n, s_, c in E.lock_gates(0)])
+    # the table, left half of the sheet
+    x, y, h = 16, 18, 4.45
+    wd = (9, 50, 9, 92, 50)
+    heads = ('Item', 'Part', 'Qty', 'Material and finish', 'Part file / drawing')
+    W = sum(wd)
+    sh.text(x, y - 2, 'PARTS LIST: ONE GATE SYSTEM (A PAIR OF LEAVES)', size=3.2, anchor='start', weight='bold')
+    lines = [('h', heads)]
+    g = None
+    for r in rows:
+        if r['group'] != g:
+            g = r['group']
+            lines.append(('g', dict(E.GROUPS)[g].upper()))
+        mat = r['material'] + (' (bought in)' if r['bought'] and 'Bought' not in r['material'] else '')
+        lines.append(('r', (r['no'], r['name'], r['qty'], mat.replace('Bought in: ', 'Bought in. '),
+                            '%s  ESP23-P%02d' % (r['file'], r['no']))))
+    yy = y
+    for kind, row in lines:
+        if kind == 'g':
+            sh.add('<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="#EEF2F6" stroke="#111" stroke-width="0.25"/>' % (x, yy, W, h))
+            sh.text(x + 1.2, yy + 3.2, row, size=2.2, anchor='start', weight='bold')
+        else:
+            xx = x
+            for c, cell in enumerate(row):
+                sh.add('<rect class="tbl" x="%.2f" y="%.2f" width="%.2f" height="%.2f"/>' % (xx, yy, wd[c], h))
+                txt = str(cell)
+                limit = int(wd[c] / 1.12)
+                if len(txt) > limit:
+                    txt = txt[:limit - 1] + '…'
+                sh.text(xx + 1.0, yy + 3.2, txt, size=2.15, anchor='start', weight='bold' if kind == 'h' else 'normal')
+                xx += wd[c]
+        yy += h
+    total = sum(r['qty'] for r in rows)
+    sh.text(x, yy + 4.5, '%d different parts, %d parts in all. Quantities are for one gate system: a pair of leaves with '
+            'their hinges, drives and chambers.' % (len(rows), total), size=2.4, anchor='start')
+    # ballooned isometric of the left leaf from downstream, right of the table
+    leaf = E.leaf_items()
+    leaf = [it for it in leaf if it[1] != 'pivot_pin']
+    D.ISO_DIR['d'] = (1, -1.4, 0.75)
+    data = D.view_data(comp([(n, s_, None) for n, k, s_ in leaf]), 'iso', hidden=False)
+    bx0, by0, bx1, by1 = data['bb']
+    si = min(118 / (bx1 - bx0), 150 / (by1 - by0))
+    ox = 268 + (118 - (bx1 - bx0) * si) / 2 - bx0 * si
+    oy = 34 + (150 - (by1 - by0) * si) / 2 + by1 * si
+    D.draw_view(sh, data, ox, oy, si)
+    sh.text(327, 22, 'ONE LEAF FROM DOWNSTREAM, ITEMS 1 TO 19', size=3, weight='bold')
+    seen, marks = set(), []
+    for n, k, s_ in leaf:
+        if k in seen:
+            continue
+        seen.add(k)
+        bb = s_.val().BoundingBox()
+        c = ((bb.xmin + bb.xmax) / 2, (bb.ymin + bb.ymax) / 2, (bb.zmin + bb.zmax) / 2)
+        if k in ('girder',):
+            c = (1280, -225, 3750)
+        if k == 'skin_plate':
+            c = (2160, 219, 3300)
+        if k == 'stiffener':
+            c = (987, -205, 2500)
+        px, py = D.proj(c, 'iso')
+        marks.append((E.PART[k]['no'], ox + px * si, oy - py * si))
+    # balloons in two columns either side of the view, in the order of their height on the paper
+    cx = 268 + 59
+    left = sorted([m for m in marks if m[1] < cx], key=lambda m: m[2])
+    right = sorted([m for m in marks if m[1] >= cx], key=lambda m: m[2])
+    for col, bxp in ((left, 262), (right, 392)):
+        n = len(col)
+        for j, (no, px, py) in enumerate(col):
+            byp = 40 + j * (140 / max(1, n - 1)) if n > 1 else py
+            sh.add('<line class="lead" x1="%.2f" y1="%.2f" x2="%.2f" y2="%.2f"/>' % (px, py, bxp + (3 if bxp < cx else -3), byp))
+            sh.add('<circle cx="%.2f" cy="%.2f" r="0.6" fill="#111"/>' % (px, py))
+            sh.add('<circle class="box" cx="%.2f" cy="%.2f" r="3"/>' % (bxp, byp))
+            sh.text(bxp, byp + 1.0, str(no), size=2.6, weight='bold')
+    text_block(sh, 262, 196, [
+        'NOTES',
+        '1. Items 1 to 8 are welded into one leaf frame (6 mm fillet welds minimum).',
+        '2. Bought in items are modelled from the maker\'s catalogue sizes.',
+        '3. Fixed items (20 to 41) are shown on ESP23-GA-01 and GA-03.',
+        '4. Each part has its own drawing, ESP23-Pnn (nn = item), and its own',
+        '    STEP file and Inventor build steps on the ESP 2023 project page.',
+    ], size=2.3)
+    finish(sh, 'ESP23-GA-05_parts_list', 'ESP 2023 parts list', 'ESP23-GA-05', 'NTS', 'Parts list')
+
+
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    which = sys.argv[1:] or ['1', '2', '3', '4']
+    which = sys.argv[1:] or ['1', '2', '3', '4', '5']
     for k in which:
-        dict(zip('1234', (ga01, ga02, ga03, ga04)))[k]()
+        dict(zip('12345', (ga01, ga02, ga03, ga04, ga05)))[k]()

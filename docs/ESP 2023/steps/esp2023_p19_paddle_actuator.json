@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p19_paddle_actuator",
+ "title": "ESP 2023 part 19: paddle actuator",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as paddle_actuator.ipt.",
+    "Circle diameter 90 on the XZ Plane, Extrude 1200 mm. Hole diameter 40, 1150 deep, from the bottom."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle actuator",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Motor",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 80 x 80 square on the top face. Extrude 150 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Fixing bracket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the 100 x 200 bracket plate 75 mm from the axis and Extrude 20 mm, then two 40 x 40 standoffs to the body. Save."
+   ],
+   "note": "It bolts to the downstream flange of the top girder.",
+   "parts": [
+    {
+     "name": "paddle actuator",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p19_paddle_actuator/step_03.json"
+  }
+ ]
+}

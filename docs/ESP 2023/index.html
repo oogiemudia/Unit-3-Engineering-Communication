@@ -16,6 +16,14 @@ header a{color:#BFD6F6}
 h1{margin:4px 0 6px;font-size:28px}
 header p{margin:0;max-width:800px;color:#DCE6F2}
 h2{color:var(--ink);font-size:21px;margin:26px 0 10px}
+h3.grp{color:var(--ink);font-size:16px;margin:18px 0 8px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.pcard img{width:100%;aspect-ratio:1.3;object-fit:contain;background:#F4F6F8;border-bottom:1px solid var(--line)}
+.pcard .b{padding:8px 10px;display:flex;flex-direction:column;gap:4px;flex:1;font-size:13px}
+.pcard h4{margin:0;font-size:14px;color:var(--ink)}
+.pcard .m{color:var(--muted)}
+.pcard .links{font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card img{width:100%;aspect-ratio:1.414;object-fit:contain;background:#fff;border-bottom:1px solid var(--line)}
@@ -44,7 +52,7 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
 
 <h2>Task 2 submission set</h2>
 <div class="box">
-  <p style="margin:0 0 6px"><b>Part A</b> (two design ideas, annotated with the hydrostatic pressure calculation): sheet ESP23-GA-04. <b>Part B</b> (the preferred design, fully dimensioned and to scale): sheets ESP23-GA-01 to 03. <b>Supporting calculations</b> (two A4 sides) and <b>design notes</b> (about 500 words) are the two PDFs below.</p>
+  <p style="margin:0 0 6px"><b>Part A</b> (two design ideas, annotated with the hydrostatic pressure calculation): sheet ESP23-GA-04. <b>Part B</b> (the preferred design, fully dimensioned and to scale): sheets ESP23-GA-01 to 03, the parts list ESP23-GA-05 and a drawing for every one of the 41 parts (ESP23-P01 to P41). <b>Supporting calculations</b> (two A4 sides) and <b>design notes</b> (about 500 words) are the two PDFs below.</p>
   <div class="links"><a class="btn" href="ESP23_calculations.pdf">Calculations (PDF)</a> <a class="btn" href="ESP23_design_notes.pdf">Design notes (PDF)</a></div>
 </div>
 
@@ -54,23 +62,29 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
   <div class="card"><img src="drawings/ESP23-GA-02_gate_leaf.png" alt="Gate leaf drawing" loading="lazy"><div class="b"><h3>ESP23-GA-02 Gate leaf</h3><p>Elevation with girder levels (1:50), plan (1:25), section C-C through the girders (1:10).</p><div class="links"><a href="drawings/ESP23-GA-02_gate_leaf.png">PNG</a> <a href="drawings/ESP23-GA-02_gate_leaf.svg">SVG</a></div></div></div>
   <div class="card"><img src="drawings/ESP23-GA-03_hinge_and_seal_details.png" alt="Hinge and seal details" loading="lazy"><div class="b"><h3>ESP23-GA-03 Hinge and seal details</h3><p>Bottom pintle, top anchor collar, mitre seal and heel post in the quoin.</p><div class="links"><a href="drawings/ESP23-GA-03_hinge_and_seal_details.png">PNG</a> <a href="drawings/ESP23-GA-03_hinge_and_seal_details.svg">SVG</a></div></div></div>
   <div class="card"><img src="drawings/ESP23-GA-04_design_ideas.png" alt="Design ideas A and B" loading="lazy"><div class="b"><h3>ESP23-GA-04 Design ideas A and B</h3><p>Mitre gates against a vertical lift gate, with the hydrostatic load and a comparison against the brief.</p><div class="links"><a href="drawings/ESP23-GA-04_design_ideas.png">PNG</a> <a href="drawings/ESP23-GA-04_design_ideas.svg">SVG</a></div></div></div>
+  <div class="card"><img src="drawings/ESP23-GA-05_parts_list.png" alt="Parts list" loading="lazy"><div class="b"><h3>ESP23-GA-05 Parts list</h3><p>All 41 parts with quantities, materials and part files, and a ballooned view of one leaf.</p><div class="links"><a href="drawings/ESP23-GA-05_parts_list.png">PNG</a> <a href="drawings/ESP23-GA-05_parts_list.svg">SVG</a></div></div></div>
 </div>
-<p style="font-size:14px;color:var(--muted)">The hub's standard sheets (third angle, first angle and section A-A, overall sizes only) are in the <a href="drawings/">drawings</a> folder too, named after each model.</p>
+<p style="font-size:14px;color:var(--muted)">Every part also has its own sheet (third angle and first angle, with a key sizes table), listed with the parts below. All drawings are in the <a href="drawings/">drawings</a> folder.</p>
 
 <h2>Simulation: the gates opening</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(360px,1fr))">
-  <div class="card"><video src="media/esp2023_lock_gates_sim.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2023_lock_gates_iso.png"></video><div class="b"><h3>Inventor Dynamic Simulation</h3><p>Each leaf turns 71.6 degrees on its own actuator, one after the other. Real time about 60 s each way; shown 10 times faster.</p><div class="links"><a class="btn" href="../viewer.html?m=esp2023_lock_gates&amp;tab=sim">Open the Simulation tab</a></div></div></div>
-  <div class="card"><video src="media/esp2023_lock_gates_turntable.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2023_lock_gates_iso.png"></video><div class="b"><h3>The gates, all round</h3><p>Leaves, hinges, seals, actuators, inspection chambers, CCTV masts and call points.</p><div class="links"><a class="btn" href="../viewer.html?m=esp2023_lock_gates">Open in 3D</a></div></div></div>
+  <div class="card"><video src="media/esp2023_lock_gates_sim.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2023_lock_gates_iso.png"></video><div class="b"><h3>Inventor Dynamic Simulation</h3><p>The paddles lift to empty the lock, then each leaf turns 71.6 degrees on its own actuator, one after the other, and shuts again. Real time about 60 s each way; shown 10 times faster.</p><div class="links"><a class="btn" href="../viewer.html?m=esp2023_lock_gates&amp;tab=sim">Open the Simulation tab</a></div></div></div>
+  <div class="card"><video src="media/esp2023_lock_gates_turntable.mp4" controls muted loop playsinline preload="metadata" poster="media/esp2023_lock_gates_iso.png"></video><div class="b"><h3>The gates, all round</h3><p>All 120 parts: leaves, paddles, hinges, encoders, actuators, chambers, CCTV masts and call points (chamber covers hidden).</p><div class="links"><a class="btn" href="../viewer.html?m=esp2023_lock_gates">Open in 3D</a></div></div></div>
 </div>
 
 <h2>Models</h2>
 <div class="scroll"><table>
 <tr><th>Model</th><th>What it shows</th><th>Open</th><th>Files</th></tr>
-<tr><td><b>Lock gates (GA)</b></td><td>The preferred design, 25 parts, shut. Simulation of the gates opening; FEA of the bottom pintle.</td><td><a href="../viewer.html?m=esp2023_lock_gates">3D</a> · <a href="../viewer.html?m=esp2023_lock_gates&amp;tab=steps">Build steps</a> · <a href="../viewer.html?m=esp2023_lock_gates&amp;tab=sim">Simulation</a> · <a href="../viewer.html?m=esp2023_lock_gates&amp;tab=fea">FEA</a></td><td><a href="step/esp2023_lock_gates.step">STEP</a> · <a href="stl/esp2023_lock_gates.stl">STL</a></td></tr>
-<tr><td><b>Gate leaf</b></td><td>One welded leaf with its fenders, walkway and seals. 16 Inventor build steps.</td><td><a href="../viewer.html?m=esp2023_gate_leaf">3D</a> · <a href="../viewer.html?m=esp2023_gate_leaf&amp;tab=steps">Build steps</a></td><td><a href="step/esp2023_gate_leaf.step">STEP</a> · <a href="stl/esp2023_gate_leaf.stl">STL</a></td></tr>
+<tr><td><b>Lock gates (GA)</b></td><td>The preferred design, shut: 41 different parts, 120 in all. Parts list with show and hide in the 3D viewer. Simulation of the paddles and gates.</td><td><a href="../viewer.html?m=esp2023_lock_gates">3D</a> · <a href="../viewer.html?m=esp2023_lock_gates&amp;tab=steps">Build steps</a> · <a href="../viewer.html?m=esp2023_lock_gates&amp;tab=sim">Simulation</a></td><td><a href="step/esp2023_lock_gates.step">STEP</a> · <a href="stl/esp2023_lock_gates.stl">STL</a></td></tr>
+<tr><td><b>Gate leaf</b></td><td>One leaf assembled from its 19 parts: welded frame, fenders, walkway, seals, bush and paddle. 11 Inventor build steps.</td><td><a href="../viewer.html?m=esp2023_gate_leaf">3D</a> · <a href="../viewer.html?m=esp2023_gate_leaf&amp;tab=steps">Build steps</a></td><td><a href="step/esp2023_gate_leaf.step">STEP</a> · <a href="stl/esp2023_gate_leaf.stl">STL</a></td></tr>
 <tr><td><b>Skin plate panel</b></td><td>The most loaded panel, for the FEA with the true hydrostatic pressure.</td><td><a href="../viewer.html?m=esp2023_skin_panel">3D</a> · <a href="../viewer.html?m=esp2023_skin_panel&amp;tab=fea">FEA</a></td><td><a href="step/esp2023_skin_panel.step">STEP</a></td></tr>
+<tr><td><b>Bottom pintle (part 20)</b></td><td>FEA of the hinge pin under the weight of the leaf, checked by hand.</td><td><a href="../viewer.html?m=esp2023_p20_bottom_pintle">3D</a> · <a href="../viewer.html?m=esp2023_p20_bottom_pintle&amp;tab=fea">FEA</a></td><td><a href="step/esp2023_p20_bottom_pintle.step">STEP</a></td></tr>
 <tr><td><b>Concept B: lift gate</b></td><td>The second design idea, for comparison.</td><td><a href="../viewer.html?m=esp2023_lift_gate">3D</a> · <a href="../viewer.html?m=esp2023_lift_gate&amp;tab=steps">Build steps</a></td><td><a href="step/esp2023_lift_gate.step">STEP</a></td></tr>
 </table></div>
+
+<h2>Every part (41)</h2>
+<p style="font-size:14px">Each component is its own part, as it would be in Inventor (a .ipt file): its own 3D model, Inventor build steps, drawing with a key sizes table, and STEP file. The gate leaf and the GA are assemblies of these parts. Numbers are the item numbers on the parts list, ESP23-GA-05.</p>
+<div id="parts"></div>
 
 <h2>Key results</h2>
 <div class="scroll"><table>
@@ -79,7 +93,7 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
 <tr><td>Force on one leaf</td><td>&frac12;&rho;gh&sup2; x 2.46 m = 365 kN</td><td></td><td></td></tr>
 <tr><td>Skin plate panel 580 x 630 x 12</td><td>34.8 MPa von Mises, 0.25 mm</td><td>34.1 MPa, 0.25 mm</td><td>10.4</td></tr>
 <tr><td>Bottom girder (simply supported)</td><td>4.2 MPa</td><td></td><td>84</td></tr>
-<tr><td>Bottom pintle (85.6 kN down, 19 kN sideways)</td><td>13 MPa plain pin, about 21 MPa at the fillet</td><td>21.5 MPa</td><td>11.6</td></tr>
+<tr><td>Bottom pintle (87.2 kN down, 19.5 kN sideways)</td><td>13 MPa plain pin, about 21 MPa at the fillet</td><td id="pinFea">see FEA</td><td id="pinSf"></td></tr>
 <tr><td>Actuator force</td><td>12 kN needed, 20 kN fitted</td><td></td><td>1.7</td></tr>
 </table></div>
 
@@ -87,5 +101,28 @@ footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
 <p style="font-size:14px">Every model is parametric CadQuery Python in <code>models/esp2023.py</code> in the repository: change a number (the opening, the height, the head of water, the girder levels) and rebuild. The Inventor build steps are in <code>models/esp2023_steps.py</code>, the dimensioned sheets in <code>tools/esp2023_drawings.py</code> and the calculations in <code>tools/esp2023_calcs.py</code>. Build steps and the simulation are written as the Autodesk Inventor commands a learner would use; the stage models are CadQuery, not Inventor files.</p>
 </main>
 <footer class="wrap">Brief and Task 2: City and Guilds T Level 8730-035, Summer 2023. Design, models and drawings made for teaching with the Unit 3 CAD hub. Dimensions in millimetres.</footer>
+<script>
+const GROUPS = [['frame', 'Gate leaf frame (welded fabrication)'], ['leaf', 'Fitted to each leaf'], ['hinge', 'Hinges and gate position sensor'],
+  ['drive', 'Drive (one per leaf)'], ['chamber', 'Inspection chamber, controls and CCTV'], ['civil', 'Civil works']];
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const parts = cat.filter(m => m.part).sort((a, b) => a.part.no - b.part.no);
+  const host = document.getElementById('parts');
+  for (const [g, title] of GROUPS) {
+    const mine = parts.filter(m => m.part.group === g);
+    if (!mine.length) continue;
+    host.insertAdjacentHTML('beforeend', `<h3 class="grp">${title}</h3><div class="pgrid">` + mine.map(m => {
+      const d = (m.drawings || {}).third || '';
+      return `<div class="pcard"><a href="../viewer.html?m=${m.name}"><img src="media/${m.name}_iso.png" alt="${m.part.no}. ${m.parts[0].name}" loading="lazy"></a>
+        <div class="b"><h4>${m.part.no}. ${m.parts[0].name}</h4><span class="m">${m.part.material}</span>
+        <div class="links"><a href="../viewer.html?m=${m.name}">3D</a> · <a href="../viewer.html?m=${m.name}&tab=steps">Build steps</a>${m.fea === false ? '' : ` · <a href="../viewer.html?m=${m.name}&tab=fea">FEA</a>`}
+        · <a href="../${d}.png">Drawing</a> · <a href="../${m.files.step}">STEP</a></div></div></div>`;
+    }).join('') + '</div>');
+  }
+});
+fetch('fea/esp2023_p20_bottom_pintle.json').then(r => r.json()).then(f => {
+  document.getElementById('pinFea').textContent = f.results.vm_max.toFixed(1) + ' MPa';
+  document.getElementById('pinSf').textContent = f.results.sf_min.toFixed(1);
+}).catch(() => {});
+</script>
 </body>
 </html>

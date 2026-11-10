@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p32_pivot_pin",
+ "title": "ESP 2023 part 32: pivot pin",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pivot_pin.ipt.",
+    "Circle diameter 40. Extrude 105 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pin",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p32_pivot_pin/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p32_pivot_pin/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Head",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 60 on the top. Extrude 15 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pin",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p32_pivot_pin/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p32_pivot_pin/step_02.json"
+  }
+ ]
+}

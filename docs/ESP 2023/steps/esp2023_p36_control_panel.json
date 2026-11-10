@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p36_control_panel",
+ "title": "ESP 2023 part 36: control panel",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Enclosure",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as control_panel.ipt.",
+    "Sketch a 400 x 500 rectangle. Extrude 150 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "control panel",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p36_control_panel/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p36_control_panel/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Door handle",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 30 x 100 rectangle on the door. Extrude 15 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "control panel",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p36_control_panel/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p36_control_panel/step_02.json"
+  }
+ ]
+}
