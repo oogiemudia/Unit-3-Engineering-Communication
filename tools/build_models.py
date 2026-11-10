@@ -140,7 +140,7 @@ def build(only=None):
         offs = explode_offsets(items, m.get('explode'))
         entry = dict(
             name=name, title=m['title'], criteria=m['criteria'], uses=m['uses'],
-            description=(m['fn'].__doc__ or '').strip().replace('\n', ' '),
+            description=(m.get('description') or m['fn'].__doc__ or '').strip().replace('\n', ' '),
             parts=[dict(name=p, colour='#' + c, explode=o) for (p, w, c), o in zip(items, offs)],
             size_mm=[round(bb.xlen, 1), round(bb.ylen, 1), round(bb.zlen, 1)],
             section=m.get('section'), exploded=bool(m.get('explode')),
@@ -153,6 +153,14 @@ def build(only=None):
             entry['fea'] = False
         if m.get('sim'):
             entry['sim'] = True
+        if m.get('part'):
+            entry['part'] = m['part']
+        if m.get('bom'):
+            entry['bom'] = m['bom']()
+        if m.get('hide'):
+            entry['hide'] = m['hide']
+        if m.get('media'):
+            entry['media'] = m['media']
         if old.get(name, {}).get('drawings'):
             entry['drawings'] = old[name]['drawings']
         catalogue.append(entry)

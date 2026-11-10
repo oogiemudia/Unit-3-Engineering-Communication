@@ -1,0 +1,97 @@
+{
+ "name": "esp2023_p01_heel_post",
+ "title": "ESP 2023 part 01: heel post",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch and extrude the section",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as heel_post.ipt.",
+    "Start 2D Sketch on the XZ Plane (the ground). Circle diameter 450 on the origin (the pivot axis). Rectangle from the centre, 400 along X and 450 wide (225 each side). Finish Sketch.",
+    "Extrude both regions 5800 mm up, with a 50 mm start offset (Advanced), so the post runs from 50 to 5850."
+   ],
+   "note": "The origin of this part is the pivot axis: every other part of the leaf is placed from it.",
+   "parts": [
+    {
+     "name": "heel post",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p01_heel_post/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p01_heel_post/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Make it hollow",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Work Features panel > Plane > Offset from Plane: 5825 mm above the XZ Plane. Sketch on it.",
+    "Project the outline (Sketch tab > Project Geometry) and Offset it 25 mm inwards: 25 mm plate.",
+    "Extrude the inner region, Cut, 5475 mm downwards. Click OK."
+   ],
+   "note": "The bottom 300 mm stays solid: the bearing block that sits on the pintle.",
+   "parts": [
+    {
+     "name": "heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p01_heel_post/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p01_heel_post/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bore for the pintle bush",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole. Placement: the bottom face, on the pivot axis.",
+    "Simple Hole, diameter 190 mm, Distance 250 mm. Click OK."
+   ],
+   "note": "The bronze pintle bush is pressed into this bore.",
+   "parts": [
+    {
+     "name": "heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p01_heel_post/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p01_heel_post/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Top journal",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top face: circle diameter 200 on the pivot axis. Extrude 150 mm up. Click OK.",
+    "Material: Steel S355 (Manage tab > Styles Editor if it is not in your library). Save."
+   ],
+   "note": "The anchor collar and its bush fit round this journal: the top hinge.",
+   "parts": [
+    {
+     "name": "heel post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p01_heel_post/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_p01_heel_post/step_04.json"
+  }
+ ]
+}

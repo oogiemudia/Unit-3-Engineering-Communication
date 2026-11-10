@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p17_paddle_guide",
+ "title": "ESP 2023 part 17: paddle guide",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the angle",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as paddle_guide.ipt.",
+    "Sketch the L section on the XZ Plane: 40 x 20 with a 60 x 20 lip. Extrude 1300 mm up. Save."
+   ],
+   "note": "Place the second guide in the assembly turned over (or with Mirror).",
+   "parts": [
+    {
+     "name": "paddle guide",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p17_paddle_guide/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p17_paddle_guide/step_01.json"
+  }
+ ]
+}

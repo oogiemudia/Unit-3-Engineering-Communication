@@ -17,14 +17,8 @@ RG = RHO * G                       # N/m3
 
 
 def leaf_mass():
-    dens = {'gate leaf (welded S355 steel)': 7850, 'oak fenders': 750, 'walkway and handrail': 7850 * 0.35,
-            'cill seal': 1200, 'heel seal': 1200, 'mitre seal': 1200}
-    m, mx = 0, 0
-    for n, w, c in E.gate_leaf():
-        v = w.val().Volume() * 1e-9 * dens[n]
-        m += v
-        mx += v * w.val().Center().x
-    return m, mx / m
+    """Mass of one leaf and everything that turns with it, from the parts in the CAD model."""
+    return E.leaf_mass()
 
 
 def numbers():
@@ -87,7 +81,7 @@ def numbers():
     n.update(F_res=F_res, T_res=T_res, T_fric=T_fric, T=T, arms=arms,
              F_act=max(10 / a_ for a_, _ in arms), stroke=arms[0][1] - arms[1][1])
     # FEA results from the hub solve
-    for k in ('esp2023_skin_panel', 'esp2023_lock_gates'):
+    for k in ('esp2023_skin_panel', 'esp2023_p20_bottom_pintle'):
         f = os.path.join(FOLDER, 'fea', k + '.json')
         if os.path.exists(f):
             r = json.load(open(f))['results']
@@ -109,9 +103,9 @@ th{background:#E8EEF6} .r{text-align:right;white-space:nowrap} .ok{color:#1F7A3A
 def calcs_html(n):
     b, a, t = n['panel']
     fs = n.get('fea_esp2023_skin_panel', {})
-    fp = n.get('fea_esp2023_lock_gates', {})
+    fp = n.get('fea_esp2023_p20_bottom_pintle', {})
     hdr = lambda k: ('<div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2: canal lock gates for Canal Heritage</span>'
-                     '<span>Calculation sheet %d of 2. Ref ESP23-CALC. 2026-11-09</span></div>' % k)
+                     '<span>Calculation sheet %d of 2. Ref ESP23-CALC. 2026-11-10</span></div>' % k)
     return f"""<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>ESP 2023 calculations</title><style>{CSS}</style></head><body>
 <div class="page">{hdr(1)}
 <h1>Hydrostatic pressure the lock gates must resist</h1>
@@ -157,7 +151,7 @@ M = wL&sup2;/8 = {n['M_g']:.2f} kNm.</p>
 The girders are governed by stiffness, the axial thrust from the mitre ({n['R_mitre']:.0f} kN shared by eight girders) and boat impact, not by bending stress.</p>
 <h2>6. Leaf weight, hinges and lifting</h2>
 <table><tr><th>Quantity</th><th>Working</th><th class="r">Result</th></tr>
-<tr><td>Leaf mass (CAD model: steel, oak, walkway, seals)</td><td>steel 7850 kg/m&sup3;, oak 750 kg/m&sup3;</td><td class="r"><b>{n['mass'] / 1000:.2f} t</b></td></tr>
+<tr><td>Leaf mass (CAD model: every part that turns with the leaf)</td><td>steel 7850 kg/m&sup3;, oak 750 kg/m&sup3;</td><td class="r"><b>{n['mass'] / 1000:.2f} t</b></td></tr>
 <tr><td>Weight on the bottom pintle</td><td>W = mg</td><td class="r">{n['W']:.1f} kN</td></tr>
 <tr><td>Centre of gravity from the pivot</td><td>from the CAD model</td><td class="r">{n['xg']:.0f} mm</td></tr>
 <tr><td>Sideways load on each hinge</td><td>H = W x / h = {n['W']:.1f} &times; {n['xg'] / 1000:.3f} / 5.78</td><td class="r">{n['H']:.1f} kN</td></tr>
@@ -185,22 +179,22 @@ Stroke {n['stroke']:.0f} mm (pin centres {n['arms'][0][1]:.0f} to {n['arms'][1][
 def notes_html(n):
     return f"""<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>ESP 2023 design notes</title><style>{CSS}
 body{{font-size:10pt;line-height:1.45}} p{{margin:0 0 2mm}}</style></head><body>
-<div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2</span><span>Design notes: how the design meets the brief. 2026-11-09</span></div>
+<div class="hdr"><span>Lock Restoration Ltd. ESP 2023 (8730-035) Task 2</span><span>Design notes: how the design meets the brief. 2026-11-10</span></div>
 <h1>Design notes: steel mitre gates for Canal Heritage</h1>
 <p><b>Chosen design.</b> Each end of each lock gets a pair of steel mitre gates (design A). The two leaves meet at a 1 in 3 mitre pointing upstream.
 A vertical lift gate (design B) was also drawn, but its 11.8 m towers would dominate a heritage canal and its winch could not be hidden in a chamber, so it was rejected.</p>
 <p><b>Size and water.</b> The gates fit the 4.2 m opening, are 6.0 m high and are designed for the worst case of 5.5 m of water on one side and none on the other.
 That puts {n['p_max']:.1f} kPa on the cill and {n['P_leaf']:.0f} kN on each leaf. Water pushes the leaves together at the mitre and back into the quoins, so the gate works as an arch and gets tighter as the water rises.
 Eight girders, closer together at the bottom where the pressure is highest, carry the load. The worst skin plate panel reaches {n.get('fea_esp2023_skin_panel', {}).get('vm_max', n['vm_panel']):.0f} MPa, a safety factor of about 10.</p>
-<p><b>Automatic and independent.</b> Each leaf has its own electric actuator, controller, position sensor and water level sensors, so the gates can be opened and shut one at a time from the off-site control centre.
-An interlock stops a gate moving unless the levels either side are equal.</p>
-<p><b>Drive out of sight.</b> The actuators sit in purpose-built precast concrete inspection chambers beside each gate, under a flush grating cover. Electric drives use the mains supply the brief offers and carry no hydraulic oil that could leak into the canal.</p>
+<p><b>Automatic and independent.</b> Each leaf has its own electric actuator, control panel and an absolute position encoder on its pivot, so the gates can be opened and shut one at a time from the off-site control centre.
+A paddle in each leaf, lifted by a small actuator, empties the lock through the gate first; the gates only open once the levels either side are equal.</p>
+<p><b>Drive out of sight.</b> The actuators sit in purpose-built precast concrete inspection chambers beside each gate, under flush GRP cover panels, with a control panel holding the controller and mains isolator. Electric drives use the mains supply the brief offers and carry no hydraulic oil that could leak into the canal.</p>
 <p><b>Surveillance and emergency stop.</b> A CCTV mast on each chamber watches the gate and the lock. Leaf position, motor current and water levels are sent to the control centre. An emergency call point on each side stops both gates and opens an intercom to the lock keeper.</p>
 <p><b>Boat strikes.</b> Replaceable oak fenders on the chamber face take any knocks, the gates only move when the CCTV shows the lock clear, and the cill is marked so boats stay clear of it.</p>
-<p><b>Inspection.</b> The walkway on each leaf, and the chamber covers, give safe access to look at the hinges, actuators and seals.</p>
-<p><b>Hinges.</b> The leaf turns on a 150 mm stainless pintle in a bronze bush at the bottom and a journal in an anchor collar at the top. Stainless and bronze do not corrode together, and the FEA gives a safety factor of {n.get('fea_esp2023_lock_gates', {}).get('sf_min', 11):.0f}.</p>
+<p><b>Inspection.</b> The walkway on each leaf, and the lift-out chamber cover panels, give safe access to look at the hinges, actuators and seals.</p>
+<p><b>Hinges.</b> The leaf turns on a 150 mm stainless pintle in a bronze bush at the bottom and a journal in an anchor collar at the top. Stainless and bronze do not corrode together, and the FEA gives a safety factor of {n.get('fea_esp2023_p20_bottom_pintle', {}).get('sf_min', 11):.0f}.</p>
 <p><b>Seals.</b> EPDM rubber seals run along the cill, behind the heel post and between the mitre posts. Water pressure squeezes them shut. They bolt on, so they can be changed without welding.</p>
-<p><b>Removal and maintenance.</b> Each leaf weighs {n['mass'] / 1000:.1f} t and is lifted out by mobile crane once the anchor collar is released. There is nothing to grease daily: routine work is a yearly look and a check of the seals and bush.</p>
+<p><b>Removal and maintenance.</b> Each leaf weighs {n['mass'] / 1000:.1f} t and is lifted out by mobile crane on its two lifting lugs once the anchor collar is released. There is nothing to grease daily: routine work is a yearly look and a check of the seals and bush.</p>
 <p><b>Looks and sustainability.</b> The gates keep the traditional mitre shape, painted black and white with oak fenders. Steel, stainless steel, bronze and oak can all be recycled or reused, and the oak comes from FSC certified forests.</p>
 <p><b>Budget and time.</b> Estimated supply price about £95,000 per gate system (steel fabrication, actuators, hinges, seals, controls and chambers), inside the £100,000 budget. Ten systems can be designed, made and fitted within 52 weeks.</p>
 </body></html>"""

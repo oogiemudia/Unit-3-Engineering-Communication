@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p30_rod_end",
+ "title": "ESP 2023 part 30: rod end eye",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Eye",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as rod_end.ipt.",
+    "Circle diameter 90. Extrude 80 mm, Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "rod end eye",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p30_rod_end/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p30_rod_end/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Neck",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 60 on the YZ Plane. Extrude 75 mm back along X."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "rod end eye",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p30_rod_end/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p30_rod_end/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the eye centre: diameter 40, Through All. Save."
+   ],
+   "note": "A spherical bearing in the eye lets the rod follow the leaf without bending.",
+   "parts": [
+    {
+     "name": "rod end eye",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p30_rod_end/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p30_rod_end/step_03.json"
+  }
+ ]
+}

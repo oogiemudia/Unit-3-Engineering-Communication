@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p13_heel_seal",
+ "title": "ESP 2023 part 13: heel seal",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the strip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as heel_seal.ipt.",
+    "Sketch a 30 x 80 rectangle on the XZ Plane. Extrude 5800 mm up. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "heel seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p13_heel_seal/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p13_heel_seal/step_01.json"
+  }
+ ]
+}

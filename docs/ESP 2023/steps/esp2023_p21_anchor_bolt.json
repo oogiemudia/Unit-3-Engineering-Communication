@@ -1,0 +1,49 @@
+{
+ "name": "esp2023_p21_anchor_bolt",
+ "title": "ESP 2023 part 21: anchor bolt M24",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Stud",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center (Fasteners > Bolts) or File > New > Standard (mm).ipt: circle diameter 24, Extrude 410 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "anchor bolt M24",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p21_anchor_bolt/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p21_anchor_bolt/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Nut",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a hexagon 36 across the flats 380 mm from the bottom. Extrude 24 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "anchor bolt M24",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p21_anchor_bolt/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p21_anchor_bolt/step_02.json"
+  }
+ ]
+}

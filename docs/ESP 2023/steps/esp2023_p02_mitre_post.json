@@ -1,0 +1,72 @@
+{
+ "name": "esp2023_p02_mitre_post",
+ "title": "ESP 2023 part 02: mitre post",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as mitre_post.ipt.",
+    "Sketch on the XZ Plane: rectangle 700 x 450 with its left edge on the origin. Extrude 5910 mm up."
+   ],
+   "note": "The post is drawn 700 long; the end is trimmed to the mitre angle later.",
+   "parts": [
+    {
+     "name": "mitre post",
+     "colour": "#4F6D7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p02_mitre_post/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p02_mitre_post/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Make it hollow",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on a work plane 5935 mm up: rectangle 25 mm in from the left, front and back faces, ending 490 mm from the left end. Extrude Cut 5860 mm down."
+   ],
+   "note": "The ends and the mitre end stay solid.",
+   "parts": [
+    {
+     "name": "mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p02_mitre_post/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p02_mitre_post/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Trim the mitre",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "Work Features panel > Plane > Angle to Plane around Edge: the vertical line 300 mm along X on the leaf centre line, 18.43 degrees (1 in 3) to the end face.",
+    "Click Split, Trim Solid, and remove the end beyond the plane. Save."
+   ],
+   "note": "The water pushes the two mitre faces together, so the gates seal harder the higher the water.",
+   "parts": [
+    {
+     "name": "mitre post",
+     "colour": "#4F6D7A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p02_mitre_post/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p02_mitre_post/step_03.json"
+  }
+ ]
+}

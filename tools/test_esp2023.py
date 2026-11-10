@@ -1,6 +1,6 @@
 """Browser checks for the ESP 2023 lock gate pages, at desktop and phone size.
 
-Run:  python tools/test_esp2023.py          (needs playwright with Chromium)
+Run:  python tools/test_esp2023.py [page names]   (needs playwright with Chromium)
 
 For each page and tab it loads the page from a local server and checks:
   * no JavaScript errors and no failed requests (404s),
@@ -16,20 +16,38 @@ DOCS = os.path.join(ROOT, 'docs')
 OUT = os.path.join(DOCS, 'ESP 2023', 'qa')
 
 SIZES = dict(desktop=(1280, 800), phone=(390, 844))
+# (name, url, what to check, button to press first)
 PAGES = [
-    ('hub', 'index.html', None),
-    ('project', 'ESP%202023/index.html', None),
-    ('ga_3d', 'viewer.html?m=esp2023_lock_gates', 'canvas'),
-    ('ga_steps', 'viewer.html?m=esp2023_lock_gates&tab=steps', 'canvas'),
-    ('ga_sim', 'viewer.html?m=esp2023_lock_gates&tab=sim', 'canvas'),
-    ('ga_fea', 'viewer.html?m=esp2023_lock_gates&tab=fea&step=10', 'canvas'),
-    ('leaf_3d', 'viewer.html?m=esp2023_gate_leaf', 'canvas'),
-    ('leaf_steps', 'viewer.html?m=esp2023_gate_leaf&tab=steps&step=16', 'canvas'),
-    ('panel_fea', 'viewer.html?m=esp2023_skin_panel&tab=fea&step=10', 'canvas'),
-    ('lift_3d', 'viewer.html?m=esp2023_lift_gate', 'canvas'),
+    ('hub', 'index.html', None, None),
+    ('hub_esp_filter', 'index.html', 'esp', '#filters [data-f="ESP 2023"]'),
+    ('project', 'ESP%202023/index.html', None, None),
+    ('project_parts', 'ESP%202023/index.html#parts', 'parts', None),
+    ('ga_3d', 'viewer.html?m=esp2023_lock_gates', 'canvas', None),
+    ('ga_parts_list', 'viewer.html?m=esp2023_lock_gates', 'bom', '#bomBtn'),
+    ('ga_steps', 'viewer.html?m=esp2023_lock_gates&tab=steps', 'canvas', None),
+    ('ga_sim', 'viewer.html?m=esp2023_lock_gates&tab=sim', 'canvas', None),
+    ('leaf_3d', 'viewer.html?m=esp2023_gate_leaf', 'canvas', None),
+    ('leaf_parts_list', 'viewer.html?m=esp2023_gate_leaf', 'bom', '#bomBtn'),
+    ('leaf_steps', 'viewer.html?m=esp2023_gate_leaf&tab=steps&step=11', 'canvas', None),
+    ('part_heel_post', 'viewer.html?m=esp2023_p01_heel_post', 'canvas', None),
+    ('part_bracket_steps', 'viewer.html?m=esp2023_p06_actuator_bracket&tab=steps', 'canvas', None),
+    ('part_paddle_door', 'viewer.html?m=esp2023_p16_paddle_door', 'canvas', None),
+    ('part_cover_panel', 'viewer.html?m=esp2023_p35_cover_panel', 'canvas', None),
+    ('pintle_fea', 'viewer.html?m=esp2023_p20_bottom_pintle&tab=fea&step=10', 'canvas', None),
+    ('panel_fea', 'viewer.html?m=esp2023_skin_panel&tab=fea&step=10', 'canvas', None),
+    ('lift_3d', 'viewer.html?m=esp2023_lift_gate', 'canvas', None),
     # a hub model, to show the shared viewer still works for the older models
-    ('hub_cylinder_fea', 'viewer.html?m=pneumatic_cylinder&tab=fea&step=10', 'canvas'),
+    ('hub_cylinder_fea', 'viewer.html?m=pneumatic_cylinder&tab=fea&step=10', 'canvas', None),
 ]
+
+# extra checks: how many things the page must show (41 parts in the ESP filter and the parts gallery,
+# a parts list table with rows in the viewer)
+COUNT = dict(
+    esp="document.querySelectorAll('#grid .card').length",
+    parts="document.querySelectorAll('#parts .pcard').length",
+    bom="document.querySelectorAll('table.bom tr').length",
+)
+NEED = dict(esp=45, parts=41, bom=10)
 
 DREW = """() => {
   const c = document.querySelector('canvas'); if (!c) return 0;
@@ -42,6 +60,8 @@ DREW = """() => {
 
 
 def main():
+    # optional page names on the command line run just those pages
+    pages = [pg for pg in PAGES if pg[0] in sys.argv[1:]] or PAGES
     os.makedirs(OUT, exist_ok=True)
     class Quiet(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a):
@@ -54,7 +74,7 @@ def main():
     with sync_playwright() as p:
         b = p.chromium.launch(args=['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'])
         for size, (w, h) in SIZES.items():
-            for name, url, kind in PAGES:
+            for name, url, kind, press in pages:
                 pg = b.new_page(viewport=dict(width=w, height=h), device_scale_factor=1,
                                 is_mobile=size == 'phone', has_touch=size == 'phone')
                 errs = []
@@ -65,13 +85,18 @@ def main():
                       if r.status >= 400 and r.request.method != 'HEAD' and 'favicon' not in r.url else None)
                 pg.goto(base + url, wait_until='load')
                 pg.wait_for_timeout(3500)
-                drew = pg.evaluate(DREW) if kind == 'canvas' else 999
+                if press:
+                    pg.click(press)
+                    pg.wait_for_timeout(800)
+                drew = pg.evaluate(DREW) if kind in ('canvas', 'bom') else 999
+                count = pg.evaluate(COUNT[kind]) if kind in COUNT else 0
                 wide = pg.evaluate('document.documentElement.scrollWidth - window.innerWidth')
                 pg.screenshot(path=os.path.join(OUT, '%s_%s.png' % (size, name)))
-                ok = not errs and drew > 20 and wide <= 1
+                ok = not errs and drew > 20 and wide <= 1 and count >= NEED.get(kind, 0)
                 if not ok:
-                    fails.append((size, name, errs[:3], drew, wide))
-                print('%-4s %-8s %-18s errors %d  drawn px %4d  overflow %d' % ('ok' if ok else 'FAIL', size, name, len(errs), drew, wide))
+                    fails.append((size, name, errs[:3], drew, wide, count))
+                print('%-4s %-8s %-20s errors %d  drawn px %4d  overflow %d%s' % ('ok' if ok else 'FAIL', size, name, len(errs), drew, wide,
+                      '  items %d' % count if kind in COUNT else ''))
                 pg.close()
         b.close()
     srv.shutdown()
@@ -80,7 +105,7 @@ def main():
         for f in fails:
             print(' ', f)
         sys.exit(1)
-    print('\nAll %d checks passed.' % (len(SIZES) * len(PAGES)))
+    print('\nAll %d checks passed.' % (len(SIZES) * len(pages)))
 
 
 if __name__ == '__main__':

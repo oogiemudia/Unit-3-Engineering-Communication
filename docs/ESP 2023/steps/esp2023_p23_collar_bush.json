@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p23_collar_bush",
+ "title": "ESP 2023 part 23: collar bush",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Revolve the bush",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as collar_bush.ipt.",
+    "Sketch a 20 x 100 rectangle 100 mm from the Z axis on the XY Plane. Revolve 360 degrees about the axis. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "collar bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p23_collar_bush/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p23_collar_bush/step_01.json"
+  }
+ ]
+}

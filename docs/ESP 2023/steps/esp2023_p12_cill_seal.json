@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p12_cill_seal",
+ "title": "ESP 2023 part 12: cill seal",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the strip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cill_seal.ipt.",
+    "Sketch an 85 x 50 rectangle on the YZ Plane. Extrude 2460 mm along X."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cill seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p12_cill_seal/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p12_cill_seal/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Trim at the mitre",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "Split with a work plane at 18.43 degrees, as for the mitre post. Material: EPDM rubber. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cill seal",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p12_cill_seal/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p12_cill_seal/step_02.json"
+  }
+ ]
+}

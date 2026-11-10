@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p38_cctv_camera",
+ "title": "ESP 2023 part 38: CCTV camera",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bracket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cctv_camera.ipt.",
+    "Sketch an 80 x 150 rectangle beside the mast. Extrude 120 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "CCTV camera",
+     "colour": "#F2F2F2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p38_cctv_camera/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p38_cctv_camera/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Camera",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 300 x 150 rectangle turned 125 degrees. Extrude 150 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "CCTV camera",
+     "colour": "#F2F2F2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p38_cctv_camera/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p38_cctv_camera/step_02.json"
+  }
+ ]
+}

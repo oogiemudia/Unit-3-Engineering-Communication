@@ -22,6 +22,15 @@ button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
 #info{position:fixed;right:16px;top:56px;width:min(340px,calc(100% - 32px));background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.45}
 #info h2{font-size:15px;margin:0 0 6px}
+#info{max-height:calc(100% - 140px);overflow:auto}
+#info.collapsed{display:none}
+#info table.bom{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:6px}
+#info table.bom th{text-align:left;color:var(--muted);font-weight:normal;border-bottom:1px solid var(--line);padding:2px 3px;position:sticky;top:-12px;background:var(--panel)}
+#info table.bom td{border-bottom:1px solid #EEF1F4;padding:2px 3px;vertical-align:top}
+#info table.bom td.g{background:#F4F6F8;font-weight:bold;color:var(--ink)}
+#info table.bom a{color:var(--accent);text-decoration:none}
+#info table.bom input{margin:0}
+#bomBtn[hidden]{display:none}
 #info ul{margin:6px 0 0;padding-left:18px}
 #caption{position:fixed;left:0;right:0;top:46%;text-align:center;font-weight:bold;font-size:40px;color:var(--ink);opacity:0;transition:opacity .25s;pointer-events:none;text-shadow:0 0 8px var(--bg)}
 #tabs{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
@@ -65,7 +74,7 @@ label{font-size:14px;display:flex;gap:6px;align-items:center;background:var(--pa
 body.steps #info,body.steps #explodeL,body.steps #sectionL{display:none!important}
 body.render header,body.render #bar,body.render #info{display:none}
 body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
-@media (max-width:640px){#info{display:none}#caption{font-size:28px}#steps{top:auto;bottom:12px;left:16px;right:16px;width:auto;max-height:52vh}body.steps #bar{display:none}h1{font-size:16px}}
+@media (max-width:640px){#info:not(.open){display:none}#info.open{display:block;top:auto;bottom:64px;max-height:55vh}#caption{font-size:28px}#steps{top:auto;bottom:12px;left:16px;right:16px;width:auto;max-height:52vh}body.steps #bar{display:none}h1{font-size:16px}}
 </style>
 <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
 </head>
@@ -102,6 +111,7 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
   <label id="explodeL"><span>Explode</span><input type="range" id="explode" min="0" max="1" step="0.01" value="0"></label>
   <label id="sectionL"><input type="checkbox" id="section"> Section A-A</label>
   <button id="spin">Spin</button>
+  <button id="bomBtn" hidden>Parts list</button>
 </div>
 <script type="module">
 import * as THREE from 'three';
@@ -207,6 +217,41 @@ function caption(text) {
   c.textContent = text || ''; c.style.opacity = text ? 1 : 0;
 }
 
+// parts list (bill of materials) for an assembly: item, part (opens its own model), quantity, show or hide
+const GROUP_NAMES = { frame: 'Gate leaf frame (welded)', leaf: 'Fitted to each leaf', hinge: 'Hinges and position sensor',
+  drive: 'Drive', chamber: 'Chamber, controls and CCTV', civil: 'Civil works' };
+function bomTable(rows) {
+  let g = null, html = '<table class="bom"><tr><th>Item</th><th>Part</th><th>Qty</th><th>Show</th></tr>';
+  rows.forEach((r, i) => {
+    if (r.group !== g) { g = r.group; html += `<tr><td class="g" colspan="4">${GROUP_NAMES[g] || g}</td></tr>`; }
+    html += `<tr title="${r.material}"><td>${r.no}</td><td><a href="viewer.html?m=${r.model}">${r.name}</a>${r.bought ? ' <span style="color:var(--muted)">(bought in)</span>' : ''}</td>` +
+            `<td>${r.qty}</td><td><input type="checkbox" data-row="${i}" checked aria-label="Show ${r.name}"></td></tr>`;
+  });
+  return html + '</table><div style="font-size:12px;color:var(--muted);margin-top:4px">Click a part to open it on its own. Untick to hide it.</div>';
+}
+function setShown(name, on) {
+  const p = parts.find(pp => pp.name === name); if (!p) return;
+  p.hidden = !on; p.node.visible = on;
+  if (p.edges) p.edges.visible = on && document.getElementById('edges').checked;
+}
+// "Parts list" opens the info panel at the parts list. On a phone the panel sits between the header and the
+// button bar (the bar wraps onto several rows there), and a second press closes it. On a desktop the panel is
+// already open, so the first press scrolls to the list and a press while the list is showing hides the panel.
+document.getElementById('bomBtn').onclick = () => {
+  const info = document.getElementById('info'), table = info.querySelector('table.bom');
+  const toList = () => { if (table) info.scrollTop = table.offsetTop - 8; };
+  if (matchMedia('(max-width:640px)').matches) {
+    if (info.classList.toggle('open')) {
+      const top = document.querySelector('header').getBoundingClientRect().bottom + 8;
+      const bottom = innerHeight - document.getElementById('bar').getBoundingClientRect().top + 8;
+      info.style.bottom = bottom + 'px'; info.style.maxHeight = Math.max(160, innerHeight - top - bottom) + 'px';
+      toList();
+    }
+  } else if (info.classList.contains('collapsed')) { info.classList.remove('collapsed'); toList(); }
+  else if (table && Math.abs(info.scrollTop - (table.offsetTop - 8)) > 20 && info.scrollHeight > info.clientHeight) toList();
+  else info.classList.add('collapsed');
+};
+
 async function load() {
   const cat = await (await fetch('models.json')).json();
   catalogueEntry = cat.find(e => e.name === NAME) || cat[0];
@@ -217,8 +262,9 @@ async function load() {
   info.innerHTML = `<h2>${catalogueEntry.title}</h2><div>${catalogueEntry.description}</div>
     <div style="margin-top:6px"><b>Criteria:</b> ${catalogueEntry.criteria}</div>
     <div><b>Use it for:</b> ${catalogueEntry.uses}</div>
-    <ul>${catalogueEntry.parts.map(p => `<li><span style="color:${p.colour}">&#9632;</span> ${p.name}</li>`).join('')}</ul>
+    ${catalogueEntry.bom ? bomTable(catalogueEntry.bom) : `<ul>${catalogueEntry.parts.map(p => `<li><span style="color:${p.colour}">&#9632;</span> ${p.name}</li>`).join('')}</ul>`}
     <div style="margin-top:6px"><a href="${catalogueEntry.files.step}">STEP</a> · <a href="${catalogueEntry.files.stl}">STL</a></div>`;
+  if (catalogueEntry.bom) document.getElementById('bomBtn').hidden = false;
   if (!catalogueEntry.exploded) document.getElementById('explodeL').style.display = 'none';
   if (!catalogueEntry.section) document.getElementById('sectionL').style.display = 'none';
 
@@ -257,6 +303,12 @@ async function load() {
     parts.push({ name: spec.name, node, edges: eLines, offset: spec.explode, mats: [mat, capMat], cap, standard, base: col.clone() });
   }
   if (catalogueEntry.iso) VIEWS.iso = new THREE.Vector3(...catalogueEntry.iso);
+  for (const n of catalogueEntry.hide || []) setShown(n, false);
+  document.querySelectorAll('#info input[data-row]').forEach(cb => {
+    const row = catalogueEntry.bom[+cb.dataset.row];
+    cb.checked = row.instances.some(n => !(catalogueEntry.hide || []).includes(n));
+    cb.onchange = () => row.instances.forEach(n => setShown(n, cb.checked));
+  });
   const box = new THREE.Box3().setFromObject(root);
   box.getCenter(centre); centre0 = centre.clone();
   const solid = box.getSize(new THREE.Vector3()).length();
@@ -294,7 +346,7 @@ function setState(s) {
   if (s.zoom) { ortho.zoom = s.zoom; ortho.updateProjectionMatrix(); }
   if (s.explode !== undefined) applyExplode(s.explode);
   if (s.section !== undefined) applySection(s.section, s.depth ?? 0);
-  if (s.edges !== undefined) for (const p of parts) if (p.edges) p.edges.visible = s.edges;
+  if (s.edges !== undefined) for (const p of parts) if (p.edges) p.edges.visible = s.edges && !p.hidden;
   if (s.simT !== undefined && sim) { simPose(s.simT); simLook(s.simView || 'model'); }
   caption(s.caption || '');
   renderer.render(scene, cam);
@@ -305,7 +357,7 @@ document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => {
   placeCamera(VIEWS[b.dataset.view]); caption(CAPTIONS[b.dataset.view]); setTimeout(() => caption(''), 1400);
 });
 document.getElementById('persp').onchange = e => useCamera(e.target.checked ? persp : ortho);
-document.getElementById('edges').onchange = e => parts.forEach(p => p.edges && (p.edges.visible = e.target.checked));
+document.getElementById('edges').onchange = e => parts.forEach(p => p.edges && (p.edges.visible = e.target.checked && !p.hidden));
 document.getElementById('explode').oninput = e => applyExplode(+e.target.value);
 document.getElementById('section').onchange = e => applySection(e.target.checked, 0);
 document.getElementById('spin').onclick = e => { spinning = !spinning; e.target.classList.toggle('on', spinning); };

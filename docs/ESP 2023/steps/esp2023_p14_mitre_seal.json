@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p14_mitre_seal",
+ "title": "ESP 2023 part 14: mitre seal",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude and trim",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as mitre_seal.ipt.",
+    "Sketch the seal section on the XZ Plane: 30 wide across the mitre, 84 long on the slope. Extrude 5910 mm up. Save."
+   ],
+   "note": "Only one leaf carries the mitre seal.",
+   "parts": [
+    {
+     "name": "mitre seal",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p14_mitre_seal/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p14_mitre_seal/step_01.json"
+  }
+ ]
+}

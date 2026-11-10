@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p16_paddle_door",
+ "title": "ESP 2023 part 16: paddle door",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the door",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as paddle_door.ipt.",
+    "Sketch a 500 x 500 square on the XY Plane. Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle door",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p16_paddle_door/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p16_paddle_door/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Rod lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top face: rectangle 50 x 80 at the middle, out from the front. Extrude 75 mm down. Save."
+   ],
+   "note": "The paddle rod screws into this lug.",
+   "parts": [
+    {
+     "name": "paddle door",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p16_paddle_door/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p16_paddle_door/step_02.json"
+  }
+ ]
+}

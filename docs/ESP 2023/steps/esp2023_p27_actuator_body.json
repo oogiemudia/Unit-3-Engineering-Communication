@@ -1,0 +1,71 @@
+{
+ "name": "esp2023_p27_actuator_body",
+ "title": "ESP 2023 part 27: actuator body",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Rear eye",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as actuator_body.ipt.",
+    "Sketch on the XZ Plane: a slot 80 wide from the origin to 70 mm, round end radius 50 on the origin. Extrude 80 mm, Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator body",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p27_actuator_body/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p27_actuator_body/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the YZ Plane 70 mm along: circle diameter 140. Extrude 1830 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p27_actuator_body/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p27_actuator_body/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bore and pivot hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the tube end: diameter 80, 1780 deep. Hole through the eye: diameter 40. Save."
+   ],
+   "note": "The origin is the rear pivot: the actuator turns about it as the leaf opens.",
+   "parts": [
+    {
+     "name": "actuator body",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p27_actuator_body/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p27_actuator_body/step_03.json"
+  }
+ ]
+}

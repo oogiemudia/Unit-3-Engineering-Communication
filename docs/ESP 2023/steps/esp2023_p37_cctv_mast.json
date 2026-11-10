@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p37_cctv_mast",
+ "title": "ESP 2023 part 37: CCTV mast",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cctv_mast.ipt.",
+    "Sketch a 150 x 150 square. Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "CCTV mast",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p37_cctv_mast/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p37_cctv_mast/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 120 on the top. Extrude 2980 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "CCTV mast",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p37_cctv_mast/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p37_cctv_mast/step_02.json"
+  }
+ ]
+}

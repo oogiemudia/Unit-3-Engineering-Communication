@@ -1,0 +1,50 @@
+{
+ "name": "esp2023_p10_walkway_grating",
+ "title": "ESP 2023 part 10: walkway grating",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the panel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as walkway_grating.ipt.",
+    "Sketch a 1760 x 450 rectangle on the XZ Plane. Extrude 40 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "walkway grating",
+     "colour": "#E6E6E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p10_walkway_grating/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p10_walkway_grating/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Drainage slots",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch one slot 1600 x 30 and Extrude Cut Through All, then Rectangular Pattern: 6 slots at 50 mm. Save."
+   ],
+   "note": "The slots show the open grating: water drains through.",
+   "parts": [
+    {
+     "name": "walkway grating",
+     "colour": "#E6E6E6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p10_walkway_grating/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p10_walkway_grating/step_02.json"
+  }
+ ]
+}

@@ -106,7 +106,7 @@ def run(names, bg='F4F6F8', suffix='', kinds=None):
             pg.wait_for_function('window.U3 && window.U3.ready', timeout=120000)
             front = pg.evaluate('window.U3.front')
             iso = pg.evaluate('window.U3.iso')
-            jobs = [('turntable', turntable(iso)), ('views', views(iso))]
+            jobs = [] if m.get('media') == 'still' else [('turntable', turntable(iso)), ('views', views(iso))]
             if m.get('exploded'):
                 jobs.append(('explode', explode(iso)))
             if m.get('section'):

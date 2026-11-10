@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M94.91,97.91 L94.91,73.91 M94.91,73.91 L94.91,97.91 M94.91,73.91 L110.91,73.91 M101.83,73.91 L110.91,73.91 M94.91,73.91 L101.83,73.91 M94.91,97.91 L110.91,97.91 M110.91,97.91 L110.91,73.91 M101.83,97.91 L110.91,97.91 M94.91,97.91 L101.83,97.91 M101.83,72.91 L67.42,72.91 M101.83,73.91 L101.83,72.91 M101.83,102.91 L101.83,97.91 M101.83,102.91 L67.42,102.91 M110.91,73.91 L110.91,97.91 M101.83,72.91 L126.41,72.91 M101.83,102.91 L126.41,102.91"/>
+<path class="vis" d="M67.42,102.91 L67.42,72.91 M126.41,102.91 L126.41,72.91 M67.42,72.91 L91.99,72.91 M91.99,102.91 L91.99,72.91 M67.42,102.91 L91.99,102.91 M126.41,72.91 L91.99,72.91 M126.41,102.91 L91.99,102.91"/>
+<text x="96.91" y="110.91" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M94.91,146.62 L94.91,124.91 M101.83,136.73 L110.91,143.09 M94.91,146.62 L101.83,136.73 M94.91,124.91 L110.91,124.91 M110.91,143.09 L110.91,124.91 M101.83,136.73 L110.91,143.09 M94.91,146.62 L101.83,136.73 M101.83,136.73 L67.42,185.88 M101.83,136.73 L126.41,153.94 M67.42,185.88 L91.99,203.09 M126.41,153.94 L91.99,203.09"/>
+<path class="vis" d="M94.91,146.62 L94.91,124.91 M94.91,124.91 L110.91,124.91 M110.91,143.09 L110.91,124.91 M101.83,136.73 L67.42,185.88 M101.83,136.73 L126.41,153.94 M67.42,185.88 L91.99,203.09 M126.41,153.94 L91.99,203.09"/>
+<text x="96.91" y="211.09" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M166.59,73.91 L148.41,73.91 M160.23,73.91 L166.59,73.91 M170.11,73.91 L160.23,73.91 M148.41,97.91 L148.41,73.91 M166.59,97.91 L148.41,97.91 M160.23,97.91 L166.59,97.91 M170.11,97.91 L160.23,97.91 M166.59,73.91 L166.59,97.91 M160.23,72.91 L177.43,72.91 M177.43,102.91 L177.43,72.91 M160.23,102.91 L177.43,102.91 M177.43,72.91 L226.58,72.91 M177.43,102.91 L226.58,102.91"/>
+<path class="vis" d="M170.11,73.91 L148.41,73.91 M148.41,97.91 L148.41,73.91 M170.11,97.91 L148.41,97.91 M170.11,73.91 L170.11,97.91 M209.38,102.91 L209.38,72.91 M160.23,72.91 L209.38,72.91 M160.23,73.91 L160.23,72.91 M160.23,102.91 L160.23,97.91 M160.23,102.91 L209.38,102.91 M209.38,72.91 L226.58,72.91 M226.58,102.91 L226.58,72.91 M209.38,102.91 L226.58,102.91"/>
+<text x="187.49" y="110.91" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM LEFT)</text>
+<path class="vis" d="M356.99,53.17 L370.62,45.30 M370.62,45.30 L381.93,51.83 M369.29,59.13 L381.93,51.83 M381.93,71.43 L381.93,51.83 M372.36,76.95 L381.93,71.43 M308.07,82.64 L308.07,58.15 M367.15,52.13 L308.07,58.15 M367.15,52.13 L372.36,69.19 M372.36,93.69 L372.36,69.19 M308.07,58.15 L313.28,75.21 M313.28,99.70 L313.28,75.21 M308.07,82.64 L313.28,99.70 M372.36,69.19 L313.28,75.21 M372.36,93.69 L313.28,99.70"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="67.42" y1="104.41" x2="67.42" y2="121.91"/>
+<line class="dim" x1="126.41" y1="104.41" x2="126.41" y2="121.91"/>
+<line class="dim" x1="67.42" y1="119.91" x2="126.41" y2="119.91"/>
+<polygon class="arrow" points="67.42,119.91 69.92,120.66 69.92,119.16"/>
+<polygon class="arrow" points="126.41,119.91 123.91,119.16 123.91,120.66"/>
+<text x="96.91" y="118.71" font-size="3.50" text-anchor="middle" font-weight="normal">294.9</text>
+<line class="dim" x1="65.92" y1="72.91" x2="53.42" y2="72.91"/>
+<line class="dim" x1="65.92" y1="102.91" x2="53.42" y2="102.91"/>
+<line class="dim" x1="55.42" y1="72.91" x2="55.42" y2="102.91"/>
+<polygon class="arrow" points="55.42,72.91 54.67,75.41 56.17,75.41"/>
+<polygon class="arrow" points="55.42,102.91 56.17,100.41 54.67,100.41"/>
+<text x="54.22" y="87.91" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 54.22 87.91)">150</text>
+<line class="dim" x1="148.41" y1="104.41" x2="148.41" y2="121.91"/>
+<line class="dim" x1="226.58" y1="104.41" x2="226.58" y2="121.91"/>
+<line class="dim" x1="148.41" y1="119.91" x2="226.58" y2="119.91"/>
+<polygon class="arrow" points="148.41,119.91 150.91,120.66 150.91,119.16"/>
+<polygon class="arrow" points="226.58,119.91 224.08,119.16 224.08,120.66"/>
+<text x="187.49" y="118.71" font-size="3.50" text-anchor="middle" font-weight="normal">390.9</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">Camera 300 x 150 x 150</text>
+<text x="285.00" y="152.20" font-size="2.60" text-anchor="start" font-weight="normal">Bracket 80 x 150 x 120</text>
+<text x="285.00" y="160.40" font-size="2.60" text-anchor="start" font-weight="normal">Material: Bought in: PTZ camera with bracket, IP67</text>
+<text x="285.00" y="165.60" font-size="2.60" text-anchor="start" font-weight="normal">Part file: cctv_camera.ipt. Item 38 on ESP23-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Lock Restoration Ltd</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP23-P38-1</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP 2023 part 38: CCTV camera</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">PTZ camera with bracket</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">1:5</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="252.00,282.54 257.50,281.30 257.50,286.25 252.00,285.01"/>
+<circle class="vis" cx="261.90" cy="283.78" r="2.48"/>
+<circle class="vis" cx="261.90" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="261.90" y1="279.80" x2="261.90" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">First angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

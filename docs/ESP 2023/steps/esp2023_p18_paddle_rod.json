@@ -1,0 +1,29 @@
+{
+ "name": "esp2023_p18_paddle_rod",
+ "title": "ESP 2023 part 18: paddle rod",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as paddle_rod.ipt.",
+    "Circle diameter 30 on the XZ Plane. Extrude 4425 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "paddle rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p18_paddle_rod/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p18_paddle_rod/step_01.json"
+  }
+ ]
+}

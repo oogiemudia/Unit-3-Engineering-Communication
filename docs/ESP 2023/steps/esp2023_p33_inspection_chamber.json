@@ -1,0 +1,92 @@
+{
+ "name": "esp2023_p33_inspection_chamber",
+ "title": "ESP 2023 part 33: inspection chamber",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as inspection_chamber.ipt.",
+    "Sketch a 2350 x 1800 rectangle. Extrude 1000 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "inspection chamber",
+     "colour": "#B5B0A6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_01.glb",
+   "edges": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it out",
+   "command": "Shell",
+   "actions": [
+    "3D Model tab > Modify panel > Shell. Remove the top face. Thickness 150 mm."
+   ],
+   "note": "Shell gives the same result in one step: 150 mm walls and floor.",
+   "parts": [
+    {
+     "name": "inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_02.glb",
+   "edges": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Slot for the actuator",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the lock side wall: rectangle 1500 wide and 450 deep from the top. Extrude Cut Through the wall."
+   ],
+   "note": "The actuator rod reaches through the slot to the leaf.",
+   "parts": [
+    {
+     "name": "inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_03.glb",
+   "edges": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cover rebate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch two 75 mm strips on the top of the long walls. Extrude Cut 50 mm. Save."
+   ],
+   "note": "The cover panels sit flush with the ground in this rebate.",
+   "parts": [
+    {
+     "name": "inspection chamber",
+     "colour": "#B5B0A6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_04.glb",
+   "edges": "ESP 2023/steps/esp2023_p33_inspection_chamber/step_04.json"
+  }
+ ]
+}
