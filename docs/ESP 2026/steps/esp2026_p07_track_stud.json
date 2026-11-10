@@ -1,0 +1,49 @@
+{
+ "name": "esp2026_p07_track_stud",
+ "title": "ESP 2026 part 07: track stud",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Stud",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center, or File > New > Standard (mm).ipt: circle diameter 12 on the XZ Plane, Extrude 45 mm, 20 mm below the floor."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "track stud",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p07_track_stud/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p07_track_stud/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Track foot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a circle diameter 20 on the bottom face. Extrude 8 mm. Save."
+   ],
+   "note": "The foot locks under the lips of the floor track.",
+   "parts": [
+    {
+     "name": "track stud",
+     "colour": "#8E979F",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p07_track_stud/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p07_track_stud/step_02.json"
+  }
+ ]
+}

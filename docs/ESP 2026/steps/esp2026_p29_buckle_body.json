@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p29_buckle_body",
+ "title": "ESP 2026 part 29: buckle body",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as buckle_body.ipt.",
+    "Sketch a 70 x 50 rectangle. Extrude 10 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p29_buckle_body/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p29_buckle_body/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tongue slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 24 x 4 slot on the end face. Extrude Cut 21 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p29_buckle_body/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p29_buckle_body/step_02.json"
+  }
+ ]
+}

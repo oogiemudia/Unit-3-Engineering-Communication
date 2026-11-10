@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p38_vest_pouch",
+ "title": "ESP 2026 part 38: life vest pouch",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as vest_pouch.ipt.",
+    "Sketch a 320 x 340 rectangle. Extrude 60 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p38_vest_pouch/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p38_vest_pouch/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Shell",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell, inside, thickness 2 mm (a closed box)."
+   ],
+   "note": "Inside 316 x 336 x 56: room for the 305 x 305 vest.",
+   "parts": [
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p38_vest_pouch/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p38_vest_pouch/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pull tab",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 40 x 20 tab on the front face. Extrude 10 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p38_vest_pouch/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p38_vest_pouch/step_03.json"
+  }
+ ]
+}

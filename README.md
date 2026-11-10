@@ -59,6 +59,19 @@ The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal 
 
 The folder also holds the supporting calculations and design notes (PDF). See `docs/ESP 2023/README.md`. A model joins a project folder by setting `folder` in its `MODELS` entry: the build tools then write all its files there.
 
+## ESP 2026 economy seat set (Employer-Set Project, Task 2)
+
+The ESP 2026 project (8730-035, Summer 2026: an economy class three-seat set for Aero-Chair Ltd) keeps every file it generates in `docs/ESP 2026/`, with its own project page (`docs/ESP 2026/index.html`), and shows in the catalogue under the ESP 2026 filter. Every component is its own part model (39 parts, `esp2026_p01_beam_tube` to `esp2026_p39_life_vest`), each with build steps, a drawing with a key sizes table and a STEP file. Drawing numbers use the prefix ESP26 (set per folder in `PROJECTS` in `tools/drawings.py`).
+
+| Model | Criteria | Use it for | Drawings | Animations |
+|---|---|---|---|---|
+| ESP 2026 three-seat set (GA) | 3.1, 3.2 | The preferred design: beam and leg seat set assembled from 39 parts (128 in all). Simulation of the recline, armrests and trays. | GA at 1:10, single seat section, mechanism details, parts list, third angle, first angle | turntable, views, simulation |
+| ESP 2026 single seat | 3.1, 3.2 | The middle seat on its own: cushion, carbon back, head rest, recline lock, belt, tray, screen, pocket, life vest. | third angle, first angle, section A-A | turntable, views, section |
+| ESP 2026 part 01 to 39 | 3.1 | Every component on its own. Part 4 (leg) has the FEA (9 g forward), checked by a hand truss calculation. | one sheet each with a key sizes table | still |
+| ESP 2026 concept B: fixed shell seats | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
+
+The folder also holds the Part A calculations (cost, weight, size, seat height) and the Part B reflective notes (PDF). See `docs/ESP 2026/README.md`.
+
 For each model the `docs` folder holds:
 
 | Folder | Contents |

@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p16_back_pivot_pin",
+ "title": "ESP 2026 part 16: recline pivot pin",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as back_pivot_pin.ipt.",
+    "Circle diameter 12. Extrude 72 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline pivot pin",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p16_back_pivot_pin/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p16_back_pivot_pin/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Head",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 18 on one end. Extrude 3 mm. Save."
+   ],
+   "note": "A circlip in a groove holds the other end.",
+   "parts": [
+    {
+     "name": "recline pivot pin",
+     "colour": "#8E979F",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p16_back_pivot_pin/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p16_back_pivot_pin/step_02.json"
+  }
+ ]
+}

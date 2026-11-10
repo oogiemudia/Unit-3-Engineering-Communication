@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p15_headrest",
+ "title": "ESP 2026 part 15: head rest",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as headrest.ipt.",
+    "Sketch a 400 x 90 rectangle on the XZ Plane, 720 mm up (the top of the back shell). Extrude 80 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p15_headrest/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p15_headrest/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the corners",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the four front to back edges, radius 25."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p15_headrest/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p15_headrest/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Soft front",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the two front edges across the seat, radius 12. Save."
+   ],
+   "note": "The head rest stands 50 mm in front of the back cushion so it meets the back of the head.",
+   "parts": [
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p15_headrest/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p15_headrest/step_03.json"
+  }
+ ]
+}

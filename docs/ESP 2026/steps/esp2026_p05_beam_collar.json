@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p05_beam_collar",
+ "title": "ESP 2026 part 05: beam clamp collar",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as beam_collar.ipt.",
+    "Sketch circles diameter 64 and 50 on the YZ Plane. Extrude 8 mm, Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "beam clamp collar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p05_beam_collar/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p05_beam_collar/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Clamp lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 12 x 13 rectangle under the ring. Extrude 8 mm, Symmetric, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "beam clamp collar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p05_beam_collar/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p05_beam_collar/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Split",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 2 mm slot up the middle of the lug into the bore. Extrude Cut Through All. Save."
+   ],
+   "note": "An M5 screw across the lug closes the split and grips the tube.",
+   "parts": [
+    {
+     "name": "beam clamp collar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p05_beam_collar/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p05_beam_collar/step_03.json"
+  }
+ ]
+}

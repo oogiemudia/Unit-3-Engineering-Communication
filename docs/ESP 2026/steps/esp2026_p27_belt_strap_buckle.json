@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p27_belt_strap_buckle",
+ "title": "ESP 2026 part 27: belt webbing, buckle side",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Strap up from the anchor",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as belt_strap_buckle.ipt.",
+    "Sketch a 2 x 48 rectangle. Extrude 31 mm up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p27_belt_strap_buckle/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p27_belt_strap_buckle/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Strap across the cushion",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 2 x 48 rectangle on the side face. Extrude 187 mm across. Save."
+   ],
+   "note": "Shown short and laid flat: in use the webbing goes round the lap.",
+   "parts": [
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p27_belt_strap_buckle/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p27_belt_strap_buckle/step_02.json"
+  }
+ ]
+}

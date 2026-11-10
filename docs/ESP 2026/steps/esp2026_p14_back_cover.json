@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p14_back_cover",
+ "title": "ESP 2026 part 14: back cushion cover",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Outer shape",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as back_cover.ipt.",
+    "Sketch a 424 x 32 rectangle, 20 mm up. Extrude 690 mm. Fillet the front edges R11."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p14_back_cover/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p14_back_cover/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the back face, thickness 2 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p14_back_cover/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p14_back_cover/step_02.json"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>ESP 2026 reflective notes</title><style>
+@page{size:A4;margin:11mm 13mm}
+body{font-family:Arial,Helvetica,sans-serif;font-size:8.9pt;line-height:1.28;color:#111}
+h1{font-size:14pt;margin:0 0 2mm} h2{font-size:10pt;margin:2.2mm 0 0.8mm;color:#16335B;border-bottom:0.3mm solid #16335B}
+table{border-collapse:collapse;width:100%;margin:1mm 0} td,th{border:0.2mm solid #888;padding:0.35mm 1.5mm;text-align:left;vertical-align:top}
+th{background:#E8EEF6} .r{text-align:right;white-space:nowrap} .ok{color:#1F7A3A;font-weight:bold}
+.hdr{display:flex;justify-content:space-between;font-size:8pt;color:#444;border-bottom:0.3mm solid #444;margin-bottom:2mm}
+.page{page-break-after:always} .small{font-size:8.2pt} .tiny{font-size:7pt} .tiny td,.tiny th{padding:0.15mm 1.2mm} ul{margin:0.5mm 0 0.5mm 5mm;padding:0}
+tr.tot td{font-weight:bold;background:#F3F6FA}
+
+body{font-size:10pt;line-height:1.45} p{margin:0 0 2mm}</style></head><body>
+<div class="hdr"><span>Aero-Chair Ltd. ESP 2026 (8730-035) Task 2(b)</span><span>Reflective notes on the CAD drawing. 2026-11-10</span></div>
+<h1>Reflective notes: economy class three-seat set</h1>
+<p><b>What I chose and why.</b> I developed two ideas: a beam and leg seat with a reclining carbon fibre back (design A) and a set of fixed composite shells (design B).
+I chose design A because it met every line of the specification. Design B was comfortable and stopped a reclining passenger reaching into the space behind, but it came out at about 9.5 kg a seat, its armrests could not lift and it cost more to make.</p>
+<p><b>How the CAD drawing meets the brief.</b> Each seat is 450 mm wide between the armrests, the seat height is 440 mm and the back reclines 5&deg; when the large button on the armrest is pressed.
+The head rest is fixed, the tray is 265 &times; 415 mm, and the back carries a 10.1 inch screen with USB-C, USB-A and an audio jack and an A4 literature pocket. A pouch under each seat holds a 305 &times; 305 life vest.
+The legs stand on four track fittings with locking studs, so the set is fixed to the floor. The lap belt has a lift lever buckle that can be opened with one movement by the passenger or the crew.</p>
+<p><b>Weight and cost.</b> Modelling every part with its own material let me add up the mass instead of guessing it: 7.83 kg a seat against the 8 kg limit.
+My first model was 8.6 kg a seat. I thinned the back shell to 1.2 mm, lightened the tray, back foam and armrests, and changed the cover material to get under the limit.
+The estimated cost to manufacture is £5,362 a set, well inside the £15,000 budget, and 71 % of the mass is sustainable material.</p>
+<p><b>Checking the design.</b> I checked the model for clashes in six positions (upright, reclined, trays down, armrests up) and found none.
+The leg FEA for a 9 g forward landing gave 227 MPa at the worst corner, a safety factor of 2.2, and my truss hand calculation agreed with the FEA within 7 % in the struts. This gave me confidence that both were right.</p>
+<p><b>What went well.</b> Drawing the section through the seat centre line made the parts and the recline geometry easy to read, and the parts list ties every item number to its own part drawing.
+Using the CAD model for every number meant the drawings, calculations and parts list always agreed.</p>
+<p><b>What I would improve.</b> The sustainable share only just passes, so I would look at recycled carbon fibre for the back shell and a recycled foam. The sharp inside corners of the leg are where the stress peaks: I tried to add fillets but the CAD software could not make them on this shape, so in the next version I would redraw the leg profile with the radii in the sketch.
+I treated the life vests as airline equipment outside the 8 kg limit; with them the seat is 8.35 kg, so I would confirm this with the client early.
+The 9 g check is static: the real certification test is a dynamic 16 g sled test, which I would plan for in the first weeks of the 26 week programme.</p>
+</body></html>

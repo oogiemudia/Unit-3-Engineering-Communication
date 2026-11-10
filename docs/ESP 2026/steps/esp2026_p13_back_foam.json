@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p13_back_foam",
+ "title": "ESP 2026 part 13: back cushion foam",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the pad",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as back_foam.ipt.",
+    "Sketch a 420 x 30 rectangle on the XZ Plane, 22 mm up. Extrude 686 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p13_back_foam/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p13_back_foam/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the front edges",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the two front vertical edges, radius 10. Save."
+   ],
+   "note": "Lumbar shaping comes from the cover pattern and the diaphragm, not extra foam.",
+   "parts": [
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p13_back_foam/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p13_back_foam/step_02.json"
+  }
+ ]
+}

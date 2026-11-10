@@ -244,7 +244,8 @@ def frame(sh, title, number, scale, angle, material, doctype, owner='T Level Eng
 
     def cell(cx, cy, lab, val, bold=False):
         sh.text(cx + 1.5, cy + 2.6, lab, size=1.8, anchor='start')
-        sh.text(cx + 1.5, cy + 6.1, val, size=2.9 if not bold else 3.2, anchor='start', weight='bold' if bold else 'normal')
+        size = min(2.9 if not bold else 3.2, 57 / (0.6 * max(len(str(val)), 1)))   # long text shrinks to fit its cell
+        sh.text(cx + 1.5, cy + 6.1, val, size=size, anchor='start', weight='bold' if bold else 'normal')
     cell(x0, y0, 'Legal owner', owner)
     cell(x0 + 60, y0, 'Document type', doctype)
     cell(x0 + 120, y0, 'Identification number', number, True)
@@ -301,15 +302,24 @@ def view_data(shape, view, hidden=True):
 
 
 ESP_MATERIAL = {'esp2023_lock_gates': 'See parts list', 'esp2023_gate_leaf': 'S355 steel, see parts list',
-                'esp2023_skin_panel': 'S355 steel plate', 'esp2023_lift_gate': 'Concept, see notes'}
+                'esp2023_skin_panel': 'S355 steel plate', 'esp2023_lift_gate': 'Concept, see notes',
+                'esp2026_seat_set': 'See parts list', 'esp2026_single_seat': 'See parts list',
+                'esp2026_shell_seats': 'Concept, see notes'}
+# each Employer-Set Project folder: the client named in the title block, the drawing date and the drawing number prefix
+PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', prefix='ESP23'),
+            'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26')}
 
 
 def owner_of(m):
-    return 'Lock Restoration Ltd' if m.get('folder') == 'ESP 2023' else 'T Level Engineering, Unit 3'
+    return PROJECTS[m['folder']]['owner'] if m.get('folder') in PROJECTS else 'T Level Engineering, Unit 3'
 
 
 def date_of(m):
-    return '2026-11-10' if m.get('folder') == 'ESP 2023' else None
+    return PROJECTS[m['folder']]['date'] if m.get('folder') in PROJECTS else None
+
+
+def prefix_of(m):
+    return PROJECTS[m['folder']]['prefix'] if m.get('folder') in PROJECTS else 'U3'
 
 
 def material_of(m):
@@ -387,7 +397,7 @@ def ortho_sheet(m, shape, angle, number):
             sh.text(285, yk, line, size=2.6, anchor='start')
             yk += 5.2
         sh.text(285, yk + 3, 'Material: ' + pt['material'], size=2.6, anchor='start')
-        sh.text(285, yk + 8.2, 'Part file: %s. Item %d on ESP23-GA-05.' % (pt['file'], pt['no']), size=2.6, anchor='start')
+        sh.text(285, yk + 8.2, 'Part file: %s. Item %d on %s-GA-05.' % (pt['file'], pt['no'], prefix_of(m)), size=2.6, anchor='start')
         sh.text(22, 248, 'Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.', size=2.8,
                 anchor='start')
     else:
@@ -532,10 +542,10 @@ def main(only=None):
         base = parts.base_of(spec)
         out = os.path.join(ROOT, 'docs', base, 'drawings')
         if spec.get('part'):
-            number = 'ESP23-P%02d' % spec['part']['no']
+            number = '%s-P%02d' % (prefix_of(spec), spec['part']['no'])
         elif base:
             esp = [x['name'] for x in parts.MODELS if x.get('folder') == spec['folder'] and not x.get('part')]
-            number = 'ESP23-%02d' % (esp.index(m['name']) + 1)
+            number = '%s-%02d' % (prefix_of(spec), esp.index(m['name']) + 1)
         else:
             number = 'U3-%03d' % (k + 1)
         print('drawing', m['name'])

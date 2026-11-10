@@ -148,3 +148,44 @@ CASES.update(
                    'Together about 13 MPa on the plain pin. The 15 mm root fillet raises this by a stress concentration factor of '
                    'about 1.6, to about 21 MPa, which is where the FEA finds its peak.'),
 )
+
+
+# ------------------------------------------------------------------ ESP 2026 economy three-seat set (models/esp2026.py)
+import esp2026 as _seat  # noqa: E402
+
+AL7075 = dict(name='Aluminum 7075-T6 (add to the library if needed: E 71.7 GPa, yield 503 MPa)', E=71700, nu=0.33,
+              yield_strength=503)
+SEAT_OCCUPANT = 77                       # kg, the standard passenger mass used for seat certification (CS 25.562)
+SEAT_G = 9                               # emergency landing forward load factor, CS 25.561
+SEAT_SET_MASS = 23.5                     # kg, the three-seat set without life vests, from the CAD model (esp2026.set_mass)
+LEG_FORWARD = round(SEAT_G * 9.81 * (3 * SEAT_OCCUPANT + SEAT_SET_MASS) / 2)   # N on each leg
+
+
+def _mid(p, q, oy=_seat.LEG_A[0]):
+    """Middle of a strut, on the plate centre plane, in the coordinates of the leg part file."""
+    return [0.0, (p[0] + q[0]) / 2 - oy, (p[1] + q[1]) / 2]
+
+
+def _probe(name, p, q):
+    return dict(name=name, at=_mid(p, q), r=8)
+
+
+CASES.update(
+    esp2026_p04_leg=dict(
+        part='leg', material=AL7075, mesh_size=5,
+        story='A 9 g forward emergency landing (CS 25.561): three 77 kg passengers and the seat itself push forwards on '
+              'the beam tubes, and the leg holds them back from its two track fittings. Each of the two legs takes half: '
+              '%.1f kN.' % (LEG_FORWARD / 1000),
+        fixed=[dict(test=plane('z', 25, sign=-1), where='the underside of the two foot pads (the track fittings)')],
+        loads=[dict(kind='force', value=LEG_FORWARD, dir=(0, -1, 0), test=cylinder(25), where='the two beam tube bores',
+                    how='Force, %d N, forwards (along -Y): pick both bores' % LEG_FORWARD,
+                    note='Half of the load goes into each beam bore. The real crash test is dynamic (CS 25.562, 16 g); '
+                         'this static 9 g check is the one used to size the structure first.')],
+        probes=[_probe('front strut', _seat.LEG_A, _seat.LEG_C), _probe('rear strut', _seat.LEG_B, _seat.LEG_D),
+                _probe('brace', _seat.LEG_A, _seat.LEG_D), _probe('top chord', _seat.LEG_C, _seat.LEG_D)],
+        mesh_note='The plate is 10 mm thick and the struts 30 to 40 mm wide, so a 5 mm mesh puts two or more '
+                  'quadratic elements through the thickness. ',
+        hand_check='Treat the leg as a pin jointed truss (struts, chord and brace): half the load at each beam bore, '
+                   'reactions at the two feet. The member forces divided by the strut areas give the stress in the '
+                   'middle of each strut, away from the joints: see the ESP 2026 calculation sheet, section 6.'),
+)

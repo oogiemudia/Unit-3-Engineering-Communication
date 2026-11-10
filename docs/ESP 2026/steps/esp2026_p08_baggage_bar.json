@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p08_baggage_bar",
+ "title": "ESP 2026 part 08: baggage bar",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as baggage_bar.ipt.",
+    "Sketch a circle diameter 20 on the YZ Plane. Extrude 1400 mm along X."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p08_baggage_bar/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p08_baggage_bar/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Make it a tube",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: diameter 17.6, Through All, concentric. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p08_baggage_bar/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p08_baggage_bar/step_02.json"
+  }
+ ]
+}

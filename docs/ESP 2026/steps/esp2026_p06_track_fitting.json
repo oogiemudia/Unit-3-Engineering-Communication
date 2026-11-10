@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p06_track_fitting",
+ "title": "ESP 2026 part 06: track fitting",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as track_fitting.ipt.",
+    "Sketch a 24 x 60 rectangle on the XZ Plane (the floor), centred. Extrude 25 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "track fitting",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p06_track_fitting/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p06_track_fitting/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Stud hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top face, on the centre: diameter 12, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "track fitting",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p06_track_fitting/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p06_track_fitting/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Chamfered ends",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch 9 x 8 steps at each end of the top. Extrude Cut Through All. Save."
+   ],
+   "note": "The leg foot pad (60 long) sits on the top.",
+   "parts": [
+    {
+     "name": "track fitting",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p06_track_fitting/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p06_track_fitting/step_03.json"
+  }
+ ]
+}

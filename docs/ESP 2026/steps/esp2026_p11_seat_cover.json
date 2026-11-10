@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p11_seat_cover",
+ "title": "ESP 2026 part 11: seat cushion cover",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Outer shape",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as seat_cover.ipt.",
+    "Sketch the side profile 450 deep, 82 high at the front and 52 at the back. Extrude 450 mm, Symmetric."
+   ],
+   "note": "The top of the cover at the front edge is the seat height: 440 mm.",
+   "parts": [
+    {
+     "name": "seat cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p11_seat_cover/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p11_seat_cover/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Click Shell. Remove the bottom face. Thickness 2 mm, Inside. Save."
+   ],
+   "note": "A 2 mm skin: the wool blend face, the fire blocking layer and the stain resistant finish.",
+   "parts": [
+    {
+     "name": "seat cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p11_seat_cover/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p11_seat_cover/step_02.json"
+  }
+ ]
+}

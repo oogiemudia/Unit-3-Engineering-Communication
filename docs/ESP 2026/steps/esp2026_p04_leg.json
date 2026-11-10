@@ -1,0 +1,93 @@
+{
+ "name": "esp2026_p04_leg",
+ "title": "ESP 2026 part 04: leg",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Struts",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as leg.ipt.",
+    "Start 2D Sketch on the YZ Plane. Draw the front strut 40 wide from the front foot (20, 45) up to the front beam (0, 330), and the rear strut 40 wide from the rear foot (528, 45) up to the rear beam (330, 330).",
+    "Extrude 10 mm, Symmetric."
+   ],
+   "note": "The origin is the front track fitting point on the floor.",
+   "parts": [
+    {
+     "name": "leg",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p04_leg/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p04_leg/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Chord and brace",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 30 mm bar between the two beam points and a 30 mm brace from the front foot to the rear beam. Extrude 10 mm, Symmetric, Join."
+   ],
+   "note": "Struts, chord and brace make two triangles: a braced frame carries load by tension and compression, not bending.",
+   "parts": [
+    {
+     "name": "leg",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p04_leg/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p04_leg/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Beam bosses and feet",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 70 on the beam points and 60 x 20 pads under each foot. Extrude 10 mm, Symmetric, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "leg",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p04_leg/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p04_leg/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bores",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: diameter 50 Through All on both bosses (the beam tubes), and diameter 20 on the front strut 150 mm up (the baggage bar). Material: Aluminum 7075-T6. Save."
+   ],
+   "note": "See the FEA: the leg under a 9 g forward crash load.",
+   "parts": [
+    {
+     "name": "leg",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p04_leg/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_p04_leg/step_04.json"
+  }
+ ]
+}

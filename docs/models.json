@@ -5309,5 +5309,4681 @@
    "third": "ESP 2023/drawings/esp2023_p41_cill_third_angle",
    "first": "ESP 2023/drawings/esp2023_p41_cill_first_angle"
   }
+ },
+ {
+  "name": "esp2026_seat_set",
+  "title": "ESP 2026 three-seat set (GA)",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2026 Task 2, Part B: the preferred design, an economy class three-seat set assembled from 39 separate parts. General arrangement, parts list, simulation of the recline, armrests and tray.",
+  "description": "Design A, the preferred design: an economy class three-seat set for flights under 3 hours. Two aluminium beam tubes on two machined legs with track fittings carry four spreaders. Each seat has a woven diaphragm, foam cushions in wipe clean covers, a carbon fibre back that reclines 5 degrees on a hydraulic lock, a fixed head rest and a lap belt with a lift lever buckle; lift up armrests; and, on each back, the tray table, screen, USB-C power and A4 pocket for the passenger behind. Life vests are stowed in pouches under the seats.",
+  "parts": [
+   {
+    "name": "front beam tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rear beam tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam end cap 1",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam end cap 2",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam end cap 3",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam end cap 4",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "spreader 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "spreader 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "spreader 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "spreader 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam clamp collar 1a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam clamp collar 1b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track fitting 1a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track stud 1a",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track fitting 1b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track stud 1b",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam clamp collar 2a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "beam clamp collar 2b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track fitting 2a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track stud 2a",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track fitting 2b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "track stud 2b",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "baggage bar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline pivot pin 2",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline pivot pin 3",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline pivot pin 1",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline pivot pin 4",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 diaphragm",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 cushion cover",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 back shell",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 back cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 back cushion cover",
+    "colour": "#24456E",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 head rest",
+    "colour": "#9AA7B5",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 recline lock bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 recline lock",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 recline lock rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 recline lock pin, front",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 recline lock pin, rear",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 belt anchor, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 belt anchor, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 belt webbing, buckle side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 belt webbing, adjuster side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 buckle body",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 buckle lift lever",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 belt tongue",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 tray table",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 tray hinge arm, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 tray hinge arm, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 tray latch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 entertainment screen",
+    "colour": "#111418",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 power and audio module",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 literature pocket",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 life vest pouch",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 1 life vest",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 diaphragm",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 cushion cover",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 back shell",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 back cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 back cushion cover",
+    "colour": "#24456E",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 head rest",
+    "colour": "#9AA7B5",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 recline lock bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 recline lock",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 recline lock rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 recline lock pin, front",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 recline lock pin, rear",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 belt anchor, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 belt anchor, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 belt webbing, buckle side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 belt webbing, adjuster side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 buckle body",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 buckle lift lever",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 belt tongue",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 tray table",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 tray hinge arm, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 tray hinge arm, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 tray latch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 entertainment screen",
+    "colour": "#111418",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 power and audio module",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 literature pocket",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 life vest pouch",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 2 life vest",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 diaphragm",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 cushion cover",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 back shell",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 back cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 back cushion cover",
+    "colour": "#24456E",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 head rest",
+    "colour": "#9AA7B5",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 recline lock bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 recline lock",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 recline lock rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 recline lock pin, front",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 recline lock pin, rear",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 belt anchor, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 belt anchor, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 belt webbing, buckle side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 belt webbing, adjuster side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 buckle body",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 buckle lift lever",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 belt tongue",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 tray table",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 tray hinge arm, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 tray hinge arm, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 tray latch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 entertainment screen",
+    "colour": "#111418",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 power and audio module",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 literature pocket",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 life vest pouch",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "seat 3 life vest",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest 1",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pad 1",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pin 1",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest 2",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pad 2",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pin 2",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline button 1",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest 3",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pad 3",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pin 3",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline button 2",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest 4",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pad 4",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "armrest pin 4",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline button 3",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1554.0,
+   709.3,
+   1200.7
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   0.8,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_seat_set.step",
+   "stl": "ESP 2026/stl/esp2026_seat_set.stl",
+   "glb": "ESP 2026/glb/esp2026_seat_set.glb",
+   "edges": "ESP 2026/edges/esp2026_seat_set.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "sim": true,
+  "bom": [
+   {
+    "no": 1,
+    "name": "beam tube",
+    "qty": 2,
+    "material": "7075-T6 aluminium tube 50 x 1.5, 70 % recycled",
+    "group": "structure",
+    "model": "esp2026_p01_beam_tube",
+    "file": "beam_tube.ipt",
+    "bought": false,
+    "instances": [
+     "front beam tube",
+     "rear beam tube"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "beam end cap",
+    "qty": 4,
+    "material": "Fire retardant polycarbonate, moulded",
+    "group": "structure",
+    "model": "esp2026_p02_beam_end_cap",
+    "file": "beam_end_cap.ipt",
+    "bought": false,
+    "instances": [
+     "beam end cap 1",
+     "beam end cap 2",
+     "beam end cap 3",
+     "beam end cap 4"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "spreader",
+    "qty": 4,
+    "material": "7075-T6 aluminium plate, 8 thick, machined",
+    "group": "structure",
+    "model": "esp2026_p03_spreader",
+    "file": "spreader.ipt",
+    "bought": false,
+    "instances": [
+     "spreader 1",
+     "spreader 2",
+     "spreader 3",
+     "spreader 4"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "leg",
+    "qty": 2,
+    "material": "7075-T6 aluminium plate, 10 thick, machined",
+    "group": "structure",
+    "model": "esp2026_p04_leg",
+    "file": "leg.ipt",
+    "bought": false,
+    "instances": [
+     "leg 1",
+     "leg 2"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "beam clamp collar",
+    "qty": 4,
+    "material": "7075-T6 aluminium, split collar with M5 screw",
+    "group": "structure",
+    "model": "esp2026_p05_beam_collar",
+    "file": "beam_collar.ipt",
+    "bought": false,
+    "instances": [
+     "beam clamp collar 1a",
+     "beam clamp collar 1b",
+     "beam clamp collar 2a",
+     "beam clamp collar 2b"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "track fitting",
+    "qty": 4,
+    "material": "7075-T6 aluminium, machined",
+    "group": "structure",
+    "model": "esp2026_p06_track_fitting",
+    "file": "track_fitting.ipt",
+    "bought": false,
+    "instances": [
+     "track fitting 1a",
+     "track fitting 1b",
+     "track fitting 2a",
+     "track fitting 2b"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "track stud",
+    "qty": 4,
+    "material": "Bought in: 15-5PH stainless track stud with shear plunger",
+    "group": "structure",
+    "model": "esp2026_p07_track_stud",
+    "file": "track_stud.ipt",
+    "bought": true,
+    "instances": [
+     "track stud 1a",
+     "track stud 1b",
+     "track stud 2a",
+     "track stud 2b"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "baggage bar",
+    "qty": 1,
+    "material": "6061 aluminium tube 20 x 1.2, recycled",
+    "group": "structure",
+    "model": "esp2026_p08_baggage_bar",
+    "file": "baggage_bar.ipt",
+    "bought": false,
+    "instances": [
+     "baggage bar"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "seat diaphragm",
+    "qty": 3,
+    "material": "Woven aramid and polyester suspension, fire retardant",
+    "group": "seat",
+    "model": "esp2026_p09_seat_diaphragm",
+    "file": "seat_diaphragm.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 diaphragm",
+     "seat 2 diaphragm",
+     "seat 3 diaphragm"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "seat cushion foam",
+    "qty": 3,
+    "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+    "group": "seat",
+    "model": "esp2026_p10_seat_foam",
+    "file": "seat_foam.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 cushion foam",
+     "seat 2 cushion foam",
+     "seat 3 cushion foam"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "seat cushion cover",
+    "qty": 3,
+    "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+    "group": "seat",
+    "model": "esp2026_p11_seat_cover",
+    "file": "seat_cover.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 cushion cover",
+     "seat 2 cushion cover",
+     "seat 3 cushion cover"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "back shell",
+    "qty": 3,
+    "material": "Carbon fibre epoxy, 1.2 mm, fire retardant resin",
+    "group": "seat",
+    "model": "esp2026_p12_back_shell",
+    "file": "back_shell.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 back shell",
+     "seat 2 back shell",
+     "seat 3 back shell"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "back cushion foam",
+    "qty": 3,
+    "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+    "group": "seat",
+    "model": "esp2026_p13_back_foam",
+    "file": "back_foam.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 back cushion foam",
+     "seat 2 back cushion foam",
+     "seat 3 back cushion foam"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "back cushion cover",
+    "qty": 3,
+    "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+    "group": "seat",
+    "model": "esp2026_p14_back_cover",
+    "file": "back_cover.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 back cushion cover",
+     "seat 2 back cushion cover",
+     "seat 3 back cushion cover"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "head rest",
+    "qty": 3,
+    "material": "Moulded foam on a PA6 frame, grey e-leather cover (recycled leather fibre)",
+    "group": "seat",
+    "model": "esp2026_p15_headrest",
+    "file": "headrest.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 head rest",
+     "seat 2 head rest",
+     "seat 3 head rest"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "recline pivot pin",
+    "qty": 2,
+    "material": "17-4PH stainless steel, 12 dia",
+    "group": "seat",
+    "model": "esp2026_p16_back_pivot_pin",
+    "file": "back_pivot_pin.ipt",
+    "bought": false,
+    "instances": [
+     "recline pivot pin 2",
+     "recline pivot pin 3"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "end recline pivot pin",
+    "qty": 2,
+    "material": "17-4PH stainless steel, 12 dia",
+    "group": "seat",
+    "model": "esp2026_p17_end_pivot_pin",
+    "file": "end_pivot_pin.ipt",
+    "bought": false,
+    "instances": [
+     "recline pivot pin 1",
+     "recline pivot pin 4"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "recline lock bracket",
+    "qty": 3,
+    "material": "7075-T6 aluminium, machined",
+    "group": "recline",
+    "model": "esp2026_p18_recline_bracket",
+    "file": "recline_bracket.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 recline lock bracket",
+     "seat 2 recline lock bracket",
+     "seat 3 recline lock bracket"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "recline lock body",
+    "qty": 3,
+    "material": "Bought in: hydraulic locking cylinder, 22 dia, 1500 N",
+    "group": "recline",
+    "model": "esp2026_p19_recline_lock",
+    "file": "recline_lock.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 recline lock",
+     "seat 2 recline lock",
+     "seat 3 recline lock"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "recline lock rod",
+    "qty": 3,
+    "material": "Bought in: chromed steel rod 8 dia with eye (part of the lock)",
+    "group": "recline",
+    "model": "esp2026_p20_recline_rod",
+    "file": "recline_rod.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 recline lock rod",
+     "seat 2 recline lock rod",
+     "seat 3 recline lock rod"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "recline lock pin",
+    "qty": 6,
+    "material": "17-4PH stainless steel, 8 dia",
+    "group": "recline",
+    "model": "esp2026_p21_lock_pin",
+    "file": "lock_pin.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 recline lock pin, front",
+     "seat 1 recline lock pin, rear",
+     "seat 2 recline lock pin, front",
+     "seat 2 recline lock pin, rear",
+     "seat 3 recline lock pin, front",
+     "seat 3 recline lock pin, rear"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "recline button",
+    "qty": 3,
+    "material": "Fire retardant polycarbonate button and bezel",
+    "group": "recline",
+    "model": "esp2026_p22_recline_button",
+    "file": "recline_button.ipt",
+    "bought": false,
+    "instances": [
+     "recline button 1",
+     "recline button 2",
+     "recline button 3"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "armrest",
+    "qty": 4,
+    "material": "Glass filled polyamide PA6 GF30 (recycled), fire retardant",
+    "group": "armrest",
+    "model": "esp2026_p23_armrest",
+    "file": "armrest.ipt",
+    "bought": false,
+    "instances": [
+     "armrest 1",
+     "armrest 2",
+     "armrest 3",
+     "armrest 4"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "armrest pad",
+    "qty": 4,
+    "material": "Soft touch TPE over foam, wipe clean",
+    "group": "armrest",
+    "model": "esp2026_p24_armrest_pad",
+    "file": "armrest_pad.ipt",
+    "bought": false,
+    "instances": [
+     "armrest pad 1",
+     "armrest pad 2",
+     "armrest pad 3",
+     "armrest pad 4"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "armrest pivot pin",
+    "qty": 4,
+    "material": "17-4PH stainless steel, 12 dia",
+    "group": "armrest",
+    "model": "esp2026_p25_armrest_pin",
+    "file": "armrest_pin.ipt",
+    "bought": false,
+    "instances": [
+     "armrest pin 1",
+     "armrest pin 2",
+     "armrest pin 3",
+     "armrest pin 4"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "belt anchor",
+    "qty": 6,
+    "material": "7075-T6 aluminium, machined",
+    "group": "belt",
+    "model": "esp2026_p26_belt_anchor",
+    "file": "belt_anchor.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 belt anchor, right",
+     "seat 1 belt anchor, left",
+     "seat 2 belt anchor, right",
+     "seat 2 belt anchor, left",
+     "seat 3 belt anchor, right",
+     "seat 3 belt anchor, left"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "belt webbing, buckle side",
+    "qty": 3,
+    "material": "Polyester webbing 48 wide, 380 long",
+    "group": "belt",
+    "model": "esp2026_p27_belt_strap_buckle",
+    "file": "belt_strap_buckle.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 belt webbing, buckle side",
+     "seat 2 belt webbing, buckle side",
+     "seat 3 belt webbing, buckle side"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "belt webbing, adjuster side",
+    "qty": 3,
+    "material": "Polyester webbing 48 wide, 790 to 1040 long",
+    "group": "belt",
+    "model": "esp2026_p28_belt_strap_adjust",
+    "file": "belt_strap_adjust.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 belt webbing, adjuster side",
+     "seat 2 belt webbing, adjuster side",
+     "seat 3 belt webbing, adjuster side"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "buckle body",
+    "qty": 3,
+    "material": "Aluminium alloy, anodised (part of the TSO-C22 belt)",
+    "group": "belt",
+    "model": "esp2026_p29_buckle_body",
+    "file": "buckle_body.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 buckle body",
+     "seat 2 buckle body",
+     "seat 3 buckle body"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "buckle lift lever",
+    "qty": 3,
+    "material": "Aluminium alloy, anodised, red release mark",
+    "group": "belt",
+    "model": "esp2026_p30_buckle_lever",
+    "file": "buckle_lever.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 buckle lift lever",
+     "seat 2 buckle lift lever",
+     "seat 3 buckle lift lever"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "belt tongue",
+    "qty": 3,
+    "material": "Steel, zinc plated, with slide bar adjuster",
+    "group": "belt",
+    "model": "esp2026_p31_belt_tongue",
+    "file": "belt_tongue.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 belt tongue",
+     "seat 2 belt tongue",
+     "seat 3 belt tongue"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "tray table",
+    "qty": 3,
+    "material": "Aluminium honeycomb sandwich with PC laminate faces",
+    "group": "amenity",
+    "model": "esp2026_p32_tray_table",
+    "file": "tray_table.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 tray table",
+     "seat 2 tray table",
+     "seat 3 tray table"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "tray hinge arm",
+    "qty": 6,
+    "material": "7075-T6 aluminium, machined",
+    "group": "amenity",
+    "model": "esp2026_p33_tray_arm",
+    "file": "tray_arm.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 tray hinge arm, right",
+     "seat 1 tray hinge arm, left",
+     "seat 2 tray hinge arm, right",
+     "seat 2 tray hinge arm, left",
+     "seat 3 tray hinge arm, right",
+     "seat 3 tray hinge arm, left"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "tray latch",
+    "qty": 3,
+    "material": "Fire retardant polycarbonate, moulded",
+    "group": "amenity",
+    "model": "esp2026_p34_tray_latch",
+    "file": "tray_latch.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 tray latch",
+     "seat 2 tray latch",
+     "seat 3 tray latch"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "entertainment screen",
+    "qty": 3,
+    "material": "Bought in: 10.1 inch touch screen, 1280 x 800, Bluetooth audio",
+    "group": "amenity",
+    "model": "esp2026_p35_ife_screen",
+    "file": "ife_screen.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 entertainment screen",
+     "seat 2 entertainment screen",
+     "seat 3 entertainment screen"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "power and audio module",
+    "qty": 3,
+    "material": "Bought in: USB-C 60 W and USB-A ports, 3.5 mm audio jack",
+    "group": "amenity",
+    "model": "esp2026_p36_usb_module",
+    "file": "usb_module.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 power and audio module",
+     "seat 2 power and audio module",
+     "seat 3 power and audio module"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "literature pocket",
+    "qty": 3,
+    "material": "Fire retardant recycled PET felt, moulded",
+    "group": "amenity",
+    "model": "esp2026_p37_literature_pocket",
+    "file": "literature_pocket.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 literature pocket",
+     "seat 2 literature pocket",
+     "seat 3 literature pocket"
+    ]
+   },
+   {
+    "no": 38,
+    "name": "life vest pouch",
+    "qty": 3,
+    "material": "Fire retardant recycled PET felt, moulded, with pull tab",
+    "group": "amenity",
+    "model": "esp2026_p38_vest_pouch",
+    "file": "vest_pouch.ipt",
+    "bought": false,
+    "instances": [
+     "seat 1 life vest pouch",
+     "seat 2 life vest pouch",
+     "seat 3 life vest pouch"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "life vest",
+    "qty": 3,
+    "material": "Bought in: adult life vest in its pack, 305 x 305 x 50",
+    "group": "amenity",
+    "model": "esp2026_p39_life_vest",
+    "file": "life_vest.ipt",
+    "bought": true,
+    "instances": [
+     "seat 1 life vest",
+     "seat 2 life vest",
+     "seat 3 life vest"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_seat_set_third_angle",
+   "first": "ESP 2026/drawings/esp2026_seat_set_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_single_seat",
+  "title": "ESP 2026 single seat",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2026 Task 2: one seat (the middle seat) and everything fitted to it. Section A-A down the middle of the seat shows the cushion, back, recline lock and life vest pouch.",
+  "description": "One seat (the middle seat) on its own: diaphragm, cushion and cover, carbon fibre back with its cushion, head rest, recline lock, lap belt, tray table, screen, power module, literature pocket and life vest pouch. Drawn in cabin coordinates on the middle seat line.",
+  "parts": [
+   {
+    "name": "diaphragm",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cushion cover",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "back shell",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "back cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "back cushion cover",
+    "colour": "#24456E",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "head rest",
+    "colour": "#9AA7B5",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline lock bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline lock",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline lock rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline lock pin, front",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "recline lock pin, rear",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "belt anchor, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "belt anchor, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "belt webbing, buckle side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "belt webbing, adjuster side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "buckle body",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "buckle lift lever",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "belt tongue",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tray table",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tray hinge arm, right",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tray hinge arm, left",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tray latch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "entertainment screen",
+    "colour": "#111418",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "power and audio module",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "literature pocket",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "life vest pouch",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "life vest",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   492.0,
+   709.3,
+   935.7
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   -1,
+   0.7,
+   1.2
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_single_seat.step",
+   "stl": "ESP 2026/stl/esp2026_single_seat.stl",
+   "glb": "ESP 2026/glb/esp2026_single_seat.glb",
+   "edges": "ESP 2026/edges/esp2026_single_seat.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "bom": [
+   {
+    "no": 9,
+    "name": "seat diaphragm",
+    "qty": 1,
+    "material": "Woven aramid and polyester suspension, fire retardant",
+    "group": "seat",
+    "model": "esp2026_p09_seat_diaphragm",
+    "file": "seat_diaphragm.ipt",
+    "bought": false,
+    "instances": [
+     "diaphragm"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "seat cushion foam",
+    "qty": 1,
+    "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+    "group": "seat",
+    "model": "esp2026_p10_seat_foam",
+    "file": "seat_foam.ipt",
+    "bought": false,
+    "instances": [
+     "cushion foam"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "seat cushion cover",
+    "qty": 1,
+    "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+    "group": "seat",
+    "model": "esp2026_p11_seat_cover",
+    "file": "seat_cover.ipt",
+    "bought": false,
+    "instances": [
+     "cushion cover"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "back shell",
+    "qty": 1,
+    "material": "Carbon fibre epoxy, 1.2 mm, fire retardant resin",
+    "group": "seat",
+    "model": "esp2026_p12_back_shell",
+    "file": "back_shell.ipt",
+    "bought": false,
+    "instances": [
+     "back shell"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "back cushion foam",
+    "qty": 1,
+    "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+    "group": "seat",
+    "model": "esp2026_p13_back_foam",
+    "file": "back_foam.ipt",
+    "bought": false,
+    "instances": [
+     "back cushion foam"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "back cushion cover",
+    "qty": 1,
+    "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+    "group": "seat",
+    "model": "esp2026_p14_back_cover",
+    "file": "back_cover.ipt",
+    "bought": false,
+    "instances": [
+     "back cushion cover"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "head rest",
+    "qty": 1,
+    "material": "Moulded foam on a PA6 frame, grey e-leather cover (recycled leather fibre)",
+    "group": "seat",
+    "model": "esp2026_p15_headrest",
+    "file": "headrest.ipt",
+    "bought": false,
+    "instances": [
+     "head rest"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "recline lock bracket",
+    "qty": 1,
+    "material": "7075-T6 aluminium, machined",
+    "group": "recline",
+    "model": "esp2026_p18_recline_bracket",
+    "file": "recline_bracket.ipt",
+    "bought": false,
+    "instances": [
+     "recline lock bracket"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "recline lock body",
+    "qty": 1,
+    "material": "Bought in: hydraulic locking cylinder, 22 dia, 1500 N",
+    "group": "recline",
+    "model": "esp2026_p19_recline_lock",
+    "file": "recline_lock.ipt",
+    "bought": true,
+    "instances": [
+     "recline lock"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "recline lock rod",
+    "qty": 1,
+    "material": "Bought in: chromed steel rod 8 dia with eye (part of the lock)",
+    "group": "recline",
+    "model": "esp2026_p20_recline_rod",
+    "file": "recline_rod.ipt",
+    "bought": true,
+    "instances": [
+     "recline lock rod"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "recline lock pin",
+    "qty": 2,
+    "material": "17-4PH stainless steel, 8 dia",
+    "group": "recline",
+    "model": "esp2026_p21_lock_pin",
+    "file": "lock_pin.ipt",
+    "bought": false,
+    "instances": [
+     "recline lock pin, front",
+     "recline lock pin, rear"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "belt anchor",
+    "qty": 2,
+    "material": "7075-T6 aluminium, machined",
+    "group": "belt",
+    "model": "esp2026_p26_belt_anchor",
+    "file": "belt_anchor.ipt",
+    "bought": false,
+    "instances": [
+     "belt anchor, right",
+     "belt anchor, left"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "belt webbing, buckle side",
+    "qty": 1,
+    "material": "Polyester webbing 48 wide, 380 long",
+    "group": "belt",
+    "model": "esp2026_p27_belt_strap_buckle",
+    "file": "belt_strap_buckle.ipt",
+    "bought": false,
+    "instances": [
+     "belt webbing, buckle side"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "belt webbing, adjuster side",
+    "qty": 1,
+    "material": "Polyester webbing 48 wide, 790 to 1040 long",
+    "group": "belt",
+    "model": "esp2026_p28_belt_strap_adjust",
+    "file": "belt_strap_adjust.ipt",
+    "bought": false,
+    "instances": [
+     "belt webbing, adjuster side"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "buckle body",
+    "qty": 1,
+    "material": "Aluminium alloy, anodised (part of the TSO-C22 belt)",
+    "group": "belt",
+    "model": "esp2026_p29_buckle_body",
+    "file": "buckle_body.ipt",
+    "bought": true,
+    "instances": [
+     "buckle body"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "buckle lift lever",
+    "qty": 1,
+    "material": "Aluminium alloy, anodised, red release mark",
+    "group": "belt",
+    "model": "esp2026_p30_buckle_lever",
+    "file": "buckle_lever.ipt",
+    "bought": true,
+    "instances": [
+     "buckle lift lever"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "belt tongue",
+    "qty": 1,
+    "material": "Steel, zinc plated, with slide bar adjuster",
+    "group": "belt",
+    "model": "esp2026_p31_belt_tongue",
+    "file": "belt_tongue.ipt",
+    "bought": true,
+    "instances": [
+     "belt tongue"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "tray table",
+    "qty": 1,
+    "material": "Aluminium honeycomb sandwich with PC laminate faces",
+    "group": "amenity",
+    "model": "esp2026_p32_tray_table",
+    "file": "tray_table.ipt",
+    "bought": false,
+    "instances": [
+     "tray table"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "tray hinge arm",
+    "qty": 2,
+    "material": "7075-T6 aluminium, machined",
+    "group": "amenity",
+    "model": "esp2026_p33_tray_arm",
+    "file": "tray_arm.ipt",
+    "bought": false,
+    "instances": [
+     "tray hinge arm, right",
+     "tray hinge arm, left"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "tray latch",
+    "qty": 1,
+    "material": "Fire retardant polycarbonate, moulded",
+    "group": "amenity",
+    "model": "esp2026_p34_tray_latch",
+    "file": "tray_latch.ipt",
+    "bought": false,
+    "instances": [
+     "tray latch"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "entertainment screen",
+    "qty": 1,
+    "material": "Bought in: 10.1 inch touch screen, 1280 x 800, Bluetooth audio",
+    "group": "amenity",
+    "model": "esp2026_p35_ife_screen",
+    "file": "ife_screen.ipt",
+    "bought": true,
+    "instances": [
+     "entertainment screen"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "power and audio module",
+    "qty": 1,
+    "material": "Bought in: USB-C 60 W and USB-A ports, 3.5 mm audio jack",
+    "group": "amenity",
+    "model": "esp2026_p36_usb_module",
+    "file": "usb_module.ipt",
+    "bought": true,
+    "instances": [
+     "power and audio module"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "literature pocket",
+    "qty": 1,
+    "material": "Fire retardant recycled PET felt, moulded",
+    "group": "amenity",
+    "model": "esp2026_p37_literature_pocket",
+    "file": "literature_pocket.ipt",
+    "bought": false,
+    "instances": [
+     "literature pocket"
+    ]
+   },
+   {
+    "no": 38,
+    "name": "life vest pouch",
+    "qty": 1,
+    "material": "Fire retardant recycled PET felt, moulded, with pull tab",
+    "group": "amenity",
+    "model": "esp2026_p38_vest_pouch",
+    "file": "vest_pouch.ipt",
+    "bought": false,
+    "instances": [
+     "life vest pouch"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "life vest",
+    "qty": 1,
+    "material": "Bought in: adult life vest in its pack, 305 x 305 x 50",
+    "group": "amenity",
+    "model": "esp2026_p39_life_vest",
+    "file": "life_vest.ipt",
+    "bought": true,
+    "instances": [
+     "life vest"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_single_seat_third_angle",
+   "first": "ESP 2026/drawings/esp2026_single_seat_first_angle",
+   "section": "ESP 2026/drawings/esp2026_single_seat_section"
+  }
+ },
+ {
+  "name": "esp2026_shell_seats",
+  "title": "ESP 2026 concept B: fixed shell seats",
+  "criteria": "3.1",
+  "uses": "ESP 2026 Task 2, Part A: the second design idea, fixed shell seats with a sliding seat pan, for comparison with design A.",
+  "description": "Design B, a concept: three moulded fixed shell seats on one central box beam and two pedestal legs. The seat pan slides forward to recline inside the shell, so the back never moves into the space of the passenger behind. Comfortable and robust, but the shells and the slide make it about 9.5 kg a seat.",
+  "parts": [
+   {
+    "name": "fixed shells",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "sliding seat pans and cushions",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "box beam",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pedestal legs and track rails",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tray tables (stowed)",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1520.0,
+   580.0,
+   1150.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   0.8,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_shell_seats.step",
+   "stl": "ESP 2026/stl/esp2026_shell_seats.stl",
+   "glb": "ESP 2026/glb/esp2026_shell_seats.glb",
+   "edges": "ESP 2026/edges/esp2026_shell_seats.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_shell_seats_third_angle",
+   "first": "ESP 2026/drawings/esp2026_shell_seats_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p01_beam_tube",
+  "title": "ESP 2026 part 01: beam tube",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 1 on the parts list: 7075-T6 aluminium tube 50 x 1.5, 70 % recycled. Cross beam tube. Two run the full width of the set, front and rear, and carry the four spreaders and the two legs. Thin walled tube is the lightest way to carry the seat loads to the legs.",
+  "description": "Cross beam tube. Two run the full width of the set, front and rear, and carry the four spreaders and the two legs. Thin walled tube is the lightest way to carry the seat loads to the legs.",
+  "parts": [
+   {
+    "name": "beam tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1540.0,
+   50.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p01_beam_tube.step",
+   "stl": "ESP 2026/stl/esp2026_p01_beam_tube.stl",
+   "glb": "ESP 2026/glb/esp2026_p01_beam_tube.glb",
+   "edges": "ESP 2026/edges/esp2026_p01_beam_tube.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 1,
+   "key": "beam_tube",
+   "group": "structure",
+   "material": "7075-T6 aluminium tube 50 x 1.5, 70 % recycled",
+   "file": "beam_tube.ipt",
+   "bought": false,
+   "sizes": [
+    "Tube \u00d850 x 1.5 wall",
+    "Length 1540 (to \u00b1770)",
+    "Two per set, 330 apart"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p01_beam_tube_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p01_beam_tube_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p02_beam_end_cap",
+  "title": "ESP 2026 part 02: beam end cap",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 2 on the parts list: Fire retardant polycarbonate, moulded. Push in cap that closes each end of the beam tubes, so there are no sharp edges at the aisle.",
+  "description": "Push in cap that closes each end of the beam tubes, so there are no sharp edges at the aisle.",
+  "parts": [
+   {
+    "name": "beam end cap",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   18.0,
+   50.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p02_beam_end_cap.step",
+   "stl": "ESP 2026/stl/esp2026_p02_beam_end_cap.stl",
+   "glb": "ESP 2026/glb/esp2026_p02_beam_end_cap.glb",
+   "edges": "ESP 2026/edges/esp2026_p02_beam_end_cap.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 2,
+   "key": "beam_end_cap",
+   "group": "structure",
+   "material": "Fire retardant polycarbonate, moulded",
+   "file": "beam_end_cap.ipt",
+   "bought": false,
+   "sizes": [
+    "Cap \u00d850 x 6",
+    "Spigot \u00d847 x 12"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p02_beam_end_cap_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p02_beam_end_cap_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p03_spreader",
+  "title": "ESP 2026 part 03: spreader",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 3 on the parts list: 7075-T6 aluminium plate, 8 thick, machined. Seat divider plate, one under each armrest. It clamps on both beam tubes and carries the armrest pivot, the recline pivot of the backs either side of it and the seat belt anchors.",
+  "description": "Seat divider plate, one under each armrest. It clamps on both beam tubes and carries the armrest pivot, the recline pivot of the backs either side of it and the seat belt anchors.",
+  "parts": [
+   {
+    "name": "spreader",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.0,
+   471.0,
+   315.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p03_spreader.step",
+   "stl": "ESP 2026/stl/esp2026_p03_spreader.stl",
+   "glb": "ESP 2026/glb/esp2026_p03_spreader.glb",
+   "edges": "ESP 2026/edges/esp2026_p03_spreader.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 3,
+   "key": "spreader",
+   "group": "structure",
+   "material": "7075-T6 aluminium plate, 8 thick, machined",
+   "file": "spreader.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 8 thick",
+    "Beam bores \u00d850 at 330 centres, bosses \u00d870",
+    "Armrest pivot \u00d812, 360 aft and 260 up",
+    "Recline pivot \u00d812, 420 aft and 60 up",
+    "Slots 24 x 130 and 210 x 16"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p03_spreader_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p03_spreader_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p04_leg",
+  "title": "ESP 2026 part 04: leg",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 4 on the parts list: 7075-T6 aluminium plate, 10 thick, machined. Machined leg: a braced frame from the two beam tubes down to the front and rear track fittings. Two per set. It carries every seat load into the aircraft floor.",
+  "description": "Machined leg: a braced frame from the two beam tubes down to the front and rear track fittings. Two per set. It carries every seat load into the aircraft floor.",
+  "parts": [
+   {
+    "name": "leg",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   10.0,
+   593.0,
+   340.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p04_leg.step",
+   "stl": "ESP 2026/stl/esp2026_p04_leg.stl",
+   "glb": "ESP 2026/glb/esp2026_p04_leg.glb",
+   "edges": "ESP 2026/edges/esp2026_p04_leg.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "part": {
+   "no": 4,
+   "key": "leg",
+   "group": "structure",
+   "material": "7075-T6 aluminium plate, 10 thick, machined",
+   "file": "leg.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 10 thick",
+    "Struts 40 wide, chord and brace 30 wide",
+    "Feet 508 apart, pads 60 x 20",
+    "Beam bores \u00d850 at 330 centres, 330 up",
+    "Baggage bar hole \u00d820, 150 up"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p04_leg_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p04_leg_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p05_beam_collar",
+  "title": "ESP 2026 part 05: beam clamp collar",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 5 on the parts list: 7075-T6 aluminium, split collar with M5 screw. Split clamp collar beside each leg boss. It locks the leg to the beam tube so the leg cannot slide.",
+  "description": "Split clamp collar beside each leg boss. It locks the leg to the beam tube so the leg cannot slide.",
+  "parts": [
+   {
+    "name": "beam clamp collar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.0,
+   64.0,
+   76.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p05_beam_collar.step",
+   "stl": "ESP 2026/stl/esp2026_p05_beam_collar.stl",
+   "glb": "ESP 2026/glb/esp2026_p05_beam_collar.glb",
+   "edges": "ESP 2026/edges/esp2026_p05_beam_collar.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 5,
+   "key": "beam_collar",
+   "group": "structure",
+   "material": "7075-T6 aluminium, split collar with M5 screw",
+   "file": "beam_collar.ipt",
+   "bought": false,
+   "sizes": [
+    "Ring \u00d864 / \u00d850 x 8",
+    "Lug 12 x 13, 2 mm split"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p05_beam_collar_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p05_beam_collar_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p06_track_fitting",
+  "title": "ESP 2026 part 06: track fitting",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 6 on the parts list: 7075-T6 aluminium, machined. Floor fitting under each foot of a leg. It sits in the aircraft seat track and is held by the track stud. Two per leg.",
+  "description": "Floor fitting under each foot of a leg. It sits in the aircraft seat track and is held by the track stud. Two per leg.",
+  "parts": [
+   {
+    "name": "track fitting",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   60.0,
+   25.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p06_track_fitting.step",
+   "stl": "ESP 2026/stl/esp2026_p06_track_fitting.stl",
+   "glb": "ESP 2026/glb/esp2026_p06_track_fitting.glb",
+   "edges": "ESP 2026/edges/esp2026_p06_track_fitting.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 6,
+   "key": "track_fitting",
+   "group": "structure",
+   "material": "7075-T6 aluminium, machined",
+   "file": "track_fitting.ipt",
+   "bought": false,
+   "sizes": [
+    "Block 24 x 60 x 25",
+    "Stud hole \u00d812",
+    "End steps 9 x 8"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p06_track_fitting_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p06_track_fitting_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p07_track_stud",
+  "title": "ESP 2026 part 07: track stud",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 7 on the parts list: Bought in: 15-5PH stainless track stud with shear plunger. Seat track stud. Its foot slides under the lips of the aircraft seat track and locks at a 25.4 mm pitch, so the row can be moved to any seat pitch the airline wants.",
+  "description": "Seat track stud. Its foot slides under the lips of the aircraft seat track and locks at a 25.4 mm pitch, so the row can be moved to any seat pitch the airline wants.",
+  "parts": [
+   {
+    "name": "track stud",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.0,
+   20.0,
+   45.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p07_track_stud.step",
+   "stl": "ESP 2026/stl/esp2026_p07_track_stud.stl",
+   "glb": "ESP 2026/glb/esp2026_p07_track_stud.glb",
+   "edges": "ESP 2026/edges/esp2026_p07_track_stud.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 7,
+   "key": "track_stud",
+   "group": "structure",
+   "material": "Bought in: 15-5PH stainless track stud with shear plunger",
+   "file": "track_stud.ipt",
+   "bought": true,
+   "sizes": [
+    "Stud \u00d812 x 45",
+    "Foot \u00d820 x 8"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p07_track_stud_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p07_track_stud_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p08_baggage_bar",
+  "title": "ESP 2026 part 08: baggage bar",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 8 on the parts list: 6061 aluminium tube 20 x 1.2, recycled. Restraint bar across the front of the under seat space. It stops bags sliding forward into the passengers' feet in a hard landing.",
+  "description": "Restraint bar across the front of the under seat space. It stops bags sliding forward into the passengers' feet in a hard landing.",
+  "parts": [
+   {
+    "name": "baggage bar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   1400.0,
+   20.0,
+   20.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p08_baggage_bar.step",
+   "stl": "ESP 2026/stl/esp2026_p08_baggage_bar.stl",
+   "glb": "ESP 2026/glb/esp2026_p08_baggage_bar.glb",
+   "edges": "ESP 2026/edges/esp2026_p08_baggage_bar.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 8,
+   "key": "baggage_bar",
+   "group": "structure",
+   "material": "6061 aluminium tube 20 x 1.2, recycled",
+   "file": "baggage_bar.ipt",
+   "bought": false,
+   "sizes": [
+    "Tube \u00d820 x 1.2",
+    "Length 1400"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p08_baggage_bar_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p08_baggage_bar_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p09_seat_diaphragm",
+  "title": "ESP 2026 part 09: seat diaphragm",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 9 on the parts list: Woven aramid and polyester suspension, fire retardant. The seat pan: a tight woven diaphragm stretched between the beam tubes. Lighter than a metal pan and it gives a little, so the cushion can be thinner.",
+  "description": "The seat pan: a tight woven diaphragm stretched between the beam tubes. Lighter than a metal pan and it gives a little, so the cushion can be thinner.",
+  "parts": [
+   {
+    "name": "seat diaphragm",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   446.0,
+   380.0,
+   1.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p09_seat_diaphragm.step",
+   "stl": "ESP 2026/stl/esp2026_p09_seat_diaphragm.stl",
+   "glb": "ESP 2026/glb/esp2026_p09_seat_diaphragm.glb",
+   "edges": "ESP 2026/edges/esp2026_p09_seat_diaphragm.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 9,
+   "key": "seat_diaphragm",
+   "group": "seat",
+   "material": "Woven aramid and polyester suspension, fire retardant",
+   "file": "seat_diaphragm.ipt",
+   "bought": false,
+   "sizes": [
+    "Sheet 446 x 380 x 1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p09_seat_diaphragm_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p09_seat_diaphragm_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p10_seat_foam",
+  "title": "ESP 2026 part 10: seat cushion foam",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 10 on the parts list: Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based. Seat cushion. Thicker at the front (80 mm) than the back (50 mm), so the seat slopes back 3.8 degrees and the passenger does not slide forward.",
+  "description": "Seat cushion. Thicker at the front (80 mm) than the back (50 mm), so the seat slopes back 3.8 degrees and the passenger does not slide forward.",
+  "parts": [
+   {
+    "name": "seat cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   446.0,
+   446.0,
+   81.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p10_seat_foam.step",
+   "stl": "ESP 2026/stl/esp2026_p10_seat_foam.stl",
+   "glb": "ESP 2026/glb/esp2026_p10_seat_foam.glb",
+   "edges": "ESP 2026/edges/esp2026_p10_seat_foam.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 10,
+   "key": "seat_foam",
+   "group": "seat",
+   "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+   "file": "seat_foam.ipt",
+   "bought": false,
+   "sizes": [
+    "446 wide x 446 deep",
+    "80 high at the front, 50 at the back"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p10_seat_foam_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p10_seat_foam_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p11_seat_cover",
+  "title": "ESP 2026 part 11: seat cushion cover",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 11 on the parts list: Wool and recycled polyester, wipe clean, fire blocked, 2 mm. Dress cover over the seat cushion. Hook and loop fastened, so the crew can change it between flights; stain resistant and wipe clean.",
+  "description": "Dress cover over the seat cushion. Hook and loop fastened, so the crew can change it between flights; stain resistant and wipe clean.",
+  "parts": [
+   {
+    "name": "seat cushion cover",
+    "colour": "#1F3A5F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   450.0,
+   450.0,
+   83.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p11_seat_cover.step",
+   "stl": "ESP 2026/stl/esp2026_p11_seat_cover.stl",
+   "glb": "ESP 2026/glb/esp2026_p11_seat_cover.glb",
+   "edges": "ESP 2026/edges/esp2026_p11_seat_cover.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 11,
+   "key": "seat_cover",
+   "group": "seat",
+   "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+   "file": "seat_cover.ipt",
+   "bought": false,
+   "sizes": [
+    "450 wide x 450 deep, 2 thick",
+    "Top 440 above the floor at the front edge"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p11_seat_cover_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p11_seat_cover_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p12_back_shell",
+  "title": "ESP 2026 part 12: back shell",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 12 on the parts list: Carbon fibre epoxy, 1.2 mm, fire retardant resin. The seat back: a thin carbon fibre shell, open at the front for the back cushion. It turns on the recline pivot, and carries the tray table, screen and literature pocket for the passenger behind.",
+  "description": "The seat back: a thin carbon fibre shell, open at the front for the back cushion. It turns on the recline pivot, and carries the tray table, screen and literature pocket for the passenger behind.",
+  "parts": [
+   {
+    "name": "back shell",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   440.0,
+   60.0,
+   830.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p12_back_shell.step",
+   "stl": "ESP 2026/stl/esp2026_p12_back_shell.stl",
+   "glb": "ESP 2026/glb/esp2026_p12_back_shell.glb",
+   "edges": "ESP 2026/edges/esp2026_p12_back_shell.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 12,
+   "key": "back_shell",
+   "group": "seat",
+   "material": "Carbon fibre epoxy, 1.2 mm, fire retardant resin",
+   "file": "back_shell.ipt",
+   "bought": false,
+   "sizes": [
+    "Shell 440 x 45 x 680, 1.2 wall, open front",
+    "Pivot lugs 6 x 40, hole \u00d812",
+    "Recline lever 8 x 20, pin hole \u00d88 at 100 below the pivot"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p12_back_shell_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p12_back_shell_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p13_back_foam",
+  "title": "ESP 2026 part 13: back cushion foam",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 13 on the parts list: Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based. Back cushion, 30 mm thick, in the front of the back shell.",
+  "description": "Back cushion, 30 mm thick, in the front of the back shell.",
+  "parts": [
+   {
+    "name": "back cushion foam",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   420.0,
+   30.0,
+   686.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p13_back_foam.step",
+   "stl": "ESP 2026/stl/esp2026_p13_back_foam.stl",
+   "glb": "ESP 2026/glb/esp2026_p13_back_foam.glb",
+   "edges": "ESP 2026/edges/esp2026_p13_back_foam.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 13,
+   "key": "back_foam",
+   "group": "seat",
+   "material": "Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based",
+   "file": "back_foam.ipt",
+   "bought": false,
+   "sizes": [
+    "420 x 30 x 686",
+    "Front edges R10"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p13_back_foam_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p13_back_foam_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p14_back_cover",
+  "title": "ESP 2026 part 14: back cushion cover",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 14 on the parts list: Wool and recycled polyester, wipe clean, fire blocked, 2 mm. Dress cover over the back cushion. Zipped at the back, so it can be changed in minutes.",
+  "description": "Dress cover over the back cushion. Zipped at the back, so it can be changed in minutes.",
+  "parts": [
+   {
+    "name": "back cushion cover",
+    "colour": "#24456E",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   424.0,
+   32.0,
+   690.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p14_back_cover.step",
+   "stl": "ESP 2026/stl/esp2026_p14_back_cover.stl",
+   "glb": "ESP 2026/glb/esp2026_p14_back_cover.glb",
+   "edges": "ESP 2026/edges/esp2026_p14_back_cover.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 14,
+   "key": "back_cover",
+   "group": "seat",
+   "material": "Wool and recycled polyester, wipe clean, fire blocked, 2 mm",
+   "file": "back_cover.ipt",
+   "bought": false,
+   "sizes": [
+    "424 x 32 x 690, 2 thick",
+    "Front edges R11"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p14_back_cover_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p14_back_cover_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p15_headrest",
+  "title": "ESP 2026 part 15: head rest",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 15 on the parts list: Moulded foam on a PA6 frame, grey e-leather cover (recycled leather fibre). Fixed head rest on top of the back, as the brief asks: no moving parts, nothing to break.",
+  "description": "Fixed head rest on top of the back, as the brief asks: no moving parts, nothing to break.",
+  "parts": [
+   {
+    "name": "head rest",
+    "colour": "#9AA7B5",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   400.0,
+   90.0,
+   80.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p15_headrest.step",
+   "stl": "ESP 2026/stl/esp2026_p15_headrest.stl",
+   "glb": "ESP 2026/glb/esp2026_p15_headrest.glb",
+   "edges": "ESP 2026/edges/esp2026_p15_headrest.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 15,
+   "key": "headrest",
+   "group": "seat",
+   "material": "Moulded foam on a PA6 frame, grey e-leather cover (recycled leather fibre)",
+   "file": "headrest.ipt",
+   "bought": false,
+   "sizes": [
+    "400 x 90 x 80",
+    "Corners R25, front edges R12"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p15_headrest_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p15_headrest_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p16_back_pivot_pin",
+  "title": "ESP 2026 part 16: recline pivot pin",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 16 on the parts list: 17-4PH stainless steel, 12 dia. Pin through a spreader and the pivot lugs of the backs either side. Both backs turn on it. Two per set.",
+  "description": "Pin through a spreader and the pivot lugs of the backs either side. Both backs turn on it. Two per set.",
+  "parts": [
+   {
+    "name": "recline pivot pin",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   75.0,
+   18.0,
+   18.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p16_back_pivot_pin.step",
+   "stl": "ESP 2026/stl/esp2026_p16_back_pivot_pin.stl",
+   "glb": "ESP 2026/glb/esp2026_p16_back_pivot_pin.glb",
+   "edges": "ESP 2026/edges/esp2026_p16_back_pivot_pin.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 16,
+   "key": "back_pivot_pin",
+   "group": "seat",
+   "material": "17-4PH stainless steel, 12 dia",
+   "file": "back_pivot_pin.ipt",
+   "bought": false,
+   "sizes": [
+    "Pin \u00d812 x 72",
+    "Head \u00d818 x 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p16_back_pivot_pin_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p16_back_pivot_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p17_end_pivot_pin",
+  "title": "ESP 2026 part 17: end recline pivot pin",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 17 on the parts list: 17-4PH stainless steel, 12 dia. Shorter pin through an end spreader and one back. Two per set, one at each end.",
+  "description": "Shorter pin through an end spreader and one back. Two per set, one at each end.",
+  "parts": [
+   {
+    "name": "end recline pivot pin",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   44.0,
+   18.0,
+   18.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p17_end_pivot_pin.step",
+   "stl": "ESP 2026/stl/esp2026_p17_end_pivot_pin.stl",
+   "glb": "ESP 2026/glb/esp2026_p17_end_pivot_pin.glb",
+   "edges": "ESP 2026/edges/esp2026_p17_end_pivot_pin.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 17,
+   "key": "end_pivot_pin",
+   "group": "seat",
+   "material": "17-4PH stainless steel, 12 dia",
+   "file": "end_pivot_pin.ipt",
+   "bought": false,
+   "sizes": [
+    "Pin \u00d812 x 40",
+    "Head \u00d818 x 4"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p17_end_pivot_pin_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p17_end_pivot_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p18_recline_bracket",
+  "title": "ESP 2026 part 18: recline lock bracket",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 18 on the parts list: 7075-T6 aluminium, machined. Half clamp under the front beam tube that the front end of the recline lock pins to.",
+  "description": "Half clamp under the front beam tube that the front end of the recline lock pins to.",
+  "parts": [
+   {
+    "name": "recline lock bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.0,
+   103.0,
+   52.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p18_recline_bracket.step",
+   "stl": "ESP 2026/stl/esp2026_p18_recline_bracket.stl",
+   "glb": "ESP 2026/glb/esp2026_p18_recline_bracket.glb",
+   "edges": "ESP 2026/edges/esp2026_p18_recline_bracket.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 18,
+   "key": "recline_bracket",
+   "group": "recline",
+   "material": "7075-T6 aluminium, machined",
+   "file": "recline_bracket.ipt",
+   "bought": false,
+   "sizes": [
+    "Half ring \u00d862 / \u00d850 x 8",
+    "Pin hole \u00d88, 60 aft and 40 down from the beam axis"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p18_recline_bracket_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p18_recline_bracket_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p19_recline_lock",
+  "title": "ESP 2026 part 19: recline lock body",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 19 on the parts list: Bought in: hydraulic locking cylinder, 22 dia, 1500 N. Hydraulic recline lock (a \"hydrolock\"). Locked, it holds the back where it is. Press the recline button and the valve opens: lean back to recline, sit up and it returns.",
+  "description": "Hydraulic recline lock (a \"hydrolock\"). Locked, it holds the back where it is. Press the recline button and the valve opens: lean back to recline, sit up and it returns.",
+  "parts": [
+   {
+    "name": "recline lock body",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   22.0,
+   218.0,
+   22.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p19_recline_lock.step",
+   "stl": "ESP 2026/stl/esp2026_p19_recline_lock.stl",
+   "glb": "ESP 2026/glb/esp2026_p19_recline_lock.glb",
+   "edges": "ESP 2026/edges/esp2026_p19_recline_lock.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 19,
+   "key": "recline_lock",
+   "group": "recline",
+   "material": "Bought in: hydraulic locking cylinder, 22 dia, 1500 N",
+   "file": "recline_lock.ipt",
+   "bought": true,
+   "sizes": [
+    "Cylinder \u00d822 x 198",
+    "Bore \u00d810",
+    "Eye \u00d816 x 8, hole \u00d88"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p19_recline_lock_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p19_recline_lock_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p20_recline_rod",
+  "title": "ESP 2026 part 20: recline lock rod",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 20 on the parts list: Bought in: chromed steel rod 8 dia with eye (part of the lock). Piston rod of the recline lock. It slides into the cylinder as the back reclines.",
+  "description": "Piston rod of the recline lock. It slides into the cylinder as the back reclines.",
+  "parts": [
+   {
+    "name": "recline lock rod",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.0,
+   208.0,
+   16.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p20_recline_rod.step",
+   "stl": "ESP 2026/stl/esp2026_p20_recline_rod.stl",
+   "glb": "ESP 2026/glb/esp2026_p20_recline_rod.glb",
+   "edges": "ESP 2026/edges/esp2026_p20_recline_rod.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 20,
+   "key": "recline_rod",
+   "group": "recline",
+   "material": "Bought in: chromed steel rod 8 dia with eye (part of the lock)",
+   "file": "recline_rod.ipt",
+   "bought": true,
+   "sizes": [
+    "Rod \u00d88 x 194",
+    "Eye \u00d816 x 8, hole \u00d88"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p20_recline_rod_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p20_recline_rod_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p21_lock_pin",
+  "title": "ESP 2026 part 21: recline lock pin",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 21 on the parts list: 17-4PH stainless steel, 8 dia. Headed pin at each end of the recline lock. Two per seat.",
+  "description": "Headed pin at each end of the recline lock. Two per seat.",
+  "parts": [
+   {
+    "name": "recline lock pin",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   19.0,
+   14.0,
+   14.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p21_lock_pin.step",
+   "stl": "ESP 2026/stl/esp2026_p21_lock_pin.stl",
+   "glb": "ESP 2026/glb/esp2026_p21_lock_pin.glb",
+   "edges": "ESP 2026/edges/esp2026_p21_lock_pin.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 21,
+   "key": "lock_pin",
+   "group": "recline",
+   "material": "17-4PH stainless steel, 8 dia",
+   "file": "lock_pin.ipt",
+   "bought": false,
+   "sizes": [
+    "Pin \u00d88 x 16",
+    "Head \u00d814 x 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p21_lock_pin_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p21_lock_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p22_recline_button",
+  "title": "ESP 2026 part 22: recline button",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 22 on the parts list: Fire retardant polycarbonate button and bezel. Large recline button on top of the armrest, 25 mm from its front: easy to find and press with a thumb or the side of a hand, and the cabin crew can reach it from the aisle.",
+  "description": "Large recline button on top of the armrest, 25 mm from its front: easy to find and press with a thumb or the side of a hand, and the cabin crew can reach it from the aisle.",
+  "parts": [
+   {
+    "name": "recline button",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   24.0,
+   7.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p22_recline_button.step",
+   "stl": "ESP 2026/stl/esp2026_p22_recline_button.stl",
+   "glb": "ESP 2026/glb/esp2026_p22_recline_button.glb",
+   "edges": "ESP 2026/edges/esp2026_p22_recline_button.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 22,
+   "key": "recline_button",
+   "group": "recline",
+   "material": "Fire retardant polycarbonate button and bezel",
+   "file": "recline_button.ipt",
+   "bought": false,
+   "sizes": [
+    "Bezel \u00d824 x 3",
+    "Button \u00d816 x 4"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p22_recline_button_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p22_recline_button_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p23_armrest",
+  "title": "ESP 2026 part 23: armrest",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 23 on the parts list: Glass filled polyamide PA6 GF30 (recycled), fire retardant. Lift up armrest, four per set. It turns 90 degrees on its pivot at the back so a passenger with access needs can slide across from an aisle wheelchair; detents hold it up or down.",
+  "description": "Lift up armrest, four per set. It turns 90 degrees on its pivot at the back so a passenger with access needs can slide across from an aisle wheelchair; detents hold it up or down.",
+  "parts": [
+   {
+    "name": "armrest",
+    "colour": "#2E3440",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.0,
+   430.0,
+   80.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p23_armrest.step",
+   "stl": "ESP 2026/stl/esp2026_p23_armrest.stl",
+   "glb": "ESP 2026/glb/esp2026_p23_armrest.glb",
+   "edges": "ESP 2026/edges/esp2026_p23_armrest.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 23,
+   "key": "armrest",
+   "group": "armrest",
+   "material": "Glass filled polyamide PA6 GF30 (recycled), fire retardant",
+   "file": "armrest.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar 50 x 420 x 40, 2.5 mm walls",
+    "Pivot end 60 long, slot 10 wide",
+    "Pivot hole \u00d812"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p23_armrest_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p23_armrest_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p24_armrest_pad",
+  "title": "ESP 2026 part 24: armrest pad",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 24 on the parts list: Soft touch TPE over foam, wipe clean. Soft pad on top of each armrest.",
+  "description": "Soft pad on top of each armrest.",
+  "parts": [
+   {
+    "name": "armrest pad",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.0,
+   330.0,
+   8.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p24_armrest_pad.step",
+   "stl": "ESP 2026/stl/esp2026_p24_armrest_pad.stl",
+   "glb": "ESP 2026/glb/esp2026_p24_armrest_pad.glb",
+   "edges": "ESP 2026/edges/esp2026_p24_armrest_pad.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 24,
+   "key": "armrest_pad",
+   "group": "armrest",
+   "material": "Soft touch TPE over foam, wipe clean",
+   "file": "armrest_pad.ipt",
+   "bought": false,
+   "sizes": [
+    "Pad 50 x 330 x 8",
+    "Top edges R4"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p24_armrest_pad_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p24_armrest_pad_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p25_armrest_pin",
+  "title": "ESP 2026 part 25: armrest pivot pin",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 25 on the parts list: 17-4PH stainless steel, 12 dia. Pin through the armrest cheeks and the spreader.",
+  "description": "Pin through the armrest cheeks and the spreader.",
+  "parts": [
+   {
+    "name": "armrest pivot pin",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   53.0,
+   18.0,
+   18.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p25_armrest_pin.step",
+   "stl": "ESP 2026/stl/esp2026_p25_armrest_pin.stl",
+   "glb": "ESP 2026/glb/esp2026_p25_armrest_pin.glb",
+   "edges": "ESP 2026/edges/esp2026_p25_armrest_pin.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 25,
+   "key": "armrest_pin",
+   "group": "armrest",
+   "material": "17-4PH stainless steel, 12 dia",
+   "file": "armrest_pin.ipt",
+   "bought": false,
+   "sizes": [
+    "Pin \u00d812 x 50",
+    "Head \u00d818 x 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p25_armrest_pin_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p25_armrest_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p26_belt_anchor",
+  "title": "ESP 2026 part 26: belt anchor",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 26 on the parts list: 7075-T6 aluminium, machined. Lap belt anchor bolted to the spreader each side of the seat. Two per seat; the right one is the mirror image.",
+  "description": "Lap belt anchor bolted to the spreader each side of the seat. Two per seat; the right one is the mirror image.",
+  "parts": [
+   {
+    "name": "belt anchor",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   19.0,
+   30.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p26_belt_anchor.step",
+   "stl": "ESP 2026/stl/esp2026_p26_belt_anchor.stl",
+   "glb": "ESP 2026/glb/esp2026_p26_belt_anchor.glb",
+   "edges": "ESP 2026/edges/esp2026_p26_belt_anchor.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 26,
+   "key": "belt_anchor",
+   "group": "belt",
+   "material": "7075-T6 aluminium, machined",
+   "file": "belt_anchor.ipt",
+   "bought": false,
+   "sizes": [
+    "Block 19 x 30 x 40",
+    "Bolt hole \u00d810"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p26_belt_anchor_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p26_belt_anchor_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p27_belt_strap_buckle",
+  "title": "ESP 2026 part 27: belt webbing, buckle side",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 27 on the parts list: Polyester webbing 48 wide, 380 long. Fixed length half of the lap belt, from the left anchor to the buckle. Shown laid on the cushion.",
+  "description": "Fixed length half of the lap belt, from the left anchor to the buckle. Shown laid on the cushion.",
+  "parts": [
+   {
+    "name": "belt webbing, buckle side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   187.0,
+   48.0,
+   31.3
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p27_belt_strap_buckle.step",
+   "stl": "ESP 2026/stl/esp2026_p27_belt_strap_buckle.stl",
+   "glb": "ESP 2026/glb/esp2026_p27_belt_strap_buckle.glb",
+   "edges": "ESP 2026/edges/esp2026_p27_belt_strap_buckle.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 27,
+   "key": "belt_strap_buckle",
+   "group": "belt",
+   "material": "Polyester webbing 48 wide, 380 long",
+   "file": "belt_strap_buckle.ipt",
+   "bought": false,
+   "sizes": [
+    "Webbing 48 x 2",
+    "Length in use 380"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p27_belt_strap_buckle_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p27_belt_strap_buckle_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p28_belt_strap_adjust",
+  "title": "ESP 2026 part 28: belt webbing, adjuster side",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 28 on the parts list: Polyester webbing 48 wide, 790 to 1040 long. Adjustable half of the lap belt, from the right anchor through the slide bar in the tongue.",
+  "description": "Adjustable half of the lap belt, from the right anchor through the slide bar in the tongue.",
+  "parts": [
+   {
+    "name": "belt webbing, adjuster side",
+    "colour": "#5B6B7A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   187.0,
+   48.0,
+   31.3
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p28_belt_strap_adjust.step",
+   "stl": "ESP 2026/stl/esp2026_p28_belt_strap_adjust.stl",
+   "glb": "ESP 2026/glb/esp2026_p28_belt_strap_adjust.glb",
+   "edges": "ESP 2026/edges/esp2026_p28_belt_strap_adjust.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 28,
+   "key": "belt_strap_adjust",
+   "group": "belt",
+   "material": "Polyester webbing 48 wide, 790 to 1040 long",
+   "file": "belt_strap_adjust.ipt",
+   "bought": false,
+   "sizes": [
+    "Webbing 48 x 2",
+    "Length in use 790 to 1040"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p28_belt_strap_adjust_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p28_belt_strap_adjust_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p29_buckle_body",
+  "title": "ESP 2026 part 29: buckle body",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 29 on the parts list: Aluminium alloy, anodised (part of the TSO-C22 belt). Lift lever buckle body, on the end of the buckle side webbing. The tongue slides into the slot and latches.",
+  "description": "Lift lever buckle body, on the end of the buckle side webbing. The tongue slides into the slot and latches.",
+  "parts": [
+   {
+    "name": "buckle body",
+    "colour": "#C9D3DD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   50.0,
+   10.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p29_buckle_body.step",
+   "stl": "ESP 2026/stl/esp2026_p29_buckle_body.stl",
+   "glb": "ESP 2026/glb/esp2026_p29_buckle_body.glb",
+   "edges": "ESP 2026/edges/esp2026_p29_buckle_body.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 29,
+   "key": "buckle_body",
+   "group": "belt",
+   "material": "Aluminium alloy, anodised (part of the TSO-C22 belt)",
+   "file": "buckle_body.ipt",
+   "bought": true,
+   "sizes": [
+    "Body 70 x 50 x 10",
+    "Tongue slot 24 x 4 x 21"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p29_buckle_body_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p29_buckle_body_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p30_buckle_lever",
+  "title": "ESP 2026 part 30: buckle lift lever",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 30 on the parts list: Aluminium alloy, anodised, red release mark. The lift lever. Pull it up and the tongue is released: one movement, with either hand, by the passenger or the crew. No buttons to find or press hard.",
+  "description": "The lift lever. Pull it up and the tongue is released: one movement, with either hand, by the passenger or the crew. No buttons to find or press hard.",
+  "parts": [
+   {
+    "name": "buckle lift lever",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   42.0,
+   7.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p30_buckle_lever.step",
+   "stl": "ESP 2026/stl/esp2026_p30_buckle_lever.stl",
+   "glb": "ESP 2026/glb/esp2026_p30_buckle_lever.glb",
+   "edges": "ESP 2026/edges/esp2026_p30_buckle_lever.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 30,
+   "key": "buckle_lever",
+   "group": "belt",
+   "material": "Aluminium alloy, anodised, red release mark",
+   "file": "buckle_lever.ipt",
+   "bought": true,
+   "sizes": [
+    "Lever 60 x 42 x 4",
+    "Finger lip 10 x 42 x 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p30_buckle_lever_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p30_buckle_lever_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p31_belt_tongue",
+  "title": "ESP 2026 part 31: belt tongue",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 31 on the parts list: Steel, zinc plated, with slide bar adjuster. Tongue (link) on the adjustable webbing. It latches into the buckle; the slide bar sets the belt length.",
+  "description": "Tongue (link) on the adjustable webbing. It latches into the buckle; the slide bar sets the belt length.",
+  "parts": [
+   {
+    "name": "belt tongue",
+    "colour": "#8E979F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   55.0,
+   36.0,
+   7.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p31_belt_tongue.step",
+   "stl": "ESP 2026/stl/esp2026_p31_belt_tongue.stl",
+   "glb": "ESP 2026/glb/esp2026_p31_belt_tongue.glb",
+   "edges": "ESP 2026/edges/esp2026_p31_belt_tongue.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 31,
+   "key": "belt_tongue",
+   "group": "belt",
+   "material": "Steel, zinc plated, with slide bar adjuster",
+   "file": "belt_tongue.ipt",
+   "bought": true,
+   "sizes": [
+    "Plate 55 x 24 x 4",
+    "Slide bar 18 x 36 x 7"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p31_belt_tongue_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p31_belt_tongue_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p32_tray_table",
+  "title": "ESP 2026 part 32: tray table",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 32 on the parts list: Aluminium honeycomb sandwich with PC laminate faces. Tray table on the back of the seat for the passenger behind: 415 x 265 (the brief allows up to 419 x 267). It folds down on its hinge to sit level and stows flat against the back.",
+  "description": "Tray table on the back of the seat for the passenger behind: 415 x 265 (the brief allows up to 419 x 267). It folds down on its hinge to sit level and stows flat against the back.",
+  "parts": [
+   {
+    "name": "tray table",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   415.0,
+   12.0,
+   265.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p32_tray_table.step",
+   "stl": "ESP 2026/stl/esp2026_p32_tray_table.stl",
+   "glb": "ESP 2026/glb/esp2026_p32_tray_table.glb",
+   "edges": "ESP 2026/edges/esp2026_p32_tray_table.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 32,
+   "key": "tray_table",
+   "group": "amenity",
+   "material": "Aluminium honeycomb sandwich with PC laminate faces",
+   "file": "tray_table.ipt",
+   "bought": false,
+   "sizes": [
+    "Panel 415 x 265 x 12",
+    "Corners R15",
+    "Hinge holes \u00d88 x 4, 8 up",
+    "Cup recess \u00d880 x 1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p32_tray_table_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p32_tray_table_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p33_tray_arm",
+  "title": "ESP 2026 part 33: tray hinge arm",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 33 on the parts list: 7075-T6 aluminium, machined. Hinge bracket each side of the tray, bonded to the back shell. Its stub is the tray hinge pin; a stop sets the tray level when it is folded down.",
+  "description": "Hinge bracket each side of the tray, bonded to the back shell. Its stub is the tray hinge pin; a stop sets the tray level when it is folded down.",
+  "parts": [
+   {
+    "name": "tray hinge arm",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   11.0,
+   25.0,
+   30.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p33_tray_arm.step",
+   "stl": "ESP 2026/stl/esp2026_p33_tray_arm.stl",
+   "glb": "ESP 2026/glb/esp2026_p33_tray_arm.glb",
+   "edges": "ESP 2026/edges/esp2026_p33_tray_arm.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 33,
+   "key": "tray_arm",
+   "group": "amenity",
+   "material": "7075-T6 aluminium, machined",
+   "file": "tray_arm.ipt",
+   "bought": false,
+   "sizes": [
+    "Bracket 6 x 25 x 30",
+    "Hinge stub \u00d88 x 5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p33_tray_arm_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p33_tray_arm_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p34_tray_latch",
+  "title": "ESP 2026 part 34: tray latch",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 34 on the parts list: Fire retardant polycarbonate, moulded. Turn button that holds the stowed tray up. Turn it a quarter turn to let the tray down.",
+  "description": "Turn button that holds the stowed tray up. Turn it a quarter turn to let the tray down.",
+  "parts": [
+   {
+    "name": "tray latch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   15.0,
+   16.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p34_tray_latch.step",
+   "stl": "ESP 2026/stl/esp2026_p34_tray_latch.stl",
+   "glb": "ESP 2026/glb/esp2026_p34_tray_latch.glb",
+   "edges": "ESP 2026/edges/esp2026_p34_tray_latch.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 34,
+   "key": "tray_latch",
+   "group": "amenity",
+   "material": "Fire retardant polycarbonate, moulded",
+   "file": "tray_latch.ipt",
+   "bought": false,
+   "sizes": [
+    "Base \u00d816 x 5",
+    "Tab 24 x 10 x 10"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p34_tray_latch_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p34_tray_latch_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p35_ife_screen",
+  "title": "ESP 2026 part 35: entertainment screen",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 35 on the parts list: Bought in: 10.1 inch touch screen, 1280 x 800, Bluetooth audio. Personal entertainment screen in the back of the seat, at the eye height of the passenger behind. Streams films from the cabin server and pairs with Bluetooth headphones.",
+  "description": "Personal entertainment screen in the back of the seat, at the eye height of the passenger behind. Streams films from the cabin server and pairs with Bluetooth headphones.",
+  "parts": [
+   {
+    "name": "entertainment screen",
+    "colour": "#111418",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   250.0,
+   17.0,
+   160.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p35_ife_screen.step",
+   "stl": "ESP 2026/stl/esp2026_p35_ife_screen.stl",
+   "glb": "ESP 2026/glb/esp2026_p35_ife_screen.glb",
+   "edges": "ESP 2026/edges/esp2026_p35_ife_screen.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 35,
+   "key": "ife_screen",
+   "group": "amenity",
+   "material": "Bought in: 10.1 inch touch screen, 1280 x 800, Bluetooth audio",
+   "file": "ife_screen.ipt",
+   "bought": true,
+   "sizes": [
+    "Housing 250 x 160 x 17",
+    "Display 220 x 137"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p35_ife_screen_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p35_ife_screen_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p36_usb_module",
+  "title": "ESP 2026 part 36: power and audio module",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 36 on the parts list: Bought in: USB-C 60 W and USB-A ports, 3.5 mm audio jack. Connectivity: a USB-C fast charge port, a USB-A port and a headphone jack beside the screen.",
+  "description": "Connectivity: a USB-C fast charge port, a USB-A port and a headphone jack beside the screen.",
+  "parts": [
+   {
+    "name": "power and audio module",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.0,
+   13.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p36_usb_module.step",
+   "stl": "ESP 2026/stl/esp2026_p36_usb_module.stl",
+   "glb": "ESP 2026/glb/esp2026_p36_usb_module.glb",
+   "edges": "ESP 2026/edges/esp2026_p36_usb_module.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 36,
+   "key": "usb_module",
+   "group": "amenity",
+   "material": "Bought in: USB-C 60 W and USB-A ports, 3.5 mm audio jack",
+   "file": "usb_module.ipt",
+   "bought": true,
+   "sizes": [
+    "Body 50 x 50 x 13",
+    "USB-C, USB-A, 3.5 mm jack"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p36_usb_module_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p36_usb_module_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p37_literature_pocket",
+  "title": "ESP 2026 part 37: literature pocket",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 37 on the parts list: Fire retardant recycled PET felt, moulded. Pocket on the back of the seat for the safety card, magazines and A4 papers (it takes A4 landscape).",
+  "description": "Pocket on the back of the seat for the safety card, magazines and A4 papers (it takes A4 landscape).",
+  "parts": [
+   {
+    "name": "literature pocket",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   330.0,
+   25.0,
+   215.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p37_literature_pocket.step",
+   "stl": "ESP 2026/stl/esp2026_p37_literature_pocket.stl",
+   "glb": "ESP 2026/glb/esp2026_p37_literature_pocket.glb",
+   "edges": "ESP 2026/edges/esp2026_p37_literature_pocket.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 37,
+   "key": "literature_pocket",
+   "group": "amenity",
+   "material": "Fire retardant recycled PET felt, moulded",
+   "file": "literature_pocket.ipt",
+   "bought": false,
+   "sizes": [
+    "Outside 330 x 215 x 25, 2 wall",
+    "Inside 326 x 213 x 21 (A4 on its side)"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p37_literature_pocket_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p37_literature_pocket_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p38_vest_pouch",
+  "title": "ESP 2026 part 38: life vest pouch",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 38 on the parts list: Fire retardant recycled PET felt, moulded, with pull tab. Pouch under the seat for the life vest, hung from the two beam tubes. The front opens with a pull tab, so the vest can be reached sitting down.",
+  "description": "Pouch under the seat for the life vest, hung from the two beam tubes. The front opens with a pull tab, so the vest can be reached sitting down.",
+  "parts": [
+   {
+    "name": "life vest pouch",
+    "colour": "#3B4A5C",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   320.0,
+   350.0,
+   60.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p38_vest_pouch.step",
+   "stl": "ESP 2026/stl/esp2026_p38_vest_pouch.stl",
+   "glb": "ESP 2026/glb/esp2026_p38_vest_pouch.glb",
+   "edges": "ESP 2026/edges/esp2026_p38_vest_pouch.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 38,
+   "key": "vest_pouch",
+   "group": "amenity",
+   "material": "Fire retardant recycled PET felt, moulded, with pull tab",
+   "file": "vest_pouch.ipt",
+   "bought": false,
+   "sizes": [
+    "Outside 320 x 340 x 60, 2 wall",
+    "Inside 316 x 336 x 56",
+    "Pull tab 40 x 20 x 10"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p38_vest_pouch_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p38_vest_pouch_first_angle"
+  }
+ },
+ {
+  "name": "esp2026_p39_life_vest",
+  "title": "ESP 2026 part 39: life vest",
+  "criteria": "3.1",
+  "uses": "ESP 2026 component, item 39 on the parts list: Bought in: adult life vest in its pack, 305 x 305 x 50. The life vest the airline supplies, packed 305 x 305 (the size in the brief).",
+  "description": "The life vest the airline supplies, packed 305 x 305 (the size in the brief).",
+  "parts": [
+   {
+    "name": "life vest",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   305.0,
+   305.0,
+   50.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2026/step/esp2026_p39_life_vest.step",
+   "stl": "ESP 2026/stl/esp2026_p39_life_vest.stl",
+   "glb": "ESP 2026/glb/esp2026_p39_life_vest.glb",
+   "edges": "ESP 2026/edges/esp2026_p39_life_vest.json"
+  },
+  "base": "ESP 2026/",
+  "folder": "ESP 2026",
+  "fea": false,
+  "part": {
+   "no": 39,
+   "key": "life_vest",
+   "group": "amenity",
+   "material": "Bought in: adult life vest in its pack, 305 x 305 x 50",
+   "file": "life_vest.ipt",
+   "bought": true,
+   "sizes": [
+    "Pack 305 x 305 x 50"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2026/drawings/esp2026_p39_life_vest_third_angle",
+   "first": "ESP 2026/drawings/esp2026_p39_life_vest_first_angle"
+  }
  }
 ]

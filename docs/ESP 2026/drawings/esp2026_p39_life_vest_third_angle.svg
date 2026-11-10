@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M75.00,184.50 L75.00,174.50 M136.00,184.50 L136.00,174.50 M75.00,184.50 L136.00,184.50 M75.00,174.50 L136.00,174.50"/>
+<path class="vis" d="M75.00,184.50 L75.00,174.50 M136.00,184.50 L136.00,174.50 M75.00,184.50 L136.00,184.50 M75.00,174.50 L136.00,174.50"/>
+<text x="105.50" y="192.50" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M75.00,152.50 L75.00,91.50 M136.00,152.50 L136.00,91.50 M75.00,152.50 L136.00,152.50 M75.00,91.50 L136.00,91.50"/>
+<path class="vis" d="M75.00,152.50 L75.00,91.50 M136.00,152.50 L136.00,91.50 M75.00,152.50 L136.00,152.50 M75.00,91.50 L136.00,91.50"/>
+<text x="105.50" y="160.50" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M158.00,184.50 L158.00,174.50 M158.00,174.50 L219.00,174.50 M219.00,184.50 L219.00,174.50 M158.00,184.50 L219.00,184.50"/>
+<path class="vis" d="M158.00,184.50 L158.00,174.50 M158.00,174.50 L219.00,174.50 M219.00,184.50 L219.00,174.50 M158.00,184.50 L219.00,184.50"/>
+<text x="188.50" y="192.50" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM RIGHT)</text>
+<path class="vis" d="M301.87,76.58 L301.87,68.42 M301.87,68.42 L345.00,43.51 M345.00,101.49 L345.00,93.32 M345.00,93.32 L388.13,68.42 M388.13,76.58 L388.13,68.42 M345.00,101.49 L388.13,76.58 M301.87,76.58 L345.00,101.49 M301.87,68.42 L345.00,93.32 M345.00,43.51 L388.13,68.42"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="75.00" y1="186.00" x2="75.00" y2="203.50"/>
+<line class="dim" x1="136.00" y1="186.00" x2="136.00" y2="203.50"/>
+<line class="dim" x1="75.00" y1="201.50" x2="136.00" y2="201.50"/>
+<polygon class="arrow" points="75.00,201.50 77.50,202.25 77.50,200.75"/>
+<polygon class="arrow" points="136.00,201.50 133.50,200.75 133.50,202.25"/>
+<text x="105.50" y="200.30" font-size="3.50" text-anchor="middle" font-weight="normal">305</text>
+<line class="dim" x1="73.50" y1="174.50" x2="61.00" y2="174.50"/>
+<line class="dim" x1="73.50" y1="184.50" x2="61.00" y2="184.50"/>
+<line class="dim" x1="63.00" y1="174.50" x2="63.00" y2="184.50"/>
+<polygon class="arrow" points="63.00,174.50 62.25,177.00 63.75,177.00"/>
+<polygon class="arrow" points="63.00,184.50 63.75,182.00 62.25,182.00"/>
+<text x="61.80" y="179.50" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 61.80 179.50)">50</text>
+<line class="dim" x1="158.00" y1="186.00" x2="158.00" y2="203.50"/>
+<line class="dim" x1="219.00" y1="186.00" x2="219.00" y2="203.50"/>
+<line class="dim" x1="158.00" y1="201.50" x2="219.00" y2="201.50"/>
+<polygon class="arrow" points="158.00,201.50 160.50,202.25 160.50,200.75"/>
+<polygon class="arrow" points="219.00,201.50 216.50,200.75 216.50,202.25"/>
+<text x="188.50" y="200.30" font-size="3.50" text-anchor="middle" font-weight="normal">305</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">Pack 305 x 305 x 50</text>
+<text x="285.00" y="155.20" font-size="2.60" text-anchor="start" font-weight="normal">Material: Bought in: adult life vest in its pack, 305 x 305 x 50</text>
+<text x="285.00" y="160.40" font-size="2.60" text-anchor="start" font-weight="normal">Part file: life_vest.ipt. Item 39 on ESP26-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Aero-Chair Ltd</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP26-P39-3</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP 2026 part 39: life vest</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">adult life vest in its pack</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">1:5</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="258.88,282.54 264.38,281.30 264.38,286.25 258.88,285.01"/>
+<circle class="vis" cx="254.47" cy="283.78" r="2.48"/>
+<circle class="vis" cx="254.47" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="254.47" y1="279.80" x2="254.47" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">Third angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

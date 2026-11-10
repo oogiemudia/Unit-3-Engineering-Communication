@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p26_belt_anchor",
+ "title": "ESP 2026 part 26: belt anchor",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as belt_anchor.ipt.",
+    "Sketch a 30 x 40 rectangle on the YZ Plane. Extrude 19 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "belt anchor",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p26_belt_anchor/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p26_belt_anchor/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bolt hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 10, Through All, in the middle. Save."
+   ],
+   "note": "An M10 bolt holds it to the spreader; the webbing loop goes round it.",
+   "parts": [
+    {
+     "name": "belt anchor",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p26_belt_anchor/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p26_belt_anchor/step_02.json"
+  }
+ ]
+}

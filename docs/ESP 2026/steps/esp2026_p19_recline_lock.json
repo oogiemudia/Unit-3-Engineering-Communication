@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p19_recline_lock",
+ "title": "ESP 2026 part 19: recline lock body",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Eye",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center or File > New > Standard (mm).ipt and save it as recline_lock.ipt.",
+    "Sketch a circle diameter 16 on the YZ Plane. Extrude 8 mm, Symmetric. Sketch a 14 x 12 neck. Extrude."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock body",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p19_recline_lock/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p19_recline_lock/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cylinder",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 22 on the end of the neck. Extrude 198 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock body",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p19_recline_lock/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p19_recline_lock/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bore and pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 10, 191 deep, on the end. Hole diameter 8 through the eye. Save."
+   ],
+   "note": "The origin is the front pin: the lock turns about it as the back reclines.",
+   "parts": [
+    {
+     "name": "recline lock body",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p19_recline_lock/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p19_recline_lock/step_03.json"
+  }
+ ]
+}

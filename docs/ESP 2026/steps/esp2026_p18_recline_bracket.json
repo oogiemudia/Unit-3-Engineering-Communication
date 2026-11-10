@@ -1,0 +1,71 @@
+{
+ "name": "esp2026_p18_recline_bracket",
+ "title": "ESP 2026 part 18: recline lock bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Half ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as recline_bracket.ipt.",
+    "Sketch the lower half of a ring, 62 outside and 50 inside, on the YZ Plane. Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p18_recline_bracket/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p18_recline_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tab",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a tab from the ring back to 72 mm behind the beam axis. Extrude 8 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p18_recline_bracket/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p18_recline_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 8, Through All, 60 behind and 40 below the beam axis. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p18_recline_bracket/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p18_recline_bracket/step_03.json"
+  }
+ ]
+}

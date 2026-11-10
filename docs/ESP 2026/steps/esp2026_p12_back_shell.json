@@ -1,0 +1,94 @@
+{
+ "name": "esp2026_p12_back_shell",
+ "title": "ESP 2026 part 12: back shell",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block out the back",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as back_shell.ipt.",
+    "Start 2D Sketch on the XZ Plane (here: the back seen from above, Y up the back is Inventor Y). Rectangle 440 x 45. Extrude 680 mm, starting 40 mm above the origin. The origin is the recline pivot."
+   ],
+   "note": "Parts of the back are drawn upright; the assembly tilts the back 12 degrees.",
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p12_back_shell/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p12_back_shell/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Shell it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Click Shell. Remove the front face. Thickness 1.2 mm, Inside. Click OK."
+   ],
+   "note": "A 1.2 mm carbon fibre shell is stiff and very light: under 1 kg.",
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p12_back_shell/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p12_back_shell/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pivot lugs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 6 x 40 rectangle on each side face, from 20 below to 45 above the origin. Extrude Join.",
+    "Hole: diameter 12, Through All, on the origin (the recline pivot axis)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p12_back_shell/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p12_back_shell/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Recline lever",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 20 mm wide lever under the shell, 204 mm from the centre, down to 110 mm below the pivot. Extrude 8 mm.",
+    "Hole: diameter 8 at 100 mm below the pivot, 15 mm behind it (the recline lock pin). Save."
+   ],
+   "note": "The recline lock pushes on this lever: the back can only move when the lock is released.",
+   "parts": [
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p12_back_shell/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_p12_back_shell/step_04.json"
+  }
+ ]
+}

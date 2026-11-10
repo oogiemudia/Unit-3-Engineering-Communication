@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p33_tray_arm",
+ "title": "ESP 2026 part 33: tray hinge arm",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bracket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tray_arm.ipt.",
+    "Sketch a 25 x 30 rectangle. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tray hinge arm",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p33_tray_arm/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p33_tray_arm/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hinge stub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 8 on the inner face, 10 mm from the shell. Extrude 5 mm. Save."
+   ],
+   "note": "Mirror the part for the other side in the assembly.",
+   "parts": [
+    {
+     "name": "tray hinge arm",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p33_tray_arm/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p33_tray_arm/step_02.json"
+  }
+ ]
+}

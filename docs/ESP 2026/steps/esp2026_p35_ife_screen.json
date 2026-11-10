@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p35_ife_screen",
+ "title": "ESP 2026 part 35: entertainment screen",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Housing",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ife_screen.ipt.",
+    "Sketch a 250 x 160 rectangle. Extrude 17 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p35_ife_screen/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p35_ife_screen/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Glass recess",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the 220 x 137 display area. Extrude Cut 2 mm. Save."
+   ],
+   "note": "Modelled from the maker's outline drawing.",
+   "parts": [
+    {
+     "name": "entertainment screen",
+     "colour": "#111418",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p35_ife_screen/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p35_ife_screen/step_02.json"
+  }
+ ]
+}

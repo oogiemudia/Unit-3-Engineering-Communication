@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p22_recline_button",
+ "title": "ESP 2026 part 22: recline button",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bezel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as recline_button.ipt.",
+    "Circle diameter 24. Extrude 3 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline button",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p22_recline_button/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p22_recline_button/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Button",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 16 on the top. Extrude 4 mm. Save."
+   ],
+   "note": "A Bowden cable inside the armrest links the button to the valve on the recline lock.",
+   "parts": [
+    {
+     "name": "recline button",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p22_recline_button/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p22_recline_button/step_02.json"
+  }
+ ]
+}

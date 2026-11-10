@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M91.00,220.60 L91.00,83.40 M91.00,83.40 L175.00,83.40 M91.00,220.60 L175.00,220.60 M175.00,220.60 L175.00,83.40"/>
+<path class="vis" d="M91.00,220.60 L91.00,83.40 M91.00,83.40 L91.01,83.40 L91.05,83.40 L91.11,83.40 L91.20,83.40 L91.31,83.40 L91.44,83.40 L91.59,83.40 L91.75,83.40 L91.94,83.40 L92.13,83.40 L92.34,83.40 L92.55,83.40 L92.78,83.40 L93.00,83.40 M93.00,83.40 L173.00,83.40 M175.00,83.40 L174.99,83.40 L174.95,83.40 L174.89,83.40 L174.80,83.40 L174.69,83.40 L174.56,83.40 L174.41,83.40 L174.25,83.40 L174.06,83.40 L173.87,83.40 L173.66,83.40 L173.45,83.40 L173.22,83.40 L173.00,83.40 M91.00,220.60 L91.01,220.60 L91.05,220.60 L91.11,220.60 L91.20,220.60 L91.31,220.60 L91.44,220.60 L91.59,220.60 L91.75,220.60 L91.94,220.60 L92.13,220.60 L92.34,220.60 L92.55,220.60 L92.78,220.60 L93.00,220.60 M93.00,220.60 L173.00,220.60 M175.00,220.60 L174.99,220.60 L174.95,220.60 L174.89,220.60 L174.80,220.60 L174.69,220.60 L174.56,220.60 L174.41,220.60 L174.25,220.60 L174.06,220.60 L173.87,220.60 L173.66,220.60 L173.45,220.60 L173.22,220.60 L173.00,220.60 M175.00,220.60 L175.00,83.40 M93.00,220.60 L93.00,83.40 M173.00,220.60 L173.00,83.40"/>
+<line class="ctr" x1="93.00" y1="223.10" x2="93.00" y2="80.90"/>
+<line class="ctr" x1="173.00" y1="223.10" x2="173.00" y2="80.90"/>
+<text x="133.00" y="228.60" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M91.00,59.40 L91.00,55.40 M91.00,59.40 L91.01,59.64 L91.06,59.88 L91.13,60.11 L91.23,60.33 L91.35,60.54 L91.50,60.73 L91.67,60.90 L91.86,61.05 L92.07,61.17 L92.29,61.27 L92.52,61.34 L92.76,61.39 L93.00,61.40 M91.00,55.40 L175.00,55.40 M93.00,61.40 L173.00,61.40 M175.00,59.40 L175.00,55.40 M175.00,59.40 L174.99,59.64 L174.94,59.88 L174.87,60.11 L174.77,60.33 L174.65,60.54 L174.50,60.73 L174.33,60.90 L174.14,61.05 L173.93,61.17 L173.71,61.27 L173.48,61.34 L173.24,61.39 L173.00,61.40"/>
+<path class="vis" d="M91.00,59.40 L91.00,55.40 M91.00,59.40 L91.01,59.64 L91.06,59.88 L91.13,60.11 L91.23,60.33 L91.35,60.54 L91.50,60.73 L91.67,60.90 L91.86,61.05 L92.07,61.17 L92.29,61.27 L92.52,61.34 L92.76,61.39 L93.00,61.40 M91.00,55.40 L175.00,55.40 M93.00,61.40 L173.00,61.40 M175.00,59.40 L175.00,55.40 M175.00,59.40 L174.99,59.64 L174.94,59.88 L174.87,60.11 L174.77,60.33 L174.65,60.54 L174.50,60.73 L174.33,60.90 L174.14,61.05 L173.93,61.17 L173.71,61.27 L173.48,61.34 L173.24,61.39 L173.00,61.40"/>
+<line class="ctr" x1="88.50" y1="59.40" x2="97.50" y2="59.40"/>
+<line class="ctr" x1="93.00" y1="54.90" x2="93.00" y2="63.90"/>
+<line class="ctr" x1="168.50" y1="59.40" x2="177.50" y2="59.40"/>
+<line class="ctr" x1="173.00" y1="54.90" x2="173.00" y2="63.90"/>
+<text x="133.00" y="69.40" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M199.00,83.40 L203.00,83.40 M203.00,220.60 L203.00,83.40 M199.00,220.60 L203.00,220.60 M199.00,83.40 L198.78,83.40 L198.55,83.40 L198.34,83.40 L198.13,83.40 L197.94,83.40 L197.75,83.40 L197.59,83.40 L197.44,83.40 L197.31,83.40 L197.20,83.40 L197.11,83.40 L197.05,83.40 L197.01,83.40 L197.00,83.40 M199.00,220.60 L198.78,220.60 L198.55,220.60 L198.34,220.60 L198.13,220.60 L197.94,220.60 L197.75,220.60 L197.59,220.60 L197.44,220.60 L197.31,220.60 L197.20,220.60 L197.11,220.60 L197.05,220.60 L197.01,220.60 L197.00,220.60 M197.00,220.60 L197.00,83.40"/>
+<path class="vis" d="M199.00,83.40 L203.00,83.40 M199.00,83.40 L198.78,83.40 L198.55,83.40 L198.34,83.40 L198.13,83.40 L197.94,83.40 L197.75,83.40 L197.59,83.40 L197.44,83.40 L197.31,83.40 L197.20,83.40 L197.11,83.40 L197.05,83.40 L197.01,83.40 L197.00,83.40 M203.00,220.60 L203.00,83.40 M199.00,220.60 L203.00,220.60 M199.00,220.60 L198.78,220.60 L198.55,220.60 L198.34,220.60 L198.13,220.60 L197.94,220.60 L197.75,220.60 L197.59,220.60 L197.44,220.60 L197.31,220.60 L197.20,220.60 L197.11,220.60 L197.05,220.60 L197.01,220.60 L197.00,220.60 M197.00,220.60 L197.00,83.40 M199.00,220.60 L199.00,83.40"/>
+<line class="ctr" x1="199.00" y1="223.10" x2="199.00" y2="80.90"/>
+<text x="200.00" y="228.60" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM RIGHT)</text>
+<path class="vis" d="M325.26,26.05 L327.07,25.00 M325.26,26.05 L325.17,26.10 L325.10,26.16 L325.03,26.22 L324.98,26.29 L324.94,26.35 L324.90,26.42 L324.89,26.50 L324.88,26.57 M324.88,26.57 L324.89,26.64 L324.90,26.71 L324.94,26.78 L324.98,26.85 L325.03,26.92 L325.10,26.98 L325.17,27.04 L325.26,27.09 M327.07,25.00 L365.12,46.97 M325.26,27.09 L361.50,48.02 M363.31,48.02 L365.12,46.97 M363.31,48.02 L363.21,48.06 L363.11,48.11 L363.01,48.15 L362.89,48.18 L362.77,48.20 L362.65,48.22 L362.53,48.23 L362.40,48.23 L362.28,48.23 L362.15,48.22 L362.03,48.20 L361.91,48.18 L361.80,48.15 L361.69,48.11 L361.59,48.06 L361.50,48.02 M324.88,98.34 L324.89,98.41 L324.90,98.48 L324.94,98.55 L324.98,98.62 L325.03,98.69 L325.10,98.75 L325.17,98.81 L325.26,98.86 M365.12,118.74 L365.12,46.97 M325.26,98.86 L361.50,119.78 M363.31,119.78 L365.12,118.74 M363.31,119.78 L363.21,119.83 L363.11,119.88 L363.01,119.91 L362.89,119.94 L362.77,119.97 L362.65,119.99 L362.53,120.00 L362.40,120.00 L362.28,120.00 L362.15,119.99 L362.03,119.97 L361.91,119.94 L361.80,119.91 L361.69,119.88 L361.59,119.83 L361.50,119.78 M324.88,98.34 L324.88,26.57 M325.26,98.86 L325.26,27.09 M361.50,119.78 L361.50,48.02 M363.31,119.78 L363.31,48.02"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="91.00" y1="222.10" x2="91.00" y2="239.60"/>
+<line class="dim" x1="175.00" y1="222.10" x2="175.00" y2="239.60"/>
+<line class="dim" x1="91.00" y1="237.60" x2="175.00" y2="237.60"/>
+<polygon class="arrow" points="91.00,237.60 93.50,238.35 93.50,236.85"/>
+<polygon class="arrow" points="175.00,237.60 172.50,236.85 172.50,238.35"/>
+<text x="133.00" y="236.40" font-size="3.50" text-anchor="middle" font-weight="normal">420</text>
+<line class="dim" x1="89.50" y1="83.40" x2="77.00" y2="83.40"/>
+<line class="dim" x1="89.50" y1="220.60" x2="77.00" y2="220.60"/>
+<line class="dim" x1="79.00" y1="83.40" x2="79.00" y2="220.60"/>
+<polygon class="arrow" points="79.00,83.40 78.25,85.90 79.75,85.90"/>
+<polygon class="arrow" points="79.00,220.60 79.75,218.10 78.25,218.10"/>
+<text x="77.80" y="152.00" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 77.80 152.00)">686</text>
+<line class="dim" x1="197.00" y1="222.10" x2="197.00" y2="239.60"/>
+<line class="dim" x1="203.00" y1="222.10" x2="203.00" y2="239.60"/>
+<line class="dim" x1="197.00" y1="237.60" x2="203.00" y2="237.60"/>
+<polygon class="arrow" points="197.00,237.60 199.50,238.35 199.50,236.85"/>
+<polygon class="arrow" points="203.00,237.60 200.50,236.85 200.50,238.35"/>
+<text x="200.00" y="236.40" font-size="3.50" text-anchor="middle" font-weight="normal">30</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">420 x 30 x 686</text>
+<text x="285.00" y="152.20" font-size="2.60" text-anchor="start" font-weight="normal">Front edges R10</text>
+<text x="285.00" y="160.40" font-size="2.60" text-anchor="start" font-weight="normal">Material: Fire blocked polyurethane foam, 45 kg/m3, 30 % bio based</text>
+<text x="285.00" y="165.60" font-size="2.60" text-anchor="start" font-weight="normal">Part file: back_foam.ipt. Item 13 on ESP26-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Aero-Chair Ltd</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP26-P13-3</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="2.71" text-anchor="start" font-weight="bold">ESP 2026 part 13: back cushion foam</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">Fire blocked polyurethane foam</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">1:5</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="258.88,282.54 264.38,281.30 264.38,286.25 258.88,285.01"/>
+<circle class="vis" cx="254.47" cy="283.78" r="2.48"/>
+<circle class="vis" cx="254.47" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="254.47" y1="279.80" x2="254.47" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">Third angle projection. Drawn from the CAD model with hidden line removal.</text></svg>
