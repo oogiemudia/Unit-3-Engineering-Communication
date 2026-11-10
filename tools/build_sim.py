@@ -11,6 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'docs', 'sim')
 sys.path.insert(0, os.path.join(ROOT, 'models'))
 import esp2023 as esp  # noqa: E402
+import esp2026 as seat  # noqa: E402
 
 ENV = 'Environments tab > Begin panel > Dynamic Simulation'
 SETTINGS = 'Dynamic Simulation tab > Manage panel > Simulation Settings'
@@ -227,6 +228,111 @@ def esp_gate_sim():
 
 SIMS['esp2023_lock_gates'] = esp_gate_sim()
 FOLDER = {'esp2023_lock_gates': 'ESP 2023'}
+
+
+# ------------------------------------------------------------------ ESP 2026 economy three-seat set
+def esp_seat_sim():
+    """Each back reclines 5 degrees on its recline lock and comes back up (the three seats one after another, as
+    each passenger is free to choose), then the aisle armrests lift 90 degrees for access and drop, then the tray
+    tables on the backs fold down level and stow."""
+    D, R, UP, TRAY = 20, seat.RECLINE, seat.ARM_UP, seat.TRAY_DEPLOY
+    rec_t = [(0.5, 2.5, 5.5, 7.5), (1.0, 3.0, 6.0, 8.0), (1.5, 3.5, 6.5, 8.5)]
+    arm_t = {3: (9.0, 10.5, 12.0, 13.5), 4: (9.0, 10.5, 12.0, 13.5)}
+    tray_t = (14.0, 15.8, 17.6, 19.4)
+
+    def prof(t, a, b, c, d, v):
+        return v * (smooth(t, a, b) - smooth(t, c, d))
+
+    def keys4(a, b, c, d, v):
+        return ease_keys([(0, 0), (a, 0), (b, v), (c, v), (d, 0), (D, 0)])
+
+    names = [n for n, s_, c in seat.seat_set()]
+    motion, graph = [], []
+    ts = [round(k * 0.1, 2) for k in range(D * 10 + 1)]
+    for i, sx in enumerate(seat.SEATS):
+        n = i + 1
+        pre = 'seat %d ' % n
+        a, b, c, d = rec_t[i]
+        back_keys = keys4(a, b, c, d, -R)
+        piv = [sx, seat.PIV[0], seat.PIV[1]]
+        hinge = list(seat.back_point((0, seat.TRAY_HINGE[0], seat.TRAY_HINGE[1]), sx))
+        anchor, r0, L0, ang0 = seat.lock_line(0)
+        lock_c = [sx + seat.LOCK_X, anchor[0], anchor[1]]
+        u0 = [0, math.cos(math.radians(ang0)), math.sin(math.radians(ang0))]
+        swing, slide = [], []
+        for t in ts:
+            _, _, L, ang = seat.lock_line(prof(t, a, b, c, d, R))
+            swing.append((t, ang - ang0))
+            slide.append((t, L - L0))
+        for p in names:
+            if not p.startswith(pre):
+                continue
+            g = seat.group_of(p)
+            if g == 'tray':
+                motion.append(dict(part=p, kind='turn', axis=[1, 0, 0], centre=hinge, keys=keys4(*tray_t, -TRAY)))
+            if g in ('back', 'tray'):
+                motion.append(dict(part=p, kind='turn', axis=[1, 0, 0], centre=piv, keys=back_keys))
+            if g == 'rod':
+                motion.append(dict(part=p, kind='move', axis=u0, keys=ease_keys(slide), lin=True))
+            if g in ('rod', 'lock'):
+                motion.append(dict(part=p, kind='turn', axis=[1, 0, 0], centre=lock_c, keys=ease_keys(swing), lin=True))
+        if n == 2:
+            graph.append(dict(name='Seat 2 back angle from vertical', unit='deg',
+                              keys=[[t, seat.BACK_ANGLE - v] for t, v in back_keys]))
+            graph.append(dict(name='Seat 2 recline lock length', unit='mm', lin=True,
+                              keys=ease_keys([(t, L0 + v) for t, v in slide][::5])))
+    for k, x in enumerate(seat.SPREADERS, 1):
+        if k not in arm_t:
+            continue
+        keys = keys4(*arm_t[k], -UP)
+        for p in names:
+            if p in ('armrest %d' % k, 'armrest pad %d' % k, 'armrest pin %d' % k, 'recline button %d' % (k - 1)):
+                motion.append(dict(part=p, kind='turn', axis=[1, 0, 0], centre=[x, seat.ARM_PIV[0], seat.ARM_PIV[1]], keys=keys))
+        if k == 4:
+            graph.append(dict(name='Aisle armrest angle', unit='deg', keys=[[t, -v] for t, v in keys]))
+    graph.append(dict(name='Tray table angle', unit='deg', keys=[[t, -v] for t, v in keys4(*tray_t, -TRAY)]))
+    moving = sorted({m['part'] for m in motion})
+    _, _, L0, _ = seat.lock_line(0)
+    _, _, L1, _ = seat.lock_line(R)
+    steps = common_start('esp2026_seat_set.iam') + [
+        step('joints', 'Check the recline joints', JOINT,
+             ['In Standard Joints find the Revolution joint for each back: the back lugs on the recline pivot pins.',
+              'Every part fixed to a back (shell, cushion, cover, head rest, screen, power module, pocket, tray arms, '
+              'latch) should be in one Welded group with it.'],
+             'A revolution joint lets the back turn about the pivot axis and nothing else: one degree of freedom.'),
+        step('joints', 'Join the recline locks', JOINT,
+             ['Each lock needs three joints. Insert Joint, Revolution: the lock eye on the front pin in the bracket.',
+              'Insert Joint, Cylindrical: the rod in the bore of the lock, so it can slide.',
+              'Insert Joint, Revolution: the rod eye on the rear pin in the back lever.'],
+             'Locked, the hydraulic valve stops the rod sliding, so the back is held. The recline button opens the valve.'),
+        step('joints', 'Join the armrests and trays', JOINT,
+             ['Insert Joint, Revolution: each armrest on its pivot pin.',
+              'Insert Joint, Revolution: each tray table on its hinge stubs.'], None),
+        step('motion', 'Drive the backs', 'Right click a back Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.',
+              'Seat 1: 0 at 0.5 s, %g degrees (fully reclined) at 2.5 s, hold to 5.5 s, back to 0 at 7.5 s.' % R,
+              'Seats 2 and 3: the same, half a second and a second later: each passenger chooses for themselves.'],
+             'The back reclines from 12 to %d degrees from vertical: %d degrees of recline, inside the 3 to 6 the brief allows.' % (
+                 seat.BACK_ANGLE + R, R)),
+        step('motion', 'Check the recline lock stroke', JOINT,
+             ['Right click a lock Cylindrical joint > Properties and look at dof 2 (T): Inventor works out how far the rod '
+              'slides as the back reclines.',
+              'Pin to pin: %.1f mm upright, %.1f mm reclined, a stroke of %.1f mm.' % (L0, L1, L0 - L1)],
+             'Choose a lock with at least this stroke: a 20 mm stroke lock leaves room to spare.'),
+        step('motion', 'Lift the armrests, lower the trays', 'Edit imposed motion on the armrest and tray joints',
+             ['Aisle armrests: 0 at 9 s, 90 degrees up at 10.5 s, hold, down again by 13.5 s.',
+              'Trays: 0 at 14 s, %d degrees (level) at 15.8 s, hold, stowed again by 19.4 s.' % TRAY,
+              'Click OK twice.'],
+             'The armrest lifts clear of the seat, so a passenger can slide across from an aisle wheelchair.'),
+    ] + common_end(D, 'the angle of each back, lock and armrest joint, the position of the lock Cylindrical joints and the tray angle')
+    return dict(duration=D,
+                story='Each back reclines 5 degrees and comes back up, one seat after another; the aisle armrests lift '
+                      '90 degrees for access; then the tray tables fold down level and stow again.',
+                moving=moving, motion=motion, graph=graph, steps=steps)
+
+
+SIMS['esp2026_seat_set'] = esp_seat_sim()
+FOLDER['esp2026_seat_set'] = 'ESP 2026'
 
 
 def build():

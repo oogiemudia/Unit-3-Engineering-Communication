@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p37_literature_pocket",
+ "title": "ESP 2026 part 37: literature pocket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as literature_pocket.ipt.",
+    "Sketch a 330 x 25 rectangle. Extrude 215 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p37_literature_pocket/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p37_literature_pocket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Shell",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the top face, thickness 2 mm. Save."
+   ],
+   "note": "Inside: 326 wide x 213 deep x 21, so A4 (297 x 210) fits on its side.",
+   "parts": [
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p37_literature_pocket/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p37_literature_pocket/step_02.json"
+  }
+ ]
+}

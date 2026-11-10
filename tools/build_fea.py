@@ -216,6 +216,14 @@ def solve_case(name, case):
     res = dict(vm_max=float(vm.max()), disp_max=float(np.linalg.norm(U, axis=1).max()),
                sf_min=float(mat['yield_strength'] / vm.max()),
                vm_max_at=np.round(to_gl(m.p[:, i_max]), 2).tolist())
+    # optional probes: the mean von Mises stress of the nodes within r of a point (CAD coordinates of the part), for
+    # comparing with a hand calculation away from holes and corners
+    if case.get('probes'):
+        res['probes'] = []
+        for pr in case['probes']:
+            d = np.linalg.norm(m.p.T - np.array(pr['at'], float), axis=1)
+            near = d < pr.get('r', 4)
+            res['probes'].append(dict(name=pr['name'], at=pr['at'], vm=float(vm[near].mean()), nodes=int(near.sum())))
     mesh = dict(nodes=int(m.p.shape[1]), elements=int(m.t.shape[1]), size=round(size, 2),
                 dofs=int(K.shape[0]), solid_nodes_p2=int(K.shape[0] // 3))
     surf = dict(pos=np.round(P, 3).ravel().tolist(), tri=remap[tri].ravel().tolist(), group=group.tolist(),

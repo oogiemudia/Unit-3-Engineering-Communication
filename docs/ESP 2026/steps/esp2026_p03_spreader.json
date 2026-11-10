@@ -1,0 +1,116 @@
+{
+ "name": "esp2026_p03_spreader",
+ "title": "ESP 2026 part 03: spreader",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Beam bosses and web",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as spreader.ipt.",
+    "Start 2D Sketch on the YZ Plane. Two circles diameter 70 at 0 and 330 mm along Y, on the origin line, and a 30 mm wide bar joining them. Finish Sketch.",
+    "Extrude 8 mm, Symmetric. Click OK."
+   ],
+   "note": "The origin is on the front beam axis.",
+   "parts": [
+    {
+     "name": "spreader",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p03_spreader/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p03_spreader/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Armrest post",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the side face: rectangle 60 wide from 330 to 390 mm along Y, up to 260 mm above the origin, with a circle diameter 40 at its top (the armrest pivot boss). Extrude 8 mm, Symmetric, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "spreader",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p03_spreader/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p03_spreader/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Recline pivot arm",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 30 mm bar from the post to a circle diameter 32 at 420 along and 60 above the origin. Extrude 8 mm, Symmetric, Join."
+   ],
+   "note": "Both backs either side of the spreader turn on this boss.",
+   "parts": [
+    {
+     "name": "spreader",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p03_spreader/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p03_spreader/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Beam bores and pivot holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: diameter 50 Through All on each beam boss (the tubes pass through).",
+    "Hole: diameter 12 Through All on the armrest pivot and on the recline pivot."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "spreader",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p03_spreader/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_p03_spreader/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Lightening holes",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 24 x 130 slot in the post and a 210 x 16 slot in the web. Extrude Cut Through All.",
+    "Material: Aluminum 7075-T6. Save."
+   ],
+   "note": "Every gram counts: each slot saves weight where the plate is lightly loaded.",
+   "parts": [
+    {
+     "name": "spreader",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p03_spreader/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_p03_spreader/step_05.json"
+  }
+ ]
+}

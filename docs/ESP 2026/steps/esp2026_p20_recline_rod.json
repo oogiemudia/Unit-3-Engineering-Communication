@@ -1,0 +1,49 @@
+{
+ "name": "esp2026_p20_recline_rod",
+ "title": "ESP 2026 part 20: recline lock rod",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Eye",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 16 on the YZ Plane, Extrude 8 mm Symmetric. Hole diameter 8 through it."
+   ],
+   "note": "The origin is the rear pin, on the back lever.",
+   "parts": [
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p20_recline_rod/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p20_recline_rod/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Rod",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 8 on the eye. Extrude 194 mm forward. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p20_recline_rod/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p20_recline_rod/step_02.json"
+  }
+ ]
+}

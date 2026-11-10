@@ -1,0 +1,29 @@
+{
+ "name": "esp2026_p39_life_vest",
+ "title": "ESP 2026 part 39: life vest",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pack",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as life_vest.ipt.",
+    "Sketch a 305 x 305 square. Extrude 50 mm. Save."
+   ],
+   "note": "Modelled to check it fits the pouch.",
+   "parts": [
+    {
+     "name": "life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p39_life_vest/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p39_life_vest/step_01.json"
+  }
+ ]
+}

@@ -77,8 +77,10 @@ p.sec{margin:0 0 14px;color:var(--muted);max-width:820px}
     <button data-f="section">Has a section</button>
     <button data-f="exploded">Has an exploded view</button>
     <button data-f="ESP 2023">ESP 2023 lock gates</button>
+    <button data-f="ESP 2026">ESP 2026 seat set</button>
   </div>
   <p class="project" id="espNote" hidden><b>ESP 2023:</b> the Employer-Set Project (8730-035, Summer 2023) lock gate for Canal Heritage, Task 2. The assemblies come first, then every component as its own part model (41 parts, each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the hydrostatic calculations and the design notes, is in one folder: <a href="ESP%202023/index.html">open the ESP 2023 project page</a>.</p>
+  <p class="project" id="espNote26" data-folder="ESP 2026" hidden><b>ESP 2026:</b> the Employer-Set Project (8730-035, Summer 2026) economy class three-seat set for Aero-Chair Ltd, Task 2. The assemblies come first, then every component as its own part model (39 parts, each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the calculations and the reflective notes, is in one folder: <a href="ESP%202026/index.html">open the ESP 2026 project page</a>.</p>
   <div class="grid" id="grid"></div>
 
   <section class="help">
@@ -132,8 +134,9 @@ function card(m) {
 function show(f) {
   grid.innerHTML = '';
   document.getElementById('espNote').hidden = f !== 'ESP 2023';
-  // the ESP 2023 component parts only show under their own filter, so they do not crowd out the teaching models
-  cat.filter(m => f === 'ESP 2023' ? m.folder === f : !m.part && (f === 'all' || (f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f))))
+  document.getElementById('espNote26').hidden = f !== 'ESP 2026';
+  // ESP project component parts only show under their own project filter, so they do not crowd out the teaching models
+  cat.filter(m => f.startsWith('ESP ') ? m.folder === f : !m.part && (f === 'all' || (f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f))))
      .forEach(m => grid.appendChild(card(m)));
 }
 document.querySelectorAll('#filters button').forEach(b => b.onclick = () => {

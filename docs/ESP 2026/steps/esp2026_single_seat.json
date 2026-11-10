@@ -1,0 +1,806 @@
+{
+ "name": "esp2026_single_seat",
+ "title": "ESP 2026 single seat",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Seat pan and cushion",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as single_seat.iam.",
+    "Place seat_diaphragm.ipt, right click and Place Grounded. In the set it sits on the beam tubes, 355 mm up.",
+    "Place seat_foam.ipt and Mate its bottom to the top of the diaphragm. Place seat_cover.ipt over the foam: Mate the inside faces of the cover to the foam."
+   ],
+   "note": "The seat height is the top of the cover at the front edge: 440 mm above the floor.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Place the back shell",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place back_shell.ipt. Constrain > Insert is not possible without the spreaders, so in this sub-assembly use Angle: 12 degrees between the back and the vertical, and Mate the pivot axis 420 mm aft and 390 mm up."
+   ],
+   "note": "In the three-seat set the back pivots on the spreader pins. Suppress the Angle constraint to let it recline.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Back cushion and head rest",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place back_foam.ipt in the open front of the shell (Mate the back face of the foam to the shell edge).",
+    "Place back_cover.ipt over it, and headrest.ipt on top of the shell (Mate, then Flush the centre planes)."
+   ],
+   "note": "The head rest is fixed, as the brief asks: it sits 50 mm forward of the back cushion to meet the head.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Recline lock",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place recline_bracket.ipt under the front beam position, 204 mm right of the seat centre.",
+    "Place recline_lock.ipt and recline_rod.ipt. Insert the rod in the bore of the lock (Mate axis to axis).",
+    "Pin the front eye to the bracket and the rod eye to the back lever with lock_pin.ipt (Insert)."
+   ],
+   "note": "Pressing the recline button opens a valve in the lock; the passenger leans back and the rod slides in 9 mm.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Lap belt",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place belt_anchor.ipt each side (Mirror Components for the left one).",
+    "Place the two webbing halves, buckle_body.ipt with buckle_lever.ipt on top, and belt_tongue.ipt in the buckle slot."
+   ],
+   "note": "A lift lever buckle: lift the lever and the tongue comes free. Anyone can open it with either hand, and the crew can open it from the aisle.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Fit out the back",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place literature_pocket.ipt, the two tray_arm.ipt brackets and tray_table.ipt on the back of the shell (Insert the hinge stubs into the tray holes). Add an Angle constraint 0 to 78 degrees for the tray.",
+    "Place tray_latch.ipt above the tray, ife_screen.ipt and usb_module.ipt at the top."
+   ],
+   "note": "These serve the passenger in the row behind.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray latch",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "power and audio module",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_06.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Life vest pouch",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place vest_pouch.ipt under the seat (its top Mates to the bottom of the beam tubes) and life_vest.ipt inside it.",
+    "Inspect tab > Interference > Analyze Interference: no parts should overlap. Save."
+   ],
+   "note": "The vest is 305 x 305 x 50, as the brief says; the pouch is 316 x 336 x 56 inside.",
+   "parts": [
+    {
+     "name": "diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray latch",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "entertainment screen",
+     "colour": "#111418",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "power and audio module",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "literature pocket",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_single_seat/step_07.glb",
+   "edges": "ESP 2026/steps/esp2026_single_seat/step_07.json"
+  }
+ ]
+}

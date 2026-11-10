@@ -1,0 +1,30 @@
+{
+ "name": "esp2026_p10_seat_foam",
+ "title": "ESP 2026 part 10: seat cushion foam",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the profile",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as seat_foam.ipt.",
+    "Start 2D Sketch on the YZ Plane: the side profile, 446 deep, 80 high at the front and 50 at the back. Finish Sketch.",
+    "Extrude 446 mm, Symmetric. Save."
+   ],
+   "note": "Fire blocked foam passes the oil burner test for seat cushions (CS 25.853(c)).",
+   "parts": [
+    {
+     "name": "seat cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p10_seat_foam/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p10_seat_foam/step_01.json"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "name": "esp2026_p32_tray_table",
+ "title": "ESP 2026 part 32: tray table",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Panel",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tray_table.ipt.",
+    "Sketch a 415 x 265 rectangle on the XY Plane. Extrude 12 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p32_tray_table/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p32_tray_table/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the corners",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the four corner edges, radius 15."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p32_tray_table/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p32_tray_table/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Hinge holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 8, 4 deep, in each end, 8 mm up from the bottom edge."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p32_tray_table/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p32_tray_table/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cup recess",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a circle diameter 80 on the top face. Extrude Cut 1.5 mm. Save."
+   ],
+   "note": "The recess stops a cup sliding.",
+   "parts": [
+    {
+     "name": "tray table",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p32_tray_table/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_p32_tray_table/step_04.json"
+  }
+ ]
+}

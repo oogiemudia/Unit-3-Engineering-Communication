@@ -1,0 +1,52 @@
+{
+ "name": "esp2026_p01_beam_tube",
+ "title": "ESP 2026 part 01: beam tube",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as beam_tube.ipt.",
+    "Start 2D Sketch on the YZ Plane. Circle diameter 50 on the origin. Finish Sketch.",
+    "Extrude 1540 mm along X. Click OK."
+   ],
+   "note": "The origin is the left end of the tube, on its axis.",
+   "parts": [
+    {
+     "name": "beam tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p01_beam_tube/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p01_beam_tube/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Make it a tube",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Click Hole. Placement: Concentric, on the end face. Diameter 47, Termination Through All. Click OK.",
+    "Material: Aluminum 7075-T6 (add it in the Material Browser if needed). Save."
+   ],
+   "note": "A 1.5 mm wall: the tube weighs 0.64 kg a metre. Beams are bought as recycled aluminium tube.",
+   "parts": [
+    {
+     "name": "beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p01_beam_tube/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p01_beam_tube/step_02.json"
+  }
+ ]
+}

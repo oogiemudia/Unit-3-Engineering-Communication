@@ -1,0 +1,29 @@
+{
+ "name": "esp2026_p09_seat_diaphragm",
+ "title": "ESP 2026 part 09: seat diaphragm",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Extrude the sheet",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as seat_diaphragm.ipt.",
+    "Sketch a 446 x 380 rectangle on the XZ Plane. Extrude 1.5 mm. Save."
+   ],
+   "note": "In the seat it wraps round both tubes and is laced tight underneath.",
+   "parts": [
+    {
+     "name": "seat diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p09_seat_diaphragm/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p09_seat_diaphragm/step_01.json"
+  }
+ ]
+}

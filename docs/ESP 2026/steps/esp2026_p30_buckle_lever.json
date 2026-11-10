@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p30_buckle_lever",
+ "title": "ESP 2026 part 30: buckle lift lever",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Lever",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as buckle_lever.ipt.",
+    "Sketch a 60 x 42 rectangle. Extrude 4 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p30_buckle_lever/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p30_buckle_lever/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Finger lip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 10 x 42 rectangle at the free end. Extrude 3 mm. Save."
+   ],
+   "note": "The lip makes the lever easy to lift with one finger.",
+   "parts": [
+    {
+     "name": "buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p30_buckle_lever/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p30_buckle_lever/step_02.json"
+  }
+ ]
+}

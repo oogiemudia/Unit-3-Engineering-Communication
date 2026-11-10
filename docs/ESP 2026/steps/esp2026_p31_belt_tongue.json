@@ -1,0 +1,50 @@
+{
+ "name": "esp2026_p31_belt_tongue",
+ "title": "ESP 2026 part 31: belt tongue",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as belt_tongue.ipt.",
+    "Sketch a 55 x 24 rectangle. Extrude 4 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p31_belt_tongue/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p31_belt_tongue/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Slide bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 18 x 36 rectangle at the outer end. Extrude 7 mm down to the webbing. Save."
+   ],
+   "note": "The webbing passes round the slide bar: pull the free end to tighten.",
+   "parts": [
+    {
+     "name": "belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p31_belt_tongue/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p31_belt_tongue/step_02.json"
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "name": "esp2026_shell_seats",
+ "title": "ESP 2026 concept B: fixed shell seats",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pedestal legs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for the two pedestal legs: 80 x 240 posts, 270 high, on 100 x 540 rails."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal legs and track rails",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_shell_seats/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_shell_seats/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Box beam",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for the box beam: 160 x 90 section, 1520 long, on top of the legs."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal legs and track rails",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "box beam",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_shell_seats/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_shell_seats/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Fixed shells",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for one shell (sides and a back 1150 high), then Rectangular Pattern 3 at 500."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal legs and track rails",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "box beam",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fixed shells",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_shell_seats/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_shell_seats/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Sliding seat pans",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the three seat pans 426 x 500 and Extrude 70 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal legs and track rails",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "box beam",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fixed shells",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "sliding seat pans and cushions",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_shell_seats/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_shell_seats/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Assemble the concept",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as shell_seats.iam. Place the legs grounded, Mate the beam on top, then the shells, pans and trays."
+   ],
+   "note": "Rejected for the final design: the fixed shells weigh about 9.5 kg a seat (the brief allows 8), cost more to make, and the shell sides make it harder for a passenger with access needs to slide across.",
+   "parts": [
+    {
+     "name": "pedestal legs and track rails",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "box beam",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fixed shells",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "sliding seat pans and cushions",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tray tables (stowed)",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_shell_seats/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_shell_seats/step_05.json"
+  }
+ ]
+}

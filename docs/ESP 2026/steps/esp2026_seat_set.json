@@ -1,0 +1,3620 @@
+{
+ "name": "esp2026_seat_set",
+ "title": "ESP 2026 three-seat set (GA)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Beams and legs",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as esp2026_seat_set.iam.",
+    "Place beam_tube.ipt, right click and Place Grounded: the front tube, on the origin line, 330 mm up. Place the rear tube 330 mm behind it (Mate with offset).",
+    "Place leg.ipt twice, 270 mm each side of the centre: Insert each bore on to its tube. Place beam_collar.ipt beside each leg boss. Place track_fitting.ipt and track_stud.ipt under each foot."
+   ],
+   "note": "The legs stand on the aircraft seat tracks; the studs lock into the tracks every 25.4 mm.",
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Spreaders, end caps and baggage bar",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place spreader.ipt on the tubes at x = -750 and Insert both bores. Pattern it: 4 along X, 500 mm apart.",
+    "Place beam_end_cap.ipt in the four tube ends, and baggage_bar.ipt through the front struts of the legs."
+   ],
+   "note": "The spreaders sit under the armrests, so each seat is 450 mm wide between the armrests.",
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Seat pans and cushions",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place seat_diaphragm.ipt on the tubes of the middle seat, then seat_foam.ipt and seat_cover.ipt.",
+    "Pattern the three parts: 3 along X, 500 mm apart, centred."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Backs and pivot pins",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place the back sub-assembly (back shell, cushion, cover, head rest) for each seat.",
+    "Insert back_pivot_pin.ipt through the two middle spreaders and end_pivot_pin.ipt through the end ones, through the lugs of the backs. Add an Angle constraint of 12 degrees for each back (upright)."
+   ],
+   "note": "Each back turns on the pins: upright at 12 degrees from vertical, reclined at 17.",
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 2",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 3",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 1",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 4",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back shell",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion cover",
+     "colour": "#24456E",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 head rest",
+     "colour": "#9AA7B5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Recline locks",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "For each seat: place recline_bracket.ipt on the front tube, recline_lock.ipt and recline_rod.ipt, and pin both ends with lock_pin.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_05.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Armrests",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place armrest.ipt on the end spreader: Insert armrest_pin.ipt through the cheeks and the spreader. Add armrest_pad.ipt on top. Pattern: 4 along X, 500 mm apart.",
+    "Place recline_button.ipt on the front of the three armrests to the right of each seat."
+   ],
+   "note": "Each armrest lifts 90 degrees for access; the end ones let a passenger transfer from an aisle wheelchair.",
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 1",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 1",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 1",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 2",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 1",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 3",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 3",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 3",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 2",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 4",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 4",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 4",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 3",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_06.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Seat belts",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place the belt anchors on the spreaders (two per seat, M10 bolts from Content Center), then the belt webbing, buckle, lever and tongue for each seat."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 buckle body",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 buckle lift lever",
+     "colour": "#C8372D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt tongue",
+     "colour": "#8E979F",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 1",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 1",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 3",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 2",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 4",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 3",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_07.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Trays, screens, pockets and life vests",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Fit each back with its literature pocket, tray arms, tray, latch, screen and power module.",
+    "Place a vest_pouch.ipt with its life_vest.ipt under each seat.",
+    "Inspect tab > Interference > Analyze Interference upright, reclined, with the trays down and the armrests up: no parts overlap. Save."
+   ],
+   "note": "Each seat now has everything the product design specification asks for.",
+   "parts": [
+    {
+     "name": "front beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rear beam tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam end cap 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 3",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spreader 4",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 1",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 1b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 1b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "leg 2",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "beam clamp collar 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2a",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2a",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track fitting 2b",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "track stud 2b",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "baggage bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline pivot pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 tray latch",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 power and audio module",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 1 life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 tray latch",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 power and audio module",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 2 life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 diaphragm",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 cushion cover",
+     "colour": "#1F3A5F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back shell",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion foam",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 back cushion cover",
+     "colour": "#24456E",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 head rest",
+     "colour": "#9AA7B5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock bracket",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock rod",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, front",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 recline lock pin, rear",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt anchor, right",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt anchor, left",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt webbing, buckle side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt webbing, adjuster side",
+     "colour": "#5B6B7A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 buckle body",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 buckle lift lever",
+     "colour": "#C8372D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 belt tongue",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 tray table",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 tray hinge arm, right",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 tray hinge arm, left",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 tray latch",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 entertainment screen",
+     "colour": "#111418",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 power and audio module",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 literature pocket",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "seat 3 life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 1",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 1",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 1",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 2",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 2",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 2",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 1",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 3",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 3",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 3",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 2",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest 4",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pad 4",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "armrest pin 4",
+     "colour": "#8E979F",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "recline button 3",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_seat_set/step_08.glb",
+   "edges": "ESP 2026/steps/esp2026_seat_set/step_08.json"
+  }
+ ]
+}

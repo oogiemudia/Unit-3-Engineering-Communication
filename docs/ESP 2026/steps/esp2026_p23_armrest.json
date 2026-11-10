@@ -1,0 +1,93 @@
+{
+ "name": "esp2026_p23_armrest",
+ "title": "ESP 2026 part 23: armrest",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as armrest.ipt.",
+    "Sketch a 50 x 420 rectangle on the XZ Plane, 600 mm up. Extrude 40 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "armrest",
+     "colour": "#2E3440",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p23_armrest/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_p23_armrest/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pivot end",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the pivot end on the YZ Plane: 60 long, down to 565, round on the pivot. Extrude 50 mm, Symmetric, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "armrest",
+     "colour": "#2E3440",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p23_armrest/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_p23_armrest/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Slot for the spreader",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 10 mm slot up the middle of the pivot end. Extrude Cut 100 mm."
+   ],
+   "note": "The spreader fits in the slot, between the two cheeks.",
+   "parts": [
+    {
+     "name": "armrest",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p23_armrest/step_03.glb",
+   "edges": "ESP 2026/steps/esp2026_p23_armrest/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Hollow and pivot hole",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the bottom face, 2.5 mm walls (an open channel).",
+    "Hole: diameter 12, Through All, on the pivot. Save."
+   ],
+   "note": "A moulded channel: stiff, light and quick to make.",
+   "parts": [
+    {
+     "name": "armrest",
+     "colour": "#2E3440",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_p23_armrest/step_04.glb",
+   "edges": "ESP 2026/steps/esp2026_p23_armrest/step_04.json"
+  }
+ ]
+}

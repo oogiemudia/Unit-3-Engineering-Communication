@@ -1,0 +1,35 @@
+{
+ "positions": [
+  {
+   "position": "upright, stowed",
+   "parts": 128,
+   "clashes": []
+  },
+  {
+   "position": "backs half reclined",
+   "parts": 128,
+   "clashes": []
+  },
+  {
+   "position": "backs fully reclined",
+   "parts": 128,
+   "clashes": []
+  },
+  {
+   "position": "trays down",
+   "parts": 128,
+   "clashes": []
+  },
+  {
+   "position": "armrests up",
+   "parts": 128,
+   "clashes": []
+  },
+  {
+   "position": "reclined, trays down, armrests up",
+   "parts": 128,
+   "clashes": []
+  }
+ ],
+ "floating": []
+}
