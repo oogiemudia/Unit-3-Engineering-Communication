@@ -1,0 +1,71 @@
+{
+ "name": "esp2024_p05_keel_plate",
+ "title": "ESP 2024 part 05: keel plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Disc",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as keel_plate.ipt.",
+    "Sketch a circle diameter 420 on the XZ Plane. Extrude 10 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "keel plate",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p05_keel_plate/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p05_keel_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tie rod holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 16 Through All at radius 195 on 30 degrees; Circular Pattern 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "keel plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p05_keel_plate/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p05_keel_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Tail flange holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M12 tapped, 8 deep from the bottom, at radius 75; Circular Pattern 6. Save."
+   ],
+   "note": "Blind holes, so no water path into the float.",
+   "parts": [
+    {
+     "name": "keel plate",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p05_keel_plate/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p05_keel_plate/step_03.json"
+  }
+ ]
+}

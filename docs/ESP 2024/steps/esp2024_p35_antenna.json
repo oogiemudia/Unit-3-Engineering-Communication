@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p35_antenna",
+ "title": "ESP 2024 part 35: GNSS and mobile antenna",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Puck",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as antenna.ipt.",
+    "Circle diameter 90. Extrude 18 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "GNSS and mobile antenna",
+     "colour": "#EDEDED",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p35_antenna/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p35_antenna/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round the top",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the top edge radius 8. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "GNSS and mobile antenna",
+     "colour": "#EDEDED",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p35_antenna/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p35_antenna/step_02.json"
+  }
+ ]
+}

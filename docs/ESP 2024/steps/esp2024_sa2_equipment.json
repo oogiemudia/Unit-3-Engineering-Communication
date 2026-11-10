@@ -1,0 +1,277 @@
+{
+ "name": "esp2024_sa2_equipment",
+ "title": "ESP 2024 sub-assembly 2: equipment canister",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Canister",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as equipment_canister.iam.",
+    "Place canister.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa2_equipment/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa2_equipment/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Battery and control unit",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place mounting_plate.ipt on the floor of the canister (Mate, Insert the edge).",
+    "Place battery.ipt and control_unit.ipt on the plate (Mate, then Flush to the sketch lines).",
+    "Place battery_strap.ipt over the battery (Mate the inside of the strap to the battery)."
+   ],
+   "note": "Everything sits low in the canister: it helps keep the buoy upright.",
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mounting plate",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery strap",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "control and tracking unit",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa2_equipment/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa2_equipment/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "O-ring and lid",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place hatch_seal.ipt on the flange (Mate, Insert). Place hatch_lid.ipt over it: Mate the underside to the flange and Insert a bolt hole on a flange hole."
+   ],
+   "note": "The O-ring in its groove makes the hatch watertight.",
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mounting plate",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery strap",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "control and tracking unit",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hatch O-ring",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa2_equipment/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa2_equipment/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bolts and glands",
+   "command": "Assemble tab > Pattern panel > Pattern",
+   "actions": [
+    "Place a tamper proof M10 screw (Content Center, ISO 7380) in one hole (Insert); Circular Pattern 8.",
+    "Place cable_gland.ipt in each gland hole (Insert). Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment canister",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "mounting plate",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery strap",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "control and tracking unit",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hatch O-ring",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hatch lid",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 4",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 5",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 6",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 7",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lid bolt 8",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cable gland 1",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cable gland 2",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa2_equipment/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_sa2_equipment/step_04.json"
+  }
+ ]
+}

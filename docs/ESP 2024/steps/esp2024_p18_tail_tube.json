@@ -1,0 +1,92 @@
+{
+ "name": "esp2024_p18_tail_tube",
+ "title": "ESP 2024 part 18: tail tube",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tail_tube.ipt (a weldment).",
+    "Sketch circles diameter 88.9 and 82.9 on the XZ Plane. Extrude 870 mm down."
+   ],
+   "note": "The origin is the top of the flange, under the keel plate.",
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p18_tail_tube/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p18_tail_tube/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circles diameter 82.9 and 200 on the top. Extrude 12 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p18_tail_tube/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p18_tail_tube/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bottom plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 320 on the bottom. Extrude 10 mm, Join."
+   ],
+   "note": "The ballast ring sits on this plate.",
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p18_tail_tube/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p18_tail_tube/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Flange holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 13 Through All at radius 75; Circular Pattern 6. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail tube",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p18_tail_tube/step_04.glb",
+   "edges": "ESP 2024/steps/esp2024_p18_tail_tube/step_04.json"
+  }
+ ]
+}

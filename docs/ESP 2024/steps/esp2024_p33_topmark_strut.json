@@ -1,0 +1,29 @@
+{
+ "name": "esp2024_p33_topmark_strut",
+ "title": "ESP 2024 part 33: topmark strut",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as topmark_strut.ipt.",
+    "Sketch a 6 x 30 rectangle. Extrude 232 mm. Save."
+   ],
+   "note": "Welded to the top plate and the topmark plate. Thin, so they hardly hide the light.",
+   "parts": [
+    {
+     "name": "topmark strut",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p33_topmark_strut/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p33_topmark_strut/step_01.json"
+  }
+ ]
+}

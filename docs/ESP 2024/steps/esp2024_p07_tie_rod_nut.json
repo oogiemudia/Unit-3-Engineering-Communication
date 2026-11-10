@@ -1,0 +1,49 @@
+{
+ "name": "esp2024_p07_tie_rod_nut",
+ "title": "ESP 2024 part 07: tie rod nut M16",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Hexagon",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center: ISO 4032 M16, or sketch a hexagon 24 across flats, Extrude 13."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tie rod nut M16",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p07_tie_rod_nut/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p07_tie_rod_nut/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Thread",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole M16 Through All on the centre. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tie rod nut M16",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p07_tie_rod_nut/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p07_tie_rod_nut/step_02.json"
+  }
+ ]
+}

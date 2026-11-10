@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p32_lantern_cap",
+ "title": "ESP 2024 part 32: lantern cap",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Cap",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lantern_cap.ipt.",
+    "Circle diameter 116. Extrude 12 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p32_lantern_cap/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p32_lantern_cap/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bird spike",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 6 on the centre. Extrude 28 mm. Save."
+   ],
+   "note": "Stops birds perching and fouling the lens.",
+   "parts": [
+    {
+     "name": "lantern cap",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p32_lantern_cap/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p32_lantern_cap/step_02.json"
+  }
+ ]
+}

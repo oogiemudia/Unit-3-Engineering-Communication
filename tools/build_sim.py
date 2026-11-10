@@ -12,6 +12,7 @@ OUT = os.path.join(ROOT, 'docs', 'sim')
 sys.path.insert(0, os.path.join(ROOT, 'models'))
 import esp2023 as esp  # noqa: E402
 import esp2026 as seat  # noqa: E402
+import esp2024 as buoy_m  # noqa: E402
 
 ENV = 'Environments tab > Begin panel > Dynamic Simulation'
 SETTINGS = 'Dynamic Simulation tab > Manage panel > Simulation Settings'
@@ -333,6 +334,75 @@ def esp_seat_sim():
 
 SIMS['esp2026_seat_set'] = esp_seat_sim()
 FOLDER['esp2026_seat_set'] = 'ESP 2026'
+
+
+# ------------------------------------------------------------------ ESP 2024 harbour buoy
+def esp_buoy_sim():
+    """Waves roll the buoy about its centre of gravity and lift it up and down; the load pin feels the chain pull
+    rise and fall with each wave. Then the chain breaks below the second link: the pull falls to nothing, the
+    control unit raises the alert, the buoy rises as the chain's weight comes off, and it drifts away with the
+    tide while the tracker reports where it is."""
+    D, T, BREAK = 16, 3.0, 8.0
+    moored, free = buoy_m.float_line(extra=buoy_m.CHAIN_LOAD), buoy_m.float_line()
+    BUOY_LIFT, BUOY_ZG = moored['h'] - free['h'], moored['zg']
+    pull0 = buoy_m.CHAIN_LOAD * 9.81 / 1000
+    ts = [round(k * 0.1, 2) for k in range(D * 10 + 1)]
+
+    def smooth01(t, a, b):
+        return smooth(t, a, b)
+
+    roll = [(t, (10 if t < BREAK else 10 - 4 * smooth01(t, BREAK, BREAK + 4)) * math.sin(2 * math.pi * t / T)) for t in ts]
+    heave = [(t, 40 * math.sin(2 * math.pi * t / T - 1.2) + BUOY_LIFT * smooth01(t, BREAK, BREAK + 2)) for t in ts]
+    drift = [(t, 900 * smooth01(t, BREAK + 1, D)) for t in ts]
+    fall = [(t, -900 * smooth01(t, BREAK, BREAK + 1.2)) for t in ts]
+    pull = [(t, 0.0 if t >= BREAK else round(pull0 + 0.45 * max(0.0, math.sin(2 * math.pi * t / T - 1.2)), 3)) for t in ts]
+    names = [n for n, s_, c in buoy_m.buoy()]
+    lost = ['chain link 3', 'chain link 4']
+    motion = []
+    for p in names:
+        if p in lost:
+            motion.append(dict(part=p, kind='move', axis=[0, 0, 1], keys=ease_keys(fall), lin=True))
+            motion.append(dict(part=p, kind='turn', axis=[0, 1, 0], centre=[0, 0, BUOY_ZG], keys=ease_keys(
+                [(t, v if t < BREAK else roll[int(BREAK * 10)][1]) for t, v in roll]), lin=True))
+            continue
+        motion.append(dict(part=p, kind='turn', axis=[0, 1, 0], centre=[0, 0, BUOY_ZG], keys=ease_keys(roll), lin=True))
+        motion.append(dict(part=p, kind='move', axis=[0, 0, 1], keys=ease_keys(heave), lin=True))
+        motion.append(dict(part=p, kind='move', axis=[1, 0, 0], keys=ease_keys(drift), lin=True))
+    graph = [dict(name='Roll angle', unit='deg', lin=True, keys=ease_keys(roll[::2])),
+             dict(name='Load pin pull', unit='kN', lin=True, keys=ease_keys(pull[::2])),
+             dict(name='Distance from its mooring', unit='m', lin=True, keys=ease_keys([(t, v / 1000) for t, v in drift[::4]]))]
+    steps = common_start('esp2024_buoy.iam') + [
+        step('joints', 'Free the buoy', JOINT,
+             ['In Standard Joints, every part of the buoy above the broken link is one Welded group: the buoy moves as one body.',
+              'Delete the grounded constraint on the float and Insert Joint > Spatial (6 degrees of freedom) between the '
+              'float and the ground, so the buoy can roll, heave and drift.'],
+             'Inventor has no sea, so the wave motion is put in as imposed motion, from the roll and heave worked out on '
+             'the calculation sheet.'),
+        step('joints', 'Join the chain', JOINT,
+             ['Insert Joint, Spherical (ball) between the shackle and the swivel and between each pair of links.',
+              'Chain links 3 and 4 get their own Spatial joint, so they can fall away when the chain breaks.'], None),
+        step('motion', 'Roll and heave in the waves', 'Right click the Spatial joint > Properties > Edit imposed motion',
+             ['dof 5 (rotation about Y): enable imposed motion, Position, a sine wave of 10 degrees amplitude and a 3 s '
+              'period (use the Input Grapher: Sine).',
+              'dof 3 (translation in Z): a sine wave of 40 mm amplitude, the same period.'],
+             'The buoy rolls about its centre of gravity, %d mm below the waterline. A GM of %d mm brings it '
+             'back upright every time.' % (-BUOY_ZG, moored['GM'])),
+        step('motion', 'Break the chain at 8 s', 'Dynamic Simulation tab > Joint panel > Insert Joint (suppress at 8 s)',
+             ['Suppress the joint between chain links 2 and 3 at 8 s (Construct, then right click > Suppress at time).',
+              'Links 3 and 4 fall away. Add imposed motion on dof 3: the buoy rises %.0f mm as the weight of the hanging '
+              'chain comes off, then dof 1 (X): it drifts 0.9 m with the tide by 16 s.' % BUOY_LIFT],
+             'At the moment the chain breaks the load pin reads zero. The control unit sees this and sends an alert with '
+             'the GNSS position at once, then reports the position every minute while the buoy drifts.'),
+    ] + common_end(D, 'the rotation of the Spatial joint, the force in the shackle joint (the load pin) and the X position')
+    return dict(duration=D,
+                story='Waves roll the buoy up to 10 degrees and lift it up and down; the load pin feels each pull of the '
+                      'chain. At 8 s the chain breaks: the pull falls to zero, the alert goes out, the buoy rises and '
+                      'drifts off with the tide while the tracker follows it.',
+                moving=sorted(names), motion=motion, graph=graph, steps=steps)
+
+
+SIMS['esp2024_buoy'] = esp_buoy_sim()
+FOLDER['esp2024_buoy'] = 'ESP 2024'
 
 
 def build():

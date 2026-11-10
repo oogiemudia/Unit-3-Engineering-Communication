@@ -1,0 +1,71 @@
+{
+ "name": "esp2024_p42_sinker",
+ "title": "ESP 2024 part 42: concrete sinker",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as sinker.ipt.",
+    "Sketch a 600 x 600 square. Extrude 350 mm."
+   ],
+   "note": "The origin is the middle of the top face.",
+   "parts": [
+    {
+     "name": "concrete sinker",
+     "colour": "#B8B3A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p42_sinker/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p42_sinker/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Chamfer the top",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer the top edges 30 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "concrete sinker",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p42_sinker/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p42_sinker/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Eye bar cast in",
+   "command": "3D Model tab > Modify panel > Combine",
+   "actions": [
+    "Combine, Cut: the eye bar (item 43) placed in the block. Save."
+   ],
+   "note": "The eye is cast in when the concrete is poured.",
+   "parts": [
+    {
+     "name": "concrete sinker",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p42_sinker/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_p42_sinker/step_03.json"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p02_float_foam",
+ "title": "ESP 2024 part 02: float foam fill",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "The space inside the shell",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as float_foam.ipt.",
+    "Derive the cavity of float_hull.ipt: Manage tab > Derive, pick the inside of the shell. (Or revolve the inside profile: 488 diameter, 1008 high, round the well of diameter 302.)"
+   ],
+   "note": "The foam is poured in liquid through a filling hole and expands to fill the shell.",
+   "parts": [
+    {
+     "name": "float foam fill",
+     "colour": "#E8D9A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p02_float_foam/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p02_float_foam/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Tie rod holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: diameter 16 Through All at radius 195, Circular Pattern of 3. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "float foam fill",
+     "colour": "#E8D9A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p02_float_foam/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p02_float_foam/step_02.json"
+  }
+ ]
+}

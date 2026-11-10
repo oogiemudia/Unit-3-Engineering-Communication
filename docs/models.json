@@ -11286,5 +11286,6704 @@
    "third": "ESP 2026/drawings/esp2026_p39_life_vest_third_angle",
    "first": "ESP 2026/drawings/esp2026_p39_life_vest_first_angle"
   }
+ },
+ {
+  "name": "esp2024_buoy",
+  "title": "ESP 2024 harbour buoy (GA)",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 Task 2, Part B: the preferred design, a harbour lane marker buoy assembled from separate parts (red, leaving the harbour). General arrangement, parts list, section through the float, simulation of the buoy rolling in waves and drifting off when the chain breaks.",
+  "description": "Design A, the preferred design: a harbour lane marker buoy. A 500 diameter foam filled polyethylene float with a rubber fender, a stainless tripod mast with three 20 W solar panels, an LED lantern and a topmark with the tracking antenna inside it; a lockable watertight canister for the battery and the control and tracking unit; a stainless tail with ballast and a zinc anode; and a load pin in the mooring shackle that raises the alert if the chain breaks. Shown as a red (leaving the harbour) buoy.",
+  "parts": [
+   {
+    "name": "float hull",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "float foam fill",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "fender ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "deck plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "keel plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "equipment canister",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mounting plate",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery strap",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "control and tracking unit",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "hatch O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "hatch lid",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 7",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 8",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cable gland 1",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cable gland 2",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "ballast ring",
+    "colour": "#B8B3A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "ballast collar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "zinc anode",
+    "colour": "#9AA3AD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mooring eye",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 1a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 1b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 2a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 2b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 3a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 3b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mast top plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 1",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 2",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 3",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern base",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern lens",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern cap",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "antenna",
+    "colour": "#EDEDED",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "bow shackle",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "load pin",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "swivel",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 1",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 2",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 3",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 4",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   524.4,
+   524.4,
+   3758.1
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   -1,
+   0.55,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_buoy.step",
+   "stl": "ESP 2024/stl/esp2024_buoy.stl",
+   "glb": "ESP 2024/glb/esp2024_buoy.glb",
+   "edges": "ESP 2024/edges/esp2024_buoy.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sim": true,
+  "bom": [
+   {
+    "no": 1,
+    "name": "float hull",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, UV stabilised, red or green all through, 6 wall",
+    "group": "float",
+    "model": "esp2024_p01_float_hull",
+    "file": "float_hull.ipt",
+    "bought": false,
+    "instances": [
+     "float hull"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "float foam fill",
+    "qty": 1,
+    "material": "Closed cell polyurethane foam, 40 kg/m3",
+    "group": "float",
+    "model": "esp2024_p02_float_foam",
+    "file": "float_foam.ipt",
+    "bought": false,
+    "instances": [
+     "float foam fill"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "fender ring",
+    "qty": 1,
+    "material": "Closed cell EVA foam with a black rubber skin",
+    "group": "float",
+    "model": "esp2024_p03_fender",
+    "file": "fender.ipt",
+    "bought": false,
+    "instances": [
+     "fender ring"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "deck plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "float",
+    "model": "esp2024_p04_deck_plate",
+    "file": "deck_plate.ipt",
+    "bought": false,
+    "instances": [
+     "deck plate"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "keel plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 10 thick",
+    "group": "float",
+    "model": "esp2024_p05_keel_plate",
+    "file": "keel_plate.ipt",
+    "bought": false,
+    "instances": [
+     "keel plate"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "tie rod",
+    "qty": 3,
+    "material": "A4 (316) stainless threaded rod M16",
+    "group": "float",
+    "model": "esp2024_p06_tie_rod",
+    "file": "tie_rod.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod 1",
+     "tie rod 2",
+     "tie rod 3"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "tie rod nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless hex nut M16, ISO 4032",
+    "group": "float",
+    "model": "esp2024_p07_tie_rod_nut",
+    "file": "tie_rod_nut.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod nut 1",
+     "tie rod nut 2",
+     "tie rod nut 3"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "lifting eye nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless lifting eye nut M16, DIN 582",
+    "group": "float",
+    "model": "esp2024_p08_eye_nut",
+    "file": "eye_nut.ipt",
+    "bought": true,
+    "instances": [
+     "lifting eye nut 1",
+     "lifting eye nut 2",
+     "lifting eye nut 3"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "equipment canister",
+    "qty": 1,
+    "material": "316L stainless steel, 1.5 wall, welded",
+    "group": "equipment",
+    "model": "esp2024_p09_canister",
+    "file": "canister.ipt",
+    "bought": false,
+    "instances": [
+     "equipment canister"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "equipment mounting plate",
+    "qty": 1,
+    "material": "HDPE sheet, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p10_mounting_plate",
+    "file": "mounting_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mounting plate"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "battery 12.8 V 40 Ah",
+    "qty": 1,
+    "material": "Bought in: LiFePO4 battery 12.8 V 40 Ah, 512 Wh, IP67",
+    "group": "equipment",
+    "model": "esp2024_p11_battery",
+    "file": "battery.ipt",
+    "bought": true,
+    "instances": [
+     "battery"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "battery strap",
+    "qty": 1,
+    "material": "316L stainless strip 25 x 3",
+    "group": "equipment",
+    "model": "esp2024_p12_battery_strap",
+    "file": "battery_strap.ipt",
+    "bought": false,
+    "instances": [
+     "battery strap"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "control and tracking unit",
+    "qty": 1,
+    "material": "Bought in: IP67 box with 12 V MPPT solar charger, GNSS tracker and LTE-M modem, alert logic",
+    "group": "equipment",
+    "model": "esp2024_p13_control_unit",
+    "file": "control_unit.ipt",
+    "bought": true,
+    "instances": [
+     "control and tracking unit"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "hatch O-ring",
+    "qty": 1,
+    "material": "EPDM O-ring, 5 section, 296 inside diameter",
+    "group": "equipment",
+    "model": "esp2024_p14_hatch_seal",
+    "file": "hatch_seal.ipt",
+    "bought": true,
+    "instances": [
+     "hatch O-ring"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "hatch lid",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p15_hatch_lid",
+    "file": "hatch_lid.ipt",
+    "bought": false,
+    "instances": [
+     "hatch lid"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "tamper proof bolt M10",
+    "qty": 8,
+    "material": "A4 (316) stainless pin hex button head screw M10 x 20",
+    "group": "equipment",
+    "model": "esp2024_p16_hatch_bolt",
+    "file": "hatch_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "lid bolt 1",
+     "lid bolt 2",
+     "lid bolt 3",
+     "lid bolt 4",
+     "lid bolt 5",
+     "lid bolt 6",
+     "lid bolt 7",
+     "lid bolt 8"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "cable gland M16",
+    "qty": 2,
+    "material": "Nylon IP68 cable gland M16",
+    "group": "equipment",
+    "model": "esp2024_p17_cable_gland",
+    "file": "cable_gland.ipt",
+    "bought": true,
+    "instances": [
+     "cable gland 1",
+     "cable gland 2"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "tail tube",
+    "qty": 1,
+    "material": "316L stainless tube 88.9 x 3, flange and bottom plate welded",
+    "group": "tail",
+    "model": "esp2024_p18_tail_tube",
+    "file": "tail_tube.ipt",
+    "bought": false,
+    "instances": [
+     "tail tube"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "hex bolt M12 x 20",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 20, ISO 4017",
+    "group": "tail",
+    "model": "esp2024_p19_keel_bolt",
+    "file": "keel_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "tail flange bolt 1",
+     "tail flange bolt 2",
+     "tail flange bolt 3",
+     "tail flange bolt 4",
+     "tail flange bolt 5",
+     "tail flange bolt 6"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "ballast ring",
+    "qty": 1,
+    "material": "Heavy concrete (barytes), 3400 kg/m3, cast in a polyethylene skin",
+    "group": "tail",
+    "model": "esp2024_p20_ballast",
+    "file": "ballast.ipt",
+    "bought": false,
+    "instances": [
+     "ballast ring"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "ballast collar",
+    "qty": 1,
+    "material": "316L stainless split collar with two M8 screws",
+    "group": "tail",
+    "model": "esp2024_p21_ballast_collar",
+    "file": "ballast_collar.ipt",
+    "bought": false,
+    "instances": [
+     "ballast collar"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "zinc anode",
+    "qty": 1,
+    "material": "Zinc alloy split collar anode to MIL-DTL-18001, clamped by one bolt",
+    "group": "tail",
+    "model": "esp2024_p22_anode",
+    "file": "anode.ipt",
+    "bought": true,
+    "instances": [
+     "zinc anode"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "mooring eye",
+    "qty": 1,
+    "material": "316L stainless plate, 20 thick, welded to the bottom plate",
+    "group": "tail",
+    "model": "esp2024_p23_mooring_eye",
+    "file": "mooring_eye.ipt",
+    "bought": false,
+    "instances": [
+     "mooring eye"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "tripod leg",
+    "qty": 3,
+    "material": "316L stainless tube 33.7 x 2 with welded foot plate",
+    "group": "mast",
+    "model": "esp2024_p24_tripod_leg",
+    "file": "tripod_leg.ipt",
+    "bought": false,
+    "instances": [
+     "tripod leg 1",
+     "tripod leg 2",
+     "tripod leg 3"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "hex bolt M12 x 16",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 16, ISO 4017",
+    "group": "mast",
+    "model": "esp2024_p25_leg_bolt",
+    "file": "leg_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "leg bolt 1a",
+     "leg bolt 1b",
+     "leg bolt 2a",
+     "leg bolt 2b",
+     "leg bolt 3a",
+     "leg bolt 3b"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "mast top plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "mast",
+    "model": "esp2024_p26_top_plate",
+    "file": "top_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mast top plate"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "lower panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p27_bracket_lower",
+    "file": "bracket_lower.ipt",
+    "bought": false,
+    "instances": [
+     "lower panel bracket 1",
+     "lower panel bracket 2",
+     "lower panel bracket 3"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "upper panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p28_bracket_upper",
+    "file": "bracket_upper.ipt",
+    "bought": false,
+    "instances": [
+     "upper panel bracket 1",
+     "upper panel bracket 2",
+     "upper panel bracket 3"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "solar panel 20 W",
+    "qty": 3,
+    "material": "Bought in: 20 W monocrystalline marine panel, 400 x 300 x 20, glass front",
+    "group": "mast",
+    "model": "esp2024_p29_solar_panel",
+    "file": "solar_panel.ipt",
+    "bought": true,
+    "instances": [
+     "solar panel 1",
+     "solar panel 2",
+     "solar panel 3"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "lantern base",
+    "qty": 1,
+    "material": "Bought in: LED marine lantern 2 to 3 NM, base in UV stable polycarbonate",
+    "group": "top",
+    "model": "esp2024_p30_lantern_body",
+    "file": "lantern_body.ipt",
+    "bought": true,
+    "instances": [
+     "lantern base"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "lantern lens",
+    "qty": 1,
+    "material": "Bought in: Fresnel lens, polycarbonate, red or green",
+    "group": "top",
+    "model": "esp2024_p31_lantern_lens",
+    "file": "lantern_lens.ipt",
+    "bought": true,
+    "instances": [
+     "lantern lens"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "lantern cap",
+    "qty": 1,
+    "material": "Bought in: lantern top cap with bird spikes, polycarbonate",
+    "group": "top",
+    "model": "esp2024_p32_lantern_cap",
+    "file": "lantern_cap.ipt",
+    "bought": true,
+    "instances": [
+     "lantern cap"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "topmark strut",
+    "qty": 3,
+    "material": "316L stainless flat bar 30 x 6",
+    "group": "top",
+    "model": "esp2024_p33_topmark_strut",
+    "file": "topmark_strut.ipt",
+    "bought": false,
+    "instances": [
+     "topmark strut 1",
+     "topmark strut 2",
+     "topmark strut 3"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "topmark plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "top",
+    "model": "esp2024_p34_topmark_plate",
+    "file": "topmark_plate.ipt",
+    "bought": false,
+    "instances": [
+     "topmark plate"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "GNSS and mobile antenna",
+    "qty": 1,
+    "material": "Bought in: combined GNSS and LTE-M puck antenna, IP67",
+    "group": "top",
+    "model": "esp2024_p35_antenna",
+    "file": "antenna.ipt",
+    "bought": true,
+    "instances": [
+     "antenna"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "topmark, can (red)",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, red, retro-reflective red bands",
+    "group": "top",
+    "model": "esp2024_p36_topmark_can",
+    "file": "topmark_can.ipt",
+    "bought": false,
+    "instances": [
+     "topmark"
+    ]
+   },
+   {
+    "no": 38,
+    "name": "bow shackle",
+    "qty": 1,
+    "material": "Bought in: 316 stainless bow shackle, WLL 3.25 t (pin replaced by the load pin)",
+    "group": "mooring",
+    "model": "esp2024_p38_shackle",
+    "file": "shackle.ipt",
+    "bought": true,
+    "instances": [
+     "bow shackle"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "load pin (alert sensor)",
+    "qty": 1,
+    "material": "Bought in: 17-4PH stainless strain gauge load pin, 28 dia, 0 to 50 kN, 4 to 20 mA, IP68",
+    "group": "mooring",
+    "model": "esp2024_p39_load_pin",
+    "file": "load_pin.ipt",
+    "bought": true,
+    "instances": [
+     "load pin"
+    ]
+   },
+   {
+    "no": 40,
+    "name": "mooring swivel",
+    "qty": 1,
+    "material": "Bought in: 316 stainless eye and eye swivel, WLL 2 t",
+    "group": "mooring",
+    "model": "esp2024_p40_swivel",
+    "file": "swivel.ipt",
+    "bought": true,
+    "instances": [
+     "swivel"
+    ]
+   },
+   {
+    "no": 41,
+    "name": "chain link 10 mm",
+    "qty": 4,
+    "material": "Grade 30 long link chain, 10 mm, hot dip galvanised",
+    "group": "mooring",
+    "model": "esp2024_p41_chain_link",
+    "file": "chain_link.ipt",
+    "bought": true,
+    "instances": [
+     "chain link 1",
+     "chain link 2",
+     "chain link 3",
+     "chain link 4"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_buoy_third_angle",
+   "first": "ESP 2024/drawings/esp2024_buoy_first_angle",
+   "section": "ESP 2024/drawings/esp2024_buoy_section"
+  }
+ },
+ {
+  "name": "esp2024_buoy_green",
+  "title": "ESP 2024 harbour buoy, green (entrance)",
+  "criteria": "3.1",
+  "uses": "ESP 2024 Task 2: the same buoy for entering the harbour: green float, green lens and a cone topmark.",
+  "description": "The same buoy as an entrance (green) buoy: green float, green lantern lens and a green cone topmark in place of the red can. Every other part is the same.",
+  "parts": [
+   {
+    "name": "float hull",
+    "colour": "#2E8B4A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "float foam fill",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "fender ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "deck plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "keel plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tie rod nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lifting eye nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "equipment canister",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mounting plate",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery strap",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "control and tracking unit",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "hatch O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "hatch lid",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 7",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid bolt 8",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cable gland 1",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cable gland 2",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail flange bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "ballast ring",
+    "colour": "#B8B3A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "ballast collar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "zinc anode",
+    "colour": "#9AA3AD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mooring eye",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 1a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 1b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 2a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 2b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tripod leg 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 3a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "leg bolt 3b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "mast top plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 1",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 2",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lower panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "upper panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "solar panel 3",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern base",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern lens",
+    "colour": "#2E8B4A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern cap",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark strut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "antenna",
+    "colour": "#EDEDED",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark",
+    "colour": "#2E8B4A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "bow shackle",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "load pin",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "swivel",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 1",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 2",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 3",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "chain link 4",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   524.4,
+   524.4,
+   3778.7
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   0.55,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_buoy_green.step",
+   "stl": "ESP 2024/stl/esp2024_buoy_green.stl",
+   "glb": "ESP 2024/glb/esp2024_buoy_green.glb",
+   "edges": "ESP 2024/edges/esp2024_buoy_green.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "bom": [
+   {
+    "no": 1,
+    "name": "float hull",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, UV stabilised, red or green all through, 6 wall",
+    "group": "float",
+    "model": "esp2024_p01_float_hull",
+    "file": "float_hull.ipt",
+    "bought": false,
+    "instances": [
+     "float hull"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "float foam fill",
+    "qty": 1,
+    "material": "Closed cell polyurethane foam, 40 kg/m3",
+    "group": "float",
+    "model": "esp2024_p02_float_foam",
+    "file": "float_foam.ipt",
+    "bought": false,
+    "instances": [
+     "float foam fill"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "fender ring",
+    "qty": 1,
+    "material": "Closed cell EVA foam with a black rubber skin",
+    "group": "float",
+    "model": "esp2024_p03_fender",
+    "file": "fender.ipt",
+    "bought": false,
+    "instances": [
+     "fender ring"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "deck plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "float",
+    "model": "esp2024_p04_deck_plate",
+    "file": "deck_plate.ipt",
+    "bought": false,
+    "instances": [
+     "deck plate"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "keel plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 10 thick",
+    "group": "float",
+    "model": "esp2024_p05_keel_plate",
+    "file": "keel_plate.ipt",
+    "bought": false,
+    "instances": [
+     "keel plate"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "tie rod",
+    "qty": 3,
+    "material": "A4 (316) stainless threaded rod M16",
+    "group": "float",
+    "model": "esp2024_p06_tie_rod",
+    "file": "tie_rod.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod 1",
+     "tie rod 2",
+     "tie rod 3"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "tie rod nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless hex nut M16, ISO 4032",
+    "group": "float",
+    "model": "esp2024_p07_tie_rod_nut",
+    "file": "tie_rod_nut.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod nut 1",
+     "tie rod nut 2",
+     "tie rod nut 3"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "lifting eye nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless lifting eye nut M16, DIN 582",
+    "group": "float",
+    "model": "esp2024_p08_eye_nut",
+    "file": "eye_nut.ipt",
+    "bought": true,
+    "instances": [
+     "lifting eye nut 1",
+     "lifting eye nut 2",
+     "lifting eye nut 3"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "equipment canister",
+    "qty": 1,
+    "material": "316L stainless steel, 1.5 wall, welded",
+    "group": "equipment",
+    "model": "esp2024_p09_canister",
+    "file": "canister.ipt",
+    "bought": false,
+    "instances": [
+     "equipment canister"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "equipment mounting plate",
+    "qty": 1,
+    "material": "HDPE sheet, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p10_mounting_plate",
+    "file": "mounting_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mounting plate"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "battery 12.8 V 40 Ah",
+    "qty": 1,
+    "material": "Bought in: LiFePO4 battery 12.8 V 40 Ah, 512 Wh, IP67",
+    "group": "equipment",
+    "model": "esp2024_p11_battery",
+    "file": "battery.ipt",
+    "bought": true,
+    "instances": [
+     "battery"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "battery strap",
+    "qty": 1,
+    "material": "316L stainless strip 25 x 3",
+    "group": "equipment",
+    "model": "esp2024_p12_battery_strap",
+    "file": "battery_strap.ipt",
+    "bought": false,
+    "instances": [
+     "battery strap"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "control and tracking unit",
+    "qty": 1,
+    "material": "Bought in: IP67 box with 12 V MPPT solar charger, GNSS tracker and LTE-M modem, alert logic",
+    "group": "equipment",
+    "model": "esp2024_p13_control_unit",
+    "file": "control_unit.ipt",
+    "bought": true,
+    "instances": [
+     "control and tracking unit"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "hatch O-ring",
+    "qty": 1,
+    "material": "EPDM O-ring, 5 section, 296 inside diameter",
+    "group": "equipment",
+    "model": "esp2024_p14_hatch_seal",
+    "file": "hatch_seal.ipt",
+    "bought": true,
+    "instances": [
+     "hatch O-ring"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "hatch lid",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p15_hatch_lid",
+    "file": "hatch_lid.ipt",
+    "bought": false,
+    "instances": [
+     "hatch lid"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "tamper proof bolt M10",
+    "qty": 8,
+    "material": "A4 (316) stainless pin hex button head screw M10 x 20",
+    "group": "equipment",
+    "model": "esp2024_p16_hatch_bolt",
+    "file": "hatch_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "lid bolt 1",
+     "lid bolt 2",
+     "lid bolt 3",
+     "lid bolt 4",
+     "lid bolt 5",
+     "lid bolt 6",
+     "lid bolt 7",
+     "lid bolt 8"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "cable gland M16",
+    "qty": 2,
+    "material": "Nylon IP68 cable gland M16",
+    "group": "equipment",
+    "model": "esp2024_p17_cable_gland",
+    "file": "cable_gland.ipt",
+    "bought": true,
+    "instances": [
+     "cable gland 1",
+     "cable gland 2"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "tail tube",
+    "qty": 1,
+    "material": "316L stainless tube 88.9 x 3, flange and bottom plate welded",
+    "group": "tail",
+    "model": "esp2024_p18_tail_tube",
+    "file": "tail_tube.ipt",
+    "bought": false,
+    "instances": [
+     "tail tube"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "hex bolt M12 x 20",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 20, ISO 4017",
+    "group": "tail",
+    "model": "esp2024_p19_keel_bolt",
+    "file": "keel_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "tail flange bolt 1",
+     "tail flange bolt 2",
+     "tail flange bolt 3",
+     "tail flange bolt 4",
+     "tail flange bolt 5",
+     "tail flange bolt 6"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "ballast ring",
+    "qty": 1,
+    "material": "Heavy concrete (barytes), 3400 kg/m3, cast in a polyethylene skin",
+    "group": "tail",
+    "model": "esp2024_p20_ballast",
+    "file": "ballast.ipt",
+    "bought": false,
+    "instances": [
+     "ballast ring"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "ballast collar",
+    "qty": 1,
+    "material": "316L stainless split collar with two M8 screws",
+    "group": "tail",
+    "model": "esp2024_p21_ballast_collar",
+    "file": "ballast_collar.ipt",
+    "bought": false,
+    "instances": [
+     "ballast collar"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "zinc anode",
+    "qty": 1,
+    "material": "Zinc alloy split collar anode to MIL-DTL-18001, clamped by one bolt",
+    "group": "tail",
+    "model": "esp2024_p22_anode",
+    "file": "anode.ipt",
+    "bought": true,
+    "instances": [
+     "zinc anode"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "mooring eye",
+    "qty": 1,
+    "material": "316L stainless plate, 20 thick, welded to the bottom plate",
+    "group": "tail",
+    "model": "esp2024_p23_mooring_eye",
+    "file": "mooring_eye.ipt",
+    "bought": false,
+    "instances": [
+     "mooring eye"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "tripod leg",
+    "qty": 3,
+    "material": "316L stainless tube 33.7 x 2 with welded foot plate",
+    "group": "mast",
+    "model": "esp2024_p24_tripod_leg",
+    "file": "tripod_leg.ipt",
+    "bought": false,
+    "instances": [
+     "tripod leg 1",
+     "tripod leg 2",
+     "tripod leg 3"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "hex bolt M12 x 16",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 16, ISO 4017",
+    "group": "mast",
+    "model": "esp2024_p25_leg_bolt",
+    "file": "leg_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "leg bolt 1a",
+     "leg bolt 1b",
+     "leg bolt 2a",
+     "leg bolt 2b",
+     "leg bolt 3a",
+     "leg bolt 3b"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "mast top plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "mast",
+    "model": "esp2024_p26_top_plate",
+    "file": "top_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mast top plate"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "lower panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p27_bracket_lower",
+    "file": "bracket_lower.ipt",
+    "bought": false,
+    "instances": [
+     "lower panel bracket 1",
+     "lower panel bracket 2",
+     "lower panel bracket 3"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "upper panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p28_bracket_upper",
+    "file": "bracket_upper.ipt",
+    "bought": false,
+    "instances": [
+     "upper panel bracket 1",
+     "upper panel bracket 2",
+     "upper panel bracket 3"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "solar panel 20 W",
+    "qty": 3,
+    "material": "Bought in: 20 W monocrystalline marine panel, 400 x 300 x 20, glass front",
+    "group": "mast",
+    "model": "esp2024_p29_solar_panel",
+    "file": "solar_panel.ipt",
+    "bought": true,
+    "instances": [
+     "solar panel 1",
+     "solar panel 2",
+     "solar panel 3"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "lantern base",
+    "qty": 1,
+    "material": "Bought in: LED marine lantern 2 to 3 NM, base in UV stable polycarbonate",
+    "group": "top",
+    "model": "esp2024_p30_lantern_body",
+    "file": "lantern_body.ipt",
+    "bought": true,
+    "instances": [
+     "lantern base"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "lantern lens",
+    "qty": 1,
+    "material": "Bought in: Fresnel lens, polycarbonate, red or green",
+    "group": "top",
+    "model": "esp2024_p31_lantern_lens",
+    "file": "lantern_lens.ipt",
+    "bought": true,
+    "instances": [
+     "lantern lens"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "lantern cap",
+    "qty": 1,
+    "material": "Bought in: lantern top cap with bird spikes, polycarbonate",
+    "group": "top",
+    "model": "esp2024_p32_lantern_cap",
+    "file": "lantern_cap.ipt",
+    "bought": true,
+    "instances": [
+     "lantern cap"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "topmark strut",
+    "qty": 3,
+    "material": "316L stainless flat bar 30 x 6",
+    "group": "top",
+    "model": "esp2024_p33_topmark_strut",
+    "file": "topmark_strut.ipt",
+    "bought": false,
+    "instances": [
+     "topmark strut 1",
+     "topmark strut 2",
+     "topmark strut 3"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "topmark plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "top",
+    "model": "esp2024_p34_topmark_plate",
+    "file": "topmark_plate.ipt",
+    "bought": false,
+    "instances": [
+     "topmark plate"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "GNSS and mobile antenna",
+    "qty": 1,
+    "material": "Bought in: combined GNSS and LTE-M puck antenna, IP67",
+    "group": "top",
+    "model": "esp2024_p35_antenna",
+    "file": "antenna.ipt",
+    "bought": true,
+    "instances": [
+     "antenna"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "topmark, cone (green)",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, green, retro-reflective green bands",
+    "group": "top",
+    "model": "esp2024_p37_topmark_cone",
+    "file": "topmark_cone.ipt",
+    "bought": false,
+    "instances": [
+     "topmark"
+    ]
+   },
+   {
+    "no": 38,
+    "name": "bow shackle",
+    "qty": 1,
+    "material": "Bought in: 316 stainless bow shackle, WLL 3.25 t (pin replaced by the load pin)",
+    "group": "mooring",
+    "model": "esp2024_p38_shackle",
+    "file": "shackle.ipt",
+    "bought": true,
+    "instances": [
+     "bow shackle"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "load pin (alert sensor)",
+    "qty": 1,
+    "material": "Bought in: 17-4PH stainless strain gauge load pin, 28 dia, 0 to 50 kN, 4 to 20 mA, IP68",
+    "group": "mooring",
+    "model": "esp2024_p39_load_pin",
+    "file": "load_pin.ipt",
+    "bought": true,
+    "instances": [
+     "load pin"
+    ]
+   },
+   {
+    "no": 40,
+    "name": "mooring swivel",
+    "qty": 1,
+    "material": "Bought in: 316 stainless eye and eye swivel, WLL 2 t",
+    "group": "mooring",
+    "model": "esp2024_p40_swivel",
+    "file": "swivel.ipt",
+    "bought": true,
+    "instances": [
+     "swivel"
+    ]
+   },
+   {
+    "no": 41,
+    "name": "chain link 10 mm",
+    "qty": 4,
+    "material": "Grade 30 long link chain, 10 mm, hot dip galvanised",
+    "group": "mooring",
+    "model": "esp2024_p41_chain_link",
+    "file": "chain_link.ipt",
+    "bought": true,
+    "instances": [
+     "chain link 1",
+     "chain link 2",
+     "chain link 3",
+     "chain link 4"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_buoy_green_third_angle",
+   "first": "ESP 2024/drawings/esp2024_buoy_green_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_wind_buoy",
+  "title": "ESP 2024 concept B: wind powered spherical buoy",
+  "criteria": "3.1",
+  "uses": "ESP 2024 Task 2, Part A: the second design idea, a steel spherical buoy with a lattice tower and a small wind turbine, for comparison with design A.",
+  "description": "Design B, a concept: a 500 diameter spherical steel float with a lattice tower, a small vertical axis wind turbine, a lantern and a topmark, on a single chain. Simple to make, but the turbine has moving parts that need servicing and the steel float needs painting to stop it rusting.",
+  "parts": [
+   {
+    "name": "steel spherical float",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lattice tower",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "vertical axis wind turbine",
+    "colour": "#EDEDED",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lantern",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "topmark (can)",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "tail and ballast",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   502.5,
+   502.2,
+   2680.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   0.55,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_wind_buoy.step",
+   "stl": "ESP 2024/stl/esp2024_wind_buoy.stl",
+   "glb": "ESP 2024/glb/esp2024_wind_buoy.glb",
+   "edges": "ESP 2024/edges/esp2024_wind_buoy.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_wind_buoy_third_angle",
+   "first": "ESP 2024/drawings/esp2024_wind_buoy_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa1_float",
+  "title": "ESP 2024 sub-assembly 1: float",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly float.iam: The float: the polyethylene hull, its foam fill and fender, clamped between the stainless deck plate and keel plate by three tie rods with nuts underneath and lifting eye nuts on top.",
+  "description": "The float: the polyethylene hull, its foam fill and fender, clamped between the stainless deck plate and keel plate by three tie rods with nuts underneath and lifting eye nuts on top.",
+  "parts": [
+   {
+    "name": "float hull",
+    "colour": "#C8372D",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "float foam fill",
+    "colour": "#E8D9A8",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "fender ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "deck plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     380.0,
+     0.0
+    ]
+   },
+   {
+    "name": "keel plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -380.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     900.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -520.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lifting eye nut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     900.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -520.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lifting eye nut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     900.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -520.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lifting eye nut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   524.4,
+   524.4,
+   1121.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa1_float.step",
+   "stl": "ESP 2024/stl/esp2024_sa1_float.stl",
+   "glb": "ESP 2024/glb/esp2024_sa1_float.glb",
+   "edges": "ESP 2024/edges/esp2024_sa1_float.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 1,
+   "key": "float",
+   "file": "float.iam"
+  },
+  "bom": [
+   {
+    "no": 1,
+    "name": "float hull",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, UV stabilised, red or green all through, 6 wall",
+    "group": "float",
+    "model": "esp2024_p01_float_hull",
+    "file": "float_hull.ipt",
+    "bought": false,
+    "instances": [
+     "float hull"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "float foam fill",
+    "qty": 1,
+    "material": "Closed cell polyurethane foam, 40 kg/m3",
+    "group": "float",
+    "model": "esp2024_p02_float_foam",
+    "file": "float_foam.ipt",
+    "bought": false,
+    "instances": [
+     "float foam fill"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "fender ring",
+    "qty": 1,
+    "material": "Closed cell EVA foam with a black rubber skin",
+    "group": "float",
+    "model": "esp2024_p03_fender",
+    "file": "fender.ipt",
+    "bought": false,
+    "instances": [
+     "fender ring"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "deck plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "float",
+    "model": "esp2024_p04_deck_plate",
+    "file": "deck_plate.ipt",
+    "bought": false,
+    "instances": [
+     "deck plate"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "keel plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 10 thick",
+    "group": "float",
+    "model": "esp2024_p05_keel_plate",
+    "file": "keel_plate.ipt",
+    "bought": false,
+    "instances": [
+     "keel plate"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "tie rod",
+    "qty": 3,
+    "material": "A4 (316) stainless threaded rod M16",
+    "group": "float",
+    "model": "esp2024_p06_tie_rod",
+    "file": "tie_rod.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod 1",
+     "tie rod 2",
+     "tie rod 3"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "tie rod nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless hex nut M16, ISO 4032",
+    "group": "float",
+    "model": "esp2024_p07_tie_rod_nut",
+    "file": "tie_rod_nut.ipt",
+    "bought": true,
+    "instances": [
+     "tie rod nut 1",
+     "tie rod nut 2",
+     "tie rod nut 3"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "lifting eye nut M16",
+    "qty": 3,
+    "material": "A4 (316) stainless lifting eye nut M16, DIN 582",
+    "group": "float",
+    "model": "esp2024_p08_eye_nut",
+    "file": "eye_nut.ipt",
+    "bought": true,
+    "instances": [
+     "lifting eye nut 1",
+     "lifting eye nut 2",
+     "lifting eye nut 3"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa1_float_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa1_float_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa2_equipment",
+  "title": "ESP 2024 sub-assembly 2: equipment canister",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly equipment_canister.iam: The secure watertight canister: stainless canister, mounting plate, battery and strap, the control and tracking unit, the O-ring, the hatch lid with eight tamper proof bolts and the two cable glands.",
+  "description": "The secure watertight canister: stainless canister, mounting plate, battery and strap, the control and tracking unit, the O-ring, the hatch lid with eight tamper proof bolts and the two cable glands.",
+  "parts": [
+   {
+    "name": "equipment canister",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "mounting plate",
+    "colour": "#D9DEE3",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     700.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery strap",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     900.0,
+     0.0
+    ]
+   },
+   {
+    "name": "control and tracking unit",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     760.0,
+     0.0
+    ]
+   },
+   {
+    "name": "hatch O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     1150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "hatch lid",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1250.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 7",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid bolt 8",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     1350.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cable gland 1",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     1400.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cable gland 2",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     1400.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   344.2,
+   344.2,
+   518.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa2_equipment.step",
+   "stl": "ESP 2024/stl/esp2024_sa2_equipment.stl",
+   "glb": "ESP 2024/glb/esp2024_sa2_equipment.glb",
+   "edges": "ESP 2024/edges/esp2024_sa2_equipment.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 2,
+   "key": "equipment",
+   "file": "equipment_canister.iam"
+  },
+  "bom": [
+   {
+    "no": 9,
+    "name": "equipment canister",
+    "qty": 1,
+    "material": "316L stainless steel, 1.5 wall, welded",
+    "group": "equipment",
+    "model": "esp2024_p09_canister",
+    "file": "canister.ipt",
+    "bought": false,
+    "instances": [
+     "equipment canister"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "equipment mounting plate",
+    "qty": 1,
+    "material": "HDPE sheet, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p10_mounting_plate",
+    "file": "mounting_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mounting plate"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "battery 12.8 V 40 Ah",
+    "qty": 1,
+    "material": "Bought in: LiFePO4 battery 12.8 V 40 Ah, 512 Wh, IP67",
+    "group": "equipment",
+    "model": "esp2024_p11_battery",
+    "file": "battery.ipt",
+    "bought": true,
+    "instances": [
+     "battery"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "battery strap",
+    "qty": 1,
+    "material": "316L stainless strip 25 x 3",
+    "group": "equipment",
+    "model": "esp2024_p12_battery_strap",
+    "file": "battery_strap.ipt",
+    "bought": false,
+    "instances": [
+     "battery strap"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "control and tracking unit",
+    "qty": 1,
+    "material": "Bought in: IP67 box with 12 V MPPT solar charger, GNSS tracker and LTE-M modem, alert logic",
+    "group": "equipment",
+    "model": "esp2024_p13_control_unit",
+    "file": "control_unit.ipt",
+    "bought": true,
+    "instances": [
+     "control and tracking unit"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "hatch O-ring",
+    "qty": 1,
+    "material": "EPDM O-ring, 5 section, 296 inside diameter",
+    "group": "equipment",
+    "model": "esp2024_p14_hatch_seal",
+    "file": "hatch_seal.ipt",
+    "bought": true,
+    "instances": [
+     "hatch O-ring"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "hatch lid",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "equipment",
+    "model": "esp2024_p15_hatch_lid",
+    "file": "hatch_lid.ipt",
+    "bought": false,
+    "instances": [
+     "hatch lid"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "tamper proof bolt M10",
+    "qty": 8,
+    "material": "A4 (316) stainless pin hex button head screw M10 x 20",
+    "group": "equipment",
+    "model": "esp2024_p16_hatch_bolt",
+    "file": "hatch_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "lid bolt 1",
+     "lid bolt 2",
+     "lid bolt 3",
+     "lid bolt 4",
+     "lid bolt 5",
+     "lid bolt 6",
+     "lid bolt 7",
+     "lid bolt 8"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "cable gland M16",
+    "qty": 2,
+    "material": "Nylon IP68 cable gland M16",
+    "group": "equipment",
+    "model": "esp2024_p17_cable_gland",
+    "file": "cable_gland.ipt",
+    "bought": true,
+    "instances": [
+     "cable gland 1",
+     "cable gland 2"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa2_equipment_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa2_equipment_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa3_tail",
+  "title": "ESP 2024 sub-assembly 3: tail and ballast",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly tail.iam: The tail: the stainless tail tube with its six flange bolts, the ballast ring and its collar, the zinc anode and the mooring eye.",
+  "description": "The tail: the stainless tail tube with its six flange bolts, the ballast ring and its collar, the zinc anode and the mooring eye.",
+  "parts": [
+   {
+    "name": "tail tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 5",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tail flange bolt 6",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ballast ring",
+    "colour": "#B8B3A8",
+    "explode": [
+     0.0,
+     220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ballast collar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     380.0,
+     0.0
+    ]
+   },
+   {
+    "name": "zinc anode",
+    "colour": "#9AA3AD",
+    "explode": [
+     0.0,
+     140.0,
+     0.0
+    ]
+   },
+   {
+    "name": "mooring eye",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -180.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   320.4,
+   320.4,
+   987.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa3_tail.step",
+   "stl": "ESP 2024/stl/esp2024_sa3_tail.stl",
+   "glb": "ESP 2024/glb/esp2024_sa3_tail.glb",
+   "edges": "ESP 2024/edges/esp2024_sa3_tail.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 3,
+   "key": "tail",
+   "file": "tail.iam"
+  },
+  "bom": [
+   {
+    "no": 18,
+    "name": "tail tube",
+    "qty": 1,
+    "material": "316L stainless tube 88.9 x 3, flange and bottom plate welded",
+    "group": "tail",
+    "model": "esp2024_p18_tail_tube",
+    "file": "tail_tube.ipt",
+    "bought": false,
+    "instances": [
+     "tail tube"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "hex bolt M12 x 20",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 20, ISO 4017",
+    "group": "tail",
+    "model": "esp2024_p19_keel_bolt",
+    "file": "keel_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "tail flange bolt 1",
+     "tail flange bolt 2",
+     "tail flange bolt 3",
+     "tail flange bolt 4",
+     "tail flange bolt 5",
+     "tail flange bolt 6"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "ballast ring",
+    "qty": 1,
+    "material": "Heavy concrete (barytes), 3400 kg/m3, cast in a polyethylene skin",
+    "group": "tail",
+    "model": "esp2024_p20_ballast",
+    "file": "ballast.ipt",
+    "bought": false,
+    "instances": [
+     "ballast ring"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "ballast collar",
+    "qty": 1,
+    "material": "316L stainless split collar with two M8 screws",
+    "group": "tail",
+    "model": "esp2024_p21_ballast_collar",
+    "file": "ballast_collar.ipt",
+    "bought": false,
+    "instances": [
+     "ballast collar"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "zinc anode",
+    "qty": 1,
+    "material": "Zinc alloy split collar anode to MIL-DTL-18001, clamped by one bolt",
+    "group": "tail",
+    "model": "esp2024_p22_anode",
+    "file": "anode.ipt",
+    "bought": true,
+    "instances": [
+     "zinc anode"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "mooring eye",
+    "qty": 1,
+    "material": "316L stainless plate, 20 thick, welded to the bottom plate",
+    "group": "tail",
+    "model": "esp2024_p23_mooring_eye",
+    "file": "mooring_eye.ipt",
+    "bought": false,
+    "instances": [
+     "mooring eye"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa3_tail_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa3_tail_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa4_mast",
+  "title": "ESP 2024 sub-assembly 4: mast and solar panels",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly mast.iam: The tripod mast: three legs with two bolts each, the top plate, and on each face a lower and an upper bracket carrying a 20 W solar panel.",
+  "description": "The tripod mast: three legs with two bolts each, the top plate, and on each face a lower and an upper bracket carrying a 20 W solar panel.",
+  "parts": [
+   {
+    "name": "tripod leg 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 1a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 1b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tripod leg 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 2a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 2b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tripod leg 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 3a",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "leg bolt 3b",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "mast top plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     220.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lower panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     -0.0,
+     0.0,
+     120.0
+    ]
+   },
+   {
+    "name": "upper panel bracket 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     -0.0,
+     0.0,
+     120.0
+    ]
+   },
+   {
+    "name": "solar panel 1",
+    "colour": "#1F2F5A",
+    "explode": [
+     -0.0,
+     0.0,
+     300.0
+    ]
+   },
+   {
+    "name": "lower panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "upper panel bracket 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "solar panel 2",
+    "colour": "#1F2F5A",
+    "explode": [
+     259.81,
+     0.0,
+     -150.0
+    ]
+   },
+   {
+    "name": "lower panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     -103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "upper panel bracket 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     -103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "solar panel 3",
+    "colour": "#1F2F5A",
+    "explode": [
+     -259.81,
+     0.0,
+     -150.0
+    ]
+   }
+  ],
+  "size_mm": [
+   447.8,
+   387.8,
+   928.1
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa4_mast.step",
+   "stl": "ESP 2024/stl/esp2024_sa4_mast.stl",
+   "glb": "ESP 2024/glb/esp2024_sa4_mast.glb",
+   "edges": "ESP 2024/edges/esp2024_sa4_mast.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 4,
+   "key": "mast",
+   "file": "mast.iam"
+  },
+  "bom": [
+   {
+    "no": 24,
+    "name": "tripod leg",
+    "qty": 3,
+    "material": "316L stainless tube 33.7 x 2 with welded foot plate",
+    "group": "mast",
+    "model": "esp2024_p24_tripod_leg",
+    "file": "tripod_leg.ipt",
+    "bought": false,
+    "instances": [
+     "tripod leg 1",
+     "tripod leg 2",
+     "tripod leg 3"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "hex bolt M12 x 16",
+    "qty": 6,
+    "material": "A4 (316) stainless hex bolt M12 x 16, ISO 4017",
+    "group": "mast",
+    "model": "esp2024_p25_leg_bolt",
+    "file": "leg_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "leg bolt 1a",
+     "leg bolt 1b",
+     "leg bolt 2a",
+     "leg bolt 2b",
+     "leg bolt 3a",
+     "leg bolt 3b"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "mast top plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 8 thick",
+    "group": "mast",
+    "model": "esp2024_p26_top_plate",
+    "file": "top_plate.ipt",
+    "bought": false,
+    "instances": [
+     "mast top plate"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "lower panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p27_bracket_lower",
+    "file": "bracket_lower.ipt",
+    "bought": false,
+    "instances": [
+     "lower panel bracket 1",
+     "lower panel bracket 2",
+     "lower panel bracket 3"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "upper panel bracket",
+    "qty": 3,
+    "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+    "group": "mast",
+    "model": "esp2024_p28_bracket_upper",
+    "file": "bracket_upper.ipt",
+    "bought": false,
+    "instances": [
+     "upper panel bracket 1",
+     "upper panel bracket 2",
+     "upper panel bracket 3"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "solar panel 20 W",
+    "qty": 3,
+    "material": "Bought in: 20 W monocrystalline marine panel, 400 x 300 x 20, glass front",
+    "group": "mast",
+    "model": "esp2024_p29_solar_panel",
+    "file": "solar_panel.ipt",
+    "bought": true,
+    "instances": [
+     "solar panel 1",
+     "solar panel 2",
+     "solar panel 3"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa4_mast_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa4_mast_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa5_top",
+  "title": "ESP 2024 sub-assembly 5: lantern and topmark",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly lantern_topmark.iam: The top: the LED lantern (base, coloured lens and cap), the three topmark struts and plate, the antenna and the topmark (a red can, or a green cone for an entrance buoy).",
+  "description": "The top: the LED lantern (base, coloured lens and cap), the three topmark struts and plate, the antenna and the topmark (a red can, or a green cone for an entrance buoy).",
+  "parts": [
+   {
+    "name": "lantern base",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lantern lens",
+    "colour": "#C8372D",
+    "explode": [
+     0.0,
+     90.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lantern cap",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     180.0,
+     0.0
+    ]
+   },
+   {
+    "name": "topmark strut 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "topmark strut 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     -103.92,
+     0.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "topmark strut 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     -0.0,
+     0.0,
+     120.0
+    ]
+   },
+   {
+    "name": "topmark plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     300.0,
+     0.0
+    ]
+   },
+   {
+    "name": "antenna",
+    "colour": "#EDEDED",
+    "explode": [
+     0.0,
+     380.0,
+     0.0
+    ]
+   },
+   {
+    "name": "topmark",
+    "colour": "#C8372D",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   250.2,
+   250.2,
+   498.1
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa5_top.step",
+   "stl": "ESP 2024/stl/esp2024_sa5_top.stl",
+   "glb": "ESP 2024/glb/esp2024_sa5_top.glb",
+   "edges": "ESP 2024/edges/esp2024_sa5_top.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 5,
+   "key": "top",
+   "file": "lantern_topmark.iam"
+  },
+  "bom": [
+   {
+    "no": 30,
+    "name": "lantern base",
+    "qty": 1,
+    "material": "Bought in: LED marine lantern 2 to 3 NM, base in UV stable polycarbonate",
+    "group": "top",
+    "model": "esp2024_p30_lantern_body",
+    "file": "lantern_body.ipt",
+    "bought": true,
+    "instances": [
+     "lantern base"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "lantern lens",
+    "qty": 1,
+    "material": "Bought in: Fresnel lens, polycarbonate, red or green",
+    "group": "top",
+    "model": "esp2024_p31_lantern_lens",
+    "file": "lantern_lens.ipt",
+    "bought": true,
+    "instances": [
+     "lantern lens"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "lantern cap",
+    "qty": 1,
+    "material": "Bought in: lantern top cap with bird spikes, polycarbonate",
+    "group": "top",
+    "model": "esp2024_p32_lantern_cap",
+    "file": "lantern_cap.ipt",
+    "bought": true,
+    "instances": [
+     "lantern cap"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "topmark strut",
+    "qty": 3,
+    "material": "316L stainless flat bar 30 x 6",
+    "group": "top",
+    "model": "esp2024_p33_topmark_strut",
+    "file": "topmark_strut.ipt",
+    "bought": false,
+    "instances": [
+     "topmark strut 1",
+     "topmark strut 2",
+     "topmark strut 3"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "topmark plate",
+    "qty": 1,
+    "material": "316L stainless steel plate, 6 thick",
+    "group": "top",
+    "model": "esp2024_p34_topmark_plate",
+    "file": "topmark_plate.ipt",
+    "bought": false,
+    "instances": [
+     "topmark plate"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "GNSS and mobile antenna",
+    "qty": 1,
+    "material": "Bought in: combined GNSS and LTE-M puck antenna, IP67",
+    "group": "top",
+    "model": "esp2024_p35_antenna",
+    "file": "antenna.ipt",
+    "bought": true,
+    "instances": [
+     "antenna"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "topmark, can (red)",
+    "qty": 1,
+    "material": "Rotomoulded MDPE, red, retro-reflective red bands",
+    "group": "top",
+    "model": "esp2024_p36_topmark_can",
+    "file": "topmark_can.ipt",
+    "bought": false,
+    "instances": [
+     "topmark"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa5_top_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa5_top_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa6_mooring",
+  "title": "ESP 2024 sub-assembly 6: mooring and alert pin",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly mooring.iam: The mooring connection: the bow shackle, the load pin that is the alert sensor, the swivel and the first links of the chain.",
+  "description": "The mooring connection: the bow shackle, the load pin that is the alert sensor, the swivel and the first links of the chain.",
+  "parts": [
+   {
+    "name": "bow shackle",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "load pin",
+    "colour": "#E8C23D",
+    "explode": [
+     -120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "swivel",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -90.0,
+     0.0
+    ]
+   },
+   {
+    "name": "chain link 1",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     -180.0,
+     0.0
+    ]
+   },
+   {
+    "name": "chain link 2",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     -230.0,
+     0.0
+    ]
+   },
+   {
+    "name": "chain link 3",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     -280.0,
+     0.0
+    ]
+   },
+   {
+    "name": "chain link 4",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     -330.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   80.0,
+   54.2,
+   387.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa6_mooring.step",
+   "stl": "ESP 2024/stl/esp2024_sa6_mooring.stl",
+   "glb": "ESP 2024/glb/esp2024_sa6_mooring.glb",
+   "edges": "ESP 2024/edges/esp2024_sa6_mooring.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 6,
+   "key": "mooring",
+   "file": "mooring.iam"
+  },
+  "bom": [
+   {
+    "no": 38,
+    "name": "bow shackle",
+    "qty": 1,
+    "material": "Bought in: 316 stainless bow shackle, WLL 3.25 t (pin replaced by the load pin)",
+    "group": "mooring",
+    "model": "esp2024_p38_shackle",
+    "file": "shackle.ipt",
+    "bought": true,
+    "instances": [
+     "bow shackle"
+    ]
+   },
+   {
+    "no": 39,
+    "name": "load pin (alert sensor)",
+    "qty": 1,
+    "material": "Bought in: 17-4PH stainless strain gauge load pin, 28 dia, 0 to 50 kN, 4 to 20 mA, IP68",
+    "group": "mooring",
+    "model": "esp2024_p39_load_pin",
+    "file": "load_pin.ipt",
+    "bought": true,
+    "instances": [
+     "load pin"
+    ]
+   },
+   {
+    "no": 40,
+    "name": "mooring swivel",
+    "qty": 1,
+    "material": "Bought in: 316 stainless eye and eye swivel, WLL 2 t",
+    "group": "mooring",
+    "model": "esp2024_p40_swivel",
+    "file": "swivel.ipt",
+    "bought": true,
+    "instances": [
+     "swivel"
+    ]
+   },
+   {
+    "no": 41,
+    "name": "chain link 10 mm",
+    "qty": 4,
+    "material": "Grade 30 long link chain, 10 mm, hot dip galvanised",
+    "group": "mooring",
+    "model": "esp2024_p41_chain_link",
+    "file": "chain_link.ipt",
+    "bought": true,
+    "instances": [
+     "chain link 1",
+     "chain link 2",
+     "chain link 3",
+     "chain link 4"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa6_mooring_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa6_mooring_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_sa7_sinker",
+  "title": "ESP 2024 sub-assembly 7: sinker and ground chain",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2024 sub-assembly sinker.iam: The sinker on the harbour bed: the concrete block with its cast in eye bar and the bottom links of the chain. The chain between the sinker and the buoy is about 3 times the depth of water.",
+  "description": "The sinker on the harbour bed: the concrete block with its cast in eye bar and the bottom links of the chain. The chain between the sinker and the buoy is about 3 times the depth of water.",
+  "parts": [
+   {
+    "name": "concrete sinker",
+    "colour": "#B8B3A8",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "sinker eye bar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     400.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ground chain link 1",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     560.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ground chain link 2",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     640.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ground chain link 3",
+    "colour": "#7F8A94",
+    "explode": [
+     0.0,
+     720.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   600.0,
+   600.0,
+   512.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.7,
+   1.3
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_sa7_sinker.step",
+   "stl": "ESP 2024/stl/esp2024_sa7_sinker.stl",
+   "glb": "ESP 2024/glb/esp2024_sa7_sinker.glb",
+   "edges": "ESP 2024/edges/esp2024_sa7_sinker.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "sub": {
+   "no": 7,
+   "key": "sinker",
+   "file": "sinker.iam"
+  },
+  "bom": [
+   {
+    "no": 41,
+    "name": "chain link 10 mm",
+    "qty": 3,
+    "material": "Grade 30 long link chain, 10 mm, hot dip galvanised",
+    "group": "mooring",
+    "model": "esp2024_p41_chain_link",
+    "file": "chain_link.ipt",
+    "bought": true,
+    "instances": [
+     "ground chain link 1",
+     "ground chain link 2",
+     "ground chain link 3"
+    ]
+   },
+   {
+    "no": 42,
+    "name": "concrete sinker",
+    "qty": 1,
+    "material": "Reinforced concrete C32/40, 600 x 600 x 350, about 300 kg",
+    "group": "mooring",
+    "model": "esp2024_p42_sinker",
+    "file": "sinker.ipt",
+    "bought": false,
+    "instances": [
+     "concrete sinker"
+    ]
+   },
+   {
+    "no": 43,
+    "name": "sinker eye bar",
+    "qty": 1,
+    "material": "316 stainless round bar 16 dia, bent",
+    "group": "mooring",
+    "model": "esp2024_p43_sinker_eye",
+    "file": "sinker_eye.ipt",
+    "bought": false,
+    "instances": [
+     "sinker eye bar"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_sa7_sinker_third_angle",
+   "first": "ESP 2024/drawings/esp2024_sa7_sinker_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p01_float_hull",
+  "title": "ESP 2024 part 01: float hull",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 1 on the parts list: Rotomoulded MDPE, UV stabilised, red or green all through, 6 wall. The float: a 500 diameter polyethylene shell, moulded in one piece with the equipment well in the middle and a groove for the fender. The colour goes all the way through, so a scrape never shows bare material; it cannot rust.",
+  "description": "The float: a 500 diameter polyethylene shell, moulded in one piece with the equipment well in the middle and a groove for the fender. The colour goes all the way through, so a scrape never shows bare material; it cannot rust.",
+  "parts": [
+   {
+    "name": "float hull",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   500.7,
+   500.7,
+   1020.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p01_float_hull.step",
+   "stl": "ESP 2024/stl/esp2024_p01_float_hull.stl",
+   "glb": "ESP 2024/glb/esp2024_p01_float_hull.glb",
+   "edges": "ESP 2024/edges/esp2024_p01_float_hull.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 1,
+   "key": "float_hull",
+   "group": "float",
+   "material": "Rotomoulded MDPE, UV stabilised, red or green all through, 6 wall",
+   "file": "float_hull.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8500 x 1020 high, 6 wall",
+    "Top edge R30, bottom edge R50",
+    "Fender groove \u00d8476 x 80, 910 to 990 up",
+    "Well \u00d8290 x 480 deep",
+    "Tie rod holes \u00d816 at R195, 3 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p01_float_hull_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p01_float_hull_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p02_float_foam",
+  "title": "ESP 2024 part 02: float foam fill",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 2 on the parts list: Closed cell polyurethane foam, 40 kg/m3. Foam that fills the float. If the shell is ever holed by an impact, the float cannot fill with water: the buoy stays afloat and upright.",
+  "description": "Foam that fills the float. If the shell is ever holed by an impact, the float cannot fill with water: the buoy stays afloat and upright.",
+  "parts": [
+   {
+    "name": "float foam fill",
+    "colour": "#E8D9A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   488.6,
+   488.6,
+   1008.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p02_float_foam.step",
+   "stl": "ESP 2024/stl/esp2024_p02_float_foam.stl",
+   "glb": "ESP 2024/glb/esp2024_p02_float_foam.glb",
+   "edges": "ESP 2024/edges/esp2024_p02_float_foam.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 2,
+   "key": "float_foam",
+   "group": "float",
+   "material": "Closed cell polyurethane foam, 40 kg/m3",
+   "file": "float_foam.ipt",
+   "bought": false,
+   "sizes": [
+    "Fills the shell: \u00d8488 x 1008",
+    "Round the well \u00d8302"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p02_float_foam_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p02_float_foam_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p03_fender",
+  "title": "ESP 2024 part 03: fender ring",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 3 on the parts list: Closed cell EVA foam with a black rubber skin. Soft fender in the groove round the float. Boats that bump the buoy hit this first: it takes minor impacts and protects the float and the boat. 524 over the fender (brief: 500 +- 25).",
+  "description": "Soft fender in the groove round the float. Boats that bump the buoy hit this first: it takes minor impacts and protects the float and the boat. 524 over the fender (brief: 500 +- 25).",
+  "parts": [
+   {
+    "name": "fender ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   524.2,
+   524.0,
+   80.2
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p03_fender.step",
+   "stl": "ESP 2024/stl/esp2024_p03_fender.stl",
+   "glb": "ESP 2024/glb/esp2024_p03_fender.glb",
+   "edges": "ESP 2024/edges/esp2024_p03_fender.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 3,
+   "key": "fender",
+   "group": "float",
+   "material": "Closed cell EVA foam with a black rubber skin",
+   "file": "fender.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8476 / \u00d8524 x 80",
+    "Outside edges R12"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p03_fender_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p03_fender_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p04_deck_plate",
+  "title": "ESP 2024 part 04: deck plate",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 4 on the parts list: 316L stainless steel plate, 6 thick. Ring plate on top of the float. The tripod legs bolt to it, the canister flange sits on it and the tie rods clamp it down. It spreads the loads from the mast over the float.",
+  "description": "Ring plate on top of the float. The tripod legs bolt to it, the canister flange sits on it and the tie rods clamp it down. It spreads the loads from the mast over the float.",
+  "parts": [
+   {
+    "name": "deck plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   470.1,
+   470.0,
+   6.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p04_deck_plate.step",
+   "stl": "ESP 2024/stl/esp2024_p04_deck_plate.stl",
+   "glb": "ESP 2024/glb/esp2024_p04_deck_plate.glb",
+   "edges": "ESP 2024/edges/esp2024_p04_deck_plate.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 4,
+   "key": "deck_plate",
+   "group": "float",
+   "material": "316L stainless steel plate, 6 thick",
+   "file": "deck_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8470 / \u00d8286 x 6",
+    "Holes \u00d816 at R195, 3 off",
+    "M12 tapped, 6 off, at R205"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p04_deck_plate_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p04_deck_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p05_keel_plate",
+  "title": "ESP 2024 part 05: keel plate",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 5 on the parts list: 316L stainless steel plate, 10 thick. Plate under the float. The tie rods pull it up against the float and the tail tube bolts to it, so the weight of the ballast and the pull of the mooring go into the whole float.",
+  "description": "Plate under the float. The tie rods pull it up against the float and the tail tube bolts to it, so the weight of the ballast and the pull of the mooring go into the whole float.",
+  "parts": [
+   {
+    "name": "keel plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   420.1,
+   420.0,
+   10.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p05_keel_plate.step",
+   "stl": "ESP 2024/stl/esp2024_p05_keel_plate.stl",
+   "glb": "ESP 2024/glb/esp2024_p05_keel_plate.glb",
+   "edges": "ESP 2024/edges/esp2024_p05_keel_plate.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 5,
+   "key": "keel_plate",
+   "group": "float",
+   "material": "316L stainless steel plate, 10 thick",
+   "file": "keel_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8420 x 10",
+    "Holes \u00d816 at R195, 3 off",
+    "M12 x 8 deep, 6 off, at R75"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p05_keel_plate_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p05_keel_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p06_tie_rod",
+  "title": "ESP 2024 part 06: tie rod",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 6 on the parts list: A4 (316) stainless threaded rod M16. One of three M16 rods through the float from the keel plate to the deck plate.",
+  "description": "One of three M16 rods through the float from the keel plate to the deck plate.",
+  "parts": [
+   {
+    "name": "tie rod",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   16.0,
+   16.0,
+   1065.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p06_tie_rod.step",
+   "stl": "ESP 2024/stl/esp2024_p06_tie_rod.stl",
+   "glb": "ESP 2024/glb/esp2024_p06_tie_rod.glb",
+   "edges": "ESP 2024/edges/esp2024_p06_tie_rod.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 6,
+   "key": "tie_rod",
+   "group": "float",
+   "material": "A4 (316) stainless threaded rod M16",
+   "file": "tie_rod.ipt",
+   "bought": true,
+   "sizes": [
+    "M16 x 1065"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p06_tie_rod_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p06_tie_rod_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p07_tie_rod_nut",
+  "title": "ESP 2024 part 07: tie rod nut M16",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 7 on the parts list: A4 (316) stainless hex nut M16, ISO 4032. Standard nut on the bottom end of each tie rod, under the keel plate.",
+  "description": "Standard nut on the bottom end of each tie rod, under the keel plate.",
+  "parts": [
+   {
+    "name": "tie rod nut M16",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   27.7,
+   24.0,
+   13.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p07_tie_rod_nut.step",
+   "stl": "ESP 2024/stl/esp2024_p07_tie_rod_nut.stl",
+   "glb": "ESP 2024/glb/esp2024_p07_tie_rod_nut.glb",
+   "edges": "ESP 2024/edges/esp2024_p07_tie_rod_nut.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 7,
+   "key": "tie_rod_nut",
+   "group": "float",
+   "material": "A4 (316) stainless hex nut M16, ISO 4032",
+   "file": "tie_rod_nut.ipt",
+   "bought": true,
+   "sizes": [
+    "M16, 24 A/F x 13"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p07_tie_rod_nut_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p07_tie_rod_nut_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p08_eye_nut",
+  "title": "ESP 2024 part 08: lifting eye nut M16",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 8 on the parts list: A4 (316) stainless lifting eye nut M16, DIN 582. Eye nut on the top of each tie rod. It clamps the deck plate, and the three eyes are the lifting points used to lift the buoy out of the water for servicing.",
+  "description": "Eye nut on the top of each tie rod. It clamps the deck plate, and the three eyes are the lifting points used to lift the buoy out of the water for servicing.",
+  "parts": [
+   {
+    "name": "lifting eye nut M16",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   52.9,
+   36.0,
+   70.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p08_eye_nut.step",
+   "stl": "ESP 2024/stl/esp2024_p08_eye_nut.stl",
+   "glb": "ESP 2024/glb/esp2024_p08_eye_nut.glb",
+   "edges": "ESP 2024/edges/esp2024_p08_eye_nut.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 8,
+   "key": "eye_nut",
+   "group": "float",
+   "material": "A4 (316) stainless lifting eye nut M16, DIN 582",
+   "file": "eye_nut.ipt",
+   "bought": true,
+   "sizes": [
+    "M16, collar \u00d834 x 15",
+    "Eye \u00d833 inside, bar \u00d813"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p08_eye_nut_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p08_eye_nut_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p09_canister",
+  "title": "ESP 2024 part 09: equipment canister",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 9 on the parts list: 316L stainless steel, 1.5 wall, welded. Watertight stainless canister in the float well: it holds the battery and the control unit. Its flange sits on the deck plate and the hatch lid bolts to it.",
+  "description": "Watertight stainless canister in the float well: it holds the battery and the control unit. Its flange sits on the deck plate and the hatch lid bolts to it.",
+  "parts": [
+   {
+    "name": "equipment canister",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   344.1,
+   344.0,
+   494.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p09_canister.step",
+   "stl": "ESP 2024/stl/esp2024_p09_canister.stl",
+   "glb": "ESP 2024/glb/esp2024_p09_canister.glb",
+   "edges": "ESP 2024/edges/esp2024_p09_canister.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 9,
+   "key": "canister",
+   "group": "equipment",
+   "material": "316L stainless steel, 1.5 wall, welded",
+   "file": "canister.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8284 x 486, 1.5 wall, 4 base",
+    "Flange \u00d8344 x 8",
+    "M10 tapped, 8 off, at R158"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p09_canister_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p09_canister_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p10_mounting_plate",
+  "title": "ESP 2024 part 10: equipment mounting plate",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 10 on the parts list: HDPE sheet, 8 thick. Plastic plate on the floor of the canister. The battery and control unit are screwed to it, and it lifts out in one piece for servicing.",
+  "description": "Plastic plate on the floor of the canister. The battery and control unit are screwed to it, and it lifts out in one piece for servicing.",
+  "parts": [
+   {
+    "name": "equipment mounting plate",
+    "colour": "#D9DEE3",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   272.1,
+   272.0,
+   8.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p10_mounting_plate.step",
+   "stl": "ESP 2024/stl/esp2024_p10_mounting_plate.stl",
+   "glb": "ESP 2024/glb/esp2024_p10_mounting_plate.glb",
+   "edges": "ESP 2024/edges/esp2024_p10_mounting_plate.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 10,
+   "key": "mounting_plate",
+   "group": "equipment",
+   "material": "HDPE sheet, 8 thick",
+   "file": "mounting_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8272 x 8",
+    "Slot 80 x 20"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p10_mounting_plate_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p10_mounting_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p11_battery",
+  "title": "ESP 2024 part 11: battery 12.8 V 40 Ah",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 11 on the parts list: Bought in: LiFePO4 battery 12.8 V 40 Ah, 512 Wh, IP67. The battery: lithium iron phosphate, safe in a sealed canister, 2000 or more full cycles, 512 Wh. It runs the lantern, tracker and alert for about two weeks with no sun.",
+  "description": "The battery: lithium iron phosphate, safe in a sealed canister, 2000 or more full cycles, 512 Wh. It runs the lantern, tracker and alert for about two weeks with no sun.",
+  "parts": [
+   {
+    "name": "battery 12.8 V 40 Ah",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   194.0,
+   77.0,
+   178.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p11_battery.step",
+   "stl": "ESP 2024/stl/esp2024_p11_battery.stl",
+   "glb": "ESP 2024/glb/esp2024_p11_battery.glb",
+   "edges": "ESP 2024/edges/esp2024_p11_battery.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 11,
+   "key": "battery",
+   "group": "equipment",
+   "material": "Bought in: LiFePO4 battery 12.8 V 40 Ah, 512 Wh, IP67",
+   "file": "battery.ipt",
+   "bought": true,
+   "sizes": [
+    "194 x 77 x 170",
+    "Terminals \u00d814, 120 apart"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p11_battery_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p11_battery_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p12_battery_strap",
+  "title": "ESP 2024 part 12: battery strap",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 12 on the parts list: 316L stainless strip 25 x 3. Strap over the battery, screwed to the mounting plate, so the battery cannot move as the buoy rolls.",
+  "description": "Strap over the battery, screwed to the mounting plate, so the battery cannot move as the buoy rolls.",
+  "parts": [
+   {
+    "name": "battery strap",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   25.0,
+   83.0,
+   173.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p12_battery_strap.step",
+   "stl": "ESP 2024/stl/esp2024_p12_battery_strap.stl",
+   "glb": "ESP 2024/glb/esp2024_p12_battery_strap.glb",
+   "edges": "ESP 2024/edges/esp2024_p12_battery_strap.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 12,
+   "key": "battery_strap",
+   "group": "equipment",
+   "material": "316L stainless strip 25 x 3",
+   "file": "battery_strap.ipt",
+   "bought": false,
+   "sizes": [
+    "Strip 25 x 3",
+    "Inside 77 x 170"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p12_battery_strap_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p12_battery_strap_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p13_control_unit",
+  "title": "ESP 2024 part 13: control and tracking unit",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 13 on the parts list: Bought in: IP67 box with 12 V MPPT solar charger, GNSS tracker and LTE-M modem, alert logic. The electronics: charges the battery from the panels, switches the lantern at dusk, reports the buoy's position every hour, and raises the alert at once if the load pin shows the chain has broken or the buoy leaves its watch circle.",
+  "description": "The electronics: charges the battery from the panels, switches the lantern at dusk, reports the buoy's position every hour, and raises the alert at once if the load pin shows the chain has broken or the buoy leaves its watch circle.",
+  "parts": [
+   {
+    "name": "control and tracking unit",
+    "colour": "#E8A33D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   200.0,
+   80.0,
+   200.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p13_control_unit.step",
+   "stl": "ESP 2024/stl/esp2024_p13_control_unit.stl",
+   "glb": "ESP 2024/glb/esp2024_p13_control_unit.glb",
+   "edges": "ESP 2024/edges/esp2024_p13_control_unit.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 13,
+   "key": "control_unit",
+   "group": "equipment",
+   "material": "Bought in: IP67 box with 12 V MPPT solar charger, GNSS tracker and LTE-M modem, alert logic",
+   "file": "control_unit.ipt",
+   "bought": true,
+   "sizes": [
+    "200 x 75 x 200",
+    "Heat sink 160 x 140 x 5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p13_control_unit_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p13_control_unit_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p14_hatch_seal",
+  "title": "ESP 2024 part 14: hatch O-ring",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 14 on the parts list: EPDM O-ring, 5 section, 296 inside diameter. O-ring between the hatch lid and the canister flange: it keeps the canister watertight (IP68).",
+  "description": "O-ring between the hatch lid and the canister flange: it keeps the canister watertight (IP68).",
+  "parts": [
+   {
+    "name": "hatch O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   301.1,
+   301.0,
+   5.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p14_hatch_seal.step",
+   "stl": "ESP 2024/stl/esp2024_p14_hatch_seal.stl",
+   "glb": "ESP 2024/glb/esp2024_p14_hatch_seal.glb",
+   "edges": "ESP 2024/edges/esp2024_p14_hatch_seal.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 14,
+   "key": "hatch_seal",
+   "group": "equipment",
+   "material": "EPDM O-ring, 5 section, 296 inside diameter",
+   "file": "hatch_seal.ipt",
+   "bought": true,
+   "sizes": [
+    "O-ring \u00d8291 inside, 5 section"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p14_hatch_seal_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p14_hatch_seal_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p15_hatch_lid",
+  "title": "ESP 2024 part 15: hatch lid",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 15 on the parts list: 316L stainless steel plate, 8 thick. The lid over the canister. Eight tamper proof bolts hold it down on the O-ring. Undo them and the whole battery and control unit are in reach.",
+  "description": "The lid over the canister. Eight tamper proof bolts hold it down on the O-ring. Undo them and the whole battery and control unit are in reach.",
+  "parts": [
+   {
+    "name": "hatch lid",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   344.1,
+   344.0,
+   8.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p15_hatch_lid.step",
+   "stl": "ESP 2024/stl/esp2024_p15_hatch_lid.stl",
+   "glb": "ESP 2024/glb/esp2024_p15_hatch_lid.glb",
+   "edges": "ESP 2024/edges/esp2024_p15_hatch_lid.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 15,
+   "key": "hatch_lid",
+   "group": "equipment",
+   "material": "316L stainless steel plate, 8 thick",
+   "file": "hatch_lid.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8344 x 8",
+    "Groove \u00d8288 / \u00d8304 x 5",
+    "Holes \u00d811, 8 off, at R158",
+    "M16 gland holes, 2 off, at R92"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p15_hatch_lid_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p15_hatch_lid_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p16_hatch_bolt",
+  "title": "ESP 2024 part 16: tamper proof bolt M10",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 16 on the parts list: A4 (316) stainless pin hex button head screw M10 x 20. Hatch lid bolt with a pin in the hex: it needs a special key, so the canister is secure.",
+  "description": "Hatch lid bolt with a pin in the hex: it needs a special key, so the canister is secure.",
+  "parts": [
+   {
+    "name": "tamper proof bolt M10",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   17.0,
+   17.0,
+   22.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p16_hatch_bolt.step",
+   "stl": "ESP 2024/stl/esp2024_p16_hatch_bolt.stl",
+   "glb": "ESP 2024/glb/esp2024_p16_hatch_bolt.glb",
+   "edges": "ESP 2024/edges/esp2024_p16_hatch_bolt.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 16,
+   "key": "hatch_bolt",
+   "group": "equipment",
+   "material": "A4 (316) stainless pin hex button head screw M10 x 20",
+   "file": "hatch_bolt.ipt",
+   "bought": true,
+   "sizes": [
+    "M10 x 16 thread",
+    "Button head \u00d817 x 6, pin hex 6 A/F"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p16_hatch_bolt_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p16_hatch_bolt_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p17_cable_gland",
+  "title": "ESP 2024 part 17: cable gland M16",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 17 on the parts list: Nylon IP68 cable gland M16. Where the cables from the panels, lantern and load pin pass through the lid. IP68 keeps the canister dry.",
+  "description": "Where the cables from the panels, lantern and load pin pass through the lid. IP68 keeps the canister dry.",
+  "parts": [
+   {
+    "name": "cable gland M16",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   20.8,
+   24.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p17_cable_gland.step",
+   "stl": "ESP 2024/stl/esp2024_p17_cable_gland.stl",
+   "glb": "ESP 2024/glb/esp2024_p17_cable_gland.glb",
+   "edges": "ESP 2024/edges/esp2024_p17_cable_gland.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 17,
+   "key": "cable_gland",
+   "group": "equipment",
+   "material": "Nylon IP68 cable gland M16",
+   "file": "cable_gland.ipt",
+   "bought": true,
+   "sizes": [
+    "M16 x 8 thread",
+    "Hexagon 21 A/F x 16",
+    "Cable \u00d87"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p17_cable_gland_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p17_cable_gland_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p18_tail_tube",
+  "title": "ESP 2024 part 18: tail tube",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 18 on the parts list: 316L stainless tube 88.9 x 3, flange and bottom plate welded. Tube under the float. It holds the ballast low down, which keeps the buoy upright, and carries the mooring eye. Flange and bottom plate are welded on.",
+  "description": "Tube under the float. It holds the ballast low down, which keeps the buoy upright, and carries the mooring eye. Flange and bottom plate are welded on.",
+  "parts": [
+   {
+    "name": "tail tube",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   320.2,
+   320.2,
+   880.2
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p18_tail_tube.step",
+   "stl": "ESP 2024/stl/esp2024_p18_tail_tube.stl",
+   "glb": "ESP 2024/glb/esp2024_p18_tail_tube.glb",
+   "edges": "ESP 2024/edges/esp2024_p18_tail_tube.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 18,
+   "key": "tail_tube",
+   "group": "tail",
+   "material": "316L stainless tube 88.9 x 3, flange and bottom plate welded",
+   "file": "tail_tube.ipt",
+   "bought": false,
+   "sizes": [
+    "Tube \u00d888.9 x 3 x 870",
+    "Flange \u00d8200 x 12, 6 holes \u00d813 at R75",
+    "Bottom plate \u00d8320 x 10"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p18_tail_tube_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p18_tail_tube_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p19_keel_bolt",
+  "title": "ESP 2024 part 19: hex bolt M12 x 20",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 19 on the parts list: A4 (316) stainless hex bolt M12 x 20, ISO 4017. Six standard bolts hold the tail tube flange to the keel plate.",
+  "description": "Six standard bolts hold the tail tube flange to the keel plate.",
+  "parts": [
+   {
+    "name": "hex bolt M12 x 20",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.8,
+   18.0,
+   28.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p19_keel_bolt.step",
+   "stl": "ESP 2024/stl/esp2024_p19_keel_bolt.stl",
+   "glb": "ESP 2024/glb/esp2024_p19_keel_bolt.glb",
+   "edges": "ESP 2024/edges/esp2024_p19_keel_bolt.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 19,
+   "key": "keel_bolt",
+   "group": "tail",
+   "material": "A4 (316) stainless hex bolt M12 x 20, ISO 4017",
+   "file": "keel_bolt.ipt",
+   "bought": true,
+   "sizes": [
+    "M12 x 20, 18 A/F head"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p19_keel_bolt_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p19_keel_bolt_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p20_ballast",
+  "title": "ESP 2024 part 20: ballast ring",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 20 on the parts list: Heavy concrete (barytes), 3400 kg/m3, cast in a polyethylene skin. Weight on the bottom of the tail. Being heavy and low it pulls the centre of gravity well below the centre of buoyancy, so the buoy floats upright and rights itself. It cannot rust.",
+  "description": "Weight on the bottom of the tail. Being heavy and low it pulls the centre of gravity well below the centre of buoyancy, so the buoy floats upright and rights itself. It cannot rust.",
+  "parts": [
+   {
+    "name": "ballast ring",
+    "colour": "#B8B3A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   320.4,
+   320.3,
+   260.2
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p20_ballast.step",
+   "stl": "ESP 2024/stl/esp2024_p20_ballast.stl",
+   "glb": "ESP 2024/glb/esp2024_p20_ballast.glb",
+   "edges": "ESP 2024/edges/esp2024_p20_ballast.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 20,
+   "key": "ballast",
+   "group": "tail",
+   "material": "Heavy concrete (barytes), 3400 kg/m3, cast in a polyethylene skin",
+   "file": "ballast.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d892 / \u00d8320 x 260",
+    "Top outside chamfer 15"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p20_ballast_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p20_ballast_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p21_ballast_collar",
+  "title": "ESP 2024 part 21: ballast collar",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 21 on the parts list: 316L stainless split collar with two M8 screws. Clamp collar on the tail tube above the ballast, so the ballast cannot lift off the bottom plate.",
+  "description": "Clamp collar on the tail tube above the ballast, so the ballast cannot lift off the bottom plate.",
+  "parts": [
+   {
+    "name": "ballast collar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   170.1,
+   170.0,
+   15.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p21_ballast_collar.step",
+   "stl": "ESP 2024/stl/esp2024_p21_ballast_collar.stl",
+   "glb": "ESP 2024/glb/esp2024_p21_ballast_collar.glb",
+   "edges": "ESP 2024/edges/esp2024_p21_ballast_collar.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 21,
+   "key": "ballast_collar",
+   "group": "tail",
+   "material": "316L stainless split collar with two M8 screws",
+   "file": "ballast_collar.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d888.9 / \u00d8170 x 15",
+    "Split 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p21_ballast_collar_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p21_ballast_collar_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p22_anode",
+  "title": "ESP 2024 part 22: zinc anode",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 22 on the parts list: Zinc alloy split collar anode to MIL-DTL-18001, clamped by one bolt. Sacrificial anode clamped round the tail tube. In sea water the zinc corrodes instead of the stainless steel and the galvanised chain: it is replaced at the yearly service.",
+  "description": "Sacrificial anode clamped round the tail tube. In sea water the zinc corrodes instead of the stainless steel and the galvanised chain: it is replaced at the yearly service.",
+  "parts": [
+   {
+    "name": "zinc anode",
+    "colour": "#9AA3AD",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   132.0,
+   132.0,
+   60.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p22_anode.step",
+   "stl": "ESP 2024/stl/esp2024_p22_anode.stl",
+   "glb": "ESP 2024/glb/esp2024_p22_anode.glb",
+   "edges": "ESP 2024/edges/esp2024_p22_anode.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 22,
+   "key": "anode",
+   "group": "tail",
+   "material": "Zinc alloy split collar anode to MIL-DTL-18001, clamped by one bolt",
+   "file": "anode.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d888.9 / \u00d8132 x 60",
+    "One split"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p22_anode_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p22_anode_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p23_mooring_eye",
+  "title": "ESP 2024 part 23: mooring eye",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 23 on the parts list: 316L stainless plate, 20 thick, welded to the bottom plate. Padeye under the tail. The mooring shackle and load pin fit through its hole, so every pull from the chain goes through this plate. See the FEA.",
+  "description": "Padeye under the tail. The mooring shackle and load pin fit through its hole, so every pull from the chain goes through this plate. See the FEA.",
+  "parts": [
+   {
+    "name": "mooring eye",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.0,
+   90.0,
+   99.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p23_mooring_eye.step",
+   "stl": "ESP 2024/stl/esp2024_p23_mooring_eye.stl",
+   "glb": "ESP 2024/glb/esp2024_p23_mooring_eye.glb",
+   "edges": "ESP 2024/edges/esp2024_p23_mooring_eye.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "part": {
+   "no": 23,
+   "key": "mooring_eye",
+   "group": "tail",
+   "material": "316L stainless plate, 20 thick, welded to the bottom plate",
+   "file": "mooring_eye.ipt",
+   "bought": false,
+   "sizes": [
+    "Plate 20 thick, 90 wide",
+    "End R45, hole \u00d830",
+    "Hole centre 54 below the top"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p23_mooring_eye_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p23_mooring_eye_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p24_tripod_leg",
+  "title": "ESP 2024 part 24: tripod leg",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 24 on the parts list: 316L stainless tube 33.7 x 2 with welded foot plate. One of the three legs of the mast, from a foot on the deck plate to the top plate. A tripod is stiff and light and leaves the hatch in the middle free.",
+  "description": "One of the three legs of the mast, from a foot on the deck plate to the top plate. A tripod is stiff and light and leaves the hatch in the middle free.",
+  "parts": [
+   {
+    "name": "tripod leg",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   179.0,
+   92.0,
+   914.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p24_tripod_leg.step",
+   "stl": "ESP 2024/stl/esp2024_p24_tripod_leg.stl",
+   "glb": "ESP 2024/glb/esp2024_p24_tripod_leg.glb",
+   "edges": "ESP 2024/edges/esp2024_p24_tripod_leg.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 24,
+   "key": "tripod_leg",
+   "group": "mast",
+   "material": "316L stainless tube 33.7 x 2 with welded foot plate",
+   "file": "tripod_leg.ipt",
+   "bought": false,
+   "sizes": [
+    "Tube \u00d833.7 x 2",
+    "Centre line (205, 10) to (70, 914)",
+    "Foot 54 x 92 x 10, holes \u00d813, 68 apart"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p24_tripod_leg_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p24_tripod_leg_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p25_leg_bolt",
+  "title": "ESP 2024 part 25: hex bolt M12 x 16",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 25 on the parts list: A4 (316) stainless hex bolt M12 x 16, ISO 4017. Six standard bolts hold the leg feet to the deck plate.",
+  "description": "Six standard bolts hold the leg feet to the deck plate.",
+  "parts": [
+   {
+    "name": "hex bolt M12 x 16",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.8,
+   18.0,
+   24.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p25_leg_bolt.step",
+   "stl": "ESP 2024/stl/esp2024_p25_leg_bolt.stl",
+   "glb": "ESP 2024/glb/esp2024_p25_leg_bolt.glb",
+   "edges": "ESP 2024/edges/esp2024_p25_leg_bolt.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 25,
+   "key": "leg_bolt",
+   "group": "mast",
+   "material": "A4 (316) stainless hex bolt M12 x 16, ISO 4017",
+   "file": "leg_bolt.ipt",
+   "bought": true,
+   "sizes": [
+    "M12 x 16, 18 A/F head"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p25_leg_bolt_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p25_leg_bolt_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p26_top_plate",
+  "title": "ESP 2024 part 26: mast top plate",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 26 on the parts list: 316L stainless steel plate, 8 thick. Plate on top of the three legs: the lantern and the topmark struts stand on it.",
+  "description": "Plate on top of the three legs: the lantern and the topmark struts stand on it.",
+  "parts": [
+   {
+    "name": "mast top plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   220.1,
+   220.0,
+   8.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p26_top_plate.step",
+   "stl": "ESP 2024/stl/esp2024_p26_top_plate.stl",
+   "glb": "ESP 2024/glb/esp2024_p26_top_plate.glb",
+   "edges": "ESP 2024/edges/esp2024_p26_top_plate.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 26,
+   "key": "top_plate",
+   "group": "mast",
+   "material": "316L stainless steel plate, 8 thick",
+   "file": "top_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8220 x 8",
+    "Cable hole \u00d820"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p26_top_plate_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p26_top_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p27_bracket_lower",
+  "title": "ESP 2024 part 27: lower panel bracket",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 27 on the parts list: 316L stainless flat bar 6 thick, saddle tabs welded. Bracket across two legs that the bottom of a solar panel bolts to. The tabs are shaped to sit round the legs and are held by U-bolts.",
+  "description": "Bracket across two legs that the bottom of a solar panel bolts to. The tabs are shaped to sit round the legs and are held by U-bolts.",
+  "parts": [
+   {
+    "name": "lower panel bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   18.9,
+   318.3,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p27_bracket_lower.step",
+   "stl": "ESP 2024/stl/esp2024_p27_bracket_lower.stl",
+   "glb": "ESP 2024/glb/esp2024_p27_bracket_lower.glb",
+   "edges": "ESP 2024/edges/esp2024_p27_bracket_lower.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 27,
+   "key": "bracket_lower",
+   "group": "mast",
+   "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+   "file": "bracket_lower.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar 6 x 40, 318 long",
+    "Two saddle tabs 16 wide"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p27_bracket_lower_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p27_bracket_lower_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p28_bracket_upper",
+  "title": "ESP 2024 part 28: upper panel bracket",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 28 on the parts list: 316L stainless flat bar 6 thick, saddle tabs welded. Bracket across two legs for the top of a solar panel. The legs are closer together here, so the tabs are longer.",
+  "description": "Bracket across two legs for the top of a solar panel. The legs are closer together here, so the tabs are longer.",
+  "parts": [
+   {
+    "name": "upper panel bracket",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   38.3,
+   251.1,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p28_bracket_upper.step",
+   "stl": "ESP 2024/stl/esp2024_p28_bracket_upper.stl",
+   "glb": "ESP 2024/glb/esp2024_p28_bracket_upper.glb",
+   "edges": "ESP 2024/edges/esp2024_p28_bracket_upper.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 28,
+   "key": "bracket_upper",
+   "group": "mast",
+   "material": "316L stainless flat bar 6 thick, saddle tabs welded",
+   "file": "bracket_upper.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar 6 x 40, 251 long",
+    "Two saddle tabs 16 wide"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p28_bracket_upper_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p28_bracket_upper_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p29_solar_panel",
+  "title": "ESP 2024 part 29: solar panel 20 W",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 29 on the parts list: Bought in: 20 W monocrystalline marine panel, 400 x 300 x 20, glass front. One of three 20 W panels round the mast. Whichever way the buoy turns on its chain, one panel faces the sun. Near upright, so rain and spray wash them clean and birds cannot sit on them.",
+  "description": "One of three 20 W panels round the mast. Whichever way the buoy turns on its chain, one panel faces the sun. Near upright, so rain and spray wash them clean and birds cannot sit on them.",
+  "parts": [
+   {
+    "name": "solar panel 20 W",
+    "colour": "#1F2F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.0,
+   300.0,
+   400.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p29_solar_panel.step",
+   "stl": "ESP 2024/stl/esp2024_p29_solar_panel.stl",
+   "glb": "ESP 2024/glb/esp2024_p29_solar_panel.glb",
+   "edges": "ESP 2024/edges/esp2024_p29_solar_panel.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 29,
+   "key": "solar_panel",
+   "group": "mast",
+   "material": "Bought in: 20 W monocrystalline marine panel, 400 x 300 x 20, glass front",
+   "file": "solar_panel.ipt",
+   "bought": true,
+   "sizes": [
+    "300 x 400 x 20",
+    "Cells 276 x 376"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p29_solar_panel_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p29_solar_panel_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p30_lantern_body",
+  "title": "ESP 2024 part 30: lantern base",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 30 on the parts list: Bought in: LED marine lantern 2 to 3 NM, base in UV stable polycarbonate. Base of the LED lantern: the LEDs, driver and light sensor. It flashes at night so the buoy can be seen from 2 to 3 nautical miles.",
+  "description": "Base of the LED lantern: the LEDs, driver and light sensor. It flashes at night so the buoy can be seen from 2 to 3 nautical miles.",
+  "parts": [
+   {
+    "name": "lantern base",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   140.0,
+   140.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p30_lantern_body.step",
+   "stl": "ESP 2024/stl/esp2024_p30_lantern_body.stl",
+   "glb": "ESP 2024/glb/esp2024_p30_lantern_body.glb",
+   "edges": "ESP 2024/edges/esp2024_p30_lantern_body.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 30,
+   "key": "lantern_body",
+   "group": "top",
+   "material": "Bought in: LED marine lantern 2 to 3 NM, base in UV stable polycarbonate",
+   "file": "lantern_body.ipt",
+   "bought": true,
+   "sizes": [
+    "Flange \u00d8140 x 12",
+    "Body \u00d8110 x 28"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p30_lantern_body_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p30_lantern_body_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p31_lantern_lens",
+  "title": "ESP 2024 part 31: lantern lens",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 31 on the parts list: Bought in: Fresnel lens, polycarbonate, red or green. The coloured lens: red for a buoy leaving the harbour, green for one entering (IALA region A).",
+  "description": "The coloured lens: red for a buoy leaving the harbour, green for one entering (IALA region A).",
+  "parts": [
+   {
+    "name": "lantern lens",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   104.0,
+   104.0,
+   100.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p31_lantern_lens.step",
+   "stl": "ESP 2024/stl/esp2024_p31_lantern_lens.stl",
+   "glb": "ESP 2024/glb/esp2024_p31_lantern_lens.glb",
+   "edges": "ESP 2024/edges/esp2024_p31_lantern_lens.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 31,
+   "key": "lantern_lens",
+   "group": "top",
+   "material": "Bought in: Fresnel lens, polycarbonate, red or green",
+   "file": "lantern_lens.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d8104 x 100, 6 wall"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p31_lantern_lens_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p31_lantern_lens_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p32_lantern_cap",
+  "title": "ESP 2024 part 32: lantern cap",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 32 on the parts list: Bought in: lantern top cap with bird spikes, polycarbonate. Top cap of the lantern.",
+  "description": "Top cap of the lantern.",
+  "parts": [
+   {
+    "name": "lantern cap",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   116.0,
+   116.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p32_lantern_cap.step",
+   "stl": "ESP 2024/stl/esp2024_p32_lantern_cap.stl",
+   "glb": "ESP 2024/glb/esp2024_p32_lantern_cap.glb",
+   "edges": "ESP 2024/edges/esp2024_p32_lantern_cap.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 32,
+   "key": "lantern_cap",
+   "group": "top",
+   "material": "Bought in: lantern top cap with bird spikes, polycarbonate",
+   "file": "lantern_cap.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d8116 x 12",
+    "Spike \u00d86 x 28"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p32_lantern_cap_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p32_lantern_cap_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p33_topmark_strut",
+  "title": "ESP 2024 part 33: topmark strut",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 33 on the parts list: 316L stainless flat bar 30 x 6. One of three flat bars from the top plate up round the lantern to the topmark plate.",
+  "description": "One of three flat bars from the top plate up round the lantern to the topmark plate.",
+  "parts": [
+   {
+    "name": "topmark strut",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   6.0,
+   30.0,
+   232.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p33_topmark_strut.step",
+   "stl": "ESP 2024/stl/esp2024_p33_topmark_strut.stl",
+   "glb": "ESP 2024/glb/esp2024_p33_topmark_strut.glb",
+   "edges": "ESP 2024/edges/esp2024_p33_topmark_strut.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 33,
+   "key": "topmark_strut",
+   "group": "top",
+   "material": "316L stainless flat bar 30 x 6",
+   "file": "topmark_strut.ipt",
+   "bought": false,
+   "sizes": [
+    "Flat bar 30 x 6 x 232"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p33_topmark_strut_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p33_topmark_strut_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p34_topmark_plate",
+  "title": "ESP 2024 part 34: topmark plate",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 34 on the parts list: 316L stainless steel plate, 6 thick. Plate on the struts above the lantern: the topmark and the antenna sit on it.",
+  "description": "Plate on the struts above the lantern: the topmark and the antenna sit on it.",
+  "parts": [
+   {
+    "name": "topmark plate",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   250.1,
+   250.0,
+   6.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p34_topmark_plate.step",
+   "stl": "ESP 2024/stl/esp2024_p34_topmark_plate.stl",
+   "glb": "ESP 2024/glb/esp2024_p34_topmark_plate.glb",
+   "edges": "ESP 2024/edges/esp2024_p34_topmark_plate.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 34,
+   "key": "topmark_plate",
+   "group": "top",
+   "material": "316L stainless steel plate, 6 thick",
+   "file": "topmark_plate.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8250 x 6",
+    "Hole \u00d812"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p34_topmark_plate_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p34_topmark_plate_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p35_antenna",
+  "title": "ESP 2024 part 35: GNSS and mobile antenna",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 35 on the parts list: Bought in: combined GNSS and LTE-M puck antenna, IP67. The antenna for the tracker. It sits inside the polyethylene topmark, which radio passes through, so it is out of sight and protected.",
+  "description": "The antenna for the tracker. It sits inside the polyethylene topmark, which radio passes through, so it is out of sight and protected.",
+  "parts": [
+   {
+    "name": "GNSS and mobile antenna",
+    "colour": "#EDEDED",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   90.0,
+   90.0,
+   18.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p35_antenna.step",
+   "stl": "ESP 2024/stl/esp2024_p35_antenna.stl",
+   "glb": "ESP 2024/glb/esp2024_p35_antenna.glb",
+   "edges": "ESP 2024/edges/esp2024_p35_antenna.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 35,
+   "key": "antenna",
+   "group": "top",
+   "material": "Bought in: combined GNSS and LTE-M puck antenna, IP67",
+   "file": "antenna.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d890 x 18",
+    "Top edge R8"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p35_antenna_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p35_antenna_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p36_topmark_can",
+  "title": "ESP 2024 part 36: topmark, can (red)",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 36 on the parts list: Rotomoulded MDPE, red, retro-reflective red bands. Red can topmark for a buoy leaving the harbour (port hand mark). Big and bright at the top of the buoy, so its shape and colour can be seen from a distance by day.",
+  "description": "Red can topmark for a buoy leaving the harbour (port hand mark). Big and bright at the top of the buoy, so its shape and colour can be seen from a distance by day.",
+  "parts": [
+   {
+    "name": "topmark, can (red)",
+    "colour": "#C8372D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   200.1,
+   200.0,
+   260.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p36_topmark_can.step",
+   "stl": "ESP 2024/stl/esp2024_p36_topmark_can.stl",
+   "glb": "ESP 2024/glb/esp2024_p36_topmark_can.glb",
+   "edges": "ESP 2024/edges/esp2024_p36_topmark_can.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 36,
+   "key": "topmark_can",
+   "group": "top",
+   "material": "Rotomoulded MDPE, red, retro-reflective red bands",
+   "file": "topmark_can.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8200 x 260, 5 wall"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p36_topmark_can_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p36_topmark_can_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p37_topmark_cone",
+  "title": "ESP 2024 part 37: topmark, cone (green)",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 37 on the parts list: Rotomoulded MDPE, green, retro-reflective green bands. Green cone topmark, point up, for a buoy entering the harbour (starboard hand mark). Fitted instead of the can.",
+  "description": "Green cone topmark, point up, for a buoy entering the harbour (starboard hand mark). Fitted instead of the can.",
+  "parts": [
+   {
+    "name": "topmark, cone (green)",
+    "colour": "#2E8B4A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   250.7,
+   250.6,
+   280.7
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p37_topmark_cone.step",
+   "stl": "ESP 2024/stl/esp2024_p37_topmark_cone.stl",
+   "glb": "ESP 2024/glb/esp2024_p37_topmark_cone.glb",
+   "edges": "ESP 2024/edges/esp2024_p37_topmark_cone.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 37,
+   "key": "topmark_cone",
+   "group": "top",
+   "material": "Rotomoulded MDPE, green, retro-reflective green bands",
+   "file": "topmark_cone.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8250 base x 280 high, 5 wall"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p37_topmark_cone_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p37_topmark_cone_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p38_shackle",
+  "title": "ESP 2024 part 38: bow shackle",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 38 on the parts list: Bought in: 316 stainless bow shackle, WLL 3.25 t (pin replaced by the load pin). Standard bow shackle joining the swivel to the mooring eye. Its pin is the load pin (item 39).",
+  "description": "Standard bow shackle joining the swivel to the mooring eye. Its pin is the load pin (item 39).",
+  "parts": [
+   {
+    "name": "bow shackle",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.0,
+   36.0,
+   113.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p38_shackle.step",
+   "stl": "ESP 2024/stl/esp2024_p38_shackle.stl",
+   "glb": "ESP 2024/glb/esp2024_p38_shackle.glb",
+   "edges": "ESP 2024/edges/esp2024_p38_shackle.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 38,
+   "key": "shackle",
+   "group": "mooring",
+   "material": "Bought in: 316 stainless bow shackle, WLL 3.25 t (pin replaced by the load pin)",
+   "file": "shackle.ipt",
+   "bought": true,
+   "sizes": [
+    "Ears \u00d836 x 14, 22 apart",
+    "Bar \u00d814, bow R18",
+    "Pin holes \u00d828"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p38_shackle_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p38_shackle_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p39_load_pin",
+  "title": "ESP 2024 part 39: load pin (alert sensor)",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 39 on the parts list: Bought in: 17-4PH stainless strain gauge load pin, 28 dia, 0 to 50 kN, 4 to 20 mA, IP68. The alert sensor: the shackle pin is a load pin that measures the pull of the chain all the time. If the chain breaks the pull falls to nothing, and the control unit sends an alert with the buoy's position.",
+  "description": "The alert sensor: the shackle pin is a load pin that measures the pull of the chain all the time. If the chain breaks the pull falls to nothing, and the control unit sends an alert with the buoy's position.",
+  "parts": [
+   {
+    "name": "load pin (alert sensor)",
+    "colour": "#E8C23D",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   80.0,
+   40.0,
+   40.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p39_load_pin.step",
+   "stl": "ESP 2024/stl/esp2024_p39_load_pin.stl",
+   "glb": "ESP 2024/glb/esp2024_p39_load_pin.glb",
+   "edges": "ESP 2024/edges/esp2024_p39_load_pin.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 39,
+   "key": "load_pin",
+   "group": "mooring",
+   "material": "Bought in: 17-4PH stainless strain gauge load pin, 28 dia, 0 to 50 kN, 4 to 20 mA, IP68",
+   "file": "load_pin.ipt",
+   "bought": true,
+   "sizes": [
+    "Pin \u00d828 x 54",
+    "Head \u00d840 x 6",
+    "Connector \u00d816 x 20"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p39_load_pin_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p39_load_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p40_swivel",
+  "title": "ESP 2024 part 40: mooring swivel",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 40 on the parts list: Bought in: 316 stainless eye and eye swivel, WLL 2 t. Lets the buoy turn on its chain without twisting the chain.",
+  "description": "Lets the buoy turn on its chain without twisting the chain.",
+  "parts": [
+   {
+    "name": "mooring swivel",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   54.3,
+   54.2,
+   144.2
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p40_swivel.step",
+   "stl": "ESP 2024/stl/esp2024_p40_swivel.stl",
+   "glb": "ESP 2024/glb/esp2024_p40_swivel.glb",
+   "edges": "ESP 2024/edges/esp2024_p40_swivel.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 40,
+   "key": "swivel",
+   "group": "mooring",
+   "material": "Bought in: 316 stainless eye and eye swivel, WLL 2 t",
+   "file": "swivel.ipt",
+   "bought": true,
+   "sizes": [
+    "Eyes R20 centre line, bar \u00d814",
+    "Body \u00d828",
+    "Eyes 90 apart"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p40_swivel_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p40_swivel_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p41_chain_link",
+  "title": "ESP 2024 part 41: chain link 10 mm",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 41 on the parts list: Grade 30 long link chain, 10 mm, hot dip galvanised. Mooring chain. Shown here: the first links under the buoy. The chain runs down to the sinker (sub-assembly 7); its length is about 3 times the depth of water.",
+  "description": "Mooring chain. Shown here: the first links under the buoy. The chain runs down to the sinker (sub-assembly 7); its length is about 3 times the depth of water.",
+  "parts": [
+   {
+    "name": "chain link 10 mm",
+    "colour": "#7F8A94",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   10.0,
+   38.0,
+   60.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p41_chain_link.step",
+   "stl": "ESP 2024/stl/esp2024_p41_chain_link.stl",
+   "glb": "ESP 2024/glb/esp2024_p41_chain_link.glb",
+   "edges": "ESP 2024/edges/esp2024_p41_chain_link.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 41,
+   "key": "chain_link",
+   "group": "mooring",
+   "material": "Grade 30 long link chain, 10 mm, hot dip galvanised",
+   "file": "chain_link.ipt",
+   "bought": true,
+   "sizes": [
+    "Wire \u00d810",
+    "Inside 40 x 18 (pitch 40)"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p41_chain_link_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p41_chain_link_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p42_sinker",
+  "title": "ESP 2024 part 42: concrete sinker",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 42 on the parts list: Reinforced concrete C32/40, 600 x 600 x 350, about 300 kg. Block on the harbour bed that the chain is fixed to. Concrete does not rust and needs no maintenance.",
+  "description": "Block on the harbour bed that the chain is fixed to. Concrete does not rust and needs no maintenance.",
+  "parts": [
+   {
+    "name": "concrete sinker",
+    "colour": "#B8B3A8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   600.0,
+   600.0,
+   350.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p42_sinker.step",
+   "stl": "ESP 2024/stl/esp2024_p42_sinker.stl",
+   "glb": "ESP 2024/glb/esp2024_p42_sinker.glb",
+   "edges": "ESP 2024/edges/esp2024_p42_sinker.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 42,
+   "key": "sinker",
+   "group": "mooring",
+   "material": "Reinforced concrete C32/40, 600 x 600 x 350, about 300 kg",
+   "file": "sinker.ipt",
+   "bought": false,
+   "sizes": [
+    "600 x 600 x 350",
+    "Top chamfer 30"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p42_sinker_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p42_sinker_first_angle"
+  }
+ },
+ {
+  "name": "esp2024_p43_sinker_eye",
+  "title": "ESP 2024 part 43: sinker eye bar",
+  "criteria": "3.1",
+  "uses": "ESP 2024 component, item 43 on the parts list: 316 stainless round bar 16 dia, bent. U-bar cast into the sinker; the bottom link of the chain goes round it.",
+  "description": "U-bar cast into the sinker; the bottom link of the chain goes round it.",
+  "parts": [
+   {
+    "name": "sinker eye bar",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   200.0,
+   16.0,
+   306.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2024/step/esp2024_p43_sinker_eye.step",
+   "stl": "ESP 2024/stl/esp2024_p43_sinker_eye.stl",
+   "glb": "ESP 2024/glb/esp2024_p43_sinker_eye.glb",
+   "edges": "ESP 2024/edges/esp2024_p43_sinker_eye.json"
+  },
+  "base": "ESP 2024/",
+  "folder": "ESP 2024",
+  "fea": false,
+  "part": {
+   "no": 43,
+   "key": "sinker_eye",
+   "group": "mooring",
+   "material": "316 stainless round bar 16 dia, bent",
+   "file": "sinker_eye.ipt",
+   "bought": false,
+   "sizes": [
+    "Bar \u00d816",
+    "Legs 250, 80 apart",
+    "Feet 60"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2024/drawings/esp2024_p43_sinker_eye_third_angle",
+   "first": "ESP 2024/drawings/esp2024_p43_sinker_eye_first_angle"
+  }
  }
 ]

@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p37_topmark_cone",
+ "title": "ESP 2024 part 37: topmark, cone (green)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Cone",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as topmark_cone.ipt.",
+    "Sketch a right triangle 125 wide and 280 high on the XY Plane. Revolve 360 degrees."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "topmark, cone (green)",
+     "colour": "#2E8B4A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p37_topmark_cone/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p37_topmark_cone/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the bottom face, thickness 5 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "topmark, cone (green)",
+     "colour": "#2E8B4A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p37_topmark_cone/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p37_topmark_cone/step_02.json"
+  }
+ ]
+}

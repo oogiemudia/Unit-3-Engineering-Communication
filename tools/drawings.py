@@ -304,10 +304,12 @@ def view_data(shape, view, hidden=True):
 ESP_MATERIAL = {'esp2023_lock_gates': 'See parts list', 'esp2023_gate_leaf': 'S355 steel, see parts list',
                 'esp2023_skin_panel': 'S355 steel plate', 'esp2023_lift_gate': 'Concept, see notes',
                 'esp2026_seat_set': 'See parts list', 'esp2026_single_seat': 'See parts list',
-                'esp2026_shell_seats': 'Concept, see notes'}
+                'esp2026_shell_seats': 'Concept, see notes', 'esp2024_buoy': 'See parts list',
+                'esp2024_buoy_green': 'See parts list', 'esp2024_wind_buoy': 'Concept, see notes'}
 # each Employer-Set Project folder: the client named in the title block, the drawing date and the drawing number prefix
 PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', prefix='ESP23'),
-            'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26')}
+            'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26'),
+            'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24')}
 
 
 def owner_of(m):
@@ -327,6 +329,8 @@ def material_of(m):
         return m['part']['material'].replace('Bought in: ', '').split(',')[0][:30]
     if m['name'] in ESP_MATERIAL:
         return ESP_MATERIAL[m['name']]
+    if m.get('sub'):
+        return 'See parts list'        # a sub-assembly: its parts list gives the material of each part
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
             'bolted_joint': 'See parts list', 'fit_pair': 'See parts list', 'pneumatic_cylinder': 'See parts list'
             }.get(m['name'], 'S275 steel' if m['name'] in ('l_bracket', 'vee_block') else '6082-T6 aluminium')

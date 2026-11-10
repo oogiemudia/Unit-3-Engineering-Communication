@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p21_ballast_collar",
+ "title": "ESP 2024 part 21: ballast collar",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ballast_collar.ipt.",
+    "Circles diameter 88.9 and 170. Extrude 15."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "ballast collar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p21_ballast_collar/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p21_ballast_collar/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Split",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 3 mm slot from the bore to the outside. Extrude Cut Through All. Save."
+   ],
+   "note": "Two M8 screws across the split clamp it to the tube.",
+   "parts": [
+    {
+     "name": "ballast collar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p21_ballast_collar/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p21_ballast_collar/step_02.json"
+  }
+ ]
+}

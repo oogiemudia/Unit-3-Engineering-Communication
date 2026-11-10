@@ -1,0 +1,28 @@
+{
+ "name": "esp2024_p06_tie_rod",
+ "title": "ESP 2024 part 06: tie rod",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Rod",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Place from Content Center (threaded rod M16), or File > New > Standard (mm).ipt: circle diameter 16, Extrude 1065 mm. Save."
+   ],
+   "note": "Threads shown at the major diameter, as Inventor shows a cosmetic thread.",
+   "parts": [
+    {
+     "name": "tie rod",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p06_tie_rod/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p06_tie_rod/step_01.json"
+  }
+ ]
+}

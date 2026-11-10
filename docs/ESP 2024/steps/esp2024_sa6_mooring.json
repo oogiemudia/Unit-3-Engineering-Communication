@@ -1,0 +1,136 @@
+{
+ "name": "esp2024_sa6_mooring",
+ "title": "ESP 2024 sub-assembly 6: mooring and alert pin",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Shackle and load pin",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as mooring.iam.",
+    "Place shackle.ipt and Place Grounded.",
+    "Place load_pin.ipt in the shackle ears (Insert), connector to the right."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "load pin",
+     "colour": "#E8C23D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa6_mooring/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa6_mooring/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Swivel",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place swivel.ipt: Tangent its top eye to the inside of the shackle bow."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "load pin",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "swivel",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa6_mooring/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa6_mooring/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Chain",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place chain_link.ipt: Tangent its crown to the bottom of the swivel eye, at 90 degrees to the eye.",
+    "Place each next link the same way, turned 90 degrees. Save."
+   ],
+   "note": "The chain continues to the sinker.",
+   "parts": [
+    {
+     "name": "bow shackle",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "load pin",
+     "colour": "#E8C23D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "swivel",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "chain link 1",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "chain link 2",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "chain link 3",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "chain link 4",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa6_mooring/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa6_mooring/step_03.json"
+  }
+ ]
+}

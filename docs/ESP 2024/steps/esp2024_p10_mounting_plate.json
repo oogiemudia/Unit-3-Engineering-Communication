@@ -1,0 +1,50 @@
+{
+ "name": "esp2024_p10_mounting_plate",
+ "title": "ESP 2024 part 10: equipment mounting plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Disc",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as mounting_plate.ipt.",
+    "Circle diameter 272. Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "equipment mounting plate",
+     "colour": "#D9DEE3",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p10_mounting_plate/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_p10_mounting_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Finger slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 80 x 20 slot near the edge. Extrude Cut Through All. Save."
+   ],
+   "note": "Lift the plate out by the slot.",
+   "parts": [
+    {
+     "name": "equipment mounting plate",
+     "colour": "#D9DEE3",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_p10_mounting_plate/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_p10_mounting_plate/step_02.json"
+  }
+ ]
+}

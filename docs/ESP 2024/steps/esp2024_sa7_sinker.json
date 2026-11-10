@@ -1,0 +1,106 @@
+{
+ "name": "esp2024_sa7_sinker",
+ "title": "ESP 2024 sub-assembly 7: sinker and ground chain",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Eye bar",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as sinker.iam.",
+    "Place sinker_eye.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "sinker eye bar",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa7_sinker/step_01.glb",
+   "edges": "ESP 2024/steps/esp2024_sa7_sinker/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Concrete block",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place sinker.ipt round the bar: Flush its top with the base of the eye, Flush the centre planes."
+   ],
+   "note": "At the works the bar is set in the mould and the concrete poured round it.",
+   "parts": [
+    {
+     "name": "concrete sinker",
+     "colour": "#B8B3A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "sinker eye bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa7_sinker/step_02.glb",
+   "edges": "ESP 2024/steps/esp2024_sa7_sinker/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Ground chain",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place chain_link.ipt round the eye (Tangent), then two more links. Save."
+   ],
+   "note": "Joined to the buoy chain with a joining shackle when the buoy is laid.",
+   "parts": [
+    {
+     "name": "concrete sinker",
+     "colour": "#B8B3A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "sinker eye bar",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ground chain link 1",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ground chain link 2",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ground chain link 3",
+     "colour": "#7F8A94",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2024/steps/esp2024_sa7_sinker/step_03.glb",
+   "edges": "ESP 2024/steps/esp2024_sa7_sinker/step_03.json"
+  }
+ ]
+}
