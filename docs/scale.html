@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scale: the same part at different sizes · Unit 3 CAD hub</title>
+<meta name="description" content="The real part next to its drawing at 5:1, 2:1, 1:1, 1:2, 1:5 and 1:10, so learners can see what a scale does.">
+<link rel="stylesheet" href="demo.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<header><a href="index.html">All models</a><h1>Scale: the same part at different sizes</h1><span class="sp"></span><a id="open3d" href="viewer.html?m=step_block">Open this part in the 3D viewer</a></header>
+<div id="stage"><div id="hint">Drag to turn. Scroll or pinch to zoom.</div></div>
+<aside id="panel">
+  <div class="count">Step <span id="sn">1</span> of <span id="st">7</span></div>
+  <h2 id="sh">Loading…</h2>
+  <p id="sp"></p>
+  <div class="nav"><button id="prev">Back</button><button id="next" class="primary">Next</button></div>
+  <div class="dots" id="dots"></div>
+  <p class="tip">The step buttons jump straight to a scale. The arrow keys and a presentation clicker also work.</p>
+  <div class="tools"><span class="lab">Compare</span>
+    <button id="hold">Hold the part up to the drawing</button><button id="v3d">3D view</button><button id="vfront">Front view</button>
+    <span class="lab">Part</span>
+    <button data-m="step_block">Step block</button><button data-m="vee_block">Vee block</button><button data-m="sloping_block">Slide 85 block</button>
+  </div>
+</aside>
+<script type="module">
+import { THREE, G, makeStage, loadModel, loadData, stepper, extend } from './demo-common.js';
+
+const q = new URLSearchParams(location.search);
+const NAME = ['vee_block', 'sloping_block'].includes(q.get('m')) ? q.get('m') : 'step_block';
+document.querySelectorAll('[data-m]').forEach(b => { b.classList.toggle('on', b.dataset.m === NAME);
+  b.onclick = () => { location.href = 'scale.html?m=' + b.dataset.m + location.hash; }; });
+document.getElementById('open3d').href = 'viewer.html?m=' + NAME;
+
+const S = makeStage();
+const data = await loadData();
+const D = data[NAME], FV = D.front;
+const M = await loadModel(S, NAME);
+const L = D.size[0], H = D.size[2], Dp = D.size[1];
+const title = D.title.toUpperCase();
+
+// ---------- the sheet of paper, standing beside the part, drawn on a canvas so the drawing can be rescaled
+const PX = 5;                                  // canvas pixels per millimetre of paper
+const SHEETS = { A4: [297, 210], A3: [420, 297] };
+const cv = document.createElement('canvas'), ctx = cv.getContext('2d');
+let tex = null;
+const paper = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial());
+const board = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshStandardMaterial({ color: 0x8A96A3, roughness: 0.8 }));
+S.scene.add(paper, board);
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), new THREE.MeshBasicMaterial({ color: 0xE3E9F0 }));
+floor.rotation.x = -Math.PI / 2; floor.position.y = -0.3; S.scene.add(floor);
+const SX = L + 30;                              // the left edge of the sheet, 30 mm to the right of the part
+let sheet = 'A4';
+function placeSheet(name) {
+  sheet = name; const [w, h] = SHEETS[name];
+  cv.width = w * PX; cv.height = h * PX;
+  // a new texture each time the sheet changes size: WebGL cannot grow a texture that is already on the card
+  if (tex) tex.dispose();
+  tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+  paper.material.map = tex; paper.material.needsUpdate = true;
+  paper.scale.set(w, h, 1); paper.position.copy(G(SX + w / 2, -0.6, h / 2));
+  board.scale.set(w + 8, h + 8, 4); board.position.copy(G(SX + w / 2, 2, h / 2 - 2));
+}
+
+const toX = x => x * PX, toY = (y, h) => (h - y) * PX;
+function line(pts, h, width, dash) {
+  ctx.beginPath(); ctx.lineWidth = width * PX; ctx.setLineDash(dash ? dash.map(v => v * PX) : []);
+  pts.forEach((p, i) => (i ? ctx.lineTo : ctx.moveTo).call(ctx, toX(p[0]), toY(p[1], h))); ctx.stroke(); ctx.setLineDash([]);
+}
+function text(s, x, y, h, size = 3.5, align = 'center', bold = false, colour = '#1D2B3A', rot = 0) {
+  ctx.save(); ctx.translate(toX(x), toY(y, h)); ctx.rotate(rot); ctx.fillStyle = colour; ctx.textAlign = align; ctx.textBaseline = 'alphabetic';
+  ctx.font = `${bold ? 'bold ' : ''}${(size / 0.72 * PX).toFixed(1)}px Arial, Helvetica, sans-serif`; ctx.fillText(s, 0, 0); ctx.restore();
+}
+function arrow(x, y, dx, dy, h) {          // a filled arrowhead with its tip at (x, y), pointing along (dx, dy)
+  const l = 3, w = 0.55, px = -dy, py = dx;
+  ctx.beginPath(); ctx.moveTo(toX(x), toY(y, h));
+  ctx.lineTo(toX(x - dx * l + px * w), toY(y - dy * l + py * w, h)); ctx.lineTo(toX(x - dx * l - px * w), toY(y - dy * l - py * w, h)); ctx.closePath(); ctx.fill();
+}
+// a dimension: projection lines from the view, the dimension line with arrows, and the real size as the figure
+function dimH(x1, x2, yFrom, y, value, h) {
+  line([[x1, yFrom + 1], [x1, y + 2]], h, 0.25); line([[x2, yFrom + 1], [x2, y + 2]], h, 0.25);
+  const inside = x2 - x1 > 8;
+  if (inside) { line([[x1, y], [x2, y]], h, 0.25); arrow(x1, y, -1, 0, h); arrow(x2, y, 1, 0, h); }
+  else { line([[x1 - 7, y], [x2 + 7, y]], h, 0.25); arrow(x1, y, 1, 0, h); arrow(x2, y, -1, 0, h); }
+  text(value, (x1 + x2) / 2 + (inside ? 0 : 0), y + 1.4, h);
+}
+function dimV(y1, y2, xFrom, x, value, h) {
+  line([[xFrom + 1, y1], [x + 2, y1]], h, 0.25); line([[xFrom + 1, y2], [x + 2, y2]], h, 0.25);
+  const inside = y2 - y1 > 8;
+  if (inside) { line([[x, y1], [x, y2]], h, 0.25); arrow(x, y1, 0, -1, h); arrow(x, y2, 0, 1, h); }
+  else { line([[x, y1 - 7], [x, y2 + 7]], h, 0.25); arrow(x, y1, 0, 1, h); arrow(x, y2, 0, -1, h); }
+  text(value, x - 1.4, (y1 + y2) / 2, h, 3.5, 'center', false, '#1D2B3A', -Math.PI / 2);
+}
+// the front view at scale k with its bottom left corner at (ox, oy) on the paper
+function view(k, ox, oy, h) {
+  const T = p => [ox + p[0] * k, oy + p[1] * k];
+  ctx.strokeStyle = '#1D2B3A'; ctx.fillStyle = '#1D2B3A'; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  FV.vis.forEach(pl => line(pl.map(T), h, 0.7));
+  FV.hid.forEach(pl => line(pl.map(T), h, 0.35, [3, 1.5]));
+  FV.lines.forEach(([a, b]) => { const e = extend(T(a), T(b), 3); line(e, h, 0.3, [8, 1.5, 1.5, 1.5]); });
+  dimH(ox, ox + L * k, oy + H * k, oy + H * k + 9, String(Math.round(L)), h);
+  dimV(oy, oy + H * k, ox + L * k, ox + L * k + 9, String(Math.round(H)), h);
+}
+function frame(w, h, scaleText) {
+  ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.strokeStyle = '#1D2B3A'; ctx.fillStyle = '#1D2B3A';
+  line([[10, 10], [w - 10, 10], [w - 10, h - 10], [10, h - 10], [10, 10]], h, 0.7);
+  // title block
+  const tx = w - 10 - 120, ty = 10;
+  line([[tx, ty], [tx, ty + 30], [w - 10, ty + 30]], h, 0.5);
+  line([[tx, ty + 15], [w - 10, ty + 15]], h, 0.25); line([[tx + 60, ty], [tx + 60, ty + 15]], h, 0.25);
+  text('TITLE', tx + 2, ty + 26.5, h, 2.2, 'left'); text(title, tx + 2, ty + 18.5, h, 5, 'left', true);
+  text('SCALE', tx + 2, ty + 11.5, h, 2.2, 'left'); text(scaleText, tx + 2, ty + 3.5, h, 5.5, 'left', true, '#6B2FB3');
+  text('UNITS mm   SHEET ' + sheet, tx + 62, ty + 11.5, h, 2.2, 'left'); text('Unit 3 CAD hub', tx + 62, ty + 4, h, 3, 'left');
+  // a real size ruler along the top, so a drawn length can be checked
+  const rx = 20, ry = h - 16;
+  line([[rx, ry], [rx + 150, ry]], h, 0.3);
+  for (let mm = 0; mm <= 150; mm++) { const l = mm % 10 === 0 ? 3.2 : mm % 5 === 0 ? 2.2 : 1.2; line([[rx + mm, ry], [rx + mm, ry - l]], h, mm % 10 === 0 ? 0.25 : 0.15);
+    if (mm % 10 === 0) text(String(mm), rx + mm, ry + 1.2, h, 2, 'center'); }
+  text('ruler, real size (mm)', rx + 153, ry - 2, h, 2.5, 'left', false, '#4E5A68');
+}
+let cur = null;
+function draw(state, kNow) {
+  const [w, h] = SHEETS[sheet];
+  if (state.compare) {
+    frame(w, h, 'AS SHOWN');
+    let x = 22;
+    for (const sc of state.compare) {
+      const k = sc.k; view(k, x, 70, h);
+      text(sc.label, x + L * k / 2, 54, h, 5, 'center', true, '#6B2FB3');
+      text('drawn ' + fmt(L * k) + ' mm', x + L * k / 2, 47, h, 3, 'center');
+      x += L * k + compareGap(state, w);
+    }
+  } else {
+    frame(w, h, state.label);
+    const k = kNow, vw = L * k, vh = H * k;
+    const ox = vw + 50 > w - 20 ? 16 : Math.max(24, (w - 140 - vw) / 2), oy = vh + 40 > h - 30 ? 16 : 52;
+    ctx.save(); ctx.beginPath(); ctx.rect(toX(10.4), toY(h - 10.4, h), toX(w - 20.8), toX(h - 20.8)); ctx.clip();
+    view(k, ox, oy, h);
+    ctx.restore();
+    if (!state.tween) {
+      text('Front view, scale ' + state.label + ': drawn ' + fmt(vw) + ' mm long', ox, Math.max(14, oy - 12), h, 3, 'left', false, '#4E5A68');
+      if (vw > w - 20) { ctx.fillStyle = 'rgba(255,255,255,.92)'; ctx.fillRect(toX(30), toY(150, h), toX(170), toX(26));
+        text('Too big for an ' + sheet + ' sheet:', 115, 138, h, 5, 'center', true, '#B3261E'); text('the view is ' + fmt(vw) + ' mm long and the sheet is ' + w + ' mm wide.', 115, 129, h, 3.5, 'center', false, '#B3261E'); }
+    }
+  }
+  tex.needsUpdate = true;
+}
+const fmt = v => (Math.round(v * 10) / 10).toString();
+// the gap between the views on the comparison sheet: as wide as the sheet allows, room left for the height dimension
+const compareGap = (st, w) => Math.max(18, Math.min(34, (w - 44 - st.compare.reduce((a, sc) => a + L * sc.k, 0)) / st.compare.length));
+
+// ---------- the scales, in teaching order
+const SC = (a, b) => ({ k: a / b, label: a + ':' + b });
+const steps = [
+  { ...SC(1, 1), dot: '1:1', title: '1:1 Full size', text: `The drawing is exactly the same size as the part: ${fmt(L)} mm on the part is ${fmt(L)} mm on the paper. Click <b>Hold the part up to the drawing</b> and it fits.` },
+  { ...SC(2, 1), dot: '2:1', title: '2:1 Twice full size', text: `An enlargement, used for small parts so the detail can be seen. Every length is multiplied by 2, so the ${fmt(L)} mm length is drawn ${fmt(L * 2)} mm long. The dimension still says ${fmt(L)}.` },
+  { ...SC(5, 1), dot: '5:1', title: '5:1 Five times full size', text: `Every length is multiplied by 5, so the ${fmt(L)} mm length would be drawn ${fmt(L * 5)} mm long. That is too big for an A4 sheet (297 mm wide): choose a smaller scale or a bigger sheet.` },
+  { ...SC(1, 2), dot: '1:2', title: '1:2 Half size', text: `A reduction. Every length is divided by 2, so the ${fmt(L)} mm length is drawn ${fmt(L / 2)} mm long. The dimension still says ${fmt(L)}, because a dimension always gives the real size.` },
+  { ...SC(1, 5), dot: '1:5', title: '1:5 A fifth of full size', text: `Every length is divided by 5, so ${fmt(L)} mm is drawn ${fmt(L / 5)} mm long. Scales like this are for bigger parts. Check it against the ruler at the top of the sheet.` },
+  { ...SC(1, 10), dot: '1:10', title: '1:10 A tenth of full size', text: `${fmt(L)} mm is drawn only ${fmt(L / 10)} mm long: far too small to read for a part this size. Scales like 1:10 and 1:20 are for big things, such as a machine frame or a building.` },
+  { dot: 'All', title: 'All four side by side', compare: [SC(2, 1), SC(1, 1), SC(1, 2), SC(1, 5)], label: 'AS SHOWN',
+    text: `The same part at 2:1, 1:1, 1:2 and 1:5 on an A3 sheet. The part never changes and every dimension still reads ${fmt(L)}. Only the size on the paper changes. <b>Drawn size = real size × the scale.</b>` },
+];
+
+// ---------- the camera and the "hold the part up to the drawing" move
+// the whole scene: the part where it stands at home, and the whole sheet
+const box = () => { const b = new THREE.Box3(); [G(0, 0, 0), G(L, Dp, H), G(SX - 4, 0, -4), G(SX + SHEETS[sheet][0] + 4, 4, SHEETS[sheet][1] + 4)].forEach(p => b.expandByPoint(p)); return b; };
+const DIR3D = new THREE.Vector3(-0.42, 0.32, 1), DIRF = new THREE.Vector3(0, 0, 1);
+let v3 = true, holding = false, holdTw = null;
+function setView(is3d, ms = 1000) { v3 = is3d; S.flyFit(is3d ? DIR3D : DIRF, box(), 1.06, ms);
+  document.getElementById('v3d').classList.toggle('on', is3d); document.getElementById('vfront').classList.toggle('on', !is3d); }
+// where the view's bottom left corner sits in the world, for the current scale
+function viewOrigin(st) {
+  const [w, h] = SHEETS[sheet];
+  if (st.compare) { let x = 22; for (const sc of st.compare) { if (sc.k === 1) return [SX + x, 70]; x += L * sc.k + compareGap(st, w); } }
+  const vw = L * st.k, vh = H * st.k;
+  return [SX + (vw + 50 > w - 20 ? 16 : Math.max(24, (w - 140 - vw) / 2)), vh + 40 > h - 30 ? 16 : 52];
+}
+function hold(on, ms = 900) {
+  holding = on; document.getElementById('hold').classList.toggle('on', on);
+  const [x, z] = viewOrigin(cur);
+  const to = on ? G(x, -Dp - 1.5, z) : new THREE.Vector3(0, 0, 0), from = M.group.position.clone(), t0 = performance.now();
+  if (holdTw) S.frameFns.splice(S.frameFns.indexOf(holdTw), 1);
+  holdTw = now => { const t = Math.min(1, (now - t0) / ms), e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    M.group.position.lerpVectors(from, to, e); if (t >= 1) { S.frameFns.splice(S.frameFns.indexOf(holdTw), 1); holdTw = null; } };
+  S.frameFns.push(holdTw);
+  M.setOpacity(on ? 0.45 : 1);
+  if (on) {   // zoom in on the part and its drawing so the difference in size is easy to see from the back of the room
+    const k = cur.k || 1, b = new THREE.Box3();
+    [G(x - 12, 0, z - 14), G(x + Math.max(L * k, L) + 18, Dp, z + Math.max(H * k, H) + 16)].forEach(p => b.expandByPoint(p));
+    v3 = false; S.flyFit(DIRF, b, 1.1, ms);
+    document.getElementById('v3d').classList.remove('on'); document.getElementById('vfront').classList.add('on');
+  }
+}
+
+// the drawing grows or shrinks smoothly between scales
+let kShown = 1, scaleTw = null;
+function apply(i, instant) {
+  const st = steps[i]; cur = st;
+  const want = st.compare ? 'A3' : 'A4';
+  if (want !== sheet) placeSheet(want);
+  if (scaleTw) { S.frameFns.splice(S.frameFns.indexOf(scaleTw), 1); scaleTw = null; }
+  if (st.compare || instant) { kShown = st.k || 1; draw(st, kShown); }
+  else {
+    const from = kShown, to = st.k, t0 = performance.now(), ms = 650;
+    scaleTw = now => { const t = Math.min(1, (now - t0) / ms), e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      kShown = from * Math.pow(to / from, e); draw({ ...st, tween: t < 1 }, kShown);
+      if (t >= 1) { S.frameFns.splice(S.frameFns.indexOf(scaleTw), 1); scaleTw = null; } };
+    S.frameFns.push(scaleTw);
+  }
+  if (holding) hold(true, instant ? 1 : 700); else setView(v3, instant ? 1 : 900);
+}
+placeSheet('A4');
+const st = stepper(steps, apply);
+document.getElementById('hold').onclick = () => { if (holding) { hold(false); setView(true); } else hold(true); };
+document.getElementById('v3d').onclick = () => { if (holding) hold(false); setView(true); };
+document.getElementById('vfront').onclick = () => setView(false);
+const f0 = S.fit(DIR3D, box(), 1.06); S.place(DIR3D, f0.centre, f0.half);
+st.start();
+window.DEMO.ready = true;
+</script>
+</body>
+</html>

@@ -14,6 +14,8 @@ header{position:fixed;left:16px;top:12px;right:16px;display:flex;gap:12px;align-
 header>*{pointer-events:auto}
 h1{font-size:20px;margin:0}
 a.back{color:var(--accent);font-size:14px;text-decoration:none}
+#demos{display:flex;gap:8px;flex-wrap:wrap}
+#demos a{font-size:14px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;padding:7px 12px;font-weight:bold}
 #bar{position:fixed;left:16px;right:16px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 button,select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 12px;cursor:pointer}
 button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
@@ -70,7 +72,7 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
 <body>
 <div id="stage"></div>
 <header><a class="back" href="index.html">All models</a><h1 id="title">Loading…</h1>
-  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button><button data-tab="sim">Simulation (Inventor)</button><button data-tab="fea">FEA (Stress Analysis)</button></nav></header>
+  <nav id="tabs"><button data-tab="view" class="on">3D viewer</button><button data-tab="steps">Build steps (Inventor)</button><button data-tab="sim">Simulation (Inventor)</button><button data-tab="fea">FEA (Stress Analysis)</button></nav><span id="demos"></span></header>
 <div id="info"></div>
 <div id="caption"></div>
 <div id="steps" hidden>
@@ -108,6 +110,14 @@ import { GLTFLoader } from './vendor/loaders/GLTFLoader.js';
 
 const q = new URLSearchParams(location.search);
 const NAME = q.get('m') || 'step_block';
+// step-by-step lesson demonstrations that use this model
+const DEMOS = {
+  vee_block: [['auxiliary.html?m=vee_block', 'How an auxiliary view works'], ['scale.html?m=vee_block', 'Scale']],
+  sloping_block: [['auxiliary.html', 'How an auxiliary view works'], ['scale.html?m=sloping_block', 'Scale']],
+  step_block: [['lines.html', 'Line types on a real view'], ['scale.html', 'Scale']],
+};
+if (!RENDER_MODE()) document.getElementById('demos').innerHTML = (DEMOS[NAME] || []).map(d => `<a href="${d[0]}">${d[1]}</a>`).join('');
+function RENDER_MODE() { return new URLSearchParams(location.search).has('render'); }
 const RENDER = q.has('render');
 const BG = '#' + (q.get('bg') || 'F4F6F8');
 if (RENDER) document.body.classList.add('render');

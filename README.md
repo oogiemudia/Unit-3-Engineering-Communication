@@ -16,6 +16,18 @@ The website lives in the `docs` folder. To publish it (once): on GitHub open **S
 - `viewer.html?m=<model>&tab=sim`: the Simulation tab (moving assemblies only), an Inventor Dynamic Simulation step by step, with the motion and graphs
 - `viewer.html?m=<model>&tab=fea`: the FEA tab, an Inventor Stress Analysis study of the model, step by step, with real results
 
+## Lesson demonstrations
+
+Three step-by-step pages for the board. Click Next, or use the arrow keys or a presentation clicker, and each idea arrives on a real 3D model. Drag to turn the model at any step. A step can be linked to directly, for example `lines.html#3`.
+
+| Page | What it shows | Lesson slides |
+|---|---|---|
+| `auxiliary.html` | How an auxiliary view works, in nine steps: the part, the front view (the sloping face is just a line), the plan (the hole looks oval), the line of sight at 90° to the face, the view square on (the true shape), the front view on a sheet of glass, a second sheet parallel to the sloping face, the second sheet folding flat beside the front view, and the finished drawing. Uses the block from slide 85 (`auxiliary.html`) or the vee block (`auxiliary.html?m=vee_block`). | 84, 85 |
+| `lines.html` | Line types on a real view: each click adds the next type of line to the step block (construction, outline, hidden detail, centre line, projection, dimension, leader), ending on the finished front view from slide 87. Hidden detail and the centre line sit where the hole really is, inside the see-through block. | 86, 87 |
+| `scale.html` | Scale: the real part beside its drawing on an A4 sheet at 1:1, 2:1, 5:1 (too big for the sheet), 1:2, 1:5 and 1:10, then 2:1, 1:1, 1:2 and 1:5 side by side on an A3 sheet. "Hold the part up to the drawing" lays the real part over its drawing so the difference in size is plain. Works for the step block, the vee block and the slide 85 block (`?m=`). | Part 3, scale |
+
+The views in the demonstrations come from the same CAD models as everything else, through `tools/demos.py`, so they agree with the drawing sheets and the 3D viewer. The 3D viewer links to the demonstrations that use the model on screen.
+
 ## What is in it
 
 | Model | Criteria | Use it for | Drawings | Animations |
@@ -97,6 +109,7 @@ python3 tools/build_steps.py    # Build steps tab: a model of every stage (check
 python3 tools/build_sim.py      # Simulation tab: Dynamic Simulation steps and motion for the moving assemblies
 python3 tools/build_fea.py      # FEA tab: mesh and solve each load case (needs gmsh and scikit-fem)
 python3 tools/render.py         # stills and MP4 animations
+python3 tools/demos.py          # views for the lesson demonstrations (docs/demos/data.json)
 python3 tools/render.py step_block --bg FDF6E3 --suffix _cream   # cream background for the dyslexia friendly decks
 ```
 

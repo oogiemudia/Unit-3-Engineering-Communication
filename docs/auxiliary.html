@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How an auxiliary view works · Unit 3 CAD hub</title>
+<meta name="description" content="Step by step: why a sloping face needs an auxiliary view, using the block from lesson slide 85 and the vee block.">
+<link rel="stylesheet" href="demo.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<header><a href="index.html">All models</a><h1>How an auxiliary view works</h1><span class="sp"></span><a id="open3d" href="viewer.html?m=sloping_block">Open this part in the 3D viewer</a></header>
+<div id="stage"><div id="overlay"></div><div id="hint">Drag to turn the part. Scroll or pinch to zoom.</div></div>
+<aside id="panel">
+  <div class="count">Step <span id="sn">1</span> of <span id="st">9</span></div>
+  <h2 id="sh">Loading…</h2>
+  <p id="sp"></p>
+  <div class="nav"><button id="prev">Back</button><button id="next" class="primary">Next</button></div>
+  <div class="dots" id="dots"></div>
+  <p class="tip">The arrow keys and a presentation clicker also move through the steps. Lesson slides 84 and 85.</p>
+  <div class="tools"><span class="lab">Part</span>
+    <button data-m="sloping_block">Slide 85 block</button><button data-m="vee_block">Vee block</button>
+  </div>
+</aside>
+<script type="module">
+import { THREE, G, GA, INK, HI, FAINT, AMBER, makeStage, loadModel, loadData, lines, cone, tint, fade, stepper, lift, extend } from './demo-common.js';
+
+const q = new URLSearchParams(location.search);
+const NAME = q.get('m') === 'vee_block' ? 'vee_block' : 'sloping_block';
+document.querySelectorAll('[data-m]').forEach(b => { b.classList.toggle('on', b.dataset.m === NAME);
+  b.onclick = () => { location.href = 'auxiliary.html?m=' + b.dataset.m; }; });
+document.getElementById('open3d').href = 'viewer.html?m=' + NAME;
+
+const S = makeStage();
+const data = await loadData();
+const D = data[NAME], X = D.aux;
+const M = await loadModel(S, NAME, NAME === 'vee_block' ? '#D9B27A' : '#C9D3DD');
+
+// ---------- the geometry of the sloping face, all in CAD millimetres
+const V = {
+  add: (a, b) => a.map((v, i) => v + b[i]), sub: (a, b) => a.map((v, i) => v - b[i]),
+  mul: (a, k) => a.map(v => v * k), dot: (a, b) => a.reduce((s, v, i) => s + v * b[i], 0),
+};
+const n = X.normal, s = X.slope, c = X.centre, Y = [0, 1, 0];
+const Dp = D.size[1];
+const F = 22;                 // the front glass sits this far in front of the part
+const A = 18;                 // the auxiliary glass sits this far out from the sloping face
+const MARGIN = 4;
+const uOf = p => V.dot(V.sub(p, c), s);           // position along the slope
+const corners = X.corners.map(p => ({ u: uOf(p), y: p[1], p }));
+const holes = X.holes.map(h => ({ u: uOf(h.c), y: h.c[1], r: h.r, p: h.c }));
+const u0 = Math.min(...corners.map(k => k.u)), u1 = Math.max(...corners.map(k => k.u));
+const slopeLen = u1 - u0;
+const top = X.corners.reduce((a, b) => (b[2] > a[2] ? b : a)), bot = X.corners.reduce((a, b) => (b[2] < a[2] ? b : a));
+const planWidth = Math.abs(top[0] - bot[0]);
+const onFace = (u, y, off = 0) => V.add(V.add(V.add(c, V.mul(s, u)), V.mul(Y, y - c[1])), V.mul(n, off));
+// a point on the auxiliary glass, relative to the hinge (so the glass can turn about it)
+const hinge = V.add(V.add(c, V.mul(n, A)), V.mul(Y, -F - c[1]));
+const onAux = (u, y) => V.add(V.mul(s, u), V.mul(Y, y + F));
+// where that point lands once the glass is folded flat into the front glass, as (x, z) on the drawing
+const folded = (u, y) => { const p = V.add(V.add(c, V.mul(s, u)), V.mul(n, A + F + y)); return [p[0], p[2]]; };
+
+// ---------- the sloping face picked out in orange, with its hole left clear
+function faceShape(off) {
+  const shape = new THREE.Shape(corners.map(k => new THREE.Vector2(k.u, k.y)));
+  for (const h of holes) { const path = new THREE.Path(); path.absarc(h.u, h.y, h.r, 0, Math.PI * 2, true); shape.holes.push(path); }
+  const g = new THREE.ShapeGeometry(shape, 24), pos = g.attributes.position;
+  for (let i = 0; i < pos.count; i++) { const v = GA(onFace(pos.getX(i), pos.getY(i), off)); pos.setXYZ(i, v.x, v.y, v.z); }
+  g.computeVertexNormals();
+  return new THREE.Mesh(g, new THREE.MeshBasicMaterial({ color: AMBER, transparent: true, opacity: 0.85, side: THREE.DoubleSide, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 }));
+}
+const faceTint = faceShape(0.05); faceTint.material.userData.base = 0.85; S.scene.add(faceTint);
+
+// ---------- the line of sight: an arrow at 90 degrees to the face
+const nG = GA(n).normalize();
+const arrow = new THREE.Group();
+arrow.add(lines([[GA(onFace(0, c[1], 46)), GA(onFace(0, c[1], 7))]], { kind: 0.5, color: HI }));
+arrow.add(cone(GA(onFace(0, c[1], 2)), nG.clone().negate(), { len: 6, r: 2, color: HI }));
+S.scene.add(arrow);
+
+// ---------- the front glass with the front view drawn on it
+const FV = D.front;
+const PF = (x, z) => G(x, -F, z);
+const frontGlass = new THREE.Group();
+// the front glass covers the front view and reaches out to the hinge, where the second sheet meets it
+const hingeEnds = [folded(u0 - MARGIN, -F), folded(u1 + MARGIN, -F)];
+const fold0 = corners.map(k => folded(k.u, -F)).concat(corners.map(k => folded(k.u, Dp + MARGIN)));
+const xs = [0, D.size[0], ...fold0.map(p => p[0])], zs = [0, D.size[2], ...fold0.map(p => p[1])];
+const gx0 = Math.min(...xs) - 8, gx1 = Math.max(...xs) + 8, gz0 = Math.min(...zs) - 10, gz1 = Math.max(...zs) + 8;
+const glassMat = () => { const m = new THREE.MeshBasicMaterial({ color: 0x9CC3EE, transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false }); m.userData.base = 0.22; return m; };
+function hull(pts) {
+  pts = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+  const lo = [], hi = [];
+  for (const p of pts) { while (lo.length >= 2 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); }
+  for (const p of pts.slice().reverse()) { while (hi.length >= 2 && cr(hi[hi.length - 2], hi[hi.length - 1], p) <= 0) hi.pop(); hi.push(p); }
+  return lo.slice(0, -1).concat(hi.slice(0, -1));
+}
+const fx0 = -8, fx1 = D.size[0] + 8, fz0 = -12, fz1 = D.size[2] + 8;
+const frontHull = hull([[fx0, fz0], [fx1, fz0], [fx1, fz1], [fx0, fz1], ...hingeEnds]);
+{
+  const g = new THREE.ShapeGeometry(new THREE.Shape(frontHull.map(p => new THREE.Vector2(p[0], p[1])))), pos = g.attributes.position;
+  for (let i = 0; i < pos.count; i++) { const v = G(pos.getX(i), -F - 0.3, pos.getY(i)); pos.setXYZ(i, v.x, v.y, v.z); }
+  frontGlass.add(new THREE.Mesh(g, glassMat()));
+}
+frontGlass.add(lines(lift(FV.vis, PF), { kind: 'thick' }));
+if (FV.hid.length) frontGlass.add(lines(lift(FV.hid, PF), { pattern: 'dash' }));
+if (FV.lines.length) frontGlass.add(lines(FV.lines.map(([a, b]) => extend(a, b, 4).map(p => PF(p[0], p[1]))), { pattern: 'chain' }));
+S.scene.add(frontGlass);
+// the same hidden detail and centre line drawn on the front of the part, for the front view step
+const PFace = (x, z) => G(x, -0.6, z);
+const frontHidden = new THREE.Group();
+if (FV.hid.length) frontHidden.add(lines(lift(FV.hid, PFace), { pattern: 'dash', onTop: true }));
+if (FV.lines.length) frontHidden.add(lines(FV.lines.map(([a, b]) => extend(a, b, 4).map(p => PFace(p[0], p[1]))), { pattern: 'chain', onTop: true }));
+S.scene.add(frontHidden);
+const frontLab = S.label('Front view', PF(D.size[0] / 2, -6), 'ink');
+
+// ---------- the auxiliary glass, hinged to the front glass, with the true shape drawn on it
+const pivot = new THREE.Group(); pivot.position.copy(GA(hinge)); S.scene.add(pivot);
+const auxGlass = new THREE.Group(); pivot.add(auxGlass);
+const AG = (u, y) => GA(onAux(u, y));
+{
+  const a = AG(u0 - MARGIN, -F), b = AG(u1 + MARGIN, -F), cc = AG(u1 + MARGIN, Dp + MARGIN), d = AG(u0 - MARGIN, Dp + MARGIN);
+  const g = new THREE.BufferGeometry().setFromPoints([a, b, cc, a, cc, d]);
+  auxGlass.add(new THREE.Mesh(g, glassMat()));
+  auxGlass.add(lines([[a, b]], { kind: 0.3, color: HI }));         // the hinge line
+}
+auxGlass.add(lines([corners.map(k => AG(k.u, k.y)).concat([AG(corners[0].u, corners[0].y)])], { kind: 'thick' }));
+for (const h of holes) {
+  const ring = []; for (let k = 0; k <= 64; k++) { const t = k / 64 * Math.PI * 2; ring.push(AG(h.u + h.r * Math.cos(t), h.y + h.r * Math.sin(t))); }
+  auxGlass.add(lines([ring], { kind: 'thick' }));
+  auxGlass.add(lines([[AG(h.u - h.r - 4, h.y), AG(h.u + h.r + 4, h.y)], [AG(h.u, h.y - h.r - 4), AG(h.u, h.y + h.r + 4)]], { pattern: 'chain' }));
+}
+const auxLab = S.label('Auxiliary view: true shape', new THREE.Vector3(), '');
+const hingeLab = S.label('hinge', new THREE.Vector3(), 'ink');
+const auxLabAt = AG((u0 + u1) / 2, Dp + MARGIN + 9), hingeAt = AG(u0 - MARGIN - 6, -F);
+S.frameFns.push(() => { pivot.updateMatrixWorld(); auxLab.pos.copy(pivot.localToWorld(auxLabAt.clone())); hingeLab.pos.copy(pivot.localToWorld(hingeAt.clone())); });
+
+// projection lines from the face out to the auxiliary glass (in 3D), and on the flat drawing (after folding)
+const projPts = corners.map(k => [k.u, k.y]).concat(holes.flatMap(h => [[h.u - h.r, h.y], [h.u + h.r, h.y]]));
+const proj3d = lines(projPts.map(([u, y]) => [GA(onFace(u, y, 0.5)), GA(V.add(hinge, onAux(u, y)))]), { color: HI });
+S.scene.add(proj3d);
+const proj2dPts = [[u0, 0], [u1, 0]].concat(holes.flatMap(h => [[h.u - h.r, h.y], [h.u + h.r, h.y]]));
+const edge2d = u => { const p = V.add(c, V.mul(s, u)); return [p[0], p[2]]; };
+const proj2d = lines(proj2dPts.map(([u, y]) => { const e = edge2d(u); const f = folded(u, y);
+  const dir = [f[0] - e[0], f[1] - e[1]], L = Math.hypot(dir[0], dir[1]);
+  return [PF(e[0] + dir[0] / L * 2, e[1] + dir[1] / L * 2), PF(f[0] - dir[0] / L * (y > 0 ? 0 : 1), f[1] - dir[1] / L * (y > 0 ? 0 : 1))]; }), { color: HI });
+S.scene.add(proj2d);
+
+// fold angle: 0 = standing parallel to the face, 1 = folded flat into the front glass
+const Yg = G(0, 1, 0), sG = GA(s).normalize();
+const sign = new THREE.Vector3().crossVectors(sG, Yg).dot(nG) > 0 ? 1 : -1;
+let foldNow = 0, foldTw = null;
+const setFold = k => { foldNow = k; pivot.quaternion.setFromAxisAngle(sG, sign * k * Math.PI / 2); };
+function foldTo(k, ms) {
+  if (ms <= 1) { setFold(k); return; }
+  const from = foldNow, t0 = performance.now();
+  if (foldTw) S.frameFns.splice(S.frameFns.indexOf(foldTw), 1);
+  foldTw = now => { const t = Math.min(1, (now - t0) / ms), e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; setFold(from + (k - from) * e);
+    if (t >= 1) { S.frameFns.splice(S.frameFns.indexOf(foldTw), 1); foldTw = null; } };
+  S.frameFns.push(foldTw);
+}
+
+// labels that point things out on the part
+const faceLab = S.label(NAME === 'vee_block' ? 'vee face' : 'sloping face', GA(onFace(0, -6, 4)), '');
+const lineLab = S.label(NAME === 'vee_block' ? 'just a sloping line' : 'just a sloping line', GA(onFace(0, -2, 10)), '');
+const ovalLab = S.label(holes.length ? 'Is the hole really oval?' : 'Is it really this narrow?', GA(holes.length ? onFace(holes[0].u, holes[0].y - holes[0].r - 7, 2) : onFace(0, -7, 2)), 'big');
+// in the view square on to the face, does the depth of the part run to the right or to the left of the screen?
+const depthRight = new THREE.Vector3().crossVectors(new THREE.Vector3(0, 1, 0), GA(n)).dot(G(0, 1, 0)) > 0;
+const trueAt = holes.length ? (depthRight ? holes[0].y + holes[0].r + 3 : holes[0].y - holes[0].r - 3) : (depthRight ? Dp + 3 : -3);
+const trueLab = S.label(holes.length ? 'round: the true shape' : 'its true width', GA(onFace(holes.length ? holes[0].u : 0, trueAt, 2)), 'big l');
+const sightLab = S.label('line of sight at 90° to the face', GA(onFace(0, c[1], 52)), 'l');
+
+// ---------- the flat drawing for the last step (SVG), made from the same numbers
+function drawingSVG() {
+  const P = [], T = [];
+  const path = (pl, cls) => P.push(`<polyline class="${cls}" points="${pl.map(p => p[0].toFixed(2) + ',' + (-p[1]).toFixed(2)).join(' ')}"/>`);
+  FV.vis.forEach(pl => path(pl, 'k')); FV.hid.forEach(pl => path(pl, 'h'));
+  FV.lines.forEach(([a, b]) => path(extend(a, b, 4), 'c'));
+  path(corners.map(k => folded(k.u, k.y)).concat([folded(corners[0].u, corners[0].y)]), 'k');
+  for (const h of holes) {
+    const f = folded(h.u, h.y);
+    P.push(`<circle class="k" cx="${f[0].toFixed(2)}" cy="${(-f[1]).toFixed(2)}" r="${h.r}"/>`);
+    path([folded(h.u - h.r - 4, h.y), folded(h.u + h.r + 4, h.y)], 'c'); path([folded(h.u, h.y - h.r - 4), folded(h.u, h.y + h.r + 4)], 'c');
+  }
+  proj2dPts.forEach(([u, y]) => { const e = edge2d(u), f = folded(u, y), d = [f[0] - e[0], f[1] - e[1]], L = Math.hypot(d[0], d[1]);
+    path([[e[0] + d[0] / L * 2, e[1] + d[1] / L * 2], f], 'p'); });
+  // the plan, set to the right for comparison
+  const all = P.join('');
+  const pts = [...FV.vis.flat(), ...corners.map(k => folded(k.u, k.y)), ...corners.map(k => folded(k.u, k.y + 0))];
+  let x0 = Math.min(...pts.map(p => p[0])), x1 = Math.max(...pts.map(p => p[0])), z0 = Math.min(...pts.map(p => p[1])), z1 = Math.max(...pts.map(p => p[1]));
+  const px = x1 + 28, pz = z0;   // plan origin
+  const PP = [];
+  const ppath = (pl, cls) => PP.push(`<polyline class="${cls}" points="${pl.map(p => (p[0] + px).toFixed(2) + ',' + (-(p[1] + pz)).toFixed(2)).join(' ')}"/>`);
+  D.plan.vis.forEach(pl => ppath(pl, 'k')); D.plan.hid.forEach(pl => ppath(pl, 'h'));
+  D.plan.lines.forEach(([a, b]) => ppath(extend(a, b, 4), 'c'));
+  D.plan.marks.forEach(([m, r]) => { ppath([[m[0] - r - 4, m[1]], [m[0] + r + 4, m[1]]], 'c'); ppath([[m[0], m[1] - r - 4], [m[0], m[1] + r + 4]], 'c'); });
+  const X1 = px + D.size[0];
+  T.push(`<text x="${(D.size[0] / 2).toFixed(1)}" y="${(-z0 + 9).toFixed(1)}">Front view</text>`);
+  const fl = folded((u0 + u1) / 2, Dp + 21);
+  T.push(`<text class="hi" x="${fl[0].toFixed(1)}" y="${(-fl[1]).toFixed(1)}">Auxiliary view: true shape</text>`);
+  T.push(`<text x="${(px + D.size[0] / 2).toFixed(1)}" y="${(-pz + 9).toFixed(1)}">Plan: ${holes.length ? 'the hole looks squashed' : 'the face looks narrower'}</text>`);
+  // room for the labels: the auxiliary label is about 50 mm wide at this text size
+  x0 = Math.min(x0, fl[0] - 30); x1 = Math.max(x1, fl[0] + 30); z1 = Math.max(z1, fl[1] + 6);
+  const vx0 = x0 - 12, vx1 = Math.max(X1, x1) + 14, vz1 = Math.max(z1, pz + D.size[1]) + 14, vz0 = z0 - 16;
+  return `<svg viewBox="${vx0.toFixed(1)} ${(-vz1).toFixed(1)} ${(vx1 - vx0).toFixed(1)} ${(vz1 - vz0).toFixed(1)}" role="img" aria-label="Front view, auxiliary view and plan">
+    <style>polyline,circle{fill:none;stroke:#1D2B3A;stroke-linecap:round;stroke-linejoin:round}.k{stroke-width:.8}.h{stroke-width:.35;stroke-dasharray:3 1.5}
+    .c{stroke-width:.3;stroke-dasharray:8 1.5 1.5 1.5}.p{stroke:#6B2FB3;stroke-width:.3}text{font:4.2px Arial,sans-serif;fill:#1D2B3A;text-anchor:middle}text.hi{fill:#6B2FB3;font-weight:bold}</style>
+    ${all}${PP.join('')}${T.join('')}</svg>`;
+}
+const overlay = document.getElementById('overlay');
+overlay.innerHTML = drawingSVG();
+
+// ---------- the steps
+const veeWords = NAME === 'vee_block';
+const L42 = Math.round(slopeLen * 10) / 10, W16 = Math.round(planWidth * 10) / 10;
+const steps = [
+  { title: 'The part', text: veeWords
+      ? 'This is the vee block from slide 84. The orange face is one side of the vee, sloping at 45°. An auxiliary view is how we show a sloping face in its true size and shape.'
+      : 'This is the block on slide 85. The orange face slopes at 45°, and a 12 mm hole is drilled square to it. An auxiliary view is how we show a sloping face in its true size and shape.' },
+  { title: 'The front view', text: veeWords
+      ? `From the front, the vee face is just a sloping line, ${W16} mm across. You cannot see how wide it really is.`
+      : 'From the front, the sloping face is just a sloping line. You cannot see the shape of the hole at all: it only shows as hidden detail.' },
+  { title: 'The plan', text: veeWords
+      ? `From above, the vee face looks only ${W16} mm wide. Is it really that narrow? No. It slopes away from you, so it looks narrower than it is.`
+      : 'From above, the hole looks oval. Is it really oval? No. The face slopes away from you, so the hole looks squashed. The plan does not show the true shape either.' },
+  { title: 'The line of sight', text: 'To see the true shape we must look at the face square on: along a line of sight at 90° to it. That is the purple arrow. Watch where it takes us.' },
+  { title: 'Look at 90° to the face', text: veeWords
+      ? `Now we look along the arrow, at 90° to the vee face. It shows its true width, ${L42} mm (${W16} × 1.414). This is the auxiliary view: the only view that shows this face in its true size and shape.`
+      : `Now we look along the arrow, at 90° to the sloping face. The hole is round, and the face shows its full ${L42} mm length. This is the auxiliary view: the only view that shows this face in its true size and shape.` },
+  { title: 'The front view on a sheet of glass', text: 'Imagine a sheet of glass standing in front of the part. Looking straight through it, you trace the front view onto the glass, hidden detail and centre line included.' },
+  { title: 'The auxiliary plane', text: 'A second sheet of glass is set parallel to the sloping face and hinged to the first one. Projection lines (purple) carry the face across at 90°, so its true shape is drawn on this second sheet.' },
+  { title: 'Fold it flat', text: 'The second sheet folds down into the same plane as the front view. The projection lines still leave the sloping edge at 90°. This is where an auxiliary view sits on a drawing.' },
+  { title: 'On the drawing', text: `The finished drawing. Only the sloping face is drawn in the auxiliary view: the rest of the part already shows its true shape in the normal views. The plan is beside it for comparison: there ${veeWords ? 'the face looks narrower than it is' : 'the hole looks squashed'}.` },
+];
+
+const partBox = new THREE.Box3().setFromObject(M.group);
+const glassBox = partBox.clone(); frontHull.forEach(p => glassBox.expandByPoint(G(p[0], -F, p[1])));
+const flatBox = glassBox.clone(); fold0.forEach(p => flatBox.expandByPoint(G(p[0], -F, p[1])));
+const auxBox = glassBox.clone(); [AG(u0, Dp + MARGIN + 8), AG(u1, Dp + MARGIN + 8)].forEach(p => auxBox.expandByPoint(p.clone().add(pivot.position)));
+const isoDir = new THREE.Vector3(...(M.entry.iso || [1, 1, 1]));
+const DIRS = {
+  iso: isoDir, front: new THREE.Vector3(0, 0, 1), plan: new THREE.Vector3(0, 1, 0.001), aux: nG.clone(),
+  glass: new THREE.Vector3(nG.x * 0.6, 0.5, 1), aux3: new THREE.Vector3(nG.x * 0.75, 0.75, 0.8),
+};
+const arrowBox = partBox.clone().expandByPoint(GA(onFace(0, c[1], 50)));
+
+function show(obj, on, instant) { fade(S, obj, on ? 1 : 0, instant ? 1 : 400); }
+function apply(i, instant) {
+  const ms = instant ? 1 : 1100;
+  overlay.classList.toggle('show', i === 8);
+  show(faceTint, i <= 7, instant);
+  show(frontHidden, i === 1, instant);
+  show(arrow, i === 3 || i === 6, instant);
+  show(frontGlass, i >= 5, instant); frontLab.set(i >= 5 && i < 8);
+  show(auxGlass, i >= 6, instant); auxLab.set(i >= 6 && i < 8); hingeLab.set(i === 6);
+  show(proj3d, i === 6, instant); show(proj2d, i === 7, instant);
+  faceLab.set(i === 0); lineLab.set(i === 1); ovalLab.set(i === 2); sightLab.set(i === 3); trueLab.set(i === 4);
+  M.setOpacity(i === 7 ? 0.18 : i >= 5 ? 0.55 : 1); M.setEdges(i === 7 ? 0.3 : 1);
+  foldTo(i >= 7 ? 1 : 0, instant ? 1 : 1400);
+  const view = ['iso', 'front', 'plan', 'iso', 'aux', 'glass', 'aux3', 'front', 'front'][i];
+  const box = i === 3 ? arrowBox : i === 5 ? glassBox : i === 6 ? auxBox : i >= 7 ? flatBox : partBox;
+  S.flyFit(DIRS[view], box, i <= 4 ? 1.45 : 1.12, i === 7 ? (instant ? 1 : 1400) : ms);
+}
+const st = stepper(steps, apply);
+const f0 = S.fit(DIRS.iso, partBox, 1.35); S.place(DIRS.iso, f0.centre, f0.half);
+st.start();
+window.DEMO.ready = true;
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line types on a real view · Unit 3 CAD hub</title>
+<meta name="description" content="The step block from lesson slide 87. Each click adds the next type of line to the real 3D model.">
+<link rel="stylesheet" href="demo.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<header><a href="index.html">All models</a><h1>Line types on a real view</h1><span class="sp"></span><a href="viewer.html?m=step_block">Open the step block in the 3D viewer</a></header>
+<div id="stage"><div id="hint">Drag to turn the block. Scroll or pinch to zoom.</div></div>
+<aside id="panel">
+  <div class="count">Step <span id="sn">1</span> of <span id="st">9</span></div>
+  <h2 id="sh">Loading…</h2>
+  <p id="sp"></p>
+  <div class="nav"><button id="prev">Back</button><button id="next" class="primary">Next</button></div>
+  <div class="dots" id="dots"></div>
+  <p class="tip">The arrow keys and a presentation clicker also move through the steps. Lesson slides 86 and 87.</p>
+  <div class="tools"><span class="lab">View</span>
+    <button id="v3d">3D view</button><button id="vfront">Front view</button><button id="see">See-through</button>
+  </div>
+</aside>
+<script type="module">
+import { THREE, G, INK, HI, FAINT, makeStage, loadModel, loadData, lines, cone, dot, tint, fade, stepper, lift, extend } from './demo-common.js';
+
+const S = makeStage();
+const data = await loadData();
+const D = data.step_block, F = D.front;
+const M = await loadModel(S, 'step_block', '#CFD9E6');
+M.group.traverse(o => { if (o.isMesh) o.renderOrder = 0; });
+
+const L = D.size[0], H = D.size[2];
+const holeY = D.plan.marks.length ? D.plan.marks[0][0][1] : D.size[1] / 2;   // depth of the hole axis, from the plan
+const yf = -0.5;                                                              // the front view is drawn just in front of the front face
+const P = (x, z) => G(x, yf, z);
+const topAt = x => Math.max(...F.vis.flat().filter(p => Math.abs(p[0] - x) < 0.01).map(p => p[1]));
+const dimZ = H + 10;
+
+// ---------- the seven kinds of line, each a group so it can be shown, coloured and labelled on its own
+const kinds = {};
+function kind(key, objs, labelText, labelAt, cls, pointer) {
+  const g = new THREE.Group(); objs.forEach(o => g.add(o));
+  if (pointer) g.userData.pointer = lines([pointer], { kind: 'thin', color: HI });
+  if (g.userData.pointer) S.scene.add(g.userData.pointer);
+  S.scene.add(g);
+  const lab = labelText ? S.label(labelText, labelAt, cls) : null;
+  kinds[key] = { g, lab };
+  tint(g, null, 0); if (g.userData.pointer) tint(g.userData.pointer, null, 0); if (lab) lab.set(false);
+}
+kind('construction', [lines([[P(-10, 0), P(L + 15, 0)], [P(-10, H), P(L + 15, H)], [P(0, -6), P(0, H + 6)], [P(L, -6), P(L, H + 6)]], { kind: 'faint', color: FAINT })],
+  'construction lines<br>(removed at the end)', P(L + 17, H + 7), 'l');
+kind('outline', [lines(lift(F.vis, (x, z) => P(x, z)), { kind: 'thick' })],
+  'outline: thick', P(L + 16, 30), 'l', [P(L + 1, 30), P(L + 15, 30)]);
+kind('hidden', [lines(lift(F.hid, (x, z) => G(x, holeY, z)), { pattern: 'dash' })],
+  'hidden detail: thin dashed', P(L + 16, 14), 'l', [P(20.6, 11), P(L + 15, 14)]);
+kind('centre', [lines(F.lines.map(([a, b]) => extend(a, b, 5)).map(seg => seg.map(p => G(p[0], holeY, p[1]))), { pattern: 'chain' })],
+  'centre line: thin chain', G(15, holeY, -11), '');
+kind('projection', [lines([[P(0, topAt(0) + 2), P(0, dimZ + 3)], [P(L, topAt(L) + 2), P(L, dimZ + 3)]])],
+  'projection line', P(-16, dimZ + 7), 'r', [P(-1, dimZ + 2.5), P(-15, dimZ + 7)]);
+kind('dimension', [lines([[P(3.4, dimZ), P(L - 3.4, dimZ)]]), cone(P(0, dimZ), new THREE.Vector3(-1, 0, 0)), cone(P(L, dimZ), new THREE.Vector3(1, 0, 0))],
+  'dimension line', P(-16, dimZ - 5), 'r', [P(8, dimZ), P(-15, dimZ - 5)]);
+kind('leader', [lines([[P(-12, 10), P(5, 10)]]), dot(P(5, 10))],
+  'leader line', P(-16, 18), 'r');
+const figure = S.label(String(Math.round(L)), P(L / 2, dimZ + 3.5), 'ink big');
+const faceA = S.label('FACE A', P(-13, 10), 'ink r');
+figure.set(false); faceA.set(false);
+
+const ORDER = ['construction', 'outline', 'hidden', 'centre', 'projection', 'dimension', 'leader'];
+const steps = [
+  { title: 'The step block', text: 'This is the step block from Activity 1: 60 long, 40 deep and 40 high, with a 10 mm hole through the low step. Click Next to draw its front view one type of line at a time. Drag to turn the block round at any point.' },
+  { title: 'Construction lines', text: 'Very faint lines used to set out the drawing: where the top, bottom and ends of the view will go. They are rubbed out at the end, or drawn so faint that they do not print.' },
+  { title: 'Outline: thick continuous', text: 'The edges you can actually see from the front, drawn as a thick continuous line (about 0.7 mm). This is the only line that is a real edge of the part.' },
+  { title: 'Hidden detail: thin dashed', text: 'The hole goes right through the low step, but from the front you cannot see it. Its two sides are drawn as thin dashed lines. The block has gone see-through so you can see where the dashed lines come from.' },
+  { title: 'Centre line: thin chain', text: 'A long dash and a short dash. It marks the axis, the centre of the hole, and runs a little past the hole at each end.' },
+  { title: 'Projection lines: thin continuous', text: 'Thin lines that carry an edge out of the view so that a size can be put on it. They start with a small gap from the outline and run just past the dimension line.' },
+  { title: 'Dimension line: thin, an arrow at each end', text: 'It runs between the two projection lines with an arrowhead at each end. The number always gives the real size, 60 mm, whatever the scale of the drawing.' },
+  { title: 'Leader line', text: 'It points from a note to what the note is about. It ends in a dot when it touches a surface (here, face A) and in an arrowhead when it touches an edge.' },
+  { title: 'The finished front view', text: 'The construction lines are removed and the block is turned to face you. This is the front view on slide 87. <b>Which of these lines would a machinist actually cut along?</b> Only the outline. Every other line is information for the reader.' },
+];
+
+// ---------- the camera: a three-quarter view, or straight on from the front
+const box = new THREE.Box3();
+[P(-38, -14), P(L + 52, dimZ + 8), G(0, D.size[1], 0), G(L, D.size[1], H)].forEach(p => box.expandByPoint(p));
+const DIR3D = new THREE.Vector3(0.55, 0.42, 1), DIRF = new THREE.Vector3(0, 0, 1);
+let view = '3d', see = false;
+function setView(v, ms) { view = v; S.flyFit(v === 'front' ? DIRF : DIR3D, box, 1.08, ms);
+  document.getElementById('v3d').classList.toggle('on', v === '3d'); document.getElementById('vfront').classList.toggle('on', v === 'front'); }
+function setSee(on) { see = on; M.setOpacity(on ? 0.38 : 1); document.getElementById('see').classList.toggle('on', on); }
+
+function apply(i, instant) {
+  const shown = ORDER.slice(0, i);                // step i shows the first i kinds of line
+  const current = i >= 1 && i <= ORDER.length ? ORDER[i - 1] : null;
+  const finished = i === steps.length - 1;
+  for (const k of ORDER) {
+    const K = kinds[k], on = shown.includes(k) && !(finished && k === 'construction');
+    const col = k === 'construction' ? FAINT : (k === current ? HI : INK);
+    tint(K.g, col); fade(S, K.g, on ? 1 : 0, instant ? 1 : (on ? 450 : 300));
+    if (K.g.userData.pointer) { const pOn = on && (k === current || finished); if (pOn) fade(S, K.g.userData.pointer, 1, instant ? 1 : 450); else fade(S, K.g.userData.pointer, 0, 200); }
+    if (K.lab) K.lab.set(on && (k === current || finished || (k === 'construction' && current === 'construction')));
+  }
+  figure.set(shown.includes('dimension')); faceA.set(shown.includes('leader'));
+  setSee(i >= 3);
+  M.setEdges(i >= 2 ? 0.25 : 1);
+  setView(finished ? 'front' : '3d', instant ? 1 : 1100);
+}
+
+const st = stepper(steps, apply);
+document.getElementById('v3d').onclick = () => setView('3d');
+document.getElementById('vfront').onclick = () => setView('front');
+document.getElementById('see').onclick = () => setSee(!see);
+const f0 = S.fit(DIR3D, box, 1.08); S.place(DIR3D, f0.centre, f0.half);
+st.start();
+window.DEMO.ready = true;
+</script>
+</body>
+</html>
