@@ -1,0 +1,57 @@
+{
+ "name": "esp2026_sa7_life_vest",
+ "title": "ESP 2026 sub-assembly 7: life vest pouch",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pouch",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as life_vest_pouch.iam.",
+    "Place vest_pouch.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa7_life_vest/step_01.glb",
+   "edges": "ESP 2026/steps/esp2026_sa7_life_vest/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Life vest",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place life_vest.ipt inside the pouch: Mate it to the pouch floor and Flush the centre planes. Save."
+   ],
+   "note": "The pull tab lets the passenger pull the pouch open.",
+   "parts": [
+    {
+     "name": "life vest pouch",
+     "colour": "#3B4A5C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "life vest",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2026/steps/esp2026_sa7_life_vest/step_02.glb",
+   "edges": "ESP 2026/steps/esp2026_sa7_life_vest/step_02.json"
+  }
+ ]
+}

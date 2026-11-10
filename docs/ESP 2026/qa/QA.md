@@ -20,3 +20,17 @@ Checked 2026-11-10 on branch `claude/esp-2026`. Every line was checked, not assu
 | 14 | GitHub and project files | Pass | Branch pushed, pull request open and assigned to rahimachy26, folder copied to project files `ESP 2026`. Live site check is due after merging. |
 
 Known limits, stated in the calculations: life vests are treated as airline equipment outside the 8 kg limit (8.35 kg a seat with them); the leg corners are sharp because CadQuery could not fillet this profile; the 9 g check is static, the 16 g dynamic test is planned in the programme.
+
+## Update: assembly build-up (sub-assemblies)
+
+Added after the first merge, at Rahima's request, to show how the parts and components are put together.
+
+| # | Check | Result | Notes |
+|---|---|---|---|
+| 2 | Parts list | Pass | Every one of the 124 seat, frame and armrest instances belongs to exactly one of the 7 sub-assemblies; the 4 back pivot pins are placed at the top level (they join the backs to the spreaders). Each sub-assembly's parts list is generated from its instances. |
+| 6 | Files | Pass | 49 ESP 2026 models (3 assemblies, 7 sub-assemblies, 39 parts) with STEP, STL, GLB, edges, steps and drawings; `docs/models.json` has every entry, existing entries unchanged. |
+| 7 | Drawings | Pass | GA-06 (sub-assemblies exploded, every part ballooned) and GA-07 (structure tree and the 8 stages of assembly) checked by eye; balloons moved to the panel edges so none sits on geometry. |
+| 8 | Build steps | Pass | Each sub-assembly adds one part (or one matching group) per step; the set now places the sub-assemblies in 8 stages (25, 34, 67, 71, 86, 101, 122, 128 parts). `build_steps.py` confirms every last stage matches its finished model. |
+| 12 | Browser checks | Pass | `tools/test_esp2026.py`: 50 of 50 pass (25 pages and tabs, desktop and phone), including the 7 sub-assembly cards on the project page and the build steps, 3D and parts list tabs of the sub-assemblies. No errors, no sideways scroll. Fixed during QA: the catalogue now carries each sub-assembly's number and file name, so the project page can list them. |
+| 13 | Hub models unchanged | Pass | All 99 earlier entries in `docs/models.json` identical; `tools/build_models.py` only gains the per-part explode map (a dict), the single-axis explode used by the hub models is unchanged. |
+| 14 | GitHub and project files | Pass | New branch `claude/esp-2026-assembly` and pull request (the first one is merged), assigned to rahimachy26; project files `ESP 2026` updated. |

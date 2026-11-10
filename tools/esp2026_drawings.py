@@ -580,8 +580,145 @@ def ga05():
     finish(sh, 'ESP26-GA-05_parts_list', 'ESP 2026 parts list', 'ESP26-GA-05', 'NTS', 'Parts list')
 
 
+# ------------------------------------------------------------------ GA-06 exploded sub-assemblies
+def iso_fit(sh, shape, x, y, w, h, d=(-1, -1.3, 0.9)):
+    """Draw an isometric (no hidden lines) to fit the box (x, y, w, h); returns (ox, oy, scale)."""
+    D.ISO_DIR['d'] = d
+    data = D.view_data(shape, 'iso', hidden=False)
+    bx0, by0, bx1, by1 = data['bb']
+    si = min(w / (bx1 - bx0), h / (by1 - by0))
+    ox = x + (w - (bx1 - bx0) * si) / 2 - bx0 * si
+    oy = y + (h - (by1 - by0) * si) / 2 + by1 * si
+    D.draw_view(sh, data, ox, oy, si)
+    return ox, oy, si
+
+
+def balloon(sh, px, py, bx, by, no):
+    sh.add('<line class="lead" x1="%.2f" y1="%.2f" x2="%.2f" y2="%.2f"/>' % (px, py, bx, by))
+    sh.add('<circle cx="%.2f" cy="%.2f" r="0.5" fill="#111"/>' % (px, py))
+    sh.add('<circle class="box" cx="%.2f" cy="%.2f" r="2.6" fill="#fff"/>' % (bx, by))
+    sh.text(bx, by + 0.9, str(no), size=2.3, weight='bold')
+
+
+def exploded(key):
+    """The parts of a sub-assembly moved apart by its explode offsets: (name, part key, shape)."""
+    d = E.SUB[key]
+    out = []
+    for n, k, s_ in E.sub_items(key):
+        dx, dy, dz = d['explode'].get(n, (0, 0, 0))
+        out.append((n, k, s_.translate((dx, dy, dz))))
+    return out
+
+
+def ga06():
+    sh = D.Sheet()
+    cells = [(14 + c * 97, 16 + r * 116) for r in range(2) for c in range(4)]
+    for (x, y), d in zip(cells, E.SUBS):
+        items = exploded(d['key'])
+        sh.add('<rect class="thin" x="%.2f" y="%.2f" width="95" height="112"/>' % (x, y))
+        sh.text(x + 2, y + 5, 'SA%d %s' % (d['no'], d['title'].upper()), size=3, anchor='start', weight='bold')
+        sh.text(x + 2, y + 9, d['file'] + ', exploded', size=2.2, anchor='start')
+        ox, oy, si = iso_fit(sh, comp([(n, s_, None) for n, k, s_ in items]), x + 11, y + 14, 73, 76)
+        # one balloon per part number, pushed out from the middle of the view
+        cx, cy = x + 47.5, y + 52
+        seen = {}
+        for n, k, s_ in items:
+            bb = s_.val().BoundingBox()
+            px, py = D.proj(((bb.xmin + bb.xmax) / 2, (bb.ymin + bb.ymax) / 2, (bb.zmin + bb.zmax) / 2), 'iso')
+            seen.setdefault(E.PART[k]['no'], (ox + px * si, oy - py * si))
+        left = sorted([(no, p) for no, p in seen.items() if p[0] < cx], key=lambda t: t[1][1])
+        right = sorted([(no, p) for no, p in seen.items() if p[0] >= cx], key=lambda t: t[1][1])
+        for col, bx in ((left, x + 4.5), (right, x + 90.5)):
+            n = len(col)
+            for j, (no, (px, py)) in enumerate(col):
+                by = (y + 16 + j * (74 / (n - 1))) if n > 1 else min(max(py, y + 16), y + 90)
+                balloon(sh, px, py, bx, by, no)
+        rows = E.bom([n for n, k, s_ in E.sub_items(d['key'])], E.sub_items(d['key']))
+        lines = ['%d  %s x%d' % (r['no'], r['name'], r['qty']) for r in rows]
+        half = (len(lines) + 1) // 2 if len(lines) > 5 else len(lines)
+        for j, t in enumerate(lines):
+            col, row = (0, j) if j < half else (1, j - half)
+            sh.text(x + 2 + col * 47, y + 96 + row * 2.9, t[:36], size=1.75, anchor='start')
+    x, y = cells[7]
+    text_block(sh, x + 2, y + 6, [
+        'HOW THE SET IS BUILT',
+        'Each sub-assembly is its own .iam,',
+        'made from its parts (numbers are the',
+        'items on the parts list, ESP26-GA-05).',
+        '',
+        'Top level, esp2026_seat_set.iam:',
+        '  SA1 frame x1',
+        '  SA2 seat pan x3',
+        '  SA3 seat back x3',
+        '  back pivot pins (16, 17) x2 + x2',
+        '  SA4 recline lock x3',
+        '  SA5 armrest x4 (button on 3)',
+        '  SA6 lap belt x3',
+        '  SA7 life vest pouch x3',
+        '',
+        'Order of assembly and the stages: ESP26-GA-07.',
+        'Each sub-assembly has its own Inventor',
+        'build steps on the project page.',
+    ], size=2.3)
+    finish(sh, 'ESP26-GA-06_sub_assemblies', 'ESP 2026 sub-assemblies, exploded', 'ESP26-GA-06', 'NTS')
+
+
+# ------------------------------------------------------------------ GA-07 assembly structure and order
+def ga07():
+    import esp2026_steps as ST
+    sh = D.Sheet()
+    # the structure tree, left
+    x, y = 16, 20
+    sh.text(x, y, 'ASSEMBLY STRUCTURE', size=3.2, anchor='start', weight='bold')
+    y += 6
+    sh.text(x, y, 'esp2026_seat_set.iam  (128 parts)', size=2.5, anchor='start', weight='bold')
+    groups = [(d['file'], 'SA%d %s' % (d['no'], d['title']), {1: 1, 2: 3, 3: 3, 4: 3, 5: 4, 6: 3, 7: 3}[d['no']],
+               E.bom([n for n, k, s_ in E.sub_items(d['key'])], E.sub_items(d['key']))) for d in E.SUBS]
+    order = [groups[0], groups[1], groups[2], ('pins', 'Back pivot pins', 1, [dict(no=16, name='recline pivot pin', qty=2),
+                                                                             dict(no=17, name='end recline pivot pin', qty=2)])] + groups[3:]
+    yy = y + 4.5
+    for f, t, q, rows in order:
+        sh.line(x + 2, yy - 4.2, x + 2, yy - 0.8, 'thin')
+        sh.line(x + 2, yy - 0.8, x + 5, yy - 0.8, 'thin')
+        label = '%s  (%s)  x%d' % (t, f, q) if f != 'pins' else '%s (placed at the top level)' % t
+        sh.text(x + 6, yy, label, size=2.3, anchor='start', weight='bold')
+        yy += 3.4
+        for r in rows:
+            sh.text(x + 10, yy, '%2d  %s  x%d' % (r['no'], r['name'], r['qty']), size=1.95, anchor='start')
+            yy += 2.75
+        yy += 1.2
+    # the order of assembly: one picture per stage, right
+    stages = ST.seat_set()
+    sh.text(254, 20, 'ORDER OF ASSEMBLY (BUILD STEPS OF THE SET)', size=3.2, weight='bold')
+    cw, chh = 74, 62
+    for i, stg in enumerate(stages):
+        c, r = i % 4, i // 4
+        cx, cy = 104 + c * (cw + 2.5), 25 + r * (chh + 3)
+        sh.add('<rect class="thin" x="%.2f" y="%.2f" width="%.2f" height="%.2f"/>' % (cx, cy, cw, chh))
+        shape = comp([(n, s_, None) for n, s_, c_ in stg['parts']])
+        iso_fit(sh, shape, cx + 3, cy + 8, cw - 6, chh - 14, d=(-1, -1.4, 0.8))
+        sh.text(cx + 2, cy + 4.5, '%d. %s' % (i + 1, stg['title']), size=2.5, anchor='start', weight='bold')
+        sh.text(cx + cw - 2, cy + chh - 2, '%d parts' % len(stg['parts']), size=2.0, anchor='end')
+    text_block(sh, 104, 166, [
+        'HOW TO READ THIS SHEET',
+        'Left: the assembly structure. The top level assembly, esp2026_seat_set.iam, is made from seven',
+        'sub-assemblies (each its own .iam) and the four back pivot pins. Under each sub-assembly are its',
+        'parts, with the item numbers of the parts list (ESP26-GA-05) and how many go in one sub-assembly.',
+        'Right: the order the set is put together, one picture per build step, with the parts placed so far.',
+        '',
+        '1. Build each sub-assembly first, from its parts (exploded views on ESP26-GA-06).',
+        '2. Place the frame and ground it.',
+        '3. Add the seat pans and the backs, then pin the backs to the spreaders.',
+        '4. Fit the recline locks, armrests, lap belts and life vest pouches.',
+        '5. Check for interference upright, reclined, trays down and armrests up: no parts overlap.',
+        '',
+        'Every step, with the Inventor command to use, is on the Build steps tab of each model.',
+    ], size=2.4)
+    finish(sh, 'ESP26-GA-07_assembly_order', 'ESP 2026 assembly structure and order', 'ESP26-GA-07', 'NTS')
+
+
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    which = sys.argv[1:] or ['1', '2', '3', '4', '5']
+    which = sys.argv[1:] or ['1', '2', '3', '4', '5', '6', '7']
     for k in which:
-        dict(zip('12345', (ga01, ga02, ga03, ga04, ga05)))[k]()
+        dict(zip('1234567', (ga01, ga02, ga03, ga04, ga05, ga06, ga07)))[k]()

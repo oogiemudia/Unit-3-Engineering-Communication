@@ -1065,6 +1065,221 @@ def _seat_bom():
     return bom([n for n, k, s in items], items)
 
 
+# ------------------------------------------------------------------ sub-assemblies
+# How the set is built, the way it would be in Inventor: seven sub-assemblies (.iam), each made from its parts,
+# then placed into the top level assembly. Each one is shown on the middle seat (or the second armrest) in cabin
+# coordinates. 'explode' moves each part away from where it sits (mm) for the exploded views; 'steps' place the
+# parts one at a time (names, title, command, actions, note).
+FRAME_NAMES = ['leg 1', 'leg 2', 'track fitting 1a', 'track fitting 1b', 'track fitting 2a', 'track fitting 2b',
+               'track stud 1a', 'track stud 1b', 'track stud 2a', 'track stud 2b', 'front beam tube', 'rear beam tube',
+               'beam clamp collar 1a', 'beam clamp collar 1b', 'beam clamp collar 2a', 'beam clamp collar 2b',
+               'spreader 1', 'spreader 2', 'spreader 3', 'spreader 4',
+               'beam end cap 1', 'beam end cap 2', 'beam end cap 3', 'beam end cap 4', 'baggage bar']
+
+
+def _frame_explode():
+    ex = {}
+    for n in FRAME_NAMES:
+        if n.startswith('track fitting'):
+            ex[n] = (0, 0, -90)
+        elif n.startswith('track stud'):
+            ex[n] = (0, 0, -200)
+        elif 'beam tube' in n:
+            ex[n] = (0, 0, 220)
+        elif n.startswith('beam clamp'):
+            ex[n] = (0, 0, 220)
+        elif n.startswith('spreader'):
+            ex[n] = (0, 0, 450)
+        elif n.startswith('beam end cap'):
+            ex[n] = (0, 0, 220)
+        elif n == 'baggage bar':
+            ex[n] = (0, -220, 0)
+    return ex
+
+
+SUBS = [
+    dict(no=1, key='frame', title='frame', file='frame.iam', names=FRAME_NAMES, explode=_frame_explode(),
+         desc='The structure shared by the three seats: two machined legs on four track fittings and studs, the front '
+              'and rear beam tubes clamped by collars, four spreaders, end caps and the baggage bar.',
+         steps=[
+             (['leg 1', 'leg 2'], 'Place the legs', PLACE,
+              [NEW_ASSY + ' and save it as frame.iam.', 'Place leg.ipt and Place Grounded. Place a second leg 540 mm '
+               'along X (Mate the faces to the work plane with an offset of 270 each side of the centre).'], None),
+             (['track fitting 1a', 'track fitting 1b', 'track fitting 2a', 'track fitting 2b',
+               'track stud 1a', 'track stud 1b', 'track stud 2a', 'track stud 2b'], 'Track fittings and studs', CONSTRAIN,
+              ['Place track_fitting.ipt under each foot: Mate the top of the fitting to the underside of the foot, then '
+               'Flush the sides.', 'Place track_stud.ipt in each fitting: Insert the stud head into the stud hole.'],
+              'The studs lock into the aircraft seat track; the feet are 508 mm (20 track pitches) apart.'),
+             (['front beam tube', 'rear beam tube'], 'Beam tubes', CONSTRAIN,
+              ['Place beam_tube.ipt twice. Insert each tube into its bores in the two legs (axis to axis), and Flush the '
+               'tube centre plane with the assembly YZ plane so it sticks out 770 each side.'], None),
+             (['beam clamp collar 1a', 'beam clamp collar 1b', 'beam clamp collar 2a', 'beam clamp collar 2b'],
+              'Clamp collars', CONSTRAIN, ['Place beam_collar.ipt on each tube beside each leg boss: Insert the collar '
+                                           'bore on the tube and Mate its face to the leg.'],
+              'The collars stop the legs sliding along the tubes.'),
+             (['spreader 1', 'spreader 2', 'spreader 3', 'spreader 4'], 'Spreaders', PATTERN,
+              ['Place spreader.ipt and Insert its two bores on the tubes at X = -750.',
+               'Pattern > Rectangular: 4 along X, 500 mm apart.'],
+              'The spreaders sit under the armrests and carry the armrest and recline pivots.'),
+             (['beam end cap 1', 'beam end cap 2', 'beam end cap 3', 'beam end cap 4', 'baggage bar'],
+              'End caps and baggage bar', CONSTRAIN,
+              ['Place beam_end_cap.ipt in each tube end (Insert).', 'Place baggage_bar.ipt through the holes in the front '
+               'struts of the legs (Insert), centred.', 'Inspect tab > Analyze Interference: no overlaps. Save.'], None),
+         ]),
+    dict(no=2, key='seat_pan', title='seat pan', file='seat_pan.iam',
+         names=['seat 2 diaphragm', 'seat 2 cushion foam', 'seat 2 cushion cover'],
+         explode={'diaphragm': (0, 0, 0), 'cushion foam': (0, 0, 140), 'cushion cover': (0, 0, 280)},
+         desc='One seat pan: the woven diaphragm that spans the beam tubes, the foam cushion and its wipe clean cover.',
+         steps=[
+             (['diaphragm'], 'Diaphragm', PLACE, [NEW_ASSY + ' and save it as seat_pan.iam.',
+                                                  'Place seat_diaphragm.ipt and Place Grounded.'], None),
+             (['cushion foam'], 'Cushion foam', CONSTRAIN, ['Place seat_foam.ipt. Mate its underside to the top of the '
+                                                             'diaphragm and Flush the front edges and the centre planes.'],
+              'The foam is 80 mm deep at the front and 50 at the back, so the seat slopes back 3.8 degrees.'),
+             (['cushion cover'], 'Cover', CONSTRAIN, ['Place seat_cover.ipt over the foam: Mate the inside faces to the '
+                                                      'foam. Save.'],
+              'The cover is removable (hook and loop) so it can be cleaned or changed.'),
+         ]),
+    dict(no=3, key='seat_back', title='seat back', file='seat_back.iam',
+         names=['seat 2 back shell', 'seat 2 back cushion foam', 'seat 2 back cushion cover', 'seat 2 head rest',
+                'seat 2 literature pocket', 'seat 2 tray hinge arm, right', 'seat 2 tray hinge arm, left',
+                'seat 2 tray table', 'seat 2 tray latch', 'seat 2 entertainment screen', 'seat 2 power and audio module'],
+         explode={'back shell': (0, 0, 0), 'back cushion foam': (0, -220, 0), 'back cushion cover': (0, -380, 0),
+                  'head rest': (0, -120, 220), 'literature pocket': (0, 160, -60), 'tray hinge arm, right': (90, 230, 0),
+                  'tray hinge arm, left': (-90, 230, 0), 'tray table': (0, 330, 0), 'tray latch': (0, 300, 120),
+                  'entertainment screen': (0, 240, 160), 'power and audio module': (0, 240, 220)},
+         desc='One seat back: the carbon fibre shell with its cushion, cover and fixed head rest, and on the back the '
+              'A4 pocket, tray table with its hinge arms and latch, screen and power module for the passenger behind.',
+         steps=[
+             (['back shell'], 'Back shell', PLACE, [NEW_ASSY + ' and save it as seat_back.iam.',
+                                                    'Place back_shell.ipt and Place Grounded.'], None),
+             (['back cushion foam', 'back cushion cover'], 'Back cushion', CONSTRAIN,
+              ['Place back_foam.ipt in the open front of the shell (Mate its back face to the shell rim, Flush the centre '
+               'planes).', 'Place back_cover.ipt over the foam (Mate inside faces to the foam).'], None),
+             (['head rest'], 'Fixed head rest', CONSTRAIN, ['Place headrest.ipt on top of the shell: Mate its underside to '
+                                                             'the top of the shell and Flush the centre planes.'],
+              'Fixed, as the brief asks: there is no adjuster.'),
+             (['literature pocket'], 'Literature pocket', CONSTRAIN,
+              ['Place literature_pocket.ipt on the lower back of the shell (Mate, then Flush the centre planes).'],
+              'Holds A4 safety cards and magazines.'),
+             (['tray hinge arm, right', 'tray hinge arm, left', 'tray table', 'tray latch'], 'Tray table', CONSTRAIN,
+              ['Place tray_arm.ipt on each side of the shell (Mate), Mirror Components for the second one.',
+               'Place tray_table.ipt: Insert the hinge stubs into the tray holes. Add an Angle constraint 0 degrees '
+               '(stowed); the tray turns 78 degrees to sit level.', 'Place tray_latch.ipt above the tray.'], None),
+             (['entertainment screen', 'power and audio module'], 'Screen and power', CONSTRAIN,
+              ['Place ife_screen.ipt in the recess at the top of the back and usb_module.ipt beside it (Mate, Flush). Save.'],
+              None),
+         ]),
+    dict(no=4, key='recline_lock', title='recline lock', file='recline_lock.iam',
+         names=['seat 2 recline lock bracket', 'seat 2 recline lock', 'seat 2 recline lock rod',
+                'seat 2 recline lock pin, front', 'seat 2 recline lock pin, rear'],
+         explode={'recline lock bracket': (0, -80, 30), 'recline lock pin, front': (45, -40, 0), 'recline lock': (0, 0, 0),
+                  'recline lock rod': (0, 90, 0), 'recline lock pin, rear': (45, 180, 0)},
+         desc='One recline lock: the bracket clamped under the front beam, the hydraulic locking cylinder and its rod, '
+              'and the two pins. Pressing the button on the armrest opens the lock so the back can recline 5 degrees.',
+         steps=[
+             (['recline lock'], 'Locking cylinder', PLACE, [NEW_ASSY + ' and save it as recline_lock.iam.',
+                                                            'Place recline_lock.ipt and Place Grounded.'], None),
+             (['recline lock rod'], 'Rod', CONSTRAIN, ['Place recline_rod.ipt and Insert it in the bore of the cylinder '
+                                                       '(axis to axis).'], 'Bought in as one unit with the cylinder.'),
+             (['recline lock bracket', 'recline lock pin, front'], 'Bracket and front pin', CONSTRAIN,
+              ['Place recline_bracket.ipt and line up its pin hole with the front eye (Insert).',
+               'Place lock_pin.ipt through the bracket and the eye (Insert).'], None),
+             (['recline lock pin, rear'], 'Rear pin', CONSTRAIN,
+              ['Place lock_pin.ipt in the rod eye (Insert). In the set it also passes through the lever on the back shell. '
+               'Save.'], None),
+         ]),
+    dict(no=5, key='armrest', title='armrest', file='armrest.iam',
+         names=['armrest 2', 'armrest pad 2', 'armrest pin 2', 'recline button 1'],
+         explode={'armrest 2': (0, 0, 0), 'armrest pad 2': (0, 0, 70), 'armrest pin 2': (110, 0, 0),
+                  'recline button 1': (0, -40, 90)},
+         desc='One armrest: the glass filled nylon arm, its soft pad, the pivot pin it lifts on and the recline button '
+              'in its front end (on three of the four armrests).',
+         steps=[
+             (['armrest 2'], 'Armrest', PLACE, [NEW_ASSY + ' and save it as armrest.iam.',
+                                                'Place armrest.ipt and Place Grounded.'], None),
+             (['armrest pad 2'], 'Pad', CONSTRAIN, ['Place armrest_pad.ipt on top (Mate, Flush the centre planes).'], None),
+             (['recline button 1'], 'Recline button', CONSTRAIN,
+              ['Place recline_button.ipt in the hole on top of the front end (Insert).'],
+              'Large and light to press, so every passenger can use it.'),
+             (['armrest pin 2'], 'Pivot pin', CONSTRAIN,
+              ['Place armrest_pin.ipt in the pivot hole (Insert). In the set it passes through the spreader too. Save.'],
+              'The armrest lifts 90 degrees on this pin.'),
+         ]),
+    dict(no=6, key='lap_belt', title='lap belt', file='lap_belt.iam',
+         names=['seat 2 belt anchor, right', 'seat 2 belt anchor, left', 'seat 2 belt webbing, buckle side',
+                'seat 2 belt webbing, adjuster side', 'seat 2 buckle body', 'seat 2 buckle lift lever', 'seat 2 belt tongue'],
+         explode={'belt anchor, right': (90, 0, -60), 'belt anchor, left': (-90, 0, -60),
+                  'belt webbing, buckle side': (0, 0, 0), 'belt webbing, adjuster side': (0, 0, 0),
+                  'buckle body': (0, 0, 60), 'buckle lift lever': (0, 0, 120), 'belt tongue': (0, -70, 60)},
+         desc='One lap belt: an anchor each side, the two webbing halves, the buckle body with its lift lever and the '
+              'tongue with the slide bar adjuster. Length 1170 to 1420 mm.',
+         steps=[
+             (['belt anchor, right', 'belt anchor, left'], 'Anchors', PLACE,
+              [NEW_ASSY + ' and save it as lap_belt.iam.', 'Place belt_anchor.ipt twice, 450 mm apart (Mirror Components '
+                                                             'for the left one).'], None),
+             (['belt webbing, buckle side', 'belt webbing, adjuster side'], 'Webbing', CONSTRAIN,
+              ['Place belt_strap_buckle.ipt on the right anchor and belt_strap_adjust.ipt on the left anchor (Mate the '
+               'loop to the anchor).'], None),
+             (['buckle body', 'buckle lift lever'], 'Buckle', CONSTRAIN,
+              ['Place buckle_body.ipt on the end of the buckle side webbing and buckle_lever.ipt on top of it (Mate, '
+               'Flush).'], 'Lift the lever and the tongue comes free.'),
+             (['belt tongue'], 'Tongue', CONSTRAIN,
+              ['Place belt_tongue.ipt on the adjuster side webbing and Insert it in the buckle slot. Save.'],
+              'The slide bar sets the length.'),
+         ]),
+    dict(no=7, key='life_vest', title='life vest pouch', file='life_vest_pouch.iam',
+         names=['seat 2 life vest pouch', 'seat 2 life vest'],
+         explode={'life vest pouch': (0, 0, 0), 'life vest': (0, -380, 0)},
+         desc='The pouch under each seat and the life vest pack (305 x 305 x 50) that slides into it.',
+         steps=[
+             (['life vest pouch'], 'Pouch', PLACE, [NEW_ASSY + ' and save it as life_vest_pouch.iam.',
+                                                    'Place vest_pouch.ipt and Place Grounded.'], None),
+             (['life vest'], 'Life vest', CONSTRAIN, ['Place life_vest.ipt inside the pouch: Mate it to the pouch floor '
+                                                      'and Flush the centre planes. Save.'],
+              'The pull tab lets the passenger pull the pouch open.'),
+         ]),
+]
+SUB = {d['key']: d for d in SUBS}
+
+
+def sub_model_name(d):
+    return 'esp2026_sa%d_%s' % (d['no'], d['key'])
+
+
+def sub_items(key):
+    """The instances of one sub-assembly: (display name, part key, shape), names without the 'seat 2 ' prefix."""
+    d = SUB[key]
+    by = {n: (k, s) for n, k, s in set_instances()}
+    return [(n.replace('seat 2 ', ''), by[n][0], by[n][1]) for n in d['names']]
+
+
+def sub_of(name):
+    """Which sub-assembly an instance of the set belongs to (the back pivot pins go in at the top level)."""
+    for d in SUBS:
+        for n in d['names']:
+            base = n.replace('seat 2 ', '')
+            if name == n or (name.startswith('seat ') and name.split(' ', 2)[2] == base) or \
+               (d['key'] == 'armrest' and name.split(' ')[0] in ('armrest', 'recline') and
+                name.rsplit(' ', 1)[0] in ('armrest', 'armrest pad', 'armrest pin', 'recline button')):
+                return d['key']
+    return None
+
+
+def _sub_fn(d):
+    def fn():
+        return [(n, s, colour(k)) for n, k, s in sub_items(d['key'])]
+    fn.__doc__ = d['desc']
+    return fn
+
+
+def _sub_bom(d):
+    def fn():
+        items = sub_items(d['key'])
+        return bom([n for n, k, s in items], items)
+    return fn
+
+
 MODELS = [
     dict(name='esp2026_seat_set', title='ESP 2026 three-seat set (GA)', fn=seat_set, criteria='3.1, 3.2',
          uses='ESP 2026 Task 2, Part B: the preferred design, an economy class three-seat set assembled from %d '
@@ -1078,6 +1293,13 @@ MODELS = [
          uses='ESP 2026 Task 2, Part A: the second design idea, fixed shell seats with a sliding seat pan, for '
               'comparison with design A.', section=None, explode=None, iso=(-1, -1.4, 0.8), folder='ESP 2026', fea=False),
 ]
+
+for _d in SUBS:
+    MODELS.append(dict(
+        name=sub_model_name(_d), title='ESP 2026 sub-assembly %d: %s' % (_d['no'], _d['title']), fn=_sub_fn(_d),
+        criteria='3.1, 3.2', uses='ESP 2026 sub-assembly %s: %s' % (_d['file'], _d['desc']), description=_d['desc'],
+        section=None, explode=_d['explode'], folder='ESP 2026', bom=_sub_bom(_d), fea=False,
+        iso=(-1, -1.3, 0.9), sub=dict(no=_d['no'], key=_d['key'], file=_d['file'])))
 
 for _p in PARTS:
     MODELS.append(dict(

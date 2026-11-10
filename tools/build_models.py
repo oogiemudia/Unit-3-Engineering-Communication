@@ -85,6 +85,9 @@ def explode_offsets(items, axis):
     """Spread the parts out along the explode axis in the order they sit along it."""
     if not axis:
         return [[0, 0, 0] for _ in items]
+    if isinstance(axis, dict):
+        # a sub-assembly gives each part its own move (mm, model axes), as an Inventor presentation does
+        return [list(np.round(np.array(to_gl(axis.get(name, (0, 0, 0))), dtype=float), 2)) for name, wp, col in items]
     ax = np.array(to_gl(axis), dtype=float)
     cents = []
     for name, wp, col in items:
@@ -155,6 +158,8 @@ def build(only=None):
             entry['sim'] = True
         if m.get('part'):
             entry['part'] = m['part']
+        if m.get('sub'):
+            entry['sub'] = m['sub']
         if m.get('bom'):
             entry['bom'] = m['bom']()
         if m.get('hide'):
