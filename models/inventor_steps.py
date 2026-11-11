@@ -681,3 +681,6 @@ STEPS.update(ESP2025_STEPS)
 
 from library import STEPS as LIBRARY_STEPS  # noqa: E402
 STEPS.update({k: v for k, v in LIBRARY_STEPS.items()})
+
+from worldskill import STEPS as WORLDSKILL_STEPS  # noqa: E402
+STEPS.update(WORLDSKILL_STEPS)

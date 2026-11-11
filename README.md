@@ -64,6 +64,19 @@ Each model has every component as its own part with a parts list, third angle, f
 | Knuckle joint | 9 | The classic knuckle joint drawn in proportion to the rod diameter: eye, fork, pin, collar and taper pin. Simulation of the eye swinging on the pin; FEA of the eye end in tension. |
 | Piston and crank (single cylinder engine) | 25 | A single cylinder slider-crank: crankshaft, split connecting rod, piston with rings, finned barrel, head and flywheel. Simulation of the piston stroke; FEA of the connecting rod. |
 
+## World Skill (WorldSkills UK Mechanical Engineering: CAD)
+
+The four parts of the WorldSkills UK Mechanical Engineering: CAD pre-competition activity, the 2022 "Part Modelling Speed Test" (1 hour, create 3D models for all the parts on the drawings). It is the only practice paper WorldSkills UK has published for this competition from 2020 to 2026, and the 2025 and 2026 technical handbooks still point to it: [the 2022 activity (PDF)](https://www.worldskillsuk.org/wp-content/uploads/2022/02/Mechanical-Engineering-CAD-Pre-Passive-Activity-2022.pdf). The National Qualifier and Final papers are not published, and the handbooks' 2019 and 2018 sample projects give no part drawings.
+
+Every part is modelled to the sizes on the competition sheets (`models/worldskill.py`) and all its files are in `docs/World Skill/`, with a folder page (`docs/World Skill/index.html`) and a World Skill filter in the catalogue. Each has Inventor build steps (feature by feature), third angle, first angle and section drawings (prefix WS), a STEP file and turntable, views and section videos. Section A-A on each hub drawing is the section on the competition sheet. `python tools/test_worldskill.py` checks over 100 sizes from the sheets against the solids (add `--browser` for the page checks).
+
+| Part | Sheet | What it shows | Material, mass |
+|---|---|---|---|
+| Crank | 1 of 5 | 55 disc with a counterweight crescent recess, 11 crank pin hole 15.8 off centre, 15 shaft with a taper, a key slot and a 4 hole through. Section A-A. | Mild steel, 197 g |
+| Piston head | 1 of 5 | 44 x 44 piston: SR62.5 crown 3.0 thick, two ring grooves, 17 pin bosses with an 11 hole, skirt cut-outs at 41.2 degrees. Section A-A is section C-C on the sheet. | Mild steel, 143 g |
+| Pull cord grill | 2 of 5 | 95 flange, slotted cone and 75 cup, cord box 20 wide with a 6.0 cord hole, 3 x 4.0 holes. Section A-A is section D-D. | ABS, 31 g |
+| Cord case | 2 of 5 | Recoil starter pulley: 49.1 cord groove, 70 flange, 40 tube and 16 hub, cord guide, six gussets, 16 pockets underneath. Section A-A is section E-E. | PEEK, 49 g |
+
 ## ESP 2023 lock gates (Employer-Set Project, Task 2)
 
 The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal Heritage) keeps every file it generates in one folder, `docs/ESP 2023/`, with its own project page (`docs/ESP 2023/index.html`). Its models also appear in the catalogue under the ESP 2023 filter. Every component is its own part model (41 parts, `esp2023_p01_heel_post` to `esp2023_p41_cill`), each with build steps, a drawing with a key sizes table and a STEP file; these show only under the ESP 2023 filter. In the 3D viewer the GA and the gate leaf have a parts list: click a part to open it, or untick it to hide it.

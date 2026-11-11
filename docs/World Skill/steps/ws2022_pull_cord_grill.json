@@ -1,0 +1,161 @@
+{
+ "name": "ws2022_pull_cord_grill",
+ "title": "WorldSkills 2022: pull cord grill",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Pull cord grill: revolve the body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pull_cord_grill.ipt.",
+    "Start 2D Sketch on the XZ Plane. Half profile: the flange 95 diameter at the bottom, 4.0 thick, sloping in to the cone; the cone up to the 75 diameter cup at 29.0/30.0; the cup wall 71 inside from 21.0 up; the top 1.0 above the cup and the middle 65 diameter raised to 31.0 with an R6.0 edge.",
+    "Inside the cone the profile is 72.8 diameter (the inner edge of the slots, 36.4 radius) down to the bottom; the flange is 80 inside.",
+    "Finish Sketch. Revolve about the Z axis, Full. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_01.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pull cord grill: boss under the top",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the underside of the top. Circles 18.0 and 14.0 diameter on the centre.",
+    "Finish Sketch. Extrude the ring 3.0 down (Join)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_02.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pull cord grill: cage slots",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Start 2D Sketch on the XY Plane. One radial slot 8.0 wide, centred on the line to the cord box.",
+    "Finish Sketch. Extrude: Cut, from the flange up to the cup (21.0) through the cone, and up to the top outside the cup so the ribs stand proud of it.",
+    "Circular Pattern: the slot cut, about the Z axis, 23 occurrences, 360 degrees. The rib pitch (15.65 degrees) and the slot width are scaled from the plan; the sheet gives 8.0."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": true,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_03.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Pull cord grill: cord box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the XY Plane. Rectangle 20.0 wide, its inner side 13.7 from the centre line, out to 50.0 from the centre. Finish Sketch. Extrude 30.0 (Join), stopping at the inside of the cup."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_04.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Pull cord grill: hollow the box",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the bottom face. Offset the box outline in by 2.0 (wall 2.0, see the plan).",
+    "Finish Sketch. Extrude: Cut, To the underside of the top. The box now opens into the cup."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_05.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Pull cord grill: cord hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the end face of the box: 10.0 from its side and 15.0 up. Simple Hole 6.0 diameter, Distance 2.0 (through the 2.0 wall)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_06.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Pull cord grill: flange holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: 3 x 4.0 THRU in the flange on the 87.5 pitch circle, at 31.3 degrees, 11.7 degrees and 23.5 degrees from the centre lines, as on the plan. Save."
+   ],
+   "note": "The plan on the sheet is a view from underneath, so its angles read anticlockwise from below.",
+   "parts": [
+    {
+     "name": "pull cord grill",
+     "colour": "#F0904F",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_pull_cord_grill/step_07.glb",
+   "edges": "World Skill/steps/ws2022_pull_cord_grill/step_07.json"
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "name": "ws2022_cord_case",
+ "title": "WorldSkills 2022: cord case",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Cord case: revolve the body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cord_case.ipt.",
+    "Start 2D Sketch on the XZ Plane. Half profile: base 64.4 diameter at 7.0 (drafted out to the bottom), the cord groove 49.1 diameter from 7.0 to 15.0, the flange 70 diameter from 15.0 to 17.5, then the tube 40 diameter up to 40.0.",
+    "Finish Sketch. Revolve about the Z axis, Full. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_01.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cord case: bore and hub",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve Cut the 36 bore 25.5 deep from the top, then Revolve (Join) the 16 hub 5.0 up from the floor of the bore."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_02.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Cord case: centre hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Concentric, Simple Hole, diameter 14.0, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_03.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cord case: recess in the bottom",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the bottom face. Circle 64.0. Finish Sketch. Extrude: Cut, 3.5."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_04.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Cord case: pockets and groove in the bottom",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Start 2D Sketch on the floor of the recess. One pocket between R11.0 and R19.0, bounded by two spokes; its centre line 4.1 degrees off the vertical centre line (detail F).",
+    "Finish Sketch. Extrude: Cut 1.0. Circular Pattern: 16 occurrences (22.5 degree centres).",
+    "Sketch the ring R19.0 to R20.0 and Extrude: Cut 5.5 from the bottom of the recess."
+   ],
+   "note": "The spoke width (1.5) is scaled from detail F; the sheet gives the 22.5 degree and 6.3 centres.",
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_05.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Cord case: gussets on the flange",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Start 2D Sketch on a work plane through the axis. Triangle 12.0 long on the flange and 3.0 high on the tube.",
+    "Finish Sketch. Extrude 2.5 Symmetric (Join). Circular Pattern: 6 occurrences, 60 degrees apart, the first 29.6 degrees from the centre line."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_06.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Cord case: cord guide",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the flange top. The guide: two side walls 1.7 thick, 17.5 wide over the walls, from the tube out to the end wall between R30.3 and R32.0.",
+    "Finish Sketch. Extrude 10.0 (Join)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_07.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Cord case: hole in the guide",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the flange top inside the guide, 27.4 from the centre: Simple Hole 4.0, Distance 2.5. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cord case",
+     "colour": "#CDD1D6",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_cord_case/step_08.glb",
+   "edges": "World Skill/steps/ws2022_cord_case/step_08.json"
+  }
+ ]
+}

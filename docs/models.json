@@ -26009,5 +26009,181 @@
    "third": "ESP 2025/drawings/esp2025_p37_drawer_seal_third_angle",
    "first": "ESP 2025/drawings/esp2025_p37_drawer_seal_first_angle"
   }
+ },
+ {
+  "name": "ws2022_crank",
+  "title": "WorldSkills 2022: crank",
+  "criteria": "3.1, 3.2",
+  "uses": "Revolve, offset holes, a recess left by two circles, a detail view at 2:1, section A-A through the pin hole and shaft.",
+  "description": "The crank from sheet 1 of the WorldSkills UK 2022 part modelling speed test: a 55 diameter disc with a counterweight crescent on the back, an 11 crank pin hole 15.8 off centre, a 15 shaft with a taper and key slot, and a 4 hole down the middle. Mild steel.",
+  "parts": [
+   {
+    "name": "crank",
+    "colour": "#9AA6B2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   44.5,
+   55.0,
+   55.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1.2,
+   0.8,
+   1.0
+  ],
+  "files": {
+   "step": "World Skill/step/ws2022_crank.step",
+   "stl": "World Skill/stl/ws2022_crank.stl",
+   "glb": "World Skill/glb/ws2022_crank.glb",
+   "edges": "World Skill/edges/ws2022_crank.json"
+  },
+  "base": "World Skill/",
+  "folder": "World Skill",
+  "fea": false,
+  "drawings": {
+   "third": "World Skill/drawings/ws2022_crank_third_angle",
+   "first": "World Skill/drawings/ws2022_crank_first_angle",
+   "section": "World Skill/drawings/ws2022_crank_section"
+  }
+ },
+ {
+  "name": "ws2022_piston_head",
+  "title": "WorldSkills 2022: piston head",
+  "criteria": "3.1, 3.2",
+  "uses": "Revolved profiles, spherical faces, ring grooves, bosses and a cut through all; section A-A is section C-C on the sheet.",
+  "description": "The piston head from sheet 1: 44 diameter, 44 high, an SR62.5 crown 3.0 thick, two ring grooves, pin bosses 17 diameter with an 11 pin hole, and skirt cut-outs at 41.2 degrees. Mild steel.",
+  "parts": [
+   {
+    "name": "piston head",
+    "colour": "#9AA6B2",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   44.0,
+   44.0,
+   44.2
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   0.9,
+   1.2
+  ],
+  "files": {
+   "step": "World Skill/step/ws2022_piston_head.step",
+   "stl": "World Skill/stl/ws2022_piston_head.stl",
+   "glb": "World Skill/glb/ws2022_piston_head.glb",
+   "edges": "World Skill/edges/ws2022_piston_head.json"
+  },
+  "base": "World Skill/",
+  "folder": "World Skill",
+  "fea": false,
+  "drawings": {
+   "third": "World Skill/drawings/ws2022_piston_head_third_angle",
+   "first": "World Skill/drawings/ws2022_piston_head_first_angle",
+   "section": "World Skill/drawings/ws2022_piston_head_section"
+  }
+ },
+ {
+  "name": "ws2022_pull_cord_grill",
+  "title": "WorldSkills 2022: pull cord grill",
+  "criteria": "3.1, 3.2",
+  "uses": "A moulded plastic part: revolve, a circular pattern of slots, a hollow box with 2.0 walls and holes on a pitch circle; section A-A is section D-D on the sheet.",
+  "description": "The pull cord grill from sheet 2: a 75 diameter cup on a slotted cone down to a 95 flange with three 4.0 holes, a cord box 20 wide with a 6.0 cord hole, and a boss under the top. ABS plastic, smooth, light orange.",
+  "parts": [
+   {
+    "name": "pull cord grill",
+    "colour": "#F0904F",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   95.0,
+   97.5,
+   31.0
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   1,
+   0.9,
+   1.1
+  ],
+  "files": {
+   "step": "World Skill/step/ws2022_pull_cord_grill.step",
+   "stl": "World Skill/stl/ws2022_pull_cord_grill.stl",
+   "glb": "World Skill/glb/ws2022_pull_cord_grill.glb",
+   "edges": "World Skill/edges/ws2022_pull_cord_grill.json"
+  },
+  "base": "World Skill/",
+  "folder": "World Skill",
+  "fea": false,
+  "drawings": {
+   "third": "World Skill/drawings/ws2022_pull_cord_grill_third_angle",
+   "first": "World Skill/drawings/ws2022_pull_cord_grill_first_angle",
+   "section": "World Skill/drawings/ws2022_pull_cord_grill_section"
+  }
+ },
+ {
+  "name": "ws2022_cord_case",
+  "title": "WorldSkills 2022: cord case",
+  "criteria": "3.1, 3.2",
+  "uses": "Revolve, a pattern of pockets on the underside, gussets and a cord guide; section A-A is section E-E on the sheet.",
+  "description": "The cord case (recoil starter pulley) from sheet 2: a 49.1 cord groove between a 64.4 base and a 70 flange, a 40 tube with a 16 hub, a cord guide, six gussets and 16 pockets in the bottom. PEEK plastic.",
+  "parts": [
+   {
+    "name": "cord case",
+    "colour": "#CDD1D6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   70.0,
+   40.1
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   -1,
+   0.9,
+   1.2
+  ],
+  "files": {
+   "step": "World Skill/step/ws2022_cord_case.step",
+   "stl": "World Skill/stl/ws2022_cord_case.stl",
+   "glb": "World Skill/glb/ws2022_cord_case.glb",
+   "edges": "World Skill/edges/ws2022_cord_case.json"
+  },
+  "base": "World Skill/",
+  "folder": "World Skill",
+  "fea": false,
+  "drawings": {
+   "third": "World Skill/drawings/ws2022_cord_case_third_angle",
+   "first": "World Skill/drawings/ws2022_cord_case_first_angle",
+   "section": "World Skill/drawings/ws2022_cord_case_section"
+  }
  }
 ]
