@@ -30,12 +30,17 @@ def vol(wp):
         return 0.0
 
 
+SCALE = {'k': 1}     # large models (pipework, aircraft) mesh with a coarser chord tolerance: the model's mesh_scale
+
+
 def tess(name):
-    return (0.12, 0.5) if 'spring' in name else (0.05, 0.2)
+    tol, ang = (0.12, 0.5) if 'spring' in name else (0.05, 0.2)
+    return tol * SCALE['k'], ang
 
 
 def build_model(m):
     name = m['name']
+    SCALE['k'] = m.get('mesh_scale') or 1
     steps = bs.STEPS[name]()
     final = {p: w for p, w, c in m['fn']()}
     last = {p: w for p, w, c in steps[-1]['parts']}
@@ -43,6 +48,15 @@ def build_model(m):
     for p in final:
         a, b = vol(final[p]), vol(last[p])
         diff = vol(final[p].cut(last[p])) + vol(last[p].cut(final[p])) if 'spring' not in p else abs(a - b)
+        if diff >= 0.5 and abs(a - b) < 0.5:
+            # a boolean between two copies of the same curved solid can fail (it returns the whole solid);
+            # then compare the volume, bounding box and centre of mass instead
+            fa, fb = final[p].val(), last[p].val()
+            ba, bb = fa.BoundingBox(), fb.BoundingBox()
+            box = max(abs(u - v) for u, v in zip((ba.xmin, ba.xmax, ba.ymin, ba.ymax, ba.zmin, ba.zmax),
+                                                  (bb.xmin, bb.xmax, bb.ymin, bb.ymax, bb.zmin, bb.zmax)))
+            if box < 0.01 and (fa.Center() - fb.Center()).Length < 0.01:
+                diff = 0
         assert diff < 0.5, (name, p, a, b, diff)
     base = parts.base_of(m)
     out_dir = os.path.join(ROOT, 'docs', base, 'steps')
@@ -53,7 +67,7 @@ def build_model(m):
         edges, info = {}, []
         for pname, wp, col in s['parts']:
             scene.add_geometry(mesh_of(wp.val(), col, *tess(pname)), node_name='part__' + pname, geom_name='part__' + pname)
-            edges['part__' + pname] = edges_of(wp.val(), 0.15 if 'spring' in pname else 0.05)
+            edges['part__' + pname] = edges_of(wp.val(), (0.15 if 'spring' in pname else 0.05) * SCALE['k'])
             entry = dict(name=pname, colour='#' + col, new=pname not in prev, added=False, removed=False)
             if pname in prev and 'spring' not in pname:
                 for key, shape, c in (('added', wp.cut(prev[pname]), HIGHLIGHT), ('removed', prev[pname].cut(wp), REMOVED)):
@@ -64,8 +78,8 @@ def build_model(m):
             info.append(entry)
         if s.get('overlay') is not None:
             ov = s['overlay'].val()
-            scene.add_geometry(mesh_of(ov, HIGHLIGHT, 0.05, 0.2), node_name='overlay', geom_name='overlay')
-            edges['overlay'] = edges_of(ov, 0.05)
+            scene.add_geometry(mesh_of(ov, HIGHLIGHT, 0.05 * SCALE['k'], 0.2), node_name='overlay', geom_name='overlay')
+            edges['overlay'] = edges_of(ov, 0.05 * SCALE['k'])
         fname = 'step_%02d' % i
         if len(scene.geometry):
             scene.export(os.path.join(out_dir, name, fname + '.glb'))

@@ -757,8 +757,148 @@ def _engine_sim():
 SIMS['piston_crank'] = _engine_sim()
 
 
-def build():
+# ------------------------------------------------------------------ Additional CAD exercise (models/exercises.py)
+for _n in ('ax_roller_assembly', 'ax_machinists_jack', 'ax_planetary_gears', 'ax_pipe_run_valves', 'ax_helicopter'):
+    FOLDER[_n] = 'Additional CAD exercise'
+
+
+def _keys(fn, t1, dt=0.1):
+    return [[round(k * dt, 3), round(fn(k * dt), 3)] for k in range(int(round(t1 / dt)) + 1)]
+
+
+_RA = [(0, 0), (0.5, 0), (7.5, 1080), (8, 1080)]
+_ra_turn = ['roller', 'bush (right)', 'bush (left)']
+SIMS['ax_roller_assembly'] = dict(
+    duration=8,
+    story='The roller turns three times on the fixed spindle. The bronze bushes are pressed into the roller and turn with it; the '
+          'spindle, brackets and base stay still.',
+    moving=_ra_turn,
+    motion=[dict(part=n, kind='turn', axis=[1, 0, 0], centre=[0, 0, 72], keys=ease_keys(_RA)) for n in _ra_turn],
+    graph=[dict(name='Roller turns', unit='', keys=ease_keys([(t, a / 360) for t, a in _RA]))],
+    steps=lambda: common_start('ax_roller_assembly.iam') + [
+        step('joints', 'Let the roller turn', JOINT,
+             ['Check for a Revolution joint between the spindle and the roller (the bushes are Welded to the roller).',
+              'If it is missing, Insert Joint, Revolution: pick the spindle, then the bush bore. Click OK.'],
+             'A plain bearing: the bronze bush slides on the steel spindle with a film of grease, so no rolling elements are needed.'),
+        step('motion', 'Turn the roller', 'Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.', 'Input Grapher: 0 at 0.5 s and 1080 degrees (3 turns) at 7.5 s.']),
+    ] + common_end(8, 'the angle of the Revolution joint'))
+
+_MJ_T = lambda t: 1080 * smooth(t, 0.5, 4.5)
+_MJ_TILT = lambda t: 20 * smooth(t, 5, 7) - 40 * smooth(t, 7.5, 10.5) + 20 * smooth(t, 11, 12)
+_mj_tilt = ['swivel', 'lock nut M20 x 2.5', 'screw M20 x 2.5 x 56']
+SIMS['ax_machinists_jack'] = dict(
+    duration=12,
+    story='The screw is turned three times and rises 7.5 mm (an M20 thread, 2.5 mm pitch) to meet the work. Then the swivel, lock nut '
+          'and screw tilt 20 degrees each way on the M16 pivot bolt, so the jack can prop a sloping face.',
+    moving=_mj_tilt,
+    motion=[dict(part='screw M20 x 2.5 x 56', kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=_keys(_MJ_T, 12), lin=True),
+            dict(part='screw M20 x 2.5 x 56', kind='move', axis=[0, 0, 1], keys=_keys(lambda t: _MJ_T(t) / 360 * 2.5, 12), lin=True)] +
+           [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, 54], keys=_keys(_MJ_TILT, 12), lin=True) for n in _mj_tilt],
+    graph=[dict(name='Screw lift', unit='mm', keys=_keys(lambda t: _MJ_T(t) / 360 * 2.5, 12), lin=True),
+           dict(name='Swivel angle', unit='deg', keys=_keys(_MJ_TILT, 12), lin=True)],
+    steps=lambda: common_start('ax_machinists_jack.iam') + [
+        step('joints', 'Screw the screw into the swivel', JOINT,
+             ['Insert Joint, Cylindrical: the screw in the tapped hole. Then Insert Joint, Screw on it: pitch 2.5 mm.'],
+             'Each turn lifts the screw one pitch, 2.5 mm, so a fine height setting is easy.'),
+        step('joints', 'Let the swivel tilt', JOINT,
+             ['Check for a Revolution joint between the base lugs and the swivel, on the M16 bolt axis. The lock nut is Welded to the swivel.']),
+        step('motion', 'Drive the screw, then the swivel', 'Right click each joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Screw joint: 0 at 0.5 s, 1080 degrees at 4.5 s, held.',
+              'Revolution joint: 0 to 5 s, 20 degrees at 7 s, -20 degrees at 10.5 s, back to 0 at 12 s.']),
+    ] + common_end(12, 'the screw position and the swivel angle'))
+
+_PG_SUN = lambda t: 2160 * smooth(t, 0.5, 9.5)
+_pg_planets = ['planet gear %d' % (k + 1) for k in range(3)]
+_pg_nuts = ['lock nut M3 %d' % (k + 1) for k in range(3)]
+_pg_carrier = ['carrier'] + ['bearing %d' % (k + 1) for k in range(3)]
+_pg_c = lambda k: [round(18 * math.cos(math.radians(120 * k)), 4), round(18 * math.sin(math.radians(120 * k)), 4), 0]
+SIMS['ax_planetary_gears'] = dict(
+    duration=10,
+    story='The sun gear turns six times. The ring gear is held, so the planets roll round inside it, spinning backwards on their pins, '
+          'and carry the carrier round once: a 6 to 1 reduction, (60 + 12) / 12 = 6.',
+    moving=['sun gear'] + _pg_planets + _pg_nuts + _pg_carrier,
+    motion=[dict(part='sun gear', kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=_keys(_PG_SUN, 10), lin=True)] +
+           [dict(part=n, kind='turn', axis=[0, 0, 1], centre=_pg_c(k), keys=_keys(lambda t: -5 / 12 * _PG_SUN(t), 10), lin=True)
+            for k, n in list(enumerate(_pg_planets)) + list(enumerate(_pg_nuts))] +
+           [dict(part=n, kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=_keys(lambda t: _PG_SUN(t) / 6, 10), lin=True)
+            for n in _pg_planets + _pg_nuts + _pg_carrier],
+    graph=[dict(name='Sun turns', unit='', keys=_keys(lambda t: _PG_SUN(t) / 360, 10), lin=True),
+           dict(name='Carrier turns', unit='', keys=_keys(lambda t: _PG_SUN(t) / 2160, 10), lin=True)],
+    steps=lambda: common_start('ax_planetary_gears.iam') + [
+        step('joints', 'Check the joints', JOINT,
+             ['Revolution joints: ground to the sun gear, ground to the carrier, and the carrier to each planet. The ring gear is grounded. '
+              'Weld each bearing to the carrier and each lock nut to its planet.']),
+        step('joints', 'Mesh the gears', JOINT,
+             ['Insert Joint, Rolling joints: Spur Gear, between the sun and each planet (pitch circles 12 and 24).',
+              'Insert Joint, Rolling joints: Spur Gear, between each planet and the ring gear (pitch circles 24 and 60), Internal.'],
+             'Ratio with the ring held: 1 + ring teeth / sun teeth = 1 + 60 / 12 = 6. The planets turn -2.5 times on their pins for each '
+             'turn of the carrier (60 / 24).'),
+        step('motion', 'Turn the sun', 'Right click the sun Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 2160 degrees (6 turns) at 9.5 s.']),
+    ] + common_end(10, 'the angles of the sun and carrier joints'))
+
+_PV = [('bottom', [0, 0, 1], [405, 0, 205], 0.5), ('riser', [0, -1, 0], [0, -205, 425], 3.5), ('top', [0, 0, 1], [330, 0, 1055], 6.5)]
+SIMS['ax_pipe_run_valves'] = dict(
+    duration=10,
+    story='The three gate valves are opened one after another, bottom, riser, then top. Eight turns of each handwheel lift the stem '
+          'and gate 40 mm (5 mm a turn) out of the flow. A rising stem shows at a glance whether a valve is open.',
+    moving=['handwheel %s valve' % v for v, *_ in _PV] + ['stem and gate %s valve' % v for v, *_ in _PV],
+    motion=[m for v, ax, c, t0 in _PV for m in (
+        dict(part='handwheel %s valve' % v, kind='turn', axis=ax, centre=c, keys=_keys(lambda t, t0=t0: 2880 * smooth(t, t0, t0 + 3), 10),
+             lin=True),
+        dict(part='stem and gate %s valve' % v, kind='move', axis=ax, keys=_keys(lambda t, t0=t0: 40 * smooth(t, t0, t0 + 3), 10),
+             lin=True))],
+    graph=[dict(name='%s valve lift' % v.capitalize(), unit='mm', keys=_keys(lambda t, t0=t0: 40 * smooth(t, t0, t0 + 3), 10), lin=True)
+           for v, ax, c, t0 in _PV],
+    steps=lambda: common_start('ax_pipe_run_valves.iam') + [
+        step('joints', 'Joints for each valve', JOINT,
+             ['Revolution joint: bonnet to handwheel. Prismatic joint: body to stem and gate (along the stem).',
+              'Everything else (pipes, flanges, bodies, bonnets, bolts) is one Welded group, grounded.']),
+        step('joints', 'Link each handwheel to its stem', JOINT,
+             ['Insert Joint, Screw: handwheel to stem, pitch 5 mm, for each of the three valves.'],
+             'In a rising stem gate valve the handwheel turns a nut in the yoke, and the stem rises through it without turning.'),
+        step('motion', 'Open the valves in turn', 'Right click each handwheel Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Bottom valve: 0 at 0.5 s, 2880 degrees at 3.5 s. Riser valve: 0 at 3.5 s, 2880 at 6.5 s. Top valve: 0 at 6.5 s, 2880 at 9.5 s.']),
+    ] + common_end(10, 'the positions of the three Prismatic joints'))
+
+
+def _rotor(t, t0=0.5, ramp=2.5, rps=0.75):
+    """Rotor angle (degrees) for a speed that ramps up from 0 to rps over the ramp time, then holds."""
+    if t <= t0:
+        return 0.0
+    if t <= t0 + ramp:
+        return 360 * rps * (t - t0) ** 2 / (2 * ramp)
+    return 360 * rps * (ramp / 2 + (t - t0 - ramp))
+
+
+_heli_main = ['main rotor mast', 'main rotor hub', 'main rotor blade 1', 'main rotor blade 2']
+SIMS['ax_helicopter'] = dict(
+    duration=8,
+    story='Start up: the main rotor and the tail fan run up to speed together through the gearbox. The tail fan turns five times as '
+          'fast as the main rotor; its push sideways at the end of the long boom stops the cabin spinning the other way (torque '
+          'reaction). Speeds are slowed down here so the blades can be seen.',
+    moving=_heli_main + ['tail fan'],
+    motion=[dict(part=n, kind='turn', axis=[0, 0, 1], centre=[2000, 0, 0], keys=_keys(_rotor, 8), lin=True) for n in _heli_main] +
+           [dict(part='tail fan', kind='turn', axis=[0, 1, 0], centre=[8150, 0, 1650], keys=_keys(lambda t: 5 * _rotor(t), 8), lin=True)],
+    graph=[dict(name='Main rotor speed', unit='rev/s', keys=_keys(lambda t: 0 if t < 0.5 else min(0.75, 0.75 * (t - 0.5) / 2.5), 8),
+                lin=True),
+           dict(name='Tail fan speed', unit='rev/s', keys=_keys(lambda t: 0 if t < 0.5 else min(3.75, 3.75 * (t - 0.5) / 2.5), 8), lin=True)],
+    steps=lambda: common_start('ax_helicopter.iam') + [
+        step('joints', 'Rotor joints', JOINT,
+             ['Revolution joint: fuselage to mast (the hub and blades are Welded to the mast). Revolution joint: fin to tail fan.']),
+        step('joints', 'Gear the tail fan to the main rotor', JOINT,
+             ['Insert Joint, Rolling joints: Rotation-Rotation, between the mast and the tail fan, ratio 5.'],
+             'One engine drives both through gearboxes, so their speeds are always in the same ratio.'),
+        step('motion', 'Run up the rotor', 'Right click the mast Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Velocity. Input Grapher: 0 at 0.5 s rising to 270 deg/s at 3 s, then held to 8 s.']),
+    ] + common_end(8, 'the speeds of the two Revolution joints'))
+
+
+def build(only=None):
     for name, s in SIMS.items():
+        if only and name not in only:
+            continue
         steps = s['steps']() if callable(s['steps']) else s['steps']
         out = dict(name=name, duration=s['duration'], story=s['story'], moving=s['moving'], motion=s['motion'],
                    graph=s['graph'], steps=steps)
@@ -770,4 +910,4 @@ def build():
 
 
 if __name__ == '__main__':
-    build()
+    build(sys.argv[1:] or None)

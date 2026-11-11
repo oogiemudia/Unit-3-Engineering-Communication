@@ -684,3 +684,6 @@ STEPS.update({k: v for k, v in LIBRARY_STEPS.items()})
 
 from worldskill import STEPS as WORLDSKILL_STEPS  # noqa: E402
 STEPS.update(WORLDSKILL_STEPS)
+
+from exercises import STEPS as EXERCISE_STEPS  # noqa: E402
+STEPS.update(EXERCISE_STEPS)

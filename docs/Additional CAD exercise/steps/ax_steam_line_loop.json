@@ -1,0 +1,1616 @@
+{
+ "name": "ax_steam_line_loop",
+ "title": "Steam line loop (piping isometric)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "8\" pipe, top run, 890 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p8_top.ipt.",
+    "Sketch two circles, 219.1 and 202.7 diameter (8 inch, Schedule 40). Extrude 890 mm.",
+    "Save p8_top.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" pipe, top run, 890 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "8\" pipe, right leg above the gate valve, 136 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p8_leg_up.ipt.",
+    "Sketch two circles, 219.1 and 202.7 diameter (8 inch, Schedule 40). Extrude 136 mm.",
+    "Save p8_leg_up.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" pipe, right leg above the gate valve, 136 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "8\" pipe, right leg below the gate valve, 109 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p8_leg_low.ipt.",
+    "Sketch two circles, 219.1 and 202.7 diameter (8 inch, Schedule 40). Extrude 109 mm.",
+    "Save p8_leg_low.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" pipe, right leg below the gate valve, 109 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "6\" pipe, left riser, 664 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p6_riser.ipt.",
+    "Sketch two circles, 168.3 and 154.1 diameter (6 inch, Schedule 40). Extrude 664 mm.",
+    "Save p6_riser.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" pipe, left riser, 664 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "6\" pipe, tee to the left bend, 128 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p6_left.ipt.",
+    "Sketch two circles, 168.3 and 154.1 diameter (6 inch, Schedule 40). Extrude 128 mm.",
+    "Save p6_left.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" pipe, tee to the left bend, 128 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "6\" pipe, tee to the ball valve, 85 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p6_mid.ipt.",
+    "Sketch two circles, 168.3 and 154.1 diameter (6 inch, Schedule 40). Extrude 85 mm.",
+    "Save p6_mid.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" pipe, tee to the ball valve, 85 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "6\" pipe, ball valve to the right bend, 99 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p6_right.ipt.",
+    "Sketch two circles, 168.3 and 154.1 diameter (6 inch, Schedule 40). Extrude 99 mm.",
+    "Save p6_right.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" pipe, ball valve to the right bend, 99 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "4\" pipe, branch drop, 418 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p4_drop.ipt.",
+    "Sketch two circles, 114.3 and 102.3 diameter (4 inch, Schedule 40). Extrude 418 mm.",
+    "Save p4_drop.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" pipe, branch drop, 418 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "4\" pipe, cross pipe, 195 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p4_cross.ipt.",
+    "Sketch two circles, 114.3 and 102.3 diameter (4 inch, Schedule 40). Extrude 195 mm.",
+    "Save p4_cross.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" pipe, cross pipe, 195 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "4\" pipe, inlet to the needle valve, 902 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p4_in1.ipt.",
+    "Sketch two circles, 114.3 and 102.3 diameter (4 inch, Schedule 40). Extrude 902 mm.",
+    "Save p4_in1.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" pipe, inlet to the needle valve, 902 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "4\" pipe, inlet end, 654 long: pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as p4_in2.ipt.",
+    "Sketch two circles, 114.3 and 102.3 diameter (4 inch, Schedule 40). Extrude 654 mm.",
+    "Save p4_in2.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" pipe, inlet end, 654 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "8\" elbow 90 LR: elbow",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as elbow8.ipt.",
+    "Sketch circles 219.1 and 202.7 on the XY Plane, 304.8 from the origin. Revolve 90 degrees (long radius = 1.5 x 8 in).",
+    "Save elbow8.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" elbow top left",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "6\" elbow 90 LR: elbow",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as elbow6.ipt.",
+    "Sketch circles 168.3 and 154.1, 228.6 from the origin. Revolve 90 degrees.",
+    "Save elbow6.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" elbow bottom left",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "4\" elbow 90 LR: elbow",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as elbow4.ipt.",
+    "Sketch circles 114.3 and 102.3, 152.4 from the origin. Revolve 90 degrees.",
+    "Save elbow4.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" elbow 1",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "8\" x 6\" concentric reducer: reducer",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as reducer.ipt.",
+    "Sketch the half section: 6 in end, 50 straight, taper, 8 in end, 203 long. Revolve.",
+    "Save reducer.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "reducer left riser",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "6\" x 4\" reducing tee: tee",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tee.ipt.",
+    "Sketch a 168.3 circle: extrude 286 (the run). Sketch a 114.3 circle on the XY Plane: extrude 130 down (the branch). Cut the 154.1 and 102.3 bores.",
+    "Save tee.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" x 4\" reducing tee",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "8\" gate valve body GV-101: body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gate_body.ipt.",
+    "Butt weld ends 219.1, 419 face to face. Sketch the body and bonnet flange and Revolve; Extrude the bore.",
+    "Save gate_body.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" gate valve body GV-101",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "8\" gate valve bonnet and stem: bonnet",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gate_bonnet.ipt.",
+    "Revolve the bonnet, yoke and stem.",
+    "Save gate_bonnet.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" gate valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_18.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "8\" gate valve handwheel: handwheel",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gate_wheel.ipt.",
+    "Hub, rim and three spokes.",
+    "Save gate_wheel.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "8\" gate valve handwheel",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_19.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "6\" ball valve body BV-101: body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ball_body.ipt.",
+    "Flanged ends 279.4 x 25.4, 267 face to face (short pattern), round body and stem neck. 8 holes 22.4 on 241.3.",
+    "Save ball_body.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" ball valve body BV-101",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_20.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "6\" ball valve lever: lever",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ball_lever.ipt.",
+    "Sketch the lever on the stem top and Extrude 16 mm.",
+    "Save ball_lever.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" ball valve lever",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_21.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "4\" needle valve body NV-101: body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as needle_body.ipt.",
+    "Butt weld ends 114.3, 292 face to face.",
+    "Save needle_body.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" needle valve body NV-101",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_22.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_22.json"
+  },
+  {
+   "n": 23,
+   "title": "4\" needle valve bonnet and stem: bonnet",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as needle_bonnet.ipt.",
+    "Revolve the bonnet and stem.",
+    "Save needle_bonnet.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" needle valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_23.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_23.json"
+  },
+  {
+   "n": 24,
+   "title": "4\" needle valve handwheel: handwheel",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as needle_wheel.ipt.",
+    "Hub, rim and three spokes.",
+    "Save needle_wheel.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "4\" needle valve handwheel",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_24.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_24.json"
+  },
+  {
+   "n": 25,
+   "title": "6\" weld neck flange, class 150: flange",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as wn_flange.ipt.",
+    "Sketch the half section: 279.4 diameter x 25.4, hub tapering to 168.3, 88.9 long, bore 154.1. Revolve. 8 holes 22.4 on 241.3 (Circular Pattern).",
+    "Save wn_flange.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "6\" flange, ball valve outlet",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_25.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_25.json"
+  },
+  {
+   "n": 26,
+   "title": "Pipe support SP-101, tall: support",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as support_tall.ipt.",
+    "Base plate 250 x 250 x 16 with four 18 holes, a 100 x 100 x 6 box column, gussets, and a saddle cut to the pipe.",
+    "Save support_tall.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_26.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_26.json"
+  },
+  {
+   "n": 27,
+   "title": "Pipe support SP-101, short: support",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as support_short.ipt.",
+    "The same support, 243 high, saddle across the 4 in inlet.",
+    "Save support_short.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_27.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_27.json"
+  },
+  {
+   "n": 28,
+   "title": "Assembly: supports",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as ax_steam_line_loop.iam.",
+    "Place the two supports Grounded on the floor (Z = 0, the T.O.C. line)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_28.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_28.json"
+  },
+  {
+   "n": 29,
+   "title": "Assembly: fittings",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place the elbows, reducers and tee at the corners of the loop (Mate their centre lines)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top left",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top right",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom left",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom right",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 1",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 2",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer left riser",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer right leg",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" x 4\" reducing tee",
+     "colour": "#3AA6A0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_29.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_29.json"
+  },
+  {
+   "n": 30,
+   "title": "Assembly: pipes",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place each straight pipe between its fittings: Mate the axis, Flush the ends (butt welded)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 2",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer left riser",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer right leg",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" x 4\" reducing tee",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, top run, 890 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg above the gate valve, 136 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg below the gate valve, 109 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, left riser, 664 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the left bend, 128 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the ball valve, 85 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, ball valve to the right bend, 99 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, branch drop, 418 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, cross pipe, 195 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet to the needle valve, 902 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet end, 654 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_30.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_30.json"
+  },
+  {
+   "n": 31,
+   "title": "Assembly: valves",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place GV-101 on the right leg, BV-101 on the bottom run with its two weld neck flanges, and NV-101 on the inlet."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 2",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer left riser",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer right leg",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" x 4\" reducing tee",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, top run, 890 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg above the gate valve, 136 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg below the gate valve, 109 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, left riser, 664 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the left bend, 128 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the ball valve, 85 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, ball valve to the right bend, 99 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, branch drop, 418 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, cross pipe, 195 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet to the needle valve, 902 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet end, 654 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve body GV-101",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve handwheel",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" ball valve body BV-101",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" ball valve lever",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve body NV-101",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve handwheel",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" flange, ball valve outlet",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" flange, ball valve inlet",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_31.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_31.json"
+  },
+  {
+   "n": 32,
+   "title": "Assembly: bolting",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: 16 stud bolts M20 and 16 nuts for the two flanged joints."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pipe support SP-101, tall",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pipe support SP-101, short",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" elbow top right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom left",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" elbow bottom right",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" elbow 2",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer left riser",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "reducer right leg",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" x 4\" reducing tee",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, top run, 890 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg above the gate valve, 136 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" pipe, right leg below the gate valve, 109 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, left riser, 664 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the left bend, 128 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, tee to the ball valve, 85 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" pipe, ball valve to the right bend, 99 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, branch drop, 418 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, cross pipe, 195 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet to the needle valve, 902 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" pipe, inlet end, 654 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve body GV-101",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "8\" gate valve handwheel",
+     "colour": "#C0504D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" ball valve body BV-101",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" ball valve lever",
+     "colour": "#C0504D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve body NV-101",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve bonnet and stem",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "4\" needle valve handwheel",
+     "colour": "#C0504D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" flange, ball valve outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "6\" flange, ball valve inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 3",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 4",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 6",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 7",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 outlet 8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 3",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 4",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 6",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 7",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M20 inlet 8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 5",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 6",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 7",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 outlet 8",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 5",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 6",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 7",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M20 inlet 8",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_steam_line_loop/step_32.glb",
+   "edges": "Additional CAD exercise/steps/ax_steam_line_loop/step_32.json"
+  }
+ ]
+}

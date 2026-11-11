@@ -41,7 +41,10 @@ def mesh_of(shape, colour, tol=0.03, ang=0.15):
         if planar:
             n = f.normalAt()
         for v in vs:
-            nn = n if planar else f.normalAt(v)
+            try:
+                nn = n if planar else f.normalAt(v)
+            except Exception:                  # a point the surface cannot project (the tip of a revolved nose)
+                nn = f.normalAt()
             verts.append(to_gl((v.x, v.y, v.z)))
             norms.append(to_gl((nn.x, nn.y, nn.z)))
         for t in tris:
@@ -126,17 +129,18 @@ def build(only=None):
         assy.save(os.path.join(DOCS, base, 'step', name + '.step'))
         comp = cq.Compound.makeCompound([wp.val() for n, wp, c in items])
         coarse = any('spring' in n for n, w, c in items)
-        cq.exporters.export(comp, os.path.join(DOCS, base, 'stl', name + '.stl'), tolerance=0.1 if coarse else 0.02,
+        k = m.get('mesh_scale') or 1          # large models (pipework, aircraft) mesh with a coarser chord tolerance
+        cq.exporters.export(comp, os.path.join(DOCS, base, 'stl', name + '.stl'), tolerance=(0.1 if coarse else 0.02) * k,
                             angularTolerance=0.4 if coarse else 0.1)
         # GLB, one node per part
         scene = trimesh.Scene()
         for pname, wp, col in items:
             coarse = 'spring' in pname
-            scene.add_geometry(mesh_of(wp.val(), col, *( (0.12, 0.5) if coarse else (0.03, 0.15))),
-                               node_name=pname, geom_name=pname)
+            tol, ang = (0.12, 0.5) if coarse else (0.03, 0.15)
+            scene.add_geometry(mesh_of(wp.val(), col, tol * k, ang), node_name=pname, geom_name=pname)
         scene.export(os.path.join(DOCS, base, 'glb', name + '.glb'))
         # edges
-        edges = {pname: edges_of(wp.val(), 0.15 if 'spring' in pname else 0.03) for pname, wp, col in items}
+        edges = {pname: edges_of(wp.val(), (0.15 if 'spring' in pname else 0.03) * k) for pname, wp, col in items}
         with open(os.path.join(DOCS, base, 'edges', name + '.json'), 'w') as f:
             json.dump(edges, f, separators=(',', ':'))
         bb = comp.BoundingBox()

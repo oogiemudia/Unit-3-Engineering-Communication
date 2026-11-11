@@ -1,0 +1,192 @@
+{
+ "name": "ax_fork_bracket",
+ "title": "Fork bracket (exercise T8)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the base",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fork_bracket.ipt.",
+    "Start 2D Sketch on the XZ Plane (the ground). Two Point Rectangle 72 x 44 from the origin.",
+    "Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude the rectangle 10 mm upwards."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Sketch the lug",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "Start 2D Sketch on the front face of the base. Draw the lug outline: the bottom edge 72 long, vertical ends 18 high, a 36 diameter circle centred 36 along and 54 up, and two lines from the tops of the ends Tangent to the circle.",
+    "Trim the inside of the circle away. Finish Sketch."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Extrude the front lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude the lug outline 13 mm back into the part, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Mirror the lug",
+   "command": "3D Model tab > Pattern panel > Mirror",
+   "actions": [
+    "Mirror: the lug feature about the middle plane of the base (22 from the front), so the second lug sits 18 behind it."
+   ],
+   "note": "The sheet gives the lugs as 13, 18 and 13 (44 in all) but the base as 36 wide. The base is made 44 wide here so the lugs stand on it; check this with your tutor.",
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Bore through both bosses",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the front boss face, on the boss centre: Simple Hole, diameter 18, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Relief under the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 36 x 44 in the middle of the underside. Extrude, Cut, 2 mm deep."
+   ],
+   "note": "The relief means the bracket sits on two pads, so it rocks less on an uneven surface.",
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Holding down holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the base between the lugs, 9 from each end (54 apart) and 22 from the front: Simple Hole, diameter 8, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Oil holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of each boss, on its middle: Simple Hole, diameter 4, To the bore.",
+    "Save fork_bracket.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_fork_bracket/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_fork_bracket/step_09.json"
+  }
+ ]
+}

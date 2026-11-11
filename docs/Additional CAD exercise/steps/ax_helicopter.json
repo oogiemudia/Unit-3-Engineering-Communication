@@ -1,0 +1,606 @@
+{
+ "name": "ax_helicopter",
+ "title": "Light helicopter (concept)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Fuselage: pod",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fuselage.ipt.",
+    "Sketch half the fuselage outline on the XZ Plane (nose arc, 1600 diameter cabin, tapering tail cone), 4100 long. Revolve about its axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Fuselage: canopy cut",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "Split the nose with a Work Plane 150 below the axis and a sloping plane at the windscreen pillar. Keep the rear: the glazing is its own part.",
+    "Save fuselage.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Canopy glazing: canopy",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as canopy.ipt.",
+    "The nose taken from the split: Save As canopy.ipt.",
+    "Save canopy.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "canopy glazing",
+     "colour": "#9CC8E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Engine cowling: cowling",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cowling.ipt.",
+    "Sketch a slot 1200 x 900 on a Work Plane 600 above the axis. Extrude 420. Fillet the top R140. Add the 260 exhaust at the back.",
+    "Save cowling.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "engine cowling",
+     "colour": "#B9C0C8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Tail boom: boom",
+   "command": "3D Model tab > Create panel > Loft",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tail_boom.ipt.",
+    "Loft from a 480 circle at the cabin to a 230 circle at the fin.",
+    "Save tail_boom.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail boom",
+     "colour": "#D9DDE2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Fin and fan duct: duct and fin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fin.ipt.",
+    "Sketch a 1040 ring (800 inside) on the XZ Plane at the end of the boom: Extrude 240. Sketch the swept fin above and the small fin below: Extrude 90 and 70.",
+    "Save fin.ipt."
+   ],
+   "note": "A fan in a duct (a shrouded tail rotor) is quieter and safer on the ground than an open tail rotor.",
+   "parts": [
+    {
+     "name": "fin and fan duct",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Horizontal stabiliser: stabiliser",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as stabiliser.ipt.",
+    "Sketch a 420 x 1600 rectangle across the top of the boom. Extrude 40. Add the two end plates. Cut it to the boom (Extrude, Cut, To the boom surface).",
+    "Save stabiliser.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "horizontal stabiliser",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Main rotor mast: mast",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as mast.ipt.",
+    "Sketch a 120 circle on the top of the cabin, 2000 back from the nose. Extrude 760 up through the cowling, with a 220 collar on the cowling top.",
+    "Save mast.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "main rotor mast",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Main rotor hub: hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as rotor_hub.ipt.",
+    "Sketch a 380 circle on the mast top: Extrude 140. Add the 660 x 220 blade grips.",
+    "Save rotor_hub.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "main rotor hub",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Main rotor blade: blade",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as blade.ipt.",
+    "Sketch an ellipse 350 x 44 (a simple aerofoil) at the grip. Extrude 4870 out. Rotor diameter 10.4 m.",
+    "Save blade.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "main rotor blade 1",
+     "colour": "#E8E8E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Tail fan: fan",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tail_fan.ipt.",
+    "Sketch the hub and one blade at 25 degrees pitch. Circular Pattern: 10 blades in the duct.",
+    "Save tail_fan.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tail fan",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Landing skid: skid",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as skid.ipt.",
+    "Sketch an 80 circle (68 inside). Sweep along a 3350 line with a 300 radius bend turned up 60 degrees at the front.",
+    "Save skid.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "skid right",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Cross tube: cross tube",
+   "command": "3D Model tab > Create panel > Sweep",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cross_tube.ipt.",
+    "Sweep an 80 x 6 tube along an arched path: across under the cabin, 300 radius bends, and down to the skids, 1900 apart.",
+    "Save cross_tube.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cross tube front",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Assembly: fuselage",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as ax_helicopter.iam.",
+    "Place fuselage.ipt Grounded. Constrain the canopy, cowling and tail boom to it."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "canopy glazing",
+     "colour": "#9CC8E6",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "engine cowling",
+     "colour": "#B9C0C8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail boom",
+     "colour": "#D9DDE2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Assembly: tail",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Mate the fin and duct to the boom end and the stabiliser across the boom."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "canopy glazing",
+     "colour": "#9CC8E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "engine cowling",
+     "colour": "#B9C0C8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail boom",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fin and fan duct",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "horizontal stabiliser",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Assembly: landing gear",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Mate the cross tubes to the belly and the skids to the cross tube legs."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "canopy glazing",
+     "colour": "#9CC8E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "engine cowling",
+     "colour": "#B9C0C8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail boom",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fin and fan duct",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "horizontal stabiliser",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross tube front",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross tube rear",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "skid right",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "skid left",
+     "colour": "#A7ADB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: rotors",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Insert the mast in the cowling, the hub on the mast, the blades in the grips (Angle 180 apart) and the tail fan on the duct axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fuselage",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "canopy glazing",
+     "colour": "#9CC8E6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "engine cowling",
+     "colour": "#B9C0C8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail boom",
+     "colour": "#D9DDE2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "fin and fan duct",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "horizontal stabiliser",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross tube front",
+     "colour": "#A7ADB5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross tube rear",
+     "colour": "#A7ADB5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "skid right",
+     "colour": "#A7ADB5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "skid left",
+     "colour": "#A7ADB5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main rotor mast",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main rotor hub",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main rotor blade 1",
+     "colour": "#E8E8E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main rotor blade 2",
+     "colour": "#E8E8E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tail fan",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_helicopter/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_helicopter/step_17.json"
+  }
+ ]
+}

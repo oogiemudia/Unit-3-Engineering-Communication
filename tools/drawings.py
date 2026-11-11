@@ -329,7 +329,8 @@ PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', pr
             'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24'),
             'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25'),
             'GrabCAD models': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='GC'),
-            'World Skill': dict(owner='WorldSkills UK CAD practice, 2022', date='2026-11-11', prefix='WS')}
+            'World Skill': dict(owner='WorldSkills UK CAD practice, 2022', date='2026-11-11', prefix='WS'),
+            'Additional CAD exercise': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='AX')}
 
 
 def owner_of(m):
@@ -351,6 +352,8 @@ def material_of(m):
         return ESP_MATERIAL[m['name']]
     if m['name'] in WORLDSKILL_MATERIAL:
         return WORLDSKILL_MATERIAL[m['name']]
+    if m.get('folder') == 'Additional CAD exercise':
+        return m.get('material') or 'See parts list'
     if m.get('sub') or m.get('folder') == 'GrabCAD models':
         return 'See parts list'        # a sub-assembly: its parts list gives the material of each part
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
@@ -514,7 +517,7 @@ def section_sheet(m, items, number):
     gap = 26
     s, sc = pick_scale(max(sw, pw), shh + ph, 300, 200)
     s2, sc2 = pick_scale(sw + pw, max(shh, ph), 300 - gap, 200)
-    if m.get('folder') == 'GrabCAD models' and s2 > s:
+    if m.get('folder') in ('GrabCAD models', 'Additional CAD exercise') and s2 > s:
         # a tall model: plan on the left, section on the right (both labelled, so they need not line up)
         s, sc = s2, sc2
         x_left = 22 + (380 - (sw + pw) * s - gap) / 2

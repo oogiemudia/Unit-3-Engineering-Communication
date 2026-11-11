@@ -1,0 +1,177 @@
+{
+ "name": "ax_engine_block",
+ "title": "Engine block deck",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as engine_block.ipt.",
+    "Sketch the deck outline on the XY Plane: 546 x 239 with R13.7 (0.54 in) corners, the bore line 81 from the top edge. Extrude 180 down."
+   ],
+   "note": "The drawing is the deck (top face) plan only, in inches. The block depth (180) is not given; it is chosen to show the bores and water jacket.",
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Cylinder bores",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 3.684 in (93.6) diameter, Through, at 4.85 in (123.2) centres: Rectangular Pattern 4."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Water jacket",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch a ring 111.6 to 140.6 diameter round each bore on a Work Plane 15 below the deck. Extrude, Cut, 125 deep (the coolant space)."
+   ],
+   "note": "The coolant surrounds each cylinder, so the heat from burning fuel goes into the water and out through the radiator.",
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Head bolt bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch 18 circles on the 16 head bolt centres (84 x 80 round each bore) on the Work Plane 15 below the deck. Extrude 125 down, Join."
+   ],
+   "note": "The head bolt holes are 58 from the bore centre, inside the water jacket. Solid bosses carry them through the coolant, so the bolts do not open into the water.",
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Head bolt holes",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Hole 0.43 in (11) diameter, 60 deep, four round each bore: 16 holes (\"0.42/0.43 DIA CAST 16 HOLES\")."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Push rod holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 0.453 in (11.5) diameter, Through, with a 30 counterbore 10 deep, two to each cylinder: 8 holes (\"0.448/0.458 DIA THRU 8 HOLES\")."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Coolant holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 10 diameter, 16 deep into the jacket, front and back of each bore."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Dowel holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 14 diameter, 20 deep, in the two top corners (the head locating dowels).",
+    "Save engine_block.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder block (deck)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_engine_block/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_engine_block/step_08.json"
+  }
+ ]
+}

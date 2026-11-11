@@ -1,0 +1,156 @@
+{
+ "name": "ax_oil_pan",
+ "title": "Engine oil pan",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as oil_pan.ipt.",
+    "Sketch a rectangle 21.13 x 9.29 in (536.7 x 236) with R25 corners on the XY Plane. Extrude 8 mm down."
+   ],
+   "note": "Only the overall sizes are given (in inches); the rest is read from the views.",
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Sump",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the side profile on the XZ Plane: shallow end 1.93 in (49) deep for 5.85 in (148.6), a slope, then the deep end, 6.60 in (167.6) deep. Extrude 225 wide, both sides. Fillet the bottom edges R20."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Bolt bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch 18 circles on the flange edge (8 down each side, 2 and 3 on the ends). Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Hollow",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: 5 mm wall, remove the top face (the inside of the flange opens into the sump)."
+   ],
+   "note": "A die cast or sand cast sump is a thin even wall, like this shell.",
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 9 diameter, Through, on every boss (M8 clearance)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Oil filter boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 80 circle on a Work Plane on the side, 470 along and 95 down. Extrude out to 134 from the centre line (10.55 in overall width). Cut a 50 seat 10 deep and a 20 oil way."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Drain boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 30 circle under the deep end. Extrude 8 down. Hole 14 diameter (M14 drain plug).",
+    "Save oil_pan.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_07.json"
+  }
+ ]
+}

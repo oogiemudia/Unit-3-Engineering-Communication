@@ -77,6 +77,33 @@ Every part is modelled to the sizes on the competition sheets (`models/worldskil
 | Pull cord grill | 2 of 5 | 95 flange, slotted cone and 75 cup, cord box 20 wide with a 6.0 cord hole, 3 x 4.0 holes. Section A-A is section D-D. | ABS, 31 g |
 | Cord case | 2 of 5 | Recoil starter pulley: 49.1 cord groove, 70 flange, 40 tube and 16 hub, cord guide, six gussets, 16 pockets underneath. Section A-A is section E-E. | PEEK, 49 g |
 
+## Additional CAD exercise
+
+Twenty models from fifteen exercise drawings: the six parts of a textbook exercise sheet ("Uygulama 8, 9, 10"), tutorial drawings in millimetres and inches, two piping isometrics, an engine oil pan, an engine block deck and a helicopter concept sketch. They are built in `models/exercises.py` and all their files are in `docs/Additional CAD exercise/`, with a folder page (`docs/Additional CAD exercise/index.html`) that shows every source drawing (in `source drawings/`) and how each was read, and an Additional CAD exercise filter in the catalogue. Every model has Inventor build steps, third angle and first angle drawings (prefix AX), a section where it helps, a STEP file, videos and an FEA of one part with a hand check; the five that move have a Dynamic Simulation. Inch drawings are converted to millimetres. Where a drawing leaves a size out or disagrees with itself, the size used is stated in the model note, the build step and on the folder page. `python tools/test_exercises.py` checks the main sizes against the drawings (add `--browser` for the page checks), and `python tools/build_exercise_page.py` rebuilds the folder page.
+
+| Model | Parts | What it shows |
+|---|---|---|
+| Fork bracket (T8) | 1 | Cast fork: 72 x 44 base, two 13 mm lugs with an 18 bore. The lugs (13 + 18 + 13 = 44) are wider than the 36 base on the sheet, so the base is 44. |
+| Pedestal bearing (T8) | 1 | Base with counterbored slots, a cross shaped column and an 18 bore in a 36 boss. |
+| Slotted boss flange (T9) | 1 | Flange with a slotted 40 boss and a 26 bore. |
+| Boss bracket (T9) | 1 | Two bolting lugs, a rib and a 50 boss with a cross hole. |
+| Saddle bearing block (T10) | 1 | 120 x 96 base with a stepped R28 / R20 saddle. |
+| Split clamp lever (T10) | 1 | Split clamp boss on a 28 shaft with a pinch bolt and a slotted arm. |
+| Roller assembly | 11 | Base, two brackets, spindle, bronze bushes, cast roller and M10 bolts (no sizes on the sheet: scaled from the bolts). Simulation of the roller turning. |
+| Valve body | 1 | AISI 316L valve body with two round flanges, an oval top flange and a side port. |
+| Machinist's jack | 6 | Base with lugs, swivel, M16 pivot bolt and nut, M20 screw and lock nut. Simulation of the screw rising and the swivel tilting. |
+| Planetary gear set | 12 | Module 1: 12 tooth sun, three 24 tooth planets, 60 tooth ring, carrier, bearings and lock nuts. Simulation of the 6 to 1 reduction. |
+| Tube bracket, 45 degree | 1 | Base, upright tube and a 45 degree tube with a square flange. |
+| Angle bracket (inches) | 1 | Cast bracket with a channel column, a 30 degree top plate and a side boss. |
+| Crankshaft, four cylinder | 1 | 619 long, five 64 journals, four pins on a 44 throw, counterweighted webs, flywheel flange. |
+| Crankshaft, three throw (inches) | 1 | Three pins at 120 degrees, pear shaped webs, 564.88 long. |
+| V-belt pulley (inches) | 1 | 80 degree groove, web with eight lightening holes, hub and bore. |
+| Pipe run with three gate valves | 74 | 70 mm pipe, bends, three flanged gate valves (body, bonnet, stem and gate, handwheel), slip-on flanges, M16 bolting. Simulation of the valves opening. |
+| Steam line loop | 64 | Schedule 40 pipe (8, 6 and 4 inch), long radius elbows, reducers, a 6 x 4 tee, gate, ball and needle valves, weld neck flanges and two pipe supports, from the isometric's bill of materials. |
+| Engine oil pan | 1 | Shelled sump with a bolting flange, shallow and deep sections, filter and drain bosses. |
+| Engine block deck | 1 | Four 3.684 in bores at 4.85 in centres, head bolt and push rod holes, water jacket. |
+| Light helicopter (concept) | 15 | Cabin pod and canopy, cowling, tail boom, fin with a ducted fan, rotor and skids, to proportion only. Simulation of the rotors running up. |
+
 ## ESP 2023 lock gates (Employer-Set Project, Task 2)
 
 The ESP 2023 project (8730-035, Summer 2023: new automated lock gates for Canal Heritage) keeps every file it generates in one folder, `docs/ESP 2023/`, with its own project page (`docs/ESP 2023/index.html`). Its models also appear in the catalogue under the ESP 2023 filter. Every component is its own part model (41 parts, `esp2023_p01_heel_post` to `esp2023_p41_cill`), each with build steps, a drawing with a key sizes table and a STEP file; these show only under the ESP 2023 filter. In the 3D viewer the GA and the gate leaf have a parts list: click a part to open it, or untick it to hide it.

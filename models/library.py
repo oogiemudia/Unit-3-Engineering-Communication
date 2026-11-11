@@ -106,12 +106,14 @@ def involute_gear(m, z, face, backlash=0.15, n=6):
     pts = []
     for k in range(z):
         c = 2 * math.pi * k / z
-        pts.append((rf * math.cos(c - psi(r0)), rf * math.sin(c - psi(r0))))
+        if r0 - rf > 1e-6:                      # a radial flank below the base circle (fewer than 42 teeth)
+            pts.append((rf * math.cos(c - psi(r0)), rf * math.sin(c - psi(r0))))
         for r in radii:
             pts.append((r * math.cos(c - psi(r)), r * math.sin(c - psi(r))))
         for r in reversed(radii):
             pts.append((r * math.cos(c + psi(r)), r * math.sin(c + psi(r))))
-        pts.append((rf * math.cos(c + psi(r0)), rf * math.sin(c + psi(r0))))
+        if r0 - rf > 1e-6:
+            pts.append((rf * math.cos(c + psi(r0)), rf * math.sin(c + psi(r0))))
         h = c + math.pi / z
         pts.append((rf * math.cos(h), rf * math.sin(h)))
     return cq.Workplane('XY').polyline(pts).close().extrude(face)
