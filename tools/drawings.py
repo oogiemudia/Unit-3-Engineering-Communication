@@ -19,6 +19,7 @@ from OCP.GeomAbs import GeomAbs_Cylinder, GeomAbs_Cone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'models'))
 import parts  # noqa: E402
+from worldskill import MATERIAL as WORLDSKILL_MATERIAL  # noqa: E402
 
 OUT = os.path.join(ROOT, 'docs', 'drawings')
 os.makedirs(OUT, exist_ok=True)
@@ -327,7 +328,8 @@ PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', pr
             'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26'),
             'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24'),
             'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25'),
-            'GrabCAD models': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='GC')}
+            'GrabCAD models': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='GC'),
+            'World Skill': dict(owner='WorldSkills UK CAD practice, 2022', date='2026-11-11', prefix='WS')}
 
 
 def owner_of(m):
@@ -347,6 +349,8 @@ def material_of(m):
         return m['part']['material'].replace('Bought in: ', '').split(',')[0][:30]
     if m['name'] in ESP_MATERIAL:
         return ESP_MATERIAL[m['name']]
+    if m['name'] in WORLDSKILL_MATERIAL:
+        return WORLDSKILL_MATERIAL[m['name']]
     if m.get('sub') or m.get('folder') == 'GrabCAD models':
         return 'See parts list'        # a sub-assembly: its parts list gives the material of each part
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',

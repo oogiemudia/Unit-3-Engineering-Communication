@@ -1,0 +1,160 @@
+{
+ "name": "ws2022_piston_head",
+ "title": "WorldSkills 2022: piston head",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Piston head: revolve the body and crown",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as piston_head.ipt.",
+    "Start 2D Sketch on the XZ Plane. Half profile: 44 diameter, 40 high, then an arc SR62.5 to the top at 44.0 on the axis.",
+    "Finish Sketch. Revolve about the Z axis, Full. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_01.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Piston head: round the crown edge",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet R1.0 (R1.0 TYP.) on the edge where the crown meets the 44 diameter."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_02.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Piston head: ring grooves",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Start 2D Sketch on the XZ Plane. Two rectangles 2.0 high, from 44 diameter in to 40 diameter: the lower one from 29.3 to 31.3, the upper one 5.0 higher, from 34.3 to 36.3.",
+    "Finish Sketch. Revolve: both rectangles, Cut, about the Z axis. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_03.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Piston head: hollow the inside",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Start 2D Sketch on the XZ Plane. Inside profile: 38 diameter from the bottom up to an arc SR59.5 (concentric with the SR62.5 crown, so the crown is 3.0 thick).",
+    "Finish Sketch. Revolve, Cut, about the Z axis. Fillet R3.0 where the bore meets the crown underside."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_04.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Piston head: gudgeon pin bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on a work plane through the axis. Circle 17 diameter, 18.5 above the bottom.",
+    "Finish Sketch. Extrude from the inside wall to 8.0 from the centre (a 16.0 gap for the connecting rod), then Mirror to the other side. Fillet R1.0 round the boss ends."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_05.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Piston head: gudgeon pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = Concentric with the boss, Simple Hole, diameter 11.0, Termination Through All (both walls)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_06.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Piston head: skirt cut-outs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the YZ Plane (square on to the pin hole, as the front view on the sheet). Sketch the cut-out: 24.0 wide and 10.0 high in the middle, then lines at 41.2 degrees down to 2.0 in from the outside at the bottom.",
+    "Finish Sketch. Extrude: Cut, Through All, Symmetric. OK. Save."
+   ],
+   "note": "The cut-outs clear the crankshaft webs and make the piston lighter. Section C-C on the sheet is the section A-A of this model.",
+   "parts": [
+    {
+     "name": "piston head",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_piston_head/step_07.glb",
+   "edges": "World Skill/steps/ws2022_piston_head/step_07.json"
+  }
+ ]
+}

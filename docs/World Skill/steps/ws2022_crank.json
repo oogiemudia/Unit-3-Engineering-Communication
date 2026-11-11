@@ -1,0 +1,140 @@
+{
+ "name": "ws2022_crank",
+ "title": "WorldSkills 2022: crank",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Crank: revolve the disc and shaft",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as crank.ipt.",
+    "Start 2D Sketch on the XZ Plane. Draw half the profile above the X axis: the disc 55 diameter and 11 thick, the shaft 15 diameter to 31 from the back face, a taper to 12.2 at 43.5 and a 1.0 chamfer to 9.7 at 44.5 (overall length 44.5).",
+    "Finish Sketch. Revolve: Profile = the half profile, Axis = the X axis, Full. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_01.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Crank: round the rim",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: radius 1.5 (R1.5 TYP.), select the two rim edges of the 55 disc. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_02.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Crank: crescent recess (counterweight)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the back face. Draw a circle R24 and a circle 23.5 diameter, both centred 15.8 below the axis (the crank pin centre).",
+    "Finish Sketch. Extrude: Profile = the ring between the two circles, Cut, Distance 5.5. OK.",
+    "Fillet R1.5 round the bottom of the recess. The full-thickness crescent left at the top is the counterweight."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_03.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Crank: pin hole and centre hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = Concentric with the 23.5 boss, Simple Hole, diameter 11, Termination Through All.",
+    "Hole: Placement = on the axis of the shaft end, Simple Hole, diameter 4, Through All (it runs the whole length, see section A-A)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_04.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Crank: detail B face step",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face of the disc (shaft side). Draw circles 40 and 20.5 diameter on the axis.",
+    "Finish Sketch. Extrude: Profile = the ring between them, Cut, Distance 0.2 (detail B at 2:1)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_05.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Crank: key slot under the shaft",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the XZ Plane. Draw a circle R6.6 with its centre 6.8 from the shaft end and 11.1 below the axis.",
+    "Finish Sketch. Extrude: Profile = the circle inside the shaft, Cut, Symmetric, Distance 1.8 (the 1.8 slot in the end view). Save."
+   ],
+   "note": "The sheet gives the R6.6 cutter position (6.8 and 11.1) and the slot width (1.8). It is a seat for a small key that drives whatever fits on the taper.",
+   "parts": [
+    {
+     "name": "crank",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "World Skill/steps/ws2022_crank/step_06.glb",
+   "edges": "World Skill/steps/ws2022_crank/step_06.json"
+  }
+ ]
+}
