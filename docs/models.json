@@ -17985,5 +17985,4393 @@
    "third": "ESP 2024/drawings/esp2024_p43_sinker_eye_third_angle",
    "first": "ESP 2024/drawings/esp2024_p43_sinker_eye_first_angle"
   }
+ },
+ {
+  "name": "esp2025_dispenser",
+  "title": "ESP 2025 automated pill dispenser (GA)",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 Task 2, Part B: the preferred design, an automated pill dispenser assembled from separate parts. General arrangement, parts list, section through the middle, simulation of a dose being dispensed and the pharmacy unlocking the lid to refill it.",
+  "description": "Design A, the preferred design: an automated pill dispenser. A carousel of 28 compartments turns over a deck with one drop hole; when a dose is due the buzzer sounds and the light beside the PRESS HERE button flashes, the patient presses the button, the worm drive turns the carousel one step and the pills drop into the drawer. Clear lid locked by a pharmacy key, polypropylene case sealed against water, four AAA cells, reprogrammed by NFC.",
+  "parts": [
+   {
+    "name": "chassis",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pharmacy lock",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lock cam",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "dispensing chute",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "drop sensor, emitter",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "drop sensor, receiver",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "carousel",
+    "colour": "#F2F4F6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "drive gear",
+    "colour": "#F7F3E8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "bottom cover",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "base gasket",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rubber foot 1",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rubber foot 2",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rubber foot 3",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "rubber foot 4",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "main circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery holder, right",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery holder, left",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "AAA cell 1",
+    "colour": "#3366AA",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "AAA cell 2",
+    "colour": "#3366AA",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "AAA cell 3",
+    "colour": "#3366AA",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "AAA cell 4",
+    "colour": "#3366AA",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "gear motor",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "motor clamp",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "worm",
+    "colour": "#F7F3E8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "home sensor",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery door, right",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "battery door, left",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "door seal, right",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "door seal, left",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "security screw 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "security screw 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "security screw 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "security screw 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pod column",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pod O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "panel circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "display",
+    "colour": "#4F6F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "button switch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "flashing light",
+    "colour": "#F2A623",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "light lens",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "buzzer",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "PRESS HERE button",
+    "colour": "#2E9E5B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "display window",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pod cap",
+    "colour": "#2C5AA0",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid gasket",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "lid catch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "hinge pin",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "dispensing drawer",
+    "colour": "#2C5AA0",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "drawer seal",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cover screw 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cover screw 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cover screw 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "cover screw 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   189.1,
+   58.6
+  ],
+  "section": "y",
+  "exploded": false,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_dispenser.step",
+   "stl": "ESP 2025/stl/esp2025_dispenser.stl",
+   "glb": "ESP 2025/glb/esp2025_dispenser.glb",
+   "edges": "ESP 2025/edges/esp2025_dispenser.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sim": true,
+  "bom": [
+   {
+    "no": 1,
+    "name": "chassis",
+    "qty": 1,
+    "material": "Polypropylene (PP) homopolymer, white, 2 wall, injection moulded",
+    "group": "chassis",
+    "model": "esp2025_p01_chassis",
+    "file": "chassis.ipt",
+    "bought": false,
+    "instances": [
+     "chassis"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "pharmacy cam lock",
+    "qty": 1,
+    "material": "Bought in: 16 mm cam lock, zinc die cast, pharmacy key (keyed alike)",
+    "group": "chassis",
+    "model": "esp2025_p02_pharmacy_lock",
+    "file": "pharmacy_lock.ipt",
+    "bought": true,
+    "instances": [
+     "pharmacy lock"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "lock cam",
+    "qty": 1,
+    "material": "Zinc plated steel, 2.5 thick",
+    "group": "chassis",
+    "model": "esp2025_p03_lock_cam",
+    "file": "lock_cam.ipt",
+    "bought": false,
+    "instances": [
+     "lock cam"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "dispensing chute",
+    "qty": 1,
+    "material": "Polypropylene (PP), 1.5 wall, injection moulded",
+    "group": "chassis",
+    "model": "esp2025_p04_chute",
+    "file": "chute.ipt",
+    "bought": false,
+    "instances": [
+     "dispensing chute"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "drop sensor (infrared)",
+    "qty": 2,
+    "material": "Bought in: 3 mm infrared LED or photodiode in a black PBT housing",
+    "group": "chassis",
+    "model": "esp2025_p05_drop_sensor",
+    "file": "drop_sensor.ipt",
+    "bought": true,
+    "instances": [
+     "drop sensor, emitter",
+     "drop sensor, receiver"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "carousel",
+    "qty": 1,
+    "material": "Polypropylene (PP), natural, injection moulded",
+    "group": "carousel",
+    "model": "esp2025_p06_carousel",
+    "file": "carousel.ipt",
+    "bought": false,
+    "instances": [
+     "carousel"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "drive gear (worm wheel)",
+    "qty": 1,
+    "material": "Acetal (POM), injection moulded, 120 teeth module 0.8",
+    "group": "carousel",
+    "model": "esp2025_p07_drive_gear",
+    "file": "drive_gear.ipt",
+    "bought": false,
+    "instances": [
+     "drive gear"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "bottom cover",
+    "qty": 1,
+    "material": "Polypropylene (PP), white, 2 thick, injection moulded",
+    "group": "base",
+    "model": "esp2025_p08_bottom_cover",
+    "file": "bottom_cover.ipt",
+    "bought": false,
+    "instances": [
+     "bottom cover"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "rubber foot",
+    "qty": 4,
+    "material": "Thermoplastic elastomer (TPE), black, self adhesive",
+    "group": "base",
+    "model": "esp2025_p09_foot",
+    "file": "foot.ipt",
+    "bought": false,
+    "instances": [
+     "rubber foot 1",
+     "rubber foot 2",
+     "rubber foot 3",
+     "rubber foot 4"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "main circuit board",
+    "qty": 1,
+    "material": "Bought in: FR4 board 1.6 thick with microcontroller, clock, NFC and motor driver",
+    "group": "base",
+    "model": "esp2025_p10_main_pcb",
+    "file": "main_pcb.ipt",
+    "bought": true,
+    "instances": [
+     "main circuit board"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "battery holder 2 x AAA",
+    "qty": 2,
+    "material": "Bought in: ABS battery holder for 2 x AAA with springs",
+    "group": "base",
+    "model": "esp2025_p11_battery_holder",
+    "file": "battery_holder.ipt",
+    "bought": true,
+    "instances": [
+     "battery holder, right",
+     "battery holder, left"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "AAA cell",
+    "qty": 4,
+    "material": "Bought in: AAA alkaline cell 1.5 V, about 1100 mAh (or NiMH rechargeable)",
+    "group": "base",
+    "model": "esp2025_p12_battery",
+    "file": "battery.ipt",
+    "bought": true,
+    "instances": [
+     "AAA cell 1",
+     "AAA cell 2",
+     "AAA cell 3",
+     "AAA cell 4"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "gear motor 6 V",
+    "qty": 1,
+    "material": "Bought in: N20 metal gear motor, 6 V, 200:1, 150 rpm, with D shaft",
+    "group": "base",
+    "model": "esp2025_p13_gear_motor",
+    "file": "gear_motor.ipt",
+    "bought": true,
+    "instances": [
+     "gear motor"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "motor clamp",
+    "qty": 1,
+    "material": "Polypropylene (PP), injection moulded",
+    "group": "base",
+    "model": "esp2025_p14_motor_clamp",
+    "file": "motor_clamp.ipt",
+    "bought": false,
+    "instances": [
+     "motor clamp"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "worm",
+    "qty": 1,
+    "material": "Acetal (POM), single start, module 0.8",
+    "group": "base",
+    "model": "esp2025_p15_worm",
+    "file": "worm.ipt",
+    "bought": false,
+    "instances": [
+     "worm"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "home sensor",
+    "qty": 1,
+    "material": "Bought in: reflective optical sensor (infrared)",
+    "group": "base",
+    "model": "esp2025_p16_home_sensor",
+    "file": "home_sensor.ipt",
+    "bought": true,
+    "instances": [
+     "home sensor"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "battery door",
+    "qty": 2,
+    "material": "Polypropylene (PP), white, injection moulded",
+    "group": "base",
+    "model": "esp2025_p17_battery_door",
+    "file": "battery_door.ipt",
+    "bought": false,
+    "instances": [
+     "battery door, right",
+     "battery door, left"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "battery door seal",
+    "qty": 2,
+    "material": "Silicone rubber sheet, 1 thick, die cut",
+    "group": "base",
+    "model": "esp2025_p18_door_seal",
+    "file": "door_seal.ipt",
+    "bought": false,
+    "instances": [
+     "door seal, right",
+     "door seal, left"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "security screw M2.2 x 8",
+    "qty": 4,
+    "material": "Bought in: A2 stainless pin Torx (tamper-proof) countersunk screw",
+    "group": "base",
+    "model": "esp2025_p19_security_screw",
+    "file": "security_screw.ipt",
+    "bought": true,
+    "instances": [
+     "security screw 1",
+     "security screw 2",
+     "security screw 3",
+     "security screw 4"
+    ]
+   },
+   {
+    "no": 20,
+    "name": "cover screw 2.5 x 10",
+    "qty": 4,
+    "material": "Bought in: A2 stainless countersunk screw for plastics (thread forming)",
+    "group": "base",
+    "model": "esp2025_p20_cover_screw",
+    "file": "cover_screw.ipt",
+    "bought": true,
+    "instances": [
+     "cover screw 1",
+     "cover screw 2",
+     "cover screw 3",
+     "cover screw 4"
+    ]
+   },
+   {
+    "no": 21,
+    "name": "pod column",
+    "qty": 1,
+    "material": "Polypropylene (PP), white, 3 wall, injection moulded",
+    "group": "pod",
+    "model": "esp2025_p21_pod_column",
+    "file": "pod_column.ipt",
+    "bought": false,
+    "instances": [
+     "pod column"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "pod O-ring",
+    "qty": 1,
+    "material": "Silicone O-ring, 67 inside diameter x 3 section",
+    "group": "pod",
+    "model": "esp2025_p22_pod_oring",
+    "file": "pod_oring.ipt",
+    "bought": true,
+    "instances": [
+     "pod O-ring"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "panel circuit board",
+    "qty": 1,
+    "material": "Bought in: FR4 board 1.6 thick",
+    "group": "pod",
+    "model": "esp2025_p23_panel_pcb",
+    "file": "panel_pcb.ipt",
+    "bought": true,
+    "instances": [
+     "panel circuit board"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "display",
+    "qty": 1,
+    "material": "Bought in: low power LCD module 30 x 20, shows the time, next dose and battery",
+    "group": "pod",
+    "model": "esp2025_p24_lcd",
+    "file": "lcd.ipt",
+    "bought": true,
+    "instances": [
+     "display"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "button switch",
+    "qty": 1,
+    "material": "Bought in: 6 x 6 tactile switch, IP67",
+    "group": "pod",
+    "model": "esp2025_p25_tact_switch",
+    "file": "tact_switch.ipt",
+    "bought": true,
+    "instances": [
+     "button switch"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "flashing light (LED)",
+    "qty": 1,
+    "material": "Bought in: 5 mm high brightness amber LED",
+    "group": "pod",
+    "model": "esp2025_p26_led",
+    "file": "led.ipt",
+    "bought": true,
+    "instances": [
+     "flashing light"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "light lens",
+    "qty": 1,
+    "material": "Clarified polypropylene, clear, injection moulded",
+    "group": "pod",
+    "model": "esp2025_p27_led_lens",
+    "file": "led_lens.ipt",
+    "bought": false,
+    "instances": [
+     "light lens"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "buzzer",
+    "qty": 1,
+    "material": "Bought in: 9 mm piezo sounder, 85 dB at 10 cm, sealed",
+    "group": "pod",
+    "model": "esp2025_p28_buzzer",
+    "file": "buzzer.ipt",
+    "bought": true,
+    "instances": [
+     "buzzer"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "PRESS HERE button",
+    "qty": 1,
+    "material": "Silicone rubber, green, moulded with raised PRESS HERE letters",
+    "group": "pod",
+    "model": "esp2025_p29_button",
+    "file": "button.ipt",
+    "bought": false,
+    "instances": [
+     "PRESS HERE button"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "display window",
+    "qty": 1,
+    "material": "Clarified polypropylene, clear, 1.5 thick",
+    "group": "pod",
+    "model": "esp2025_p30_display_window",
+    "file": "display_window.ipt",
+    "bought": false,
+    "instances": [
+     "display window"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "pod cap",
+    "qty": 1,
+    "material": "Polypropylene (PP), WBEP blue, injection moulded, printed",
+    "group": "pod",
+    "model": "esp2025_p31_pod_cap",
+    "file": "pod_cap.ipt",
+    "bought": false,
+    "instances": [
+     "pod cap"
+    ]
+   },
+   {
+    "no": 32,
+    "name": "lid",
+    "qty": 1,
+    "material": "Clarified polypropylene (PP), clear, 1.8 wall, injection moulded",
+    "group": "lid",
+    "model": "esp2025_p32_lid",
+    "file": "lid.ipt",
+    "bought": false,
+    "instances": [
+     "lid"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "gasket ring",
+    "qty": 2,
+    "material": "Silicone rubber, 1 thick, die cut ring 176.6 / 179.6",
+    "group": "lid",
+    "model": "esp2025_p33_gasket",
+    "file": "gasket.ipt",
+    "bought": false,
+    "instances": [
+     "base gasket",
+     "lid gasket"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "lid catch",
+    "qty": 1,
+    "material": "Polypropylene, 30 % glass filled (PP-GF30), injection moulded",
+    "group": "lid",
+    "model": "esp2025_p34_lid_catch",
+    "file": "lid_catch.ipt",
+    "bought": false,
+    "instances": [
+     "lid catch"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "hinge pin",
+    "qty": 1,
+    "material": "A2 stainless steel pin, 3 diameter x 88",
+    "group": "lid",
+    "model": "esp2025_p35_hinge_pin",
+    "file": "hinge_pin.ipt",
+    "bought": true,
+    "instances": [
+     "hinge pin"
+    ]
+   },
+   {
+    "no": 36,
+    "name": "dispensing drawer",
+    "qty": 1,
+    "material": "Polypropylene (PP), WBEP blue, injection moulded",
+    "group": "drawer",
+    "model": "esp2025_p36_drawer",
+    "file": "drawer.ipt",
+    "bought": false,
+    "instances": [
+     "dispensing drawer"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "drawer seal",
+    "qty": 1,
+    "material": "Silicone rubber, 0.5 thick, moulded frame",
+    "group": "drawer",
+    "model": "esp2025_p37_drawer_seal",
+    "file": "drawer_seal.ipt",
+    "bought": false,
+    "instances": [
+     "drawer seal"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_dispenser_third_angle",
+   "first": "ESP 2025/drawings/esp2025_dispenser_first_angle",
+   "section": "ESP 2025/drawings/esp2025_dispenser_section"
+  }
+ },
+ {
+  "name": "esp2025_cassette",
+  "title": "ESP 2025 concept B: trapdoor cassette",
+  "criteria": "3.1",
+  "uses": "ESP 2025 Task 2, Part A: the second design idea, a rectangular cassette with 28 spring trapdoors, for comparison with design A.",
+  "description": "Design B, a concept: a rectangular dispenser, 186 x 124 x 52, with 28 compartments in 4 rows of 7, each with its own spring trapdoor held by a small solenoid latch. At a dose time the latch under that compartment lets go and the pills drop into a tray along the front. No moving carousel, but 28 latches cost more, weigh more and use more power, and every trapdoor is a place for water to get in.",
+  "parts": [
+   {
+    "name": "case",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "28 compartments",
+    "colour": "#F2F4F6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "trapdoors and latches",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "pill tray",
+    "colour": "#2C5AA0",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "clear lid",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "display and PRESS HERE button",
+    "colour": "#2E9E5B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   186.0,
+   124.0,
+   52.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_cassette.step",
+   "stl": "ESP 2025/stl/esp2025_cassette.stl",
+   "glb": "ESP 2025/glb/esp2025_cassette.glb",
+   "edges": "ESP 2025/edges/esp2025_cassette.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_cassette_third_angle",
+   "first": "ESP 2025/drawings/esp2025_cassette_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa1_chassis",
+  "title": "ESP 2025 sub-assembly 1: chassis, lock and chute",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly chassis.iam: The chassis (wall and deck in one moulding) with the pharmacy cam lock and its cam, and the chute under the drop hole with the two infrared drop sensors.",
+  "description": "The chassis (wall and deck in one moulding) with the pharmacy cam lock and its cam, and the chute under the drop hole with the two infrared drop sensors.",
+  "parts": [
+   {
+    "name": "chassis",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "pharmacy lock",
+    "colour": "#A9B4BF",
+    "explode": [
+     25.81,
+     0.0,
+     36.86
+    ]
+   },
+   {
+    "name": "lock cam",
+    "colour": "#A9B4BF",
+    "explode": [
+     -14.34,
+     0.0,
+     -20.48
+    ]
+   },
+   {
+    "name": "dispensing chute",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     -45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "drop sensor, emitter",
+    "colour": "#2B2B2B",
+    "explode": [
+     30.0,
+     -45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "drop sensor, receiver",
+    "colour": "#2B2B2B",
+    "explode": [
+     -30.0,
+     -45.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   187.1,
+   35.5
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa1_chassis.step",
+   "stl": "ESP 2025/stl/esp2025_sa1_chassis.stl",
+   "glb": "ESP 2025/glb/esp2025_sa1_chassis.glb",
+   "edges": "ESP 2025/edges/esp2025_sa1_chassis.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 1,
+   "key": "chassis",
+   "file": "chassis.iam"
+  },
+  "bom": [
+   {
+    "no": 1,
+    "name": "chassis",
+    "qty": 1,
+    "material": "Polypropylene (PP) homopolymer, white, 2 wall, injection moulded",
+    "group": "chassis",
+    "model": "esp2025_p01_chassis",
+    "file": "chassis.ipt",
+    "bought": false,
+    "instances": [
+     "chassis"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "pharmacy cam lock",
+    "qty": 1,
+    "material": "Bought in: 16 mm cam lock, zinc die cast, pharmacy key (keyed alike)",
+    "group": "chassis",
+    "model": "esp2025_p02_pharmacy_lock",
+    "file": "pharmacy_lock.ipt",
+    "bought": true,
+    "instances": [
+     "pharmacy lock"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "lock cam",
+    "qty": 1,
+    "material": "Zinc plated steel, 2.5 thick",
+    "group": "chassis",
+    "model": "esp2025_p03_lock_cam",
+    "file": "lock_cam.ipt",
+    "bought": false,
+    "instances": [
+     "lock cam"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "dispensing chute",
+    "qty": 1,
+    "material": "Polypropylene (PP), 1.5 wall, injection moulded",
+    "group": "chassis",
+    "model": "esp2025_p04_chute",
+    "file": "chute.ipt",
+    "bought": false,
+    "instances": [
+     "dispensing chute"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "drop sensor (infrared)",
+    "qty": 2,
+    "material": "Bought in: 3 mm infrared LED or photodiode in a black PBT housing",
+    "group": "chassis",
+    "model": "esp2025_p05_drop_sensor",
+    "file": "drop_sensor.ipt",
+    "bought": true,
+    "instances": [
+     "drop sensor, emitter",
+     "drop sensor, receiver"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa1_chassis_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa1_chassis_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa2_carousel",
+  "title": "ESP 2025 sub-assembly 2: carousel",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly carousel.iam: The carousel of 28 compartments and 2 blanks, with the worm wheel pressed onto the bottom of its hub.",
+  "description": "The carousel of 28 compartments and 2 blanks, with the worm wheel pressed onto the bottom of its hub.",
+  "parts": [
+   {
+    "name": "carousel",
+    "colour": "#F2F4F6",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "drive gear",
+    "colour": "#F7F3E8",
+    "explode": [
+     0.0,
+     -40.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   159.0,
+   159.0,
+   45.5
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa2_carousel.step",
+   "stl": "ESP 2025/stl/esp2025_sa2_carousel.stl",
+   "glb": "ESP 2025/glb/esp2025_sa2_carousel.glb",
+   "edges": "ESP 2025/edges/esp2025_sa2_carousel.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 2,
+   "key": "carousel",
+   "file": "carousel.iam"
+  },
+  "bom": [
+   {
+    "no": 6,
+    "name": "carousel",
+    "qty": 1,
+    "material": "Polypropylene (PP), natural, injection moulded",
+    "group": "carousel",
+    "model": "esp2025_p06_carousel",
+    "file": "carousel.ipt",
+    "bought": false,
+    "instances": [
+     "carousel"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "drive gear (worm wheel)",
+    "qty": 1,
+    "material": "Acetal (POM), injection moulded, 120 teeth module 0.8",
+    "group": "carousel",
+    "model": "esp2025_p07_drive_gear",
+    "file": "drive_gear.ipt",
+    "bought": false,
+    "instances": [
+     "drive gear"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa2_carousel_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa2_carousel_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa3_base",
+  "title": "ESP 2025 sub-assembly 3: base, batteries and drive",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly base.iam: The bottom cover carrying everything that is changed or serviced: main board, battery holders and cells, the gear motor with its clamp and worm, the home sensor, the battery doors with their seals and tamper-proof screws, the feet and the gasket.",
+  "description": "The bottom cover carrying everything that is changed or serviced: main board, battery holders and cells, the gear motor with its clamp and worm, the home sensor, the battery doors with their seals and tamper-proof screws, the feet and the gasket.",
+  "parts": [
+   {
+    "name": "bottom cover",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "base gasket",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "rubber foot 1",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -20.0,
+     0.0
+    ]
+   },
+   {
+    "name": "rubber foot 2",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -20.0,
+     0.0
+    ]
+   },
+   {
+    "name": "rubber foot 3",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -20.0,
+     0.0
+    ]
+   },
+   {
+    "name": "rubber foot 4",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -20.0,
+     0.0
+    ]
+   },
+   {
+    "name": "main circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery holder, right",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery holder, left",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "AAA cell 1",
+    "colour": "#3366AA",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "AAA cell 2",
+    "colour": "#3366AA",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "AAA cell 3",
+    "colour": "#3366AA",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "AAA cell 4",
+    "colour": "#3366AA",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "gear motor",
+    "colour": "#A9B4BF",
+    "explode": [
+     35.0,
+     25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "motor clamp",
+    "colour": "#E9ECEF",
+    "explode": [
+     35.0,
+     50.0,
+     0.0
+    ]
+   },
+   {
+    "name": "worm",
+    "colour": "#F7F3E8",
+    "explode": [
+     -30.0,
+     25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "home sensor",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery door, right",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     -45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "battery door, left",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     -45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "door seal, right",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "door seal, left",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "security screw 1",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "security screw 2",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "security screw 3",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "security screw 4",
+    "colour": "#A9B4BF",
+    "explode": [
+     0.0,
+     -60.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   180.0,
+   17.0
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa3_base.step",
+   "stl": "ESP 2025/stl/esp2025_sa3_base.stl",
+   "glb": "ESP 2025/glb/esp2025_sa3_base.glb",
+   "edges": "ESP 2025/edges/esp2025_sa3_base.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 3,
+   "key": "base",
+   "file": "base.iam"
+  },
+  "bom": [
+   {
+    "no": 8,
+    "name": "bottom cover",
+    "qty": 1,
+    "material": "Polypropylene (PP), white, 2 thick, injection moulded",
+    "group": "base",
+    "model": "esp2025_p08_bottom_cover",
+    "file": "bottom_cover.ipt",
+    "bought": false,
+    "instances": [
+     "bottom cover"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "rubber foot",
+    "qty": 4,
+    "material": "Thermoplastic elastomer (TPE), black, self adhesive",
+    "group": "base",
+    "model": "esp2025_p09_foot",
+    "file": "foot.ipt",
+    "bought": false,
+    "instances": [
+     "rubber foot 1",
+     "rubber foot 2",
+     "rubber foot 3",
+     "rubber foot 4"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "main circuit board",
+    "qty": 1,
+    "material": "Bought in: FR4 board 1.6 thick with microcontroller, clock, NFC and motor driver",
+    "group": "base",
+    "model": "esp2025_p10_main_pcb",
+    "file": "main_pcb.ipt",
+    "bought": true,
+    "instances": [
+     "main circuit board"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "battery holder 2 x AAA",
+    "qty": 2,
+    "material": "Bought in: ABS battery holder for 2 x AAA with springs",
+    "group": "base",
+    "model": "esp2025_p11_battery_holder",
+    "file": "battery_holder.ipt",
+    "bought": true,
+    "instances": [
+     "battery holder, right",
+     "battery holder, left"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "AAA cell",
+    "qty": 4,
+    "material": "Bought in: AAA alkaline cell 1.5 V, about 1100 mAh (or NiMH rechargeable)",
+    "group": "base",
+    "model": "esp2025_p12_battery",
+    "file": "battery.ipt",
+    "bought": true,
+    "instances": [
+     "AAA cell 1",
+     "AAA cell 2",
+     "AAA cell 3",
+     "AAA cell 4"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "gear motor 6 V",
+    "qty": 1,
+    "material": "Bought in: N20 metal gear motor, 6 V, 200:1, 150 rpm, with D shaft",
+    "group": "base",
+    "model": "esp2025_p13_gear_motor",
+    "file": "gear_motor.ipt",
+    "bought": true,
+    "instances": [
+     "gear motor"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "motor clamp",
+    "qty": 1,
+    "material": "Polypropylene (PP), injection moulded",
+    "group": "base",
+    "model": "esp2025_p14_motor_clamp",
+    "file": "motor_clamp.ipt",
+    "bought": false,
+    "instances": [
+     "motor clamp"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "worm",
+    "qty": 1,
+    "material": "Acetal (POM), single start, module 0.8",
+    "group": "base",
+    "model": "esp2025_p15_worm",
+    "file": "worm.ipt",
+    "bought": false,
+    "instances": [
+     "worm"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "home sensor",
+    "qty": 1,
+    "material": "Bought in: reflective optical sensor (infrared)",
+    "group": "base",
+    "model": "esp2025_p16_home_sensor",
+    "file": "home_sensor.ipt",
+    "bought": true,
+    "instances": [
+     "home sensor"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "battery door",
+    "qty": 2,
+    "material": "Polypropylene (PP), white, injection moulded",
+    "group": "base",
+    "model": "esp2025_p17_battery_door",
+    "file": "battery_door.ipt",
+    "bought": false,
+    "instances": [
+     "battery door, right",
+     "battery door, left"
+    ]
+   },
+   {
+    "no": 18,
+    "name": "battery door seal",
+    "qty": 2,
+    "material": "Silicone rubber sheet, 1 thick, die cut",
+    "group": "base",
+    "model": "esp2025_p18_door_seal",
+    "file": "door_seal.ipt",
+    "bought": false,
+    "instances": [
+     "door seal, right",
+     "door seal, left"
+    ]
+   },
+   {
+    "no": 19,
+    "name": "security screw M2.2 x 8",
+    "qty": 4,
+    "material": "Bought in: A2 stainless pin Torx (tamper-proof) countersunk screw",
+    "group": "base",
+    "model": "esp2025_p19_security_screw",
+    "file": "security_screw.ipt",
+    "bought": true,
+    "instances": [
+     "security screw 1",
+     "security screw 2",
+     "security screw 3",
+     "security screw 4"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "gasket ring",
+    "qty": 1,
+    "material": "Silicone rubber, 1 thick, die cut ring 176.6 / 179.6",
+    "group": "lid",
+    "model": "esp2025_p33_gasket",
+    "file": "gasket.ipt",
+    "bought": false,
+    "instances": [
+     "base gasket"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa3_base_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa3_base_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa4_pod",
+  "title": "ESP 2025 sub-assembly 4: control pod",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly control_pod.iam: The control pod: the column, its O-ring, the panel board with the display, button switch, flashing light and buzzer, the light lens, the PRESS HERE button, the display window and the cap.",
+  "description": "The control pod: the column, its O-ring, the panel board with the display, button switch, flashing light and buzzer, the light lens, the PRESS HERE button, the display window and the cap.",
+  "parts": [
+   {
+    "name": "pod column",
+    "colour": "#E9ECEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "pod O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "panel circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0.0,
+     32.0,
+     0.0
+    ]
+   },
+   {
+    "name": "display",
+    "colour": "#4F6F5A",
+    "explode": [
+     0.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "button switch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "flashing light",
+    "colour": "#F2A623",
+    "explode": [
+     0.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "light lens",
+    "colour": "#BFD9EE",
+    "explode": [
+     0.0,
+     52.0,
+     0.0
+    ]
+   },
+   {
+    "name": "buzzer",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "PRESS HERE button",
+    "colour": "#2E9E5B",
+    "explode": [
+     0.0,
+     52.0,
+     0.0
+    ]
+   },
+   {
+    "name": "display window",
+    "colour": "#BFD9EE",
+    "explode": [
+     0.0,
+     52.0,
+     0.0
+    ]
+   },
+   {
+    "name": "pod cap",
+    "colour": "#2C5AA0",
+    "explode": [
+     0.0,
+     66.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   73.0,
+   73.0,
+   53.6
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa4_pod.step",
+   "stl": "ESP 2025/stl/esp2025_sa4_pod.stl",
+   "glb": "ESP 2025/glb/esp2025_sa4_pod.glb",
+   "edges": "ESP 2025/edges/esp2025_sa4_pod.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 4,
+   "key": "pod",
+   "file": "control_pod.iam"
+  },
+  "bom": [
+   {
+    "no": 21,
+    "name": "pod column",
+    "qty": 1,
+    "material": "Polypropylene (PP), white, 3 wall, injection moulded",
+    "group": "pod",
+    "model": "esp2025_p21_pod_column",
+    "file": "pod_column.ipt",
+    "bought": false,
+    "instances": [
+     "pod column"
+    ]
+   },
+   {
+    "no": 22,
+    "name": "pod O-ring",
+    "qty": 1,
+    "material": "Silicone O-ring, 67 inside diameter x 3 section",
+    "group": "pod",
+    "model": "esp2025_p22_pod_oring",
+    "file": "pod_oring.ipt",
+    "bought": true,
+    "instances": [
+     "pod O-ring"
+    ]
+   },
+   {
+    "no": 23,
+    "name": "panel circuit board",
+    "qty": 1,
+    "material": "Bought in: FR4 board 1.6 thick",
+    "group": "pod",
+    "model": "esp2025_p23_panel_pcb",
+    "file": "panel_pcb.ipt",
+    "bought": true,
+    "instances": [
+     "panel circuit board"
+    ]
+   },
+   {
+    "no": 24,
+    "name": "display",
+    "qty": 1,
+    "material": "Bought in: low power LCD module 30 x 20, shows the time, next dose and battery",
+    "group": "pod",
+    "model": "esp2025_p24_lcd",
+    "file": "lcd.ipt",
+    "bought": true,
+    "instances": [
+     "display"
+    ]
+   },
+   {
+    "no": 25,
+    "name": "button switch",
+    "qty": 1,
+    "material": "Bought in: 6 x 6 tactile switch, IP67",
+    "group": "pod",
+    "model": "esp2025_p25_tact_switch",
+    "file": "tact_switch.ipt",
+    "bought": true,
+    "instances": [
+     "button switch"
+    ]
+   },
+   {
+    "no": 26,
+    "name": "flashing light (LED)",
+    "qty": 1,
+    "material": "Bought in: 5 mm high brightness amber LED",
+    "group": "pod",
+    "model": "esp2025_p26_led",
+    "file": "led.ipt",
+    "bought": true,
+    "instances": [
+     "flashing light"
+    ]
+   },
+   {
+    "no": 27,
+    "name": "light lens",
+    "qty": 1,
+    "material": "Clarified polypropylene, clear, injection moulded",
+    "group": "pod",
+    "model": "esp2025_p27_led_lens",
+    "file": "led_lens.ipt",
+    "bought": false,
+    "instances": [
+     "light lens"
+    ]
+   },
+   {
+    "no": 28,
+    "name": "buzzer",
+    "qty": 1,
+    "material": "Bought in: 9 mm piezo sounder, 85 dB at 10 cm, sealed",
+    "group": "pod",
+    "model": "esp2025_p28_buzzer",
+    "file": "buzzer.ipt",
+    "bought": true,
+    "instances": [
+     "buzzer"
+    ]
+   },
+   {
+    "no": 29,
+    "name": "PRESS HERE button",
+    "qty": 1,
+    "material": "Silicone rubber, green, moulded with raised PRESS HERE letters",
+    "group": "pod",
+    "model": "esp2025_p29_button",
+    "file": "button.ipt",
+    "bought": false,
+    "instances": [
+     "PRESS HERE button"
+    ]
+   },
+   {
+    "no": 30,
+    "name": "display window",
+    "qty": 1,
+    "material": "Clarified polypropylene, clear, 1.5 thick",
+    "group": "pod",
+    "model": "esp2025_p30_display_window",
+    "file": "display_window.ipt",
+    "bought": false,
+    "instances": [
+     "display window"
+    ]
+   },
+   {
+    "no": 31,
+    "name": "pod cap",
+    "qty": 1,
+    "material": "Polypropylene (PP), WBEP blue, injection moulded, printed",
+    "group": "pod",
+    "model": "esp2025_p31_pod_cap",
+    "file": "pod_cap.ipt",
+    "bought": false,
+    "instances": [
+     "pod cap"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa4_pod_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa4_pod_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa5_lid",
+  "title": "ESP 2025 sub-assembly 5: lid and hinge",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly lid.iam: The clear lid with its gasket, the lid catch that the pharmacy lock holds, and the stainless hinge pin.",
+  "description": "The clear lid with its gasket, the lid catch that the pharmacy lock holds, and the stainless hinge pin.",
+  "parts": [
+   {
+    "name": "lid",
+    "colour": "#BFD9EE",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid gasket",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     -25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lid catch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0.0,
+     -40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "hinge pin",
+    "colour": "#A9B4BF",
+    "explode": [
+     70.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   187.0,
+   45.1
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa5_lid.step",
+   "stl": "ESP 2025/stl/esp2025_sa5_lid.stl",
+   "glb": "ESP 2025/glb/esp2025_sa5_lid.glb",
+   "edges": "ESP 2025/edges/esp2025_sa5_lid.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 5,
+   "key": "lid",
+   "file": "lid.iam"
+  },
+  "bom": [
+   {
+    "no": 32,
+    "name": "lid",
+    "qty": 1,
+    "material": "Clarified polypropylene (PP), clear, 1.8 wall, injection moulded",
+    "group": "lid",
+    "model": "esp2025_p32_lid",
+    "file": "lid.ipt",
+    "bought": false,
+    "instances": [
+     "lid"
+    ]
+   },
+   {
+    "no": 33,
+    "name": "gasket ring",
+    "qty": 1,
+    "material": "Silicone rubber, 1 thick, die cut ring 176.6 / 179.6",
+    "group": "lid",
+    "model": "esp2025_p33_gasket",
+    "file": "gasket.ipt",
+    "bought": false,
+    "instances": [
+     "lid gasket"
+    ]
+   },
+   {
+    "no": 34,
+    "name": "lid catch",
+    "qty": 1,
+    "material": "Polypropylene, 30 % glass filled (PP-GF30), injection moulded",
+    "group": "lid",
+    "model": "esp2025_p34_lid_catch",
+    "file": "lid_catch.ipt",
+    "bought": false,
+    "instances": [
+     "lid catch"
+    ]
+   },
+   {
+    "no": 35,
+    "name": "hinge pin",
+    "qty": 1,
+    "material": "A2 stainless steel pin, 3 diameter x 88",
+    "group": "lid",
+    "model": "esp2025_p35_hinge_pin",
+    "file": "hinge_pin.ipt",
+    "bought": true,
+    "instances": [
+     "hinge pin"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa5_lid_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa5_lid_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_sa6_drawer",
+  "title": "ESP 2025 sub-assembly 6: dispensing drawer",
+  "criteria": "3.1, 3.2",
+  "uses": "ESP 2025 sub-assembly drawer.iam: The pull-out drawer the pills fall into, with its seal.",
+  "description": "The pull-out drawer the pills fall into, with its seal.",
+  "parts": [
+   {
+    "name": "dispensing drawer",
+    "colour": "#2C5AA0",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "drawer seal",
+    "colour": "#3A3A3A",
+    "explode": [
+     0.0,
+     0.0,
+     -25.0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.1,
+   49.5,
+   13.5
+  ],
+  "section": null,
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.4
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_sa6_drawer.step",
+   "stl": "ESP 2025/stl/esp2025_sa6_drawer.stl",
+   "glb": "ESP 2025/glb/esp2025_sa6_drawer.glb",
+   "edges": "ESP 2025/edges/esp2025_sa6_drawer.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "sub": {
+   "no": 6,
+   "key": "drawer",
+   "file": "drawer.iam"
+  },
+  "bom": [
+   {
+    "no": 36,
+    "name": "dispensing drawer",
+    "qty": 1,
+    "material": "Polypropylene (PP), WBEP blue, injection moulded",
+    "group": "drawer",
+    "model": "esp2025_p36_drawer",
+    "file": "drawer.ipt",
+    "bought": false,
+    "instances": [
+     "dispensing drawer"
+    ]
+   },
+   {
+    "no": 37,
+    "name": "drawer seal",
+    "qty": 1,
+    "material": "Silicone rubber, 0.5 thick, moulded frame",
+    "group": "drawer",
+    "model": "esp2025_p37_drawer_seal",
+    "file": "drawer_seal.ipt",
+    "bought": false,
+    "instances": [
+     "drawer seal"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_sa6_drawer_third_angle",
+   "first": "ESP 2025/drawings/esp2025_sa6_drawer_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p01_chassis",
+  "title": "ESP 2025 part 01: chassis",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 1 on the parts list: Polypropylene (PP) homopolymer, white, 2 wall, injection moulded. The main moulding: the round wall of the case and the deck the pills sit on, in one piece. The deck has the drop hole at the front; the wall has the drawer opening, the hole for the pharmacy lock and the two hinge knuckles. Four bosses under the deck take the screws that hold the bottom cover on.",
+  "description": "The main moulding: the round wall of the case and the deck the pills sit on, in one piece. The deck has the drop hole at the front; the wall has the drawer opening, the hole for the pharmacy lock and the two hinge knuckles. Four bosses under the deck take the screws that hold the bottom cover on.",
+  "parts": [
+   {
+    "name": "chassis",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   187.1,
+   35.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p01_chassis.step",
+   "stl": "ESP 2025/stl/esp2025_p01_chassis.stl",
+   "glb": "ESP 2025/glb/esp2025_p01_chassis.glb",
+   "edges": "ESP 2025/edges/esp2025_p01_chassis.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 1,
+   "key": "chassis",
+   "group": "chassis",
+   "material": "Polypropylene (PP) homopolymer, white, 2 wall, injection moulded",
+   "file": "chassis.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8180 x 29 high, 2 wall",
+    "Deck 2 thick, 25 up; hub hole \u00d885",
+    "Drop hole R44 to R78, 10.4\u00b0 wide",
+    "Drawer opening 46 x 11.5",
+    "Lock hole \u00d816 at -55\u00b0, 13 up",
+    "Hinge \u00d83 holes, axis y 93.5",
+    "Bosses \u00d88 at R60, 4 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p01_chassis_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p01_chassis_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p02_pharmacy_lock",
+  "title": "ESP 2025 part 02: pharmacy cam lock",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 2 on the parts list: Bought in: 16 mm cam lock, zinc die cast, pharmacy key (keyed alike). Cam lock in the front right of the case. Only the pharmacy has the key: a quarter turn swings the cam out of the way of the lid catch so the lid can be opened to refill.",
+  "description": "Cam lock in the front right of the case. Only the pharmacy has the key: a quarter turn swings the cam out of the way of the lid catch so the lid can be opened to refill.",
+  "parts": [
+   {
+    "name": "pharmacy cam lock",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   17.6,
+   14.4,
+   20.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p02_pharmacy_lock.step",
+   "stl": "ESP 2025/stl/esp2025_p02_pharmacy_lock.stl",
+   "glb": "ESP 2025/glb/esp2025_p02_pharmacy_lock.glb",
+   "edges": "ESP 2025/edges/esp2025_p02_pharmacy_lock.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 2,
+   "key": "pharmacy_lock",
+   "group": "chassis",
+   "material": "Bought in: 16 mm cam lock, zinc die cast, pharmacy key (keyed alike)",
+   "file": "pharmacy_lock.ipt",
+   "bought": true,
+   "sizes": [
+    "Head \u00d820 x 2",
+    "Barrel \u00d816 x 3",
+    "Key slot 2 x 8"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p02_pharmacy_lock_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p02_pharmacy_lock_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p03_lock_cam",
+  "title": "ESP 2025 part 03: lock cam",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 3 on the parts list: Zinc plated steel, 2.5 thick. The cam on the end of the lock barrel. Locked, it lies over the hook of the lid catch so the lid cannot lift; unlocked, it points up, clear of the hook.",
+  "description": "The cam on the end of the lock barrel. Locked, it lies over the hook of the lid catch so the lid cannot lift; unlocked, it points up, clear of the hook.",
+  "parts": [
+   {
+    "name": "lock cam",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   14.1,
+   10.9,
+   8.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p03_lock_cam.step",
+   "stl": "ESP 2025/stl/esp2025_p03_lock_cam.stl",
+   "glb": "ESP 2025/glb/esp2025_p03_lock_cam.glb",
+   "edges": "ESP 2025/edges/esp2025_p03_lock_cam.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 3,
+   "key": "lock_cam",
+   "group": "chassis",
+   "material": "Zinc plated steel, 2.5 thick",
+   "file": "lock_cam.ipt",
+   "bought": false,
+   "sizes": [
+    "Hub \u00d88, arm 11.5 x 7",
+    "2.5 thick, 3 x 3 square hole"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p03_lock_cam_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p03_lock_cam_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p04_chute",
+  "title": "ESP 2025 part 04: dispensing chute",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 4 on the parts list: Polypropylene (PP), 1.5 wall, injection moulded. A short square tube under the drop hole that guides the falling pills into the drawer. The drop sensors look across it through two small windows.",
+  "description": "A short square tube under the drop hole that guides the falling pills into the drawer. The drop sensors look across it through two small windows.",
+  "parts": [
+   {
+    "name": "dispensing chute",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   18.0,
+   38.5,
+   7.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p04_chute.step",
+   "stl": "ESP 2025/stl/esp2025_p04_chute.stl",
+   "glb": "ESP 2025/glb/esp2025_p04_chute.glb",
+   "edges": "ESP 2025/edges/esp2025_p04_chute.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 4,
+   "key": "chute",
+   "group": "chassis",
+   "material": "Polypropylene (PP), 1.5 wall, injection moulded",
+   "file": "chute.ipt",
+   "bought": false,
+   "sizes": [
+    "18 x 38 x 7, 1.5 wall",
+    "Windows \u00d83, 2 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p04_chute_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p04_chute_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p05_drop_sensor",
+  "title": "ESP 2025 part 05: drop sensor (infrared)",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 5 on the parts list: Bought in: 3 mm infrared LED or photodiode in a black PBT housing. An infrared emitter on one side of the chute and a receiver on the other. When the pills fall through the beam the control unit knows the dose has been dispensed and stops the alarm.",
+  "description": "An infrared emitter on one side of the chute and a receiver on the other. When the pills fall through the beam the control unit knows the dose has been dispensed and stops the alarm.",
+  "parts": [
+   {
+    "name": "drop sensor (infrared)",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   5.0,
+   6.0,
+   5.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p05_drop_sensor.step",
+   "stl": "ESP 2025/stl/esp2025_p05_drop_sensor.stl",
+   "glb": "ESP 2025/glb/esp2025_p05_drop_sensor.glb",
+   "edges": "ESP 2025/edges/esp2025_p05_drop_sensor.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 5,
+   "key": "drop_sensor",
+   "group": "chassis",
+   "material": "Bought in: 3 mm infrared LED or photodiode in a black PBT housing",
+   "file": "drop_sensor.ipt",
+   "bought": true,
+   "sizes": [
+    "6 x 5 x 3.5",
+    "Lens \u00d83 x 1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p05_drop_sensor_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p05_drop_sensor_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p06_carousel",
+  "title": "ESP 2025 part 06: carousel",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 6 on the parts list: Polypropylene (PP), natural, injection moulded. The carousel: 30 segments of 12 degrees between an inner and outer ring, with no bottom: the pills sit on the deck and are pushed round by the ribs. 28 segments hold a dose each; the 2 blanks are capped so nothing can be put in them. The hub tube goes down through the deck to the drive gear.",
+  "description": "The carousel: 30 segments of 12 degrees between an inner and outer ring, with no bottom: the pills sit on the deck and are pushed round by the ribs. 28 segments hold a dose each; the 2 blanks are capped so nothing can be put in them. The hub tube goes down through the deck to the drive gear.",
+  "parts": [
+   {
+    "name": "carousel",
+    "colour": "#F2F4F6",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   159.0,
+   159.0,
+   45.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p06_carousel.step",
+   "stl": "ESP 2025/stl/esp2025_p06_carousel.stl",
+   "glb": "ESP 2025/glb/esp2025_p06_carousel.glb",
+   "edges": "ESP 2025/edges/esp2025_p06_carousel.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 6,
+   "key": "carousel",
+   "group": "carousel",
+   "material": "Polypropylene (PP), natural, injection moulded",
+   "file": "carousel.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8159 / \u00d879 x 20",
+    "30 segments at 12\u00b0, ribs 1",
+    "Hub tube \u00d883 / \u00d879 x 25.5",
+    "2 blanks capped 1.5",
+    "3 keys 2 x 1.3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p06_carousel_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p06_carousel_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p07_drive_gear",
+  "title": "ESP 2025 part 07: drive gear (worm wheel)",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 7 on the parts list: Acetal (POM), injection moulded, 120 teeth module 0.8. The worm wheel, pressed onto the bottom of the carousel hub. The worm turns it one tooth for every turn, so the carousel moves slowly and exactly, and the worm cannot be turned back by forcing the carousel. A small hole in it tells the home sensor where the carousel is.",
+  "description": "The worm wheel, pressed onto the bottom of the carousel hub. The worm turns it one tooth for every turn, so the carousel moves slowly and exactly, and the worm cannot be turned back by forcing the carousel. A small hole in it tells the home sensor where the carousel is.",
+  "parts": [
+   {
+    "name": "drive gear (worm wheel)",
+    "colour": "#F7F3E8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   97.6,
+   97.6,
+   5.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p07_drive_gear.step",
+   "stl": "ESP 2025/stl/esp2025_p07_drive_gear.stl",
+   "glb": "ESP 2025/glb/esp2025_p07_drive_gear.glb",
+   "edges": "ESP 2025/edges/esp2025_p07_drive_gear.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 7,
+   "key": "drive_gear",
+   "group": "carousel",
+   "material": "Acetal (POM), injection moulded, 120 teeth module 0.8",
+   "file": "drive_gear.ipt",
+   "bought": false,
+   "sizes": [
+    "120 teeth, module 0.8, pitch \u00d896",
+    "Tip \u00d897.6, root \u00d894.0",
+    "Face 5, bore \u00d883",
+    "Home mark \u00d83 at R44"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p07_drive_gear_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p07_drive_gear_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p08_bottom_cover",
+  "title": "ESP 2025 part 08: bottom cover",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 8 on the parts list: Polypropylene (PP), white, 2 thick, injection moulded. The bottom of the case. The batteries, the main circuit board and the drive sit on it, the control pod stands in a socket in the middle, and four screws pull it up against the gasket under the chassis.",
+  "description": "The bottom of the case. The batteries, the main circuit board and the drive sit on it, the control pod stands in a socket in the middle, and four screws pull it up against the gasket under the chassis.",
+  "parts": [
+   {
+    "name": "bottom cover",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   180.0,
+   6.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p08_bottom_cover.step",
+   "stl": "ESP 2025/stl/esp2025_p08_bottom_cover.stl",
+   "glb": "ESP 2025/glb/esp2025_p08_bottom_cover.glb",
+   "edges": "ESP 2025/edges/esp2025_p08_bottom_cover.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 8,
+   "key": "bottom_cover",
+   "group": "base",
+   "material": "Polypropylene (PP), white, 2 thick, injection moulded",
+   "file": "bottom_cover.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8180 x 2",
+    "Rim \u00d8172 / \u00d8175.8 x 4",
+    "Socket \u00d870 / \u00d874 x 4",
+    "Door openings 18 x 42, 2 off",
+    "CSK holes \u00d82.5 at R60, 4 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p08_bottom_cover_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p08_bottom_cover_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p09_foot",
+  "title": "ESP 2025 part 09: rubber foot",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 9 on the parts list: Thermoplastic elastomer (TPE), black, self adhesive. Four soft feet so the dispenser does not slide on a table when the button is pressed or the drawer pulled.",
+  "description": "Four soft feet so the dispenser does not slide on a table when the button is pressed or the drawer pulled.",
+  "parts": [
+   {
+    "name": "rubber foot",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   12.0,
+   12.0,
+   3.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p09_foot.step",
+   "stl": "ESP 2025/stl/esp2025_p09_foot.stl",
+   "glb": "ESP 2025/glb/esp2025_p09_foot.glb",
+   "edges": "ESP 2025/edges/esp2025_p09_foot.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 9,
+   "key": "foot",
+   "group": "base",
+   "material": "Thermoplastic elastomer (TPE), black, self adhesive",
+   "file": "foot.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d812 x 3, edge R1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p09_foot_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p09_foot_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p10_main_pcb",
+  "title": "ESP 2025 part 10: main circuit board",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 10 on the parts list: Bought in: FR4 board 1.6 thick with microcontroller, clock, NFC and motor driver. The control unit: a low power microcontroller with a real time clock keeps the dose times, drives the motor, reads the sensors and the button, sounds the alarm and flashes the light. The pharmacy programs it with a phone or tablet through the NFC antenna printed round the edge of the board.",
+  "description": "The control unit: a low power microcontroller with a real time clock keeps the dose times, drives the motor, reads the sensors and the button, sounds the alarm and flashes the light. The pharmacy programs it with a phone or tablet through the NFC antenna printed round the edge of the board.",
+  "parts": [
+   {
+    "name": "main circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   60.0,
+   13.0,
+   6.6
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p10_main_pcb.step",
+   "stl": "ESP 2025/stl/esp2025_p10_main_pcb.stl",
+   "glb": "ESP 2025/glb/esp2025_p10_main_pcb.glb",
+   "edges": "ESP 2025/edges/esp2025_p10_main_pcb.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 10,
+   "key": "main_pcb",
+   "group": "base",
+   "material": "Bought in: FR4 board 1.6 thick with microcontroller, clock, NFC and motor driver",
+   "file": "main_pcb.ipt",
+   "bought": true,
+   "sizes": [
+    "60 x 13 x 1.6"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p10_main_pcb_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p10_main_pcb_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p11_battery_holder",
+  "title": "ESP 2025 part 11: battery holder 2 x AAA",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 11 on the parts list: Bought in: ABS battery holder for 2 x AAA with springs. Holds two AAA cells. The two holders are wired in series: 4 x AAA, 6 V. The cells go in from underneath through the battery door.",
+  "description": "Holds two AAA cells. The two holders are wired in series: 4 x AAA, 6 V. The cells go in from underneath through the battery door.",
+  "parts": [
+   {
+    "name": "battery holder 2 x AAA",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   22.0,
+   48.0,
+   12.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p11_battery_holder.step",
+   "stl": "ESP 2025/stl/esp2025_p11_battery_holder.stl",
+   "glb": "ESP 2025/glb/esp2025_p11_battery_holder.glb",
+   "edges": "ESP 2025/edges/esp2025_p11_battery_holder.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 11,
+   "key": "battery_holder",
+   "group": "base",
+   "material": "Bought in: ABS battery holder for 2 x AAA with springs",
+   "file": "battery_holder.ipt",
+   "bought": true,
+   "sizes": [
+    "22 x 48 x 12",
+    "Pockets \u00d810.6 x 44.5, 2 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p11_battery_holder_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p11_battery_holder_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p12_battery",
+  "title": "ESP 2025 part 12: AAA cell",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 12 on the parts list: Bought in: AAA alkaline cell 1.5 V, about 1100 mAh (or NiMH rechargeable). A standard AAA cell. Four of them run the dispenser for many months (see the calculation sheet); the pharmacy changes them at a refill when the display shows low battery.",
+  "description": "A standard AAA cell. Four of them run the dispenser for many months (see the calculation sheet); the pharmacy changes them at a refill when the display shows low battery.",
+  "parts": [
+   {
+    "name": "AAA cell",
+    "colour": "#3366AA",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   10.5,
+   44.5,
+   10.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p12_battery.step",
+   "stl": "ESP 2025/stl/esp2025_p12_battery.stl",
+   "glb": "ESP 2025/glb/esp2025_p12_battery.glb",
+   "edges": "ESP 2025/edges/esp2025_p12_battery.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 12,
+   "key": "battery",
+   "group": "base",
+   "material": "Bought in: AAA alkaline cell 1.5 V, about 1100 mAh (or NiMH rechargeable)",
+   "file": "battery.ipt",
+   "bought": true,
+   "sizes": [
+    "AAA: \u00d810.5 x 44.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p12_battery_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p12_battery_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p13_gear_motor",
+  "title": "ESP 2025 part 13: gear motor 6 V",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 13 on the parts list: Bought in: N20 metal gear motor, 6 V, 200:1, 150 rpm, with D shaft. A small DC gear motor. It turns the worm 4 times for each dose: 4 teeth of the drive gear, 12 degrees of the carousel. It only runs for under 2 seconds a dose.",
+  "description": "A small DC gear motor. It turns the worm 4 times for each dose: 4 teeth of the drive gear, 12 degrees of the carousel. It only runs for under 2 seconds a dose.",
+  "parts": [
+   {
+    "name": "gear motor 6 V",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   58.0,
+   12.0,
+   10.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p13_gear_motor.step",
+   "stl": "ESP 2025/stl/esp2025_p13_gear_motor.stl",
+   "glb": "ESP 2025/glb/esp2025_p13_gear_motor.glb",
+   "edges": "ESP 2025/edges/esp2025_p13_gear_motor.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 13,
+   "key": "gear_motor",
+   "group": "base",
+   "material": "Bought in: N20 metal gear motor, 6 V, 200:1, 150 rpm, with D shaft",
+   "file": "gear_motor.ipt",
+   "bought": true,
+   "sizes": [
+    "Gearbox 12 x 10 x 9",
+    "Motor \u00d812 (10 flats) x 22",
+    "Shaft \u00d83 x 24"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p13_gear_motor_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p13_gear_motor_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p14_motor_clamp",
+  "title": "ESP 2025 part 14: motor clamp",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 14 on the parts list: Polypropylene (PP), injection moulded. A U-shaped clamp over the motor. Its legs clip into the bottom cover, so the motor cannot move away from the gear.",
+  "description": "A U-shaped clamp over the motor. Its legs clip into the bottom cover, so the motor cannot move away from the gear.",
+  "parts": [
+   {
+    "name": "motor clamp",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.0,
+   16.0,
+   12.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p14_motor_clamp.step",
+   "stl": "ESP 2025/stl/esp2025_p14_motor_clamp.stl",
+   "glb": "ESP 2025/glb/esp2025_p14_motor_clamp.glb",
+   "edges": "ESP 2025/edges/esp2025_p14_motor_clamp.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 14,
+   "key": "motor_clamp",
+   "group": "base",
+   "material": "Polypropylene (PP), injection moulded",
+   "file": "motor_clamp.ipt",
+   "bought": false,
+   "sizes": [
+    "16 x 8 x 12",
+    "Slot 12 x 10"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p14_motor_clamp_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p14_motor_clamp_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p15_worm",
+  "title": "ESP 2025 part 15: worm",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 15 on the parts list: Acetal (POM), single start, module 0.8. The worm on the motor shaft. One turn moves the drive gear one tooth. A worm cannot be turned by the gear, so nobody can turn the carousel by hand to reach the next dose.",
+  "description": "The worm on the motor shaft. One turn moves the drive gear one tooth. A worm cannot be turned by the gear, so nobody can turn the carousel by hand to reach the next dose.",
+  "parts": [
+   {
+    "name": "worm",
+    "colour": "#F7F3E8",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   12.0,
+   7.6,
+   7.6
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p15_worm.step",
+   "stl": "ESP 2025/stl/esp2025_p15_worm.stl",
+   "glb": "ESP 2025/glb/esp2025_p15_worm.glb",
+   "edges": "ESP 2025/edges/esp2025_p15_worm.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 15,
+   "key": "worm",
+   "group": "base",
+   "material": "Acetal (POM), single start, module 0.8",
+   "file": "worm.ipt",
+   "bought": false,
+   "sizes": [
+    "Root \u00d84, tip \u00d87.6, 12 long",
+    "Pitch 2.513 (module 0.8), 1 start",
+    "Bore \u00d83"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p15_worm_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p15_worm_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p16_home_sensor",
+  "title": "ESP 2025 part 16: home sensor",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 16 on the parts list: Bought in: reflective optical sensor (infrared). A reflective light sensor under the drive gear, looking up at it. Once a turn of the carousel the hole in the gear passes over it and the light is not reflected, so the control unit always knows which compartment is over the drop hole.",
+  "description": "A reflective light sensor under the drive gear, looking up at it. Once a turn of the carousel the hole in the gear passes over it and the light is not reflected, so the control unit always knows which compartment is over the drop hole.",
+  "parts": [
+   {
+    "name": "home sensor",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   8.2,
+   8.2,
+   2.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p16_home_sensor.step",
+   "stl": "ESP 2025/stl/esp2025_p16_home_sensor.stl",
+   "glb": "ESP 2025/glb/esp2025_p16_home_sensor.glb",
+   "edges": "ESP 2025/edges/esp2025_p16_home_sensor.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 16,
+   "key": "home_sensor",
+   "group": "base",
+   "material": "Bought in: reflective optical sensor (infrared)",
+   "file": "home_sensor.ipt",
+   "bought": true,
+   "sizes": [
+    "6 x 6 x 1.5 body",
+    "Light and eye \u00d82, 2.8 apart"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p16_home_sensor_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p16_home_sensor_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p17_battery_door",
+  "title": "ESP 2025 part 17: battery door",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 17 on the parts list: Polypropylene (PP), white, injection moulded. Door under each battery holder, held by two tamper-proof screws: the pharmacy changes the batteries; the patient cannot open it.",
+  "description": "Door under each battery holder, held by two tamper-proof screws: the pharmacy changes the batteries; the patient cannot open it.",
+  "parts": [
+   {
+    "name": "battery door",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   62.0,
+   4.3
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p17_battery_door.step",
+   "stl": "ESP 2025/stl/esp2025_p17_battery_door.stl",
+   "glb": "ESP 2025/glb/esp2025_p17_battery_door.glb",
+   "edges": "ESP 2025/edges/esp2025_p17_battery_door.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 17,
+   "key": "battery_door",
+   "group": "base",
+   "material": "Polypropylene (PP), white, injection moulded",
+   "file": "battery_door.ipt",
+   "bought": false,
+   "sizes": [
+    "Flange 24 x 62 x 1.5",
+    "Plug 17.6 x 41.6 x 2.8",
+    "CSK \u00d82.2, 2 off"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p17_battery_door_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p17_battery_door_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p18_door_seal",
+  "title": "ESP 2025 part 18: battery door seal",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 18 on the parts list: Silicone rubber sheet, 1 thick, die cut. Flat seal between the battery door and the cover, so no water gets to the batteries.",
+  "description": "Flat seal between the battery door and the cover, so no water gets to the batteries.",
+  "parts": [
+   {
+    "name": "battery door seal",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   24.0,
+   62.0,
+   1.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p18_door_seal.step",
+   "stl": "ESP 2025/stl/esp2025_p18_door_seal.stl",
+   "glb": "ESP 2025/glb/esp2025_p18_door_seal.glb",
+   "edges": "ESP 2025/edges/esp2025_p18_door_seal.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 18,
+   "key": "door_seal",
+   "group": "base",
+   "material": "Silicone rubber sheet, 1 thick, die cut",
+   "file": "door_seal.ipt",
+   "bought": false,
+   "sizes": [
+    "24 x 62 frame, 1 thick",
+    "Opening 18 x 42"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p18_door_seal_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p18_door_seal_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p19_security_screw",
+  "title": "ESP 2025 part 19: security screw M2.2 x 8",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 19 on the parts list: Bought in: A2 stainless pin Torx (tamper-proof) countersunk screw. Holds the battery door. It needs a pin Torx bit, which the pharmacy has and the patient does not.",
+  "description": "Holds the battery door. It needs a pin Torx bit, which the pharmacy has and the patient does not.",
+  "parts": [
+   {
+    "name": "security screw M2.2 x 8",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   5.2,
+   5.2,
+   8.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p19_security_screw.step",
+   "stl": "ESP 2025/stl/esp2025_p19_security_screw.stl",
+   "glb": "ESP 2025/glb/esp2025_p19_security_screw.glb",
+   "edges": "ESP 2025/edges/esp2025_p19_security_screw.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 19,
+   "key": "security_screw",
+   "group": "base",
+   "material": "Bought in: A2 stainless pin Torx (tamper-proof) countersunk screw",
+   "file": "security_screw.ipt",
+   "bought": true,
+   "sizes": [
+    "M2.2 x 7, CSK \u00d85.2",
+    "Pin Torx recess"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p19_security_screw_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p19_security_screw_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p20_cover_screw",
+  "title": "ESP 2025 part 20: cover screw 2.5 x 10",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 20 on the parts list: Bought in: A2 stainless countersunk screw for plastics (thread forming). Four screws from underneath hold the bottom cover to the chassis bosses and squeeze the gasket.",
+  "description": "Four screws from underneath hold the bottom cover to the chassis bosses and squeeze the gasket.",
+  "parts": [
+   {
+    "name": "cover screw 2.5 x 10",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   6.0,
+   6.0,
+   11.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p20_cover_screw.step",
+   "stl": "ESP 2025/stl/esp2025_p20_cover_screw.stl",
+   "glb": "ESP 2025/glb/esp2025_p20_cover_screw.glb",
+   "edges": "ESP 2025/edges/esp2025_p20_cover_screw.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 20,
+   "key": "cover_screw",
+   "group": "base",
+   "material": "Bought in: A2 stainless countersunk screw for plastics (thread forming)",
+   "file": "cover_screw.ipt",
+   "bought": true,
+   "sizes": [
+    "2.5 x 11, CSK \u00d86",
+    "Torx T8"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p20_cover_screw_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p20_cover_screw_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p21_pod_column",
+  "title": "ESP 2025 part 21: pod column",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 21 on the parts list: Polypropylene (PP), white, 3 wall, injection moulded. The fixed column in the middle of the dispenser. It stands in the socket of the bottom cover, passes up through the carousel hub and holds the panel board at the top. The lid closes round it on an O-ring.",
+  "description": "The fixed column in the middle of the dispenser. It stands in the socket of the bottom cover, passes up through the carousel hub and holds the panel board at the top. The lid closes round it on an O-ring.",
+  "parts": [
+   {
+    "name": "pod column",
+    "colour": "#E9ECEF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   70.0,
+   49.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p21_pod_column.step",
+   "stl": "ESP 2025/stl/esp2025_p21_pod_column.stl",
+   "glb": "ESP 2025/glb/esp2025_p21_pod_column.glb",
+   "edges": "ESP 2025/edges/esp2025_p21_pod_column.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 21,
+   "key": "pod_column",
+   "group": "pod",
+   "material": "Polypropylene (PP), white, 3 wall, injection moulded",
+   "file": "pod_column.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d870 / \u00d864 x 49.5",
+    "O-ring groove \u00d867 x 3",
+    "Ledge 39.0 up",
+    "Cable slot 12 x 6"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p21_pod_column_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p21_pod_column_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p22_pod_oring",
+  "title": "ESP 2025 part 22: pod O-ring",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 22 on the parts list: Silicone O-ring, 67 inside diameter x 3 section. Seals the gap between the fixed control pod and the lid, so water cannot get in round the middle.",
+  "description": "Seals the gap between the fixed control pod and the lid, so water cannot get in round the middle.",
+  "parts": [
+   {
+    "name": "pod O-ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   73.0,
+   73.0,
+   3.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p22_pod_oring.step",
+   "stl": "ESP 2025/stl/esp2025_p22_pod_oring.stl",
+   "glb": "ESP 2025/glb/esp2025_p22_pod_oring.glb",
+   "edges": "ESP 2025/edges/esp2025_p22_pod_oring.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 22,
+   "key": "pod_oring",
+   "group": "pod",
+   "material": "Silicone O-ring, 67 inside diameter x 3 section",
+   "file": "pod_oring.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d867 inside x 3 section"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p22_pod_oring_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p22_pod_oring_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p23_panel_pcb",
+  "title": "ESP 2025 part 23: panel circuit board",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 23 on the parts list: Bought in: FR4 board 1.6 thick. The small round board in the top of the pod: it carries the display, the button switch, the flashing light and the buzzer, and is joined to the main board by a ribbon cable.",
+  "description": "The small round board in the top of the pod: it carries the display, the button switch, the flashing light and the buzzer, and is joined to the main board by a ribbon cable.",
+  "parts": [
+   {
+    "name": "panel circuit board",
+    "colour": "#1E6B3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   63.6,
+   63.6,
+   1.6
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p23_panel_pcb.step",
+   "stl": "ESP 2025/stl/esp2025_p23_panel_pcb.stl",
+   "glb": "ESP 2025/glb/esp2025_p23_panel_pcb.glb",
+   "edges": "ESP 2025/edges/esp2025_p23_panel_pcb.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 23,
+   "key": "panel_pcb",
+   "group": "pod",
+   "material": "Bought in: FR4 board 1.6 thick",
+   "file": "panel_pcb.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d863.6 x 1.6"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p23_panel_pcb_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p23_panel_pcb_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p24_lcd",
+  "title": "ESP 2025 part 24: display",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 24 on the parts list: Bought in: low power LCD module 30 x 20, shows the time, next dose and battery. Shows the time, the next dose time, how many doses are left and a low battery warning, for the patient and the pharmacy.",
+  "description": "Shows the time, the next dose time, how many doses are left and a low battery warning, for the patient and the pharmacy.",
+  "parts": [
+   {
+    "name": "display",
+    "colour": "#4F6F5A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   30.0,
+   20.0,
+   3.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p24_lcd.step",
+   "stl": "ESP 2025/stl/esp2025_p24_lcd.stl",
+   "glb": "ESP 2025/glb/esp2025_p24_lcd.glb",
+   "edges": "ESP 2025/edges/esp2025_p24_lcd.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 24,
+   "key": "lcd",
+   "group": "pod",
+   "material": "Bought in: low power LCD module 30 x 20, shows the time, next dose and battery",
+   "file": "lcd.ipt",
+   "bought": true,
+   "sizes": [
+    "30 x 20 x 3.5",
+    "View 26 x 16"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p24_lcd_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p24_lcd_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p25_tact_switch",
+  "title": "ESP 2025 part 25: button switch",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 25 on the parts list: Bought in: 6 x 6 tactile switch, IP67. The switch under the PRESS HERE button.",
+  "description": "The switch under the PRESS HERE button.",
+  "parts": [
+   {
+    "name": "button switch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   6.0,
+   6.0,
+   5.9
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p25_tact_switch.step",
+   "stl": "ESP 2025/stl/esp2025_p25_tact_switch.stl",
+   "glb": "ESP 2025/glb/esp2025_p25_tact_switch.glb",
+   "edges": "ESP 2025/edges/esp2025_p25_tact_switch.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 25,
+   "key": "tact_switch",
+   "group": "pod",
+   "material": "Bought in: 6 x 6 tactile switch, IP67",
+   "file": "tact_switch.ipt",
+   "bought": true,
+   "sizes": [
+    "6 x 6 x 3.5",
+    "Plunger \u00d83.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p25_tact_switch_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p25_tact_switch_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p26_led",
+  "title": "ESP 2025 part 26: flashing light (LED)",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 26 on the parts list: Bought in: 5 mm high brightness amber LED. The light beside the button. It flashes when a dose is due, until the pills have been dispensed.",
+  "description": "The light beside the button. It flashes when a dose is due, until the pills have been dispensed.",
+  "parts": [
+   {
+    "name": "flashing light (LED)",
+    "colour": "#F2A623",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   5.8,
+   5.8,
+   6.4
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p26_led.step",
+   "stl": "ESP 2025/stl/esp2025_p26_led.stl",
+   "glb": "ESP 2025/glb/esp2025_p26_led.glb",
+   "edges": "ESP 2025/edges/esp2025_p26_led.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 26,
+   "key": "led",
+   "group": "pod",
+   "material": "Bought in: 5 mm high brightness amber LED",
+   "file": "led.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d85 LED, rim \u00d85.8",
+    "6.4 high"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p26_led_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p26_led_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p27_led_lens",
+  "title": "ESP 2025 part 27: light lens",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 27 on the parts list: Clarified polypropylene, clear, injection moulded. Clear light pipe through the pod cap, with a flange that seals under the cap. It carries the flashing light to the top, next to the button.",
+  "description": "Clear light pipe through the pod cap, with a flange that seals under the cap. It carries the flashing light to the top, next to the button.",
+  "parts": [
+   {
+    "name": "light lens",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   11.0,
+   11.0,
+   3.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p27_led_lens.step",
+   "stl": "ESP 2025/stl/esp2025_p27_led_lens.stl",
+   "glb": "ESP 2025/glb/esp2025_p27_led_lens.glb",
+   "edges": "ESP 2025/edges/esp2025_p27_led_lens.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 27,
+   "key": "led_lens",
+   "group": "pod",
+   "material": "Clarified polypropylene, clear, injection moulded",
+   "file": "led_lens.ipt",
+   "bought": false,
+   "sizes": [
+    "Flange \u00d811 x 1",
+    "Pipe \u00d87.2 x 2.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p27_led_lens_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p27_led_lens_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p28_buzzer",
+  "title": "ESP 2025 part 28: buzzer",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 28 on the parts list: Bought in: 9 mm piezo sounder, 85 dB at 10 cm, sealed. Sounds the alarm when a dose is due and keeps sounding until the pills have been dispensed.",
+  "description": "Sounds the alarm when a dose is due and keeps sounding until the pills have been dispensed.",
+  "parts": [
+   {
+    "name": "buzzer",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   9.0,
+   9.0,
+   7.4
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p28_buzzer.step",
+   "stl": "ESP 2025/stl/esp2025_p28_buzzer.stl",
+   "glb": "ESP 2025/glb/esp2025_p28_buzzer.glb",
+   "edges": "ESP 2025/edges/esp2025_p28_buzzer.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 28,
+   "key": "buzzer",
+   "group": "pod",
+   "material": "Bought in: 9 mm piezo sounder, 85 dB at 10 cm, sealed",
+   "file": "buzzer.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d89 x 7.4",
+    "Sound hole \u00d82"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p28_buzzer_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p28_buzzer_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p29_button",
+  "title": "ESP 2025 part 29: PRESS HERE button",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 29 on the parts list: Silicone rubber, green, moulded with raised PRESS HERE letters. The big green button the patient presses when the light flashes and the alarm sounds. Its flange is clamped under the pod cap, so it seals the hole as well.",
+  "description": "The big green button the patient presses when the light flashes and the alarm sounds. Its flange is clamped under the pod cap, so it seals the hole as well.",
+  "parts": [
+   {
+    "name": "PRESS HERE button",
+    "colour": "#2E9E5B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   28.0,
+   28.0,
+   5.6
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p29_button.step",
+   "stl": "ESP 2025/stl/esp2025_p29_button.stl",
+   "glb": "ESP 2025/glb/esp2025_p29_button.glb",
+   "edges": "ESP 2025/edges/esp2025_p29_button.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 29,
+   "key": "button",
+   "group": "pod",
+   "material": "Silicone rubber, green, moulded with raised PRESS HERE letters",
+   "file": "button.ipt",
+   "bought": false,
+   "sizes": [
+    "Flange \u00d828 x 1.5",
+    "Button \u00d822 x 3.5, R1.5",
+    "PRESS HERE, 3.6 high, 0.6 raised"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p29_button_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p29_button_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p30_display_window",
+  "title": "ESP 2025 part 30: display window",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 30 on the parts list: Clarified polypropylene, clear, 1.5 thick. Clear window over the display, sealed under the pod cap.",
+  "description": "Clear window over the display, sealed under the pod cap.",
+  "parts": [
+   {
+    "name": "display window",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   34.0,
+   21.5,
+   1.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p30_display_window.step",
+   "stl": "ESP 2025/stl/esp2025_p30_display_window.stl",
+   "glb": "ESP 2025/glb/esp2025_p30_display_window.glb",
+   "edges": "ESP 2025/edges/esp2025_p30_display_window.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 30,
+   "key": "display_window",
+   "group": "pod",
+   "material": "Clarified polypropylene, clear, 1.5 thick",
+   "file": "display_window.ipt",
+   "bought": false,
+   "sizes": [
+    "34 x 21.5 x 1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p30_display_window_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p30_display_window_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p31_pod_cap",
+  "title": "ESP 2025 part 31: pod cap",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 31 on the parts list: Polypropylene (PP), WBEP blue, injection moulded, printed. The top of the control pod: the face the patient uses. It has the button, the light, the display window and the buzzer grille, and is welded to the column so it cannot be prised off.",
+  "description": "The top of the control pod: the face the patient uses. It has the button, the light, the display window and the buzzer grille, and is welded to the column so it cannot be prised off.",
+  "parts": [
+   {
+    "name": "pod cap",
+    "colour": "#2C5AA0",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   70.0,
+   70.0,
+   5.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p31_pod_cap.step",
+   "stl": "ESP 2025/stl/esp2025_p31_pod_cap.stl",
+   "glb": "ESP 2025/glb/esp2025_p31_pod_cap.glb",
+   "edges": "ESP 2025/edges/esp2025_p31_pod_cap.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 31,
+   "key": "pod_cap",
+   "group": "pod",
+   "material": "Polypropylene (PP), WBEP blue, injection moulded, printed",
+   "file": "pod_cap.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d870 x 2.5, spigot \u00d864",
+    "Button hole \u00d823, light hole \u00d87.2",
+    "Window 26 x 16",
+    "Grille 5 x \u00d81.6"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p31_pod_cap_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p31_pod_cap_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p32_lid",
+  "title": "ESP 2025 part 32: lid",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 32 on the parts list: Clarified polypropylene (PP), clear, 1.8 wall, injection moulded. The clear lid: the patient can see the doses left but cannot reach them. It is hinged at the back, closes on the gasket and round the pod O-ring, and is held shut by the lid catch and the pharmacy lock.",
+  "description": "The clear lid: the patient can see the doses left but cannot reach them. It is hinged at the back, closes on the gasket and round the pod O-ring, and is held shut by the lid catch and the pharmacy lock.",
+  "parts": [
+   {
+    "name": "lid",
+    "colour": "#BFD9EE",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   180.1,
+   187.0,
+   23.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p32_lid.step",
+   "stl": "ESP 2025/stl/esp2025_p32_lid.stl",
+   "glb": "ESP 2025/glb/esp2025_p32_lid.glb",
+   "edges": "ESP 2025/edges/esp2025_p32_lid.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 32,
+   "key": "lid",
+   "group": "lid",
+   "material": "Clarified polypropylene (PP), clear, 1.8 wall, injection moulded",
+   "file": "lid.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8180 x 21, 1.8 wall, 2 top",
+    "Top edge R4",
+    "Pod hole \u00d873, collar \u00d876",
+    "Knuckle R3.5 x 30"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p32_lid_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p32_lid_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p33_gasket",
+  "title": "ESP 2025 part 33: gasket ring",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 33 on the parts list: Silicone rubber, 1 thick, die cut ring 176.6 / 179.6. Flat silicone ring. One seals the lid to the chassis, and the same part seals the chassis to the bottom cover: together with the O-ring and the door and drawer seals the dispenser is waterproof.",
+  "description": "Flat silicone ring. One seals the lid to the chassis, and the same part seals the chassis to the bottom cover: together with the O-ring and the door and drawer seals the dispenser is waterproof.",
+  "parts": [
+   {
+    "name": "gasket ring",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   179.7,
+   179.6,
+   1.1
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p33_gasket.step",
+   "stl": "ESP 2025/stl/esp2025_p33_gasket.stl",
+   "glb": "ESP 2025/glb/esp2025_p33_gasket.glb",
+   "edges": "ESP 2025/edges/esp2025_p33_gasket.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 33,
+   "key": "gasket",
+   "group": "lid",
+   "material": "Silicone rubber, 1 thick, die cut ring 176.6 / 179.6",
+   "file": "gasket.ipt",
+   "bought": false,
+   "sizes": [
+    "\u00d8176.6 / \u00d8179.6 x 1"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p33_gasket_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p33_gasket_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p34_lid_catch",
+  "title": "ESP 2025 part 34: lid catch",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 34 on the parts list: Polypropylene, 30 % glass filled (PP-GF30), injection moulded. A hook that hangs down from inside the lid, through the slot in the deck, to the lock. When the pharmacy lock is turned, the cam lies over the hook and the lid cannot be lifted: the part that stops anyone forcing the lid (FEA load case).",
+  "description": "A hook that hangs down from inside the lid, through the slot in the deck, to the lock. When the pharmacy lock is turned, the cam lies over the hook and the lid cannot be lifted: the part that stops anyone forcing the lid (FEA load case).",
+  "parts": [
+   {
+    "name": "lid catch",
+    "colour": "#2B2B2B",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   20.9,
+   12.6,
+   43.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p34_lid_catch.step",
+   "stl": "ESP 2025/stl/esp2025_p34_lid_catch.stl",
+   "glb": "ESP 2025/glb/esp2025_p34_lid_catch.glb",
+   "edges": "ESP 2025/edges/esp2025_p34_lid_catch.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "part": {
+   "no": 34,
+   "key": "lid_catch",
+   "group": "lid",
+   "material": "Polypropylene, 30 % glass filled (PP-GF30), injection moulded",
+   "file": "lid_catch.ipt",
+   "bought": false,
+   "sizes": [
+    "Tab 19.5 x 3 x 41.5",
+    "Hook 2 x 3.5",
+    "Flange 4 x 1.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p34_lid_catch_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p34_lid_catch_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p35_hinge_pin",
+  "title": "ESP 2025 part 35: hinge pin",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 35 on the parts list: A2 stainless steel pin, 3 diameter x 88. The pin the lid turns on. It is pressed in through the three knuckles and cannot be pulled out with the lid shut.",
+  "description": "The pin the lid turns on. It is pressed in through the three knuckles and cannot be pulled out with the lid shut.",
+  "parts": [
+   {
+    "name": "hinge pin",
+    "colour": "#A9B4BF",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   88.0,
+   3.0,
+   3.0
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p35_hinge_pin.step",
+   "stl": "ESP 2025/stl/esp2025_p35_hinge_pin.stl",
+   "glb": "ESP 2025/glb/esp2025_p35_hinge_pin.glb",
+   "edges": "ESP 2025/edges/esp2025_p35_hinge_pin.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 35,
+   "key": "hinge_pin",
+   "group": "lid",
+   "material": "A2 stainless steel pin, 3 diameter x 88",
+   "file": "hinge_pin.ipt",
+   "bought": true,
+   "sizes": [
+    "\u00d83 x 88, ends 0.3 chamfer"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p35_hinge_pin_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p35_hinge_pin_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p36_drawer",
+  "title": "ESP 2025 part 36: dispensing drawer",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 36 on the parts list: Polypropylene (PP), WBEP blue, injection moulded. The pills fall into this drawer. The patient pulls it out by the finger grip, tips the pills into a hand or a cup and pushes it back; it clicks home against its seal.",
+  "description": "The pills fall into this drawer. The patient pulls it out by the finger grip, tips the pills into a hand or a cup and pushes it back; it clicks home against its seal.",
+  "parts": [
+   {
+    "name": "dispensing drawer",
+    "colour": "#2C5AA0",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.1,
+   49.5,
+   12.6
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p36_drawer.step",
+   "stl": "ESP 2025/stl/esp2025_p36_drawer.stl",
+   "glb": "ESP 2025/glb/esp2025_p36_drawer.glb",
+   "edges": "ESP 2025/edges/esp2025_p36_drawer.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 36,
+   "key": "drawer",
+   "group": "drawer",
+   "material": "Polypropylene (PP), WBEP blue, injection moulded",
+   "file": "drawer.ipt",
+   "bought": false,
+   "sizes": [
+    "44 x -48.0 x 10.5, 1.5 wall",
+    "Front R90.5 / R92 x 50",
+    "Grip 24 x 3"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p36_drawer_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p36_drawer_first_angle"
+  }
+ },
+ {
+  "name": "esp2025_p37_drawer_seal",
+  "title": "ESP 2025 part 37: drawer seal",
+  "criteria": "3.1",
+  "uses": "ESP 2025 component, item 37 on the parts list: Silicone rubber, 0.5 thick, moulded frame. A thin frame on the back of the drawer front. It presses on the case round the opening when the drawer is pushed home, so water cannot get in.",
+  "description": "A thin frame on the back of the drawer front. It presses on the case round the opening when the drawer is pushed home, so water cannot get in.",
+  "parts": [
+   {
+    "name": "drawer seal",
+    "colour": "#3A3A3A",
+    "explode": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "size_mm": [
+   50.0,
+   4.1,
+   13.5
+  ],
+  "section": null,
+  "exploded": false,
+  "iso": [
+   1,
+   1,
+   1
+  ],
+  "files": {
+   "step": "ESP 2025/step/esp2025_p37_drawer_seal.step",
+   "stl": "ESP 2025/stl/esp2025_p37_drawer_seal.stl",
+   "glb": "ESP 2025/glb/esp2025_p37_drawer_seal.glb",
+   "edges": "ESP 2025/edges/esp2025_p37_drawer_seal.json"
+  },
+  "base": "ESP 2025/",
+  "folder": "ESP 2025",
+  "fea": false,
+  "part": {
+   "no": 37,
+   "key": "drawer_seal",
+   "group": "drawer",
+   "material": "Silicone rubber, 0.5 thick, moulded frame",
+   "file": "drawer_seal.ipt",
+   "bought": false,
+   "sizes": [
+    "R90 / R90.5 frame 50 x 13.5"
+   ]
+  },
+  "media": "still",
+  "drawings": {
+   "third": "ESP 2025/drawings/esp2025_p37_drawer_seal_third_angle",
+   "first": "ESP 2025/drawings/esp2025_p37_drawer_seal_first_angle"
+  }
  }
 ]

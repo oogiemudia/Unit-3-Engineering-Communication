@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p21_pod_column",
+ "title": "ESP 2025 part 21: pod column",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pod_column.ipt.",
+    "Sketch circles diameter 70 and 64. Extrude 49.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod column",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p21_pod_column/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p21_pod_column/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Board ledge",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a ring 2 wide inside the tube, 39.0 up. Extrude 1.5 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod column",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p21_pod_column/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p21_pod_column/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "O-ring groove",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch a 1.5 x 3 rectangle on the outside, 41.75 up. Revolve Cut."
+   ],
+   "note": "The O-ring here seals against the collar of the lid.",
+   "parts": [
+    {
+     "name": "pod column",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p21_pod_column/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p21_pod_column/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Cable slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 12 x 6 slot at the bottom, at the front. Extrude Cut through the wall. Save."
+   ],
+   "note": "The ribbon cable from the main board comes in here.",
+   "parts": [
+    {
+     "name": "pod column",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p21_pod_column/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p21_pod_column/step_04.json"
+  }
+ ]
+}

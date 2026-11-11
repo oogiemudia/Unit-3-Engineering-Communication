@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.join(ROOT, 'models'))
 import esp2023 as esp  # noqa: E402
 import esp2026 as seat  # noqa: E402
 import esp2024 as buoy_m  # noqa: E402
+import esp2025 as pill  # noqa: E402
 
 ENV = 'Environments tab > Begin panel > Dynamic Simulation'
 SETTINGS = 'Dynamic Simulation tab > Manage panel > Simulation Settings'
@@ -403,6 +404,84 @@ def esp_buoy_sim():
 
 SIMS['esp2024_buoy'] = esp_buoy_sim()
 FOLDER['esp2024_buoy'] = 'ESP 2024'
+
+
+# ------------------------------------------------------------------ ESP 2025 automated pill dispenser
+def esp_pill_sim():
+    """A dose: the alarm sounds and the light flashes; the patient presses PRESS HERE; the motor turns the worm four
+    times, the drive gear four teeth and the carousel one step of 12 degrees, so the next compartment drops its pills
+    down the chute; the alarm stops. The patient pulls the drawer out, takes the pills and pushes it back. Then the
+    pharmacist turns the key (the cam turns 90 degrees), opens the lid to refill and closes and locks it again."""
+    D = 20
+    STEP = pill.SEG
+    TURNS = STEP / (360 / pill.GEAR_N)
+    t_press, t_turn = (3.0, 3.2, 3.4), (3.4, 5.0)
+    drawer_t, cam_t, lid_t = (6.0, 7.5, 9.0, 10.5), (11.0, 12.0, 18.0, 19.0), (12.2, 14.0, 16.0, 17.8)
+    a = math.radians(pill.LOCK_ANG)
+    lock_c = [87 * math.cos(a), 87 * math.sin(a), pill.LOCK_Z]
+    lock_ax = [round(-math.cos(a), 5), round(-math.sin(a), 5), 0]   # the inward axis, as pill.cam_turn
+    hinge = [0, pill.HINGE[0], pill.HINGE[1]]
+    worm_c = [0, pill.WORM_Y, pill.WORM_ZC]
+
+    def hold(a_, b_, c_, d_, v):
+        return ease_keys([(0, 0), (a_, 0), (b_, v), (c_, v), (d_, 0), (D, 0)])
+
+    carousel = ease_keys([(0, 0), (t_turn[0], 0), (t_turn[1], STEP), (D, STEP)])
+    worm = ease_keys([(0, 0), (t_turn[0], 0), (t_turn[1], 360 * TURNS), (D, 360 * TURNS)])
+    button = ease_keys([(0, 0), (t_press[0], 0), (t_press[1], -0.8), (t_press[2], 0), (D, 0)])
+    drawer = hold(*drawer_t, -35)
+    cam = hold(*cam_t, 90)
+    lid = hold(*lid_t, -100)
+    motion = []
+    for p in pill.CAROUSEL_PARTS:
+        motion.append(dict(part=p, kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=carousel))
+    motion.append(dict(part='worm', kind='turn', axis=[1, 0, 0], centre=worm_c, keys=worm))
+    motion.append(dict(part='PRESS HERE button', kind='move', axis=[0, 0, 1], keys=button))
+    for p in ('dispensing drawer', 'drawer seal'):
+        motion.append(dict(part=p, kind='move', axis=[0, 1, 0], keys=drawer))
+    motion.append(dict(part='lock cam', kind='turn', axis=lock_ax, centre=lock_c, keys=cam))
+    for p in pill.LID_PARTS:
+        motion.append(dict(part=p, kind='turn', axis=[1, 0, 0], centre=hinge, keys=lid))
+    alarm = [(0, 0), (1.0, 0), (1.01, 1), (5.0, 1), (5.01, 0), (D, 0)]
+    graph = [dict(name='Alarm and flashing light (1 = on)', unit='', lin=True, keys=ease_keys(alarm)),
+             dict(name='Carousel angle', unit='deg', keys=carousel),
+             dict(name='Drawer pulled out', unit='mm', keys=[[t, -v] for t, v in drawer]),
+             dict(name='Lid angle', unit='deg', keys=[[t, -v] for t, v in lid])]
+    moving = sorted({m['part'] for m in motion})
+    steps = common_start('esp2025_dispenser.iam') + [
+        step('joints', 'Check the carousel and drive joints', JOINT,
+             ['In Standard Joints find the Revolution joint of the carousel (its hub in the deck) and of the worm (on the '
+              'motor shaft). The drive gear is in one Welded group with the carousel.',
+              'Insert Joint > 3D Contact or Worm Gear: pick the worm and the drive gear, ratio %d:1.' % pill.GEAR_N],
+             'A worm gear joint ties the two together: %d turns of the worm move the carousel %d degrees.' % (TURNS, STEP)),
+        step('joints', 'Join the button, drawer, cam and lid', JOINT,
+             ['Insert Joint, Prismatic: the PRESS HERE button in its hole, and the drawer in its opening.',
+              'Insert Joint, Revolution: the lock cam on the lock axis, and the lid on the hinge pin.'], None),
+        step('motion', 'The alarm and the button', 'Right click the button Prismatic joint > Properties > Edit imposed motion',
+             ['The alarm and the light are switched by the program, not by a joint: they run from 1 s until the drop '
+              'sensors see the pills (shown on the graph).',
+              'Button: 0 at 3 s, pressed 0.8 mm at 3.2 s, back at 3.4 s.'],
+             'The alarm keeps sounding until the pills have been dispensed, as the brief asks.'),
+        step('motion', 'Turn one dose', 'Right click the worm Revolution joint > Properties > Edit imposed motion',
+             ['Worm: 0 at 3.4 s, %d degrees (%d turns) at 5 s.' % (360 * TURNS, TURNS),
+              'The worm gear joint turns the carousel %d degrees: the next compartment is over the drop hole.' % STEP],
+             'The self-locking worm holds the carousel still between doses.'),
+        step('motion', 'Take the pills', 'Edit imposed motion on the drawer Prismatic joint',
+             ['Drawer: 0 at 6 s, 35 mm out at 7.5 s, hold to 9 s, back in by 10.5 s.'], None),
+        step('motion', 'Pharmacy refill', 'Edit imposed motion on the cam and lid Revolution joints',
+             ['Cam: 0 at 11 s, 90 degrees (unlocked) at 12 s, hold, back to 0 (locked) by 19 s.',
+              'Lid: 0 at 12.2 s, 100 degrees open at 14 s, hold to 16 s, shut by 17.8 s. Click OK.'],
+             'Only the pharmacy key turns the cam; with the cam at 0 the lid catch cannot lift.'),
+    ] + common_end(D, 'the angle of the carousel and lid joints and the position of the drawer joint')
+    return dict(duration=D,
+                story='The alarm sounds and the light flashes; the patient presses PRESS HERE and the carousel turns one '
+                      'step, dropping the next dose into the drawer. The drawer is pulled out and pushed back. Then the '
+                      'pharmacist unlocks the lid with the key, opens it to refill and locks it again.',
+                moving=moving, motion=motion, graph=graph, steps=steps)
+
+
+SIMS['esp2025_dispenser'] = esp_pill_sim()
+FOLDER['esp2025_dispenser'] = 'ESP 2025'
 
 
 def build():

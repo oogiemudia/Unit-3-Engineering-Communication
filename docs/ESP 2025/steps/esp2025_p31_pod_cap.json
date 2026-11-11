@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p31_pod_cap",
+ "title": "ESP 2025 part 31: pod cap",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Disc and spigot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pod_cap.ipt.",
+    "Circle diameter 70, Extrude 2.5 mm; ring diameter 64 / 61, Extrude 2.5 mm down."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod cap",
+     "colour": "#2C5AA0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p31_pod_cap/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p31_pod_cap/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Round edge",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the top edge 1."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod cap",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p31_pod_cap/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p31_pod_cap/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Openings",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the button hole diameter 23, the light hole diameter 7.2 and the 26 x 16 display window. Extrude Cut Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod cap",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p31_pod_cap/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p31_pod_cap/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Buzzer grille",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Five holes diameter 1.6 over the buzzer. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pod cap",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p31_pod_cap/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p31_pod_cap/step_04.json"
+  }
+ ]
+}

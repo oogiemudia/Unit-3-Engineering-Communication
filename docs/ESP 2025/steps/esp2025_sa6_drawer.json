@@ -1,0 +1,57 @@
+{
+ "name": "esp2025_sa6_drawer",
+ "title": "ESP 2025 sub-assembly 6: dispensing drawer",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Drawer",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as drawer.iam.",
+    "Place drawer.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa6_drawer/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_sa6_drawer/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Seal",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place drawer_seal.ipt on the back of the front (Mate, Flush). Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "drawer seal",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa6_drawer/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_sa6_drawer/step_02.json"
+  }
+ ]
+}

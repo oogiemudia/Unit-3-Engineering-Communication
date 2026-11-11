@@ -1,0 +1,19 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>ESP 2025 reflective notes</title><style>
+@page{size:A4;margin:11mm 13mm}
+body{font-family:Arial,Helvetica,sans-serif;font-size:8.3pt;line-height:1.22;color:#111}
+h1{font-size:14pt;margin:0 0 2mm} h2{font-size:10pt;margin:2.2mm 0 0.8mm;color:#16335B;border-bottom:0.3mm solid #16335B}
+table{border-collapse:collapse;width:100%;margin:1mm 0} td,th{border:0.2mm solid #888;padding:0.2mm 1.5mm;text-align:left;vertical-align:top}
+th{background:#E8EEF6} .r{text-align:right;white-space:nowrap} .ok{color:#1F7A3A;font-weight:bold} .no{color:#B3261E;font-weight:bold}
+.hdr{display:flex;justify-content:space-between;font-size:7pt;color:#444;border-bottom:0.3mm solid #444;margin-bottom:2mm}
+.page{page-break-after:always} .small{font-size:8.2pt} .tiny{font-size:7pt} .tiny td,.tiny th{padding:0.15mm 1.2mm} ul{margin:0.5mm 0 0.5mm 5mm;padding:0}
+tr.tot td{font-weight:bold;background:#F3F6FA}
+
+body{font-size:10pt;line-height:1.45} p{margin:0 0 2mm}</style></head><body>
+<div class="hdr"><span>WBEP Ltd for the health trust. ESP 2025 (8730-035) Task 2, Part B</span><span>Reflective notes on the CAD drawing. 2026-11-10</span></div>
+<h1>Reflective notes: automated pill dispenser</h1>
+<p><b>How my ideas developed.</b> I sketched two dispensers. Design B was a rectangular cassette with 28 compartments, each with its own spring trapdoor and latch. It was simple to fill, but 28 latches cost more, weigh more and use more battery than one motor, and every trapdoor could leak or jam. Design A is a round carousel that turns over a deck with a single drop hole, so only the dose that is due can ever reach the patient. I chose design A.</p>
+<p><b>How the design meets the specification.</b> The dispenser is 180 &times; 189 &times; 59 mm, inside the 190 &times; 190 &times; 60 mm limit, and the CAD model gives a mass of 413 g with its four AAA cells, under 0.5 kg. There are 28 compartments, so it holds 28 days of once a day doses or 14 days of twice a day doses. Each compartment holds 3 of the largest pills (the brief asks for at least three). When a dose is due the buzzer sounds and the light next to the green PRESS HERE button flashes. Pressing the button turns the carousel one step and the pills drop into the drawer. The alarm keeps going until the drop sensor sees the pills fall. Only the pharmacy key opens the lid, and the worm drive cannot be turned by hand, so it is tamper-proof. Gaskets, an O-ring and seals make it waterproof, the case is polypropylene so it can be recycled, and four cells last about 246 days.</p>
+<p><b>What changed as I worked.</b> The interference check found problems I had not seen on paper. The motor gearbox overlapped the gear teeth, so I moved the motor along the worm axis. The home flag on the gear hit the worm at the last doses, so I used a hole in the gear and a sensor underneath instead. The lock cam turned down into the bottom cover, so I made it turn up. My first lid catch was 8 mm wide and the FEA gave a safety factor of only 1.0, so I made it wider, thicker and curved to follow the case. Checking the lid at small angles then showed it swinging into the carousel, so I made the carousel slightly smaller.</p>
+<p><b>Checking it is safe and affordable.</b> The lid catch is the part that stops someone forcing the lid. My hand calculation gave 21 MPa at a 200 N pull and the FEA gave 23 MPa, a safety factor of 3.2. The cost is £58.58 a unit for 1500 units (target £65) and £45.25 a unit for 3000 (target £40), so the £120,000 budget buys 2,506 units, not 3000. The programme fits inside 30 and 35 weeks.</p>
+<p><b>What I would improve.</b> I would test a prototype with patients who have arthritis, to check the button and the drawer are easy to use. I would also look at a rechargeable cell to save waste, and at a version that sends a message to a carer if a dose is missed.</p>
+</body></html>

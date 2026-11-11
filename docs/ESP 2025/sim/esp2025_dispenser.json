@@ -1,0 +1,604 @@
+{
+ "name": "esp2025_dispenser",
+ "duration": 20,
+ "story": "The alarm sounds and the light flashes; the patient presses PRESS HERE and the carousel turns one step, dropping the next dose into the drawer. The drawer is pulled out and pushed back. Then the pharmacist unlocks the lid with the key, opens it to refill and locks it again.",
+ "moving": [
+  "PRESS HERE button",
+  "carousel",
+  "dispensing drawer",
+  "drawer seal",
+  "drive gear",
+  "lid",
+  "lid catch",
+  "lid gasket",
+  "lock cam",
+  "worm"
+ ],
+ "motion": [
+  {
+   "part": "carousel",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     3.4,
+     0
+    ],
+    [
+     5.0,
+     12
+    ],
+    [
+     20,
+     12
+    ]
+   ]
+  },
+  {
+   "part": "drive gear",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     3.4,
+     0
+    ],
+    [
+     5.0,
+     12
+    ],
+    [
+     20,
+     12
+    ]
+   ]
+  },
+  {
+   "part": "worm",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    52.599999999999994,
+    7.0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     3.4,
+     0
+    ],
+    [
+     5.0,
+     1440.0
+    ],
+    [
+     20,
+     1440.0
+    ]
+   ]
+  },
+  {
+   "part": "PRESS HERE button",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     3.0,
+     0
+    ],
+    [
+     3.2,
+     -0.8
+    ],
+    [
+     3.4,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "dispensing drawer",
+   "kind": "move",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     6.0,
+     0
+    ],
+    [
+     7.5,
+     -35
+    ],
+    [
+     9.0,
+     -35
+    ],
+    [
+     10.5,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "drawer seal",
+   "kind": "move",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     6.0,
+     0
+    ],
+    [
+     7.5,
+     -35
+    ],
+    [
+     9.0,
+     -35
+    ],
+    [
+     10.5,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "lock cam",
+   "kind": "turn",
+   "axis": [
+    -0.57358,
+    0.81915,
+    0
+   ],
+   "centre": [
+    49.90114996254101,
+    -71.26622785314228,
+    16
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     11.0,
+     0
+    ],
+    [
+     12.0,
+     90
+    ],
+    [
+     18.0,
+     90
+    ],
+    [
+     19.0,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "lid",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    93.5,
+    34
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     12.2,
+     0
+    ],
+    [
+     14.0,
+     -100
+    ],
+    [
+     16.0,
+     -100
+    ],
+    [
+     17.8,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "lid gasket",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    93.5,
+    34
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     12.2,
+     0
+    ],
+    [
+     14.0,
+     -100
+    ],
+    [
+     16.0,
+     -100
+    ],
+    [
+     17.8,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "lid catch",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    93.5,
+    34
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     12.2,
+     0
+    ],
+    [
+     14.0,
+     -100
+    ],
+    [
+     16.0,
+     -100
+    ],
+    [
+     17.8,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Alarm and flashing light (1 = on)",
+   "unit": "",
+   "lin": true,
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1.0,
+     0
+    ],
+    [
+     1.01,
+     1
+    ],
+    [
+     5.0,
+     1
+    ],
+    [
+     5.01,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "Carousel angle",
+   "unit": "deg",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     3.4,
+     0
+    ],
+    [
+     5.0,
+     12
+    ],
+    [
+     20,
+     12
+    ]
+   ]
+  },
+  {
+   "name": "Drawer pulled out",
+   "unit": "mm",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     6.0,
+     0
+    ],
+    [
+     7.5,
+     35
+    ],
+    [
+     9.0,
+     35
+    ],
+    [
+     10.5,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "Lid angle",
+   "unit": "deg",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     12.2,
+     0
+    ],
+    [
+     14.0,
+     100
+    ],
+    [
+     16.0,
+     100
+    ],
+    [
+     17.8,
+     0
+    ],
+    [
+     20,
+     0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open esp2025_dispenser.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the carousel and drive joints",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "In Standard Joints find the Revolution joint of the carousel (its hub in the deck) and of the worm (on the motor shaft). The drive gear is in one Welded group with the carousel.",
+    "Insert Joint > 3D Contact or Worm Gear: pick the worm and the drive gear, ratio 120:1."
+   ],
+   "note": "A worm gear joint ties the two together: 4 turns of the worm move the carousel 12 degrees."
+  },
+  {
+   "view": "joints",
+   "title": "Join the button, drawer, cam and lid",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Insert Joint, Prismatic: the PRESS HERE button in its hole, and the drawer in its opening.",
+    "Insert Joint, Revolution: the lock cam on the lock axis, and the lid on the hinge pin."
+   ],
+   "note": null
+  },
+  {
+   "view": "motion",
+   "title": "The alarm and the button",
+   "command": "Right click the button Prismatic joint > Properties > Edit imposed motion",
+   "actions": [
+    "The alarm and the light are switched by the program, not by a joint: they run from 1 s until the drop sensors see the pills (shown on the graph).",
+    "Button: 0 at 3 s, pressed 0.8 mm at 3.2 s, back at 3.4 s."
+   ],
+   "note": "The alarm keeps sounding until the pills have been dispensed, as the brief asks."
+  },
+  {
+   "view": "motion",
+   "title": "Turn one dose",
+   "command": "Right click the worm Revolution joint > Properties > Edit imposed motion",
+   "actions": [
+    "Worm: 0 at 3.4 s, 1440 degrees (4 turns) at 5 s.",
+    "The worm gear joint turns the carousel 12 degrees: the next compartment is over the drop hole."
+   ],
+   "note": "The self-locking worm holds the carousel still between doses."
+  },
+  {
+   "view": "motion",
+   "title": "Take the pills",
+   "command": "Edit imposed motion on the drawer Prismatic joint",
+   "actions": [
+    "Drawer: 0 at 6 s, 35 mm out at 7.5 s, hold to 9 s, back in by 10.5 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "motion",
+   "title": "Pharmacy refill",
+   "command": "Edit imposed motion on the cam and lid Revolution joints",
+   "actions": [
+    "Cam: 0 at 11 s, 90 degrees (unlocked) at 12 s, hold, back to 0 (locked) by 19 s.",
+    "Lid: 0 at 12.2 s, 100 degrees open at 14 s, hold to 16 s, shut by 17.8 s. Click OK."
+   ],
+   "note": "Only the pharmacy key turns the cam; with the cam at 0 the lid catch cannot lift."
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 20 s and Images to 1000.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the carousel and lid joints and the position of the drawer joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

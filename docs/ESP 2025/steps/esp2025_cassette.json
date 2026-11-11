@@ -1,0 +1,154 @@
+{
+ "name": "esp2025_cassette",
+ "title": "ESP 2025 concept B: trapdoor cassette",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Case",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt for the case: sketch 186 x 124, fillet the corners R10, Extrude 30, Shell 2."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "case",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_cassette/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_cassette/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Compartments",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 22.8 x 21.6 pocket; Rectangular Pattern 7 x 4. Extrude Cut 18."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "case",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "28 compartments",
+     "colour": "#F2F4F6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_cassette/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_cassette/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Trapdoors and pill tray",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Under the grid, a layer of 28 spring trapdoors and latches; a pill tray along the front."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "case",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "28 compartments",
+     "colour": "#F2F4F6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "trapdoors and latches",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pill tray",
+     "colour": "#2C5AA0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_cassette/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_cassette/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Lid and controls",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as cassette.iam. Place the parts, the clear lid and the display and PRESS HERE button on top."
+   ],
+   "note": "Rejected for the final design: 28 latches cost more and weigh more than one motor, every trapdoor can stick or leak, and the box is too wide to hold in one hand.",
+   "parts": [
+    {
+     "name": "case",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "28 compartments",
+     "colour": "#F2F4F6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "trapdoors and latches",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pill tray",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "clear lid",
+     "colour": "#BFD9EE",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "display and PRESS HERE button",
+     "colour": "#2E9E5B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_cassette/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_cassette/step_04.json"
+  }
+ ]
+}

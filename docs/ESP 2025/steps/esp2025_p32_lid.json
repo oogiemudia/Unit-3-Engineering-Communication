@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p32_lid",
+ "title": "ESP 2025 part 32: lid",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lid.ipt.",
+    "Circle diameter 180 on the XZ Plane. Extrude 21 mm. Fillet the top edge 4."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lid",
+     "colour": "#BFD9EE",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p32_lid/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p32_lid/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the bottom face, thickness 1.8 (top 2). Fillet the inside top edge 2.2."
+   ],
+   "note": "Clear PP lets the patient and the carer see how many doses are left.",
+   "parts": [
+    {
+     "name": "lid",
+     "colour": "#BFD9EE",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p32_lid/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p32_lid/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Pod hole and collar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Hole diameter 73 in the top on the centre. Sketch circles diameter 73 and 76; Extrude 10.0 mm down, Join."
+   ],
+   "note": "The collar closes over the O-ring on the pod.",
+   "parts": [
+    {
+     "name": "lid",
+     "colour": "#BFD9EE",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p32_lid/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p32_lid/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Hinge knuckle",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the lug and the knuckle (radius 3.5 at y 93.5, z 34) on the YZ Plane. Extrude 30 mm, symmetric. Hole diameter 3 along the axis. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lid",
+     "colour": "#BFD9EE",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p32_lid/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p32_lid/step_04.json"
+  }
+ ]
+}

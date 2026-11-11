@@ -1,0 +1,477 @@
+{
+ "name": "esp2025_sa3_base",
+ "title": "ESP 2025 sub-assembly 3: base, batteries and drive",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Bottom cover and feet",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as base.iam.",
+    "Place bottom_cover.ipt and Place Grounded.",
+    "Place foot.ipt under it at 45 degrees (Mate, Insert on the sketch point); Pattern, Circular, 4."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 1",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 2",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 3",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 4",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa3_base/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_sa3_base/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Board and batteries",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place main_pcb.ipt at the back (Mate to the cover, Flush to the centre plane).",
+    "Place battery_holder.ipt on the right (Mate, Flush its pockets over the opening); Mirror Components to the left.",
+    "Place battery.ipt in each pocket (Insert); four cells, 6 V."
+   ],
+   "note": "Four AAA cells last many months: see the calculation sheet.",
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 1",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 2",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 3",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 4",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main circuit board",
+     "colour": "#1E6B3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, right",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, left",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 1",
+     "colour": "#3366AA",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 2",
+     "colour": "#3366AA",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 3",
+     "colour": "#3366AA",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 4",
+     "colour": "#3366AA",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa3_base/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_sa3_base/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Drive",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place gear_motor.ipt (Mate its flat to the cover, Flush its axis 52.6 from the centre).",
+    "Place motor_clamp.ipt over it (Mate). Place worm.ipt on the shaft (Insert, Flush the middle on the YZ Plane).",
+    "Place home_sensor.ipt at 150 degrees (Mate, Flush to its sketch line)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 1",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 2",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 3",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 4",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main circuit board",
+     "colour": "#1E6B3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, right",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, left",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 1",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 2",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 3",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 4",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear motor",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "motor clamp",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "worm",
+     "colour": "#F7F3E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "home sensor",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa3_base/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_sa3_base/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Doors, seals and gasket",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place door_seal.ipt and battery_door.ipt under each opening (Mate, Insert on a screw hole); Mirror.",
+    "Place a security screw (Content Center, pin Torx) in each hole (Insert); Pattern.",
+    "Place gasket.ipt on top of the cover (Mate, Insert). Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "base gasket",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 1",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 2",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 3",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "rubber foot 4",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main circuit board",
+     "colour": "#1E6B3A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, right",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery holder, left",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 1",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 2",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 3",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "AAA cell 4",
+     "colour": "#3366AA",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear motor",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "motor clamp",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "worm",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "home sensor",
+     "colour": "#2B2B2B",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery door, right",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "battery door, left",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "door seal, right",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "door seal, left",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "security screw 1",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "security screw 2",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "security screw 3",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "security screw 4",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa3_base/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_sa3_base/step_04.json"
+  }
+ ]
+}

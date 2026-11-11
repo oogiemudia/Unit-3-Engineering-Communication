@@ -1,0 +1,122 @@
+{
+ "name": "esp2025_sa1_chassis",
+ "title": "ESP 2025 sub-assembly 1: chassis, lock and chute",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Chassis",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as chassis.iam.",
+    "Place chassis.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa1_chassis/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_sa1_chassis/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pharmacy lock",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place pharmacy_lock.ipt in the lock hole from outside: Insert (head on the wall, barrel axis on the hole axis).",
+    "Place lock_cam.ipt on the end of the barrel: Mate the cam to the barrel end, Angle 0 (locked: pointing sideways)."
+   ],
+   "note": "The lock is bought in, keyed alike so one pharmacy key opens every dispenser.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pharmacy lock",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lock cam",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa1_chassis/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_sa1_chassis/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Chute and drop sensors",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place chute.ipt under the deck: Mate its top to the underside of the deck, Flush its sides on the drop hole.",
+    "Place drop_sensor.ipt on one side (Insert the lens in the window); Mirror Components for the other side. Save."
+   ],
+   "note": "The beam across the chute sees the pills fall.",
+   "parts": [
+    {
+     "name": "chassis",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pharmacy lock",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lock cam",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "dispensing chute",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "drop sensor, emitter",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "drop sensor, receiver",
+     "colour": "#2B2B2B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa1_chassis/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_sa1_chassis/step_03.json"
+  }
+ ]
+}

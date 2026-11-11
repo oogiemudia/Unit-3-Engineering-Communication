@@ -1,0 +1,49 @@
+{
+ "name": "esp2025_p19_security_screw",
+ "title": "ESP 2025 part 19: security screw M2.2 x 8",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Screw",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Place from Content Center, or File > New > Standard (mm).ipt: revolve a countersunk head diameter 5.2 and a shank diameter 2.2, 7 long."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "security screw M2.2 x 8",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p19_security_screw/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p19_security_screw/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Pin Torx recess",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the recess on the head. Extrude Cut 0.7 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "security screw M2.2 x 8",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p19_security_screw/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p19_security_screw/step_02.json"
+  }
+ ]
+}

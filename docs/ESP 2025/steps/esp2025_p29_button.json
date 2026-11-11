@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p29_button",
+ "title": "ESP 2025 part 29: PRESS HERE button",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as button.ipt.",
+    "Circle diameter 28. Extrude 1.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PRESS HERE button",
+     "colour": "#2E9E5B",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p29_button/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p29_button/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Button",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 22 on the flange. Extrude 3.5 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PRESS HERE button",
+     "colour": "#2E9E5B",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p29_button/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p29_button/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Round top",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the top edge 1.5."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "PRESS HERE button",
+     "colour": "#2E9E5B",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p29_button/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p29_button/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "PRESS HERE",
+   "command": "3D Model tab > Create panel > Emboss",
+   "actions": [
+    "Sketch the text PRESS HERE, 3.6 high, bold, in two lines on the top face. Emboss 0.6 mm, Emboss from Face. Save."
+   ],
+   "note": "Raised letters can be felt as well as seen.",
+   "parts": [
+    {
+     "name": "PRESS HERE button",
+     "colour": "#2E9E5B",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p29_button/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p29_button/step_04.json"
+  }
+ ]
+}

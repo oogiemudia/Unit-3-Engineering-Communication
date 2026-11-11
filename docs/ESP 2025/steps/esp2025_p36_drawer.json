@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p36_drawer",
+ "title": "ESP 2025 part 36: dispensing drawer",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Tub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as drawer.ipt.",
+    "Sketch a 44 x -48.0 rectangle, its front on an arc radius 90.5. Extrude 10.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p36_drawer/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p36_drawer/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the top face, thickness 1.5."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p36_drawer/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p36_drawer/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Front",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch arcs radius 90.5 and 92 on the XZ Plane, 50 wide. Extrude 12.5 mm, Join."
+   ],
+   "note": "The front follows the round case.",
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p36_drawer/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p36_drawer/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Finger grip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 24 x 3 notch at the top of the front. Extrude Cut 1 mm deep. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing drawer",
+     "colour": "#2C5AA0",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p36_drawer/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p36_drawer/step_04.json"
+  }
+ ]
+}

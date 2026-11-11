@@ -1,0 +1,49 @@
+{
+ "name": "esp2025_p20_cover_screw",
+ "title": "ESP 2025 part 20: cover screw 2.5 x 10",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Screw",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Place from Content Center, or File > New > Standard (mm).ipt: revolve a countersunk head diameter 6 and a shank diameter 2.5, 11 long."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cover screw 2.5 x 10",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p20_cover_screw/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p20_cover_screw/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Recess",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a Torx T8 recess. Extrude Cut 0.9 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cover screw 2.5 x 10",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p20_cover_screw/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p20_cover_screw/step_02.json"
+  }
+ ]
+}

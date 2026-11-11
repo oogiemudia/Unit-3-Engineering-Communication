@@ -1,0 +1,114 @@
+{
+ "name": "esp2025_p08_bottom_cover",
+ "title": "ESP 2025 part 08: bottom cover",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bottom_cover.ipt.",
+    "Sketch a circle diameter 180 on the XZ Plane. Extrude 2 mm. Fillet the bottom edge 1.5."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p08_bottom_cover/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p08_bottom_cover/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Locating rim and pod socket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 172 and 175.8, and 70 and 74. Extrude 4 mm, Join."
+   ],
+   "note": "The rim locates the cover inside the chassis wall; the control pod stands in the socket.",
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p08_bottom_cover/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p08_bottom_cover/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Battery door openings",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 18 x 42 rectangle 58 mm right of the centre. Extrude Cut Through All. Mirror it to the left."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p08_bottom_cover/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p08_bottom_cover/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Door screw bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles diameter 5 at x 67, y 27.5. Extrude 4 mm, Join; Mirror twice.",
+    "Hole diameter 2.2 up through each boss (for the security screws)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p08_bottom_cover/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p08_bottom_cover/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Cover screw holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: countersunk 6 x 90 degrees, diameter 2.5, Through All, at radius 60 on 45 degrees; Circular Pattern 4. Save."
+   ],
+   "note": "The screws go up into the bosses under the deck of the chassis.",
+   "parts": [
+    {
+     "name": "bottom cover",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p08_bottom_cover/step_05.glb",
+   "edges": "ESP 2025/steps/esp2025_p08_bottom_cover/step_05.json"
+  }
+ ]
+}

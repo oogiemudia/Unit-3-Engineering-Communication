@@ -1,0 +1,92 @@
+{
+ "name": "esp2025_p07_drive_gear",
+ "title": "ESP 2025 part 07: drive gear (worm wheel)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Gear blank and teeth",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as drive_gear.ipt.",
+    "Design tab > Power Transmission > Spur Gear: 120 teeth, module 0.8, face width 5 (or sketch one tooth and Circular Pattern 120)."
+   ],
+   "note": "Teeth drawn simplified (straight). A real worm wheel has a curved (throated) face to wrap round the worm.",
+   "parts": [
+    {
+     "name": "drive gear (worm wheel)",
+     "colour": "#F7F3E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p07_drive_gear/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p07_drive_gear/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 83 on the centre, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "drive gear (worm wheel)",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p07_drive_gear/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p07_drive_gear/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Key slots",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Sketch a 2 x 1.4 slot in the bore. Extrude Cut Through All. Circular Pattern 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "drive gear (worm wheel)",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p07_drive_gear/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p07_drive_gear/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Home mark",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 3, Through All, on radius 44 at 150 degrees. Save."
+   ],
+   "note": "At home the hole is over the home sensor. Nothing sticks out, so the gear passes the worm all the way round.",
+   "parts": [
+    {
+     "name": "drive gear (worm wheel)",
+     "colour": "#F7F3E8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p07_drive_gear/step_04.glb",
+   "edges": "ESP 2025/steps/esp2025_p07_drive_gear/step_04.json"
+  }
+ ]
+}

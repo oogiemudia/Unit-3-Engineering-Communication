@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p03_lock_cam",
+ "title": "ESP 2025 part 03: lock cam",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Cam plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lock_cam.ipt.",
+    "Sketch a circle diameter 8 and an arm 11.5 x 7 from it. Extrude 2.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lock cam",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p03_lock_cam/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p03_lock_cam/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Square hole",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 3 x 3 square on the centre. Extrude Cut Through All. Save."
+   ],
+   "note": "The square end of the lock barrel turns the cam.",
+   "parts": [
+    {
+     "name": "lock cam",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p03_lock_cam/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p03_lock_cam/step_02.json"
+  }
+ ]
+}

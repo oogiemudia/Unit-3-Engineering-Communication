@@ -1,0 +1,71 @@
+{
+ "name": "esp2025_p27_led_lens",
+ "title": "ESP 2025 part 27: light lens",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as led_lens.ipt.",
+    "Circle diameter 11. Extrude 1 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "light lens",
+     "colour": "#BFD9EE",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p27_led_lens/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p27_led_lens/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Light pipe",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 7.2. Extrude 2.5 mm, Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "light lens",
+     "colour": "#BFD9EE",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p27_led_lens/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p27_led_lens/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Round top",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet the top edge 1. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "light lens",
+     "colour": "#BFD9EE",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p27_led_lens/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p27_led_lens/step_03.json"
+  }
+ ]
+}

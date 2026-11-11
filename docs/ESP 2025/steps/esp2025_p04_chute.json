@@ -1,0 +1,71 @@
+{
+ "name": "esp2025_p04_chute",
+ "title": "ESP 2025 part 04: dispensing chute",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as chute.ipt.",
+    "Sketch an 18 x 38 rectangle. Extrude 7 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing chute",
+     "colour": "#E9ECEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p04_chute/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p04_chute/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Hollow it",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the top and bottom faces, thickness 1.5. Click OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "dispensing chute",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p04_chute/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p04_chute/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Sensor windows",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 3 through both side walls, 19 mm from the front, 3.5 mm from the top. Save."
+   ],
+   "note": "The infrared beam crosses the chute here.",
+   "parts": [
+    {
+     "name": "dispensing chute",
+     "colour": "#E9ECEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p04_chute/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p04_chute/step_03.json"
+  }
+ ]
+}

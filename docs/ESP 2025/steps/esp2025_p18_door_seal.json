@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p18_door_seal",
+ "title": "ESP 2025 part 18: battery door seal",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Frame",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as door_seal.ipt.",
+    "Sketch the 24 x 62 frame, 10 wide. Extrude 1 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery door seal",
+     "colour": "#3A3A3A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p18_door_seal/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p18_door_seal/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Screw holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Holes diameter 2.2 for the screws. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "battery door seal",
+     "colour": "#3A3A3A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p18_door_seal/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p18_door_seal/step_02.json"
+  }
+ ]
+}

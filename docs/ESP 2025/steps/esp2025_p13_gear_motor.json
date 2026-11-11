@@ -1,0 +1,71 @@
+{
+ "name": "esp2025_p13_gear_motor",
+ "title": "ESP 2025 part 13: gear motor 6 V",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Gearbox",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gear_motor.ipt (or download the maker's model).",
+    "Sketch 12 x 10. Extrude 9 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear motor 6 V",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p13_gear_motor/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p13_gear_motor/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Motor and end cap",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a circle diameter 12 with flats 10 apart. Extrude 22 mm, Join; end cap 10 x 10 x 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear motor 6 V",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p13_gear_motor/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p13_gear_motor/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Shaft",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Circle diameter 3 on the gearbox face. Extrude 24 mm. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear motor 6 V",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p13_gear_motor/step_03.glb",
+   "edges": "ESP 2025/steps/esp2025_p13_gear_motor/step_03.json"
+  }
+ ]
+}

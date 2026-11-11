@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hid" d="M80.50,107.00 L80.50,104.00 M148.50,107.00 L148.50,104.00 M80.50,107.00 L148.50,107.00 M80.50,104.00 L148.50,104.00"/>
+<path class="vis" d="M80.50,107.00 L80.50,104.00 M148.50,107.00 L148.50,104.00 M80.50,107.00 L148.50,107.00 M80.50,104.00 L148.50,104.00"/>
+<text x="114.50" y="115.00" font-size="3.00" text-anchor="middle" font-weight="bold">FRONT VIEW</text>
+<path class="hid" d="M80.50,172.00 L80.50,129.00 M148.50,172.00 L148.50,129.00 M80.50,172.00 L148.50,172.00 M80.50,129.00 L148.50,129.00"/>
+<path class="vis" d="M80.50,172.00 L80.50,129.00 M148.50,172.00 L148.50,129.00 M80.50,172.00 L148.50,172.00 M80.50,129.00 L148.50,129.00"/>
+<text x="114.50" y="180.00" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<path class="hid" d="M213.50,107.00 L213.50,104.00 M213.50,104.00 L170.50,104.00 M170.50,107.00 L170.50,104.00 M213.50,107.00 L170.50,107.00"/>
+<path class="vis" d="M213.50,107.00 L213.50,104.00 M213.50,104.00 L170.50,104.00 M170.50,107.00 L170.50,104.00 M213.50,107.00 L170.50,107.00"/>
+<text x="192.00" y="115.00" font-size="3.00" text-anchor="middle" font-weight="bold">END VIEW (FROM LEFT)</text>
+<path class="vis" d="M305.76,68.62 L305.76,66.17 M305.76,66.17 L336.16,48.62 M353.84,96.38 L353.84,93.93 M353.84,93.93 L384.24,76.38 M384.24,78.83 L384.24,76.38 M353.84,96.38 L384.24,78.83 M305.76,68.62 L353.84,96.38 M305.76,66.17 L353.84,93.93 M336.16,48.62 L384.24,76.38"/>
+<text x="345.00" y="128.00" font-size="3.00" text-anchor="middle" font-weight="bold">ISOMETRIC VIEW (NOT TO SCALE)</text>
+<line class="dim" x1="80.50" y1="108.50" x2="80.50" y2="126.00"/>
+<line class="dim" x1="148.50" y1="108.50" x2="148.50" y2="126.00"/>
+<line class="dim" x1="80.50" y1="124.00" x2="148.50" y2="124.00"/>
+<polygon class="arrow" points="80.50,124.00 83.00,124.75 83.00,123.25"/>
+<polygon class="arrow" points="148.50,124.00 146.00,123.25 146.00,124.75"/>
+<text x="114.50" y="122.80" font-size="3.50" text-anchor="middle" font-weight="normal">34</text>
+<line class="dim" x1="79.00" y1="104.00" x2="66.50" y2="104.00"/>
+<line class="dim" x1="79.00" y1="107.00" x2="66.50" y2="107.00"/>
+<line class="dim" x1="68.50" y1="104.00" x2="68.50" y2="107.00"/>
+<polygon class="arrow" points="68.50,104.00 67.75,106.50 69.25,106.50"/>
+<polygon class="arrow" points="68.50,107.00 69.25,104.50 67.75,104.50"/>
+<text x="67.30" y="105.50" font-size="3.50" text-anchor="middle" font-weight="normal" transform="rotate(-90 67.30 105.50)">1.5</text>
+<line class="dim" x1="170.50" y1="108.50" x2="170.50" y2="126.00"/>
+<line class="dim" x1="213.50" y1="108.50" x2="213.50" y2="126.00"/>
+<line class="dim" x1="170.50" y1="124.00" x2="213.50" y2="124.00"/>
+<polygon class="arrow" points="170.50,124.00 173.00,124.75 173.00,123.25"/>
+<polygon class="arrow" points="213.50,124.00 211.00,123.25 211.00,124.75"/>
+<text x="192.00" y="122.80" font-size="3.50" text-anchor="middle" font-weight="normal">21.5</text>
+<text x="285.00" y="140.00" font-size="3.00" text-anchor="start" font-weight="bold">KEY SIZES (mm)</text>
+<text x="285.00" y="147.00" font-size="2.60" text-anchor="start" font-weight="normal">34 x 21.5 x 1.5</text>
+<text x="285.00" y="155.20" font-size="2.60" text-anchor="start" font-weight="normal">Material: Clarified polypropylene, clear, 1.5 thick</text>
+<text x="285.00" y="160.40" font-size="2.60" text-anchor="start" font-weight="normal">Part file: display_window.ipt. Item 30 on ESP25-GA-05.</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Dimensions in millimetres. Overall sizes on the views; feature sizes in the table.</text>
+<text x="22.00" y="254.00" font-size="2.80" text-anchor="start" font-weight="normal">Centre lines are shown in blue. Hidden detail is shown dashed.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">WBEP Ltd for the health trust</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">ESP25-P30-1</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="2.97" text-anchor="start" font-weight="bold">ESP 2025 part 30: display window</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">Clarified polypropylene</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-10</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">2:1</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="252.00,282.54 257.50,281.30 257.50,286.25 252.00,285.01"/>
+<circle class="vis" cx="261.90" cy="283.78" r="2.48"/>
+<circle class="vis" cx="261.90" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="261.90" y1="279.80" x2="261.90" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">First angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

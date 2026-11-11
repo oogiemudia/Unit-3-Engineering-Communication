@@ -1,0 +1,50 @@
+{
+ "name": "esp2025_p02_pharmacy_lock",
+ "title": "ESP 2025 part 02: pharmacy cam lock",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Head and barrel",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pharmacy_lock.ipt (or download the maker's model).",
+    "Revolve: head diameter 20 x 2, barrel diameter 16 x 3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pharmacy cam lock",
+     "colour": "#A9B4BF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p02_pharmacy_lock/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_p02_pharmacy_lock/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Key slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 2 x 8 slot on the head. Extrude Cut 1.2 deep. Save."
+   ],
+   "note": "Keyed alike: one pharmacy key opens every dispenser; patients do not have one.",
+   "parts": [
+    {
+     "name": "pharmacy cam lock",
+     "colour": "#A9B4BF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_p02_pharmacy_lock/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_p02_pharmacy_lock/step_02.json"
+  }
+ ]
+}

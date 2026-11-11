@@ -87,6 +87,19 @@ The ESP 2024 project (8730-035, Summer 2024: a solar powered harbour marker buoy
 
 The folder also holds the Part A calculations (energy produced against energy needed, floating and stability, mooring loads, cost, time) and the Part B reflective notes (PDF). See `docs/ESP 2024/README.md`.
 
+## ESP 2025 automated pill dispenser (Employer-Set Project, Task 2)
+
+The ESP 2025 project (an automated pill dispenser for WBEP Ltd and a health trust) keeps every file it generates in `docs/ESP 2025/`, with its own project page (`docs/ESP 2025/index.html`), and shows in the catalogue under the ESP 2025 filter. Every component is its own part model (37 parts, `esp2025_p01_chassis` to `esp2025_p37_drawer_seal`), each with build steps, a drawing with a key sizes table and a STEP file. Drawing numbers use the prefix ESP25.
+
+| Model | Criteria | Use it for | Drawings | Animations |
+|---|---|---|---|---|
+| ESP 2025 automated pill dispenser (GA) | 3.1, 3.2 | The preferred design, assembled from 37 different parts. Simulation of a dose being dispensed and the pharmacy unlocking the lid to refill it. | GA, sections, details, parts list, third angle, first angle, section A-A | turntable, views, section, simulation |
+| ESP 2025 sub-assembly 1 to 6 | 3.1, 3.2 | How the dispenser goes together: chassis and lock, carousel, base with batteries and drive, control pod, lid, drawer, each built part by part, with an exploded view. | standard sheets; exploded sheet GA-06, structure and order GA-07 | turntable, views, explode |
+| ESP 2025 part 01 to 37 | 3.1 | Every component on its own. Part 34 (lid catch) has the FEA for someone forcing the locked lid, checked by hand. | one sheet each with a key sizes table | still |
+| ESP 2025 concept B: trapdoor cassette | 3.1 | The second design idea for Part A. | design ideas sheet, third angle, first angle | turntable, views |
+
+The folder also holds the Part A calculations (size and mass, capacity, battery life, drive, cost and the most units each budget buys, programme) and the Part B reflective notes (PDF). See `docs/ESP 2025/README.md`.
+
 For each model the `docs` folder holds:
 
 | Folder | Contents |

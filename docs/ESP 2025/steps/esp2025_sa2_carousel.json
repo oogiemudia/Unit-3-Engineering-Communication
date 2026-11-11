@@ -1,0 +1,57 @@
+{
+ "name": "esp2025_sa2_carousel",
+ "title": "ESP 2025 sub-assembly 2: carousel",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Carousel",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as carousel.iam.",
+    "Place carousel.ipt and Place Grounded."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "carousel",
+     "colour": "#F2F4F6",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa2_carousel/step_01.glb",
+   "edges": "ESP 2025/steps/esp2025_sa2_carousel/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Drive gear",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place drive_gear.ipt: Insert its bore on the hub tube, Flush its bottom with the end of the tube, and line a key slot up with a key (Angle). Save."
+   ],
+   "note": "In the factory the gear is pressed on after the carousel is dropped into the chassis, from underneath.",
+   "parts": [
+    {
+     "name": "carousel",
+     "colour": "#F2F4F6",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "drive gear",
+     "colour": "#F7F3E8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "ESP 2025/steps/esp2025_sa2_carousel/step_02.glb",
+   "edges": "ESP 2025/steps/esp2025_sa2_carousel/step_02.json"
+  }
+ ]
+}
