@@ -521,10 +521,151 @@ def pneumatic_cylinder():
     ]
 
 
+
+# ------------------------------------------------------------------ 13 machine vice (17 parts)
+def machine_vice():
+    from parts import vice_stages, VICE, VICE_PARTS
+    s = vice_stages()
+    d = s['_dims']
+    col = dict(VICE_PARTS)
+    P = lambda n: (n, s[n], col[n])
+    body = lambda k: ('body', s[k], col['body'])
+    L, W, T = VICE['base']
+    J = d['J']
+    asm = []
+
+    def add(*names):
+        for n in names:
+            asm.append(P(n))
+        return list(asm)
+
+    return [
+        step('Body: sketch the base', SKETCH,
+             [NEW_PART + ' and save it as body.ipt.', 'Start 2D Sketch on the XZ Plane (the top).',
+              'Rectangle (Two Point): from the origin to the far corner.', finish('220 long, 130 wide, centred on the X axis')],
+             [], overlay=cq.Workplane('XY').add(s['body_base'].faces('<Z').val()).translate((0, 0, -0.05))),
+        step('Body: extrude the base and round the corners', FILLET,
+             ['Extrude the rectangle 12 mm upwards. Click OK.', 'Fillet: radius 6 mm on the four vertical corner edges. Click OK.'],
+             [body('body_base')]),
+        step('Body: the two rails', EXTRUDE,
+             ['Start 2D Sketch on the top face of the base.',
+              'Draw three rectangles: the fixed jaw footprint 35 x 100 at the left end, and two rails 170 x 15 running from it, '
+              '35 to 50 either side of the centre line.', 'Finish Sketch. Extrude all three profiles 30 mm upwards (Join).'],
+             [body('body_rails')], note='The gap between the rails (70 mm) is the slideway the moving jaw runs in.'),
+        step('Body: the fixed jaw', EXTRUDE,
+             ['Start 2D Sketch on the top face of the fixed jaw footprint. Project Geometry (P) its outline. Finish Sketch.',
+              'Extrude 38 mm upwards (Join), so the jaw top is 80 mm above the bottom of the base.'],
+             [body('body_jaw')]),
+        step('Body: bench bolt holes', HOLE,
+             ['Click Hole. Placement: From Sketch, with four points on the base flange, 50 and 170 from the left end and 57.5 '
+              'either side of the centre line.', 'Simple Hole, diameter 13 mm (clearance for M12 T-bolts), Through All. Click OK.'],
+             [body('body_holes')]),
+        step('Body: tapped holes for the end block', HOLE,
+             ['Click Hole and pick the end face of a rail. Place the centre 7.5 from the outside edge and 15 above the base.',
+              'Tapped Hole, Thread Type ISO Metric profile, Size 8, Designation M8x1.25. Termination Distance 25 mm.',
+              'Repeat on the other rail (or use Mirror). Click OK.'],
+             [body('body_tapped')]),
+        step('Body: tapped holes for the jaw plate', HOLE,
+             ['Click Hole and pick the inside face of the fixed jaw.', 'Two centres 30 mm either side of the centre line, 15 mm below the top.',
+              'Tapped Hole, M6x1, Distance 14 mm. Click OK. Save body.ipt.'],
+             [P('body')], note='Inventor draws a tapped hole at its tapping size and shows the thread as a cosmetic texture.'),
+        step('Moving jaw: sketch the inverted T', SKETCH,
+             [NEW_PART + ' and save it as moving_jaw.ipt.', 'Start 2D Sketch on the YZ Plane (the right side).',
+              'Line: draw the inverted T. The tongue is 69 wide (0.5 clearance each side of the rails) and the head 100 wide.',
+              finish('tongue 69 wide and 29.5 deep, head 100 wide and 37.5 high')],
+             [], overlay=face(s['mjaw_profile'])),
+        step('Moving jaw: extrude', EXTRUDE,
+             ['Extrude the profile 35 mm. Click OK.'], [('moving jaw', s['mjaw_block'], col['moving jaw'])]),
+        step('Moving jaw: the M16 thread for the lead screw', HOLE,
+             ['Click Hole and pick the front face. Centre on the centre line, 14 mm up from the bottom of the tongue.',
+              'Tapped Hole, M16x2, Full Depth, Through All. Click OK.'],
+             [('moving jaw', s['mjaw_thread'], col['moving jaw'])],
+             note='This tapped hole is the nut. When the screw turns, the jaw slides 2 mm for every turn.'),
+        step('Moving jaw: tapped holes for the jaw plate', HOLE,
+             ['Hole on the front face: two centres 30 mm either side of the centre line, 15 mm below the top.',
+              'Tapped Hole, M6x1, Distance 14 mm. Click OK. Save moving_jaw.ipt.'],
+             [P('moving jaw')]),
+        step('End block', HOLE,
+             [NEW_PART + ' and save it as end_block.ipt.', 'Sketch a 100 x 30 Rectangle on the YZ Plane and Extrude it 15 mm.',
+              'Hole on the centre line, 15 up: Simple Hole, diameter 14 mm, Through All (the bearing for the screw journal).',
+              'Hole at 42.5 either side: Counterbore, diameter 9, counterbore 14 x 8.5 deep, Through All. Click OK.'],
+             [P('end block')]),
+        step('Jaw plate', HOLE,
+             [NEW_PART + ' and save it as jaw_plate.ipt.', 'Sketch a 100 x 30 Rectangle and Extrude it 8 mm.',
+              'Hole: two centres 30 either side of the middle. Countersink, diameter 6.6, countersink 12 at 90 degrees, Through All.',
+              'Save. The same part is used on both jaws.'],
+             [P('fixed jaw plate')], note='Real jaw plates are hardened steel and are changed when they wear.'),
+        step('Lead screw: sketch the half profile', SKETCH,
+             [NEW_PART + ' and save it as lead_screw.ipt.', 'Start 2D Sketch on the XY Plane (the front).',
+              'Draw a centre line along X, then the half outline: thread 8 high (M16), journal 7 high (14 diameter), boss 14 high.',
+              finish('thread 160 long, journal 23 long, boss 22 long; use diameter dimensions to the centre line')],
+             [], overlay=face(s['screw_profile'])),
+        step('Lead screw: revolve', REVOLVE,
+             ['Click Revolve. Profile: the half outline. Axis: the centre line. Full 360 degrees. Click OK.'],
+             [('lead screw', s['screw_revolved'], col['lead screw'])]),
+        step('Lead screw: cross holes', HOLE,
+             ['Work Plane (3D Model tab > Work Features panel > Plane): tangent to the boss, parallel to the XZ Plane.',
+              'Hole from it, 12 from the boss end face: Simple Hole, diameter 10.5, Through All (for the tommy bar).',
+              'Hole through the journal, 19 mm from the shoulder, square to the screw: diameter 4, Through All (the collar pin).'],
+             [('lead screw', s['screw_holes'], col['lead screw'])]),
+        step('Lead screw: chamfers and thread', THREAD,
+             ['Chamfer 1.5 mm on the thread end and 1 mm on the boss end.',
+              'Thread: pick the 16 mm cylinder. Specification: ISO Metric profile, M16x2. Full Length. Click OK. Save.'],
+             [P('lead screw')], overlay=_thread_overlay(d['x_thread'], VICE['end'][0], VICE['axis_z'])),
+        step('Thrust collar, pin, tommy bar and balls', REVOLVE,
+             ['thrust_collar.ipt: Circle 26 and Circle 14 on the YZ Plane, Extrude 8; vertical Hole diameter 4 through the middle.',
+              'collar_pin.ipt: Circle 4, Extrude 26, Chamfer 0.4 both ends.',
+              'tommy_bar.ipt: Circle 10, Extrude 160.',
+              'handle_ball.ipt: half circle radius 10 with a centre line, Revolve 360; Hole diameter 10, 10 deep.'],
+             [P('thrust collar'), P('collar pin'), P('tommy bar'), P('handle ball 1')]),
+        step('Assembly: place the body', PLACE,
+             [NEW_ASSY + ' and save it as machine_vice.iam.', 'Place body.ipt, right click and pick Place Grounded at Origin.'],
+             add('body')),
+        step('Assembly: fixed jaw plate and screws', CONTENT,
+             ['Place jaw_plate.ipt. Constrain > Mate its back face to the fixed jaw face, then Insert one countersink onto a tapped hole.',
+              'Place from Content Center: Fasteners > Bolts > Countersunk > ISO 10642, M6 x 16. Insert one in each countersink.'],
+             add('fixed jaw plate', 'jaw plate screw 1', 'jaw plate screw 2')),
+        step('Assembly: moving jaw', CONSTRAIN,
+             ['Place moving_jaw.ipt between the rails.',
+              'Constrain > Mate: the underside of its head to the top of the rails (offset 0.5).',
+              'Constrain > Flush: the XY Plane of the jaw part with the XY Plane of the body, so the jaw sits on the centre line.',
+              'Constrain > Mate: the jaw face 76 mm from the fixed jaw face (a 60 mm opening between the plates).'],
+             add('moving jaw')),
+        step('Assembly: moving jaw plate and screws', CONTENT,
+             ['Place jaw_plate.ipt again. Mate it to the moving jaw face and Insert a countersink onto a tapped hole.',
+              'Place two more ISO 10642 M6 x 16 screws from Content Center with Insert.'],
+             add('moving jaw plate', 'jaw plate screw 3', 'jaw plate screw 4')),
+        step('Assembly: lead screw', CONSTRAIN,
+             ['Place lead_screw.ipt.', 'Constrain > Mate (axis to axis): the screw axis to the M16 hole axis in the moving jaw.',
+              'Constrain > Mate: the shoulder between the thread and the journal flush with the rail end faces.'],
+             add('lead screw')),
+        step('Assembly: end block and cap screws', CONTENT,
+             ['Place end_block.ipt. Insert its bore onto the screw journal at the shoulder, and Mate a counterbore axis to a tapped hole axis.',
+              'Place from Content Center: Fasteners > Bolts > Socket Head > ISO 4762, M8 x 30. Insert one into each counterbore.'],
+             add('end block', 'cap screw M8 x 30 1', 'cap screw M8 x 30 2')),
+        step('Assembly: thrust collar and pin', CONSTRAIN,
+             ['Place thrust_collar.ipt. Insert it onto the journal against the outside face of the end block.',
+              'Place collar_pin.ipt. Insert it into the pin hole of the collar, then Mate its axis to the screw cross hole.'],
+             add('thrust collar', 'collar pin'),
+             note='The shoulder inside and the collar outside trap the end block, so the screw can turn but not move along.'),
+        step('Assembly: tommy bar and balls', CONSTRAIN,
+             ['Place tommy_bar.ipt. Insert it in the 10.5 mm cross hole and Mate its middle to the screw axis.',
+              'Place handle_ball.ipt twice. Insert each one onto an end of the bar. Save machine_vice.iam.'],
+             add('tommy bar', 'handle ball 1', 'handle ball 2'),
+             note='Turn the tommy bar and the jaw closes: one turn of an M16 x 2 screw moves it 2 mm.'),
+    ]
+
+
+def _thread_overlay(x0, x1, zc):
+    """Cosmetic thread for the lead screw: a thin sleeve on the M16 length, as Inventor shows the thread texture."""
+    return cq.Workplane('XY').add(cq.Solid.makeCylinder(8.15, x1 - x0 - 4, cq.Vector(x0 + 2, 0, zc), cq.Vector(1, 0, 0))).cut(
+        cq.Workplane('XY').add(cq.Solid.makeCylinder(8.0, x1 - x0, cq.Vector(x0, 0, zc), cq.Vector(1, 0, 0))))
+
 STEPS = dict(step_block=step_block, sloping_block=sloping_block, flanged_bush=flanged_bush,
              bolted_joint=bolted_joint, threaded_shaft=threaded_shaft, pcd_flange=pcd_flange,
              annotation_plate=annotation_plate, hole_features=hole_features, vee_block=vee_block,
-             l_bracket=l_bracket, fit_pair=fit_pair, pneumatic_cylinder=pneumatic_cylinder)
+             l_bracket=l_bracket, fit_pair=fit_pair, pneumatic_cylinder=pneumatic_cylinder,
+             machine_vice=machine_vice)
 
 
 # ESP 2023 lock gate project: its steps live in their own file

@@ -1,0 +1,463 @@
+{
+ "name": "machine_vice",
+ "duration": 8,
+ "story": "Turning the tommy bar turns the lead screw in the end block. The screw cannot move along, so the moving jaw, which is the nut, slides 2 mm for every turn: 20 turns close the jaws from 60 mm to 20 mm.",
+ "moving": [
+  "moving jaw",
+  "moving jaw plate",
+  "jaw plate screw 3",
+  "jaw plate screw 4",
+  "lead screw",
+  "thrust collar",
+  "collar pin",
+  "tommy bar",
+  "handle ball 1",
+  "handle ball 2"
+ ],
+ "motion": [
+  {
+   "part": "moving jaw",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     -40
+    ],
+    [
+     8,
+     -40
+    ]
+   ]
+  },
+  {
+   "part": "moving jaw plate",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     -40
+    ],
+    [
+     8,
+     -40
+    ]
+   ]
+  },
+  {
+   "part": "jaw plate screw 3",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     -40
+    ],
+    [
+     8,
+     -40
+    ]
+   ]
+  },
+  {
+   "part": "jaw plate screw 4",
+   "kind": "move",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     -40
+    ],
+    [
+     8,
+     -40
+    ]
+   ]
+  },
+  {
+   "part": "lead screw",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  },
+  {
+   "part": "thrust collar",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  },
+  {
+   "part": "collar pin",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  },
+  {
+   "part": "tommy bar",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  },
+  {
+   "part": "handle ball 1",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  },
+  {
+   "part": "handle ball 2",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    27
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     7200.0
+    ],
+    [
+     8,
+     7200.0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Jaw opening",
+   "unit": "mm",
+   "keys": [
+    [
+     0,
+     60
+    ],
+    [
+     0.5,
+     60
+    ],
+    [
+     6.5,
+     20
+    ],
+    [
+     8,
+     20
+    ]
+   ]
+  },
+  {
+   "name": "Screw turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     6.5,
+     20.0
+    ],
+    [
+     8,
+     20.0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open machine_vice.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Let the screw turn in the end block",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Find the joint between the end block bore and the screw journal. It should be a Revolution joint.",
+    "If it is not, click Insert Joint, choose Revolution, pick the bore edge in the end block, then the journal edge on the screw. Click OK.",
+    "The collar, pin, tommy bar and balls are fixed to the screw, so they are one Welded group with it."
+   ],
+   "note": "A revolution joint lets a part turn about one axis and nothing else: one degree of freedom."
+  },
+  {
+   "view": "joints",
+   "title": "Let the jaw slide on the rails",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Check for a Prismatic joint between the body rails and the moving jaw.",
+    "If it is missing, Insert Joint, Prismatic: pick a rail top face, then the underside of the jaw head. Click OK.",
+    "The jaw plate and its two screws are one Welded group with the moving jaw."
+   ],
+   "note": null
+  },
+  {
+   "view": "joints",
+   "title": "Link the screw to the jaw",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Click Insert Joint. Under Rolling Joints choose Screw.",
+    "Pick the cylindrical face of the screw thread, then the threaded hole in the moving jaw.",
+    "Pitch 2 mm. Click OK."
+   ],
+   "note": "The screw joint ties turning to moving: one turn of the screw moves the jaw 2 mm."
+  },
+  {
+   "view": "motion",
+   "title": "Turn the tommy bar",
+   "command": "Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "In the Input Grapher: 0 degrees at 0.5 s and 7200 degrees (20 turns) at 6.5 s.",
+    "Click OK twice."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 8 s and Images to 400.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the Revolution joint and the position of the Prismatic joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

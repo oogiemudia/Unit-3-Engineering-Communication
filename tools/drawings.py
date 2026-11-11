@@ -23,7 +23,7 @@ import parts  # noqa: E402
 OUT = os.path.join(ROOT, 'docs', 'drawings')
 os.makedirs(OUT, exist_ok=True)
 DATE = '2026-11-08'
-NOT_SECTIONED = ('bolt', 'nut', 'washer', 'pin', 'rod', 'spring', 'shaft')
+NOT_SECTIONED = ('bolt', 'nut', 'washer', 'pin', 'rod', 'spring', 'shaft', 'screw', 'tommy bar', 'ball')
 # model name: (thread start x, thread end x, minor radius) for threads drawn by convention
 THREADS = {'threaded_shaft': (103, 127, 6.9)}
 
@@ -349,7 +349,8 @@ def material_of(m):
     if m.get('sub'):
         return 'See parts list'        # a sub-assembly: its parts list gives the material of each part
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
-            'bolted_joint': 'See parts list', 'fit_pair': 'See parts list', 'pneumatic_cylinder': 'See parts list'
+            'bolted_joint': 'See parts list', 'fit_pair': 'See parts list', 'pneumatic_cylinder': 'See parts list',
+            'machine_vice': 'See parts list'
             }.get(m['name'], 'S275 steel' if m['name'] in ('l_bracket', 'vee_block') else '6082-T6 aluminium')
 
 
