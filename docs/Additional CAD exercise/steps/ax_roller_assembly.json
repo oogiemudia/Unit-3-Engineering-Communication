@@ -9,8 +9,7 @@
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as base.ipt.",
-    "Sketch a rectangle 150 x 72 on the XZ Plane, centred. Extrude 20 mm.",
-    "Fillet the four vertical corners, radius 8."
+    "Sketch a rectangle 150 x 72 on the XZ Plane, centred. Extrude 20 mm."
    ],
    "note": null,
    "parts": [
@@ -28,10 +27,10 @@
   },
   {
    "n": 2,
-   "title": "Base: relief underneath",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Base: round the corners",
+   "command": "3D Model tab > Modify panel > Fillet",
    "actions": [
-    "Sketch a rectangle 60 wide across the middle of the underside. Extrude, Cut, 3 mm."
+    "Fillet the four vertical corners, radius 8."
    ],
    "note": null,
    "parts": [
@@ -49,6 +48,27 @@
   },
   {
    "n": 3,
+   "title": "Base: relief underneath",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 60 wide across the middle of the underside. Extrude, Cut, 3 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_03.json"
+  },
+  {
+   "n": 4,
    "title": "Base: tapped holes",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -66,11 +86,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_03.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_03.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_04.json"
   },
   {
-   "n": 4,
+   "n": 5,
    "title": "Bracket: foot",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -88,11 +108,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_04.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_04.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_05.json"
   },
   {
-   "n": 5,
+   "n": 6,
    "title": "Bracket: upright",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -109,11 +129,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_05.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_05.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_06.json"
   },
   {
-   "n": 6,
+   "n": 7,
    "title": "Bracket: gusset",
    "command": "3D Model tab > Create panel > Rib",
    "actions": [
@@ -130,36 +150,15 @@
     }
    ],
    "overlay": true,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_06.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_06.json"
-  },
-  {
-   "n": 7,
-   "title": "Bracket: spindle hole",
-   "command": "3D Model tab > Modify panel > Hole",
-   "actions": [
-    "Hole on the upright, on the R18 centre: Simple Hole, diameter 16, Through All."
-   ],
-   "note": null,
-   "parts": [
-    {
-     "name": "bracket (right)",
-     "colour": "#6E7F99",
-     "new": false,
-     "added": false,
-     "removed": true
-    }
-   ],
-   "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_07.glb",
    "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_07.json"
   },
   {
    "n": 8,
-   "title": "Bracket: bolt holes",
+   "title": "Bracket: spindle hole",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
-    "Hole on the foot at 60 along and 24 each side: Simple Hole, diameter 11, Through All."
+    "Hole on the upright, on the R18 centre: Simple Hole, diameter 16, Through All."
    ],
    "note": null,
    "parts": [
@@ -177,11 +176,10 @@
   },
   {
    "n": 9,
-   "title": "Bracket: round the foot",
-   "command": "3D Model tab > Modify panel > Fillet",
+   "title": "Bracket: bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
    "actions": [
-    "Fillet: radius 1.5 on the bottom edges of the foot.",
-    "Save bracket.ipt."
+    "Hole on the foot at 60 along and 24 each side: Simple Hole, diameter 11, Through All."
    ],
    "note": null,
    "parts": [
@@ -199,6 +197,28 @@
   },
   {
    "n": 10,
+   "title": "Bracket: round the foot",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: radius 1.5 on the bottom edges of the foot.",
+    "Save bracket.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bracket (right)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_10.json"
+  },
+  {
+   "n": 11,
    "title": "Spindle: spindle",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -216,11 +236,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_10.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_10.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_11.json"
   },
   {
-   "n": 11,
+   "n": 12,
    "title": "Spindle: chamfer the ends",
    "command": "3D Model tab > Modify panel > Chamfer",
    "actions": [
@@ -238,11 +258,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_11.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_11.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_12.json"
   },
   {
-   "n": 12,
+   "n": 13,
    "title": "Bush: flanged bush",
    "command": "3D Model tab > Create panel > Revolve",
    "actions": [
@@ -260,11 +280,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_12.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_12.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_13.json"
   },
   {
-   "n": 13,
+   "n": 14,
    "title": "Bush: chamfer",
    "command": "3D Model tab > Modify panel > Chamfer",
    "actions": [
@@ -282,11 +302,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_13.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_13.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_14.json"
   },
   {
-   "n": 14,
+   "n": 15,
    "title": "Roller: roller section",
    "command": "3D Model tab > Create panel > Revolve",
    "actions": [
@@ -305,11 +325,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_14.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_14.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_15.json"
   },
   {
-   "n": 15,
+   "n": 16,
    "title": "Roller: round the edges",
    "command": "3D Model tab > Modify panel > Fillet",
    "actions": [
@@ -327,11 +347,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_15.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_15.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_16.json"
   },
   {
-   "n": 16,
+   "n": 17,
    "title": "Assembly: place the base",
    "command": "Assemble tab > Component panel > Place",
    "actions": [
@@ -349,11 +369,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_16.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_16.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_17.json"
   },
   {
-   "n": 17,
+   "n": 18,
    "title": "Assembly: brackets",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
@@ -384,11 +404,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_17.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_17.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_18.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_18.json"
   },
   {
-   "n": 18,
+   "n": 19,
    "title": "Assembly: bolt the brackets down",
    "command": "Assemble tab > Component panel > Place from Content Center",
    "actions": [
@@ -447,16 +467,15 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_18.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_18.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_19.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_19.json"
   },
   {
-   "n": 19,
-   "title": "Assembly: roller and bushes",
+   "n": 20,
+   "title": "Assembly: roller",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
-    "Place roller.ipt and bush.ipt twice. Insert each bush into the roller bore, flange outwards.",
-    "Mate the roller axis to the spindle holes and Flush its middle plane with the base middle."
+    "Place roller.ipt. Mate its axis to the spindle holes and Flush its middle plane with the middle of the base."
    ],
    "note": null,
    "parts": [
@@ -515,6 +534,76 @@
      "new": true,
      "added": false,
      "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_20.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Assembly: bushes",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place bush.ipt twice. Insert each bush into the roller bore, flange outwards."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bracket (right)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bracket (left)",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt 3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "hex bolt 4",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "roller",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
     },
     {
      "name": "bush (right)",
@@ -532,11 +621,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_19.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_19.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_21.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_21.json"
   },
   {
-   "n": 20,
+   "n": 22,
    "title": "Assembly: spindle",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
@@ -623,8 +712,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_20.glb",
-   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_20.json"
+   "glb": "Additional CAD exercise/steps/ax_roller_assembly/step_22.glb",
+   "edges": "Additional CAD exercise/steps/ax_roller_assembly/step_22.json"
   }
  ]
 }

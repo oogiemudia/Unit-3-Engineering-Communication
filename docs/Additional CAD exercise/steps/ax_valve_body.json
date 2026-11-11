@@ -48,10 +48,10 @@
   },
   {
    "n": 3,
-   "title": "Round flanges",
-   "command": "3D Model tab > Create panel > Revolve",
+   "title": "First round flange",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 146 circle on a Work Plane 63 from the middle. Extrude 16 mm outwards, then an 80 raised face 4 mm. Mirror both to the other end (166 between the flange faces)."
+    "Sketch a 146 circle on a Work Plane 63 from the middle. Extrude 16 mm outwards."
    ],
    "note": null,
    "parts": [
@@ -69,10 +69,10 @@
   },
   {
    "n": 4,
-   "title": "Top flange",
+   "title": "Raised face",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch on the top of the body a slot with R60 ends 36 apart (120 wide, 156 long). Extrude 16 mm."
+    "Sketch an 80 circle on the flange. Extrude 4 mm."
    ],
    "note": null,
    "parts": [
@@ -90,11 +90,10 @@
   },
   {
    "n": 5,
-   "title": "Side port",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Second round flange",
+   "command": "3D Model tab > Pattern panel > Mirror",
    "actions": [
-    "Sketch a 50 circle on the front of the body, 20 above the axis. Extrude it to 82 in front of the axis.",
-    "Sketch a rectangle 130 x 80 on its end. Extrude 16 mm (the flange face is 98 from the axis)."
+    "Mirror the flange and its raised face about the YZ Plane (166 between the flange faces)."
    ],
    "note": null,
    "parts": [
@@ -112,10 +111,10 @@
   },
   {
    "n": 6,
-   "title": "Flange corner chamfers",
-   "command": "3D Model tab > Modify panel > Chamfer",
+   "title": "Top flange",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Chamfer the four corners of the side flange 5 x 45 (7.5 on the sketch)."
+    "Sketch on the top of the body a slot with R60 ends 36 apart (120 wide, 156 long). Extrude 16 mm."
    ],
    "note": null,
    "parts": [
@@ -123,8 +122,8 @@
      "name": "valve body",
      "colour": "#B8C2CC",
      "new": false,
-     "added": false,
-     "removed": true
+     "added": true,
+     "removed": false
     }
    ],
    "overlay": false,
@@ -133,19 +132,19 @@
   },
   {
    "n": 7,
-   "title": "Chamber",
+   "title": "Side port boss",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch on the XZ Plane a rectangle 52 x 72 with R10 corners. Extrude, Cut, from 41 below the axis to 57 above it (98 high)."
+    "Sketch a 50 circle on the front of the body, 20 above the axis. Extrude it to 82 in front of the axis."
    ],
-   "note": "Section A-A on the sheet shows the chamber: 52 wide and 98 high, walls 10 thick.",
+   "note": null,
    "parts": [
     {
      "name": "valve body",
      "colour": "#B8C2CC",
      "new": false,
-     "added": false,
-     "removed": true
+     "added": true,
+     "removed": false
     }
    ],
    "overlay": false,
@@ -154,10 +153,10 @@
   },
   {
    "n": 8,
-   "title": "Through bore",
-   "command": "3D Model tab > Modify panel > Hole",
+   "title": "Side flange",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Hole on a round flange: Simple Hole, diameter 42, Through All."
+    "Sketch a rectangle 130 x 80 on the end of the boss. Extrude 16 mm (the flange face is 98 from the axis)."
    ],
    "note": null,
    "parts": [
@@ -165,8 +164,8 @@
      "name": "valve body",
      "colour": "#B8C2CC",
      "new": false,
-     "added": false,
-     "removed": true
+     "added": true,
+     "removed": false
     }
    ],
    "overlay": false,
@@ -175,10 +174,10 @@
   },
   {
    "n": 9,
-   "title": "Top port",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Flange corner chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
    "actions": [
-    "Sketch on the top flange a slot 40 wide with its ends 36 apart. Extrude, Cut, into the chamber."
+    "Chamfer the four corners of the side flange 5 x 45 (7.5 on the sketch)."
    ],
    "note": null,
    "parts": [
@@ -196,12 +195,12 @@
   },
   {
    "n": 10,
-   "title": "Side port bore",
-   "command": "3D Model tab > Modify panel > Hole",
+   "title": "Chamber",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Hole on the side flange: Counterbore, diameter 40, counterbore 60 x 5, into the chamber."
+    "Sketch on the XZ Plane a rectangle 52 x 72 with R10 corners. Extrude, Cut, from 41 below the axis to 57 above it (98 high)."
    ],
-   "note": null,
+   "note": "Section A-A on the sheet shows the chamber: 52 wide and 98 high, walls 10 thick.",
    "parts": [
     {
      "name": "valve body",
@@ -217,10 +216,10 @@
   },
   {
    "n": 11,
-   "title": "Round flange holes",
-   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "title": "Through bore",
+   "command": "3D Model tab > Modify panel > Hole",
    "actions": [
-    "Hole 16 diameter on the 110 pitch circle, Through the flange. Circular Pattern: 6. Mirror to the other flange (12 holes, the \"12 x 16\" on the sheet)."
+    "Hole on a round flange: Simple Hole, diameter 42, Through All."
    ],
    "note": null,
    "parts": [
@@ -238,10 +237,10 @@
   },
   {
    "n": 12,
-   "title": "Top flange holes",
-   "command": "3D Model tab > Modify panel > Hole",
+   "title": "Top port",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Hole 14 diameter, Through the top flange: two on the long axis 64 from the middle and four at 45 and 22. (6 x 14 on the sheet.)"
+    "Sketch on the top flange a slot 40 wide with its ends 36 apart. Extrude, Cut, into the chamber."
    ],
    "note": null,
    "parts": [
@@ -259,6 +258,90 @@
   },
   {
    "n": 13,
+   "title": "Side port bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the side flange: Counterbore, diameter 40, counterbore 60 x 5, into the chamber."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "valve body",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_valve_body/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_valve_body/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Round flange holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole 16 diameter on the 110 pitch circle, Through the flange. Circular Pattern: 6."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "valve body",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_valve_body/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_valve_body/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Holes in the other flange",
+   "command": "3D Model tab > Pattern panel > Mirror",
+   "actions": [
+    "Mirror the holes about the YZ Plane (12 holes, the \"12 x 16\" on the sheet)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "valve body",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_valve_body/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_valve_body/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Top flange holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 14 diameter, Through the top flange: two on the long axis 64 from the middle and four at 45 and 22. (6 x 14 on the sheet.)"
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "valve body",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_valve_body/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_valve_body/step_16.json"
+  },
+  {
+   "n": 17,
    "title": "Side flange holes",
    "command": "3D Model tab > Pattern panel > Rectangular Pattern",
    "actions": [
@@ -276,8 +359,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_valve_body/step_13.glb",
-   "edges": "Additional CAD exercise/steps/ax_valve_body/step_13.json"
+   "glb": "Additional CAD exercise/steps/ax_valve_body/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_valve_body/step_17.json"
   }
  ]
 }

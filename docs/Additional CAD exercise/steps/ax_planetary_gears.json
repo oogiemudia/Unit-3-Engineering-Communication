@@ -95,7 +95,7 @@
    "title": "Sun gear: input shaft",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch an 8 circle on the back of the gear. Extrude 20 mm. Then a 5 circle on its end, extrude 10 mm (30 in all)."
+    "Sketch an 8 circle on the back of the gear. Extrude 20 mm."
    ],
    "note": null,
    "parts": [
@@ -113,6 +113,27 @@
   },
   {
    "n": 6,
+   "title": "Sun gear: shaft end",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 5 circle on the end of the shaft. Extrude 10 mm (30 in all)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "sun gear",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_06.json"
+  },
+  {
+   "n": 7,
    "title": "Sun gear: circlip groove",
    "command": "3D Model tab > Create panel > Revolve",
    "actions": [
@@ -130,11 +151,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_06.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_06.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_07.json"
   },
   {
-   "n": 7,
+   "n": 8,
    "title": "Planet gear: teeth",
    "command": "Design tab > Power Transmission panel > Spur Gear",
    "actions": [
@@ -152,39 +173,17 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_07.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_07.json"
-  },
-  {
-   "n": 8,
-   "title": "Planet gear: collar and pin",
-   "command": "3D Model tab > Create panel > Extrude",
-   "actions": [
-    "Sketch an 8 circle on the gear face: extrude 1.5 mm (a spacer collar). Sketch a 4 circle: extrude 4 mm (the bearing seat)."
-   ],
-   "note": null,
-   "parts": [
-    {
-     "name": "planet gear 1",
-     "colour": "#3AA6A0",
-     "new": false,
-     "added": true,
-     "removed": false
-    }
-   ],
-   "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_08.glb",
    "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_08.json"
   },
   {
    "n": 9,
-   "title": "Planet gear: thread",
-   "command": "3D Model tab > Modify panel > Thread",
+   "title": "Planet gear: collar",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 3 circle: extrude 5.5 mm. Thread: M3x0.5 on it.",
-    "Save planet_gear.ipt."
+    "Sketch an 8 circle on the gear face. Extrude 1.5 mm (a spacer collar)."
    ],
-   "note": "The planets are spaced 120 degrees apart. That only works because (60 + 12) / 3 = 24 is a whole number.",
+   "note": null,
    "parts": [
     {
      "name": "planet gear 1",
@@ -200,6 +199,70 @@
   },
   {
    "n": 10,
+   "title": "Planet gear: bearing seat",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 4 circle on the collar. Extrude 4 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "planet gear 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Planet gear: threaded end",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 3 circle on the bearing seat. Extrude 5.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "planet gear 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Planet gear: thread",
+   "command": "3D Model tab > Modify panel > Thread",
+   "actions": [
+    "Thread: M3x0.5 on the 3 end (a cosmetic thread).",
+    "Save planet_gear.ipt."
+   ],
+   "note": "The planets are spaced 120 degrees apart. That only works because (60 + 12) / 3 = 24 is a whole number.",
+   "parts": [
+    {
+     "name": "planet gear 1",
+     "colour": "#3AA6A0",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_12.json"
+  },
+  {
+   "n": 13,
    "title": "Carrier: plate",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -217,15 +280,15 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_10.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_10.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_13.json"
   },
   {
-   "n": 11,
+   "n": 14,
    "title": "Carrier: output shaft",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch an 8 circle on the plate: extrude 40 mm. Then a 5 circle: extrude 10 mm."
+    "Sketch an 8 circle on the plate. Extrude 40 mm."
    ],
    "note": null,
    "parts": [
@@ -238,11 +301,32 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_11.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_11.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_14.json"
   },
   {
-   "n": 12,
+   "n": 15,
+   "title": "Carrier: shaft end",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 5 circle on the end of the shaft. Extrude 10 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "carrier",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_15.json"
+  },
+  {
+   "n": 16,
    "title": "Carrier: bearing seats",
    "command": "3D Model tab > Pattern panel > Circular Pattern",
    "actions": [
@@ -259,11 +343,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_12.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_12.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_16.json"
   },
   {
-   "n": 13,
+   "n": 17,
    "title": "Carrier: circlip groove",
    "command": "3D Model tab > Create panel > Revolve",
    "actions": [
@@ -281,11 +365,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_13.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_13.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_17.json"
   },
   {
-   "n": 14,
+   "n": 18,
    "title": "Assembly: place the ring gear",
    "command": "Assemble tab > Component panel > Place",
    "actions": [
@@ -303,11 +387,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_14.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_14.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_18.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_18.json"
   },
   {
-   "n": 15,
+   "n": 19,
    "title": "Assembly: sun gear",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
@@ -331,11 +415,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_15.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_15.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_19.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_19.json"
   },
   {
-   "n": 16,
+   "n": 20,
    "title": "Assembly: planets",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
@@ -380,11 +464,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_16.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_16.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_20.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_20.json"
   },
   {
-   "n": 17,
+   "n": 21,
    "title": "Assembly: bearings",
    "command": "Assemble tab > Component panel > Place from Content Center",
    "actions": [
@@ -450,11 +534,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_17.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_17.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_21.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_21.json"
   },
   {
-   "n": 18,
+   "n": 22,
    "title": "Assembly: carrier",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
@@ -527,11 +611,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_18.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_18.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_22.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_22.json"
   },
   {
-   "n": 19,
+   "n": 23,
    "title": "Assembly: lock nuts",
    "command": "Assemble tab > Component panel > Place from Content Center",
    "actions": [
@@ -625,8 +709,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_19.glb",
-   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_19.json"
+   "glb": "Additional CAD exercise/steps/ax_planetary_gears/step_23.glb",
+   "edges": "Additional CAD exercise/steps/ax_planetary_gears/step_23.json"
   }
  ]
 }

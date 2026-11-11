@@ -244,9 +244,12 @@ def pedestal_bearing():
     b7 = b6
     for x in (12, 62):
         b7 = b7.cut(slot_xy(x, 17, x, 25, 8, -1, TB + 1)).cut(slot_xy(x, 17, x, 25, 14, TB - 3, TB + 1))
+    b6a = b6                                # the build steps show the slots before the counterbores
+    for x in (12, 62):
+        b6a = b6a.cut(slot_xy(x, 17, x, 25, 8, -1, TB + 1))
     part = P('pedestal_bearing', 'pedestal bearing', 'EN-GJL-250 grey cast iron', 'Bearing', IRON, [
-        F('base plate', EXTRUDE, ['Sketch a rectangle 74 x 42 on the XZ Plane. Extrude it 10 mm up.',
-                                  'Fillet the four vertical corners, radius 6.'], b1),
+        F('base plate', EXTRUDE, ['Sketch a rectangle 74 x 42 on the XZ Plane. Extrude it 10 mm up.'], base),
+        F('round the base corners', FILLET, ['Fillet the four vertical corners, radius 6.'], b1),
         F('web', EXTRUDE,
           ['Sketch on the XY Plane (the front) a 36 circle centred 37 along and 50 up, and two lines from the base (at 20 and 54) '
            'Tangent to the circle. Extrude the outline 10 mm, Midplane, from the middle of the base.'], b2,
@@ -256,10 +259,10 @@ def pedestal_bearing():
         F('boss', EXTRUDE, ['Sketch a 36 circle on the front, centred 37 along and 50 up. Extrude 35 mm, Midplane about the middle of the base.'], b4),
         F('bore', HOLE, ['Hole on the boss end: Simple Hole, diameter 18, Through All.'], b5),
         F('relief under the base', EXTRUDE, ['Sketch a rectangle 16 wide across the middle of the underside. Extrude, Cut, 4 mm.'], b6),
-        F('counterbored slots', EXTRUDE,
-          ['Sketch on the top of the base two Center to Center Slots 8 long and 8 wide, 12 from each end. Extrude, Cut, Through All.',
-           'Sketch slots of the same centres 14 wide (R7). Extrude, Cut, 3 mm.'], b7,
-          note='The slots let the pedestal slide 8 mm to line the bore up with the shaft before the bolts are tightened.'),
+        F('slots', EXTRUDE,
+          ['Sketch on the top of the base two Center to Center Slots 8 long and 8 wide, 12 from each end. Extrude, Cut, Through All.'],
+          b6a, note='The slots let the pedestal slide 8 mm to line the bore up with the shaft before the bolts are tightened.'),
+        F('counterbores', EXTRUDE, ['Sketch slots on the same centres 14 wide (R7). Extrude, Cut, 3 mm.'], b7),
     ])
     return single('ax_pedestal_bearing', 'Pedestal bearing (exercise T8)', part,
                   'A cast iron pedestal from the exercise sheet: a 74 x 42 base with a relief and two counterbored slots, a web and rib '
@@ -338,7 +341,8 @@ def saddle_block():
     base = _box(0, L, 0, W, 0, TB)
     b1 = base
     b2 = b1.union(_box(26, 94, 13, 83, TB, H))
-    b3 = b2.cut(ycyl(28, 12, 65, 60, H)).cut(ycyl(20, 64, 84, 60, H))
+    b3a = b2.cut(ycyl(28, 12, 65, 60, H))
+    b3 = b3a.cut(ycyl(20, 64, 84, 60, H))
     b4 = b3
     for x in (13, 107):
         for y in (28, 68):
@@ -347,9 +351,10 @@ def saddle_block():
     part = P('saddle_block', 'saddle bearing block', 'EN-GJL-250 grey cast iron', 'Bearing', IRON, [
         F('base', EXTRUDE, ['Sketch a rectangle 120 x 96 on the XZ Plane. Extrude 15 mm.'], b1),
         F('upper block', EXTRUDE, ['Sketch a rectangle 68 x 70 in the middle of the base. Extrude it to 33 from the bottom.'], b2),
-        F('saddle', EXTRUDE,
-          ['Sketch on the front face a half circle R28 centred on the top edge, 60 along. Extrude, Cut, 52 mm deep.',
-           'Sketch a half circle R20 on the same centre on the back face. Extrude, Cut, up to the first cut.'], b3,
+        F('saddle, R28 part', EXTRUDE,
+          ['Sketch on the front face a half circle R28 centred on the top edge, 60 along. Extrude, Cut, 52 mm deep.'], b3a),
+        F('saddle, R20 part', EXTRUDE,
+          ['Sketch a half circle R20 on the same centre on the back face. Extrude, Cut, up to the first cut.'], b3,
           note='The step from R28 to R20 is a shoulder for the bearing shell to stop against.'),
         F('holding down holes', HOLE, ['Hole on the top of the base: Simple Hole, diameter 9, Through All, at 13 from each end, 40 apart.'], b4),
         F('oil hole', HOLE, ['Hole on the right end of the block, 6 below the top: Simple Hole, diameter 6, into the saddle.'], b5),
@@ -436,8 +441,8 @@ def roller_assembly():
         [None, T(0, 48, 0), chain(T(-120, 0, 0)), chain(T(-120, 48, 0))])]
     parts = [
         P('base', 'base', 'EN-GJL-250 grey cast iron', 'Frame', IRON, [
-            F('base plate', EXTRUDE, ['Sketch a rectangle 150 x 72 on the XZ Plane, centred. Extrude 20 mm.',
-                                      'Fillet the four vertical corners, radius 8.'], base1),
+            F('base plate', EXTRUDE, ['Sketch a rectangle 150 x 72 on the XZ Plane, centred. Extrude 20 mm.'], base0),
+            F('round the corners', FILLET, ['Fillet the four vertical corners, radius 8.'], base1),
             F('relief underneath', EXTRUDE, ['Sketch a rectangle 60 wide across the middle of the underside. Extrude, Cut, 3 mm.'], base2),
             F('tapped holes', HOLE, ['Hole on the top face at (+-60, +-24): Tapped Hole, M10x1.5, thread depth 16, drill depth 17.'], base3,
               note='Tapped holes are modelled at the thread size (10), the way CAD shows a cosmetic thread.')]),
@@ -473,9 +478,10 @@ def roller_assembly():
                                  'the tapped holes, the uprights facing each other.'], ['bracket (right)', 'bracket (left)']),
         ('bolt the brackets down', CONTENT, ['Place from Content Center: ANSI B18.2.3.5M hex bolt M10 x 1.5 x 20, four of them. '
                                               'Insert each into a foot hole.'], [n for n, tf in bolts]),
-        ('roller and bushes', CONSTRAIN, ['Place roller.ipt and bush.ipt twice. Insert each bush into the roller bore, flange outwards.',
-                                          'Mate the roller axis to the spindle holes and Flush its middle plane with the base middle.'],
-         ['roller', 'bush (right)', 'bush (left)']),
+        ('roller', CONSTRAIN, ['Place roller.ipt. Mate its axis to the spindle holes and Flush its middle plane with the middle of '
+                               'the base.'], ['roller']),
+        ('bushes', CONSTRAIN, ['Place bush.ipt twice. Insert each bush into the roller bore, flange outwards.'],
+         ['bush (right)', 'bush (left)']),
         ('spindle', CONSTRAIN, ['Place spindle.ipt. Mate its axis to the bracket holes and centre it with Flush.'], ['spindle'],
          'The bushes turn on the fixed spindle; their flanges take any end load against the brackets.'),
     ]
@@ -521,7 +527,8 @@ def machinists_jack():
     scr2 = scr1.faces('>Z or <Z').chamfer(1)
     parts = [
         P('base', 'base', 'Steel AISI 1020', 'Jack', YELLOW, [
-            F('base plate', EXTRUDE, ['Sketch a rectangle 132 x 58 on the XZ Plane, centred. Extrude 14 mm. Fillet the corners R5.'], b1),
+            F('base plate', EXTRUDE, ['Sketch a rectangle 132 x 58 on the XZ Plane, centred. Extrude 14 mm.'], plate),
+            F('round the corners', FILLET, ['Fillet the four vertical corners R5.'], b1),
             F('first lug', EXTRUDE, ['Sketch on the XY Plane the lug: a line 75 long on the plate, a circle R20 centred 54 up, two lines '
                                      'Tangent to it. Extrude 10 mm, starting 16 behind the middle (a 32 gap between the lugs).'], b2,
               overlay=face_of(lug, 'XZ')),
@@ -545,7 +552,8 @@ def machinists_jack():
                                  'for 16. Revolve.'], scr0),
             F('cross hole', HOLE, ['Hole across the head, 8 below the top: Simple Hole, diameter 10.5, Through All.'], scr1,
               note='A tommy bar through this hole turns the screw.'),
-            F('chamfers', CHAMFER, ['Chamfer 1 x 45 on both ends. Thread: the bottom 32 mm, M20x2.5.'], scr2)]),
+            F('chamfers', CHAMFER, ['Chamfer 1 x 45 on both ends.'], scr2),
+            F('thread', THREAD, ['Thread: the bottom 32 mm, M20x2.5 (a cosmetic thread, shown on the drawing).'], scr2)]),
     ]
     assembly = [
         ('place the base', PLACE, ['Place base.ipt Grounded at Origin.'], ['base']),
@@ -553,9 +561,9 @@ def machinists_jack():
                                                 'face to the inside of a lug.'], ['swivel']),
         ('bolt and nut', CONTENT, ['Place bolt M16 x 68 and a nut M16: Insert the bolt through the lugs and the swivel, the nut on its end.'],
          ['bolt M16 x 2.0 x 68', 'standard nut M16 x 2.0']),
-        ('lock nut and screw', CONSTRAIN, ['Place lock_nut.ipt: Mate it to the top of the swivel. Place screw.ipt: Insert it into the '
-                                           'tapped hole, 24 deep.'], ['lock nut M20 x 2.5', 'screw M20 x 2.5 x 56'],
-         'Turning the screw sets the height; the lock nut is then tightened down on the swivel to hold it.'),
+        ('lock nut', CONSTRAIN, ['Place lock_nut.ipt: Mate it to the top of the swivel, on the screw axis.'], ['lock nut M20 x 2.5']),
+        ('screw', CONSTRAIN, ['Place screw.ipt: Insert it through the lock nut into the tapped hole, 24 deep.'],
+         ['screw M20 x 2.5 x 56'], 'Turning the screw sets the height; the lock nut is then tightened down on the swivel to hold it.'),
     ]
     ex = {'swivel': (0, 0, 60), 'bolt M16 x 2.0 x 68': (0, -90, 0), 'standard nut M16 x 2.0': (0, 70, 0),
           'lock nut M20 x 2.5': (0, 0, 100), 'screw M20 x 2.5 x 56': (0, 0, 150)}
@@ -592,6 +600,13 @@ def valve_body():
     b8 = b7.cut(xcyl(21, -84, 84))
     b9 = b8.cut(sk('XY', hull_path([(0, -18, 20), (0, 18, 20)]), 50, ZT + 17))
     b10 = b9.cut(ycyl(20, -99, -20, 0, ZS)).cut(ycyl(30, -99, -93, 0, ZS))
+    b3a = b2.union(xcyl(73, 63, 79))         # build step views: one flange, its raised face, the side port boss, one ring of holes
+    b3b = b3a.union(xcyl(40, 78.9, 83))
+    b4a = b4.union(ycyl(25, -84, -30, 0, ZS))
+    b11a = b10
+    for k in range(6):
+        a = math.radians(30 + 60 * k)
+        b11a = b11a.cut(xcyl(8, 62, 84, 55 * math.cos(a), 55 * math.sin(a)))
     b11 = b10
     for sx in (-1, 1):
         for k in range(6):
@@ -609,11 +624,15 @@ def valve_body():
         F('body', EXTRUDE, ['Sketch on the XZ Plane a rectangle 72 x 92 with R20 corners, centred. Extrude from 51 below the axis '
                             'to 67 above it.'], b1),
         F('through neck', EXTRUDE, ['Sketch an 80 circle on the YZ Plane. Extrude 126 mm, Midplane.'], b2),
-        F('round flanges', REVOLVE, ['Sketch a 146 circle on a Work Plane 63 from the middle. Extrude 16 mm outwards, then an 80 '
-                                     'raised face 4 mm. Mirror both to the other end (166 between the flange faces).'], b3),
+        F('first round flange', EXTRUDE, ['Sketch a 146 circle on a Work Plane 63 from the middle. Extrude 16 mm outwards.'], b3a),
+        F('raised face', EXTRUDE, ['Sketch an 80 circle on the flange. Extrude 4 mm.'], b3b),
+        F('second round flange', MIRROR, ['Mirror the flange and its raised face about the YZ Plane (166 between the flange '
+                                          'faces).'], b3),
         F('top flange', EXTRUDE, ['Sketch on the top of the body a slot with R60 ends 36 apart (120 wide, 156 long). Extrude 16 mm.'], b4),
-        F('side port', EXTRUDE, ['Sketch a 50 circle on the front of the body, 20 above the axis. Extrude it to 82 in front of the axis.',
-                                 'Sketch a rectangle 130 x 80 on its end. Extrude 16 mm (the flange face is 98 from the axis).'], b5),
+        F('side port boss', EXTRUDE, ['Sketch a 50 circle on the front of the body, 20 above the axis. Extrude it to 82 in front of '
+                                      'the axis.'], b4a),
+        F('side flange', EXTRUDE, ['Sketch a rectangle 130 x 80 on the end of the boss. Extrude 16 mm (the flange face is 98 from '
+                                   'the axis).'], b5),
         F('flange corner chamfers', CHAMFER, ['Chamfer the four corners of the side flange 5 x 45 (7.5 on the sketch).'], b6),
         F('chamber', EXTRUDE, ['Sketch on the XZ Plane a rectangle 52 x 72 with R10 corners. Extrude, Cut, from 41 below the axis '
                                'to 57 above it (98 high).'], b7, note='Section A-A on the sheet shows the chamber: 52 wide and 98 high, '
@@ -621,8 +640,8 @@ def valve_body():
         F('through bore', HOLE, ['Hole on a round flange: Simple Hole, diameter 42, Through All.'], b8),
         F('top port', EXTRUDE, ['Sketch on the top flange a slot 40 wide with its ends 36 apart. Extrude, Cut, into the chamber.'], b9),
         F('side port bore', HOLE, ['Hole on the side flange: Counterbore, diameter 40, counterbore 60 x 5, into the chamber.'], b10),
-        F('round flange holes', CIRC, ['Hole 16 diameter on the 110 pitch circle, Through the flange. Circular Pattern: 6. Mirror '
-                                       'to the other flange (12 holes, the "12 x 16" on the sheet).'], b11),
+        F('round flange holes', CIRC, ['Hole 16 diameter on the 110 pitch circle, Through the flange. Circular Pattern: 6.'], b11a),
+        F('holes in the other flange', MIRROR, ['Mirror the holes about the YZ Plane (12 holes, the "12 x 16" on the sheet).'], b11),
         F('top flange holes', HOLE, ['Hole 14 diameter, Through the top flange: two on the long axis 64 from the middle and four '
                                      'at 45 and 22. (6 x 14 on the sheet.)'], b12),
         F('side flange holes', RECT, ['Hole 15 diameter on the side flange, 86.5 x 50 apart. Rectangular Pattern 2 x 2.'], b13),
@@ -644,15 +663,18 @@ def planetary_gears():
     ring1 = ring0.cut(cutter)
     ring2 = ring1.cut(zcyl(29.0, -1, FACE + 1))
     sun0 = involute_gear(1, 12, FACE)
-    sun1 = sun0.union(zcyl(4, -20, 0.01)).union(zcyl(2.5, -30, -19.99))
+    sun1a = sun0.union(zcyl(4, -20, 0.01))
+    sun1 = sun1a.union(zcyl(2.5, -30, -19.99))
     sun2 = sun1.cut(zring(2.0, 3, -26, -25.25))
     pl0 = involute_gear(1, 24, FACE).intersect(zcyl(12.85, -1, FACE + 1))
     pl0 = pl0.rotate((0, 0, 0), (0, 0, 1), 7.5).translate((RP, 0, 0))
-    pl1 = pl0.union(zcyl(4, FACE - 0.01, FACE + 1.5, RP, 0)).union(zcyl(2, FACE + 1.49, FACE + 5.5, RP, 0))
+    pl1a = pl0.union(zcyl(4, FACE - 0.01, FACE + 1.5, RP, 0))
+    pl1 = pl1a.union(zcyl(2, FACE + 1.49, FACE + 5.5, RP, 0))
     pl2 = pl1.union(zcyl(1.5, FACE + 5.49, FACE + 11, RP, 0))
     car0 = sk('XY', hull_path([(RP * math.cos(math.radians(a)), RP * math.sin(math.radians(a)), 7.5) for a in (0, 120, 240)]),
               FACE + 1.5, FACE + 5.5)
-    car1 = car0.union(zcyl(4, FACE + 5.49, FACE + 45.5)).union(zcyl(2.5, FACE + 45.49, FACE + 55.5))
+    car1a = car0.union(zcyl(4, FACE + 5.49, FACE + 45.5))
+    car1 = car1a.union(zcyl(2.5, FACE + 45.49, FACE + 55.5))
     car2 = car1
     for a in (0, 120, 240):
         car2 = car2.cut(zcyl(4.5, FACE, FACE + 6, RP * math.cos(math.radians(a)), RP * math.sin(math.radians(a))))
@@ -674,20 +696,22 @@ def planetary_gears():
             F('tip circle', EXTRUDE, ['Sketch a 58 circle. Extrude, Cut, Through All (the tooth tips, 57.95 on the sheet).'], ring2)]),
         P('sun_gear', 'sun gear', 'Steel AISI 1020', 'Gears', BRASS, [
             F('teeth', SPUR, ['Spur Gear: module 1, 12 teeth, face width 10. Pitch 12, tip 14, root 9.5.'], sun0),
-            F('input shaft', EXTRUDE, ['Sketch an 8 circle on the back of the gear. Extrude 20 mm. Then a 5 circle on its end, '
-                                       'extrude 10 mm (30 in all).'], sun1),
+            F('input shaft', EXTRUDE, ['Sketch an 8 circle on the back of the gear. Extrude 20 mm.'], sun1a),
+            F('shaft end', EXTRUDE, ['Sketch a 5 circle on the end of the shaft. Extrude 10 mm (30 in all).'], sun1),
             F('circlip groove', REVOLVE, ['Sketch a groove 0.75 wide and 0.5 deep, 5 from the end. Revolve, Cut.'], sun2)]),
         P('planet_gear', 'planet gear', 'Steel AISI 1020', 'Gears', TEAL, [
             F('teeth', SPUR, ['Spur Gear: module 1, 24 teeth, face width 10. Pitch 24, tip 26 (turned to 25.7), root 21.5.'], pl0),
-            F('collar and pin', EXTRUDE, ['Sketch an 8 circle on the gear face: extrude 1.5 mm (a spacer collar). Sketch a 4 circle: '
-                                          'extrude 4 mm (the bearing seat).'], pl1),
-            F('thread', THREAD, ['Sketch a 3 circle: extrude 5.5 mm. Thread: M3x0.5 on it.'], pl2,
+            F('collar', EXTRUDE, ['Sketch an 8 circle on the gear face. Extrude 1.5 mm (a spacer collar).'], pl1a),
+            F('bearing seat', EXTRUDE, ['Sketch a 4 circle on the collar. Extrude 4 mm.'], pl1),
+            F('threaded end', EXTRUDE, ['Sketch a 3 circle on the bearing seat. Extrude 5.5 mm.'], pl2),
+            F('thread', THREAD, ['Thread: M3x0.5 on the 3 end (a cosmetic thread).'], pl2,
               note='The planets are spaced 120 degrees apart. That only works because (60 + 12) / 3 = 24 is a whole number.')],
           instances=planets),
         P('carrier', 'carrier', 'Steel AISI 1020', 'Carrier', GREEN, [
             F('plate', EXTRUDE, ['Sketch three R7.5 circles on an 18 radius at 120 degrees and join them with tangent lines. '
                                  'Extrude 4 mm.'], car0),
-            F('output shaft', EXTRUDE, ['Sketch an 8 circle on the plate: extrude 40 mm. Then a 5 circle: extrude 10 mm.'], car1),
+            F('output shaft', EXTRUDE, ['Sketch an 8 circle on the plate. Extrude 40 mm.'], car1a),
+            F('shaft end', EXTRUDE, ['Sketch a 5 circle on the end of the shaft. Extrude 10 mm.'], car1),
             F('bearing seats', CIRC, ['Hole 9 diameter on one lobe, Through. Circular Pattern: 3.'], car2),
             F('circlip groove', REVOLVE, ['Groove 0.75 wide and 0.5 deep near the end of the shaft.'], car3)]),
         P('bearing', 'bearing 684 (4 x 9 x 4)', 'Bearing steel', 'Bought in', STEEL, [F('bearing', BEARING_CMD, [], brg)],
@@ -738,19 +762,25 @@ def tube_bracket_45():
     b5 = b4.union(back)
     step = _box(0, 10, 0, 16, 6, 15)
     lug = sk('XZ', [(22, 6), (38, 6), (38, 10), ((30, 18), (22, 10))], 0, 6)
-    b6 = b5.union(step).union(lug)
-    b7 = b6.cut(zcyl(10, -1, 41, XC, YC)).cut(_cyl(10, (XC - 4 * s2, YC, 13 - 4 * s2), d, L + 6))
+    b6a = b5.union(step)
+    b6 = b6a.union(lug)
+    b7a = b6.cut(zcyl(10, -1, 41, XC, YC))
+    b7 = b7a.cut(_cyl(10, (XC - 4 * s2, YC, 13 - 4 * s2), d, L + 6))
     b8 = b7.cut(_box(XC - 3, XC + 3, YC - 14, YC, 30, 41))
-    b9 = b8.cut(ycyl(2, 37, 51, 8, 22)).cut(zcyl(2, 5, 16, 5, 8)).cut(ycyl(2, -1, 7, 30, 10))
+    b9a = b8.cut(ycyl(2, 37, 51, 8, 22))
+    b9b = b9a.cut(zcyl(2, 5, 16, 5, 8))
+    b9 = b9b.cut(ycyl(2, -1, 7, 30, 10))
     holes = None
     for u in (-13, 13):
         for v in (-13, 13):
             h = zcyl(2, -1, 5, u, v)
             holes = h if holes is None else holes.union(h)
     holes = holes.rotate((0, 0, 0), (0, 1, 0), 45).translate((XC + (L - 4) * s2, YC, 13 + (L - 4) * s2))
-    b10 = b9.cut(holes).cut(zcyl(2, -1, 7, 58, 8)).cut(zcyl(2, -1, 7, 58, 43))
+    b10a = b9.cut(holes)
+    b10 = b10a.cut(zcyl(2, -1, 7, 58, 8)).cut(zcyl(2, -1, 7, 58, 43))
     part = P('tube_bracket_45', 'tube bracket', 'Aluminium alloy, cast (LM25)', 'Bracket', CAST, [
-        F('base', EXTRUDE, ['Sketch a rectangle 65 x 50 on the XZ Plane. Extrude 6 mm. Fillet the corners R5.'], b1),
+        F('base', EXTRUDE, ['Sketch a rectangle 65 x 50 on the XZ Plane. Extrude 6 mm.'], base0),
+        F('round the base corners', FILLET, ['Fillet the four vertical corners R5.'], b1),
         F('vertical tube', EXTRUDE, ['Sketch a 26 circle 30 from the left end. Extrude it to 40 from the bottom.'], b2),
         F('45 degree tube', EXTRUDE, ['Work Plane at 45 degrees through the tube axis. Sketch a 26 circle on a plane square to the '
                                       '45 degree axis and Extrude it up to the flange.'], b3),
@@ -758,14 +788,19 @@ def tube_bracket_45():
                                      'base. Extrude 4 mm.'], b4),
         F('back wall', EXTRUDE, ['Sketch on the back face the wall: 22 long, 30 high, an R6 round on its top corner. Extrude 12 mm.'], b5,
           overlay=face_of(back, 'XZ')),
-        F('step and front lug', EXTRUDE, ['Sketch the step block 10 x 16, 15 high, and the front lug with its R8 round top. '
-                                          'Extrude them.'], b6),
-        F('bores', HOLE, ['Hole 20 diameter down the vertical tube, Through All. Hole 20 diameter along the 45 degree tube, into '
-                          'the vertical bore.'], b7),
+        F('step block', EXTRUDE, ['Sketch a 10 x 16 rectangle on the top of the base at the front left corner. Extrude 9 mm (15 '
+                                  'from the bottom).'], b6a),
+        F('front lug', EXTRUDE, ['Sketch on the front face the lug: 16 wide, straight sides 4 high and an R8 round top (18 from the '
+                                 'bottom). Extrude 6 mm back.'], b6),
+        F('vertical bore', HOLE, ['Hole 20 diameter down the vertical tube, Through All.'], b7a),
+        F('45 degree bore', HOLE, ['Hole on the flange face, on the tube axis: 20 diameter, To the vertical bore.'], b7),
         F('slot in the tube', EXTRUDE, ['Sketch a rectangle 6 wide at the top of the tube. Extrude, Cut, 10 mm deep, through the front wall.'], b8),
-        F('small holes', HOLE, ['Hole 4 diameter: across the back wall, down the step block and across the front lug.'], b9),
-        F('flange and base holes', RECT, ['Hole 4 diameter at the corners of a 26 square on the flange, Rectangular Pattern 2 x 2. '
-                                          'Two holes 4 diameter in the base.'], b10),
+        F('hole across the back wall', HOLE, ['Hole 4 diameter, Through, across the back wall, 8 from the left end and 22 up.'], b9a),
+        F('hole in the step block', HOLE, ['Hole 4 diameter, 10 deep, down the middle of the step block.'], b9b),
+        F('hole in the front lug', HOLE, ['Hole 4 diameter, Through, on the R8 centre of the front lug.'], b9),
+        F('flange holes', RECT, ['Hole 4 diameter at one corner of a 26 square on the flange. Rectangular Pattern 2 x 2, 26 '
+                                 'apart.'], b10a),
+        F('base holes', HOLE, ['Hole 4 diameter, Through, in the base 58 from the left end, 8 and 43 from the front.'], b10),
     ])
     return single('ax_tube_bracket_45', 'Tube bracket, 45 degree', part,
                   'A cast bracket from a dimensioned isometric: a 65 x 50 base, a 26 tube 40 high with a slot in its top, a second 26 '
@@ -795,6 +830,11 @@ def angle_bracket():
     pocket = _box(-CW / 2 + WT, CW / 2 - WT, -CD / 2 - 1, CD / 2 - WT, BT, col_top).cut(
         _box(-60, 60, -80, 80, -WT, 80).rotate((0, 0, 0), (1, 0, 0), -tilt).translate((0, 0, ZP)))
     b4 = b3.cut(pocket)
+    # build step views: the column is made as a channel open at the front and trimmed; the top plate then closes it, which
+    # gives the same solid as the pocket (b5)
+    chan = col.cut(_box(-CW / 2 + WT, CW / 2 - WT, -CD / 2 - 1, CD / 2 - WT, BT, col_top + 1))
+    b3a = b2.union(chan)
+    b3b = b2.union(chan.cut(plane_cut))
     PL, PW, PT = 2.38 * IN, 1.88 * IN, 0.31 * IN
     plate0 = sk('XY', hull_path([(-PW / 2 + 7.9, -PL / 2 + 7.9, 7.9), (PW / 2 - 7.9, -PL / 2 + 7.9, 7.9),
                                  (PW / 2 - 7.9, PL / 2 - 7.9, 7.9), (-PW / 2 + 7.9, PL / 2 - 7.9, 7.9)]), -PT, 0)
@@ -814,14 +854,17 @@ def angle_bracket():
         for y in (-1.0 * IN, 1.0 * IN):
             b9 = b9.cut(zcyl(0.19 * IN, -1, BT + 1, x, y))
     part = P('angle_bracket', 'angle bracket', 'Aluminium alloy, cast (LM6)', 'Bracket', CAST, [
-        F('base', EXTRUDE, ['Sketch a rectangle 3.75 x 3.00 in (95.25 x 76.2 mm) on the XZ Plane. Extrude 0.38 in (9.65). '
-                            'Fillet the corners R0.50 in.'], b1, note='The drawing is in inches; the model is in millimetres (x 25.4).'),
+        F('base', EXTRUDE, ['Sketch a rectangle 3.75 x 3.00 in (95.25 x 76.2 mm) on the XZ Plane. Extrude 0.38 in (9.65).'], base0,
+          note='The drawing is in inches; the model is in millimetres (x 25.4).'),
+        F('round the base corners', FILLET, ['Fillet the four vertical corners R0.50 in.'], b1),
         F('relief under the base', EXTRUDE, ['Sketch a strip 1.13 in wide across the underside. Extrude, Cut, 0.06 in.'], b2),
-        F('column', EXTRUDE, ['Sketch a rectangle 1.88 x 1.38 in on the base. Extrude it up past the top. Work Plane at 30 degrees '
-                              'through a line 2.66 in up, sloping down to the front, and Split the column with it (Remove the top).'], b3),
-        F('open the column', SHELL, ['Shell: wall 0.31 in, remove the front face, so the column becomes a channel open at the front.'], b4,
+        F('column', EXTRUDE, ['Sketch on the top of the base the column as a channel open at the front: a 1.88 x 1.38 in rectangle '
+                              'with a 1.26 x 1.07 in notch from the front edge (walls 0.31 in). Extrude it up past the top.'], b3a,
           note='An even wall thickness lets the casting cool evenly, so it does not crack.'),
-        F('top plate', EXTRUDE, ['Sketch on the 30 degree Work Plane a rectangle 1.88 x 2.38 in with R0.31 corners. Extrude 0.31 in down.'], b5),
+        F('trim the column top', SPLIT, ['Work Plane at 30 degrees through a line 2.66 in up, sloping down to the front. Split > '
+                                         'Trim Solid with the plane, and remove the top.'], b3b),
+        F('top plate', EXTRUDE, ['Sketch on the 30 degree Work Plane a rectangle 1.88 x 2.38 in with R0.31 corners. Extrude 0.31 in '
+                                 'down. It closes the top of the channel.'], b5),
         F('top plate holes', RECT, ['Hole 0.31 in diameter, on the centres of the R0.31 corners: 1.26 x 1.74 in apart. Rectangular Pattern 2 x 2.'], b6),
         F('side boss', EXTRUDE, ['Sketch a 0.75 in circle on the side of the column, 1.50 in up. Extrude 0.59 in out.'], b7),
         F('boss bore', HOLE, ['Hole 0.50 in diameter, through the boss and the wall.'], b8),
@@ -874,28 +917,53 @@ def crankshaft_4():
     for xc in xs[:3]:
         s4 = s4.union(xcyl(32, xc + 37.9, xc + 76.1))
     s4 = s4.union(xcyl(32, xs[3] + 37.9, 604.01))
+
+    def throw(base, xc, up):
+        """The build steps make the shaft throw by throw: front web, crank pin, rear web (the same solid as s4 at the end)."""
+        a = base.union(web(xc - 38, up))
+        b = a.union(xcyl(32, xc - 22.6, xc + 22.6, 0, RT * up))
+        return a, b, b.union(web(xc + 22.5, up))
+    t1 = throw(s1, xs[0], ups[0])
+    j2 = t1[2].union(xcyl(32, xs[0] + 37.9, xs[0] + 76.1))
+    t2 = throw(j2, xs[1], ups[1])
+    j3 = t2[2].union(xcyl(32, xs[1] + 37.9, xs[1] + 76.1))
+    t3 = throw(j3, xs[2], ups[2])[2].union(xcyl(32, xs[2] + 37.9, xs[2] + 76.1))
     s5 = s4.union(xcyl(72, 604, 619))
     s6 = s5
     for k in range(6):
         a = math.radians(30 + 60 * k)
         s6 = s6.cut(xcyl(5, 603, 620, 54.5 * math.cos(a), 54.5 * math.sin(a)))
-    s7 = s6.edges(cq.selectors.BoxSelector((618, -80, -80), (620, 80, 80))).edges(cq.selectors.RadiusNthSelector(-1)).chamfer(2)
-    s7 = s7.faces('<X').chamfer(1)
+    s7a = s6.edges(cq.selectors.BoxSelector((618, -80, -80), (620, 80, 80))).edges(cq.selectors.RadiusNthSelector(-1)).chamfer(2)
+    s7 = s7a.faces('<X').chamfer(1)
     part = P('crankshaft_4', 'crankshaft', 'Forged steel 42CrMo4', 'Crankshaft', STEEL, [
         F('front stub and journal', REVOLVE, ['Sketch on the XY Plane the half section: 32 diameter for 110, then 64 diameter for 38. '
                                               'Revolve about the axis.'], s1),
-        F('webs', EXTRUDE, ['Sketch a web on the YZ Plane: a circle R70 on the main axis, a circle R36 on the pin 44 off the axis, and '
-                            'two lines Tangent to the R36 circle at 33 degrees to each other, closed by an arc R80 on the main axis. '
-                            'Extrude 15.5 mm. Make eight webs, two to each throw, the throws 114 apart.'], s2,
+        F('throw 1: front web', EXTRUDE,
+          ['Sketch a web on the end face of the front journal: a circle R70 on the main axis, a circle R36 on the pin centre 44 '
+           'below the axis, and two lines Tangent to the R36 circle at 33 degrees to each other, closed by an arc R80 on the main '
+           'axis (the counterweight, opposite the pin). Trim. Extrude 15.5 mm.'], t1[0], overlay=face_of(web(xs[0] - 38, ups[0]), 'YZ'),
           note='Section A-A on the sheet shows the web: the R80 counterweight, the 33 degree sides and the R36 (72 diameter) pin end.'),
-        F('crank pins', EXTRUDE, ['Sketch a 64 circle 44 off the axis between each pair of webs. Extrude 45 mm. Throws 1 and 4 down, '
-                                  '2 and 3 up (180 degrees apart).'], s3, note='Stroke = 2 x throw = 2 x 44 = 88 mm.'),
-        F('main journals', EXTRUDE, ['Sketch a 64 circle on the main axis between each pair of throws. Extrude 38 mm. The rear '
-                                     'journal runs to the flange.'], s4),
+        F('throw 1: crank pin', EXTRUDE, ['Sketch a 64 circle on the web face on the R36 centre, 44 below the axis. Extrude 45 mm.'],
+          t1[1], note='Stroke = 2 x throw = 2 x 44 = 88 mm.'),
+        F('throw 1: rear web', MIRROR, ['Work Plane through the middle of the crank pin (Offset 22.5 from the web face). Mirror the '
+                                        'front web about it.'], t1[2]),
+        F('main journal 2', EXTRUDE, ['Sketch a 64 circle on the main axis on the rear web. Extrude 38 mm.'], j2),
+        F('throw 2: front web', EXTRUDE, ['Sketch the same web on the end of journal 2, but with the pin centre 44 above the axis '
+                                          '(throw 2 is turned 180 degrees from throw 1). Extrude 15.5 mm.'], t2[0]),
+        F('throw 2: crank pin', EXTRUDE, ['Sketch a 64 circle on the R36 centre, 44 above the axis. Extrude 45 mm.'], t2[1]),
+        F('throw 2: rear web', MIRROR, ['Work Plane through the middle of the pin. Mirror the front web about it.'], t2[2]),
+        F('main journal 3', EXTRUDE, ['Sketch a 64 circle on the main axis on the rear web. Extrude 38 mm.'], j3),
+        F('throw 3 and journal 4', RECT, ['Rectangular Pattern: the two throw 2 webs, its pin and journal 3. Direction along the '
+                                          'shaft axis, 2 occurrences, 114 apart.'], t3,
+          note='Throws 2 and 3 point the same way, so a pattern copies throw 2.'),
+        F('throw 4 and the rear journal', RECT, ['Rectangular Pattern: the two throw 1 webs, its pin and journal 2. 2 occurrences, '
+                                                 '342 apart (3 x 114). The copied journal ends at 604, where the flange starts.'], s4,
+          note='Pins 1 and 4 point down and pins 2 and 3 point up, so the shaft balances end to end.'),
         F('flange', EXTRUDE, ['Sketch a 144 circle on the end of the rear journal. Extrude 15 mm (619 overall).'], s5),
         F('flange holes', CIRC, ['Hole 10 diameter on the 109 pitch circle, Through. Circular Pattern: 6.'], s6,
           note='The flywheel bolts to these holes.'),
-        F('chamfers', CHAMFER, ['Chamfer: 2 mm on the flange edge, 1 mm on the front end.'], s7),
+        F('flange chamfer', CHAMFER, ['Chamfer 2 mm on the outside edge of the flange.'], s7a),
+        F('front end chamfer', CHAMFER, ['Chamfer 1 mm on the front end of the stub.'], s7),
     ])
     return single('ax_crankshaft_4', 'Crankshaft, four cylinder', part,
                   'A four throw crankshaft 619 long: a 32 front stub, five 64 main journals, four 64 crank pins on a 44 throw (pins 1 '
@@ -918,9 +986,10 @@ def crankshaft_3():
         x += 2 * WT + PL + (ML if k < 2 else 0)
     L = x + SL                                       # 564.88
 
-    def web(x0, ang):
+    def web(x0, ang, fil=True):
         w = sk('YZ', hull_path([(0, 0, 50.8), (0, -RT, 44.45)]), x0, x0 + WT)
-        w = try_fillet(w, None, 2.54)
+        if fil:
+            w = try_fillet(w, None, 2.54)
         return w.rotate((0, 0, 0), (1, 0, 0), ang)
     s1 = xcyl(RM, 0, SL + 0.01)
     s2 = s1
@@ -928,23 +997,58 @@ def crankshaft_3():
         s2 = s2.union(web(xc - PL / 2 - WT, a)).union(web(xc + PL / 2, a))
     s3 = s2
     for xc, a in pins:
-        pz, py = -RT * math.cos(math.radians(a)), -RT * math.sin(math.radians(a))
+        pz, py = -RT * math.cos(math.radians(a)), RT * math.sin(math.radians(a))      # on the web's R1.75 end
         s3 = s3.union(xcyl(RP, xc - PL / 2 - 0.1, xc + PL / 2 + 0.1, py, pz))
     s4 = s3
     for (x0, _), (x1, _) in zip(pins[:-1], pins[1:]):
         s4 = s4.union(xcyl(RM, x0 + PL / 2 + WT - 0.1, x1 - PL / 2 - WT + 0.1))
     s5 = s4.union(xcyl(RM, L - SL - 0.1, L))
     s6 = s5.faces('<X').chamfer(1.5).faces('>X').chamfer(1.5)
+
+    # the build steps make the shaft throw by throw (the same solid as s5 at the end)
+    stg = []
+    base = s1
+    for k, (xc, a) in enumerate(pins):
+        x0 = xc - PL / 2 - WT
+        pz, py = -RT * math.cos(math.radians(a)), RT * math.sin(math.radians(a))
+        w0 = base.union(web(x0, a, False))
+        w1 = base.union(web(x0, a))
+        pn = w1.union(xcyl(RP, xc - PL / 2 - 0.1, xc + PL / 2 + 0.1, py, pz))
+        rw = pn.union(web(xc + PL / 2, a))
+        stg.append((w0, w1, pn, rw))
+        if k < 2:
+            base = rw.union(xcyl(RM, xc + PL / 2 + WT - 0.1, pins[k + 1][0] - PL / 2 - WT + 0.1))
+            stg[-1] += (base,)
     part = P('crankshaft_3', 'crankshaft', 'Forged steel 42CrMo4', 'Crankshaft', STEEL, [
         F('front stub', EXTRUDE, ['Sketch a 2.50 in (63.5) circle on the YZ Plane. Extrude 3.55 in (90.17).'], s1,
           note='The drawing is in inches; the model is in millimetres (x 25.4).'),
-        F('webs', EXTRUDE, ['Sketch a web: a circle R2.00 in (50.8) on the main axis and a circle R1.75 in (44.45) on the pin centre, '
-                            '2.50 in (63.5) below, joined by two tangent lines. Extrude 0.75 in (19). Fillet the edges R0.10 in (2.54). '
-                            'Make six webs, a pair to each throw, the throws turned 120 degrees apart.'], s2,
+        F('throw 1: front web', EXTRUDE,
+          ['Sketch a web on the end of the stub: a circle R2.00 in (50.8) on the main axis and a circle R1.75 in (44.45) on the pin '
+           'centre, 2.50 in (63.5) below, joined by two Tangent lines. Trim. Extrude 0.75 in (19).'], stg[0][0],
+          overlay=face_of(web(pins[0][0] - PL / 2 - WT, 0, False), 'YZ'),
           note='The drawing crowns the web faces with an R169 radius; the model keeps them flat.'),
-        F('crank pins', EXTRUDE, ['Sketch a 3.00 in (76.2) circle on each pin centre. Extrude 2.15 in (54.62) between the webs.'], s3,
+        F('throw 1: web edges', FILLET, ['Fillet R0.10 in (2.54): the outside edge on both faces of the web.'], stg[0][1]),
+        F('throw 1: crank pin', EXTRUDE, ['Sketch a 3.00 in (76.2) circle on the web face on the R1.75 centre. Extrude 2.15 in '
+                                          '(54.62).'], stg[0][2]),
+        F('throw 1: rear web', MIRROR, ['Work Plane through the middle of the pin. Mirror the web and its fillets about it.'],
+          stg[0][3]),
+        F('main journal 2', EXTRUDE, ['Sketch a 2.50 in (63.5) circle on the main axis on the rear web. Extrude 2.10 in (53.34).'],
+          stg[0][4]),
+        F('throw 2: front web', EXTRUDE, ['Sketch the same web on the end of journal 2, with the pin centre turned 120 degrees from '
+                                          'throw 1 (a construction line at 120 degrees). Extrude 0.75 in (19).'], stg[1][0],
           note='Three throws at 120 degrees: one cylinder fires every 240 degrees of a four stroke cycle.'),
-        F('main journals', EXTRUDE, ['Sketch a 2.50 in (63.5) circle on the main axis between the throws. Extrude 2.10 in (53.34).'], s4),
+        F('throw 2: web edges', FILLET, ['Fillet R0.10 in (2.54) round both faces of the web.'], stg[1][1]),
+        F('throw 2: crank pin', EXTRUDE, ['Sketch a 3.00 in circle on the R1.75 centre. Extrude 2.15 in (54.62).'], stg[1][2]),
+        F('throw 2: rear web', MIRROR, ['Mirror the web and its fillets about a Work Plane through the middle of the pin.'],
+          stg[1][3]),
+        F('main journal 3', EXTRUDE, ['Sketch a 2.50 in circle on the main axis on the rear web. Extrude 2.10 in (53.34).'],
+          stg[1][4]),
+        F('throw 3: front web', EXTRUDE, ['Sketch the web on the end of journal 3, the pin centre turned 240 degrees from throw 1. '
+                                          'Extrude 0.75 in (19).'], stg[2][0]),
+        F('throw 3: web edges', FILLET, ['Fillet R0.10 in (2.54) round both faces of the web.'], stg[2][1]),
+        F('throw 3: crank pin', EXTRUDE, ['Sketch a 3.00 in circle on the R1.75 centre. Extrude 2.15 in (54.62).'], stg[2][2]),
+        F('throw 3: rear web', MIRROR, ['Mirror the web and its fillets about a Work Plane through the middle of the pin.'],
+          stg[2][3]),
         F('rear stub', EXTRUDE, ['Sketch a 2.50 in circle on the last web. Extrude 3.55 in (90.17). 22.24 in (564.88) overall.'], s5),
         F('end chamfers', CHAMFER, ['Chamfer the two shaft ends 1.5 mm.'], s6),
     ])
@@ -1017,9 +1121,12 @@ PV = dict(RO=35, RI=30, BR=105, FR=82.5, FT=18, FF=90, PCD=130, HR=9, RISER=850,
 def _gate_valve_local():
     """A small flanged gate valve, flow along X, stem up +Z, centred on the origin (shared by the three valves)."""
     FR, FT, FF, PCD, HR = PV['FR'], PV['FT'], PV['FF'], PV['PCD'], PV['HR']
-    b1 = xcyl(40, -FF + FT - 0.1, FF - FT + 0.1).union(zcyl(52, -55, 70)).union(zcyl(60, 69.9, 82))
+    b1a = xcyl(40, -FF + FT - 0.1, FF - FT + 0.1)
+    b1b = b1a.union(zcyl(52, -55, 70))
+    b1 = b1b.union(zcyl(60, 69.9, 82))
     b2 = b1.union(xcyl(FR, -FF, -FF + FT)).union(xcyl(FR, FF - FT, FF))
-    b3 = b2.cut(xcyl(PV['RI'], -FF - 1, FF + 1)).cut(_box(-12, 12, -38, 38, -42, 83))
+    b3a = b2.cut(xcyl(PV['RI'], -FF - 1, FF + 1))
+    b3 = b3a.cut(_box(-12, 12, -38, 38, -42, 83))
     b4 = b3
     for y, z in hole_ring(4, PCD, 45):
         b4 = b4.cut(xcyl(HR, -FF - 1, FF + 1, y, z))
@@ -1033,8 +1140,13 @@ def _gate_valve_local():
     for a in (0, 90):
         hw1 = hw1.union(_cyl(5, (-72 * math.cos(math.radians(a)), -72 * math.sin(math.radians(a)), 205),
                              (math.cos(math.radians(a)), math.sin(math.radians(a)), 0), 144))
+    spk = [_cyl(5, (-72 * math.cos(math.radians(a)), -72 * math.sin(math.radians(a)), 205),
+                (math.cos(math.radians(a)), math.sin(math.radians(a)), 0), 144) for a in (0, 90)]
+    hw_s1 = hub.union(spk[0])              # build step views: spokes before the rim, so each step is one solid
+    hw_s2 = hw_s1.union(spk[1])
     hw2 = hw1.cut(zcyl(9.5, 190, 220))
-    fl1 = xcyl(FR, -FF - FT, -FF).union(xcyl(45, -FF - FT - 22, -FF - FT + 0.1))
+    fl0 = xcyl(FR, -FF - FT, -FF)
+    fl1 = fl0.union(xcyl(45, -FF - FT - 22, -FF - FT + 0.1))
     fl2 = fl1.cut(xcyl(PV['RO'], -FF - FT - 23, -FF + 1))
     fl3 = fl2
     for y, z in hole_ring(4, PCD, 45):
@@ -1042,7 +1154,8 @@ def _gate_valve_local():
     y, z = hole_ring(4, PCD, 45)[0]
     bolt = hex_bolt(16, 60, 24, 10, (-FF - FT, y, z), axis='x')
     nut = nut_on(16, 24, 13, (-FF + FT, y, z), axis='x')
-    return dict(body=(b1, b2, b3, b4), bonnet=(bon1, bon2), stem=(stem1, stem2), wheel=(hw1, hw2), flange=(fl1, fl2, fl3),
+    return dict(body=(b1a, b1b, b1, b2, b3a, b3, b4), bonnet=(bon1, bon2), stem=(stem1, stem2), wheel=(hub, hw_s1, hw_s2, hw1, hw2),
+                flange=(fl0, fl1, fl2, fl3),
                 bolt=bolt, nut=nut)
 
 
@@ -1098,12 +1211,17 @@ def pipe_run_valves():
             F('pipe', EXTRUDE, ['Sketch two circles, 70 and 60 diameter. Extrude %d mm.' % L], shape)]))
     parts += [
         P('valve_body', 'gate valve body', 'Cast steel GP240GH', 'Gate valves', BLUE, [
-            F('body', EXTRUDE, ['Sketch an 80 circle on the YZ Plane and extrude 108 each way (the neck). Sketch a 104 circle on the '
-                                'XY Plane: extrude from -55 to 70. Then a 120 circle: extrude 70 to 82 (the bonnet flange).'], g['body'][0]),
-            F('end flanges', EXTRUDE, ['Sketch a 165 circle on each end. Extrude 18 mm inwards.'], g['body'][1]),
-            F('bore and gate pocket', EXTRUDE, ['Hole 60 diameter, Through, along the flow. Sketch a 24 x 76 rectangle on the top: '
-                                                'Extrude, Cut, 125 deep (the pocket the gate slides in).'], g['body'][2]),
-            F('flange holes', CIRC, ['Hole 18 diameter on the 130 pitch circle, Through both flanges. Circular Pattern: 4.'], g['body'][3])],
+            F('neck', EXTRUDE, ['Sketch an 80 circle on the YZ Plane. Extrude 144, Symmetric (the run between the end flanges).'],
+              g['body'][0]),
+            F('body', EXTRUDE, ['Sketch a 104 circle on the XY Plane on the centre. Extrude from 55 below the axis to 70 above it.'],
+              g['body'][1]),
+            F('bonnet flange', EXTRUDE, ['Sketch a 120 circle on the top of the body. Extrude 12.'], g['body'][2]),
+            F('end flanges', EXTRUDE, ['Sketch a 165 circle on each end of the neck. Extrude 18 mm outwards (180 face to face).'],
+              g['body'][3]),
+            F('bore', HOLE, ['Hole on an end flange: diameter 60, Through All, along the flow.'], g['body'][4]),
+            F('gate pocket', EXTRUDE, ['Sketch a 24 x 76 rectangle on the top of the bonnet flange. Extrude, Cut, 125 deep (the pocket '
+                                       'the gate slides in).'], g['body'][5]),
+            F('flange holes', CIRC, ['Hole 18 diameter on the 130 pitch circle, Through both flanges. Circular Pattern: 4.'], g['body'][6])],
           instances=inst('body')),
         P('bonnet', 'bonnet and yoke', 'Cast steel GP240GH', 'Gate valves', BLUE, [
             F('bonnet', REVOLVE, ['Sketch the half section: flange 120 x 12, neck 56 to 175 high, boss 40. Revolve.'], g['bonnet'][0]),
@@ -1114,14 +1232,18 @@ def pipe_run_valves():
               note='A rising stem: turning the handwheel lifts the stem and the gate out of the flow.')],
           instances=inst('stem and gate')),
         P('handwheel', 'handwheel 160', 'Cast iron EN-GJL-200', 'Gate valves', RED, [
-            F('hub, rim and spokes', SWEEP, ['Sketch a 32 circle: extrude 18 (the hub). Sketch a 14 circle 75 from the axis and Revolve '
-                                             'it (the rim). Sketch a 10 circle on the hub and Sweep it to the rim; Circular Pattern 4.'],
-              g['wheel'][0]),
-            F('bore', HOLE, ['Hole 19 diameter, Through, on the axis.'], g['wheel'][1])], instances=inst('handwheel')),
+            F('hub', EXTRUDE, ['Sketch a 32 circle on the XY Plane. Extrude 18 mm.'], g['wheel'][0]),
+            F('first pair of spokes', EXTRUDE, ['Sketch a 10 circle on a Work Plane 72 from the axis. Extrude 144 across the hub.'],
+              g['wheel'][1]),
+            F('second pair of spokes', CIRC, ['Circular Pattern: the spokes, 2 at 90 degrees (four spokes).'], g['wheel'][2]),
+            F('rim', REVOLVE, ['Sketch a 14 circle on the XZ Plane, 75 from the axis, on the spoke ends. Revolve it 360 degrees '
+                               'about the axis (a 164 rim).'], g['wheel'][3]),
+            F('bore', HOLE, ['Hole 19 diameter, Through, on the axis.'], g['wheel'][4])], instances=inst('handwheel')),
         P('flange', 'slip-on flange DN65', 'Steel P250GH', 'Flanges', DARK, [
-            F('flange and hub', EXTRUDE, ['Sketch a 165 circle: extrude 18. Sketch a 90 circle on it: extrude 22 (the hub).'], g['flange'][0]),
-            F('bore', HOLE, ['Hole 70 diameter, Through (the pipe slips in and is welded).'], g['flange'][1]),
-            F('bolt holes', CIRC, ['Hole 18 diameter on the 130 pitch circle. Circular Pattern: 4.'], g['flange'][2])],
+            F('flange', EXTRUDE, ['Sketch a 165 circle on the YZ Plane. Extrude 18 mm.'], g['flange'][0]),
+            F('hub', EXTRUDE, ['Sketch a 90 circle on the back of the flange. Extrude 22 mm (the hub).'], g['flange'][1]),
+            F('bore', HOLE, ['Hole 70 diameter, Through (the pipe slips in and is welded).'], g['flange'][2]),
+            F('bolt holes', CIRC, ['Hole 18 diameter on the 130 pitch circle. Circular Pattern: 4.'], g['flange'][3])],
           instances=fl_inst),
         P('bolt', 'hex bolt ISO 4017 M16 x 60', 'Steel 8.8', 'Bought in', STEEL, [F('bolt', CONTENT, [], g['bolt'])],
           instances=bolt_inst, bought=True),
@@ -1130,16 +1252,26 @@ def pipe_run_valves():
     ]
     names = lambda key: [n for p in parts if p['key'] == key for n, tf in p['instances']]
     assembly = [
-        ('pipework', PLACE, ['Place the bends and the six pipes Grounded at their positions (or route them with Tube and Pipe: '
-                             'riser 850, top run 650, bottom run 750, bends R105).'],
-         names('bend') + [n for k in ('riser_low', 'riser_up', 'top_in', 'top_out', 'low_in', 'low_out') for n in names(k)]),
-        ('flanges', CONSTRAIN, ['Place flange.ipt six times: Insert each one onto a pipe end, face flush with the pipe end.'], names('flange')),
-        ('valve bodies', CONSTRAIN, ['Place valve_body.ipt three times. Mate each end flange face to a pipe flange and line up the '
-                                     'bolt holes (Mate the hole axes).'], names('valve_body')),
-        ('bonnets, stems and handwheels', CONSTRAIN, ['Place bonnet.ipt, stem.ipt and handwheel.ipt on each valve: Insert the '
-                                                      'bonnet on the body, Mate the stem axis to the bonnet bore, Insert the '
-                                                      'handwheel on the top of the bonnet.'],
-         names('bonnet') + names('stem') + names('handwheel')),
+        ('bottom run', PLACE, ['Place bend.ipt Grounded at the foot of the riser and the two bottom pipes along X from it (or route '
+                               'the run with Tube and Pipe: bottom run 750, bends R105).'],
+         ['bend 1 (bottom)'] + names('low_in') + names('low_out')),
+        ('riser', CONSTRAIN, ['Place the two riser pipes on the bend (Mate the axes, Flush the ends), leaving the gap for the riser '
+                              'valve, and the second bend at the top (850 up).'],
+         names('riser_low') + names('riser_up') + ['bend 2 (top)']),
+        ('top run', CONSTRAIN, ['Place the two top pipes along X from the top bend (top run 650).'], names('top_in') + names('top_out')),
+        ('flanges', CONSTRAIN, ['Place flange.ipt six times: Insert each one onto a pipe end at a valve gap, face flush with the pipe '
+                                'end.'], names('flange')),
+        ('gate valve sub-assembly: body', PLACE,
+         ['File > New > Standard (mm).iam and save it as gate_valve.iam (a sub-assembly). Place valve_body.ipt Grounded.'],
+         names('valve_body'),
+         'The gate valve is built once as a sub-assembly and placed three times, so these steps show all three valves.'),
+        ('gate valve sub-assembly: bonnet', CONSTRAIN, ['Place bonnet.ipt: Insert its flange on the body flange.'], names('bonnet')),
+        ('gate valve sub-assembly: stem and gate', CONSTRAIN, ['Place stem.ipt: Mate the stem axis to the bonnet bore and slide the gate '
+                                                               'into the pocket.'], names('stem')),
+        ('gate valve sub-assembly: handwheel', CONSTRAIN,
+         ['Place handwheel.ipt: Insert it on the top of the stem. Save gate_valve.iam.',
+          'In ax_pipe_run_valves.iam, Place gate_valve.iam three times: Mate each end flange face to a pipe flange and line up the '
+          'bolt holes (Mate the hole axes).'], names('handwheel')),
         ('bolts and nuts', CONTENT, ['Place from Content Center: ISO 4017 M16 x 60 bolts and ISO 4032 M16 nuts, 4 per joint, 24 of each.'],
          names('bolt') + names('nut')),
     ]
@@ -1158,24 +1290,64 @@ NPS = {8: (219.1, 8.18, 304.8), 6: (168.3, 7.11, 228.6), 4: (114.3, 6.02, 152.4)
 
 
 def _bw_valve(od, length, kind):
-    """A butt weld valve, flow along X, centred on the origin, stem up +Z: (body, bonnet with stem, handwheel)."""
+    """A butt weld valve, flow along X, centred on the origin, stem up +Z.
+
+    Returns the stages of its three parts, each a list of (title, command, actions, shape): body, bonnet with stem, handwheel."""
     ro = od / 2
     ri = ro - NPS[{219.1: 8, 168.3: 6, 114.3: 4}[od]][1]
-    body = xcyl(ro, -length / 2, length / 2).union(xcyl(1.12 * ro, -0.32 * length, 0.32 * length))
-    body = body.union(zcyl(1.3 * ro, -1.05 * ro, 1.25 * ro)).union(zcyl(1.42 * ro, 1.249 * ro, 1.42 * ro))
-    body = body.cut(xcyl(ri, -length / 2 - 1, length / 2 + 1))
+    b0 = xcyl(ro, -length / 2, length / 2)
+    b1 = b0.union(xcyl(1.12 * ro, -0.32 * length, 0.32 * length))
+    b2 = b1.union(zcyl(1.3 * ro, -1.05 * ro, 1.25 * ro))
+    b3 = b2.union(zcyl(1.42 * ro, 1.249 * ro, 1.42 * ro))
+    body = b3.cut(xcyl(ri, -length / 2 - 1, length / 2 + 1))
     top = 3.6 * ro if kind == 'gate' else 2.6 * ro
-    bon = zcyl(1.42 * ro, 1.42 * ro, 1.58 * ro).union(zcyl(0.5 * ro, 1.579 * ro, top)).union(zcyl(0.32 * ro, top - 0.01, top + 0.2 * ro))
-    bon = bon.union(zcyl(0.1 * ro, top + 0.19 * ro, top + 0.75 * ro))
+    n0 = zcyl(1.42 * ro, 1.42 * ro, 1.58 * ro)
+    n1 = n0.union(zcyl(0.5 * ro, 1.579 * ro, top))
+    n2 = n1.union(zcyl(0.32 * ro, top - 0.01, top + 0.2 * ro))
+    bon = n2.union(zcyl(0.1 * ro, top + 0.19 * ro, top + 0.75 * ro))
     zw, Rw = top + 0.45 * ro, (1.0 if kind == 'gate' else 0.7) * ro
     rim = cq.Workplane(cq.Plane(origin=(Rw, 0, zw), xDir=(-1, 0, 0), normal=(0, 1, 0))).circle(0.07 * ro).revolve(
         360, (Rw, 0, 0), (Rw, 1, 0))
-    wheel = zcyl(0.2 * ro, zw - 0.08 * ro, zw + 0.08 * ro).union(rim)
+    w0 = zcyl(0.2 * ro, zw - 0.08 * ro, zw + 0.08 * ro)
+    wheel = w0.union(rim)
     for a in (0, 120, 240):
         c, s = math.cos(math.radians(a)), math.sin(math.radians(a))
         wheel = wheel.union(_cyl(0.045 * ro, (0.15 * ro * c, 0.15 * ro * s, zw), (c, s, 0), Rw - 0.17 * ro))
+    w3 = wheel
     wheel = wheel.cut(zcyl(0.1 * ro, zw - ro, zw + ro))
-    return body, bon, wheel
+    sp = [_cyl(0.045 * ro, (0.15 * ro * math.cos(math.radians(a)), 0.15 * ro * math.sin(math.radians(a)), zw),
+               (math.cos(math.radians(a)), math.sin(math.radians(a)), 0), Rw - 0.17 * ro) for a in (0, 120, 240)]
+    w1s = w0.union(sp[0])                  # build step views: the spokes go on before the rim, so each step is one solid
+    w2s = w1s.union(sp[1]).union(sp[2])
+    f = lambda v: ('%.1f' % v).rstrip('0').rstrip('.')
+    body_steps = [
+        ('weld end barrel', EXTRUDE, ['Sketch a %s circle (the pipe outside diameter) on the YZ Plane. Extrude %s, Symmetric: the '
+                                      'face to face length, so the pipe butt welds to each end.' % (f(od), f(length))], b0),
+        ('body', EXTRUDE, ['Sketch a %s circle on the YZ Plane. Extrude %s, Symmetric (the thicker middle of the body).'
+                           % (f(2.24 * ro), f(0.64 * length))], b1),
+        ('bonnet neck', EXTRUDE, ['Sketch a %s circle on the XY Plane on the centre. Extrude from %s below the axis to %s above it.'
+                                  % (f(2.6 * ro), f(1.05 * ro), f(1.25 * ro))], b2),
+        ('bonnet flange', EXTRUDE, ['Sketch a %s circle on the top of the neck. Extrude %s.' % (f(2.84 * ro), f(0.171 * ro))], b3),
+        ('bore', HOLE, ['Hole on a weld end: diameter %s (the pipe bore), Through All.' % f(2 * ri)], body),
+    ]
+    bonnet_steps = [
+        ('bonnet flange', EXTRUDE, ['Sketch a %s circle on the XY Plane. Extrude %s (it bolts to the body flange).'
+                                    % (f(2.84 * ro), f(0.16 * ro))], n0),
+        ('yoke', EXTRUDE, ['Sketch a %s circle on the flange. Extrude %s.' % (f(ro), f(top - 1.579 * ro))], n1),
+        ('gland', EXTRUDE, ['Sketch a %s circle on the top of the yoke. Extrude %s.' % (f(0.64 * ro), f(0.2 * ro))], n2),
+        ('stem', EXTRUDE, ['Sketch a %s circle on the gland. Extrude %s (the stem the handwheel turns).' % (f(0.2 * ro), f(0.56 * ro))],
+         bon),
+    ]
+    wheel_steps = [
+        ('hub', EXTRUDE, ['Sketch a %s circle on the XY Plane. Extrude %s, Symmetric.' % (f(0.4 * ro), f(0.16 * ro))], w0),
+        ('first spoke', EXTRUDE, ['Sketch a %s circle on a Work Plane on the hub side. Extrude it %s out (to the middle of the '
+                                  'rim).' % (f(0.09 * ro), f(Rw - 0.17 * ro))], w1s),
+        ('pattern the spokes', CIRC, ['Circular Pattern: the spoke, 3 round the axis.'], w2s),
+        ('rim', REVOLVE, ['Sketch a %s circle on the XZ Plane, %s from the axis, on the spoke ends. Revolve it 360 degrees about '
+                          'the axis.' % (f(0.14 * ro), f(Rw))], w3),
+        ('bore', HOLE, ['Hole on the hub: diameter %s, Through All (it fits the stem).' % f(0.2 * ro)], wheel),
+    ]
+    return body_steps, bonnet_steps, wheel_steps
 
 
 def _wn_flange(od, flange_r, t, hub_r, length):
@@ -1186,8 +1358,11 @@ def _wn_flange(od, flange_r, t, hub_r, length):
 
 
 def _pipe_support(h, ro, axis):
-    """A pipe support standing on Z = 0 with the pipe saddle at the top (pipe axis along 'x' or 'y'); h = pipe underside."""
-    base = _box(-125, 125, -125, 125, 0, 16)
+    """A pipe support standing on Z = 0 with the pipe saddle at the top (pipe axis along 'x' or 'y'); h = pipe underside.
+
+    Returns its stages, a list of (title, command, actions, shape); the last shape is the support."""
+    base0 = _box(-125, 125, -125, 125, 0, 16)
+    base = base0
     for x in (-95, 95):
         for y in (-95, 95):
             base = base.cut(zcyl(9, -1, 17, x, y))
@@ -1199,11 +1374,27 @@ def _pipe_support(h, ro, axis):
     else:
         saddle = _box(-w, w, -a, a, h - 20, h + 0.4 * ro)
         cutter = ycyl(ro, -200, 200, 0, h + ro)
-    s = base.union(col).union(saddle.cut(cutter))
+    s1 = base.union(col)
+    s = s1.union(saddle.cut(cutter))
+    s2 = s
     g = min(120, h / 3)
     for sgn in (-1, 1):
         s = s.union(sk('XZ', [(sgn * 50, 16), (sgn * 120, 16), (sgn * 50, 16 + g)], -4, 4))
-    return s
+        if sgn < 0:
+            s3 = s
+    f = lambda v: ('%.1f' % v).rstrip('0').rstrip('.')
+    return [
+        ('base plate', EXTRUDE, ['Sketch a 250 x 250 square on the XY Plane, centred. Extrude 16 mm.'], base0),
+        ('holding down holes', RECT, ['Hole 18 diameter, Through, at one corner, 95 from both centre lines. Rectangular Pattern '
+                                      '2 x 2, 190 apart (for M16 anchor bolts).'], base),
+        ('box column', EXTRUDE, ['Sketch a 100 x 100 square and a 88 x 88 square inside it on the top of the plate. Extrude %s up '
+                                 '(a 100 x 100 x 6 box section).' % f(h - 35.8)], s1),
+        ('saddle', EXTRUDE, ['Sketch on the side of the column the saddle: a rectangle %s wide with a %s radius arc cut into its top '
+                             '(the pipe outside). Extrude 80, Symmetric.' % (f(2 * w), f(ro))], s2),
+        ('first gusset', RIB, ['Sketch a triangle on the XZ Plane against the column: 70 along the plate (from the column face to 120 out) and %s up the column. '
+                               'Extrude 8, Symmetric (or Rib).' % f(g)], s3),
+        ('mirror the gusset', MIRROR, ['Mirror the gusset about the YZ Plane.'], s),
+    ]
 
 
 @functools.lru_cache(None)
@@ -1225,23 +1416,32 @@ def steam_line_loop():
     e4b = chain(R((0, 0, 0), (1, 1, 1), 120), T(-300, -500, 300))
     red = rev([(r6, 0), (r6, 50), (r8, RL - 50), (r8, RL), (i8, RL), (i8, RL - 50), (i6, 50), (i6, 0)])
     red_l = red.translate((0, 0, ZT - R8 - RL))
-    tee = xcyl(r6, XT - TC, XT + TC, 0, ZB).union(zcyl(r4, ZB - TM, ZB - 0.5 * r6, XT, 0))
-    tee = tee.cut(xcyl(i6, XT - TC - 1, XT + TC + 1, 0, ZB)).cut(zcyl(i4, ZB - TM - 1, ZB, XT, 0))
+    tee0 = xcyl(r6, XT - TC, XT + TC, 0, ZB)
+    tee1 = tee0.union(zcyl(r4, ZB - TM, ZB - 0.5 * r6, XT, 0))
+    tee2 = tee1.cut(xcyl(i6, XT - TC - 1, XT + TC + 1, 0, ZB))
+    tee = tee2.cut(zcyl(i4, ZB - TM - 1, ZB, XT, 0))
     # valves
-    gb, gbon, gw = _bw_valve(o8, GL, 'gate')
-    nb, nbon, nw = _bw_valve(o4, NL, 'globe')
+    gate_st = _bw_valve(o8, GL, 'gate')
+    needle_st = _bw_valve(o4, NL, 'globe')
     gate_tf = chain(R((0, 0, 0), (0, 1, 0), -90), R((0, 0, 0), (0, 0, 1), 180), T(*GV))       # flow down the right leg, wheel out to +X
     needle_tf = chain(R((0, 0, 0), (0, 0, 1), 90), T(*NV))                                   # flow along -Y, wheel up
     FR6, FT6, PCD6 = 279.4 / 2, 25.4, 241.3
-    bvb = xcyl(FR6, -BL / 2, -BL / 2 + FT6).union(xcyl(FR6, BL / 2 - FT6, BL / 2)).union(xcyl(r6 + 12, -BL / 2 + FT6 - 0.1, BL / 2 - FT6 + 0.1))
-    bvb = bvb.union(sphere(1.25 * r6, (0, 0, 0))).union(zcyl(0.3 * r6, 0, 1.9 * r6))
-    bvb = bvb.cut(xcyl(i6, -BL / 2 - 1, BL / 2 + 1))
+    bv0 = xcyl(FR6, -BL / 2, -BL / 2 + FT6)
+    bv1 = bv0.union(xcyl(FR6, BL / 2 - FT6, BL / 2))
+    bv2 = bv1.union(xcyl(r6 + 12, -BL / 2 + FT6 - 0.1, BL / 2 - FT6 + 0.1))
+    bv3 = bv2.union(sphere(1.25 * r6, (0, 0, 0)))
+    bv4 = bv3.union(zcyl(0.3 * r6, 0, 1.9 * r6))
+    bv5 = bv4.cut(xcyl(i6, -BL / 2 - 1, BL / 2 + 1))
+    bv1s = bv0.union(xcyl(r6 + 12, -BL / 2 + FT6 - 0.1, BL / 2 - FT6 + 0.1))     # build step view: the barrel before the mirror
+    bvb = bv5
     for y, z in hole_ring(8, PCD6, 22.5):
         bvb = bvb.cut(xcyl(11.2, -BL / 2 - 1, BL / 2 + 1, y, z))
-    lever = _box(-20, 3.2 * r6, -14, 14, 1.9 * r6, 1.9 * r6 + 16).union(zcyl(25, 1.9 * r6, 1.9 * r6 + 30))
-    lever = lever.union(_box(3.0 * r6, 3.4 * r6, -18, 18, 1.9 * r6 - 10, 1.9 * r6 + 16))
+    lv0 = _box(-20, 3.2 * r6, -14, 14, 1.9 * r6, 1.9 * r6 + 16)
+    lv1 = lv0.union(zcyl(25, 1.9 * r6, 1.9 * r6 + 30))
+    lever = lv1.union(_box(3.0 * r6, 3.4 * r6, -18, 18, 1.9 * r6 - 10, 1.9 * r6 + 16))
     ball_tf = T(BV, 0, ZB)
-    wn = _wn_flange(o6, FR6, FT6, 96, WN)
+    wn0 = _wn_flange(o6, FR6, FT6, 96, WN)
+    wn = wn0
     for y, z in hole_ring(8, PCD6, 22.5):
         wn = wn.cut(xcyl(11.2, -1, FT6 + 1, y, z))
     wn_r = T(BV + BL / 2, 0, ZB)                                    # outlet flange: face on the valve, neck going +X
@@ -1256,11 +1456,10 @@ def steam_line_loop():
             tf = chain(R((0, 0, 0), (1, 0, 0), 45 * k), T(BL / 2, 0, 0), ftf)
             bolt_inst.append(('bolt M20 %s %d' % (side, k + 1), tf)); nut_inst.append(('nut M20 %s %d' % (side, k + 1), tf))
             ex['bolt M20 %s %d' % (side, k + 1)] = (sgn * 250, 0, 0)
-            ex['nut M20 %s %d' % (side, k + 1)] = (-sgn * 120, 0, 0) if False else (0, 0, 0)
     bolt0 = bolt.translate((-BL / 2, 0, 0))     # placed by the transforms above (T(BL / 2) then the flange position)
     nut0 = nut.translate((-BL / 2, 0, 0))
-    sup_t = _pipe_support(ZB - r6, r6, 'x').translate((1222, 0, 0))
-    sup_s = _pipe_support(ZI - r4, r4, 'y').translate((0, -1600, 0))
+    sup_t_st = [(t, c, a, w.translate((1222, 0, 0))) for t, c, a, w in _pipe_support(ZB - r6, r6, 'x')]
+    sup_s = _pipe_support(ZI - r4, r4, 'y')[-1][3].translate((0, -1600, 0))
     # straight pipes: (key, name, NPS, start, direction, length)
     runs = [
         ('p8_top', 'top run', 8, (R8, 0, ZT), (1, 0, 0), XR - 2 * R8),
@@ -1296,35 +1495,56 @@ def steam_line_loop():
         P('reducer', '8" x 6" concentric reducer', 'A234 WPB', 'Fittings', TEAL, [F('reducer', REVOLVE, [
             'Sketch the half section: 6 in end, 50 straight, taper, 8 in end, 203 long. Revolve.'], red_l)],
           instances=[("reducer left riser", None), ("reducer right leg", T(XR, 0, ZB + R6 - (ZT - R8 - RL)))]),
-        P('tee', '6" x 4" reducing tee', 'A234 WPB', 'Fittings', TEAL, [F('tee', EXTRUDE, [
-            'Sketch a 168.3 circle: extrude 286 (the run). Sketch a 114.3 circle on the XY Plane: extrude 130 down (the branch). '
-            'Cut the 154.1 and 102.3 bores.'], tee)]),
-        P('gate_body', '8" gate valve body GV-101', 'A216 WCB', 'Valves', BLUE, [F('body', REVOLVE, [
-            'Butt weld ends 219.1, 419 face to face. Sketch the body and bonnet flange and Revolve; Extrude the bore.'],
-            gate_tf(gb))]),
-        P('gate_bonnet', '8" gate valve bonnet and stem', 'A216 WCB', 'Valves', BLUE, [F('bonnet', REVOLVE, [
-            'Revolve the bonnet, yoke and stem.'], gate_tf(gbon))]),
-        P('gate_wheel', '8" gate valve handwheel', 'Cast iron', 'Valves', RED, [F('handwheel', SWEEP, [
-            'Hub, rim and three spokes.'], gate_tf(gw))]),
-        P('ball_body', '6" ball valve body BV-101', 'A216 WCB', 'Valves', ORANGE, [F('body', REVOLVE, [
-            'Flanged ends 279.4 x 25.4, 267 face to face (short pattern), round body and stem neck. 8 holes 22.4 on 241.3.'],
-            ball_tf(bvb))]),
-        P('ball_lever', '6" ball valve lever', 'Steel, painted', 'Valves', RED, [F('lever', EXTRUDE, [
-            'Sketch the lever on the stem top and Extrude 16 mm.'], ball_tf(lever))]),
-        P('needle_body', '4" needle valve body NV-101', 'A182 F304', 'Valves', BLUE, [F('body', REVOLVE, [
-            'Butt weld ends 114.3, 292 face to face.'], needle_tf(nb))]),
-        P('needle_bonnet', '4" needle valve bonnet and stem', 'A182 F304', 'Valves', BLUE, [F('bonnet', REVOLVE, [
-            'Revolve the bonnet and stem.'], needle_tf(nbon))]),
-        P('needle_wheel', '4" needle valve handwheel', 'Cast iron', 'Valves', RED, [F('handwheel', SWEEP, [
-            'Hub, rim and three spokes.'], needle_tf(nw))]),
-        P('wn_flange', '6" weld neck flange, class 150', 'A105', 'Flanges', DARK, [F('flange', REVOLVE, [
-            'Sketch the half section: 279.4 diameter x 25.4, hub tapering to 168.3, 88.9 long, bore 154.1. Revolve. '
-            '8 holes 22.4 on 241.3 (Circular Pattern).'], wn_r(wn))],
+        P('tee', '6" x 4" reducing tee', 'A234 WPB', 'Fittings', TEAL, [
+            F('run', EXTRUDE, ['Sketch a 168.3 circle on the YZ Plane. Extrude 286, Symmetric (the run, 143 centre to end).'], tee0),
+            F('branch', EXTRUDE, ['Sketch a 114.3 circle on the XY Plane on the centre. Extrude 130 down (the branch, centre to end).'],
+              tee1),
+            F('run bore', HOLE, ['Hole on a run end: diameter 154.1, Through All.'], tee2),
+            F('branch bore', HOLE, ['Hole on the branch end: diameter 102.3, To the run bore.'], tee)]),
+        P('gate_body', '8" gate valve body GV-101', 'A216 WCB', 'Valves', BLUE,
+          [F(t, c, a, gate_tf(w)) for t, c, a, w in gate_st[0]],
+          ),
+        P('gate_bonnet', '8" gate valve bonnet and stem', 'A216 WCB', 'Valves', BLUE,
+          [F(t, c, a, gate_tf(w)) for t, c, a, w in gate_st[1]]),
+        P('gate_wheel', '8" gate valve handwheel', 'Cast iron', 'Valves', RED,
+          [F(t, c, a, gate_tf(w)) for t, c, a, w in gate_st[2]]),
+        P('ball_body', '6" ball valve body BV-101', 'A216 WCB', 'Valves', ORANGE, [
+            F('first end flange', EXTRUDE, ['Sketch a 279.4 circle on a Work Plane 133.5 from the centre. Extrude 25.4 mm inwards '
+                                            '(a class 150 flange).'], ball_tf(bv0)),
+            F('body barrel', EXTRUDE, ['Sketch a 192.3 circle on the inside face of the flange. Extrude 216 mm, to where the other '
+                                       'flange starts.'], ball_tf(bv1s)),
+            F('second end flange', MIRROR, ['Mirror the flange about the YZ Plane: 267 face to face (short pattern).'],
+              ball_tf(bv2)),
+            F('ball housing', REVOLVE, ['Sketch a half circle R105 on the XZ Plane on the centre. Revolve 360 degrees (the round body '
+                                        'round the ball).'], ball_tf(bv3)),
+            F('stem neck', EXTRUDE, ['Sketch a 50.5 circle on the XY Plane on the centre. Extrude 160 up.'], ball_tf(bv4)),
+            F('bore', HOLE, ['Hole on a flange face: diameter 154.1, Through All (full bore).'], ball_tf(bv5)),
+            F('flange bolt holes', CIRC, ['Hole 22.4 diameter on the 241.3 pitch circle, Through All. Circular Pattern: 8 '
+                                          '(class 150, 6 in).'], ball_tf(bvb))]),
+        P('ball_lever', '6" ball valve lever', 'Steel, painted', 'Valves', RED, [
+            F('handle', EXTRUDE, ['Sketch a 289 x 28 rectangle on the top of the stem neck, from 20 behind the stem along the pipe. '
+                                  'Extrude 16.'], ball_tf(lv0)),
+            F('stem boss', EXTRUDE, ['Sketch a 50 circle on the stem centre. Extrude 30.'], ball_tf(lv1)),
+            F('grip', EXTRUDE, ['Sketch a 34 x 36 rectangle at the end of the handle. Extrude 26 (10 below the handle).'],
+              ball_tf(lever))]),
+        P('needle_body', '4" needle valve body NV-101', 'A182 F304', 'Valves', BLUE,
+          [F(t, c, a, needle_tf(w)) for t, c, a, w in needle_st[0]]),
+        P('needle_bonnet', '4" needle valve bonnet and stem', 'A182 F304', 'Valves', BLUE,
+          [F(t, c, a, needle_tf(w)) for t, c, a, w in needle_st[1]]),
+        P('needle_wheel', '4" needle valve handwheel', 'Cast iron', 'Valves', RED,
+          [F(t, c, a, needle_tf(w)) for t, c, a, w in needle_st[2]]),
+        P('wn_flange', '6" weld neck flange, class 150', 'A105', 'Flanges', DARK, [
+            F('flange and neck', REVOLVE, ['Sketch the half section on the XZ Plane: 279.4 diameter x 25.4 thick, the hub tapering from '
+                                           '192 to 168.3 at the weld end, 88.9 long, bore 154.1. Revolve.'], wn_r(wn0)),
+            F('bolt holes', CIRC, ['Hole 22.4 diameter on the 241.3 pitch circle, Through the flange. Circular Pattern: 8.'], wn_r(wn))],
           instances=[('6" flange, ball valve outlet', None), ('6" flange, ball valve inlet', lambda w: wn_l(wn))]),
-        P('support_tall', 'pipe support SP-101, tall', 'Steel S275', 'Supports', OLIVE, [F('support', EXTRUDE, [
-            'Base plate 250 x 250 x 16 with four 18 holes, a 100 x 100 x 6 box column, gussets, and a saddle cut to the pipe.'], sup_t)]),
-        P('support_short', 'pipe support SP-101, short', 'Steel S275', 'Supports', OLIVE, [F('support', EXTRUDE, [
-            'The same support, 243 high, saddle across the 4 in inlet.'], sup_s)]),
+        P('support_tall', 'pipe support SP-101, tall', 'Steel S275', 'Supports', OLIVE,
+          [F(t, c, a, w) for t, c, a, w in sup_t_st]),
+        P('support_short', 'pipe support SP-101, short', 'Steel S275', 'Supports', OLIVE, [
+            F('copy the tall support', 'Manage tab > Parameters panel > Parameters',
+              ['Open support_tall.ipt and Save As support_short.ipt. Manage tab > Parameters: change the column height to 207 (the '
+               'saddle under the 4 in pipe, 243 up) and turn the saddle sketch 90 degrees, so it sits across the inlet pipe.'], sup_s,
+              note='Saving a copy and changing its parameters is quicker than modelling the same support twice.')]),
         P('bolt', 'stud bolt M20 x 90', 'A193 B7', 'Bought in', STEEL, [F('bolt', CONTENT, [], bolt0)],
           instances=bolt_inst, bought=True),
         P('nut', 'hex nut M20', 'A194 2H', 'Bought in', DARK, [F('nut', CONTENT, [], nut0)], instances=nut_inst, bought=True),
@@ -1332,21 +1552,52 @@ def steam_line_loop():
     names = lambda *keys: [n for p in parts if p['key'] in keys for n, tf in p['instances']]
     pipe_keys = [r[0] for r in runs]
     assembly = [
-        ('supports', PLACE, ['Place the two supports Grounded on the floor (Z = 0, the T.O.C. line).'], names('support_tall', 'support_short')),
-        ('fittings', CONSTRAIN, ['Place the elbows, reducers and tee at the corners of the loop (Mate their centre lines).'],
-         names('elbow8', 'elbow6', 'elbow4', 'reducer', 'tee')),
-        ('pipes', CONSTRAIN, ['Place each straight pipe between its fittings: Mate the axis, Flush the ends (butt welded).'], names(*pipe_keys)),
-        ('valves', CONSTRAIN, ['Place GV-101 on the right leg, BV-101 on the bottom run with its two weld neck flanges, and NV-101 on '
-                               'the inlet.'], names('gate_body', 'gate_bonnet', 'gate_wheel', 'ball_body', 'ball_lever', 'wn_flange',
-                                                    'needle_body', 'needle_bonnet', 'needle_wheel')),
-        ('bolting', CONTENT, ['Place from Content Center: 16 stud bolts M20 and 16 nuts for the two flanged joints.'], names('bolt', 'nut')),
+        ('supports', PLACE, ['Place support_tall.ipt Grounded on the floor (Z = 0, the T.O.C. line), 1222 along the bottom run, and '
+                             'support_short.ipt Grounded under the inlet, 1600 out.'], names('support_tall', 'support_short')),
+        ('bottom run: tee', CONSTRAIN, ['Place tee.ipt. Mate its run axis to a Work Axis 1000 up (the bottom run) and its branch '
+                                        'axis 500 along, pointing down.'], names('tee')),
+        ('bottom run: 6 in elbows', CONSTRAIN, ['Place elbow6.ipt twice, at the two bottom corners of the loop: Mate each end axis to '
+                                                'the run axis and to a leg axis.'], names('elbow6')),
+        ('bottom run: pipes', CONSTRAIN, ['Place the three 6 in pipes between the tee, the elbows and the ball valve: Mate each axis '
+                                          'to the run, Flush the ends to the fitting faces (butt welds).'],
+         names('p6_left', 'p6_mid', 'p6_right')),
+        ('ball valve sub-assembly: body and lever', PLACE,
+         ['File > New > Standard (mm).iam and save it as ball_valve.iam (a sub-assembly).',
+          'Place ball_body.ipt Grounded. Place ball_lever.ipt: Mate its boss to the top of the stem neck and its handle along the pipe '
+          '(valve open).'], names('ball_body', 'ball_lever'),
+         'A sub-assembly is built and checked on its own, then placed in the main assembly as one component.'),
+        ('ball valve sub-assembly: weld neck flanges', CONSTRAIN,
+         ['Place wn_flange.ipt twice. Mate each flange face to a valve end flange and Mate one bolt hole axis on each to a valve '
+          'bolt hole, so the holes line up.'], names('wn_flange')),
+        ('ball valve sub-assembly: bolting', CONTENT,
+         ['Place from Content Center: 16 stud bolts M20 x 90 (A193 B7) through the flange holes and 16 hex nuts M20 (A194 2H) on '
+          'them. Save ball_valve.iam.',
+          'In ax_steam_line_loop.iam, Place ball_valve.iam on the bottom run: Mate its axis to the run and Flush the flange necks to '
+          'the pipe ends.'], names('bolt', 'nut')),
+        ('left riser', CONSTRAIN, ['Place reducer.ipt on the top of the left 6 in elbow (small end down) and the 6 in riser pipe '
+                                   'between them: Mate the axes, Flush the ends.'], ['reducer left riser'] + names('p6_riser')),
+        ('top run', CONSTRAIN, ['Place elbow8.ipt twice at the top corners and the 8 in top pipe between them.'],
+         ['8" elbow top left', '8" elbow top right'] + names('p8_top')),
+        ('right leg: reducer and lower pipe', CONSTRAIN, ['Place the second reducer on the right 6 in elbow and the lower 8 in leg pipe '
+                                                          'on it.'], ['reducer right leg'] + names('p8_leg_low')),
+        ('gate valve sub-assembly', CONSTRAIN,
+         ['File > New > Standard (mm).iam and save it as gate_valve.iam. Place gate_body.ipt Grounded, Mate gate_bonnet.ipt to the '
+          'body flange and Insert gate_wheel.ipt on the stem. Save gate_valve.iam.',
+          'In ax_steam_line_loop.iam, Place gate_valve.iam on the right leg: Mate its axis to the leg, Flush its lower weld end to the '
+          'lower pipe and turn the handwheel out to +X.'], names('gate_body', 'gate_bonnet', 'gate_wheel')),
+        ('right leg: upper pipe', CONSTRAIN, ['Place the upper 8 in leg pipe between the gate valve and the top right elbow.'],
+         names('p8_leg_up')),
+        ('branch: drop and cross pipes', CONSTRAIN, ['Place the 4 in drop pipe under the tee branch, elbow4.ipt twice at the foot and '
+                                                     'the corner, and the 4 in cross pipe between them.'],
+         names('p4_drop', 'p4_cross') + ['4" elbow 1', '4" elbow 2']),
+        ('needle valve sub-assembly', CONSTRAIN,
+         ['File > New > Standard (mm).iam and save it as needle_valve.iam. Place needle_body.ipt Grounded, Mate needle_bonnet.ipt to '
+          'the body flange and Insert needle_wheel.ipt on the stem. Save needle_valve.iam.',
+          'In ax_steam_line_loop.iam, Place needle_valve.iam on the inlet line (wheel up).'],
+         names('needle_body', 'needle_bonnet', 'needle_wheel')),
+        ('inlet pipes', CONSTRAIN, ['Place the two 4 in inlet pipes either side of the needle valve, the outer one resting on the short '
+                                    'support.'], names('p4_in1', 'p4_in2')),
     ]
-    for p in parts:
-        if p['group'] == 'Valves':
-            for n, tf in p['instances']:
-                ex[n] = (0, 0, 0)
-    ex.update({'gate valve': (0, 0, 0)})
-    ex = {k: v for k, v in ex.items() if v != (0, 0, 0)}
     ex.update({n: (0, 0, 250) for n in names('ball_lever')})
     ex.update({n: (250, 0, 0) for n in names('gate_wheel')})
     ex.update({n: (150, 0, 0) for n in names('gate_bonnet')})
@@ -1385,29 +1636,45 @@ def oil_pan():
     inner = sk('XZ', prof(WALL), -WS + WALL, WS - WALL)
     inner = try_fillet(inner, '|Y', 15)
     s3 = s2.cut(inner)
+    s1a = flange.union(sk('XZ', prof(0), -WS, WS))                           # build step views: before the fillets
+    s3a = s2.cut(sk('XZ', prof(WALL), -WS + WALL, WS - WALL))
     s4 = s3
     for x, y in bolts:
         s4 = s4.cut(zcyl(4.5, -FT - 1, 1, x, y))
     XF, ZF = 470.0, -95.0
-    s5 = s4.union(ycyl(40, -134, -WS + 2, XF, ZF)).union(_box(XF - 40, XF + 40, -WS - 10, -WS + 2, ZF, -FT))
-    s6 = s5.cut(ycyl(25, -135, -124, XF, ZF)).cut(ycyl(10, -136, -WS + WALL + 1, XF, ZF))
+    s5a = s4.union(ycyl(40, -134, -WS + 2, XF, ZF))
+    s5 = s5a.union(_box(XF - 40, XF + 40, -WS - 10, -WS + 2, ZF, -FT))
+    s6a = s5.cut(ycyl(25, -135, -124, XF, ZF))
+    s6 = s6a.cut(ycyl(10, -136, -WS + WALL + 1, XF, ZF))
     XD = XS + 7.57 * IN - 7.0
-    s7 = s6.union(zcyl(15, -D2 - 8, -D2 + 1, XD, 40)).cut(zcyl(7, -D2 - 9, -D2 + WALL + 1, XD, 40))
+    s7a = s6.union(zcyl(15, -D2 - 8, -D2 + 1, XD, 40))
+    s7 = s7a.cut(zcyl(7, -D2 - 9, -D2 + WALL + 1, XD, 40))
     part = P('oil_pan', 'oil pan', 'Cast aluminium A356-T6', 'Sump', CAST, [
         F('flange', EXTRUDE, ['Sketch a rectangle 21.13 x 9.29 in (536.7 x 236) with R25 corners on the XY Plane. Extrude 8 mm down.'],
           flange, note='Only the overall sizes are given (in inches); the rest is read from the views.'),
         F('sump', EXTRUDE, ['Sketch the side profile on the XZ Plane: shallow end 1.93 in (49) deep for 5.85 in (148.6), a slope, then '
-                            'the deep end, 6.60 in (167.6) deep. Extrude 225 wide, both sides. Fillet the bottom edges R20.'], s1),
-        F('bolt bosses', EXTRUDE, ['Sketch 18 circles on the flange edge (8 down each side, 2 and 3 on the ends). Extrude 8 mm.'], s2),
-        F('hollow', SHELL, ['Shell: 5 mm wall, remove the top face (the inside of the flange opens into the sump).'], s3,
-          note='A die cast or sand cast sump is a thin even wall, like this shell.'),
+                            'the deep end, 6.60 in (167.6) deep. Extrude 225 wide, Symmetric.'], s1a),
+        F('round the sump', FILLET, ['Fillet R20 the edges across the width of the sump (the bends in the bottom and the ends).'],
+          s1),
+        F('bolt bosses', EXTRUDE, ['Sketch 18 diameter circles on the 21 bolt centres round the flange edge (8 down each side, 2 on '
+                                   'the front end and 3 on the back). Extrude 8 mm.'], s2),
+        F('hollow', EXTRUDE, ['Sketch on the XZ Plane the inside profile, 5 mm inside the outside one (Offset 5). Extrude, Cut, '
+                              '215 wide, Symmetric, up through the flange.'], s3a,
+          note='A die cast or sand cast sump is a thin even wall. A Shell would also hollow the flange, so the inside is cut '
+               'with an offset sketch instead.'),
+        F('round the inside', FILLET, ['Fillet R15 the inside bends (the outside R20 less the 5 wall).'], s3),
         F('bolt holes', HOLE, ['Hole 9 diameter, Through, on every boss (M8 clearance).'], s4),
         F('oil filter boss', EXTRUDE, ['Sketch an 80 circle on a Work Plane on the side, 470 along and 95 down. Extrude out to 134 from '
-                                       'the centre line (10.55 in overall width). Cut a 50 seat 10 deep and a 20 oil way.'], s6),
-        F('drain boss', EXTRUDE, ['Sketch a 30 circle under the deep end. Extrude 8 down. Hole 14 diameter (M14 drain plug).'], s7),
+                                       'the centre line (10.55 in overall width).'], s5a),
+        F('boss web', EXTRUDE, ['Sketch on the side an 80 wide rectangle from the boss centre up to the flange. Extrude 12 mm '
+                                '(10 out from the wall).'], s5),
+        F('filter seat', EXTRUDE, ['Sketch a 50 circle on the boss face. Extrude, Cut, 10 mm.'], s6a),
+        F('oil way', HOLE, ['Hole 20 diameter from the seat into the sump.'], s6),
+        F('drain boss', EXTRUDE, ['Sketch a 30 circle under the deep end. Extrude 8 mm down.'], s7a),
+        F('drain hole', HOLE, ['Hole 14 diameter into the sump (for an M14 drain plug).'], s7),
     ])
     return single('ax_oil_pan', 'Engine oil pan', part,
-                  'A cast aluminium engine oil pan (sump) 21.13 x 10.55 x 6.60 in: a flanged rim with 18 bolt bosses, a shallow front '
+                  'A cast aluminium engine oil pan (sump) 21.13 x 10.55 x 6.60 in: a flanged rim with 21 bolt bosses, a shallow front '
                   'section and a deep rear sump, an oil filter boss on the side and a drain boss underneath. 5 mm wall.',
                   'Shelled castings, working from overall sizes, side and plan views, reading a photo realistic drawing.',
                   section='y', iso=(1, -1.3, 0.9),
@@ -1457,7 +1724,7 @@ def engine_block():
         F('water jacket', REVOLVE, ['Sketch a ring 111.6 to 140.6 diameter round each bore on a Work Plane 15 below the deck. Extrude, '
                                     'Cut, 125 deep (the coolant space).'], b3,
           note='The coolant surrounds each cylinder, so the heat from burning fuel goes into the water and out through the radiator.'),
-        F('head bolt bosses', EXTRUDE, ['Sketch 18 circles on the 16 head bolt centres (84 x 80 round each bore) on the Work Plane 15 '
+        F('head bolt bosses', EXTRUDE, ['Sketch 18 diameter circles on the 16 head bolt centres (84 x 80 round each bore) on the Work Plane 15 '
                                         'below the deck. Extrude 125 down, Join.'], b3a,
           note='The head bolt holes are 58 from the bore centre, inside the water jacket. Solid bosses carry them through the '
                'coolant, so the bolts do not open into the water.'),
@@ -1488,97 +1755,188 @@ def _tube_bend(a, da, db, R, ro, ri, angle=90):
 @functools.lru_cache(None)
 def helicopter():
     ZC, XM, ZB, XF, RF = HELI['ZC'], HELI['XM'], HELI['ZB'], HELI['XF'], HELI['RF']
-    pod = rev([(0, 0), ((420, 120), (650, 520)), (800, 1300), (800, 2700), ((700, 3400), (420, 4100)), (0, 4100)], axis='x')
+    POD = [(0, 0), ((420, 120), (650, 520)), (800, 1300), (800, 2700), ((700, 3400), (420, 4100)), (0, 4100)]
+    pod = rev(POD, axis='x')
     pod = pod.translate((0, 0, ZC))
+    pod_sketch = face_of(sk('XZ', [(p[1], p[0]) if not isinstance(p[0], (tuple, list)) else ((p[0][1], p[0][0]), (p[1][1], p[1][0]))
+                                   for p in POD], -0.5, 0.5), 'XZ').translate((0, 0, ZC))
     glass_zone = _box(-10, 1500, -900, 900, ZC - 150, ZC + 900).union(
         sk('XZ', [(1400, ZC - 150), (1900, ZC + 900), (1400, ZC + 900)], -900, 900))
     canopy = pod.intersect(glass_zone)
     body = pod.cut(glass_zone)
-    cowl = slot_xy(2350, 0, 3550, 0, 900, ZC + 600, ZC + 1020)
-    cowl = try_fillet(cowl, '>Z', 140)
-    cowl = cowl.union(xcyl(130, 3500, 3900, 0, ZC + 850)).cut(xcyl(100, 3600, 3910, 0, ZC + 850))
-    cowl = cowl.cut(pod).cut(zcyl(61, ZC, ZC + 1100, XM, 0))
-    boom = rev([(0, 3700), (240, 3700), (115, XF - RF + 40), (0, XF - RF + 40)], axis='x').translate((0, 0, ZB))
-    boom = boom.cut(pod).cut(ycyl(RF, -300, 300, XF, ZB))
+    cowl0 = slot_xy(2350, 0, 3550, 0, 900, ZC + 600, ZC + 1020)
+    cowl1 = try_fillet(cowl0, '>Z', 140)
+    cowl2 = cowl1.union(xcyl(130, 3900, 4250, 0, ZC + 850))
+    cowl3 = cowl2.cut(xcyl(100, 3950, 4260, 0, ZC + 850))
+    cowl4 = cowl3.cut(pod)
+    cowl = cowl4.cut(zcyl(61, ZC, ZC + 1100, XM, 0))
+    BOOM = [(0, 3700), (240, 3700), (115, XF - RF + 40), (0, XF - RF + 40)]
+    boom0 = rev(BOOM, axis='x').translate((0, 0, ZB))
+    boom_sketch = face_of(sk('XZ', [(p[1], p[0]) for p in BOOM], -0.5, 0.5), 'XZ').translate((0, 0, ZB))
+    boom1 = boom0.cut(pod)
+    boom = boom1.cut(ycyl(RF, -300, 300, XF, ZB))
     duct = ycyl(RF, -120, 120, XF, ZB).cut(ycyl(400, -121, 121, XF, ZB))
     fin = sk('XZ', [(XF - 380, ZB + 360), (XF + 220, ZB + 1750), (XF + 620, ZB + 1750), (XF + 380, ZB + 360)], -45, 45)
-    fin_part = duct.union(fin).union(sk('XZ', [(XF - 200, ZB - 470), (XF + 250, ZB - 900), (XF + 420, ZB - 900), (XF + 330, ZB - 380)], -35, 35))
-    fin_part = fin_part.cut(ycyl(400, -200, 200, XF, ZB))
+    fin1 = duct.union(fin)
+    fin2 = fin1.union(sk('XZ', [(XF - 200, ZB - 470), (XF + 250, ZB - 900), (XF + 420, ZB - 900), (XF + 330, ZB - 380)], -35, 35))
+    fin_part = fin2.cut(ycyl(400, -200, 200, XF, ZB))
     ZS = ZB + 135
-    stab = _box(7000, 7420, -800, 800, ZS - 20, ZS + 20).union(_box(7000, 7420, 795, 835, ZS - 260, ZS + 260)).union(
-        _box(7000, 7420, -835, -795, ZS - 260, ZS + 260))
-    stab = stab.cut(boom)
-    mast = zcyl(60, ZC + 800, ZC + 1560, XM, 0).union(zcyl(110, ZC + 1020, ZC + 1060, XM, 0))
-    hub = zcyl(190, ZC + 1560, ZC + 1700, XM, 0).union(_box(XM - 330, XM + 330, -110, 110, ZC + 1580, ZC + 1680)).cut(
-        zcyl(61, ZC + 1550, ZC + 1710, XM, 0))
-    blade = cq.Workplane(cq.Plane(origin=(XM + 330, 0, ZC + 1630), xDir=(0, 1, 0), normal=(1, 0, 0))).ellipse(175, 22).extrude(
-        HELI['ROTOR'] - 330)
-    blade = blade.union(_box(XM + 330, XM + 700, -70, 70, ZC + 1600, ZC + 1660))
-    fan = ycyl(110, -60, 60, XF, ZB)
+    stab0 = _box(7000, 7420, -800, 800, ZS - 20, ZS + 20)
+    stab1 = stab0.union(_box(7000, 7420, 795, 835, ZS - 260, ZS + 260))
+    stab2 = stab1.union(_box(7000, 7420, -835, -795, ZS - 260, ZS + 260))
+    stab = stab2.cut(boom)
+    mast0 = zcyl(60, ZC + 800, ZC + 1560, XM, 0)
+    mast = mast0.union(zcyl(110, ZC + 1020, ZC + 1060, XM, 0))
+    hub0 = zcyl(190, ZC + 1560, ZC + 1700, XM, 0)
+    hub1 = hub0.union(_box(XM - 330, XM + 330, -110, 110, ZC + 1580, ZC + 1680))
+    hub = hub1.cut(zcyl(61, ZC + 1550, ZC + 1710, XM, 0))
+    blade_wp = lambda: cq.Workplane(cq.Plane(origin=(XM + 330, 0, ZC + 1630), xDir=(0, 1, 0), normal=(1, 0, 0))).ellipse(175, 22)
+    blade_sketch = cq.Workplane('XY').add(blade_wp().extrude(1).faces('<X').val())
+    blade0 = blade_wp().extrude(HELI['ROTOR'] - 330)
+    blade = blade0.union(_box(XM + 330, XM + 700, -70, 70, ZC + 1600, ZC + 1660))
+    fan0 = ycyl(110, -60, 60, XF, ZB)
+    fan = fan0
     for k in range(10):
         a = 360 * k / 10
         bl = _box(100, 395, -55, 55, -14, 14).rotate((0, 0, 0), (1, 0, 0), 25).rotate((0, 0, 0), (0, 1, 0), a)
         fan = fan.union(bl.translate((XF, 0, ZB)))
+        if k == 0:
+            fan1 = fan
     YS, RS, rs = 950.0, 40.0, 34.0
-    skid = tube((450, YS, RS), (1, 0, 0), 3350, RS, rs).union(_tube_bend((450, YS, RS), (-1, 0, 0), (0, 0, 1), 300, RS, rs, 60))
+    skid0 = tube((450, YS, RS), (1, 0, 0), 3350, RS, rs)
+    skid = skid0.union(_tube_bend((450, YS, RS), (-1, 0, 0), (0, 0, 1), 300, RS, rs, 60))
     ZT = ZC - 800 - RS - 5
     xt0 = 1550.0
-    ct = tube((xt0, -YS + 300, ZT), (0, 1, 0), 2 * (YS - 300), RS, rs)
+    ct0 = tube((xt0, -YS + 300, ZT), (0, 1, 0), 2 * (YS - 300), RS, rs)
+    ct = ct0
+    ct_side = []
     for sgn in (-1, 1):
         a = (xt0, sgn * (YS - 300), ZT)
         ct = ct.union(_tube_bend(a, (0, sgn, 0), (0, 0, -1), 300, RS, rs))
+        ct_side.append(ct)
         ct = ct.union(tube((xt0, sgn * YS, ZT - 300), (0, 0, -1), ZT - 300 - 2 * RS, RS, rs))
+        ct_side.append(ct)
+    tube_sketch = cq.Workplane('XY').add(cq.Workplane(cq.Plane(origin=(xt0, -YS + 300, ZT), xDir=(1, 0, 0), normal=(0, 1, 0)))
+                                         .circle(RS).circle(rs).extrude(1).faces('<Y').val())
+    AL = 'Aluminium alloy 2024-T3'
     parts = [
-        P('fuselage', 'fuselage', 'Aluminium alloy 2024-T3 and composite', 'Airframe', 'D9DDE2', [
-            F('pod', REVOLVE, ['Sketch half the fuselage outline on the XZ Plane (nose arc, 1600 diameter cabin, tapering tail cone), '
-                               '4100 long. Revolve about its axis.'], pod),
-            F('canopy cut', SPLIT, ['Split the nose with a Work Plane 150 below the axis and a sloping plane at the windscreen pillar. '
-                                    'Keep the rear: the glazing is its own part.'], body)]),
-        P('canopy', 'canopy glazing', 'Polycarbonate', 'Airframe', GLASS, [F('canopy', SPLIT, ['The nose taken from the split: '
-                                                                                        'Save As canopy.ipt.'], canopy)]),
+        P('fuselage', 'fuselage', AL + ' and composite', 'Airframe', 'D9DDE2', [
+            F('sketch the side profile', SKETCH,
+              ['Start 2D Sketch on the XZ Plane. Draw half the fuselage outline above a horizontal centre line 1400 up: the nose arc '
+               '(three point arc through 420 x 120 to 650 x 520), the 1600 diameter cabin (a line 800 above the axis from 1300 to '
+               '2700) and the tail cone arc closing at 4100.', 'Finish Sketch.'], None, overlay=pod_sketch,
+              note='Proportions only: the sketch has no usable sizes, so the cabin is sized for a light helicopter (1.6 m wide).'),
+            F('revolve the pod', REVOLVE, ['Revolve the profile 360 degrees about the centre line.'], pod),
+            F('split off the canopy', SPLIT, ['Split > Split Solid with a sketch on the XZ Plane: a line 150 below the axis from the '
+                                              'nose to the pillar, then the pillar line. Keep the rear: the glazed nose is its own part '
+                                              '(canopy.ipt).'], body,
+              note='Splitting one revolved body keeps the canopy and the cabin exactly matched where they meet.')]),
+        P('canopy', 'canopy glazing', 'Polycarbonate', 'Airframe', GLASS, [
+            F('derive the pod', '3D Model tab > Create panel > Derive', ['Derive fuselage.ipt before its split (Derive Part: the solid '
+                                                                         'body only).'], pod),
+            F('keep the nose', SPLIT, ['Split > Split Solid with the same sketch as the fuselage. This time keep the nose.'], canopy)]),
         P('cowling', 'engine cowling', 'Composite (carbon fibre)', 'Airframe', 'B9C0C8', [
-            F('cowling', EXTRUDE, ['Sketch a slot 1200 x 900 on a Work Plane 600 above the axis. Extrude 420. Fillet the top R140. Add '
-                                   'the 260 exhaust at the back.'], cowl)]),
-        P('tail_boom', 'tail boom', 'Aluminium alloy 2024-T3', 'Airframe', 'D9DDE2', [
-            F('boom', LOFT, ['Loft from a 480 circle at the cabin to a 230 circle at the fin.'], boom)]),
+            F('sketch the cowling', SKETCH, ['Work Plane 600 above the fuselage axis. Start 2D Sketch: Center to Center Slot 1200 '
+                                             'between centres, 900 wide, from 2350 back from the nose.', 'Finish Sketch.'], None,
+              overlay=face_of(cowl0, 'XY')),
+            F('extrude the cowling', EXTRUDE, ['Extrude the slot 420 mm up.'], cowl0),
+            F('round the top', FILLET, ['Fillet: radius 140 on the top edge.'], cowl1),
+            F('exhaust', EXTRUDE, ['Sketch a 260 circle on a Work Plane 100 inside the back of the cowling, 250 above its bottom. '
+                                   'Extrude 350 back, so the pipe stands 250 out of the cowling.'], cowl2),
+            F('exhaust bore', EXTRUDE, ['Sketch a 200 circle on the exhaust end. Extrude, Cut, 310 deep.'], cowl3),
+            F('trim to the fuselage', '3D Model tab > Modify panel > Combine',
+              ['Derive the fuselage pod as a body. Combine: Cut, the pod from the cowling, so its underside follows the cabin roof.'],
+              cowl4),
+            F('mast hole', HOLE, ['Hole on the cowling top, 2000 back from the nose: Simple Hole, diameter 122, Through All.'], cowl)]),
+        P('tail_boom', 'tail boom', AL, 'Airframe', 'D9DDE2', [
+            F('sketch the boom section', SKETCH, ['Start 2D Sketch on the XZ Plane, 1650 up: half the boom, 480 diameter at 3700 '
+                                                  'tapering to 230 at the fin.', 'Finish Sketch.'], None, overlay=boom_sketch),
+            F('revolve the boom', REVOLVE, ['Revolve the half section about the boom axis (a tapered round boom).'], boom0),
+            F('trim to the fuselage', '3D Model tab > Modify panel > Combine', ['Combine: Cut, the fuselage pod from the boom.'], boom1),
+            F('duct opening', EXTRUDE, ['Sketch a 1040 circle on the XZ Plane on the fan centre. Extrude, Cut, Symmetric, 600.'], boom)]),
         P('fin', 'fin and fan duct', 'Composite', 'Airframe', ORANGE, [
-            F('duct and fin', EXTRUDE, ['Sketch a 1040 ring (800 inside) on the XZ Plane at the end of the boom: Extrude 240. Sketch the '
-                                        'swept fin above and the small fin below: Extrude 90 and 70.'], fin_part,
-              note='A fan in a duct (a shrouded tail rotor) is quieter and safer on the ground than an open tail rotor.')]),
+            F('fan duct', EXTRUDE, ['Sketch on the XZ Plane two circles on the fan centre: 1040 and 800. Extrude the ring 240, '
+                                    'Symmetric.'], duct,
+              note='A fan in a duct (a shrouded tail rotor) is quieter and safer on the ground than an open tail rotor.'),
+            F('upper fin', EXTRUDE, ['Sketch the swept fin above the duct (a four sided outline 1390 high, raked back). Extrude 90, '
+                                     'Symmetric, Join.'], fin1),
+            F('lower fin', EXTRUDE, ['Sketch the small fin below the duct. Extrude 70, Symmetric, Join.'], fin2),
+            F('clear the duct', EXTRUDE, ['Sketch an 800 circle on the fan centre. Extrude, Cut, Symmetric, 400, so no fin is left '
+                                          'inside the duct.'], fin_part)]),
         P('stabiliser', 'horizontal stabiliser', 'Composite', 'Airframe', ORANGE, [
-            F('stabiliser', EXTRUDE, ['Sketch a 420 x 1600 rectangle across the top of the boom. Extrude 40. Add the two end plates. '
-                                      'Cut it to the boom (Extrude, Cut, To the boom surface).'], stab)]),
+            F('stabiliser', EXTRUDE, ['Sketch a 420 x 1600 rectangle on a Work Plane across the top of the boom, 7000 back. Extrude '
+                                      '40, Symmetric.'], stab0),
+            F('end plate', EXTRUDE, ['Sketch a 420 x 520 rectangle on the right end. Extrude 40 out.'], stab1),
+            F('mirror the end plate', MIRROR, ['Mirror the end plate about the XZ Plane.'], stab2),
+            F('trim to the boom', '3D Model tab > Modify panel > Combine', ['Combine: Cut, the tail boom from the stabiliser.'], stab)]),
         P('mast', 'main rotor mast', 'Steel 4340', 'Rotor', STEEL, [
-            F('mast', EXTRUDE, ['Sketch a 120 circle on the top of the cabin, 2000 back from the nose. Extrude 760 up through the '
-                                'cowling, with a 220 collar on the cowling top.'], mast)]),
+            F('shaft', EXTRUDE, ['Sketch a 120 circle on the XY Plane, 2000 back from the nose. Extrude 760 up from 2200 to 2960.'],
+              mast0),
+            F('collar', EXTRUDE, ['Sketch a 220 circle on a Work Plane 2420 up (the cowling top). Extrude 40.'], mast)]),
         P('rotor_hub', 'main rotor hub', 'Titanium Ti-6Al-4V', 'Rotor', DARK, [
-            F('hub', EXTRUDE, ['Sketch a 380 circle on the mast top: Extrude 140. Add the 660 x 220 blade grips.'], hub)]),
+            F('hub disc', EXTRUDE, ['Sketch a 380 circle on the mast top. Extrude 140.'], hub0),
+            F('blade grips', EXTRUDE, ['Sketch a 660 x 220 rectangle across the hub, 20 above its base. Extrude 100.'], hub1),
+            F('mast bore', HOLE, ['Hole on the hub top: Simple Hole, diameter 122, Through All.'], hub)]),
         P('blade', 'main rotor blade', 'Composite (glass fibre)', 'Rotor', 'E8E8E8', [
-            F('blade', EXTRUDE, ['Sketch an ellipse 350 x 44 (a simple aerofoil) at the grip. Extrude 4870 out. Rotor diameter 10.4 m.'], blade)],
+            F('sketch the aerofoil', SKETCH, ['Work Plane at the end of the grip, 330 from the mast. Start 2D Sketch: Ellipse 350 x 44 '
+                                              '(a simple aerofoil).', 'Finish Sketch.'], None, overlay=blade_sketch),
+            F('extrude the blade', EXTRUDE, ['Extrude 4870 out. Rotor diameter 2 x 5200 = 10.4 m.'], blade0),
+            F('root fitting', EXTRUDE, ['Sketch a 370 x 140 rectangle on the XY Plane over the root. Extrude 60, Symmetric about the '
+                                        'blade, Join.'], blade)],
           instances=[('main rotor blade 1', None), ('main rotor blade 2', R((XM, 0, 0), (0, 0, 1), 180))]),
         P('tail_fan', 'tail fan', 'Aluminium alloy', 'Rotor', DARK, [
-            F('fan', CIRC, ['Sketch the hub and one blade at 25 degrees pitch. Circular Pattern: 10 blades in the duct.'], fan)]),
+            F('fan hub', EXTRUDE, ['Sketch a 220 circle on the XZ Plane on the fan centre. Extrude 120, Symmetric.'], fan0),
+            F('first blade', EXTRUDE, ['Sketch a 295 x 110 rectangle on a Work Plane through the axis, from 100 to 395 out. Extrude 28, '
+                                       'Symmetric, then Rotate it 25 degrees about its length (the pitch).'], fan1),
+            F('pattern the blades', CIRC, ['Circular Pattern: the blade, 10 round the fan axis.'], fan,
+              note='Uneven blade spacing is used on real fans to spread the noise; here they are even.')]),
         P('skid', 'landing skid', 'Aluminium tube 6061-T6, 80 x 6', 'Landing gear', 'A7ADB5', [
-            F('skid', SWEEP, ['Sketch an 80 circle (68 inside). Sweep along a 3350 line with a 300 radius bend turned up 60 degrees at '
-                              'the front.'], skid)],
+            F('skid tube', SWEEP, ['Sketch an 80 and a 68 circle on the YZ Plane at the back of the skid. Sweep 3350 forward along a '
+                                   'straight path.'], skid0),
+            F('front bend', SWEEP, ['Sweep the same profile round a 300 radius bend turned up 60 degrees at the front.'], skid)],
           instances=[('skid right', None), ('skid left', T(0, -2 * YS, 0))]),
         P('cross_tube', 'cross tube', 'Aluminium tube 6061-T6, 80 x 6', 'Landing gear', 'A7ADB5', [
-            F('cross tube', SWEEP, ['Sweep an 80 x 6 tube along an arched path: across under the cabin, 300 radius bends, and down to '
-                                    'the skids, 1900 apart.'], ct)],
+            F('sketch the tube', SKETCH, ['Start 2D Sketch on a Work Plane across the tube end: an 80 circle and a 68 circle.',
+                                          'Finish Sketch.'], None, overlay=tube_sketch),
+            F('top tube', SWEEP, ['Sweep the tube 1300 across under the cabin.'], ct0),
+            F('left bend', SWEEP, ['Sweep the end round a 300 radius bend, turning down.'], ct_side[0]),
+            F('left leg', SWEEP, ['Sweep straight down to the skid.'], ct_side[1]),
+            F('mirror to the right', MIRROR, ['Mirror the bend and the leg about the XZ Plane. The legs are 1900 apart.'], ct)],
           instances=[('cross tube front', None), ('cross tube rear', T(1150, 0, 0))]),
     ]
     assembly = [
-        ('fuselage', PLACE, ['Place fuselage.ipt Grounded. Constrain the canopy, cowling and tail boom to it.'],
-         ['fuselage', 'canopy glazing', 'engine cowling', 'tail boom']),
-        ('tail', CONSTRAIN, ['Mate the fin and duct to the boom end and the stabiliser across the boom.'],
-         ['fin and fan duct', 'horizontal stabiliser']),
-        ('landing gear', CONSTRAIN, ['Mate the cross tubes to the belly and the skids to the cross tube legs.'],
-         ['cross tube front', 'cross tube rear', 'skid right', 'skid left']),
-        ('rotors', CONSTRAIN, ['Insert the mast in the cowling, the hub on the mast, the blades in the grips (Angle 180 apart) and the '
-                               'tail fan on the duct axis.'],
-         ['main rotor mast', 'main rotor hub', 'main rotor blade 1', 'main rotor blade 2', 'tail fan']),
+        ('place the fuselage', PLACE, ['Place fuselage.ipt, right click, Place Grounded at Origin.'], ['fuselage']),
+        ('canopy', CONSTRAIN, ['Place canopy.ipt. Mate its split face to the split face of the fuselage (Flush) and Mate the two '
+                               'XZ Planes, so the glazing fills the nose.'], ['canopy glazing']),
+        ('engine cowling', CONSTRAIN, ['Place cowling.ipt. Mate its underside to the cabin roof and Mate its mast hole axis to a Work '
+                                       'Axis 2000 back from the nose.'], ['engine cowling']),
+        ('tail boom', CONSTRAIN, ['Place tail_boom.ipt. Mate its axis to a Work Axis 1650 up (Flush the front to the tail cone).'],
+         ['tail boom']),
+        ('fin and fan duct', CONSTRAIN, ['Place fin.ipt. Insert the duct on the boom opening (axis to axis, mid planes Flush).'],
+         ['fin and fan duct']),
+        ('horizontal stabiliser', CONSTRAIN, ['Place stabiliser.ipt. Mate its underside to the top of the boom, 7000 back, and its '
+                                              'middle to the XZ Plane.'], ['horizontal stabiliser']),
+        ('landing gear sub-assembly: cross tubes', PLACE,
+         ['File > New > Standard (mm).iam and save it as landing_gear.iam (a sub-assembly).',
+          'Place cross_tube.ipt Grounded, then a second copy: Mate the two XZ Planes and Offset the YZ Planes 1150 apart.'],
+         ['cross tube front', 'cross tube rear'],
+         'A sub-assembly is built and checked on its own, then placed in the main assembly as one component.'),
+        ('landing gear sub-assembly: skids', CONSTRAIN,
+         ['Place skid.ipt twice. Insert the foot of each leg on the top of a skid (Mate the leg axis to a point on the skid). Save '
+          'landing_gear.iam.', 'In ax_helicopter.iam, Place landing_gear.iam: Mate the top of the cross tubes to the belly.'],
+         ['skid right', 'skid left']),
+        ('rotor head sub-assembly: mast', PLACE,
+         ['File > New > Standard (mm).iam and save it as rotor_head.iam.', 'Place mast.ipt Grounded.'], ['main rotor mast']),
+        ('rotor head sub-assembly: hub', CONSTRAIN, ['Place rotor_hub.ipt. Insert the hub bore on the top of the mast.'],
+         ['main rotor hub']),
+        ('rotor head sub-assembly: blades', CONSTRAIN,
+         ['Place blade.ipt twice. Mate each root fitting into a grip and Angle the two blades 180 degrees apart. Save rotor_head.iam.',
+          'In ax_helicopter.iam, Place rotor_head.iam: Insert the mast collar on the cowling top.'],
+         ['main rotor blade 1', 'main rotor blade 2']),
+        ('tail fan', CONSTRAIN, ['Place tail_fan.ipt. Mate its axis to the duct axis and Flush its mid plane with the XZ Plane.'],
+         ['tail fan']),
     ]
-    ex = {'canopy': (-900, 0, 0), 'cowling': (0, 0, 700), 'tail boom': (500, 0, 0), 'fin and fan duct': (1200, 0, 0),
+    ex = {'canopy glazing': (-900, 0, 0), 'engine cowling': (0, 0, 700), 'tail boom': (500, 0, 0), 'fin and fan duct': (1200, 0, 0),
           'horizontal stabiliser': (800, 0, -500), 'main rotor mast': (0, 0, 1200), 'main rotor hub': (0, 0, 1700),
           'main rotor blade 1': (0, 0, 2100), 'main rotor blade 2': (0, 0, 2100), 'tail fan': (1200, 900, 0),
           'skid right': (0, 900, -700), 'skid left': (0, -900, -700), 'cross tube front': (0, 0, -400), 'cross tube rear': (0, 0, -400)}

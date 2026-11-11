@@ -27,10 +27,10 @@
   },
   {
    "n": 2,
-   "title": "Webs",
+   "title": "Throw 1: front web",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a web on the YZ Plane: a circle R70 on the main axis, a circle R36 on the pin 44 off the axis, and two lines Tangent to the R36 circle at 33 degrees to each other, closed by an arc R80 on the main axis. Extrude 15.5 mm. Make eight webs, two to each throw, the throws 114 apart."
+    "Sketch a web on the end face of the front journal: a circle R70 on the main axis, a circle R36 on the pin centre 44 below the axis, and two lines Tangent to the R36 circle at 33 degrees to each other, closed by an arc R80 on the main axis (the counterweight, opposite the pin). Trim. Extrude 15.5 mm."
    ],
    "note": "Section A-A on the sheet shows the web: the R80 counterweight, the 33 degree sides and the R36 (72 diameter) pin end.",
    "parts": [
@@ -42,16 +42,16 @@
      "removed": false
     }
    ],
-   "overlay": false,
+   "overlay": true,
    "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_02.glb",
    "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_02.json"
   },
   {
    "n": 3,
-   "title": "Crank pins",
+   "title": "Throw 1: crank pin",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 64 circle 44 off the axis between each pair of webs. Extrude 45 mm. Throws 1 and 4 down, 2 and 3 up (180 degrees apart)."
+    "Sketch a 64 circle on the web face on the R36 centre, 44 below the axis. Extrude 45 mm."
    ],
    "note": "Stroke = 2 x throw = 2 x 44 = 88 mm.",
    "parts": [
@@ -69,10 +69,10 @@
   },
   {
    "n": 4,
-   "title": "Main journals",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Throw 1: rear web",
+   "command": "3D Model tab > Pattern panel > Mirror",
    "actions": [
-    "Sketch a 64 circle on the main axis between each pair of throws. Extrude 38 mm. The rear journal runs to the flange."
+    "Work Plane through the middle of the crank pin (Offset 22.5 from the web face). Mirror the front web about it."
    ],
    "note": null,
    "parts": [
@@ -90,10 +90,10 @@
   },
   {
    "n": 5,
-   "title": "Flange",
+   "title": "Main journal 2",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 144 circle on the end of the rear journal. Extrude 15 mm (619 overall)."
+    "Sketch a 64 circle on the main axis on the rear web. Extrude 38 mm."
    ],
    "note": null,
    "parts": [
@@ -111,6 +111,153 @@
   },
   {
    "n": 6,
+   "title": "Throw 2: front web",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the same web on the end of journal 2, but with the pin centre 44 above the axis (throw 2 is turned 180 degrees from throw 1). Extrude 15.5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Throw 2: crank pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 64 circle on the R36 centre, 44 above the axis. Extrude 45 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Throw 2: rear web",
+   "command": "3D Model tab > Pattern panel > Mirror",
+   "actions": [
+    "Work Plane through the middle of the pin. Mirror the front web about it."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Main journal 3",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 64 circle on the main axis on the rear web. Extrude 38 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Throw 3 and journal 4",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Rectangular Pattern: the two throw 2 webs, its pin and journal 3. Direction along the shaft axis, 2 occurrences, 114 apart."
+   ],
+   "note": "Throws 2 and 3 point the same way, so a pattern copies throw 2.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Throw 4 and the rear journal",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Rectangular Pattern: the two throw 1 webs, its pin and journal 2. 2 occurrences, 342 apart (3 x 114). The copied journal ends at 604, where the flange starts."
+   ],
+   "note": "Pins 1 and 4 point down and pins 2 and 3 point up, so the shaft balances end to end.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 144 circle on the end of the rear journal. Extrude 15 mm (619 overall)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_12.json"
+  },
+  {
+   "n": 13,
    "title": "Flange holes",
    "command": "3D Model tab > Pattern panel > Circular Pattern",
    "actions": [
@@ -127,15 +274,36 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.glb",
-   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.json"
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_13.json"
   },
   {
-   "n": 7,
-   "title": "Chamfers",
+   "n": 14,
+   "title": "Flange chamfer",
    "command": "3D Model tab > Modify panel > Chamfer",
    "actions": [
-    "Chamfer: 2 mm on the flange edge, 1 mm on the front end.",
+    "Chamfer 2 mm on the outside edge of the flange."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Front end chamfer",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1 mm on the front end of the stub.",
     "Save crankshaft_4.ipt."
    ],
    "note": null,
@@ -149,8 +317,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.glb",
-   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.json"
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_15.json"
   }
  ]
 }

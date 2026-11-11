@@ -48,13 +48,12 @@
   },
   {
    "n": 3,
-   "title": "Saddle",
+   "title": "Saddle, R28 part",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch on the front face a half circle R28 centred on the top edge, 60 along. Extrude, Cut, 52 mm deep.",
-    "Sketch a half circle R20 on the same centre on the back face. Extrude, Cut, up to the first cut."
+    "Sketch on the front face a half circle R28 centred on the top edge, 60 along. Extrude, Cut, 52 mm deep."
    ],
-   "note": "The step from R28 to R20 is a shoulder for the bearing shell to stop against.",
+   "note": null,
    "parts": [
     {
      "name": "saddle bearing block",
@@ -70,6 +69,27 @@
   },
   {
    "n": 4,
+   "title": "Saddle, R20 part",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a half circle R20 on the same centre on the back face. Extrude, Cut, up to the first cut."
+   ],
+   "note": "The step from R28 to R20 is a shoulder for the bearing shell to stop against.",
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_04.json"
+  },
+  {
+   "n": 5,
    "title": "Holding down holes",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -86,11 +106,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_04.glb",
-   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_04.json"
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_05.json"
   },
   {
-   "n": 5,
+   "n": 6,
    "title": "Oil hole",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -108,8 +128,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_05.glb",
-   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_05.json"
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_06.json"
   }
  ]
 }
