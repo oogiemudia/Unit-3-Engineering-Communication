@@ -9,7 +9,7 @@
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as angle_bracket.ipt.",
-    "Sketch a rectangle 3.75 x 3.00 in (95.25 x 76.2 mm) on the XZ Plane. Extrude 0.38 in (9.65). Fillet the corners R0.50 in."
+    "Sketch a rectangle 3.75 x 3.00 in (95.25 x 76.2 mm) on the XZ Plane. Extrude 0.38 in (9.65)."
    ],
    "note": "The drawing is in inches; the model is in millimetres (x 25.4).",
    "parts": [
@@ -27,10 +27,10 @@
   },
   {
    "n": 2,
-   "title": "Relief under the base",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Round the base corners",
+   "command": "3D Model tab > Modify panel > Fillet",
    "actions": [
-    "Sketch a strip 1.13 in wide across the underside. Extrude, Cut, 0.06 in."
+    "Fillet the four vertical corners R0.50 in."
    ],
    "note": null,
    "parts": [
@@ -48,33 +48,12 @@
   },
   {
    "n": 3,
-   "title": "Column",
+   "title": "Relief under the base",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a rectangle 1.88 x 1.38 in on the base. Extrude it up past the top. Work Plane at 30 degrees through a line 2.66 in up, sloping down to the front, and Split the column with it (Remove the top)."
+    "Sketch a strip 1.13 in wide across the underside. Extrude, Cut, 0.06 in."
    ],
    "note": null,
-   "parts": [
-    {
-     "name": "angle bracket",
-     "colour": "#8E9AA8",
-     "new": false,
-     "added": true,
-     "removed": false
-    }
-   ],
-   "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_03.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_03.json"
-  },
-  {
-   "n": 4,
-   "title": "Open the column",
-   "command": "3D Model tab > Modify panel > Shell",
-   "actions": [
-    "Shell: wall 0.31 in, remove the front face, so the column becomes a channel open at the front."
-   ],
-   "note": "An even wall thickness lets the casting cool evenly, so it does not crack.",
    "parts": [
     {
      "name": "angle bracket",
@@ -85,15 +64,57 @@
     }
    ],
    "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Column",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top of the base the column as a channel open at the front: a 1.88 x 1.38 in rectangle with a 1.26 x 1.07 in notch from the front edge (walls 0.31 in). Extrude it up past the top."
+   ],
+   "note": "An even wall thickness lets the casting cool evenly, so it does not crack.",
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_04.glb",
    "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_04.json"
   },
   {
    "n": 5,
+   "title": "Trim the column top",
+   "command": "3D Model tab > Modify panel > Split",
+   "actions": [
+    "Work Plane at 30 degrees through a line 2.66 in up, sloping down to the front. Split > Trim Solid with the plane, and remove the top."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_05.json"
+  },
+  {
+   "n": 6,
    "title": "Top plate",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch on the 30 degree Work Plane a rectangle 1.88 x 2.38 in with R0.31 corners. Extrude 0.31 in down."
+    "Sketch on the 30 degree Work Plane a rectangle 1.88 x 2.38 in with R0.31 corners. Extrude 0.31 in down. It closes the top of the channel."
    ],
    "note": null,
    "parts": [
@@ -106,11 +127,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_05.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_05.json"
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_06.json"
   },
   {
-   "n": 6,
+   "n": 7,
    "title": "Top plate holes",
    "command": "3D Model tab > Pattern panel > Rectangular Pattern",
    "actions": [
@@ -127,11 +148,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_06.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_06.json"
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_07.json"
   },
   {
-   "n": 7,
+   "n": 8,
    "title": "Side boss",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -148,11 +169,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_07.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_07.json"
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_08.json"
   },
   {
-   "n": 8,
+   "n": 9,
    "title": "Boss bore",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -169,11 +190,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_08.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_08.json"
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_09.json"
   },
   {
-   "n": 9,
+   "n": 10,
    "title": "Base holes",
    "command": "3D Model tab > Pattern panel > Rectangular Pattern",
    "actions": [
@@ -191,8 +212,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_09.glb",
-   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_09.json"
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_10.json"
   }
  ]
 }

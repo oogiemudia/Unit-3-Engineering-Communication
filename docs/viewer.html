@@ -431,6 +431,31 @@ function applyChanges(o) {
 
 function commandName(path) { return path.split('>').pop().trim(); }
 
+// a part of an assembly is framed on its own while it is being built, when it is much smaller than the assembly
+// (steps titled 'Part name: feature'); assembly steps and single part models use the whole model view
+let stepFrameKey = 'all';
+const partKey = s => { const k = s.title.indexOf(':'); return k > 0 && !/^Assembly/i.test(s.title) ? s.title.slice(0, k) : null; };
+function frameOn(c, sz) {
+  const d = cam.position.clone().sub(controls.target);
+  centre.copy(c); size = sz;
+  for (const k of [ortho, persp]) { k.position.copy(camPos(d, size * 3)); k.lookAt(centre); }
+  controls.target.copy(centre); controls.update(); setSize();
+}
+function frameAll() { stepFrameKey = 'all'; frameOn(centre0, sizeA); }
+async function frameStep(i) {
+  const steps = stepsMeta.steps, key = partKey(steps[i]);
+  let want = 'all', c = centre0, sz = sizeA;
+  if (key) {
+    let j = i;
+    while (j + 1 < steps.length && partKey(steps[j + 1]) === key) j++;      // the part as finished
+    const b = new THREE.Box3().setFromObject((await stepObjects(j)).group);
+    const bs = b.getSize(new THREE.Vector3()).length() * 0.62;
+    if (!b.isEmpty() && bs < sizeA * 0.5) { want = key; c = b.getCenter(new THREE.Vector3()); sz = bs; }
+  }
+  if (want === stepFrameKey) return;
+  stepFrameKey = want; frameOn(c, sz);
+}
+
 async function showStep(i) {
   const steps = stepsMeta.steps;
   stepIdx = Math.max(0, Math.min(steps.length - 1, i));
@@ -445,6 +470,8 @@ async function showStep(i) {
   document.getElementById('legend').innerHTML = leg.join('');
   const want = stepIdx;
   const o = await stepObjects(want);
+  if (want !== stepIdx) return;
+  await frameStep(want);
   if (want !== stepIdx) return;
   stepRoot.clear(); stepRoot.add(o.group); applyChanges(o);
   if (nx) stepObjects(stepIdx + 1);
@@ -707,6 +734,7 @@ async function setTab(t) {
     if (t === 'sim' && !sim) await loadSim();
   } catch (e) { caption('Not ready for this model yet'); setTimeout(() => caption(''), 1800); return; }
   if (tab === 'sim' && t !== 'sim') { togglePlay(false); simReset(); }
+  if (tab === 'steps' && t !== 'steps' && stepFrameKey !== 'all') frameAll();
   if (t === 'fea' && fea.gfx.own) fea.gfx.fbox.getCenter(centre);
   else if (tab === 'fea' && fea && fea.gfx.own) { centre.copy(centre0); size = sizeA; placeCamera(VIEWS.iso); }
   tab = t;

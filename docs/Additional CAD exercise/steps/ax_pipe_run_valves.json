@@ -166,11 +166,11 @@
   },
   {
    "n": 8,
-   "title": "Gate valve body: body",
+   "title": "Gate valve body: neck",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as valve_body.ipt.",
-    "Sketch an 80 circle on the YZ Plane and extrude 108 each way (the neck). Sketch a 104 circle on the XY Plane: extrude from -55 to 70. Then a 120 circle: extrude 70 to 82 (the bonnet flange)."
+    "Sketch an 80 circle on the YZ Plane. Extrude 144, Symmetric (the run between the end flanges)."
    ],
    "note": null,
    "parts": [
@@ -188,10 +188,10 @@
   },
   {
    "n": 9,
-   "title": "Gate valve body: end flanges",
+   "title": "Gate valve body: body",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 165 circle on each end. Extrude 18 mm inwards."
+    "Sketch a 104 circle on the XY Plane on the centre. Extrude from 55 below the axis to 70 above it."
    ],
    "note": null,
    "parts": [
@@ -209,10 +209,52 @@
   },
   {
    "n": 10,
-   "title": "Gate valve body: bore and gate pocket",
+   "title": "Gate valve body: bonnet flange",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Hole 60 diameter, Through, along the flow. Sketch a 24 x 76 rectangle on the top: Extrude, Cut, 125 deep (the pocket the gate slides in)."
+    "Sketch a 120 circle on the top of the body. Extrude 12."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Gate valve body: end flanges",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 165 circle on each end of the neck. Extrude 18 mm outwards (180 face to face)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Gate valve body: bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on an end flange: diameter 60, Through All, along the flow."
    ],
    "note": null,
    "parts": [
@@ -225,11 +267,32 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_10.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_10.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_12.json"
   },
   {
-   "n": 11,
+   "n": 13,
+   "title": "Gate valve body: gate pocket",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 24 x 76 rectangle on the top of the bonnet flange. Extrude, Cut, 125 deep (the pocket the gate slides in)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_13.json"
+  },
+  {
+   "n": 14,
    "title": "Gate valve body: flange holes",
    "command": "3D Model tab > Pattern panel > Circular Pattern",
    "actions": [
@@ -247,11 +310,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_11.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_11.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_14.json"
   },
   {
-   "n": 12,
+   "n": 15,
    "title": "Bonnet and yoke: bonnet",
    "command": "3D Model tab > Create panel > Revolve",
    "actions": [
@@ -269,11 +332,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_12.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_12.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_15.json"
   },
   {
-   "n": 13,
+   "n": 16,
    "title": "Bonnet and yoke: stem bore",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -291,11 +354,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_13.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_13.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_16.json"
   },
   {
-   "n": 14,
+   "n": 17,
    "title": "Stem and gate: gate",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -313,11 +376,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_14.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_14.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_17.json"
   },
   {
-   "n": 15,
+   "n": 18,
    "title": "Stem and gate: stem",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -335,16 +398,16 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_15.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_15.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_18.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_18.json"
   },
   {
-   "n": 16,
-   "title": "Handwheel 160: hub, rim and spokes",
-   "command": "3D Model tab > Create panel > Sweep",
+   "n": 19,
+   "title": "Handwheel 160: hub",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as handwheel.ipt.",
-    "Sketch a 32 circle: extrude 18 (the hub). Sketch a 14 circle 75 from the axis and Revolve it (the rim). Sketch a 10 circle on the hub and Sweep it to the rim; Circular Pattern 4."
+    "Sketch a 32 circle on the XY Plane. Extrude 18 mm."
    ],
    "note": null,
    "parts": [
@@ -357,11 +420,74 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_16.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_16.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_19.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_19.json"
   },
   {
-   "n": 17,
+   "n": 20,
+   "title": "Handwheel 160: first pair of spokes",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 10 circle on a Work Plane 72 from the axis. Extrude 144 across the hub."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handwheel top valve",
+     "colour": "#C0504D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_20.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Handwheel 160: second pair of spokes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Circular Pattern: the spokes, 2 at 90 degrees (four spokes)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handwheel top valve",
+     "colour": "#C0504D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_21.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "Handwheel 160: rim",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch a 14 circle on the XZ Plane, 75 from the axis, on the spoke ends. Revolve it 360 degrees about the axis (a 164 rim)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handwheel top valve",
+     "colour": "#C0504D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_22.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_22.json"
+  },
+  {
+   "n": 23,
    "title": "Handwheel 160: bore",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -379,16 +505,16 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_17.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_17.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_23.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_23.json"
   },
   {
-   "n": 18,
-   "title": "Slip-on flange DN65: flange and hub",
+   "n": 24,
+   "title": "Slip-on flange DN65: flange",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as flange.ipt.",
-    "Sketch a 165 circle: extrude 18. Sketch a 90 circle on it: extrude 22 (the hub)."
+    "Sketch a 165 circle on the YZ Plane. Extrude 18 mm."
    ],
    "note": null,
    "parts": [
@@ -401,11 +527,32 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_18.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_18.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_24.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_24.json"
   },
   {
-   "n": 19,
+   "n": 25,
+   "title": "Slip-on flange DN65: hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 90 circle on the back of the flange. Extrude 22 mm (the hub)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange top, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_25.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_25.json"
+  },
+  {
+   "n": 26,
    "title": "Slip-on flange DN65: bore",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
@@ -422,11 +569,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_19.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_19.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_26.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_26.json"
   },
   {
-   "n": 20,
+   "n": 27,
    "title": "Slip-on flange DN65: bolt holes",
    "command": "3D Model tab > Pattern panel > Circular Pattern",
    "actions": [
@@ -444,56 +591,21 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_20.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_20.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_27.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_27.json"
   },
   {
-   "n": 21,
-   "title": "Assembly: pipework",
+   "n": 28,
+   "title": "Assembly: bottom run",
    "command": "Assemble tab > Component panel > Place",
    "actions": [
     "File > New > Standard (mm).iam and save it as ax_pipe_run_valves.iam.",
-    "Place the bends and the six pipes Grounded at their positions (or route them with Tube and Pipe: riser 850, top run 650, bottom run 750, bends R105)."
+    "Place bend.ipt Grounded at the foot of the riser and the two bottom pipes along X from it (or route the run with Tube and Pipe: bottom run 750, bends R105)."
    ],
    "note": null,
    "parts": [
     {
      "name": "bend 1 (bottom)",
-     "colour": "#B8C2CC",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bend 2 (top)",
-     "colour": "#B8C2CC",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "riser pipe, lower, 70 long",
-     "colour": "#B8C2CC",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "riser pipe, upper, 230 long",
-     "colour": "#B8C2CC",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "top pipe, inlet, 135 long",
-     "colour": "#B8C2CC",
-     "new": true,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "top pipe, outlet, 335 long",
      "colour": "#B8C2CC",
      "new": true,
      "added": false,
@@ -515,15 +627,15 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_21.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_21.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_28.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_28.json"
   },
   {
-   "n": 22,
-   "title": "Assembly: flanges",
+   "n": 29,
+   "title": "Assembly: riser",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
-    "Place flange.ipt six times: Insert each one onto a pipe end, face flush with the pipe end."
+    "Place the two riser pipes on the bend (Mate the axes, Flush the ends), leaving the gap for the riser valve, and the second bend at the top (850 up)."
    ],
    "note": null,
    "parts": [
@@ -535,7 +647,70 @@
      "removed": false
     },
     {
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, lower, 70 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, upper, 230 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_29.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_29.json"
+  },
+  {
+   "n": 30,
+   "title": "Assembly: top run",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place the two top pipes along X from the top bend (top run 650)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bend 1 (bottom)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -556,14 +731,42 @@
      "removed": false
     },
     {
-     "name": "top pipe, inlet, 135 long",
+     "name": "bend 2 (top)",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
      "removed": false
     },
     {
+     "name": "top pipe, inlet, 135 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "top pipe, outlet, 335 long",
+     "colour": "#B8C2CC",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_30.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_30.json"
+  },
+  {
+   "n": 31,
+   "title": "Assembly: flanges",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place flange.ipt six times: Insert each one onto a pipe end at a valve gap, face flush with the pipe end."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bend 1 (bottom)",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -578,6 +781,41 @@
     },
     {
      "name": "bottom pipe, outlet, 360 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, lower, 70 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, upper, 230 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, inlet, 135 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, outlet, 335 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -627,17 +865,17 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_22.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_22.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_31.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_31.json"
   },
   {
-   "n": 23,
-   "title": "Assembly: valve bodies",
-   "command": "Assemble tab > Relationships panel > Constrain",
+   "n": 32,
+   "title": "Assembly: gate valve sub-assembly: body",
+   "command": "Assemble tab > Component panel > Place",
    "actions": [
-    "Place valve_body.ipt three times. Mate each end flange face to a pipe flange and line up the bolt holes (Mate the hole axes)."
+    "File > New > Standard (mm).iam and save it as gate_valve.iam (a sub-assembly). Place valve_body.ipt Grounded."
    ],
-   "note": null,
+   "note": "The gate valve is built once as a sub-assembly and placed three times, so these steps show all three valves.",
    "parts": [
     {
      "name": "bend 1 (bottom)",
@@ -647,7 +885,14 @@
      "removed": false
     },
     {
-     "name": "bend 2 (top)",
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -668,6 +913,13 @@
      "removed": false
     },
     {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "top pipe, inlet, 135 long",
      "colour": "#B8C2CC",
      "new": false,
@@ -676,20 +928,6 @@
     },
     {
      "name": "top pipe, outlet, 335 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, inlet, 210 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -760,15 +998,15 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_23.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_23.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_32.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_32.json"
   },
   {
-   "n": 24,
-   "title": "Assembly: bonnets, stems and handwheels",
+   "n": 33,
+   "title": "Assembly: gate valve sub-assembly: bonnet",
    "command": "Assemble tab > Relationships panel > Constrain",
    "actions": [
-    "Place bonnet.ipt, stem.ipt and handwheel.ipt on each valve: Insert the bonnet on the body, Mate the stem axis to the bonnet bore, Insert the handwheel on the top of the bonnet."
+    "Place bonnet.ipt: Insert its flange on the body flange."
    ],
    "note": null,
    "parts": [
@@ -780,7 +1018,14 @@
      "removed": false
     },
     {
-     "name": "bend 2 (top)",
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -801,6 +1046,13 @@
      "removed": false
     },
     {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "top pipe, inlet, 135 long",
      "colour": "#B8C2CC",
      "new": false,
@@ -809,20 +1061,6 @@
     },
     {
      "name": "top pipe, outlet, 335 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, inlet, 210 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -911,6 +1149,160 @@
      "new": true,
      "added": false,
      "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_33.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_33.json"
+  },
+  {
+   "n": 34,
+   "title": "Assembly: gate valve sub-assembly: stem and gate",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place stem.ipt: Mate the stem axis to the bonnet bore and slide the gate into the pocket."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bend 1 (bottom)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, lower, 70 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, upper, 230 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, inlet, 135 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, outlet, 335 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange top, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange top, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange riser, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange riser, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange bottom, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange bottom, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body riser valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body bottom valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet riser valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet bottom valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
     },
     {
      "name": "stem and gate top valve",
@@ -930,6 +1322,182 @@
      "name": "stem and gate bottom valve",
      "colour": "#B8C2CC",
      "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_34.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_34.json"
+  },
+  {
+   "n": 35,
+   "title": "Assembly: gate valve sub-assembly: handwheel",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place handwheel.ipt: Insert it on the top of the stem. Save gate_valve.iam.",
+    "In ax_pipe_run_valves.iam, Place gate_valve.iam three times: Mate each end flange face to a pipe flange and line up the bolt holes (Mate the hole axes)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bend 1 (bottom)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, lower, 70 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "riser pipe, upper, 230 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, inlet, 135 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top pipe, outlet, 335 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange top, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange top, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange riser, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange riser, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange bottom, inlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange bottom, outlet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body riser valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "body bottom valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet top valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet riser valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bonnet bottom valve",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stem and gate top valve",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stem and gate riser valve",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stem and gate bottom valve",
+     "colour": "#B8C2CC",
+     "new": false,
      "added": false,
      "removed": false
     },
@@ -956,11 +1524,11 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_24.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_24.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_35.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_35.json"
   },
   {
-   "n": 25,
+   "n": 36,
    "title": "Assembly: bolts and nuts",
    "command": "Assemble tab > Component panel > Place from Content Center",
    "actions": [
@@ -976,7 +1544,14 @@
      "removed": false
     },
     {
-     "name": "bend 2 (top)",
+     "name": "bottom pipe, inlet, 210 long",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -997,6 +1572,13 @@
      "removed": false
     },
     {
+     "name": "bend 2 (top)",
+     "colour": "#B8C2CC",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
      "name": "top pipe, inlet, 135 long",
      "colour": "#B8C2CC",
      "new": false,
@@ -1005,20 +1587,6 @@
     },
     {
      "name": "top pipe, outlet, 335 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, inlet, 210 long",
-     "colour": "#B8C2CC",
-     "new": false,
-     "added": false,
-     "removed": false
-    },
-    {
-     "name": "bottom pipe, outlet, 360 long",
      "colour": "#B8C2CC",
      "new": false,
      "added": false,
@@ -1488,8 +2056,8 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_25.glb",
-   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_25.json"
+   "glb": "Additional CAD exercise/steps/ax_pipe_run_valves/step_36.glb",
+   "edges": "Additional CAD exercise/steps/ax_pipe_run_valves/step_36.json"
   }
  ]
 }

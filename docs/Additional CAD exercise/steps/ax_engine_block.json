@@ -72,7 +72,7 @@
    "title": "Head bolt bosses",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch 18 circles on the 16 head bolt centres (84 x 80 round each bore) on the Work Plane 15 below the deck. Extrude 125 down, Join."
+    "Sketch 18 diameter circles on the 16 head bolt centres (84 x 80 round each bore) on the Work Plane 15 below the deck. Extrude 125 down, Join."
    ],
    "note": "The head bolt holes are 58 from the bore centre, inside the water jacket. Solid bosses carry them through the coolant, so the bolts do not open into the water.",
    "parts": [

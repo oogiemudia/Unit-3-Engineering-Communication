@@ -30,7 +30,7 @@
    "title": "Sump",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch the side profile on the XZ Plane: shallow end 1.93 in (49) deep for 5.85 in (148.6), a slope, then the deep end, 6.60 in (167.6) deep. Extrude 225 wide, both sides. Fillet the bottom edges R20."
+    "Sketch the side profile on the XZ Plane: shallow end 1.93 in (49) deep for 5.85 in (148.6), a slope, then the deep end, 6.60 in (167.6) deep. Extrude 225 wide, Symmetric."
    ],
    "note": null,
    "parts": [
@@ -48,10 +48,31 @@
   },
   {
    "n": 3,
+   "title": "Round the sump",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet R20 the edges across the width of the sump (the bends in the bottom and the ends)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_03.json"
+  },
+  {
+   "n": 4,
    "title": "Bolt bosses",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch 18 circles on the flange edge (8 down each side, 2 and 3 on the ends). Extrude 8 mm."
+    "Sketch 18 diameter circles on the 21 bolt centres round the flange edge (8 down each side, 2 on the front end and 3 on the back). Extrude 8 mm."
    ],
    "note": null,
    "parts": [
@@ -64,38 +85,17 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_03.glb",
-   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_03.json"
-  },
-  {
-   "n": 4,
-   "title": "Hollow",
-   "command": "3D Model tab > Modify panel > Shell",
-   "actions": [
-    "Shell: 5 mm wall, remove the top face (the inside of the flange opens into the sump)."
-   ],
-   "note": "A die cast or sand cast sump is a thin even wall, like this shell.",
-   "parts": [
-    {
-     "name": "oil pan",
-     "colour": "#8E9AA8",
-     "new": false,
-     "added": false,
-     "removed": true
-    }
-   ],
-   "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_oil_pan/step_04.glb",
    "edges": "Additional CAD exercise/steps/ax_oil_pan/step_04.json"
   },
   {
    "n": 5,
-   "title": "Bolt holes",
-   "command": "3D Model tab > Modify panel > Hole",
+   "title": "Hollow",
+   "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Hole 9 diameter, Through, on every boss (M8 clearance)."
+    "Sketch on the XZ Plane the inside profile, 5 mm inside the outside one (Offset 5). Extrude, Cut, 215 wide, Symmetric, up through the flange."
    ],
-   "note": null,
+   "note": "A die cast or sand cast sump is a thin even wall. A Shell would also hollow the flange, so the inside is cut with an offset sketch instead.",
    "parts": [
     {
      "name": "oil pan",
@@ -111,10 +111,10 @@
   },
   {
    "n": 6,
-   "title": "Oil filter boss",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Round the inside",
+   "command": "3D Model tab > Modify panel > Fillet",
    "actions": [
-    "Sketch an 80 circle on a Work Plane on the side, 470 along and 95 down. Extrude out to 134 from the centre line (10.55 in overall width). Cut a 50 seat 10 deep and a 20 oil way."
+    "Fillet R15 the inside bends (the outside R20 less the 5 wall)."
    ],
    "note": null,
    "parts": [
@@ -132,11 +132,31 @@
   },
   {
    "n": 7,
-   "title": "Drain boss",
+   "title": "Bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 9 diameter, Through, on every boss (M8 clearance)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Oil filter boss",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 30 circle under the deep end. Extrude 8 down. Hole 14 diameter (M14 drain plug).",
-    "Save oil_pan.ipt."
+    "Sketch an 80 circle on a Work Plane on the side, 470 along and 95 down. Extrude out to 134 from the centre line (10.55 in overall width)."
    ],
    "note": null,
    "parts": [
@@ -145,12 +165,118 @@
      "colour": "#8E9AA8",
      "new": false,
      "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Boss web",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the side an 80 wide rectangle from the boss centre up to the flange. Extrude 12 mm (10 out from the wall)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Filter seat",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 50 circle on the boss face. Extrude, Cut, 10 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
      "removed": true
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_07.glb",
-   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_07.json"
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Oil way",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 20 diameter from the seat into the sump."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Drain boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 30 circle under the deep end. Extrude 8 mm down."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Drain hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 14 diameter into the sump (for an M14 drain plug).",
+    "Save oil_pan.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "oil pan",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_oil_pan/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_oil_pan/step_13.json"
   }
  ]
 }

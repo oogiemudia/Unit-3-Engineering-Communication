@@ -9,7 +9,7 @@
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
     "File > New > Standard (mm).ipt and save it as tube_bracket_45.ipt.",
-    "Sketch a rectangle 65 x 50 on the XZ Plane. Extrude 6 mm. Fillet the corners R5."
+    "Sketch a rectangle 65 x 50 on the XZ Plane. Extrude 6 mm."
    ],
    "note": null,
    "parts": [
@@ -27,10 +27,10 @@
   },
   {
    "n": 2,
-   "title": "Vertical tube",
-   "command": "3D Model tab > Create panel > Extrude",
+   "title": "Round the base corners",
+   "command": "3D Model tab > Modify panel > Fillet",
    "actions": [
-    "Sketch a 26 circle 30 from the left end. Extrude it to 40 from the bottom."
+    "Fillet the four vertical corners R5."
    ],
    "note": null,
    "parts": [
@@ -38,8 +38,8 @@
      "name": "tube bracket",
      "colour": "#8E9AA8",
      "new": false,
-     "added": true,
-     "removed": false
+     "added": false,
+     "removed": true
     }
    ],
    "overlay": false,
@@ -48,10 +48,10 @@
   },
   {
    "n": 3,
-   "title": "45 degree tube",
+   "title": "Vertical tube",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Work Plane at 45 degrees through the tube axis. Sketch a 26 circle on a plane square to the 45 degree axis and Extrude it up to the flange."
+    "Sketch a 26 circle 30 from the left end. Extrude it to 40 from the bottom."
    ],
    "note": null,
    "parts": [
@@ -69,10 +69,10 @@
   },
   {
    "n": 4,
-   "title": "Square flange",
+   "title": "45 degree tube",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a 36 square with R6 corners on the end of the tube, centred on its axis 35 above the base. Extrude 4 mm."
+    "Work Plane at 45 degrees through the tube axis. Sketch a 26 circle on a plane square to the 45 degree axis and Extrude it up to the flange."
    ],
    "note": null,
    "parts": [
@@ -90,6 +90,27 @@
   },
   {
    "n": 5,
+   "title": "Square flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 36 square with R6 corners on the end of the tube, centred on its axis 35 above the base. Extrude 4 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_05.json"
+  },
+  {
+   "n": 6,
    "title": "Back wall",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
@@ -106,15 +127,15 @@
     }
    ],
    "overlay": true,
-   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_05.glb",
-   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_05.json"
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_06.json"
   },
   {
-   "n": 6,
-   "title": "Step and front lug",
+   "n": 7,
+   "title": "Step block",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch the step block 10 x 16, 15 high, and the front lug with its R8 round top. Extrude them."
+    "Sketch a 10 x 16 rectangle on the top of the base at the front left corner. Extrude 9 mm (15 from the bottom)."
    ],
    "note": null,
    "parts": [
@@ -127,36 +148,15 @@
     }
    ],
    "overlay": false,
-   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_06.glb",
-   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_06.json"
-  },
-  {
-   "n": 7,
-   "title": "Bores",
-   "command": "3D Model tab > Modify panel > Hole",
-   "actions": [
-    "Hole 20 diameter down the vertical tube, Through All. Hole 20 diameter along the 45 degree tube, into the vertical bore."
-   ],
-   "note": null,
-   "parts": [
-    {
-     "name": "tube bracket",
-     "colour": "#8E9AA8",
-     "new": false,
-     "added": false,
-     "removed": true
-    }
-   ],
-   "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_07.glb",
    "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_07.json"
   },
   {
    "n": 8,
-   "title": "Slot in the tube",
+   "title": "Front lug",
    "command": "3D Model tab > Create panel > Extrude",
    "actions": [
-    "Sketch a rectangle 6 wide at the top of the tube. Extrude, Cut, 10 mm deep, through the front wall."
+    "Sketch on the front face the lug: 16 wide, straight sides 4 high and an R8 round top (18 from the bottom). Extrude 6 mm back."
    ],
    "note": null,
    "parts": [
@@ -164,8 +164,8 @@
      "name": "tube bracket",
      "colour": "#8E9AA8",
      "new": false,
-     "added": false,
-     "removed": true
+     "added": true,
+     "removed": false
     }
    ],
    "overlay": false,
@@ -174,10 +174,10 @@
   },
   {
    "n": 9,
-   "title": "Small holes",
+   "title": "Vertical bore",
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
-    "Hole 4 diameter: across the back wall, down the step block and across the front lug."
+    "Hole 20 diameter down the vertical tube, Through All."
    ],
    "note": null,
    "parts": [
@@ -195,11 +195,10 @@
   },
   {
    "n": 10,
-   "title": "Flange and base holes",
-   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "title": "45 degree bore",
+   "command": "3D Model tab > Modify panel > Hole",
    "actions": [
-    "Hole 4 diameter at the corners of a 26 square on the flange, Rectangular Pattern 2 x 2. Two holes 4 diameter in the base.",
-    "Save tube_bracket_45.ipt."
+    "Hole on the flange face, on the tube axis: 20 diameter, To the vertical bore."
    ],
    "note": null,
    "parts": [
@@ -214,6 +213,133 @@
    "overlay": false,
    "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_10.glb",
    "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Slot in the tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 6 wide at the top of the tube. Extrude, Cut, 10 mm deep, through the front wall."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Hole across the back wall",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 4 diameter, Through, across the back wall, 8 from the left end and 22 up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Hole in the step block",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 4 diameter, 10 deep, down the middle of the step block."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Hole in the front lug",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 4 diameter, Through, on the R8 centre of the front lug."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Flange holes",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Hole 4 diameter at one corner of a 26 square on the flange. Rectangular Pattern 2 x 2, 26 apart."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Base holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 4 diameter, Through, in the base 58 from the left end, 8 and 43 from the front.",
+    "Save tube_bracket_45.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tube bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_tube_bracket_45/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_tube_bracket_45/step_16.json"
   }
  ]
 }
