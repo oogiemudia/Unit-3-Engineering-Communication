@@ -1,0 +1,156 @@
+{
+ "name": "ax_crankshaft_4",
+ "title": "Crankshaft, four cylinder",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Front stub and journal",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as crankshaft_4.ipt.",
+    "Sketch on the XY Plane the half section: 32 diameter for 110, then 64 diameter for 38. Revolve about the axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Webs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a web on the YZ Plane: a circle R70 on the main axis, a circle R36 on the pin 44 off the axis, and two lines Tangent to the R36 circle at 33 degrees to each other, closed by an arc R80 on the main axis. Extrude 15.5 mm. Make eight webs, two to each throw, the throws 114 apart."
+   ],
+   "note": "Section A-A on the sheet shows the web: the R80 counterweight, the 33 degree sides and the R36 (72 diameter) pin end.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Crank pins",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 64 circle 44 off the axis between each pair of webs. Extrude 45 mm. Throws 1 and 4 down, 2 and 3 up (180 degrees apart)."
+   ],
+   "note": "Stroke = 2 x throw = 2 x 44 = 88 mm.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Main journals",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 64 circle on the main axis between each pair of throws. Extrude 38 mm. The rear journal runs to the flange."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 144 circle on the end of the rear journal. Extrude 15 mm (619 overall)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Flange holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole 10 diameter on the 109 pitch circle, Through. Circular Pattern: 6."
+   ],
+   "note": "The flywheel bolts to these holes.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: 2 mm on the flange edge, 1 mm on the front end.",
+    "Save crankshaft_4.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_4/step_07.json"
+  }
+ ]
+}

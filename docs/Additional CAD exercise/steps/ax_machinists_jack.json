@@ -1,0 +1,457 @@
+{
+ "name": "ax_machinists_jack",
+ "title": "Machinist's jack",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base: base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as base.ipt.",
+    "Sketch a rectangle 132 x 58 on the XZ Plane, centred. Extrude 14 mm. Fillet the corners R5."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Base: first lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XY Plane the lug: a line 75 long on the plate, a circle R20 centred 54 up, two lines Tangent to it. Extrude 10 mm, starting 16 behind the middle (a 32 gap between the lugs)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Base: second lug",
+   "command": "3D Model tab > Pattern panel > Mirror",
+   "actions": [
+    "Mirror the lug about the XY Plane."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Base: pivot holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the lug, on the R20 centre: Simple Hole, diameter 16, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Base: holding down holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the plate 100 apart (16 from each end): Simple Hole, diameter 14, Through All.",
+    "Save base.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Swivel: body",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as swivel.ipt.",
+    "Sketch on the XY Plane: the top 32 wide, a circle R22 50 below it, lines Tangent to the circle. Extrude 32 mm, Midplane."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Swivel: pivot hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the front face on the R22 centre: Simple Hole, diameter 16, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Swivel: tapped hole for the screw",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top face: Tapped Hole, M20x2.5, thread depth 34, drill depth 38."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Swivel: chamfer the top",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1 x 45 on the top edges.",
+    "Save swivel.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Lock nut M20 x 2.5: ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as lock_nut.ipt.",
+    "Sketch circles of 45 and 20 diameter. Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "lock nut M20 x 2.5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_10.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Lock nut M20 x 2.5: chamfer",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 0.8 on the top edges. Add the knurl as a cosmetic (decal) or with Emboss.",
+    "Save lock_nut.ipt."
+   ],
+   "note": "The 20 hole is threaded M20x2.5 with the Thread command; the outside is knurled for a grip.",
+   "parts": [
+    {
+     "name": "lock nut M20 x 2.5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_11.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Screw M20 x 2.5 x 56: screw",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as screw.ipt.",
+    "Sketch the half section: 20 diameter for 32 (the thread), a neck 16 diameter for 8, then 20 diameter for 16. Revolve."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "screw M20 x 2.5 x 56",
+     "colour": "#C8703A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_12.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Screw M20 x 2.5 x 56: cross hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole across the head, 8 below the top: Simple Hole, diameter 10.5, Through All."
+   ],
+   "note": "A tommy bar through this hole turns the screw.",
+   "parts": [
+    {
+     "name": "screw M20 x 2.5 x 56",
+     "colour": "#C8703A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_13.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Screw M20 x 2.5 x 56: chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1 x 45 on both ends. Thread: the bottom 32 mm, M20x2.5.",
+    "Save screw.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "screw M20 x 2.5 x 56",
+     "colour": "#C8703A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_14.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Assembly: place the base",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as ax_machinists_jack.iam.",
+    "Place base.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_15.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Assembly: swivel between the lugs",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place swivel.ipt. Mate its pivot hole axis to the lug hole axis, and Mate a side face to the inside of a lug."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_16.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: bolt and nut",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place bolt M16 x 68 and a nut M16: Insert the bolt through the lugs and the swivel, the nut on its end."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M16 x 2.0 x 68",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "standard nut M16 x 2.0",
+     "colour": "#C25BB5",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_17.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Assembly: lock nut and screw",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place lock_nut.ipt: Mate it to the top of the swivel. Place screw.ipt: Insert it into the tapped hole, 24 deep."
+   ],
+   "note": "Turning the screw sets the height; the lock nut is then tightened down on the swivel to hold it.",
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#E3C94A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "swivel",
+     "colour": "#8DA63C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt M16 x 2.0 x 68",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "standard nut M16 x 2.0",
+     "colour": "#C25BB5",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lock nut M20 x 2.5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "screw M20 x 2.5 x 56",
+     "colour": "#C8703A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_machinists_jack/step_18.glb",
+   "edges": "Additional CAD exercise/steps/ax_machinists_jack/step_18.json"
+  }
+ ]
+}

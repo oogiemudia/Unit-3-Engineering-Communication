@@ -1,0 +1,156 @@
+{
+ "name": "ax_clamp_lever",
+ "title": "Split clamp lever (exercise T10)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as clamp_lever.ipt.",
+    "Sketch a 42 circle on the XZ Plane. Extrude 48 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Clamp lug",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XY Plane the lug outline: from the boss out to 45 from the centre, 48 high, with R12 corners on its outer end. Extrude 30 mm, Midplane."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Arm",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XZ Plane a circle R15 88 from the centre and two lines Tangent to it and to the boss. Extrude 20 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the boss: Simple Hole, diameter 28, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Split",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 2 wide from the bore out through the lug. Extrude, Cut, Through All."
+   ],
+   "note": "Tightening a bolt across the split squeezes the bore onto its shaft: the lever is clamped without a key.",
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Clamp bolt hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the front face of the lug, 33 from the centre and 24 up: Simple Hole, diameter 8.5, Through All (\"Boydan boya\": right through)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Arm slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a Center to Center Slot 20 wide from 46 to 88 along the arm. Extrude, Cut, 12 mm deep.",
+    "Save clamp_lever.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "split clamp lever",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_clamp_lever/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_clamp_lever/step_07.json"
+  }
+ ]
+}

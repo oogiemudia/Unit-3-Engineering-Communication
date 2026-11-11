@@ -1,0 +1,198 @@
+{
+ "name": "ax_angle_bracket",
+ "title": "Angle bracket (inch drawing)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as angle_bracket.ipt.",
+    "Sketch a rectangle 3.75 x 3.00 in (95.25 x 76.2 mm) on the XZ Plane. Extrude 0.38 in (9.65). Fillet the corners R0.50 in."
+   ],
+   "note": "The drawing is in inches; the model is in millimetres (x 25.4).",
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Relief under the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a strip 1.13 in wide across the underside. Extrude, Cut, 0.06 in."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Column",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 1.88 x 1.38 in on the base. Extrude it up past the top. Work Plane at 30 degrees through a line 2.66 in up, sloping down to the front, and Split the column with it (Remove the top)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Open the column",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: wall 0.31 in, remove the front face, so the column becomes a channel open at the front."
+   ],
+   "note": "An even wall thickness lets the casting cool evenly, so it does not crack.",
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Top plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the 30 degree Work Plane a rectangle 1.88 x 2.38 in with R0.31 corners. Extrude 0.31 in down."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Top plate holes",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Hole 0.31 in diameter, on the centres of the R0.31 corners: 1.26 x 1.74 in apart. Rectangular Pattern 2 x 2."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Side boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 0.75 in circle on the side of the column, 1.50 in up. Extrude 0.59 in out."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Boss bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 0.50 in diameter, through the boss and the wall."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Base holes",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Hole 0.38 in diameter, 2.75 x 2.00 in apart. Rectangular Pattern 2 x 2.",
+    "Save angle_bracket.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "angle bracket",
+     "colour": "#8E9AA8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_angle_bracket/step_09.glb",
+   "edges": "Additional CAD exercise/steps/ax_angle_bracket/step_09.json"
+  }
+ ]
+}

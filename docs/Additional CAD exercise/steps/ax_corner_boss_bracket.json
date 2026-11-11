@@ -1,0 +1,170 @@
+{
+ "name": "ax_corner_boss_bracket",
+ "title": "Boss bracket (exercise T9)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the plate",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as corner_boss_bracket.ipt.",
+    "Sketch on the XZ Plane: circles R14 at (-32, 0) and (32, 0) and R25 at (0, 62). Lines Tangent to each pair, then trim to the outside."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 50 circle at (0, 62). Extrude it to 30 from the bottom (22 above the plate)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Rib",
+   "command": "3D Model tab > Create panel > Rib",
+   "actions": [
+    "Sketch on the YZ Plane a line from the plate, 10 in front of the lug centres, up to the top of the boss.",
+    "Rib: thickness 10, Midplane, extend to the plate."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Lug bosses",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch 20 circles on the lug centres. Extrude 3 mm up from the plate."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the boss: Simple Hole, diameter 32, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Lug holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on each lug boss: Simple Hole, diameter 13, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Cross hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Work Plane tangent to the side of the boss. Hole 10 below the top, across the boss: Simple Hole, diameter 12, Through All.",
+    "Save corner_boss_bracket.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "boss bracket",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_08.glb",
+   "edges": "Additional CAD exercise/steps/ax_corner_boss_bracket/step_08.json"
+  }
+ ]
+}

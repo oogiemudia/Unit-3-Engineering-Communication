@@ -1,0 +1,206 @@
+{
+ "name": "ax_roller_assembly",
+ "duration": 8,
+ "story": "The roller turns three times on the fixed spindle. The bronze bushes are pressed into the roller and turn with it; the spindle, brackets and base stay still.",
+ "moving": [
+  "roller",
+  "bush (right)",
+  "bush (left)"
+ ],
+ "motion": [
+  {
+   "part": "roller",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     7.5,
+     1080
+    ],
+    [
+     8,
+     1080
+    ]
+   ]
+  },
+  {
+   "part": "bush (right)",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     7.5,
+     1080
+    ],
+    [
+     8,
+     1080
+    ]
+   ]
+  },
+  {
+   "part": "bush (left)",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     7.5,
+     1080
+    ],
+    [
+     8,
+     1080
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Roller turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     3.0
+    ],
+    [
+     8,
+     3.0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open ax_roller_assembly.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Let the roller turn",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Check for a Revolution joint between the spindle and the roller (the bushes are Welded to the roller).",
+    "If it is missing, Insert Joint, Revolution: pick the spindle, then the bush bore. Click OK."
+   ],
+   "note": "A plain bearing: the bronze bush slides on the steel spindle with a film of grease, so no rolling elements are needed."
+  },
+  {
+   "view": "motion",
+   "title": "Turn the roller",
+   "command": "Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "Input Grapher: 0 at 0.5 s and 1080 degrees (3 turns) at 7.5 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 8 s and Images to 400.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the Revolution joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

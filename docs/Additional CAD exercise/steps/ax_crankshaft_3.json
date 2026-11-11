@@ -1,0 +1,135 @@
+{
+ "name": "ax_crankshaft_3",
+ "title": "Crankshaft, three throw",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Front stub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as crankshaft_3.ipt.",
+    "Sketch a 2.50 in (63.5) circle on the YZ Plane. Extrude 3.55 in (90.17)."
+   ],
+   "note": "The drawing is in inches; the model is in millimetres (x 25.4).",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Webs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a web: a circle R2.00 in (50.8) on the main axis and a circle R1.75 in (44.45) on the pin centre, 2.50 in (63.5) below, joined by two tangent lines. Extrude 0.75 in (19). Fillet the edges R0.10 in (2.54). Make six webs, a pair to each throw, the throws turned 120 degrees apart."
+   ],
+   "note": "The drawing crowns the web faces with an R169 radius; the model keeps them flat.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Crank pins",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 3.00 in (76.2) circle on each pin centre. Extrude 2.15 in (54.62) between the webs."
+   ],
+   "note": "Three throws at 120 degrees: one cylinder fires every 240 degrees of a four stroke cycle.",
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Main journals",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 2.50 in (63.5) circle on the main axis between the throws. Extrude 2.10 in (53.34)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Rear stub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 2.50 in circle on the last web. Extrude 3.55 in (90.17). 22.24 in (564.88) overall."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "End chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer the two shaft ends 1.5 mm.",
+    "Save crankshaft_3.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_crankshaft_3/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_crankshaft_3/step_06.json"
+  }
+ ]
+}

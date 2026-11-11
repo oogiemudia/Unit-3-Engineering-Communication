@@ -1,0 +1,148 @@
+{
+ "name": "ax_slotted_boss_flange",
+ "title": "Slotted boss flange (exercise T9)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Sketch the flange",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as slotted_boss_flange.ipt.",
+    "Sketch on the XZ Plane: a circle R30 on the origin and a circle R10 40 to the left. Draw two lines Tangent to both, and trim. The flange is 80 long overall."
+   ],
+   "note": "The sheet does not size the big end of the flange; R30 was scaled from the drawing.",
+   "parts": [],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Extrude the flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 40 circle on the top of the flange, on the origin. Extrude it to 48 from the bottom (40 mm)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the boss: Simple Hole, diameter 26, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Slot across the top",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 16 wide across the top of the boss. Extrude, Cut, 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Bolt hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the small end: Simple Hole, diameter 12.5, Through All, concentric with the R10 end."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Fillet the boss root",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: radius 2 round the bottom of the boss.",
+    "Save slotted_boss_flange.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted boss flange",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_slotted_boss_flange/step_07.json"
+  }
+ ]
+}

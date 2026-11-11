@@ -1,0 +1,115 @@
+{
+ "name": "ax_saddle_block",
+ "title": "Saddle bearing block (exercise T10)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as saddle_block.ipt.",
+    "Sketch a rectangle 120 x 96 on the XZ Plane. Extrude 15 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Upper block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 68 x 70 in the middle of the base. Extrude it to 33 from the bottom."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Saddle",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the front face a half circle R28 centred on the top edge, 60 along. Extrude, Cut, 52 mm deep.",
+    "Sketch a half circle R20 on the same centre on the back face. Extrude, Cut, up to the first cut."
+   ],
+   "note": "The step from R28 to R20 is a shoulder for the bearing shell to stop against.",
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Holding down holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the base: Simple Hole, diameter 9, Through All, at 13 from each end, 40 apart."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Oil hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the right end of the block, 6 below the top: Simple Hole, diameter 6, into the saddle.",
+    "Save saddle_block.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "saddle bearing block",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_saddle_block/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_saddle_block/step_05.json"
+  }
+ ]
+}

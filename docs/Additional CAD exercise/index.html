@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Additional CAD exercise</title>
+<meta name="description" content="CAD models of fifteen exercise drawings (textbook sheets, tutorial drawings, piping isometrics and a concept sketch): 20 models with drawings, Inventor build steps, FEA, simulations and STEP files.">
+<style>
+:root{--bg:#F4F6F8;--card:#FFFFFF;--ink:#16335B;--text:#1F2A37;--muted:#4E5A68;--line:#D5DCE4;--accent:#1565D8;--amber:#E8A33D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{background:var(--ink);color:#fff;padding:26px 16px 22px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+header a{color:#BFD6F6}
+h1{margin:4px 0 6px;font-size:28px}
+header p{margin:0;max-width:820px;color:#DCE6F2}
+h2{color:var(--ink);font-size:21px;margin:26px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#F4F6F8;border-bottom:1px solid var(--line)}
+.card .b{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:17px;color:var(--ink)}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;background:#E8EEF6;color:var(--ink);border-radius:999px;padding:2px 9px}
+.links{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px;margin-top:auto;padding-top:4px}
+.links+.links{margin-top:0}
+a{color:var(--accent)}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;padding:5px 10px;font-weight:bold;font-size:14px}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:12px 16px;font-size:15px}
+.box p{margin:0 0 8px}.box p:last-child{margin:0}
+.src img{aspect-ratio:4/3;object-fit:contain;background:#fff}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#E8EEF6;color:var(--ink)}
+tr:last-child td{border-bottom:0}
+footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="../index.html">Unit 3 CAD hub</a>
+  <h1>Additional CAD exercise</h1>
+  <p>Fifteen exercise drawings, modelled in 3D: textbook sheets, tutorial drawings in millimetres and inches, two piping isometrics, an engine oil pan, an engine block deck and a helicopter concept sketch. The exercise sheet "Uygulama 8, 9, 10" holds six parts, so there are 20 models: 15 single parts and 5 assemblies.</p>
+</div></header>
+<main class="wrap">
+<h2>What each model has</h2>
+<div class="box"><p>Each model is built feature by feature as in Autodesk Inventor (the Build steps tab), and each assembly keeps every component as its own part, with a parts list. Every model has third angle and first angle drawings (and a section where it helps), a STEP file, turntable and views videos, and an Inventor Stress Analysis of one part checked by hand. The five assemblies that move (roller, machinist's jack, planetary gears, pipe run with valves and helicopter) also have a Dynamic Simulation.</p>
+<p>Inch drawings are converted to millimetres (1 in = 25.4 mm). Where a drawing leaves a size out, or two of its sizes disagree, the size used is given below and in the build step that uses it.</p></div>
+<h2>Models</h2>
+<div class="grid" id="grid"><p>Loading…</p></div>
+<h2>How each drawing was read</h2>
+<div class="tw"><table>
+<tr><th>Model</th><th>Drawing</th><th>Sizes chosen and things to know</th></tr>
+<tr><td>Fork bracket (exercise T8)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>The sheet gives 13 + 18 + 13 = 44 across the lugs but 36 across the base: the base is made 44.</td></tr>
+<tr><td>Pedestal bearing (exercise T8)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>The web is shown 10 thick and the rib 9 thick (the &quot;10&quot; and &quot;9&quot; on the sheet).</td></tr>
+<tr><td>Slotted boss flange (exercise T9)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>The big end of the flange is not sized on the sheet; it is drawn R30.</td></tr>
+<tr><td>Boss bracket (exercise T9)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>Modelled to the sizes on the drawing.</td></tr>
+<tr><td>Saddle bearing block (exercise T10)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>Some sizes on this part of the sheet are hard to read; the base is taken as 120 x 96 x 15 and the block 68 x 70.</td></tr>
+<tr><td>Split clamp lever (exercise T10)</td><td><a href="source%20drawings/exercise_sheet_T8_T9_T10.png">Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</a></td><td>The lug height and the bolt hole height (24 up) are read from the picture.</td></tr>
+<tr><td>Roller assembly</td><td><a href="source%20drawings/roller_assembly.png">Roller assembly, drawing RA_01</a></td><td>The drawing gives no sizes (scale 1:2). The sizes were scaled from it using the M10 bolts.</td></tr>
+<tr><td>Valve body</td><td><a href="source%20drawings/valve_body.png">Valve body</a></td><td>The sheet gives the weight as 9.606 kg; this model is checked against that. Unlabelled corner radii (R5) are left sharp.</td></tr>
+<tr><td>Machinist&#x27;s jack</td><td><a href="source%20drawings/machinists_jack.png">Machinist&#x27;s jack</a></td><td>Modelled to the sizes on the drawing.</td></tr>
+<tr><td>Planetary gear set</td><td><a href="source%20drawings/planetary_gears.png">Planetary gear assembly</a></td><td>The sheet shows one bearing per planet (&quot;bearing from toolbox&quot;) but none in the parts list; bearings 684 are added.</td></tr>
+<tr><td>Tube bracket, 45 degree</td><td><a href="source%20drawings/tube_bracket_45.png">Bracket with a 45 degree tube</a></td><td>Small radii (R2) are left sharp. The lug sizes not given are scaled from the picture.</td></tr>
+<tr><td>Angle bracket (inch drawing)</td><td><a href="source%20drawings/angle_bracket.png">Angle bracket (inches)</a></td><td>Inch drawing converted to mm. The column is read as a channel open at the front, because the drawing shows its inside corner. The top plate holes sit on the centres of its R0.31 corners (0.63 and 0.87 in from the centre lines).</td></tr>
+<tr><td>Crankshaft, four cylinder</td><td><a href="source%20drawings/crankshaft_4.png">Cigüeñal (crankshaft), sheet 4 of 7</a></td><td>The 72 and 78 diameters on the sections are taken as the round ends of the webs; the webs are 15.5 thick ((76 - 45) / 2).</td></tr>
+<tr><td>Crankshaft, three throw</td><td><a href="source%20drawings/crankshaft_3.png">Three throw crankshaft (inches)</a></td><td>The R169 crown on the web faces and the R0.64 edge rounds are left off; the webs are flat 19 mm plates with R2.54 edges.</td></tr>
+<tr><td>V-belt pulley (inch drawing)</td><td><a href="source%20drawings/v_pulley.png">V-belt pulley (inches)</a></td><td>The groove root diameter (4.75 in) is read as 5.25 in less two lots of 0.25 in, as the section shows.</td></tr>
+<tr><td>Pipe run with three gate valves</td><td><a href="source%20drawings/pipe_run.png">Pipe run with valves</a></td><td>The drawing is an AI sketch and its sizes do not agree (for example two 750 runs, a 250 flange on a 70 pipe). Kept: pipe 70 diameter, riser 850, runs 650 and 750, three valves. The middle valve is drawn with two handwheels; the model gives it one. Flanges are DN65 sized (165 diameter, 4 x M16).</td></tr>
+<tr><td>Steam line loop (piping isometric)</td><td><a href="source%20drawings/steam_line.png">Sample piping isometric with a bill of materials</a></td><td>The isometric is a teaching poster and some of its callouts and BOM lines do not agree. The model keeps the BOM sizes and counts; it adds two 8 inch elbows, two 8 x 6 reducers and the flange bolting, which the loop needs but the BOM leaves out. The gate and needle valves are butt welded, so the only flanges are the two on the ball valve.</td></tr>
+<tr><td>Engine oil pan</td><td><a href="source%20drawings/oil_pan.png">Engine oil pan (overall inch sizes)</a></td><td>The drawing gives only overall sizes (21.13, 9.29, 8.62, 10.55, 1.93, 5.85, 6.60, 7.57, 7.67 in). The wall, bosses, filter boss and drain sizes are typical values, not from the sheet. The cross ribs on the side are left off.</td></tr>
+<tr><td>Engine block deck</td><td><a href="source%20drawings/engine_block.png">Engine block deck plan (inches)</a></td><td>Only the deck plan is given, so the depth (180), the water jacket and the coolant holes are typical, and the cast water passages shown as irregular shapes on the deck are simplified to round holes. The head bolt holes fall inside the water jacket, so solid bosses carry them through the coolant.</td></tr>
+<tr><td>Light helicopter (concept)</td><td><a href="source%20drawings/helicopter.png">Helicopter concept sketch</a></td><td>The sketch has no usable sizes (its numbers do not match each other), so the model is to proportion only, at a light helicopter scale: cabin 1.6 m, overall 8.8 m, rotor 10.4 m. The cabin is a revolved pod; doors, windows and details are left off.</td></tr>
+</table></div>
+<h2>Source drawings</h2>
+<div class="box">These are the drawings the models were made from, as they were supplied. The credit is the one marked on each sheet; the drawings belong to their authors and are here so the models can be checked against them.</div>
+<div class="grid" style="margin-top:16px">
+<div class="card src"><a href="source%20drawings/exercise_sheet_T8_T9_T10.png"><img src="source%20drawings/exercise_sheet_T8_T9_T10.png" alt="Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)" loading="lazy"></a><div class="b"><h3>Exercise sheet &quot;Uygulama 8, 9, 10&quot; (six parts)</h3><p>Turkish technical drawing textbook exercise sheet</p></div></div>
+<div class="card src"><a href="source%20drawings/roller_assembly.png"><img src="source%20drawings/roller_assembly.png" alt="Roller assembly, drawing RA_01" loading="lazy"></a><div class="b"><h3>Roller assembly, drawing RA_01</h3><p>Textbook assembly exercise (no sizes on the sheet)</p></div></div>
+<div class="card src"><a href="source%20drawings/valve_body.png"><img src="source%20drawings/valve_body.png" alt="Valve body" loading="lazy"></a><div class="b"><h3>Valve body</h3><p>CAD CAM Tutorial by Mahtabalam (SolidWorks)</p></div></div>
+<div class="card src"><a href="source%20drawings/machinists_jack.png"><img src="source%20drawings/machinists_jack.png" alt="Machinist&#x27;s jack" loading="lazy"></a><div class="b"><h3>Machinist&#x27;s jack</h3><p>CAD CAM Tutorial by Mahtabalam (SolidWorks assembly)</p></div></div>
+<div class="card src"><a href="source%20drawings/planetary_gears.png"><img src="source%20drawings/planetary_gears.png" alt="Planetary gear assembly" loading="lazy"></a><div class="b"><h3>Planetary gear assembly</h3><p>CAD CAM Tutorial by Mahtabalam (SolidWorks)</p></div></div>
+<div class="card src"><a href="source%20drawings/tube_bracket_45.png"><img src="source%20drawings/tube_bracket_45.png" alt="Bracket with a 45 degree tube" loading="lazy"></a><div class="b"><h3>Bracket with a 45 degree tube</h3><p>CAD practice exercise (no credit on the sheet)</p></div></div>
+<div class="card src"><a href="source%20drawings/angle_bracket.png"><img src="source%20drawings/angle_bracket.png" alt="Angle bracket (inches)" loading="lazy"></a><div class="b"><h3>Angle bracket (inches)</h3><p>Trazoide Industrial</p></div></div>
+<div class="card src"><a href="source%20drawings/crankshaft_4.png"><img src="source%20drawings/crankshaft_4.png" alt="Cigüeñal (crankshaft), sheet 4 of 7" loading="lazy"></a><div class="b"><h3>Cigüeñal (crankshaft), sheet 4 of 7</h3><p>Planos, Conjunto Automoción (Spanish drawing set)</p></div></div>
+<div class="card src"><a href="source%20drawings/crankshaft_3.png"><img src="source%20drawings/crankshaft_3.png" alt="Three throw crankshaft (inches)" loading="lazy"></a><div class="b"><h3>Three throw crankshaft (inches)</h3><p>SolidWorks drawing (no credit on the sheet)</p></div></div>
+<div class="card src"><a href="source%20drawings/v_pulley.png"><img src="source%20drawings/v_pulley.png" alt="V-belt pulley (inches)" loading="lazy"></a><div class="b"><h3>V-belt pulley (inches)</h3><p>SolidWorks Guide for Beginners</p></div></div>
+<div class="card src"><a href="source%20drawings/pipe_run.png"><img src="source%20drawings/pipe_run.png" alt="Pipe run with valves" loading="lazy"></a><div class="b"><h3>Pipe run with valves</h3><p>Computer generated sketch (sizes do not agree)</p></div></div>
+<div class="card src"><a href="source%20drawings/steam_line.png"><img src="source%20drawings/steam_line.png" alt="Sample piping isometric with a bill of materials" loading="lazy"></a><div class="b"><h3>Sample piping isometric with a bill of materials</h3><p>Poster &quot;Isometric drawings: turning P&amp;ID into reality on site&quot;</p></div></div>
+<div class="card src"><a href="source%20drawings/oil_pan.png"><img src="source%20drawings/oil_pan.png" alt="Engine oil pan (overall inch sizes)" loading="lazy"></a><div class="b"><h3>Engine oil pan (overall inch sizes)</h3><p>Product drawing (no credit on the sheet)</p></div></div>
+<div class="card src"><a href="source%20drawings/engine_block.png"><img src="source%20drawings/engine_block.png" alt="Engine block deck plan (inches)" loading="lazy"></a><div class="b"><h3>Engine block deck plan (inches)</h3><p>Engineering blueprint (no credit on the sheet)</p></div></div>
+<div class="card src"><a href="source%20drawings/helicopter.png"><img src="source%20drawings/helicopter.png" alt="Helicopter concept sketch" loading="lazy"></a><div class="b"><h3>Helicopter concept sketch</h3><p>Concept sketch (no usable sizes)</p></div></div>
+</div>
+</main>
+<footer class="wrap">Files for every model (STEP, STL, GLB, drawings as SVG and PNG, videos, build steps, FEA and simulation data) are in this folder of the repository: docs/Additional CAD exercise/. The models are built by models/exercises.py.</footer>
+<script>
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const ms = cat.filter(m => m.folder === 'Additional CAD exercise' && !m.part);
+  const q = s => encodeURIComponent(s).replace(/%2F/g, '/');
+  const src = {'ax_fork_bracket': 'exercise_sheet_T8_T9_T10.png', 'ax_pedestal_bearing': 'exercise_sheet_T8_T9_T10.png', 'ax_slotted_boss_flange': 'exercise_sheet_T8_T9_T10.png', 'ax_corner_boss_bracket': 'exercise_sheet_T8_T9_T10.png', 'ax_saddle_block': 'exercise_sheet_T8_T9_T10.png', 'ax_clamp_lever': 'exercise_sheet_T8_T9_T10.png', 'ax_roller_assembly': 'roller_assembly.png', 'ax_valve_body': 'valve_body.png', 'ax_machinists_jack': 'machinists_jack.png', 'ax_planetary_gears': 'planetary_gears.png', 'ax_tube_bracket_45': 'tube_bracket_45.png', 'ax_angle_bracket': 'angle_bracket.png', 'ax_crankshaft_4': 'crankshaft_4.png', 'ax_crankshaft_3': 'crankshaft_3.png', 'ax_v_pulley': 'v_pulley.png', 'ax_pipe_run_valves': 'pipe_run.png', 'ax_steam_line_loop': 'steam_line.png', 'ax_oil_pan': 'oil_pan.png', 'ax_engine_block': 'engine_block.png', 'ax_helicopter': 'helicopter.png'};
+  document.getElementById('grid').innerHTML = ms.map(m => {
+    const base = '../' + q(m.base || '');
+    const d = m.drawings || {};
+    const dl = [['third', 'Third angle'], ['first', 'First angle'], ['section', 'Section']]
+      .filter(([k]) => d[k]).map(([k, t]) => `<a href="../${q(d[k])}.png">${t}</a>`).join(' ');
+    const v = 'viewer.html?m=' + m.name;
+    const n = m.parts.length;
+    const vids = [['turntable', 'Spin'], ['views', 'Views']].concat(m.exploded ? [['explode', 'Exploded']] : [])
+      .concat(m.section ? [['section', 'Section cut']] : []).concat(m.sim ? [['sim', 'Simulation']] : [])
+      .map(([k, t]) => `<a href="${base}media/${m.name}_${k}.mp4">${t}</a>`).join(' ');
+    return `<div class="card"><a href="../${v}"><img src="${base}media/${m.name}_iso.png" alt="${m.title}" loading="lazy"></a><div class="b">
+      <h3>${m.title}</h3><div class="chips"><span class="chip">${n === 1 ? 'Single part' : n + ' parts'}</span><span class="chip">${m.size_mm.map(Math.round).join(' x ')} mm</span></div>
+      <p>${m.description}</p>
+      <div class="links"><a class="btn" href="../${v}">3D viewer</a><a href="../${v}&tab=steps">Build steps</a>${m.sim ? `<a href="../${v}&tab=sim">Simulation</a>` : ''}<a href="../${v}&tab=fea">FEA</a></div>
+      <div class="links">Drawings: ${dl} · <a href="../${q(m.files.step)}">STEP</a> · <a href="source%20drawings/${src[m.name]}">Source drawing</a></div>
+      <div class="links">Videos: ${vids}</div></div></div>`;
+  }).join('');
+});
+</script>
+</body>
+</html>

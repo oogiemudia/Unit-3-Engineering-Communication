@@ -1,0 +1,158 @@
+{
+ "name": "ax_pedestal_bearing",
+ "title": "Pedestal bearing (exercise T8)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pedestal_bearing.ipt.",
+    "Sketch a rectangle 74 x 42 on the XZ Plane. Extrude it 10 mm up.",
+    "Fillet the four vertical corners, radius 6."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_01.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Web",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XY Plane (the front) a 36 circle centred 37 along and 50 up, and two lines from the base (at 20 and 54) Tangent to the circle. Extrude the outline 10 mm, Midplane, from the middle of the base."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": true,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_02.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Rib",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 9 wide under the boss on the top of the base, 35 long. Extrude it up to the boss centre."
+   ],
+   "note": "The web and the rib make a cross shaped column, stiff in both directions.",
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_03.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 36 circle on the front, centred 37 along and 50 up. Extrude 35 mm, Midplane about the middle of the base."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_04.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the boss end: Simple Hole, diameter 18, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_05.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Relief under the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a rectangle 16 wide across the middle of the underside. Extrude, Cut, 4 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_06.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Counterbored slots",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top of the base two Center to Center Slots 8 long and 8 wide, 12 from each end. Extrude, Cut, Through All.",
+    "Sketch slots of the same centres 14 wide (R7). Extrude, Cut, 3 mm.",
+    "Save pedestal_bearing.ipt."
+   ],
+   "note": "The slots let the pedestal slide 8 mm to line the bore up with the shaft before the bolts are tightened.",
+   "parts": [
+    {
+     "name": "pedestal bearing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "Additional CAD exercise/steps/ax_pedestal_bearing/step_07.glb",
+   "edges": "Additional CAD exercise/steps/ax_pedestal_bearing/step_07.json"
+  }
+ ]
+}

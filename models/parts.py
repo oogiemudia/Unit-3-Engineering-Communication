@@ -442,10 +442,13 @@ from esp2024 import MODELS as ESP2024_MODELS  # noqa: E402
 from esp2025 import MODELS as ESP2025_MODELS  # noqa: E402
 # World Skill: the four parts of the WorldSkills UK Mechanical Engineering CAD 2022 pre-competition activity
 from worldskill import MODELS as WORLDSKILL_MODELS  # noqa: E402
+# Additional CAD exercise: CAD models of fifteen exercise drawings (textbook sheets, tutorials and isometrics)
+from exercises import MODELS as EXERCISE_MODELS  # noqa: E402
 
 MODELS += LIBRARY_MODELS
 MODELS += ESP2023_MODELS + ESP2026_MODELS + ESP2024_MODELS + ESP2025_MODELS
 MODELS += WORLDSKILL_MODELS
+MODELS += EXERCISE_MODELS
 
 
 def base_of(m):

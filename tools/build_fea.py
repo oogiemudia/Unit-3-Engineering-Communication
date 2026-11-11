@@ -51,7 +51,7 @@ def pick(shape, test):
     return out
 
 
-def gmsh_mesh(shape, groups, size):
+def gmsh_mesh(shape, groups, size, min_size=None, curvature=14):
     """Mesh the solid; return nodes, tets and, per group, the surface triangles (as node index triples)."""
     tmp = tempfile.NamedTemporaryFile(suffix='.brep', delete=False).name
     shape.exportBrep(tmp)
@@ -75,8 +75,8 @@ def gmsh_mesh(shape, groups, size):
             tags.append(best[0])
         group_tags.append(tags)
     gmsh.option.setNumber('Mesh.MeshSizeMax', size)
-    gmsh.option.setNumber('Mesh.MeshSizeMin', size / 5)
-    gmsh.option.setNumber('Mesh.MeshSizeFromCurvature', 14)
+    gmsh.option.setNumber('Mesh.MeshSizeMin', min_size or size / 5)
+    gmsh.option.setNumber('Mesh.MeshSizeFromCurvature', curvature)
     gmsh.option.setNumber('Mesh.Algorithm3D', 1)
     gmsh.model.mesh.generate(3)
     tags, xyz, _ = gmsh.model.mesh.getNodes()
@@ -117,7 +117,8 @@ def solve_case(name, case):
     bb = shape.BoundingBox()
     diag = math.sqrt(bb.xlen ** 2 + bb.ylen ** 2 + bb.zlen ** 2)
     size = case.get('mesh_size', diag / 24)
-    nodes, tets, tris = gmsh_mesh(shape, fixed_faces + load_faces, size)
+    # large parts with many small holes: a case can set a coarser smallest size and fewer elements round a curve
+    nodes, tets, tris = gmsh_mesh(shape, fixed_faces + load_faces, size, case.get('mesh_min'), case.get('mesh_curvature', 14))
     m = MeshTet(nodes.T.copy(), tets.T.copy())
     e = ElementVector(ElementTetP2())
     ib = Basis(m, e)
