@@ -1,0 +1,535 @@
+{
+ "name": "plummer_block",
+ "duration": 6,
+ "story": "The shaft turns two times. The inner ring turns with it; the balls and the cage roll round at 0.4 of the shaft speed, and the outer ring and the housing stay still.",
+ "moving": [
+  "shaft",
+  "bearing inner ring",
+  "bearing cage",
+  "ball 1",
+  "ball 2",
+  "ball 3",
+  "ball 4",
+  "ball 5",
+  "ball 6",
+  "ball 7",
+  "ball 8",
+  "ball 9"
+ ],
+ "motion": [
+  {
+   "part": "shaft",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bearing inner ring",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bearing cage",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 2",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 3",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 4",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 5",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 6",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 7",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 8",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  },
+  {
+   "part": "ball 9",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    65
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     288.0
+    ],
+    [
+     6,
+     288.0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Shaft turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     2.0
+    ],
+    [
+     6,
+     2.0
+    ]
+   ]
+  },
+  {
+   "name": "Cage turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     0.8
+    ],
+    [
+     6,
+     0.8
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open plummer_block.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Let the shaft turn",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Check for a Revolution joint between the housing base and the shaft. If it is missing, Insert Joint, Revolution: pick the bore of the base, then the shaft. Click OK.",
+    "The inner ring is one Welded group with the shaft."
+   ],
+   "note": null
+  },
+  {
+   "view": "joints",
+   "title": "Make the cage roll",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Insert Joint, Revolution, between the base and the cage (the cage group includes the balls).",
+    "Back in the assembly, add Constrain > Motion > Rotation between the shaft and the cage, ratio 0.4, Forward. Inventor turns it into a joint that drives the cage from the shaft."
+   ],
+   "note": "Cage speed = (1 - ball diameter / pitch diameter) / 2 = (1 - 12 / 60) / 2 = 0.4 of the shaft speed."
+  },
+  {
+   "view": "motion",
+   "title": "Turn the shaft",
+   "command": "Right click the shaft Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "Input Grapher: 0 degrees at 0.5 s and 720 degrees at 5.5 s. Click OK twice."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 6 s and Images to 300.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angles of the two Revolution joints.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

@@ -520,6 +520,243 @@ SIMS['esp2025_dispenser'] = esp_pill_sim()
 FOLDER['esp2025_dispenser'] = 'ESP 2025'
 
 
+
+# ------------------------------------------------------------------ GrabCAD models (models/library.py)
+for _n in ('machine_vice', 'plummer_block', 'spur_gearbox', 'universal_joint', 'toggle_clamp', 'swivel_castor', 'screw_jack',
+           'flange_coupling', 'knuckle_joint', 'piston_crank'):
+    FOLDER[_n] = 'GrabCAD models'
+_PB_TURN = [(0, 0), (0.5, 0), (5.5, 720), (6, 720)]
+_pb_balls = ['ball %d' % (k + 1) for k in range(9)]
+SIMS['plummer_block'] = dict(
+    duration=6,
+    story='The shaft turns two times. The inner ring turns with it; the balls and the cage roll round at 0.4 of the shaft speed, '
+          'and the outer ring and the housing stay still.',
+    moving=['shaft', 'bearing inner ring', 'bearing cage'] + _pb_balls,
+    motion=[dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, 65], keys=ease_keys(_PB_TURN)) for n in ('shaft', 'bearing inner ring')] +
+           [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, 65], keys=ease_keys([(t, 0.4 * a) for t, a in _PB_TURN]))
+            for n in ['bearing cage'] + _pb_balls],
+    graph=[dict(name='Shaft turns', unit='', keys=ease_keys([(t, a / 360) for t, a in _PB_TURN])),
+           dict(name='Cage turns', unit='', keys=ease_keys([(t, 0.4 * a / 360) for t, a in _PB_TURN]))],
+    steps=lambda: common_start('plummer_block.iam') + [
+        step('joints', 'Let the shaft turn', JOINT,
+             ['Check for a Revolution joint between the housing base and the shaft. If it is missing, Insert Joint, Revolution: '
+              'pick the bore of the base, then the shaft. Click OK.', 'The inner ring is one Welded group with the shaft.']),
+        step('joints', 'Make the cage roll', JOINT,
+             ['Insert Joint, Revolution, between the base and the cage (the cage group includes the balls).',
+              'Back in the assembly, add Constrain > Motion > Rotation between the shaft and the cage, ratio 0.4, Forward. '
+              'Inventor turns it into a joint that drives the cage from the shaft.'],
+             'Cage speed = (1 - ball diameter / pitch diameter) / 2 = (1 - 12 / 60) / 2 = 0.4 of the shaft speed.'),
+        step('motion', 'Turn the shaft', 'Right click the shaft Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.', 'Input Grapher: 0 degrees at 0.5 s and 720 degrees at 5.5 s. Click OK twice.']),
+    ] + common_end(6, 'the angles of the two Revolution joints'))
+_GB_TURN = [(0, 0), (0.5, 0), (7.5, 1440), (8, 1440)]
+SIMS['spur_gearbox'] = dict(
+    duration=8,
+    story='The input pinion turns four times. The 40 tooth wheel turns the other way, half as fast: two turns.',
+    moving=['input pinion shaft', 'output shaft', 'key 8 x 7 x 30', 'gear wheel'],
+    motion=[dict(part='input pinion shaft', kind='turn', axis=[0, 1, 0], centre=[0, 0, 72], keys=ease_keys(_GB_TURN))] +
+           [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[75, 0, 72], keys=ease_keys([(t, -a / 2) for t, a in _GB_TURN]))
+            for n in ('output shaft', 'key 8 x 7 x 30', 'gear wheel')],
+    graph=[dict(name='Input turns', unit='', keys=ease_keys([(t, a / 360) for t, a in _GB_TURN])),
+           dict(name='Output turns', unit='', keys=ease_keys([(t, -a / 720) for t, a in _GB_TURN]))],
+    steps=lambda: common_start('spur_gearbox.iam') + [
+        step('joints', 'Check the shaft joints', JOINT,
+             ['Each shaft should have a Revolution joint to the housing. The key and wheel are one Welded group with the output shaft.']),
+        step('joints', 'Mesh the gears', JOINT,
+             ['Insert Joint, Rolling joints: Spur Gear. Pick the pitch circle of the pinion, then the pitch circle of the wheel.',
+              'Inventor reads the diameters (50 and 100) and sets the ratio to 2. Click OK.'],
+             'Gear ratio = teeth on the wheel / teeth on the pinion = 40 / 20 = 2: the output turns half as fast with twice the torque.'),
+        step('motion', 'Turn the input', 'Right click the input Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.', 'Input Grapher: 0 degrees at 0.5 s and 1440 degrees (4 turns) at 7.5 s.']),
+    ] + common_end(8, 'the angles of both Revolution joints'))
+_UJ_SWING = [(0, 0), (0.5, 0), (2.5, 25), (4.5, 25), (7, -25), (8.5, -25), (10, 0)]
+_uj_out = ['cross (spider)', 'output yoke', 'output shaft', 'grub screw 2', 'cup 3', 'cup 4', 'circlip 3', 'circlip 4']
+SIMS['universal_joint'] = dict(
+    duration=10,
+    story='The output shaft swings 25 degrees each way about the cross, while staying joined to the input shaft: the angle a '
+          'universal joint lets two shafts work at.',
+    moving=_uj_out,
+    motion=[dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, 0], keys=ease_keys(_UJ_SWING)) for n in _uj_out],
+    graph=[dict(name='Shaft angle', unit='deg', keys=ease_keys(_UJ_SWING))],
+    steps=lambda: common_start('universal_joint.iam') + [
+        step('joints', 'Check the two hinge joints', JOINT,
+             ['There should be a Revolution joint between the input yoke and the cross, and another between the cross and the output yoke.',
+              'The cups and circlips are Welded to their yokes.'],
+             'Two hinges at right angles let the output point in any direction: two degrees of freedom.'),
+        step('motion', 'Swing the output', 'Right click the input yoke to cross Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.',
+              'Input Grapher: 0 at 0.5 s, 25 degrees at 2.5 s, held to 4.5 s, -25 degrees at 7 s, held, back to 0 at 10 s.']),
+    ] + common_end(10, 'the angle of the Revolution joint'))
+
+
+
+import parts as _parts  # noqa: E402,F401  (parts first: it loads models/library.py)
+import library as _lib  # noqa: E402
+
+
+def _toggle_sim():
+    A, B, C0, D0, L = _lib.toggle_points()
+    # close, open the arm 20 degrees, hold, close again: the arm is driven, the rest follows (sampled every 0.25 s)
+    prof = lambda t: 20 * (0 if t < 0.5 else min(1, (t - 0.5) / 2.5) if t < 3 else 1 if t < 4.5 else max(0, 1 - (t - 4.5) / 2.5))
+    ts = [k * 0.25 for k in range(33)]
+    ease = lambda u: 0.5 - 0.5 * math.cos(math.pi * u / 20) if u else 0.0
+    arm, hnd, lnk, dx, dz, cx, cz = [], [], [], [], [], [], []
+    for t in ts:
+        a = 20 * ease(prof(t))
+        D, C, dh, dl = _lib.toggle_pose(a)
+        arm.append((t, a)); hnd.append((t, -dh)); lnk.append((t, -dl))
+        dx.append((t, D[0] - D0[0])); dz.append((t, D[1] - D0[1])); cx.append((t, C[0] - C0[0])); cz.append((t, C[1] - C0[1]))
+    K = lambda ks: [[round(t, 3), round(v, 3)] for t, v in ks]
+    arm_parts = ['clamp arm', 'spindle M8 x 66', 'nut (lower)', 'nut (upper)', 'pressure pad']
+    mot = [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[A[0], 0, A[1]], keys=K(arm), lin=True) for n in arm_parts]
+    mot += [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[B[0], 0, B[1]], keys=K(hnd), lin=True) for n in ('handle', 'handle grip')]
+    for n in ('link plate 1', 'link plate 2'):
+        mot += [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[D0[0], 0, D0[1]], keys=K(lnk), lin=True),
+                dict(part=n, kind='move', axis=[1, 0, 0], keys=K(dx), lin=True),
+                dict(part=n, kind='move', axis=[0, 0, 1], keys=K(dz), lin=True)]
+    mot += [dict(part='link pin D', kind='move', axis=[1, 0, 0], keys=K(dx), lin=True),
+            dict(part='link pin D', kind='move', axis=[0, 0, 1], keys=K(dz), lin=True),
+            dict(part='link pin C', kind='move', axis=[1, 0, 0], keys=K(cx), lin=True),
+            dict(part='link pin C', kind='move', axis=[0, 0, 1], keys=K(cz), lin=True)]
+    return dict(
+        duration=8,
+        story='Lifting the handle pulls the link back past dead centre and the arm swings up 20 degrees, lifting the pad 38 mm. '
+              'Pushing the handle down again carries the link pin just past the line through the other two pins, and the clamp locks.',
+        moving=arm_parts + ['handle', 'handle grip', 'link plate 1', 'link plate 2', 'link pin D', 'link pin C'],
+        motion=mot,
+        graph=[dict(name='Arm angle', unit='deg', keys=K(arm)), dict(name='Handle angle', unit='deg', keys=K([(t, -v) for t, v in hnd]))],
+        steps=lambda: common_start('toggle_clamp.iam') + [
+            step('joints', 'Check the four pin joints', JOINT,
+                 ['Standard Joints should list four Revolution joints: base to arm, base to handle, arm to link, link to handle.',
+                  'The spindle, nuts and pad are Welded to the arm; the grip to the handle.'],
+                 'Base, arm, link and handle make a four bar linkage: one input (the handle) sets where everything else is.'),
+            step('motion', 'Drive the arm', 'Right click the base to arm Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+                 ['Tick Enable imposed motion. Drive: Position.', 'Input Grapher: 0 at 0.5 s, 20 degrees at 3 s, held to 4.5 s, 0 at 7 s.'],
+                 'In use you push the handle; driving the arm here keeps the linkage on the same branch through the dead centre.'),
+        ] + common_end(8, 'the angles of the arm and handle Revolution joints'))
+
+
+SIMS['toggle_clamp'] = _toggle_sim()
+_SC_T = [(0, 0), (0.5, 0), (8.5, 1), (9, 1)]
+_sc_wheel = ['wheel centre', 'tyre', 'bearing tube']
+_sc_fork = ['fork', 'king pin rivet', 'wheel centre', 'tyre', 'bearing tube', 'spacer 1', 'spacer 2', 'axle bolt M10 x 58', 'nut M10']
+SIMS['swivel_castor'] = dict(
+    duration=9,
+    story='The castor rolls and swings round half a turn, as it does when a trolley changes direction. The wheel turns on its axle, '
+          'the fork turns on the balls, and the balls roll round at half the fork speed.',
+    moving=_sc_fork + ['ball %d' % (k + 1) for k in range(20)],
+    motion=[dict(part=n, kind='turn', axis=[0, 1, 0], centre=[35, 0, 50], keys=ease_keys([(t, 720 * u) for t, u in _SC_T])) for n in _sc_wheel] +
+           [dict(part=n, kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=ease_keys([(t, 180 * u) for t, u in _SC_T])) for n in _sc_fork] +
+           [dict(part='ball %d' % (k + 1), kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=ease_keys([(t, 90 * u) for t, u in _SC_T]))
+            for k in range(20)],
+    graph=[dict(name='Swivel angle', unit='deg', keys=ease_keys([(t, 180 * u) for t, u in _SC_T])),
+           dict(name='Wheel turns', unit='', keys=ease_keys([(t, 2 * u) for t, u in _SC_T]))],
+    steps=lambda: common_start('swivel_castor.iam') + [
+        step('joints', 'Check the swivel and the axle', JOINT,
+             ['Revolution joint between the top plate and the fork (the king pin axis), and another between the fork and the wheel (the axle).',
+              'The balls: suppress them in the simulation, or make them a group joined to the fork with a 0.5 Motion constraint.']),
+        step('motion', 'Swivel and roll', 'Edit imposed motion on both Revolution joints',
+             ['Swivel joint: 0 at 0.5 s to 180 degrees at 8.5 s. Axle joint: 0 to 720 degrees over the same time.']),
+    ] + common_end(9, 'the angles of the two Revolution joints'))
+_SJ = [(0, 0), (0.5, 0), (6.5, 5), (8, 5)]
+_sj_turn = ['screw spindle', 'tommy bar', 'bar end ball 1', 'bar end ball 2', 'cap screw M8 x 25', 'washer M8']
+SIMS['screw_jack'] = dict(
+    duration=8,
+    story='Five turns of the tommy bar lift the spindle 30 mm (a 6 mm pitch). The load cup rises without turning, so the load does not twist.',
+    moving=_sj_turn + ['load cup'],
+    motion=[dict(part=n, kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=ease_keys([(t, 360 * u) for t, u in _SJ])) for n in _sj_turn] +
+           [dict(part=n, kind='move', axis=[0, 0, 1], keys=ease_keys([(t, 6 * u) for t, u in _SJ])) for n in _sj_turn + ['load cup']],
+    graph=[dict(name='Lift', unit='mm', keys=ease_keys([(t, 6 * u) for t, u in _SJ])),
+           dict(name='Turns', unit='', keys=ease_keys(_SJ))],
+    steps=lambda: common_start('screw_jack.iam') + [
+        step('joints', 'Screw the spindle into the nut', JOINT,
+             ['Insert Joint, Cylindrical: the spindle thread in the nut bore. Then Insert Joint, Screw on it: pitch 6 mm.',
+              'The bar, balls, washer and screw are Welded to the spindle. Give the cup its own Revolution joint on the spigot.'],
+             'Mechanical advantage: the tommy bar end moves 2 x pi x 132 = 829 mm a turn while the load rises 6 mm, about 140 to 1 '
+             'before friction.'),
+        step('motion', 'Turn the bar', 'Right click the Cylindrical joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 1800 degrees (5 turns) at 6.5 s.']),
+    ] + common_end(8, 'the position and angle of the Cylindrical joint'))
+
+
+_FC = [(0, 0), (0.5, 0), (5.5, 720), (6, 720)]
+_fc_all = ['shaft A', 'shaft B', 'key A', 'key B', 'flange A (spigot)', 'flange B (recess)'] + \
+          ['%s %d' % (n, k + 1) for n in ('bolt', 'washer', 'nut') for k in range(6)]
+SIMS['flange_coupling'] = dict(
+    duration=6,
+    story='Shaft A turns two times and carries shaft B round with it: the keys, flanges and bolts pass the torque across. '
+          'A rigid coupling lets nothing move between the two shafts.',
+    moving=_fc_all,
+    motion=[dict(part=n, kind='turn', axis=[1, 0, 0], centre=[0, 0, 0], keys=ease_keys(_FC)) for n in _fc_all],
+    graph=[dict(name='Shaft A turns', unit='', keys=ease_keys([(t, a / 360) for t, a in _FC])),
+           dict(name='Shaft B turns', unit='', keys=ease_keys([(t, a / 360) for t, a in _FC]))],
+    steps=lambda: common_start('flange_coupling.iam') + [
+        step('joints', 'One joint for the whole coupling', JOINT,
+             ['Check for a Revolution joint between ground and shaft A. Everything else is Welded to it: a rigid coupling is one body.'],
+             'Torque T = F x r: each bolt carries 430 / (6 x 0.06) = 1194 N in shear, 10.6 MPa on its 113 mm^2 shank.'),
+        step('motion', 'Turn shaft A', 'Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 720 degrees at 5.5 s.']),
+    ] + common_end(6, 'the angle of the Revolution joint'))
+
+_KJ = [(0, 0), (0.5, 0), (2.5, 15), (4, 15), (7, -15), (8.5, -15), (10, 0)]
+_kj_eye = ['eye end', 'tie rod 1', 'lock nut 1']
+SIMS['knuckle_joint'] = dict(
+    duration=10,
+    story='The eye end and its tie rod swing 15 degrees each way about the knuckle pin. A knuckle joint lets two rods pull in a '
+          'straight line while allowing a little angle in one plane.',
+    moving=_kj_eye,
+    motion=[dict(part=n, kind='turn', axis=[0, 0, 1], centre=[0, 0, 0], keys=ease_keys(_KJ)) for n in _kj_eye],
+    graph=[dict(name='Angle', unit='deg', keys=ease_keys(_KJ))],
+    steps=lambda: common_start('knuckle_joint.iam') + [
+        step('joints', 'Hinge the eye on the pin', JOINT,
+             ['Check for a Revolution joint between the fork end and the eye end, on the pin hole axis.',
+              'The pin, collar and taper pin are Welded to the fork; the tie rods and lock nuts are Welded to their ends.']),
+        step('motion', 'Swing the eye end', 'Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Input Grapher: 0 at 0.5 s, 15 degrees at 2.5 s, held, -15 degrees at 7 s, held, 0 at 10 s.']),
+    ] + common_end(10, 'the angle of the Revolution joint'))
+
+
+def _engine_sim():
+    zg = _lib.ENGINE['R'] + _lib.ENGINE['L']
+    turn = lambda t: 0 if t < 0.5 else 720 if t > 8.5 else 720 * (0.5 - 0.5 * math.cos(math.pi * (t - 0.5) / 8))
+    ts = [round(k * 0.1, 2) for k in range(91)]
+    th, lift, rod = [], [], []
+    for t in ts:
+        a = turn(t)
+        (px, pz), dz, psi = _lib.engine_pose(a)
+        th.append((t, a)); lift.append((t, dz)); rod.append((t, psi))
+    K = lambda ks: [[round(t, 3), round(v, 3)] for t, v in ks]
+    crank = ['crankshaft', 'key 8 x 7 x 22', 'flywheel']
+    piston = ['piston', 'piston ring 1', 'piston ring 2', 'gudgeon pin', 'circlip 1', 'circlip 2']
+    rodg = ['connecting rod', 'big end cap', 'big end bolt 1', 'big end bolt 2', 'big end nut 1', 'big end nut 2']
+    mot = [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, 0], keys=K(th), lin=True) for n in crank]
+    mot += [dict(part=n, kind='move', axis=[0, 0, 1], keys=K(lift), lin=True) for n in piston]
+    for n in rodg:
+        mot += [dict(part=n, kind='turn', axis=[0, 1, 0], centre=[0, 0, zg], keys=K(rod), lin=True),
+                dict(part=n, kind='move', axis=[0, 0, 1], keys=K(lift), lin=True)]
+    return dict(
+        duration=9,
+        story='The flywheel turns two times. The crank pin goes round, the connecting rod rocks, and the piston slides 50 mm up and '
+              'down the barrel: the slider-crank turns rotation into a straight line and back.',
+        moving=crank + piston + rodg,
+        motion=mot,
+        graph=[dict(name='Piston position', unit='mm', keys=K(lift)), dict(name='Rod angle', unit='deg', keys=K(rod))],
+        steps=lambda: common_start('piston_crank.iam') + [
+            step('joints', 'Crank, rod and piston joints', JOINT,
+                 ['Revolution joint: frame bushes to crankshaft. Revolution: crank pin to big end. Revolution: gudgeon pin to small end. '
+                  'Prismatic: barrel bore to piston.',
+                  'Weld the key and flywheel to the crankshaft, the cap, bolts and nuts to the rod, and the rings, pin and circlips to the piston.'],
+                 'Inventor warns of a redundant constraint in a closed loop like this; let it make the piston joint a Point-Line.'),
+            step('motion', 'Turn the flywheel', 'Right click the crankshaft Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+                 ['Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 720 degrees at 8.5 s.'],
+                 'Stroke = 2 x the crank throw = 2 x 25 = 50 mm. Look at the graph: the piston moves faster near the top than near the '
+                 'bottom, because the rod is not infinitely long.'),
+        ] + common_end(9, 'the position of the piston joint'))
+
+
+SIMS['piston_crank'] = _engine_sim()
+
+
 def build():
     for name, s in SIMS.items():
         steps = s['steps']() if callable(s['steps']) else s['steps']

@@ -80,11 +80,13 @@ p.sec{margin:0 0 14px;color:var(--muted);max-width:820px}
     <button data-f="ESP 2026">ESP 2026 seat set</button>
     <button data-f="ESP 2024">ESP 2024 harbour buoy</button>
     <button data-f="ESP 2025">ESP 2025 pill dispenser</button>
+    <button data-f="GrabCAD models">GrabCAD models</button>
   </div>
   <p class="project" id="espNote" hidden><b>ESP 2023:</b> the Employer-Set Project (8730-035, Summer 2023) lock gate for Canal Heritage, Task 2. The assemblies come first, then every component as its own part model (41 parts, each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the hydrostatic calculations and the design notes, is in one folder: <a href="ESP%202023/index.html">open the ESP 2023 project page</a>.</p>
   <p class="project" id="espNote26" data-folder="ESP 2026" hidden><b>ESP 2026:</b> the Employer-Set Project (8730-035, Summer 2026) economy class three-seat set for Aero-Chair Ltd, Task 2. The assemblies come first, then the seven sub-assemblies it is built from (each with an exploded view and build steps), then every component as its own part model (39 parts, each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the calculations and the reflective notes, is in one folder: <a href="ESP%202026/index.html">open the ESP 2026 project page</a>.</p>
   <p class="project" id="espNote24" data-folder="ESP 2024" hidden><b>ESP 2024:</b> the Employer-Set Project (8730-035, Summer 2024) harbour marker buoy for Harbour Shipping Ltd, Task 2. The assemblies come first (red and green buoys and concept B), then the seven sub-assemblies it is built from (each with an exploded view and build steps), then every component as its own part model (43 parts, each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the energy, floating and cost calculations and the reflective notes, is in one folder: <a href="ESP%202024/index.html">open the ESP 2024 project page</a>.</p>
   <p class="project" id="espNote25" data-folder="ESP 2025" hidden><b>ESP 2025:</b> the Employer-Set Project (8730-035, Summer 2025) automated pill dispenser for WBEP Ltd and a health trust, Task 2. The assemblies come first (the dispenser and concept B), then the six sub-assemblies it is built from (each with an exploded view and build steps), then every component as its own part model (each with its drawing, STEP file and Inventor build steps). Every file for it, including the dimensioned A3 drawings, the parts list, the cost, battery and capacity calculations and the reflective notes, is in one folder: <a href="ESP%202025/index.html">open the ESP 2025 project page</a>.</p>
+  <p class="project" id="gcNote" data-folder="GrabCAD models" hidden><b>GrabCAD models:</b> complete assemblies of the kind found in online CAD libraries, every one our own design: each component is its own part, with a parts list, drawings, Inventor build steps, a simulation and FEA. <a href="GrabCAD%20models/index.html">Open the GrabCAD models page</a>.</p>
   <div class="grid" id="grid"></div>
 
   <section class="help">
@@ -141,8 +143,9 @@ function show(f) {
   document.getElementById('espNote26').hidden = f !== 'ESP 2026';
   document.getElementById('espNote24').hidden = f !== 'ESP 2024';
   document.getElementById('espNote25').hidden = f !== 'ESP 2025';
+  document.getElementById('gcNote').hidden = f !== 'GrabCAD models';
   // ESP project component parts only show under their own project filter, so they do not crowd out the teaching models
-  cat.filter(m => f.startsWith('ESP ') ? m.folder === f : !m.part && (f === 'all' || (f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f))))
+  cat.filter(m => (f.startsWith('ESP ') || f === 'GrabCAD models') ? m.folder === f : !m.part && (f === 'all' || (f === 'section' ? m.section : f === 'exploded' ? m.exploded : m.criteria.includes(f))))
      .forEach(m => grid.appendChild(card(m)));
 }
 document.querySelectorAll('#filters button').forEach(b => b.onclick = () => {

@@ -1,4 +1,4 @@
-"""Browser checks for the workshop library models (the machine vice and the models added with it), at desktop and
+"""Browser checks for the GrabCAD models folder (the machine vice and the nine models added with it), at desktop and
 phone size.
 
 Run:  python tools/test_library_models.py [page names]   (needs playwright with Chromium)
@@ -28,14 +28,26 @@ PAGES = [
     ('vice_sim', 'viewer.html?m=machine_vice&tab=sim', 'canvas', None),
     ('vice_fea_load', 'viewer.html?m=machine_vice&tab=fea&step=5', 'canvas', None),
     ('vice_fea_vm', 'viewer.html?m=machine_vice&tab=fea&step=10', 'canvas', None),
+    ('grabcad_folder', 'GrabCAD%20models/index.html', 'cards', None),
+    ('hub_grabcad_filter', 'index.html', None, '[data-f="GrabCAD models"]'),
+] + [pg for n in ('plummer_block', 'spur_gearbox', 'universal_joint', 'toggle_clamp', 'swivel_castor', 'screw_jack',
+                  'flange_coupling', 'knuckle_joint', 'piston_crank') for pg in (
+    (n + '_3d', 'viewer.html?m=' + n, 'canvas', None),
+    (n + '_parts_list', 'viewer.html?m=' + n, 'bom', '#bomBtn'),
+    (n + '_steps_last', 'viewer.html?m=%s&tab=steps&step=99' % n, 'canvas', None),
+    (n + '_sim', 'viewer.html?m=%s&tab=sim' % n, 'canvas', None),
+    (n + '_fea_vm', 'viewer.html?m=%s&tab=fea&step=10' % n, 'canvas', None),
+)] + [
     # older models, to show the shared viewer still works
     ('hub_bolted_joint', 'viewer.html?m=bolted_joint', 'bom', None),
     ('esp2025_ga', 'viewer.html?m=esp2025_dispenser', 'bom', '#bomBtn'),
 ]
 
-COUNT = dict(bom="document.querySelectorAll('table.bom tr').length")
-NEED = dict(bom=0)
+COUNT = dict(bom="document.querySelectorAll('table.bom tr').length", cards="document.querySelectorAll('.card').length")
+NEED = dict(bom=0, cards=9)
 NEED_BY_PAGE = dict(vice_parts_list=12, esp2025_ga=5)
+# a thin part (the gearbox output shaft) covers few pixels in the 64 x 64 sample
+MIN_DRAWN = dict(spur_gearbox_fea_vm=10)
 
 DREW = """() => {
   const c = document.querySelector('canvas'); if (!c) return 0;
@@ -80,7 +92,7 @@ def main():
                 count = pg.evaluate(COUNT[kind]) if kind in COUNT else 0
                 wide = pg.evaluate('document.documentElement.scrollWidth - window.innerWidth')
                 pg.screenshot(path=os.path.join(OUT, '%s_%s.png' % (size, name)))
-                ok = not errs and drew > 20 and wide <= 1 and count >= NEED_BY_PAGE.get(name, NEED.get(kind, 0))
+                ok = not errs and drew > MIN_DRAWN.get(name, 20) and wide <= 1 and count >= NEED_BY_PAGE.get(name, NEED.get(kind, 0))
                 if not ok:
                     fails.append((size, name, errs[:3], drew, wide, count))
                 print('%-4s %-8s %-20s errors %d  drawn px %4d  overflow %d%s' % ('ok' if ok else 'FAIL', size, name, len(errs), drew, wide,

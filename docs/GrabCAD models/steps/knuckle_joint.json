@@ -1,0 +1,404 @@
+{
+ "name": "knuckle_joint",
+ "title": "Knuckle joint",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Eye end: eye, neck and boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as eye_end.ipt.",
+    "Sketch a 50 circle on the XZ Plane, Extrude 31 Symmetric. Add the 45 x 30 neck and Revolve the 40 boss."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_01.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Eye end: pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the eye centre: diameter 25 (H9), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_02.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Eye end: tapped hole for the tie rod",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the end of the boss: Tapped M24x3, 40 deep. Chamfer the end 1.5.",
+    "Save eye_end.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_03.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Fork end: prongs, block and boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fork_end.ipt.",
+    "Sketch the prong outline (50 wide, round end) on the XZ Plane. Extrude 19, 16 from the middle; Mirror. Add the 30 x 50 x 70 block and Revolve the 40 boss."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_04.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Fork end: pin hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole through both prongs: diameter 25 (H9), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_05.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Fork end: tapped hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Tapped M24x3, 40 deep in the end of the boss. Chamfer 1.5.",
+    "Save fork_end.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_06.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Knuckle pin: head and shank",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pin.ipt.",
+    "Revolve: 25 diameter shank 82 long, 40 x 8 head."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "knuckle pin",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_07.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Knuckle pin: taper pin hole and chamfer",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 6 across the shank, 5 above the end of the collar. Chamfer the end 1.5.",
+    "Save pin.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "knuckle pin",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_08.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Collar: collar",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as collar.ipt.",
+    "Revolve: 38 outside, 25 bore, 10 long. Hole diameter 6 across. Chamfer 0.5.",
+    "Save collar.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "collar",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_09.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Tie rod M24: rod",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tie_rod.ipt.",
+    "Sketch a 24 circle, Extrude 228. Chamfer. Thread M24x3, 60 long.",
+    "Save tie_rod.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tie rod 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_10.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Assembly: fork end",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as knuckle_joint.iam.",
+    "Place fork_end.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_11.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Assembly: eye end between the prongs",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place eye_end.ipt. Mate the eye hole axis to the fork hole axis and its middle plane to the fork middle."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_12.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Assembly: pin, collar and taper pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place knuckle_pin.ipt with Insert into the top prong. Place the collar under the lower prong.",
+    "Place a taper pin from Content Center (ISO 2339, 6 x 44) through the collar and pin."
+   ],
+   "note": "The taper pin holds the collar on, so the pin cannot come out.",
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "knuckle pin",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "collar",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "taper pin 6 x 44",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_13.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Assembly: tie rods and lock nuts",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place tie_rod.ipt in each tapped hole and an M24 lock nut on each, tight against the boss."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork end",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "eye end",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "knuckle pin",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "collar",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "taper pin 6 x 44",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tie rod 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tie rod 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lock nut 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lock nut 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/knuckle_joint/step_14.glb",
+   "edges": "GrabCAD models/steps/knuckle_joint/step_14.json"
+  }
+ ]
+}

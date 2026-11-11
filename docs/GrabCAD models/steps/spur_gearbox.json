@@ -1,0 +1,1245 @@
+{
+ "name": "spur_gearbox",
+ "title": "Spur gearbox",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Gearbox housing: solid block and feet",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as housing.ipt.",
+    "Sketch a rectangle 190 x 88 on the XZ Plane and Extrude it 135 mm up.",
+    "Sketch a rectangle 240 x 88 on the bottom face and Extrude it 12 mm (the mounting feet), Join."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_01.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Gearbox housing: shell it out",
+   "command": "3D Model tab > Modify panel > Shell",
+   "actions": [
+    "Shell: remove the top face, thickness 10 mm on the end walls. Then Extrude Cut the side walls back so they are 14 thick (they carry the bearings), and the floor 12."
+   ],
+   "note": "A cast housing is hollow so the gears can run in oil, with walls thick enough to hold the bearings.",
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_02.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Gearbox housing: bearing bores",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Two holes on a side wall, 72 up, 75 apart: Simple Hole, diameter 47 (H7), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_03.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Gearbox housing: tapped holes for the bearing caps",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole on the side wall: Tapped M5x0.8, 10 deep, 29 from the bore centre, straight up.",
+    "Circular Pattern: 3 holes round each bore. Mirror to the other side wall."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_04.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Gearbox housing: holes for the cover and the feet",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the top of the walls: 6 Tapped Holes M6x1, 12 deep.",
+    "Hole on the feet: 4 Simple Holes diameter 11 for M10 holding down bolts."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_05.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Gearbox housing: drain hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the right end wall, 22 up: Tapped Hole M12x1.5, Through All.",
+    "Save housing.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_06.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Cover: plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cover.ipt.",
+    "Sketch a 190 x 88 rectangle on the top of the housing and Extrude 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cover",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_07.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Cover: holes and corners",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: 6 x countersunk diameter 6.6, 12 x 90 degrees. Hole diameter 16 (Tapped M16) in the middle for the oil filler. Fillet the four corners 5 mm.",
+    "Save cover.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cover",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_08.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Input pinion shaft: shaft",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pinion_shaft.ipt.",
+    "Sketch the half section: 20 diameter journals, 24 diameter in the middle from 30 to 30. Revolve."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_09.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Input pinion shaft: pinion teeth",
+   "command": "Design tab > Power Transmission panel > Spur Gear",
+   "actions": [
+    "Design tab > Spur Gear: Module 2.5, 20 teeth, face width 25, pressure angle 20. Gear 1 on the shaft cylinder.",
+    "Or sketch one tooth space with the involute and pattern it 20 times."
+   ],
+   "note": "A small pinion is cut straight on its shaft: it is smaller than a hub and key would need.",
+   "parts": [
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_10.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Input pinion shaft: keyway and chamfers",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 6 x 30 keyway on the input end. Extrude Cut 3.5 deep. Chamfer the ends 1 mm.",
+    "Save pinion_shaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_11.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Gear wheel: teeth",
+   "command": "Design tab > Power Transmission panel > Spur Gear",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as wheel.ipt.",
+    "Spur Gear: Module 2.5, 40 teeth, face 25. The centre distance is (20 + 40) x 2.5 / 2 = 75 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_12.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Gear wheel: bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the gear centre: diameter 24 (H7), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_13.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Gear wheel: keyway",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch an 8 x 3.3 keyway on the bore. Extrude Cut Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_14.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Gear wheel: recessed web",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve Cut the two side recesses from diameter 40 to 82, 7 deep, leaving a 11 mm web."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_15.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Gear wheel: lightening holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole diameter 12 in the web, 30.5 from the centre. Circular Pattern: 6.",
+    "Save wheel.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_16.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Output shaft: shaft",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as output_shaft.ipt.",
+    "Revolve the half section: 20 journals, 24 in the middle."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_17.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Output shaft: keyways",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Keyway 8 x 4 x 32 for the wheel; keyway 6 x 3.5 x 30 on the output end. Extrude Cut each."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_18.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Output shaft: chamfers",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1 mm on both ends.",
+    "Save output_shaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_19.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "Key 8 x 7 x 30: key",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as key.ipt.",
+    "Sketch an 8 x 30 slot shape and Extrude 7.3 mm.",
+    "Save key.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "key 8 x 7 x 30",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_20.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Through cap: disc and screw holes",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cap_through.ipt.",
+    "Sketch a 68 circle, Extrude 8. Holes: 3 counterbored for M5 on a 58 PCD."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "through cap (input)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_21.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "Through cap: seal pocket",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the inside face: diameter 32, 6 deep (seal pocket), then diameter 22 Through All.",
+    "Save cap_through.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "through cap (input)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_22.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_22.json"
+  },
+  {
+   "n": 23,
+   "title": "Blind cap: disc, holes and chamfer",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cap_blind.ipt.",
+    "Sketch a 68 circle, Extrude 8. Holes for M5 on a 58 PCD. Chamfer the outside edge 0.8.",
+    "Save cap_blind.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "blind cap (input)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_23.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_23.json"
+  },
+  {
+   "n": 24,
+   "title": "Assembly: place the housing",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as spur_gearbox.iam.",
+    "Place housing.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_24.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_24.json"
+  },
+  {
+   "n": 25,
+   "title": "Assembly: input pinion shaft and its bearings",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place input_pinion_shaft.ipt and Mate its axis to the left bore axis. Place two 6204 bearings from Content Center (Shafts > Bearings > Ball Bearings, ISO 15, 6204) and Insert them onto the journals against the shoulders."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing A",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing B",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_25.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_25.json"
+  },
+  {
+   "n": 26,
+   "title": "Assembly: wheel, key and output shaft",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place output_shaft.ipt in the right bore. Place the key and Insert it in its keyway.",
+    "Place gear_wheel.ipt: Mate its bore to the shaft and its keyway to the key, Flush its middle with the pinion middle.",
+    "Constrain > Motion > Rotation: pick the pinion and the wheel, ratio 2 (Reverse), so turning one turns the other.",
+    "Place two more bearings on the output shaft."
+   ],
+   "note": "Turn the input shaft with the mouse (Free Rotate is not needed: just drag a tooth) and the wheel turns at half the speed.",
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing B",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 30",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing C",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing D",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_26.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_26.json"
+  },
+  {
+   "n": 27,
+   "title": "Assembly: bearing caps and seals",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place the two through caps (where a shaft comes out) and two blind caps. Mate each to the wall and Insert a screw hole on a tapped hole.",
+    "Place lip seals from Content Center (Shaft parts > Seals) in the through caps."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing B",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 30",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing C",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing D",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (input)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (input)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (output)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (output)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (input)",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (output)",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_27.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_27.json"
+  },
+  {
+   "n": 28,
+   "title": "Assembly: cap screws",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: ISO 4762 M5 x 12 socket head cap screws, 12 off. Insert each one in a cap counterbore.",
+    "Tip: place one, then use Pattern Component, Associative, to follow the hole pattern."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing B",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 30",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing C",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing D",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (input)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (input)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (output)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (output)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (input)",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (output)",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_28.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_28.json"
+  },
+  {
+   "n": 29,
+   "title": "Assembly: cover, screws and plugs",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place cover.ipt: Mate it to the top of the housing and line up the holes.",
+    "Place 6 ISO 10642 M6 x 16 countersunk screws, the M16 filler plug and the M12 drain plug."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gearbox housing",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input pinion shaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing B",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 30",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gear wheel",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing C",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing D",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (input)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (input)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "through cap (output)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "blind cap (output)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (input)",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "lip seal (output)",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw A3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw B3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw C3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw D3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 5",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cover screw 6",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "filler plug M16",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "drain plug M12",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/spur_gearbox/step_29.glb",
+   "edges": "GrabCAD models/steps/spur_gearbox/step_29.json"
+  }
+ ]
+}

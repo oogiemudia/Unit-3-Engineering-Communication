@@ -1,0 +1,919 @@
+{
+ "name": "flange_coupling",
+ "duration": 6,
+ "story": "Shaft A turns two times and carries shaft B round with it: the keys, flanges and bolts pass the torque across. A rigid coupling lets nothing move between the two shafts.",
+ "moving": [
+  "shaft A",
+  "shaft B",
+  "key A",
+  "key B",
+  "flange A (spigot)",
+  "flange B (recess)",
+  "bolt 1",
+  "bolt 2",
+  "bolt 3",
+  "bolt 4",
+  "bolt 5",
+  "bolt 6",
+  "washer 1",
+  "washer 2",
+  "washer 3",
+  "washer 4",
+  "washer 5",
+  "washer 6",
+  "nut 1",
+  "nut 2",
+  "nut 3",
+  "nut 4",
+  "nut 5",
+  "nut 6"
+ ],
+ "motion": [
+  {
+   "part": "shaft A",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "shaft B",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "key A",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "key B",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "flange A (spigot)",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "flange B (recess)",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 1",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 2",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 3",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 4",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 5",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bolt 6",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 1",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 2",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 3",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 4",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 5",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "washer 6",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 1",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 2",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 3",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 4",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 5",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "nut 6",
+   "kind": "turn",
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     5.5,
+     720
+    ],
+    [
+     6,
+     720
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Shaft A turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     2.0
+    ],
+    [
+     6,
+     2.0
+    ]
+   ]
+  },
+  {
+   "name": "Shaft B turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     5.5,
+     2.0
+    ],
+    [
+     6,
+     2.0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open flange_coupling.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "One joint for the whole coupling",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Check for a Revolution joint between ground and shaft A. Everything else is Welded to it: a rigid coupling is one body."
+   ],
+   "note": "Torque T = F x r: each bolt carries 430 / (6 x 0.06) = 1194 N in shear, 10.6 MPa on its 113 mm^2 shank."
+  },
+  {
+   "view": "motion",
+   "title": "Turn shaft A",
+   "command": "Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 720 degrees at 5.5 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 6 s and Images to 300.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the Revolution joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

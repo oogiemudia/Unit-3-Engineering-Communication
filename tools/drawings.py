@@ -326,7 +326,8 @@ ESP_MATERIAL = {'esp2023_lock_gates': 'See parts list', 'esp2023_gate_leaf': 'S3
 PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', prefix='ESP23'),
             'ESP 2026': dict(owner='Aero-Chair Ltd', date='2026-11-10', prefix='ESP26'),
             'ESP 2024': dict(owner='Harbour Shipping Ltd', date='2026-11-10', prefix='ESP24'),
-            'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25')}
+            'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25'),
+            'GrabCAD models': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='GC')}
 
 
 def owner_of(m):
@@ -346,7 +347,7 @@ def material_of(m):
         return m['part']['material'].replace('Bought in: ', '').split(',')[0][:30]
     if m['name'] in ESP_MATERIAL:
         return ESP_MATERIAL[m['name']]
-    if m.get('sub'):
+    if m.get('sub') or m.get('folder') == 'GrabCAD models':
         return 'See parts list'        # a sub-assembly: its parts list gives the material of each part
     return {'flanged_bush': 'CZ121 brass', 'pcd_flange': '6082-T6 aluminium', 'threaded_shaft': '080M40 steel',
             'bolted_joint': 'See parts list', 'fit_pair': 'See parts list', 'pneumatic_cylinder': 'See parts list',
@@ -508,13 +509,24 @@ def section_sheet(m, items, number):
     pw, ph = P['bb'][2] - P['bb'][0], P['bb'][3] - P['bb'][1]
     gap = 26
     s, sc = pick_scale(max(sw, pw), shh + ph, 300, 200)
-    x_left = 22 + (380 - max(sw, pw) * s) / 2
-    toth = (shh + ph) * s + gap
-    y_top = 18 + (225 - toth) / 2
-    py = y_top + P['bb'][3] * s
-    sy = y_top + ph * s + gap + S['bb'][3] * s
-    sx = x_left - S['bb'][0] * s
-    px = sx
+    s2, sc2 = pick_scale(sw + pw, max(shh, ph), 300 - gap, 200)
+    if m.get('folder') == 'GrabCAD models' and s2 > s:
+        # a tall model: plan on the left, section on the right (both labelled, so they need not line up)
+        s, sc = s2, sc2
+        x_left = 22 + (380 - (sw + pw) * s - gap) / 2
+        y_mid = 18 + 225 / 2
+        px = x_left - P['bb'][0] * s
+        py = y_mid + (P['bb'][1] + P['bb'][3]) / 2 * s
+        sx = x_left + pw * s + gap - S['bb'][0] * s
+        sy = y_mid + (S['bb'][1] + S['bb'][3]) / 2 * s
+    else:
+        x_left = 22 + (380 - max(sw, pw) * s) / 2
+        toth = (shh + ph) * s + gap
+        y_top = 18 + (225 - toth) / 2
+        py = y_top + P['bb'][3] * s
+        sy = y_top + ph * s + gap + S['bb'][3] * s
+        sx = x_left - S['bb'][0] * s
+        px = sx
     # hatching first, so the outlines sit on top
     for j, (k, half) in enumerate(hatched):
         loops = cut_faces_2d(half, y0)

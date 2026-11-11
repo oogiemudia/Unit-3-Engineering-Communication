@@ -1,0 +1,270 @@
+{
+ "name": "spur_gearbox",
+ "duration": 8,
+ "story": "The input pinion turns four times. The 40 tooth wheel turns the other way, half as fast: two turns.",
+ "moving": [
+  "input pinion shaft",
+  "output shaft",
+  "key 8 x 7 x 30",
+  "gear wheel"
+ ],
+ "motion": [
+  {
+   "part": "input pinion shaft",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     7.5,
+     1440
+    ],
+    [
+     8,
+     1440
+    ]
+   ]
+  },
+  {
+   "part": "output shaft",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    75,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     -720.0
+    ],
+    [
+     8,
+     -720.0
+    ]
+   ]
+  },
+  {
+   "part": "key 8 x 7 x 30",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    75,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     -720.0
+    ],
+    [
+     8,
+     -720.0
+    ]
+   ]
+  },
+  {
+   "part": "gear wheel",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    75,
+    0,
+    72
+   ],
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     -720.0
+    ],
+    [
+     8,
+     -720.0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Input turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     4.0
+    ],
+    [
+     8,
+     4.0
+    ]
+   ]
+  },
+  {
+   "name": "Output turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0.0
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     7.5,
+     -2.0
+    ],
+    [
+     8,
+     -2.0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open spur_gearbox.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the shaft joints",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Each shaft should have a Revolution joint to the housing. The key and wheel are one Welded group with the output shaft."
+   ],
+   "note": null
+  },
+  {
+   "view": "joints",
+   "title": "Mesh the gears",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Insert Joint, Rolling joints: Spur Gear. Pick the pitch circle of the pinion, then the pitch circle of the wheel.",
+    "Inventor reads the diameters (50 and 100) and sets the ratio to 2. Click OK."
+   ],
+   "note": "Gear ratio = teeth on the wheel / teeth on the pinion = 40 / 20 = 2: the output turns half as fast with twice the torque."
+  },
+  {
+   "view": "motion",
+   "title": "Turn the input",
+   "command": "Right click the input Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "Input Grapher: 0 degrees at 0.5 s and 1440 degrees (4 turns) at 7.5 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 8 s and Images to 400.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angles of both Revolution joints.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}
