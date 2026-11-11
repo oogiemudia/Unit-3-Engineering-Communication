@@ -1,0 +1,479 @@
+{
+ "name": "universal_joint",
+ "duration": 10,
+ "story": "The output shaft swings 25 degrees each way about the cross, while staying joined to the input shaft: the angle a universal joint lets two shafts work at.",
+ "moving": [
+  "cross (spider)",
+  "output yoke",
+  "output shaft",
+  "grub screw 2",
+  "cup 3",
+  "cup 4",
+  "circlip 3",
+  "circlip 4"
+ ],
+ "motion": [
+  {
+   "part": "cross (spider)",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "output yoke",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "output shaft",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "grub screw 2",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "cup 3",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "cup 4",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "circlip 3",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "circlip 4",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Shaft angle",
+   "unit": "deg",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     25
+    ],
+    [
+     4.5,
+     25
+    ],
+    [
+     7,
+     -25
+    ],
+    [
+     8.5,
+     -25
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open universal_joint.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the two hinge joints",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "There should be a Revolution joint between the input yoke and the cross, and another between the cross and the output yoke.",
+    "The cups and circlips are Welded to their yokes."
+   ],
+   "note": "Two hinges at right angles let the output point in any direction: two degrees of freedom."
+  },
+  {
+   "view": "motion",
+   "title": "Swing the output",
+   "command": "Right click the input yoke to cross Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Drive: Position.",
+    "Input Grapher: 0 at 0.5 s, 25 degrees at 2.5 s, held to 4.5 s, -25 degrees at 7 s, held, back to 0 at 10 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 10 s and Images to 500.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the Revolution joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

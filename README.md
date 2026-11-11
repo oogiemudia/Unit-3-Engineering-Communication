@@ -44,7 +44,25 @@ The views in the demonstrations come from the same CAD models as everything else
 | L bracket | 3.1, 3.2 | Bent plate with an inside radius, a slot and a hole: views, hidden detail and dimensioning. | third angle, first angle | turntable, views |
 | Pin and housing fit | 3.2 | Limits and fits: a 20 H7 hole and a 20 g6 pin, clearance fit. | third angle, first angle, section A-A | turntable, views, explode, section |
 | Pneumatic cylinder | 3.1 | The real component behind the single-acting, spring-return cylinder symbol (ISO 1219-1:2012). | third angle, first angle, section A-A | turntable, views, explode, section |
-| Machine vice | 3.1, 3.2 | A 17-part assembly (our own design, of the kind found in online CAD libraries): parts list, section through the lead screw, standard fasteners, Inventor build steps part by part then the assembly, Dynamic Simulation of the screw closing the jaw, and Stress Analysis of the moving jaw. | third angle, first angle, section A-A | turntable, views, explode, section |
+
+## GrabCAD models
+
+Ten complete multi-part assemblies of the kind people share in online CAD libraries such as GrabCAD. GrabCAD uploads belong to their authors, so none are copied: every model here is our own design, modelled from scratch in CadQuery (`models/library.py`, and the vice in `models/parts.py`). All their files are in `docs/GrabCAD models/`, with a folder page (`docs/GrabCAD models/index.html`) and a GrabCAD models filter in the catalogue. Drawing numbers use the prefix GC.
+
+Each model has every component as its own part with a parts list, third angle, first angle and section drawings, Inventor build steps (every part feature by feature, then the assembly a few parts at a time), turntable, views, exploded and section videos, a Dynamic Simulation and a Stress Analysis checked by hand. Criteria 3.1 and 3.2.
+
+| Model | Parts | What it shows |
+|---|---|---|
+| Machine vice | 17 | Lead screw closing a sliding jaw: section through the screw, standard fasteners. Simulation of the screw closing the jaw; FEA of the moving jaw. |
+| Plummer block bearing | 24 | A split cast iron housing with a deep groove ball bearing on a shaft: half section, cap bolts, a turned shaft. Simulation of the shaft, balls and cage turning; FEA of the housing base. |
+| Spur gearbox | 36 | A 20 tooth pinion driving a 40 tooth wheel (true involute teeth) in a box with bearings and covers. Simulation of the 2 to 1 reduction; FEA of the output shaft. |
+| Universal joint | 15 | Two yokes and a cross with needle cups and circlips. Simulation of the output swinging 25 degrees each way; FEA of a yoke. |
+| Toggle clamp | 14 | A four-bar linkage that locks past dead centre: base, arm, handle, link plates and pins. Simulation of the handle opening the arm; FEA of the clamp arm. |
+| Swivel castor | 30 | A top plate on a ball race, a fork, a wheel with a tyre and an axle bolt. Simulation of the wheel rolling and the fork swivelling; FEA of the fork. |
+| Screw jack | 10 | The classic screw jack: cast body, bronze bush, square thread spindle, tommy bar and load cup. Simulation of five turns lifting 30 mm; FEA of the body. |
+| Flanged shaft coupling | 24 | A protected flanged coupling: two flanges with a spigot and recess, keys and six bolts on a pitch circle. Simulation of the shafts turning together; FEA of a flange keyway. |
+| Knuckle joint | 9 | The classic knuckle joint drawn in proportion to the rod diameter: eye, fork, pin, collar and taper pin. Simulation of the eye swinging on the pin; FEA of the eye end in tension. |
+| Piston and crank (single cylinder engine) | 25 | A single cylinder slider-crank: crankshaft, split connecting rod, piston with rings, finned barrel, head and flywheel. Simulation of the piston stroke; FEA of the connecting rod. |
 
 ## ESP 2023 lock gates (Employer-Set Project, Task 2)
 

@@ -1,0 +1,1186 @@
+{
+ "name": "piston_crank",
+ "title": "Piston and crank (single cylinder engine)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Crankcase frame: base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as crankcase.ipt.",
+    "Sketch a 140 x 120 rectangle on the XZ Plane. Extrude 10 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_01.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Crankcase frame: bearing pedestals",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the pedestal (80 wide, a 60 round top) on the XY Plane. Extrude 15 mm, 25 out from the middle. Mirror."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_02.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Crankcase frame: pillars and deck",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Four 12 mm pillars at the corners up to 112 high, then a 130 x 110 x 8 deck on top."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_03.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Crankcase frame: bearing bores and crank opening",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 32 through both pedestals for the bushes. Hole diameter 64 in the deck for the rod."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_04.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Crankcase frame: tapped holes for the barrel",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the deck: Tapped M8, 4 off on a 70 x 70 square.",
+    "Save crankcase.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_05.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Crankshaft: journals and webs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as crankshaft.ipt.",
+    "Revolve the two 24 mm main journals (37 and 87 long). Sketch the web (a 60 counterweight, the 44 hub and the 30 pin boss) and Extrude 10 mm, 8 out from the middle; Mirror."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_06.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Crankshaft: crank pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 20 circle on the web face, 25 above the axis (the throw: half the 50 mm stroke). Extrude between the webs."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_07.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Crankshaft: keyway and chamfers",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Keyway 8 x 3.5 x 22 for the flywheel. Chamfer the ends 1 mm.",
+    "Save crankshaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_08.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Main bearing bush: bush",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bush.ipt.",
+    "Revolve: 24 bore, 32 outside, 15 long.",
+    "Save bush.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_09.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Cylinder barrel: tube and flanges",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as barrel.ipt.",
+    "Revolve the 62 tube, 105 long. Add a 90 x 90 x 8 base flange and an 80 x 80 x 8 top flange."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder barrel",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_10.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Cylinder barrel: cooling fins",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Revolve one fin (88 diameter, 3 thick). Rectangular Pattern: 5, 15 apart up the barrel."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder barrel",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_11.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Cylinder barrel: bore and holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: the 50 bore (H7), Through All. 4 clearance holes in the base flange, 4 Tapped M8 in the top.",
+    "Save barrel.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder barrel",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_12.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Cylinder head: block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as head.ipt.",
+    "Sketch an 80 x 80 square, Extrude 15. Fillet the corners 4."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder head",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_13.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Cylinder head: combustion chamber",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the underside: diameter 50, 4 deep."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder head",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_14.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Cylinder head: spark plug, screw holes and fins",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Tapped Hole M14x1.25 for the spark plug, 10 off centre. Four clearance holes 9.",
+    "Extrude Cut four 3 mm slots across the top (cooling fins).",
+    "Save head.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cylinder head",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_15.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Piston: blank",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as piston.ipt.",
+    "Sketch a 49.8 circle, Extrude 50."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_16.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Piston: hollow it",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole from the bottom: diameter 42, 45 deep (a 6 mm crown, a 3.9 mm skirt)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_17.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Piston: pin bosses and pin hole",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude the two 16 mm pin bosses across the inside. Hole diameter 12 through them. Revolve Cut the circlip grooves."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_18.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Piston: ring grooves",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve Cut two grooves, 2 wide and 2.5 deep, 5 and 10 below the crown.",
+    "Save piston.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_19.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "Piston ring: ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ring.ipt.",
+    "Sketch circles 45 and 50 with a 2 mm gap. Extrude 1.9.",
+    "Save ring.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "piston ring 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_20.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Gudgeon pin: pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as gudgeon_pin.ipt.",
+    "Sketch circles 12 and 7, Extrude 38 Symmetric.",
+    "Save gudgeon_pin.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "gudgeon pin",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_21.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "Circlip: clip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as circlip.ipt.",
+    "Sketch circles 10 and 13.4 with a 3 mm gap. Extrude 1.1.",
+    "Save circlip.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_22.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_22.json"
+  },
+  {
+   "n": 23,
+   "title": "Connecting rod: small end and shank",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as con_rod.ipt.",
+    "Sketch the 22 small end eye and a 12 x 12 shank on the XY Plane, centres 100 apart. Extrude."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "connecting rod",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_23.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_23.json"
+  },
+  {
+   "n": 24,
+   "title": "Connecting rod: big end (top half)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the top half of the 36 big end and the 44 wide bolt bosses. Extrude 15.8 Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "connecting rod",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_24.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_24.json"
+  },
+  {
+   "n": 25,
+   "title": "Connecting rod: bores and bolt holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 12 at the small end, 20 at the big end, and two 6.4 bolt holes 32 apart.",
+    "Save con_rod.ipt."
+   ],
+   "note": "In the factory the rod and cap are made as one forging, bored together and then split, so they must go back together the same way.",
+   "parts": [
+    {
+     "name": "connecting rod",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_25.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_25.json"
+  },
+  {
+   "n": 26,
+   "title": "Big end cap: cap",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cap.ipt.",
+    "Sketch the bottom half of the big end, 44 wide. Extrude 15.8 Symmetric. Holes 20 and two 6.4.",
+    "Save cap.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "big end cap",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_26.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_26.json"
+  },
+  {
+   "n": 27,
+   "title": "Flywheel: rim and hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as flywheel.ipt.",
+    "Sketch a 140 circle, Extrude 15. Add a 50 hub, 28 long."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_27.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_27.json"
+  },
+  {
+   "n": 28,
+   "title": "Flywheel: bore and keyway",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 24 (H7) through the hub. Keyway 8 x 3.3."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_28.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_28.json"
+  },
+  {
+   "n": 29,
+   "title": "Flywheel: dished web and holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Revolve Cut a recess 60 to 120 diameter, 9 deep. Hole 18 at 45 radius, Circular Pattern 5.",
+    "Save flywheel.ipt."
+   ],
+   "note": "The heavy flywheel stores energy from the power stroke and carries the crank round the other three strokes.",
+   "parts": [
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_29.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_29.json"
+  },
+  {
+   "n": 30,
+   "title": "Key 8 x 7 x 22: key",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as key.ipt.",
+    "Sketch 8 x 22, Extrude 6.8.",
+    "Save key.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "key 8 x 7 x 22",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_30.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_30.json"
+  },
+  {
+   "n": 31,
+   "title": "Assembly: crankcase and bushes",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as piston_crank.iam.",
+    "Place crankcase_frame.ipt Grounded. Place two bushes and Insert them in the pedestal bores."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 2",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_31.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_31.json"
+  },
+  {
+   "n": 32,
+   "title": "Assembly: crankshaft, key and flywheel",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place crankshaft.ipt: Mate its axis to the bush axis and Flush its middle with the frame.",
+    "Place the key and flywheel.ipt on the long end."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 2",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 22",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_32.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_32.json"
+  },
+  {
+   "n": 33,
+   "title": "Assembly: piston sub-assembly",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place piston.ipt, two rings, the gudgeon pin (Insert through the bosses) and two circlips."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 2",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 22",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gudgeon pin",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_33.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_33.json"
+  },
+  {
+   "n": 34,
+   "title": "Assembly: connecting rod",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place connecting_rod.ipt. Mate the small end to the gudgeon pin and the big end to the crank pin.",
+    "Place the cap, the two bolts and two nuts."
+   ],
+   "note": "Now drag the flywheel: the crank turns, the rod rocks and the piston slides up and down.",
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 2",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 22",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gudgeon pin",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "connecting rod",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end cap",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end bolt 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end bolt 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end nut 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end nut 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_34.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_34.json"
+  },
+  {
+   "n": 35,
+   "title": "Assembly: barrel, head and spark plug",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place cylinder_barrel.ipt: Mate its bore to the piston and its flange to the deck.",
+    "Place cylinder_head.ipt, four ISO 4762 M8 x 25 screws and the spark plug."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "crankcase frame",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 1",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "main bush 2",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "crankshaft",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key 8 x 7 x 22",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flywheel",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "piston ring 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "gudgeon pin",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "connecting rod",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end cap",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end bolt 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end bolt 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end nut 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "big end nut 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cylinder barrel",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cylinder head",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head screw 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head screw 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head screw 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "head screw 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spark plug M14",
+     "colour": "#2E3338",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/piston_crank/step_35.glb",
+   "edges": "GrabCAD models/steps/piston_crank/step_35.json"
+  }
+ ]
+}

@@ -1,0 +1,1434 @@
+{
+ "name": "plummer_block",
+ "title": "Plummer block bearing",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Housing base: sketch the foot",
+   "command": "3D Model tab > Sketch panel > Start 2D Sketch",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as housing_base.ipt.",
+    "Start 2D Sketch on the XZ Plane (the ground). Rectangle (Two Point Center) 240 x 55 on the origin.",
+    "Finish Sketch."
+   ],
+   "note": null,
+   "parts": [],
+   "overlay": true,
+   "glb": "GrabCAD models/steps/plummer_block/step_01.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Housing base: extrude the foot, body and lugs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Extrude the foot 20 mm upwards.",
+    "Sketch on its top: a rectangle 110 x 60 (the body) and one 190 x 44 (the stud lugs), both centred. Extrude them 45 mm, Join, so the split line is 65 mm (the shaft centre height) above the base."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_02.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Housing base: the bore",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch on the XY Plane (the front, through the shaft axis) the half section of the bore: bearing seat 80 diameter x 18 wide, grease space 60 x 28, shaft clearance 42, two felt seal grooves 54 x 6 at 20 to 26 from the middle.",
+    "Revolve it about the shaft axis, Cut. The upper half cuts nothing, because the base stops at the split line."
+   ],
+   "note": "The bore is cut in both halves with the same sketch, as the halves are machined together.",
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_03.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Housing base: slots for the holding down bolts",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the top of the foot: two Slots (Center to Center) 12 long x 14 wide, 105 each side of the middle.",
+    "Extrude, Cut, Through All."
+   ],
+   "note": "Slots let the block slide along to line the shaft up before the bolts are tightened.",
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_04.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Housing base: tapped holes for the cap studs",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the split face, 75 each side of the middle: Tapped Hole, M12x1.75, Distance 24 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_05.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Housing base: round the foot corners",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: radius 4 mm on the four vertical corners of the foot.",
+    "Save housing_base.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_06.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Housing cap: half cylinder and lugs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as housing_cap.ipt.",
+    "Sketch on the XY Plane: a half circle of radius 55 on the shaft axis (centre 65 up), and a rectangle 190 x 20 on the split line.",
+    "Extrude the half circle 60 mm (Symmetric) and the rectangle 44 mm (Symmetric)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_07.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Housing cap: the bore",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve the same bore section as the base, Cut."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_08.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Housing cap: clearance holes for the studs",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 75 each side: Simple Hole, diameter 13, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_09.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Housing cap: boss and hole for the grease nipple",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Sketch a 18 mm circle on the XZ Plane at the top. Extrude it to 2 mm above the cap (Join).",
+    "Hole on the boss: Tapped Hole, M6x1, To the bearing seat.",
+    "Save housing_cap.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_10.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Bearing outer ring: ring",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as outer_ring.ipt.",
+    "Sketch the ring section on the XY Plane: 68 to 80 diameter, 18 wide. Revolve 360 degrees."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_11.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Bearing outer ring: ball track",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch a 12 mm circle on the pitch diameter (60). Revolve, Cut.",
+    "Save outer_ring.ipt."
+   ],
+   "note": "Inventor can make the whole bearing in one go with Design tab > Bearing; it is built here part by part so you can see inside it.",
+   "parts": [
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_12.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Bearing inner ring: ring and ball track",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as inner_ring.ipt.",
+    "Sketch the ring section: 40 to 52 diameter, 18 wide. Revolve 360 degrees.",
+    "Sketch the 12 mm ball circle on the 60 pitch diameter and Revolve, Cut.",
+    "Save inner_ring.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_13.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Bearing cage: band",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cage.ipt.",
+    "Sketch 57 to 63 diameter, 15 wide on the pitch diameter. Revolve 360 degrees."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_14.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Bearing cage: ball pockets",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Revolve a 12.4 mm circle on the pitch diameter as a Cut (one pocket).",
+    "Circular Pattern: 9 pockets about the bearing axis.",
+    "Save cage.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_15.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Ball 12 mm: sphere",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ball.ipt.",
+    "Sketch a half circle of diameter 11.9 with a centre line. Revolve 360 degrees.",
+    "Save ball.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_16.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Felt seal: ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as felt_seal.ipt.",
+    "Sketch circles of diameter 40 and 54. Extrude 6 mm.",
+    "Save felt_seal.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_17.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Shaft: cylinder",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as shaft.ipt.",
+    "Sketch a 40 mm circle on the XZ Plane. Extrude 180 mm Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_18.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Shaft: chamfer the ends",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1.5 mm on both end edges.",
+    "Save shaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_19.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "Assembly: place the housing base",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as plummer_block.iam.",
+    "Place housing_base.ipt, right click, Place Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_20.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Assembly: build the bearing",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place the outer ring, inner ring and cage. Constrain > Mate their axes and Flush their middle planes.",
+    "Place ball.ipt nine times: Mate each ball centre to the pitch circle and to a cage pocket.",
+    "Inventor users can save this as a sub-assembly, bearing_6208.iam."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_21.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "Assembly: drop the shaft and bearing into the base",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place shaft.ipt. Insert: the bearing bore onto the shaft, with the bearing in the middle of the shaft.",
+    "Constrain > Mate: the shaft axis to the bore axis of the base, and Flush the bearing middle plane with the base middle plane."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_22.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_22.json"
+  },
+  {
+   "n": 23,
+   "title": "Assembly: felt seals",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place felt_seal.ipt twice. Mate each to the shaft axis and Flush it with the side of its groove."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 2",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_23.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_23.json"
+  },
+  {
+   "n": 24,
+   "title": "Assembly: studs",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: Fasteners > Bolts > Studs, M12 x 74. Insert one into each tapped hole."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 2",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_24.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_24.json"
+  },
+  {
+   "n": 25,
+   "title": "Assembly: fit the cap",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place housing_cap.ipt. Mate its split face to the split face of the base, and Insert a stud hole onto each stud."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 2",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_25.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_25.json"
+  },
+  {
+   "n": 26,
+   "title": "Assembly: washers and nuts",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: ISO 7089 M12 washer and ISO 4032 M12 nut, two of each. Insert them on the studs."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 2",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_26.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_26.json"
+  },
+  {
+   "n": 27,
+   "title": "Assembly: grease nipple",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: Fittings > Grease Nipple, straight, M6. Insert it into the hole on the top boss."
+   ],
+   "note": "Grease pumped in here fills the space each side of the bearing; the felt seals keep it in and the dirt out.",
+   "parts": [
+    {
+     "name": "housing base",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing outer ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing inner ring",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing cage",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 1",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "felt seal 2",
+     "colour": "#3A3F44",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "stud 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "housing cap",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "grease nipple M6",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/plummer_block/step_27.glb",
+   "edges": "GrabCAD models/steps/plummer_block/step_27.json"
+  }
+ ]
+}

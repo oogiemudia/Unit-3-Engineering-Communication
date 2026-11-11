@@ -292,3 +292,109 @@ CASES.update(
                        _pc.PRY, _hc['b'], _hc['t'], _hc['direct'], _hc['e'], _pc.PRY, _hc['e'], _hc['b'], _hc['t'],
                        _hc['bend'], _hc['total'], _hc['sf'], _pc.CATCH_YIELD, _hc['lip_bend'], _hc['lip_shear'])),
 )
+
+
+# ------------------------------------------------------------------ GrabCAD models (models/library.py)
+GREY_IRON = dict(name='Iron, Gray (EN-GJL-250: E 110 GPa; cast iron has no yield point, so its 250 MPa tensile strength is used)',
+                 E=110000, nu=0.26, yield_strength=250)
+ALLOY_STEEL = dict(name='Steel, Alloy (709M40 / 42CrMo4, yield 680 MPa)', E=210000, nu=0.29, yield_strength=680)
+EN8 = dict(name='Steel, Carbon (080M40 / EN8, yield 385 MPa)', E=210000, nu=0.29, yield_strength=385)
+CASES['plummer_block'] = dict(
+    part='housing base', material=GREY_IRON,
+    story='The shaft pushes down on the bearing with 10 kN (about half the bearing\'s static rating). The base is held only by '
+          'the two holding down bolts in its slots, so the foot bends between them.',
+    fixed=[dict(test=cylinder(7), where='the curved ends of the two bolt slots')],
+    loads=[dict(kind='force', value=10000, dir=(0, 0, -1), test=cylinder(40), where='the bearing seat (the 80 mm half bore)',
+                how='Force, 10000 N, straight down')],
+    hand_check='The foot as a beam between the bolts (210 mm apart) with the load in the middle: M = F L / 4 = 10000 x 210 / 4 = '
+               '525000 N mm. Under the bore the section is about 60 wide and 25 deep: Z = 60 x 25^2 / 6 = 6250 mm^3, so '
+               'M / Z = 84 MPa. The body and lugs either side of the bore stiffen it, so the FEA stress is lower.')
+CASES['spur_gearbox'] = dict(
+    part='output shaft', material=EN8,
+    story='The gear wheel carries 250 N m. The tooth force is 2 x 250000 / 100 = 5000 N along the pitch line and 5000 x tan 20 = 1820 N '
+          'towards the centre, 5320 N in all, which bends the shaft between its bearings.', mesh_size=3,
+    fixed=[dict(test=cylinder(10), where='the bearing journals (the 20 mm diameters)')],
+    loads=[dict(kind='force', value=5320, dir=(0, 0, -1), test=cylinder(12), where='the 24 mm wheel seat',
+                how='Force, 5320 N, square to the shaft')],
+    hand_check='Between simply supported bearings 74 apart, M = F L / 4 = 5320 x 74 / 4 = 98400 N mm; with both ends held, M = F L / 8 '
+               '= 49200 N mm. Z = pi x 24^3 / 32 = 1357 mm^3, so the bending stress is between 36 and 73 MPa. The FEA holds the '
+               'journals all round (nearer the held case), and the keyway and the shoulders raise the peak.')
+CASES['universal_joint'] = dict(
+    part='input yoke', material=ALLOY_STEEL,
+    story='The joint passes 260 N m: the cross pushes up on one arm and down on the other with 5000 N each, 26 mm from the shaft line.',
+    fixed=[dict(test=cylinder(11), where='the 22 mm shaft bore')],
+    loads=[dict(kind='force', value=5000, dir=(0, 0, 1), test=lambda f: cylinder(10)(f) and f['c'][1] > 0,
+                where='the cup hole in the left arm', how='Force, 5000 N, up'),
+           dict(kind='force', value=5000, dir=(0, 0, -1), test=lambda f: cylinder(10)(f) and f['c'][1] < 0,
+                where='the cup hole in the right arm', how='Force, 5000 N, down')],
+    hand_check='Each arm is a cantilever 28 mm long from the bridge: M = 5000 x 28 = 140000 N mm. The arm is 8 thick and 32 deep, '
+               'Z = 8 x 32^2 / 6 = 1365 mm^3, so the bending stress is 103 MPa at the root of the arm. The FEA peak (about 260 MPa) '
+               'is in the sharp inside corner where the arm meets the bridge: a stress concentration of about 2.5. A 3 mm fillet '
+               'there would bring it down a lot, which is why forged yokes have generous radii.')
+C45 = dict(name='Steel, Carbon (C45 / 080M46, yield 430 MPa)', E=210000, nu=0.29, yield_strength=430)
+S355 = dict(name='Steel, High Strength Low Alloy (S355, yield 355 MPa)', E=210000, nu=0.30, yield_strength=355)
+CASES['toggle_clamp'] = dict(
+    part='clamp arm', material=C45,
+    story='The clamp holds the work down with 800 N (its rated holding force). The spindle pushes up on the end of the arm, and the '
+          'pivot pin and the link pin hold it.',
+    fixed=[dict(test=cylinder(3), where='the pivot pin hole and the link pin hole')],
+    loads=[dict(kind='force', value=800, dir=(0, 0, 1), test=cylinder(4.25), where='the round ends of the spindle slot',
+                how='Force, 800 N, up')],
+    hand_check='The arm is a cantilever from the pivot: the slot centre is 92 mm in front of it, so M = 800 x 92 = 73600 N mm. The bar '
+               'is 12 wide and 16 deep, Z = 12 x 16^2 / 6 = 512 mm^3, so the bending stress next to the pivot is M / Z = 144 MPa. '
+               'The 6 mm pin hole sits in the middle of that section (Z drops to 485 mm^3, 152 MPa) and raises the stress round its '
+               'edge by about 1.4, which is where the FEA finds its 210 MPa peak.')
+CASES['swivel_castor'] = dict(
+    part='fork', material=S355,
+    story='The castor carries 150 kg (1470 N, say 1500 N). The axle pushes up on the legs and the balls in the track hold the crown.',
+    fixed=[dict(test=lambda f: f['t'] == 'TORUS', where='the ball track in the crown')],
+    loads=[dict(kind='force', value=1500, dir=(0, 0, 1), test=cylinder(5.25), where='the axle holes in the legs',
+                how='Force, 1500 N, up')],
+    hand_check='Each leg carries 750 N. Where a leg (centre 35 mm out, 22 mm to the side) meets the crown, the nearest point of the '
+               'ball track (60 diameter) is about 14.6 mm away, so the crown bends as a short cantilever: M = 750 x 14.6 = 10950 N mm. '
+               'The crown is 6 thick and about 24 wide there, Z = 24 x 6^2 / 6 = 144 mm^3, so M / Z = 76 MPa. The FEA peak (85 MPa) '
+               'is at the edge of the ball track, close to this.')
+CASES['screw_jack'] = dict(
+    part='body', material=GREY_IRON,
+    story='The jack lifts 3 tonnes (30 kN). The nut flange presses down on the top of the body, and the floor holds its base.',
+    fixed=[dict(test=plane('z', 0), where='the underside of the base')],
+    loads=[dict(kind='force', value=30000, dir=(0, 0, -1), test=plane('z', 120), where='the top of the boss (under the nut flange)',
+                how='Force, 30000 N, straight down')],
+    hand_check='Compressive stress = F / A. On the top face (a ring 56 to 70 diameter) A = pi x (35^2 - 28^2) = 1385 mm^2, so '
+               '30000 / 1385 = 22 MPa. Lower down, at 100 mm high, the wall is 38 to 64 diameter: A = 2083 mm^2 and the stress 14 MPa. '
+               'Cast iron is far stronger in compression than in tension, so a jack body is a good use of it. The FEA peak (85 MPa) is '
+               'at the edge of the set screw hole, 10 mm below the top: a hole in a 7 mm wall carrying load concentrates the stress '
+               'about 3 to 4 times, as the hand value of 22 MPa suggests.')
+
+
+
+CASES['flange_coupling'] = dict(
+    part='flange B (recess)', material=C45,
+    story='The coupling carries 430 N m of torque. Shaft B pushes its key against the side of the keyway in flange B, and the six '
+          'bolts hold the flange to flange A.',
+    fixed=[dict(test=cylinder(6.5), where='the six bolt holes')],
+    loads=[dict(kind='force', value=20000, dir=(0, -1, 0), test=plane('y', -6), where='one side wall of the keyway',
+                how='Force, 20000 N, across the keyway (430 N m / 21.5 mm radius)')],
+    hand_check='Bearing stress on the keyway wall = F / A. The wall runs from the bore (19.1 mm from the centre) to 23.3 mm, so it is 4.2 mm high and '
+               '81 mm long: A = 340 mm^2 and 20000 / 340 = 59 MPa, the same as the FEA peak (59 MPa), which is at the inner corner of the wall '
+               'where the keyway meets the bore. The six bolts each carry 430 / (6 x 0.06) = 1194 N, so the flange itself is lightly loaded.')
+
+CASES['knuckle_joint'] = dict(
+    part='eye end', material=EN8,
+    story='The tie rods pull the joint apart with 50 kN. The pin pulls on the eye and the tie rod holds the other end.',
+    fixed=[dict(test=cylinder(12), where='the tapped hole for the tie rod')],
+    loads=[dict(kind='force', value=50000, dir=(-1, 0, 0), test=lambda f: cylinder(12.5)(f) and f['c'][0] < 0,
+                where='the half of the pin hole the pin pulls on', how='Force, 50000 N, along the rod towards the fork')],
+    hand_check='Tension across the eye, beside the pin hole: A = (50 - 25) x 31 = 775 mm^2, so 50000 / 775 = 65 MPa. A pin-loaded hole '
+               'concentrates the stress about twice at the sides of the hole, giving about 130 MPa: the FEA peak (132 MPa) is just there, at '
+               'the side of the pin hole. The M24 tie rod (353 mm^2 stress area) carries 50000 / 353 = 142 MPa, so it is the weakest link.')
+
+CASES['piston_crank'] = dict(
+    part='connecting rod', material=C45,
+    story='At the top of the stroke the burning gas presses on the piston at 40 bar. The gudgeon pin pushes the rod down onto the crank pin.',
+    fixed=[dict(test=cylinder(10), where='the big end bore (on the crank pin)')],
+    loads=[dict(kind='force', value=7850, dir=(0, 0, -1), test=cylinder(6),
+                where='the small end bore (the gudgeon pin bears on it)', how='Force, 7850 N, straight down (4 MPa x the 1963 mm^2 piston area)')],
+    hand_check='Compression in the 12 x 12 shank = 7850 / 144 = 55 MPa. Buckling (Euler, pinned ends): P = pi^2 x E x I / L^2 = pi^2 x 210000 x '
+               '1728 / 100^2 = 358 kN, 45 times the load. Bearing on the gudgeon pin = 7850 / (12 x 17) = 38 MPa. The FEA peak (102 MPa) is at '
+               'the edge of the small end bore, where the 5 mm wall above the shank carries the pin load: about twice the shank stress.')

@@ -1,0 +1,547 @@
+{
+ "name": "screw_jack",
+ "title": "Screw jack",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Body: revolve the body",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as body.ipt.",
+    "Sketch the half section on the XY Plane: base 120 diameter x 15, tapering to 64 at 100 high, a 70 x 20 boss on top; inside, a 56 bore 30 deep for the nut and a 38 bore below. Revolve 360."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_01.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Body: set screw hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the side of the boss, 10 below the top: Tapped M8x1.25, into the nut bore."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_02.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Body: holding down holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole diameter 10 in the base at 52 from the centre. Circular Pattern: 4.",
+    "Save body.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_03.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Bronze bush: flanged nut",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as nut.ipt.",
+    "Revolve the section: 56 diameter x 30, an 80 x 7 flange, a 36 bore."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_04.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Bronze bush: thread and lock hole",
+   "command": "3D Model tab > Modify panel > Thread",
+   "actions": [
+    "Thread: square thread 36 x 6 (Inventor: add a custom thread or model it with Coil).",
+    "Hole for the set screw, matching the body hole.",
+    "Save nut.ipt."
+   ],
+   "note": "Bronze is used for the nut because it runs well against a steel screw and wears out first, so the nut, not the screw, is replaced.",
+   "parts": [
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_05.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Screw spindle: revolve the spindle",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as spindle.ipt.",
+    "Revolve the half section: thread 36 diameter x 105, head 60 x 40, spigot 24 x 10."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_06.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Screw spindle: tommy bar holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Two holes diameter 16 through the head, at right angles, 20 below its top."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_07.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Screw spindle: tapped hole and chamfer",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the spigot: Tapped M8x1.25, 20 deep. Chamfer the bottom end 2 mm.",
+    "Thread: square 36 x 6 on the 36 mm diameter.",
+    "Save spindle.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_08.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Load cup: revolve the cup",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cup.ipt.",
+    "Revolve the half section: 70 diameter x 25, a 24.4 bore for the spigot and a 20 recess for the screw head."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "load cup",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_09.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Load cup: grooves and chamfer",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch four 3 mm grooves across the top and Extrude Cut 2 deep. Chamfer the top edge 1.5.",
+    "Save cup.ipt."
+   ],
+   "note": "The cup is free to turn on the spigot, so the load stays still while the screw turns under it.",
+   "parts": [
+    {
+     "name": "load cup",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_10.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Tommy bar: bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tommy_bar.ipt.",
+    "Sketch a 14 circle, Extrude 250 Symmetric. Chamfer the ends 1 mm.",
+    "Save tommy_bar.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tommy bar",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_11.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Bar end ball: ball",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as bar_ball.ipt.",
+    "Revolve a 24 mm ball and cut a 14 hole 15 deep for the bar.",
+    "Save bar_ball.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bar end ball 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_12.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Assembly: place the body",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as screw_jack.iam.",
+    "Place body.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_13.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Assembly: press in the bronze bush",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place nut.ipt (the bronze bush the screw runs in). Insert its flange onto the top of the body. Line up the set screw holes."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_14.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Assembly: lock the nut",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: ISO 4026 M8 x 12 set screw. Insert into the boss hole."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "set screw M8 x 12",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_15.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Assembly: screw in the spindle",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place screw_spindle.ipt. Mate its axis to the nut axis; Mate the head 50 above the nut flange."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "set screw M8 x 12",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_16.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: cup, washer and screw",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place load_cup.ipt on the spigot (Insert). Place an M8 washer and an ISO 4762 M8 x 25 cap screw."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "set screw M8 x 12",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "load cup",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer M8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw M8 x 25",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_17.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Assembly: tommy bar",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place tommy_bar.ipt in one of the head holes and Mate its middle to the axis. Insert a ball on each end."
+   ],
+   "note": "One turn of the bar lifts the load by one pitch: 6 mm.",
+   "parts": [
+    {
+     "name": "body",
+     "colour": "#6E7F99",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bronze bush",
+     "colour": "#B08D57",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "set screw M8 x 12",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "screw spindle",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "load cup",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer M8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cap screw M8 x 25",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tommy bar",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bar end ball 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bar end ball 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/screw_jack/step_18.glb",
+   "edges": "GrabCAD models/steps/screw_jack/step_18.json"
+  }
+ ]
+}

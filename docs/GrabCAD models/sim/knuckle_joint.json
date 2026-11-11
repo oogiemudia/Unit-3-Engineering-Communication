@@ -1,0 +1,253 @@
+{
+ "name": "knuckle_joint",
+ "duration": 10,
+ "story": "The eye end and its tie rod swing 15 degrees each way about the knuckle pin. A knuckle joint lets two rods pull in a straight line while allowing a little angle in one plane.",
+ "moving": [
+  "eye end",
+  "tie rod 1",
+  "lock nut 1"
+ ],
+ "motion": [
+  {
+   "part": "eye end",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     15
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     7,
+     -15
+    ],
+    [
+     8.5,
+     -15
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "tie rod 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     15
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     7,
+     -15
+    ],
+    [
+     8.5,
+     -15
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  },
+  {
+   "part": "lock nut 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     15
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     7,
+     -15
+    ],
+    [
+     8.5,
+     -15
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Angle",
+   "unit": "deg",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     2.5,
+     15
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     7,
+     -15
+    ],
+    [
+     8.5,
+     -15
+    ],
+    [
+     10,
+     0
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open knuckle_joint.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Hinge the eye on the pin",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Check for a Revolution joint between the fork end and the eye end, on the pin hole axis.",
+    "The pin, collar and taper pin are Welded to the fork; the tie rods and lock nuts are Welded to their ends."
+   ],
+   "note": null
+  },
+  {
+   "view": "motion",
+   "title": "Swing the eye end",
+   "command": "Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Input Grapher: 0 at 0.5 s, 15 degrees at 2.5 s, held, -15 degrees at 7 s, held, 0 at 10 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 10 s and Images to 500.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angle of the Revolution joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

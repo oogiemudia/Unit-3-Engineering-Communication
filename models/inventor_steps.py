@@ -678,3 +678,6 @@ STEPS.update(ESP2023_STEPS)
 STEPS.update(ESP2026_STEPS)
 STEPS.update(ESP2024_STEPS)
 STEPS.update(ESP2025_STEPS)
+
+from library import STEPS as LIBRARY_STEPS  # noqa: E402
+STEPS.update({k: v for k, v in LIBRARY_STEPS.items()})

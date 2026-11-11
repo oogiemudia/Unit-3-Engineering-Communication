@@ -1,0 +1,1181 @@
+{
+ "name": "swivel_castor",
+ "duration": 9,
+ "story": "The castor rolls and swings round half a turn, as it does when a trolley changes direction. The wheel turns on its axle, the fork turns on the balls, and the balls roll round at half the fork speed.",
+ "moving": [
+  "fork",
+  "king pin rivet",
+  "wheel centre",
+  "tyre",
+  "bearing tube",
+  "spacer 1",
+  "spacer 2",
+  "axle bolt M10 x 58",
+  "nut M10",
+  "ball 1",
+  "ball 2",
+  "ball 3",
+  "ball 4",
+  "ball 5",
+  "ball 6",
+  "ball 7",
+  "ball 8",
+  "ball 9",
+  "ball 10",
+  "ball 11",
+  "ball 12",
+  "ball 13",
+  "ball 14",
+  "ball 15",
+  "ball 16",
+  "ball 17",
+  "ball 18",
+  "ball 19",
+  "ball 20"
+ ],
+ "motion": [
+  {
+   "part": "wheel centre",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    35,
+    0,
+    50
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     720
+    ],
+    [
+     9,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "tyre",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    35,
+    0,
+    50
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     720
+    ],
+    [
+     9,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "bearing tube",
+   "kind": "turn",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "centre": [
+    35,
+    0,
+    50
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     720
+    ],
+    [
+     9,
+     720
+    ]
+   ]
+  },
+  {
+   "part": "fork",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "king pin rivet",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "wheel centre",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "tyre",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "bearing tube",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "spacer 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "spacer 2",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "axle bolt M10 x 58",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "nut M10",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "part": "ball 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 2",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 3",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 4",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 5",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 6",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 7",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 8",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 9",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 10",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 11",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 12",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 13",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 14",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 15",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 16",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 17",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 18",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 19",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  },
+  {
+   "part": "ball 20",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     90
+    ],
+    [
+     9,
+     90
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Swivel angle",
+   "unit": "deg",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     180
+    ],
+    [
+     9,
+     180
+    ]
+   ]
+  },
+  {
+   "name": "Wheel turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     8.5,
+     2
+    ],
+    [
+     9,
+     2
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open swivel_castor.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Check the swivel and the axle",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Revolution joint between the top plate and the fork (the king pin axis), and another between the fork and the wheel (the axle).",
+    "The balls: suppress them in the simulation, or make them a group joined to the fork with a 0.5 Motion constraint."
+   ],
+   "note": null
+  },
+  {
+   "view": "motion",
+   "title": "Swivel and roll",
+   "command": "Edit imposed motion on both Revolution joints",
+   "actions": [
+    "Swivel joint: 0 at 0.5 s to 180 degrees at 8.5 s. Axle joint: 0 to 720 degrees over the same time."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 9 s and Images to 450.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the angles of the two Revolution joints.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

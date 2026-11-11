@@ -750,11 +750,13 @@
    1.3
   ],
   "files": {
-   "step": "step/machine_vice.step",
-   "stl": "stl/machine_vice.stl",
-   "glb": "glb/machine_vice.glb",
-   "edges": "edges/machine_vice.json"
+   "step": "GrabCAD models/step/machine_vice.step",
+   "stl": "GrabCAD models/stl/machine_vice.stl",
+   "glb": "GrabCAD models/glb/machine_vice.glb",
+   "edges": "GrabCAD models/edges/machine_vice.json"
   },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
   "bom": [
    {
     "no": 1,
@@ -907,9 +909,3307 @@
    }
   ],
   "drawings": {
-   "third": "drawings/machine_vice_third_angle",
-   "first": "drawings/machine_vice_first_angle",
-   "section": "drawings/machine_vice_section"
+   "third": "GrabCAD models/drawings/machine_vice_third_angle",
+   "first": "GrabCAD models/drawings/machine_vice_first_angle",
+   "section": "GrabCAD models/drawings/machine_vice_section"
+  }
+ },
+ {
+  "name": "plummer_block",
+  "title": "Plummer block bearing",
+  "criteria": "3.1, 3.2",
+  "uses": "Assembly and section drawings of a split housing, a rolling bearing shown in section, parts list, studs and nuts.",
+  "description": "A split plummer block (pillow block) carrying a 40 mm shaft on a 6208 ball bearing: cast iron base and cap held by studs and nuts, the bearing modelled ring by ring with its nine balls and cage, felt seals and a grease nipple. 24 parts.",
+  "parts": [
+   {
+    "name": "housing base",
+    "colour": "#6E7F99",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "housing cap",
+    "colour": "#6E7F99",
+    "explode": [
+     0.0,
+     110.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bearing outer ring",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bearing inner ring",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bearing cage",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 3",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 4",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 5",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 6",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 7",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 8",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 9",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "felt seal 1",
+    "colour": "#3A3F44",
+    "explode": [
+     0.0,
+     55.0,
+     -50.0
+    ]
+   },
+   {
+    "name": "felt seal 2",
+    "colour": "#3A3F44",
+    "explode": [
+     0.0,
+     55.0,
+     50.0
+    ]
+   },
+   {
+    "name": "shaft",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     55.0,
+     0.0
+    ]
+   },
+   {
+    "name": "stud 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "stud 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     175.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     175.0,
+     0.0
+    ]
+   },
+   {
+    "name": "grease nipple M6",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     160.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   240.0,
+   180.0,
+   137.5
+  ],
+  "section": "x",
+  "exploded": true,
+  "iso": [
+   1,
+   0.9,
+   1.2
+  ],
+  "files": {
+   "step": "GrabCAD models/step/plummer_block.step",
+   "stl": "GrabCAD models/stl/plummer_block.stl",
+   "glb": "GrabCAD models/glb/plummer_block.glb",
+   "edges": "GrabCAD models/edges/plummer_block.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "housing base",
+    "qty": 1,
+    "material": "EN-GJL-250 grey cast iron",
+    "group": "Housing",
+    "model": null,
+    "file": "housing_base.ipt",
+    "bought": false,
+    "instances": [
+     "housing base"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "housing cap",
+    "qty": 1,
+    "material": "EN-GJL-250 grey cast iron",
+    "group": "Housing",
+    "model": null,
+    "file": "housing_cap.ipt",
+    "bought": false,
+    "instances": [
+     "housing cap"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "bearing outer ring",
+    "qty": 1,
+    "material": "100Cr6 bearing steel",
+    "group": "Bearing 6208",
+    "model": null,
+    "file": "outer_ring.ipt",
+    "bought": false,
+    "instances": [
+     "bearing outer ring"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "bearing inner ring",
+    "qty": 1,
+    "material": "100Cr6 bearing steel",
+    "group": "Bearing 6208",
+    "model": null,
+    "file": "inner_ring.ipt",
+    "bought": false,
+    "instances": [
+     "bearing inner ring"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "bearing cage",
+    "qty": 1,
+    "material": "Pressed steel",
+    "group": "Bearing 6208",
+    "model": null,
+    "file": "cage.ipt",
+    "bought": false,
+    "instances": [
+     "bearing cage"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "ball 12 mm",
+    "qty": 9,
+    "material": "100Cr6 bearing steel",
+    "group": "Bearing 6208",
+    "model": null,
+    "file": "ball.ipt",
+    "bought": false,
+    "instances": [
+     "ball 1",
+     "ball 2",
+     "ball 3",
+     "ball 4",
+     "ball 5",
+     "ball 6",
+     "ball 7",
+     "ball 8",
+     "ball 9"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "felt seal",
+    "qty": 2,
+    "material": "Wool felt",
+    "group": "Housing",
+    "model": null,
+    "file": "felt_seal.ipt",
+    "bought": false,
+    "instances": [
+     "felt seal 1",
+     "felt seal 2"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "shaft",
+    "qty": 1,
+    "material": "080M40 steel",
+    "group": "Shaft",
+    "model": null,
+    "file": "shaft.ipt",
+    "bought": false,
+    "instances": [
+     "shaft"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "stud M12 x 74",
+    "qty": 2,
+    "material": "Steel, grade 8.8",
+    "group": "Fasteners (bought in)",
+    "model": null,
+    "file": "stud.ipt",
+    "bought": true,
+    "instances": [
+     "stud 1",
+     "stud 2"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "washer M12",
+    "qty": 2,
+    "material": "Steel",
+    "group": "Fasteners (bought in)",
+    "model": null,
+    "file": "washer.ipt",
+    "bought": true,
+    "instances": [
+     "washer 1",
+     "washer 2"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "hex nut M12",
+    "qty": 2,
+    "material": "Steel, grade 8",
+    "group": "Fasteners (bought in)",
+    "model": null,
+    "file": "nut.ipt",
+    "bought": true,
+    "instances": [
+     "nut 1",
+     "nut 2"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "grease nipple M6",
+    "qty": 1,
+    "material": "Zinc plated steel",
+    "group": "Fasteners (bought in)",
+    "model": null,
+    "file": "grease_nipple.ipt",
+    "bought": true,
+    "instances": [
+     "grease nipple M6"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/plummer_block_third_angle",
+   "first": "GrabCAD models/drawings/plummer_block_first_angle",
+   "section": "GrabCAD models/drawings/plummer_block_section"
+  }
+ },
+ {
+  "name": "spur_gearbox",
+  "title": "Spur gearbox",
+  "criteria": "3.1, 3.2",
+  "uses": "Gear conventions (pitch circle, module, centre distance), keys and keyways, bearing housings, a large parts list.",
+  "description": "A single stage reduction gearbox: a 20 tooth pinion drives a 40 tooth wheel (module 2.5, ratio 2:1) on two shafts carried by four 6204 ball bearings in a cast iron housing, with bearing caps, lip seals, a cover and oil plugs. 36 parts.",
+  "parts": [
+   {
+    "name": "gearbox housing",
+    "colour": "#6E7F99",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "input pinion shaft",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     200.0,
+     0.0
+    ]
+   },
+   {
+    "name": "gear wheel",
+    "colour": "#3FA37C",
+    "explode": [
+     0.0,
+     260.0,
+     0.0
+    ]
+   },
+   {
+    "name": "output shaft",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     200.0,
+     0.0
+    ]
+   },
+   {
+    "name": "key 8 x 7 x 30",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     230.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bearing A",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     200.0,
+     -40.0
+    ]
+   },
+   {
+    "name": "bearing B",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     200.0,
+     40.0
+    ]
+   },
+   {
+    "name": "bearing C",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     200.0,
+     -40.0
+    ]
+   },
+   {
+    "name": "bearing D",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     200.0,
+     40.0
+    ]
+   },
+   {
+    "name": "through cap (input)",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     -70.0
+    ]
+   },
+   {
+    "name": "through cap (output)",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     70.0
+    ]
+   },
+   {
+    "name": "blind cap (input)",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     70.0
+    ]
+   },
+   {
+    "name": "blind cap (output)",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     -70.0
+    ]
+   },
+   {
+    "name": "lip seal (input)",
+    "colour": "#3A3F44",
+    "explode": [
+     0.0,
+     0.0,
+     -55.0
+    ]
+   },
+   {
+    "name": "lip seal (output)",
+    "colour": "#3A3F44",
+    "explode": [
+     0.0,
+     0.0,
+     55.0
+    ]
+   },
+   {
+    "name": "cap screw A1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw A2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw A3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw B1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw B2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw B3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw C1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw C2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw C3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw D1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw D2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cap screw D3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     100.0
+    ]
+   },
+   {
+    "name": "cover screw 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover screw 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover screw 3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover screw 4",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover screw 5",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cover screw 6",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "filler plug M16",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     170.0,
+     0.0
+    ]
+   },
+   {
+    "name": "drain plug M12",
+    "colour": "#4A5562",
+    "explode": [
+     50.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   240.0,
+   180.0,
+   151.0
+  ],
+  "section": "z",
+  "exploded": true,
+  "iso": [
+   1,
+   1,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/spur_gearbox.step",
+   "stl": "GrabCAD models/stl/spur_gearbox.stl",
+   "glb": "GrabCAD models/glb/spur_gearbox.glb",
+   "edges": "GrabCAD models/edges/spur_gearbox.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "gearbox housing",
+    "qty": 1,
+    "material": "EN-GJL-250 grey cast iron",
+    "group": "Housing",
+    "model": null,
+    "file": "housing.ipt",
+    "bought": false,
+    "instances": [
+     "gearbox housing"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "cover",
+    "qty": 1,
+    "material": "EN AW-5083 aluminium",
+    "group": "Housing",
+    "model": null,
+    "file": "cover.ipt",
+    "bought": false,
+    "instances": [
+     "cover"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "input pinion shaft",
+    "qty": 1,
+    "material": "655M13 case hardened steel",
+    "group": "Gears and shafts",
+    "model": null,
+    "file": "pinion_shaft.ipt",
+    "bought": false,
+    "instances": [
+     "input pinion shaft"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "gear wheel",
+    "qty": 1,
+    "material": "080M40 steel, hardened",
+    "group": "Gears and shafts",
+    "model": null,
+    "file": "wheel.ipt",
+    "bought": false,
+    "instances": [
+     "gear wheel"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "output shaft",
+    "qty": 1,
+    "material": "080M40 steel",
+    "group": "Gears and shafts",
+    "model": null,
+    "file": "output_shaft.ipt",
+    "bought": false,
+    "instances": [
+     "output shaft"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "key 8 x 7 x 30",
+    "qty": 1,
+    "material": "Bright steel",
+    "group": "Gears and shafts",
+    "model": null,
+    "file": "key.ipt",
+    "bought": false,
+    "instances": [
+     "key 8 x 7 x 30"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "ball bearing 6204",
+    "qty": 4,
+    "material": "Bought in",
+    "group": "Bought in",
+    "model": null,
+    "file": "bearing.ipt",
+    "bought": true,
+    "instances": [
+     "bearing A",
+     "bearing B",
+     "bearing C",
+     "bearing D"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "through cap",
+    "qty": 2,
+    "material": "EN AW-5083 aluminium",
+    "group": "Housing",
+    "model": null,
+    "file": "cap_through.ipt",
+    "bought": false,
+    "instances": [
+     "through cap (input)",
+     "through cap (output)"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "blind cap",
+    "qty": 2,
+    "material": "EN AW-5083 aluminium",
+    "group": "Housing",
+    "model": null,
+    "file": "cap_blind.ipt",
+    "bought": false,
+    "instances": [
+     "blind cap (input)",
+     "blind cap (output)"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "lip seal 20 x 32 x 6",
+    "qty": 2,
+    "material": "Nitrile rubber",
+    "group": "Bought in",
+    "model": null,
+    "file": "lip_seal.ipt",
+    "bought": true,
+    "instances": [
+     "lip seal (input)",
+     "lip seal (output)"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "cap screw ISO 4762 M5 x 12",
+    "qty": 12,
+    "material": "Steel, grade 12.9",
+    "group": "Bought in",
+    "model": null,
+    "file": "cap_screw.ipt",
+    "bought": true,
+    "instances": [
+     "cap screw A1",
+     "cap screw A2",
+     "cap screw A3",
+     "cap screw B1",
+     "cap screw B2",
+     "cap screw B3",
+     "cap screw C1",
+     "cap screw C2",
+     "cap screw C3",
+     "cap screw D1",
+     "cap screw D2",
+     "cap screw D3"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "countersunk screw ISO 10642 M6 x 16",
+    "qty": 6,
+    "material": "Steel, grade 8.8",
+    "group": "Bought in",
+    "model": null,
+    "file": "cover_screw.ipt",
+    "bought": true,
+    "instances": [
+     "cover screw 1",
+     "cover screw 2",
+     "cover screw 3",
+     "cover screw 4",
+     "cover screw 5",
+     "cover screw 6"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "filler plug M16",
+    "qty": 1,
+    "material": "Steel",
+    "group": "Bought in",
+    "model": null,
+    "file": "filler_plug.ipt",
+    "bought": true,
+    "instances": [
+     "filler plug M16"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "drain plug M12",
+    "qty": 1,
+    "material": "Steel",
+    "group": "Bought in",
+    "model": null,
+    "file": "drain_plug.ipt",
+    "bought": true,
+    "instances": [
+     "drain plug M12"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/spur_gearbox_third_angle",
+   "first": "GrabCAD models/drawings/spur_gearbox_first_angle",
+   "section": "GrabCAD models/drawings/spur_gearbox_section"
+  }
+ },
+ {
+  "name": "universal_joint",
+  "title": "Universal joint",
+  "criteria": "3.1, 3.2",
+  "uses": "Assembly of parts at right angles, repeated parts placed by rotating, exploded views along three axes, angular motion.",
+  "description": "A Hooke type universal joint for 22 mm shafts: two forged yokes, a hardened cross with four trunnions, needle bearing cups held by circlips, and the shafts fixed by grub screws. 15 parts.",
+  "parts": [
+   {
+    "name": "input yoke",
+    "colour": "#9AA6B2",
+    "explode": [
+     -60.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "output yoke",
+    "colour": "#9AA6B2",
+    "explode": [
+     60.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cross (spider)",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cup 1",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     0.0,
+     -25.0
+    ]
+   },
+   {
+    "name": "cup 2",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     0.0,
+     25.0
+    ]
+   },
+   {
+    "name": "cup 3",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cup 4",
+    "colour": "#D4B25A",
+    "explode": [
+     0.0,
+     -25.0,
+     0.0
+    ]
+   },
+   {
+    "name": "circlip 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     -45.0
+    ]
+   },
+   {
+    "name": "circlip 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     45.0
+    ]
+   },
+   {
+    "name": "circlip 3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "circlip 4",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     -45.0,
+     0.0
+    ]
+   },
+   {
+    "name": "input shaft",
+    "colour": "#9AA6B2",
+    "explode": [
+     -130.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "output shaft",
+    "colour": "#9AA6B2",
+    "explode": [
+     130.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "grub screw 1",
+    "colour": "#4A5562",
+    "explode": [
+     -60.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "grub screw 2",
+    "colour": "#4A5562",
+    "explode": [
+     60.0,
+     0.0,
+     -40.0
+    ]
+   }
+  ],
+  "size_mm": [
+   280.0,
+   62.4,
+   62.4
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.9,
+   1.2
+  ],
+  "files": {
+   "step": "GrabCAD models/step/universal_joint.step",
+   "stl": "GrabCAD models/stl/universal_joint.stl",
+   "glb": "GrabCAD models/glb/universal_joint.glb",
+   "edges": "GrabCAD models/edges/universal_joint.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "yoke",
+    "qty": 2,
+    "material": "709M40 alloy steel, forged",
+    "group": "Yokes and cross",
+    "model": null,
+    "file": "yoke.ipt",
+    "bought": false,
+    "instances": [
+     "input yoke",
+     "output yoke"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "cross (spider)",
+    "qty": 1,
+    "material": "815M17 case hardened steel",
+    "group": "Yokes and cross",
+    "model": null,
+    "file": "cross.ipt",
+    "bought": false,
+    "instances": [
+     "cross (spider)"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "bearing cup",
+    "qty": 4,
+    "material": "Bearing steel (needle roller cup)",
+    "group": "Bearings",
+    "model": null,
+    "file": "cup.ipt",
+    "bought": false,
+    "instances": [
+     "cup 1",
+     "cup 2",
+     "cup 3",
+     "cup 4"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "circlip 20",
+    "qty": 4,
+    "material": "Spring steel",
+    "group": "Bearings",
+    "model": null,
+    "file": "circlip.ipt",
+    "bought": false,
+    "instances": [
+     "circlip 1",
+     "circlip 2",
+     "circlip 3",
+     "circlip 4"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "shaft 22",
+    "qty": 2,
+    "material": "080M40 steel",
+    "group": "Shafts",
+    "model": null,
+    "file": "shaft.ipt",
+    "bought": false,
+    "instances": [
+     "input shaft",
+     "output shaft"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "grub screw ISO 4027 M8 x 8",
+    "qty": 2,
+    "material": "Steel, 45H",
+    "group": "Bought in",
+    "model": null,
+    "file": "grub_screw.ipt",
+    "bought": true,
+    "instances": [
+     "grub screw 1",
+     "grub screw 2"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/universal_joint_third_angle",
+   "first": "GrabCAD models/drawings/universal_joint_first_angle",
+   "section": "GrabCAD models/drawings/universal_joint_section"
+  }
+ },
+ {
+  "name": "toggle_clamp",
+  "title": "Toggle clamp",
+  "criteria": "3.1, 3.2",
+  "uses": "Linkages and pin joints, over-centre (toggle) action, sheet metal parts, assembly and exploded views.",
+  "description": "A vertical hold-down toggle clamp: a pressed steel base, an arm with an adjustable M8 spindle and rubber pad, a handle and two link plates on four pins. Pushing the handle down carries the link just past dead centre, so the clamp locks shut. 14 parts.",
+  "parts": [
+   {
+    "name": "base",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "clamp arm",
+    "colour": "#E8A33D",
+    "explode": [
+     -40.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "handle",
+    "colour": "#E8A33D",
+    "explode": [
+     50.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "link plate 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     60.0,
+     -30.0
+    ]
+   },
+   {
+    "name": "link plate 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     60.0,
+     30.0
+    ]
+   },
+   {
+    "name": "pivot pin A",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     -50.0
+    ]
+   },
+   {
+    "name": "pivot pin B",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     -50.0
+    ]
+   },
+   {
+    "name": "link pin D",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     60.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "link pin C",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     60.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "spindle M8 x 66",
+    "colour": "#9AA6B2",
+    "explode": [
+     -40.0,
+     110.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut (lower)",
+    "colour": "#4A5562",
+    "explode": [
+     -40.0,
+     60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut (upper)",
+    "colour": "#4A5562",
+    "explode": [
+     -40.0,
+     140.0,
+     0.0
+    ]
+   },
+   {
+    "name": "pressure pad",
+    "colour": "#3A3F44",
+    "explode": [
+     -40.0,
+     20.0,
+     0.0
+    ]
+   },
+   {
+    "name": "handle grip",
+    "colour": "#C0504D",
+    "explode": [
+     90.0,
+     90.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   257.1,
+   40.0,
+   141.3
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   -1,
+   0.9,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/toggle_clamp.step",
+   "stl": "GrabCAD models/stl/toggle_clamp.stl",
+   "glb": "GrabCAD models/glb/toggle_clamp.glb",
+   "edges": "GrabCAD models/edges/toggle_clamp.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "base",
+    "qty": 1,
+    "material": "S275 steel sheet, 3 mm, zinc plated",
+    "group": "Frame",
+    "model": null,
+    "file": "base.ipt",
+    "bought": false,
+    "instances": [
+     "base"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "clamp arm",
+    "qty": 1,
+    "material": "C45 steel, blackened",
+    "group": "Moving parts",
+    "model": null,
+    "file": "arm.ipt",
+    "bought": false,
+    "instances": [
+     "clamp arm"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "handle",
+    "qty": 1,
+    "material": "C45 steel, blackened",
+    "group": "Moving parts",
+    "model": null,
+    "file": "handle.ipt",
+    "bought": false,
+    "instances": [
+     "handle"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "link plate",
+    "qty": 2,
+    "material": "S275 steel, 2 mm",
+    "group": "Moving parts",
+    "model": null,
+    "file": "link.ipt",
+    "bought": false,
+    "instances": [
+     "link plate 1",
+     "link plate 2"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "pivot pin 6 x 26",
+    "qty": 2,
+    "material": "Steel, case hardened",
+    "group": "Pins",
+    "model": null,
+    "file": "pin_long.ipt",
+    "bought": false,
+    "instances": [
+     "pivot pin A",
+     "pivot pin B"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "link pin 6 x 17",
+    "qty": 2,
+    "material": "Steel, case hardened",
+    "group": "Pins",
+    "model": null,
+    "file": "pin_short.ipt",
+    "bought": false,
+    "instances": [
+     "link pin D",
+     "link pin C"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "spindle M8 x 66",
+    "qty": 1,
+    "material": "Steel, zinc plated",
+    "group": "Spindle",
+    "model": null,
+    "file": "spindle.ipt",
+    "bought": false,
+    "instances": [
+     "spindle M8 x 66"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "hex nut M8",
+    "qty": 2,
+    "material": "Steel, zinc plated",
+    "group": "Bought in",
+    "model": null,
+    "file": "nut.ipt",
+    "bought": true,
+    "instances": [
+     "nut (lower)",
+     "nut (upper)"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "pressure pad",
+    "qty": 1,
+    "material": "Neoprene rubber",
+    "group": "Spindle",
+    "model": null,
+    "file": "pad.ipt",
+    "bought": false,
+    "instances": [
+     "pressure pad"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "handle grip",
+    "qty": 1,
+    "material": "PVC, red",
+    "group": "Moving parts",
+    "model": null,
+    "file": "grip.ipt",
+    "bought": false,
+    "instances": [
+     "handle grip"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/toggle_clamp_third_angle",
+   "first": "GrabCAD models/drawings/toggle_clamp_first_angle",
+   "section": "GrabCAD models/drawings/toggle_clamp_section"
+  }
+ },
+ {
+  "name": "swivel_castor",
+  "title": "Swivel castor",
+  "criteria": "3.1, 3.2",
+  "uses": "Ball races, offset (trailing) axles, pressed parts, an assembly with many repeated parts, section through the swivel.",
+  "description": "A 100 mm swivel castor: a top plate turning on 20 balls in a pressed track, a pressed steel fork held by a king pin rivet, and a rubber tyred wheel on a bearing tube and M10 axle bolt. 30 parts.",
+  "parts": [
+   {
+    "name": "top plate",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "fork",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 3",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 4",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 5",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 6",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 7",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 8",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 9",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 10",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 11",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 12",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 13",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 14",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 15",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 16",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 17",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 18",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 19",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "ball 20",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     35.0,
+     0.0
+    ]
+   },
+   {
+    "name": "king pin rivet",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "wheel centre",
+    "colour": "#3FA37C",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tyre",
+    "colour": "#2E3338",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bearing tube",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "spacer 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     0.0,
+     -45.0
+    ]
+   },
+   {
+    "name": "spacer 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     0.0,
+     45.0
+    ]
+   },
+   {
+    "name": "axle bolt M10 x 58",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     90.0
+    ]
+   },
+   {
+    "name": "nut M10",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     0.0,
+     -80.0
+    ]
+   }
+  ],
+  "size_mm": [
+   130.0,
+   90.0,
+   121.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.8,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/swivel_castor.step",
+   "stl": "GrabCAD models/stl/swivel_castor.stl",
+   "glb": "GrabCAD models/glb/swivel_castor.glb",
+   "edges": "GrabCAD models/edges/swivel_castor.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "top plate",
+    "qty": 1,
+    "material": "S235 steel, zinc plated",
+    "group": "Swivel head",
+    "model": null,
+    "file": "top_plate.ipt",
+    "bought": false,
+    "instances": [
+     "top plate"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "fork",
+    "qty": 1,
+    "material": "S355 steel, pressed, zinc plated",
+    "group": "Fork",
+    "model": null,
+    "file": "fork.ipt",
+    "bought": false,
+    "instances": [
+     "fork"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "ball 6 mm",
+    "qty": 20,
+    "material": "Carbon steel",
+    "group": "Swivel head",
+    "model": null,
+    "file": "ball.ipt",
+    "bought": false,
+    "instances": [
+     "ball 1",
+     "ball 2",
+     "ball 3",
+     "ball 4",
+     "ball 5",
+     "ball 6",
+     "ball 7",
+     "ball 8",
+     "ball 9",
+     "ball 10",
+     "ball 11",
+     "ball 12",
+     "ball 13",
+     "ball 14",
+     "ball 15",
+     "ball 16",
+     "ball 17",
+     "ball 18",
+     "ball 19",
+     "ball 20"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "king pin rivet",
+    "qty": 1,
+    "material": "Steel, case hardened",
+    "group": "Swivel head",
+    "model": null,
+    "file": "king_pin.ipt",
+    "bought": false,
+    "instances": [
+     "king pin rivet"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "wheel centre",
+    "qty": 1,
+    "material": "Polypropylene",
+    "group": "Wheel",
+    "model": null,
+    "file": "hub.ipt",
+    "bought": false,
+    "instances": [
+     "wheel centre"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "tyre",
+    "qty": 1,
+    "material": "Rubber, 80 Shore A",
+    "group": "Wheel",
+    "model": null,
+    "file": "tyre.ipt",
+    "bought": false,
+    "instances": [
+     "tyre"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "bearing tube",
+    "qty": 1,
+    "material": "Steel (plain roller bearing)",
+    "group": "Wheel",
+    "model": null,
+    "file": "tube.ipt",
+    "bought": false,
+    "instances": [
+     "bearing tube"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "spacer",
+    "qty": 2,
+    "material": "Steel",
+    "group": "Wheel",
+    "model": null,
+    "file": "spacer.ipt",
+    "bought": false,
+    "instances": [
+     "spacer 1",
+     "spacer 2"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "axle bolt M10 x 58",
+    "qty": 1,
+    "material": "Steel, grade 8.8",
+    "group": "Bought in",
+    "model": null,
+    "file": "axle_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "axle bolt M10 x 58"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "nut M10",
+    "qty": 1,
+    "material": "Steel, grade 8",
+    "group": "Bought in",
+    "model": null,
+    "file": "axle_nut.ipt",
+    "bought": true,
+    "instances": [
+     "nut M10"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/swivel_castor_third_angle",
+   "first": "GrabCAD models/drawings/swivel_castor_first_angle",
+   "section": "GrabCAD models/drawings/swivel_castor_section"
+  }
+ },
+ {
+  "name": "screw_jack",
+  "title": "Screw jack",
+  "criteria": "3.1, 3.2",
+  "uses": "The standard assembly drawing exercise: half and full sections, threads, a turned part and a casting, parts list.",
+  "description": "The classic screw jack: a cast iron body, a bronze nut locked by a set screw, a 36 x 6 square thread spindle turned by a tommy bar, and a load cup that stays still while the screw turns. 10 parts.",
+  "parts": [
+   {
+    "name": "body",
+    "colour": "#6E7F99",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bronze bush",
+    "colour": "#B08D57",
+    "explode": [
+     0.0,
+     60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "screw spindle",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     120.0,
+     0.0
+    ]
+   },
+   {
+    "name": "load cup",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     190.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer M8",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     230.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cap screw M8 x 25",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     270.0,
+     0.0
+    ]
+   },
+   {
+    "name": "set screw M8 x 12",
+    "colour": "#4A5562",
+    "explode": [
+     60.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tommy bar",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     120.0,
+     90.0
+    ]
+   },
+   {
+    "name": "bar end ball 1",
+    "colour": "#4A5562",
+    "explode": [
+     60.0,
+     120.0,
+     90.0
+    ]
+   },
+   {
+    "name": "bar end ball 2",
+    "colour": "#4A5562",
+    "explode": [
+     -60.0,
+     120.0,
+     90.0
+    ]
+   }
+  ],
+  "size_mm": [
+   288.1,
+   120.6,
+   240.3
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.8,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/screw_jack.step",
+   "stl": "GrabCAD models/stl/screw_jack.stl",
+   "glb": "GrabCAD models/glb/screw_jack.glb",
+   "edges": "GrabCAD models/edges/screw_jack.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "body",
+    "qty": 1,
+    "material": "EN-GJL-250 grey cast iron",
+    "group": "Body",
+    "model": null,
+    "file": "body.ipt",
+    "bought": false,
+    "instances": [
+     "body"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "bronze bush",
+    "qty": 1,
+    "material": "CuSn12 phosphor bronze",
+    "group": "Body",
+    "model": null,
+    "file": "nut.ipt",
+    "bought": false,
+    "instances": [
+     "bronze bush"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "screw spindle",
+    "qty": 1,
+    "material": "080M40 steel",
+    "group": "Screw",
+    "model": null,
+    "file": "spindle.ipt",
+    "bought": false,
+    "instances": [
+     "screw spindle"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "load cup",
+    "qty": 1,
+    "material": "C45 steel",
+    "group": "Screw",
+    "model": null,
+    "file": "cup.ipt",
+    "bought": false,
+    "instances": [
+     "load cup"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "washer M8",
+    "qty": 1,
+    "material": "Steel",
+    "group": "Bought in",
+    "model": null,
+    "file": "washer.ipt",
+    "bought": true,
+    "instances": [
+     "washer M8"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "cap screw M8 x 25",
+    "qty": 1,
+    "material": "Steel, grade 8.8",
+    "group": "Bought in",
+    "model": null,
+    "file": "cup_screw.ipt",
+    "bought": true,
+    "instances": [
+     "cap screw M8 x 25"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "set screw M8 x 12",
+    "qty": 1,
+    "material": "Steel, 45H",
+    "group": "Bought in",
+    "model": null,
+    "file": "set_screw.ipt",
+    "bought": true,
+    "instances": [
+     "set screw M8 x 12"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "tommy bar",
+    "qty": 1,
+    "material": "S275 steel",
+    "group": "Screw",
+    "model": null,
+    "file": "tommy_bar.ipt",
+    "bought": false,
+    "instances": [
+     "tommy bar"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "bar end ball",
+    "qty": 2,
+    "material": "S275 steel",
+    "group": "Screw",
+    "model": null,
+    "file": "bar_ball.ipt",
+    "bought": false,
+    "instances": [
+     "bar end ball 1",
+     "bar end ball 2"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/screw_jack_third_angle",
+   "first": "GrabCAD models/drawings/screw_jack_first_angle",
+   "section": "GrabCAD models/drawings/screw_jack_section"
+  }
+ },
+ {
+  "name": "flange_coupling",
+  "title": "Flanged shaft coupling",
+  "criteria": "3.1, 3.2",
+  "uses": "Keys and keyways, spigot and recess location, bolts on a pitch circle, half sections of a turned assembly.",
+  "description": "A protected type flanged coupling joining two 40 mm shafts: two forged flanges with a spigot and recess to line them up, keys, and six M12 bolts on a 120 mm pitch circle, hidden inside rims. 24 parts.",
+  "parts": [
+   {
+    "name": "flange A (spigot)",
+    "colour": "#5B8DEF",
+    "explode": [
+     -60.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "flange B (recess)",
+    "colour": "#3FA37C",
+    "explode": [
+     60.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "shaft A",
+    "colour": "#9AA6B2",
+    "explode": [
+     -130.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "shaft B",
+    "colour": "#9AA6B2",
+    "explode": [
+     130.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "key A",
+    "colour": "#4A5562",
+    "explode": [
+     -130.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "key B",
+    "colour": "#4A5562",
+    "explode": [
+     130.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 1",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 2",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 3",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 4",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 5",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "bolt 6",
+    "colour": "#4A5562",
+    "explode": [
+     -150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 3",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 4",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 5",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "washer 6",
+    "colour": "#9AA6B2",
+    "explode": [
+     120.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 1",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 2",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 3",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 4",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 5",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "nut 6",
+    "colour": "#4A5562",
+    "explode": [
+     150.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   400.0,
+   160.0,
+   160.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.8,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/flange_coupling.step",
+   "stl": "GrabCAD models/stl/flange_coupling.stl",
+   "glb": "GrabCAD models/glb/flange_coupling.glb",
+   "edges": "GrabCAD models/edges/flange_coupling.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "flange A (spigot)",
+    "qty": 1,
+    "material": "C45 steel, forged",
+    "group": "Flanges",
+    "model": null,
+    "file": "flange_a.ipt",
+    "bought": false,
+    "instances": [
+     "flange A (spigot)"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "flange B (recess)",
+    "qty": 1,
+    "material": "C45 steel, forged",
+    "group": "Flanges",
+    "model": null,
+    "file": "flange_b.ipt",
+    "bought": false,
+    "instances": [
+     "flange B (recess)"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "shaft 40",
+    "qty": 2,
+    "material": "080M40 steel",
+    "group": "Shafts",
+    "model": null,
+    "file": "shaft.ipt",
+    "bought": false,
+    "instances": [
+     "shaft A",
+     "shaft B"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "key 12 x 8 x 50",
+    "qty": 2,
+    "material": "Bright steel",
+    "group": "Shafts",
+    "model": null,
+    "file": "key.ipt",
+    "bought": false,
+    "instances": [
+     "key A",
+     "key B"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "hex bolt ISO 4014 M12 x 55",
+    "qty": 6,
+    "material": "Steel, grade 8.8",
+    "group": "Bought in",
+    "model": null,
+    "file": "bolt.ipt",
+    "bought": true,
+    "instances": [
+     "bolt 1",
+     "bolt 2",
+     "bolt 3",
+     "bolt 4",
+     "bolt 5",
+     "bolt 6"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "washer M12",
+    "qty": 6,
+    "material": "Steel",
+    "group": "Bought in",
+    "model": null,
+    "file": "washer.ipt",
+    "bought": true,
+    "instances": [
+     "washer 1",
+     "washer 2",
+     "washer 3",
+     "washer 4",
+     "washer 5",
+     "washer 6"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "hex nut M12",
+    "qty": 6,
+    "material": "Steel, grade 8",
+    "group": "Bought in",
+    "model": null,
+    "file": "nut.ipt",
+    "bought": true,
+    "instances": [
+     "nut 1",
+     "nut 2",
+     "nut 3",
+     "nut 4",
+     "nut 5",
+     "nut 6"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/flange_coupling_third_angle",
+   "first": "GrabCAD models/drawings/flange_coupling_first_angle",
+   "section": "GrabCAD models/drawings/flange_coupling_section"
+  }
+ },
+ {
+  "name": "knuckle_joint",
+  "title": "Knuckle joint",
+  "criteria": "3.1, 3.2",
+  "uses": "A standard drawing exercise: proportions from one diameter, a pin joint, sections with standard parts unhatched.",
+  "description": "The classic knuckle joint joining two 24 mm tie rods: a forged eye end and fork end, a knuckle pin held by a collar and taper pin, and lock nuts. Every size is in proportion to the 25 mm rod diameter. 9 parts.",
+  "parts": [
+   {
+    "name": "eye end",
+    "colour": "#5B8DEF",
+    "explode": [
+     40.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "fork end",
+    "colour": "#3FA37C",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "knuckle pin",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     90.0,
+     0.0
+    ]
+   },
+   {
+    "name": "collar",
+    "colour": "#9AA6B2",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "taper pin 6 x 44",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     -100.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod 1",
+    "colour": "#9AA6B2",
+    "explode": [
+     160.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "tie rod 2",
+    "colour": "#9AA6B2",
+    "explode": [
+     -160.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lock nut 1",
+    "colour": "#4A5562",
+    "explode": [
+     90.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "lock nut 2",
+    "colour": "#4A5562",
+    "explode": [
+     -90.0,
+     0.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   595.0,
+   50.0,
+   91.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.9,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/knuckle_joint.step",
+   "stl": "GrabCAD models/stl/knuckle_joint.stl",
+   "glb": "GrabCAD models/glb/knuckle_joint.glb",
+   "edges": "GrabCAD models/edges/knuckle_joint.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "eye end",
+    "qty": 1,
+    "material": "080M40 steel, forged",
+    "group": "Knuckle",
+    "model": null,
+    "file": "eye_end.ipt",
+    "bought": false,
+    "instances": [
+     "eye end"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "fork end",
+    "qty": 1,
+    "material": "080M40 steel, forged",
+    "group": "Knuckle",
+    "model": null,
+    "file": "fork_end.ipt",
+    "bought": false,
+    "instances": [
+     "fork end"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "knuckle pin",
+    "qty": 1,
+    "material": "080M40 steel, hardened",
+    "group": "Knuckle",
+    "model": null,
+    "file": "pin.ipt",
+    "bought": false,
+    "instances": [
+     "knuckle pin"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "collar",
+    "qty": 1,
+    "material": "S275 steel",
+    "group": "Knuckle",
+    "model": null,
+    "file": "collar.ipt",
+    "bought": false,
+    "instances": [
+     "collar"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "taper pin 6 x 44",
+    "qty": 1,
+    "material": "Steel",
+    "group": "Bought in",
+    "model": null,
+    "file": "taper_pin.ipt",
+    "bought": true,
+    "instances": [
+     "taper pin 6 x 44"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "tie rod M24",
+    "qty": 2,
+    "material": "S355 steel",
+    "group": "Tie rods",
+    "model": null,
+    "file": "tie_rod.ipt",
+    "bought": false,
+    "instances": [
+     "tie rod 1",
+     "tie rod 2"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "lock nut M24",
+    "qty": 2,
+    "material": "Steel, grade 8",
+    "group": "Bought in",
+    "model": null,
+    "file": "lock_nut.ipt",
+    "bought": true,
+    "instances": [
+     "lock nut 1",
+     "lock nut 2"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/knuckle_joint_third_angle",
+   "first": "GrabCAD models/drawings/knuckle_joint_first_angle",
+   "section": "GrabCAD models/drawings/knuckle_joint_section"
+  }
+ },
+ {
+  "name": "piston_crank",
+  "title": "Piston and crank (single cylinder engine)",
+  "criteria": "3.1, 3.2",
+  "uses": "Turning motion into straight line motion, split big end with bolts, sections through a piston and barrel, parts list.",
+  "description": "The slider-crank at the heart of an engine: a crankshaft with a 25 mm throw in bronze bushes, a split connecting rod 100 mm between centres, a 50 mm piston with two rings, gudgeon pin and circlips, a finned barrel, head, spark plug and flywheel. 25 parts.",
+  "parts": [
+   {
+    "name": "crankcase frame",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "crankshaft",
+    "colour": "#E8A33D",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "main bush 1",
+    "colour": "#B08D57",
+    "explode": [
+     0.0,
+     0.0,
+     -40.0
+    ]
+   },
+   {
+    "name": "main bush 2",
+    "colour": "#B08D57",
+    "explode": [
+     0.0,
+     0.0,
+     40.0
+    ]
+   },
+   {
+    "name": "cylinder barrel",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     90.0,
+     0.0
+    ]
+   },
+   {
+    "name": "cylinder head",
+    "colour": "#C9D3DD",
+    "explode": [
+     0.0,
+     150.0,
+     0.0
+    ]
+   },
+   {
+    "name": "head screw 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     190.0,
+     0.0
+    ]
+   },
+   {
+    "name": "head screw 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     190.0,
+     0.0
+    ]
+   },
+   {
+    "name": "head screw 3",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     190.0,
+     0.0
+    ]
+   },
+   {
+    "name": "head screw 4",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     190.0,
+     0.0
+    ]
+   },
+   {
+    "name": "piston",
+    "colour": "#9AA6B2",
+    "explode": [
+     -120.0,
+     40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "piston ring 1",
+    "colour": "#4A5562",
+    "explode": [
+     -120.0,
+     75.0,
+     0.0
+    ]
+   },
+   {
+    "name": "piston ring 2",
+    "colour": "#4A5562",
+    "explode": [
+     -120.0,
+     60.0,
+     0.0
+    ]
+   },
+   {
+    "name": "gudgeon pin",
+    "colour": "#9AA6B2",
+    "explode": [
+     -120.0,
+     40.0,
+     -70.0
+    ]
+   },
+   {
+    "name": "circlip 1",
+    "colour": "#4A5562",
+    "explode": [
+     -120.0,
+     40.0,
+     -45.0
+    ]
+   },
+   {
+    "name": "circlip 2",
+    "colour": "#4A5562",
+    "explode": [
+     -120.0,
+     40.0,
+     45.0
+    ]
+   },
+   {
+    "name": "connecting rod",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "name": "big end cap",
+    "colour": "#5B8DEF",
+    "explode": [
+     0.0,
+     -40.0,
+     0.0
+    ]
+   },
+   {
+    "name": "big end bolt 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "big end bolt 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     -70.0,
+     0.0
+    ]
+   },
+   {
+    "name": "big end nut 1",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "big end nut 2",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     30.0,
+     0.0
+    ]
+   },
+   {
+    "name": "flywheel",
+    "colour": "#6E7F99",
+    "explode": [
+     0.0,
+     0.0,
+     -90.0
+    ]
+   },
+   {
+    "name": "key 8 x 7 x 22",
+    "colour": "#4A5562",
+    "explode": [
+     0.0,
+     20.0,
+     -60.0
+    ]
+   },
+   {
+    "name": "spark plug M14",
+    "colour": "#2E3338",
+    "explode": [
+     0.0,
+     200.0,
+     0.0
+    ]
+   }
+  ],
+  "size_mm": [
+   140.0,
+   155.0,
+   290.0
+  ],
+  "section": "y",
+  "exploded": true,
+  "iso": [
+   1,
+   0.8,
+   1.3
+  ],
+  "files": {
+   "step": "GrabCAD models/step/piston_crank.step",
+   "stl": "GrabCAD models/stl/piston_crank.stl",
+   "glb": "GrabCAD models/glb/piston_crank.glb",
+   "edges": "GrabCAD models/edges/piston_crank.json"
+  },
+  "base": "GrabCAD models/",
+  "folder": "GrabCAD models",
+  "bom": [
+   {
+    "no": 1,
+    "name": "crankcase frame",
+    "qty": 1,
+    "material": "EN AC-42100 aluminium casting",
+    "group": "Frame",
+    "model": null,
+    "file": "crankcase.ipt",
+    "bought": false,
+    "instances": [
+     "crankcase frame"
+    ]
+   },
+   {
+    "no": 2,
+    "name": "crankshaft",
+    "qty": 1,
+    "material": "817M40 steel, forged",
+    "group": "Crank",
+    "model": null,
+    "file": "crankshaft.ipt",
+    "bought": false,
+    "instances": [
+     "crankshaft"
+    ]
+   },
+   {
+    "no": 3,
+    "name": "main bearing bush",
+    "qty": 2,
+    "material": "CuSn7Zn4Pb7 bronze",
+    "group": "Crank",
+    "model": null,
+    "file": "bush.ipt",
+    "bought": false,
+    "instances": [
+     "main bush 1",
+     "main bush 2"
+    ]
+   },
+   {
+    "no": 4,
+    "name": "cylinder barrel",
+    "qty": 1,
+    "material": "EN AC-43000 aluminium, cast iron liner",
+    "group": "Cylinder",
+    "model": null,
+    "file": "barrel.ipt",
+    "bought": false,
+    "instances": [
+     "cylinder barrel"
+    ]
+   },
+   {
+    "no": 5,
+    "name": "cylinder head",
+    "qty": 1,
+    "material": "EN AC-43000 aluminium",
+    "group": "Cylinder",
+    "model": null,
+    "file": "head.ipt",
+    "bought": false,
+    "instances": [
+     "cylinder head"
+    ]
+   },
+   {
+    "no": 6,
+    "name": "cap screw M8 x 25",
+    "qty": 4,
+    "material": "Steel, grade 12.9",
+    "group": "Bought in",
+    "model": null,
+    "file": "head_screw.ipt",
+    "bought": true,
+    "instances": [
+     "head screw 1",
+     "head screw 2",
+     "head screw 3",
+     "head screw 4"
+    ]
+   },
+   {
+    "no": 7,
+    "name": "piston",
+    "qty": 1,
+    "material": "EN AC-48000 aluminium",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "piston.ipt",
+    "bought": false,
+    "instances": [
+     "piston"
+    ]
+   },
+   {
+    "no": 8,
+    "name": "piston ring",
+    "qty": 2,
+    "material": "Cast iron",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "ring.ipt",
+    "bought": false,
+    "instances": [
+     "piston ring 1",
+     "piston ring 2"
+    ]
+   },
+   {
+    "no": 9,
+    "name": "gudgeon pin",
+    "qty": 1,
+    "material": "Steel, case hardened",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "gudgeon_pin.ipt",
+    "bought": false,
+    "instances": [
+     "gudgeon pin"
+    ]
+   },
+   {
+    "no": 10,
+    "name": "circlip",
+    "qty": 2,
+    "material": "Spring steel",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "circlip.ipt",
+    "bought": false,
+    "instances": [
+     "circlip 1",
+     "circlip 2"
+    ]
+   },
+   {
+    "no": 11,
+    "name": "connecting rod",
+    "qty": 1,
+    "material": "C45 steel, forged",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "con_rod.ipt",
+    "bought": false,
+    "instances": [
+     "connecting rod"
+    ]
+   },
+   {
+    "no": 12,
+    "name": "big end cap",
+    "qty": 1,
+    "material": "C45 steel, forged",
+    "group": "Piston and rod",
+    "model": null,
+    "file": "cap.ipt",
+    "bought": false,
+    "instances": [
+     "big end cap"
+    ]
+   },
+   {
+    "no": 13,
+    "name": "big end bolt M6 x 30",
+    "qty": 2,
+    "material": "Steel, grade 10.9",
+    "group": "Bought in",
+    "model": null,
+    "file": "big_end_bolt.ipt",
+    "bought": true,
+    "instances": [
+     "big end bolt 1",
+     "big end bolt 2"
+    ]
+   },
+   {
+    "no": 14,
+    "name": "nut M6",
+    "qty": 2,
+    "material": "Steel, grade 10",
+    "group": "Bought in",
+    "model": null,
+    "file": "big_end_nut.ipt",
+    "bought": true,
+    "instances": [
+     "big end nut 1",
+     "big end nut 2"
+    ]
+   },
+   {
+    "no": 15,
+    "name": "flywheel",
+    "qty": 1,
+    "material": "EN-GJL-250 grey cast iron",
+    "group": "Crank",
+    "model": null,
+    "file": "flywheel.ipt",
+    "bought": false,
+    "instances": [
+     "flywheel"
+    ]
+   },
+   {
+    "no": 16,
+    "name": "key 8 x 7 x 22",
+    "qty": 1,
+    "material": "Bright steel",
+    "group": "Crank",
+    "model": null,
+    "file": "key.ipt",
+    "bought": false,
+    "instances": [
+     "key 8 x 7 x 22"
+    ]
+   },
+   {
+    "no": 17,
+    "name": "spark plug M14",
+    "qty": 1,
+    "material": "Bought in",
+    "group": "Bought in",
+    "model": null,
+    "file": "spark_plug.ipt",
+    "bought": true,
+    "instances": [
+     "spark plug M14"
+    ]
+   }
+  ],
+  "drawings": {
+   "third": "GrabCAD models/drawings/piston_crank_third_angle",
+   "first": "GrabCAD models/drawings/piston_crank_first_angle",
+   "section": "GrabCAD models/drawings/piston_crank_section"
   }
  },
  {

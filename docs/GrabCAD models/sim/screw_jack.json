@@ -1,0 +1,516 @@
+{
+ "name": "screw_jack",
+ "duration": 8,
+ "story": "Five turns of the tommy bar lift the spindle 30 mm (a 6 mm pitch). The load cup rises without turning, so the load does not twist.",
+ "moving": [
+  "screw spindle",
+  "tommy bar",
+  "bar end ball 1",
+  "bar end ball 2",
+  "cap screw M8 x 25",
+  "washer M8",
+  "load cup"
+ ],
+ "motion": [
+  {
+   "part": "screw spindle",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "tommy bar",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "bar end ball 1",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "bar end ball 2",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "cap screw M8 x 25",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "washer M8",
+   "kind": "turn",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "centre": [
+    0,
+    0,
+    0
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     1800
+    ],
+    [
+     8,
+     1800
+    ]
+   ]
+  },
+  {
+   "part": "screw spindle",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "tommy bar",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "bar end ball 1",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "bar end ball 2",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "cap screw M8 x 25",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "washer M8",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "part": "load cup",
+   "kind": "move",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  }
+ ],
+ "graph": [
+  {
+   "name": "Lift",
+   "unit": "mm",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     30
+    ],
+    [
+     8,
+     30
+    ]
+   ]
+  },
+  {
+   "name": "Turns",
+   "unit": "",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     0
+    ],
+    [
+     6.5,
+     5
+    ],
+    [
+     8,
+     5
+    ]
+   ]
+  }
+ ],
+ "steps": [
+  {
+   "view": "model",
+   "title": "Open the Dynamic Simulation environment",
+   "command": "Environments tab > Begin panel > Dynamic Simulation",
+   "actions": [
+    "Open screw_jack.iam in Inventor.",
+    "Click the Environments tab, then Dynamic Simulation."
+   ],
+   "note": "Dynamic Simulation works out how an assembly moves, and the forces and speeds as it moves."
+  },
+  {
+   "view": "joints",
+   "title": "Turn constraints into joints",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Settings",
+   "actions": [
+    "Click Simulation Settings and tick Automatically convert constraints to standard joints. Click OK.",
+    "Open Standard Joints in the browser to see the joints Inventor made from your assembly constraints."
+   ],
+   "note": "Parts held together with no movement between them become one rigid group, listed under Welded group."
+  },
+  {
+   "view": "joints",
+   "title": "Screw the spindle into the nut",
+   "command": "Dynamic Simulation tab > Joint panel > Insert Joint",
+   "actions": [
+    "Insert Joint, Cylindrical: the spindle thread in the nut bore. Then Insert Joint, Screw on it: pitch 6 mm.",
+    "The bar, balls, washer and screw are Welded to the spindle. Give the cup its own Revolution joint on the spigot."
+   ],
+   "note": "Mechanical advantage: the tommy bar end moves 2 x pi x 132 = 829 mm a turn while the load rises 6 mm, about 140 to 1 before friction."
+  },
+  {
+   "view": "motion",
+   "title": "Turn the bar",
+   "command": "Right click the Cylindrical joint > Properties > dof 1 (R) > Edit imposed motion",
+   "actions": [
+    "Tick Enable imposed motion. Input Grapher: 0 at 0.5 s and 1800 degrees (5 turns) at 6.5 s."
+   ],
+   "note": null
+  },
+  {
+   "view": "play",
+   "title": "Run the simulation",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player set Final Time to 8 s and Images to 400.",
+    "Click Run. The assembly moves and the timeline fills in.",
+    "Use the slider to scrub back and forth."
+   ],
+   "note": "Press Play below to run the same motion here."
+  },
+  {
+   "view": "graph",
+   "title": "Plot the results",
+   "command": "Dynamic Simulation tab > Results panel > Output Grapher",
+   "actions": [
+    "Open the Output Grapher.",
+    "Under Standard Joints, tick the position and angle of the Cylindrical joint.",
+    "The graph shows each value against time. Click on the graph to move the simulation to that moment."
+   ],
+   "note": null
+  },
+  {
+   "view": "graph",
+   "title": "Record a video",
+   "command": "Dynamic Simulation tab > Manage panel > Simulation Player",
+   "actions": [
+    "In the Simulation Player click Record (the red dot) and choose a file name and format.",
+    "Click Run again. Inventor saves a video of the motion for your portfolio."
+   ],
+   "note": "You can also export a moment to Stress Analysis (Export to FEA) to check a part at its highest load."
+  }
+ ]
+}

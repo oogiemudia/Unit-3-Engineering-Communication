@@ -427,18 +427,21 @@ MODELS = [
     dict(name='machine_vice', title='Machine vice', fn=machine_vice, criteria='3.1, 3.2',
          uses='A full assembly of 17 parts: general arrangement, parts list, section through the lead screw, exploded view, '
               'standard fasteners (countersunk and cap screws) and a screw thread that turns into straight line motion.',
-         section='y', explode=VICE_EXPLODE, iso=(-1, -1.3, 0.9), bom=vice_bom),
+         section='y', explode=VICE_EXPLODE, iso=(-1, -1.3, 0.9), bom=vice_bom, folder='GrabCAD models'),
 ]
 
 
 # ------------------------------------------------------------------ project folders
 # Projects such as ESP 2023 keep every file they generate (models, drawings, animations, steps, simulation and
 # FEA) together in their own folder under docs/, named by the model's 'folder' key.
+# GrabCAD models: complete assemblies of the kind found in online CAD libraries (our own designs), in docs/GrabCAD models/
+from library import MODELS as LIBRARY_MODELS  # noqa: E402
 from esp2023 import MODELS as ESP2023_MODELS  # noqa: E402
 from esp2026 import MODELS as ESP2026_MODELS  # noqa: E402
 from esp2024 import MODELS as ESP2024_MODELS  # noqa: E402
 from esp2025 import MODELS as ESP2025_MODELS  # noqa: E402
 
+MODELS += LIBRARY_MODELS
 MODELS += ESP2023_MODELS + ESP2026_MODELS + ESP2024_MODELS + ESP2025_MODELS
 
 

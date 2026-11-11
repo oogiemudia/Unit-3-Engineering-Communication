@@ -1,0 +1,1154 @@
+{
+ "name": "swivel_castor",
+ "title": "Swivel castor",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Top plate: square plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as top_plate.ipt.",
+    "Sketch a 90 x 90 square on the XZ Plane, Extrude 4 mm. Fillet the corners 8 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_01.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Top plate: ball track",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Sketch a 6 mm circle on a 60 mm pitch diameter, 1.5 below the plate. Revolve, Cut."
+   ],
+   "note": "In the factory the track is pressed into the plate, not cut.",
+   "parts": [
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_02.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Top plate: holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 10 in the middle (king pin). Holes diameter 9 for the M8 fixing bolts, on a 70 x 70 square.",
+    "Save top_plate.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_03.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Fork: crown",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as fork.ipt.",
+    "Sketch an 80 diameter circle with a 49 x 48 tab towards the axle. Extrude 6 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_04.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Fork: legs",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the leg on the XY Plane, 24 wide with a 12 radius end round the axle. Extrude 4 mm, 20 out from the middle, Join. Mirror it."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_05.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Fork: ball track and king pin hole",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve Cut the 6 mm track (60 pitch diameter) in the top of the crown. Hole 10 in the middle."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_06.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Fork: axle hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole through both legs at the axle: diameter 10.5, Through All.",
+    "Save fork.ipt."
+   ],
+   "note": "The axle is 35 mm behind the swivel axis, so the wheel trails behind and lines itself up with the direction of travel.",
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_07.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Ball 6 mm: sphere",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ball.ipt.",
+    "Revolve a half circle, diameter 5.9.",
+    "Save ball.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_08.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "King pin rivet: rivet",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as king_pin.ipt.",
+    "Revolve the rivet: 10 shank, 18 head, 16 peened head underneath. Fillet the top 2 mm.",
+    "Save king_pin.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "king pin rivet",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_09.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Wheel centre: disc",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as hub.ipt.",
+    "Sketch a 72 circle on the XY Plane at the axle. Extrude 32 Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "wheel centre",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_10.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Wheel centre: dished sides",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Revolve Cut a recess from diameter 28 to 60, 8 deep, on each side."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "wheel centre",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_11.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Wheel centre: bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 20 through the middle for the roller bearing tube.",
+    "Save hub.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "wheel centre",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_12.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Tyre: ring",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tyre.ipt.",
+    "Sketch circles 72 and 100. Extrude 30 Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tyre",
+     "colour": "#2E3338",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_13.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Tyre: rounded edges",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet 5 mm on the two outside edges.",
+    "Save tyre.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "tyre",
+     "colour": "#2E3338",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_14.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Bearing tube: tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as tube.ipt.",
+    "Sketch circles 10.5 and 20. Extrude 32 Symmetric.",
+    "Save tube.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "bearing tube",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_15.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Spacer: tube",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as spacer.ipt.",
+    "Sketch circles 10.5 and 16. Extrude 4.",
+    "Save spacer.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "spacer 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_16.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: place the fork",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as swivel_castor.iam.",
+    "Place fork.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_17.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Assembly: balls in the track",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place ball.ipt and Mate its centre to the circle at the bottom of the track.",
+    "Pattern Component: Circular, 20 balls round the swivel axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 10",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 11",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 12",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 13",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 14",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 15",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 16",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 17",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 18",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 19",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 20",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_18.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Assembly: top plate and king pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place top_plate.ipt: Mate its track onto the balls and its centre hole to the fork centre.",
+    "Place king_pin_rivet.ipt with Insert into the centre holes."
+   ],
+   "note": "The rivet is peened over under the crown, but loose enough for the head to turn on the balls.",
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 10",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 11",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 12",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 13",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 14",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 15",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 16",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 17",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 18",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 19",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 20",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "king pin rivet",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_19.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "Assembly: wheel",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place wheel_centre.ipt and tyre.ipt; Mate their axes and middle planes (the tyre is moulded on in the factory).",
+    "Place bearing_tube.ipt in the bore and the two spacers each side."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 10",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 11",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 12",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 13",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 14",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 15",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 16",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 17",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 18",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 19",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 20",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "king pin rivet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "wheel centre",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tyre",
+     "colour": "#2E3338",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing tube",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spacer 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spacer 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_20.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Assembly: axle bolt and nut",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: ISO 4017 M10 x 58 hex bolt and ISO 4032 M10 nut. Insert through the legs and wheel."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "fork",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 3",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 4",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 5",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 6",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 7",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 8",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 9",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 10",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 11",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 12",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 13",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 14",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 15",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 16",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 17",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 18",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 19",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "ball 20",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "top plate",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "king pin rivet",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "wheel centre",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "tyre",
+     "colour": "#2E3338",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bearing tube",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spacer 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spacer 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "axle bolt M10 x 58",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut M10",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/swivel_castor/step_21.glb",
+   "edges": "GrabCAD models/steps/swivel_castor/step_21.json"
+  }
+ ]
+}

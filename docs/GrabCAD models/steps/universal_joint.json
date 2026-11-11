@@ -1,0 +1,673 @@
+{
+ "name": "universal_joint",
+ "title": "Universal joint",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Yoke: hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as yoke.ipt.",
+    "Sketch a 36 mm circle on the YZ Plane. Extrude 35 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_01.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Yoke: bridge and arms",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on the XY Plane the side view of one arm: 8 thick, from the hub to the joint centre, with a 16 radius end.",
+    "Extrude 32 mm Symmetric. Mirror the arm about the XZ Plane. Add the bridge, 8 x 60 x 32."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_02.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Yoke: cross holes for the bearing cups",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole through both arms on the joint centre: diameter 20 (H7), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_03.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Yoke: shaft bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the end of the hub: diameter 22 (H7), 32 deep."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_04.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Yoke: grub screw hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the hub, 20 from its end, from the top: Tapped M8x1.25 into the bore."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_05.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Yoke: chamfer",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer 1.5 mm on the end of the hub.",
+    "Save yoke.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_06.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Cross (spider): centre block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cross.ipt.",
+    "Sketch a 20 x 20 square, Extrude 20 Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_07.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Cross (spider): four trunnions",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 14 circle on one face, Extrude 19. Circular Pattern: 4 about the X axis."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_08.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Cross (spider): grease way and nipple boss",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 4 through the block for the grease. Extrude a 7 mm boss for the nipple.",
+    "Save cross.ipt."
+   ],
+   "note": "Grease from the nipple runs down drillings in each trunnion to the needle bearings in the cups.",
+   "parts": [
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_09.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Bearing cup: cup",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as cup.ipt.",
+    "Revolve the cup section: 20 outside, 14 inside, 10 long with a 1 mm closed end.",
+    "Save cup.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "cup 1",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_10.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Circlip 20: clip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as circlip.ipt.",
+    "Sketch circles 17 and 26, and a 6 mm gap. Extrude 1.2 mm.",
+    "Save circlip.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_11.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Shaft 22: shaft",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as shaft.ipt.",
+    "Sketch a 22 circle and Extrude 111 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_12.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Shaft 22: flat for the grub screw",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch on a plane tangent to the top: 30 x 24. Extrude Cut 1 mm. Chamfer the free end 1 mm.",
+    "Save shaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_13.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Assembly: input yoke",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as universal_joint.iam.",
+    "Place yoke.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_14.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Assembly: cross into the input yoke",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place cross.ipt. Constrain > Mate: the axis of one pair of trunnions to the cross hole axis in the yoke.",
+    "Constrain > Angle: free, so the cross can swing."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_15.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Assembly: cups and circlips (input side)",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place bearing_cup.ipt twice: Insert each over a trunnion and into a yoke hole.",
+    "Place two circlips and Mate them against the outside of the arms."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 1",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 2",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_16.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: output yoke",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place yoke.ipt again. Mate its cross hole axis to the other pair of trunnions."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 1",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 2",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output yoke",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_17.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Assembly: cups and circlips (output side)",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Insert the last two cups and circlips the same way."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 1",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 2",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 3",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 4",
+     "colour": "#D4B25A",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_18.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Assembly: shafts and grub screws",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place shaft_22.ipt twice and Insert each into a yoke bore. Turn the flat to the top.",
+    "Place from Content Center: ISO 4027 M8 x 8 cup point grub screws, and Insert one in each hub."
+   ],
+   "note": "A universal joint passes the turning from one shaft to another that is at an angle to it, as in a car propeller shaft.",
+   "parts": [
+    {
+     "name": "input yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cross (spider)",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 1",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 2",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 1",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 2",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output yoke",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 3",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "cup 4",
+     "colour": "#D4B25A",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 3",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "circlip 4",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "input shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "output shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "grub screw 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "grub screw 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/universal_joint/step_19.glb",
+   "edges": "GrabCAD models/steps/universal_joint/step_19.json"
+  }
+ ]
+}

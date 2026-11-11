@@ -1,0 +1,680 @@
+{
+ "name": "toggle_clamp",
+ "title": "Toggle clamp",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Base: base plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as base.ipt.",
+    "Sketch a 75 x 40 rectangle on the XZ Plane (the ground). Extrude 4 mm. Fillet the corners 5 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_01.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Base: two cheeks",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch the cheek outline on the XY Plane (the front): 70 long, 60 high with a sloping top. Extrude 3 mm, 10 mm out from the middle. Mirror it about the XY Plane."
+   ],
+   "note": "In the factory the base and cheeks are one blank, pressed and bent up. Inventor can model it that way with the Sheet Metal tools.",
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_02.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Base: pivot holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole through both cheeks at the arm pivot (40, 40) and the handle pivot (75, 20): diameter 6, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_03.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Base: fixing holes",
+   "command": "3D Model tab > Pattern panel > Rectangular Pattern",
+   "actions": [
+    "Hole diameter 6.5 in the base, then Rectangular Pattern 2 x 2: 51 apart along the base and 28 across.",
+    "Save base.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_04.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Clamp arm: bar and tail",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as arm.ipt.",
+    "Sketch on the XY Plane: a 110 x 16 bar from the pivot to the front, rounded both ends, and a tail from the pivot up to the link pin at (54, 54). Extrude 12 mm Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_05.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Clamp arm: spindle slot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a Slot 17.5 long x 8.5 wide on the top, at the front end. Extrude Cut Through All."
+   ],
+   "note": "The slot lets the spindle be moved along to suit the work.",
+   "parts": [
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_06.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Clamp arm: pin holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 6 at the pivot and at the tail. Through All.",
+    "Save arm.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_07.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Handle: crank and lever",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as handle.ipt.",
+    "Sketch on the XY Plane: the hub (16 diameter) at the handle pivot, a lug 15 long to the link pin, and a 10 wide lever 70 long at 50 degrees. Extrude 12 Symmetric."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_08.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Handle: round end for the grip",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Work Plane at the end of the lever. Circle diameter 10, Extrude 80 along the lever."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_09.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Handle: pin holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 6 at the pivot and at the lug. Through All.",
+    "Save handle.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_10.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Link plate: plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as link.ipt.",
+    "Sketch two 12 mm circles 25.0 apart and the tangent lines. Extrude 2 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "link plate 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_11.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Link plate: holes",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole diameter 6 at both centres.",
+    "Save link.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "link plate 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_12.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Pivot pin 6 x 26: pin",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pin_long.ipt.",
+    "Revolve the pin section: 6 diameter, 26 long, with 10 x 1.5 heads (the second head is riveted over).",
+    "Save pin_long.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pivot pin A",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_13.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Link pin 6 x 17: pin",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pin_short.ipt.",
+    "Revolve the pin section: 6 diameter, 17 long, with 10 x 1 heads.",
+    "Save pin_short.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "link pin D",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_14.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Spindle M8 x 66: threaded rod",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as spindle.ipt.",
+    "Sketch an 8 mm circle, Extrude 66 mm. Chamfer the top. Thread M8x1.25, Full Length.",
+    "Save spindle.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "spindle M8 x 66",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_15.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Pressure pad: pad",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as pad.ipt.",
+    "Revolve the pad section: 18 diameter x 8, a 12 diameter neck, an 8 mm bore. Fillet the bottom edge 2 mm.",
+    "Save pad.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "pressure pad",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_16.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Handle grip: grip",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as grip.ipt.",
+    "Revolve the grip section: 20 diameter, 75 long, 10 mm bore.",
+    "Save grip.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "handle grip",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_17.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_17.json"
+  },
+  {
+   "n": 18,
+   "title": "Assembly: place the base",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as toggle_clamp.iam.",
+    "Place base.ipt Grounded at Origin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_18.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_18.json"
+  },
+  {
+   "n": 19,
+   "title": "Assembly: arm and pivot pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place clamp_arm.ipt between the cheeks. Constrain > Insert the pivot hole on the cheek hole.",
+    "Place pivot_pin.ipt through both with Insert."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin A",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_19.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_19.json"
+  },
+  {
+   "n": 20,
+   "title": "Assembly: handle and pivot pin",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place handle.ipt between the cheeks. Insert its hub on the rear cheek hole, and the second pivot pin."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin B",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_20.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_20.json"
+  },
+  {
+   "n": 21,
+   "title": "Assembly: links and link pins",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Place link_plate.ipt twice, one each side of the arm tail. Insert one end on the tail hole and the other on the handle lug.",
+    "Place the two link pins with Insert."
+   ],
+   "note": "Drag the handle: the arm swings up and down. With the handle down, the link pin C is just past the line through the other two pins, so pushing on the arm cannot open it. That is the toggle (over centre) action.",
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin B",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link plate 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link plate 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link pin D",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link pin C",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_21.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_21.json"
+  },
+  {
+   "n": 22,
+   "title": "Assembly: spindle, nuts and pad",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place spindle.ipt in the slot and two ISO 4032 M8 nuts from Content Center, one each side of the arm.",
+    "Place pressure_pad.ipt on the bottom of the spindle and grip.ipt on the handle."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "base",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "clamp arm",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "handle",
+     "colour": "#E8A33D",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pivot pin B",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link plate 1",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link plate 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link pin D",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "link pin C",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "spindle M8 x 66",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut (lower)",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut (upper)",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "pressure pad",
+     "colour": "#3A3F44",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "handle grip",
+     "colour": "#C0504D",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/toggle_clamp/step_22.glb",
+   "edges": "GrabCAD models/steps/toggle_clamp/step_22.json"
+  }
+ ]
+}

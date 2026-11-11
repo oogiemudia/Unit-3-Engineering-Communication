@@ -1,0 +1,587 @@
+{
+ "name": "flange_coupling",
+ "title": "Flanged shaft coupling",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flange A (spigot): flange and hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as flange_a.ipt.",
+    "Sketch a 160 circle on the YZ Plane, Extrude 20. Sketch an 80 circle on its back, Extrude 60."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_01.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Flange A (spigot): protecting rim",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch circles 144 and 160 on the back of the flange. Extrude 16 mm, Join."
+   ],
+   "note": "The rim covers the bolt heads, so nothing can catch on them while the shaft turns. That makes it a protected type coupling.",
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_02.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Flange A (spigot): spigot",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 60 circle on the front face, Extrude 3 mm. It fits a recess in the other flange and lines the two up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_03.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Flange A (spigot): bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the centre: diameter 40 (H7), Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_04.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Flange A (spigot): keyway",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 12 wide keyway on the bore. Extrude Cut 3.3 deep, Through All."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_05.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Flange A (spigot): bolt holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole diameter 13 on a 120 pitch circle. Circular Pattern: 6.",
+    "Save flange_a.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_06.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_06.json"
+  },
+  {
+   "n": 7,
+   "title": "Flange B (recess): flange and hub",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as flange_b.ipt.",
+    "As flange A: 160 x 20 flange and 80 x 60 hub."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_07.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_07.json"
+  },
+  {
+   "n": 8,
+   "title": "Flange B (recess): protecting rim",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Rim 144 to 160 diameter, 16 long."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_08.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_08.json"
+  },
+  {
+   "n": 9,
+   "title": "Flange B (recess): recess",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole on the front face: diameter 60.1, 3 deep (the spigot fits in it)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_09.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_09.json"
+  },
+  {
+   "n": 10,
+   "title": "Flange B (recess): bore and keyway",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole 40 (H7) Through All. Keyway 12 wide, 3.3 deep."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_10.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_10.json"
+  },
+  {
+   "n": 11,
+   "title": "Flange B (recess): bolt holes",
+   "command": "3D Model tab > Pattern panel > Circular Pattern",
+   "actions": [
+    "Hole 13 on a 120 pitch circle. Circular Pattern: 6.",
+    "Save flange_b.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_11.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_11.json"
+  },
+  {
+   "n": 12,
+   "title": "Shaft 40: shaft",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as shaft.ipt.",
+    "Sketch a 40 circle, Extrude 199 mm."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft A",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_12.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_12.json"
+  },
+  {
+   "n": 13,
+   "title": "Shaft 40: keyway and chamfer",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Sketch a 12 x 50 keyway (round ends) on the top. Extrude Cut 5 deep. Chamfer the end 1.5.",
+    "Save shaft.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_13.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_13.json"
+  },
+  {
+   "n": 14,
+   "title": "Key 12 x 8 x 50: key",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as key.ipt.",
+    "Sketch a 12 x 50 round ended key. Extrude 8 mm.",
+    "Save key.ipt."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "key A",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_14.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_14.json"
+  },
+  {
+   "n": 15,
+   "title": "Assembly: shaft A, key and flange A",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as flange_coupling.iam.",
+    "Place shaft_40.ipt Grounded. Place key.ipt and Insert it in the keyway.",
+    "Place flange_A.ipt: Mate its bore to the shaft and its keyway to the key."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft A",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_15.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_15.json"
+  },
+  {
+   "n": 16,
+   "title": "Assembly: shaft B, key and flange B",
+   "command": "Assemble tab > Relationships panel > Constrain",
+   "actions": [
+    "Do the same with the second shaft, key and flange_B.ipt.",
+    "Constrain > Insert: the spigot of flange A into the recess of flange B.",
+    "Mate a bolt hole of A to a bolt hole of B, so the holes line up."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "shaft A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft B",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key B",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_16.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_16.json"
+  },
+  {
+   "n": 17,
+   "title": "Assembly: bolts, washers and nuts",
+   "command": "Assemble tab > Component panel > Place from Content Center",
+   "actions": [
+    "Place from Content Center: ISO 4014 M12 x 55 bolt, ISO 7089 washer and ISO 4032 nut. Insert one set in a hole.",
+    "Pattern Component: follow the flange hole pattern to place the other five."
+   ],
+   "note": "The torque passes from shaft A through key A to flange A, through the six bolts (in shear) to flange B, and through key B to shaft B.",
+   "parts": [
+    {
+     "name": "shaft A",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key A",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange A (spigot)",
+     "colour": "#5B8DEF",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "shaft B",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "key B",
+     "colour": "#4A5562",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "flange B (recess)",
+     "colour": "#3FA37C",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 5",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "bolt 6",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 1",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 3",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 4",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 5",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "washer 6",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 1",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 2",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 3",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 4",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 5",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "nut 6",
+     "colour": "#4A5562",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "GrabCAD models/steps/flange_coupling/step_17.glb",
+   "edges": "GrabCAD models/steps/flange_coupling/step_17.json"
+  }
+ ]
+}
