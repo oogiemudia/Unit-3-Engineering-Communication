@@ -224,10 +224,10 @@ function bomTable(rows) {
   let g = null, html = '<table class="bom"><tr><th>Item</th><th>Part</th><th>Qty</th><th>Show</th></tr>';
   rows.forEach((r, i) => {
     if (r.group !== g) { g = r.group; html += `<tr><td class="g" colspan="4">${GROUP_NAMES[g] || g}</td></tr>`; }
-    html += `<tr title="${r.material}"><td>${r.no}</td><td><a href="viewer.html?m=${r.model}">${r.name}</a>${r.bought ? ' <span style="color:var(--muted)">(bought in)</span>' : ''}</td>` +
+    html += `<tr title="${r.material}"><td>${r.no}</td><td>${r.model ? `<a href="viewer.html?m=${r.model}">${r.name}</a>` : r.name}${r.bought ? ' <span style="color:var(--muted)">(bought in)</span>' : ''}</td>` +
             `<td>${r.qty}</td><td><input type="checkbox" data-row="${i}" checked aria-label="Show ${r.name}"></td></tr>`;
   });
-  return html + '</table><div style="font-size:12px;color:var(--muted);margin-top:4px">Click a part to open it on its own. Untick to hide it.</div>';
+  return html + '</table><div style="font-size:12px;color:var(--muted);margin-top:4px">' + (rows.some(r => r.model) ? 'Click a part to open it on its own. ' : '') + 'Untick to hide it.</div>';
 }
 function setShown(name, on) {
   const p = parts.find(pp => pp.name === name); if (!p) return;

@@ -130,6 +130,42 @@ SIMS = dict(
 )
 
 
+
+# ------------------------------------------------------------------ machine vice: the tommy bar closes the jaw
+VICE_MOVE = [(0, 0), (0.5, 0), (6.5, -40), (8, -40)]           # moving jaw x, mm: the opening goes from 60 to 20
+VICE_TURN = [(t, -x / 2 * 360) for t, x in VICE_MOVE]           # M16 x 2: 2 mm a turn, so 20 turns = 7200 degrees
+_vice_jaw = ['moving jaw', 'moving jaw plate', 'jaw plate screw 3', 'jaw plate screw 4']
+_vice_screw = ['lead screw', 'thrust collar', 'collar pin', 'tommy bar', 'handle ball 1', 'handle ball 2']
+SIMS['machine_vice'] = dict(
+    duration=8,
+    story='Turning the tommy bar turns the lead screw in the end block. The screw cannot move along, so the moving jaw, '
+          'which is the nut, slides 2 mm for every turn: 20 turns close the jaws from 60 mm to 20 mm.',
+    moving=_vice_jaw + _vice_screw,
+    motion=[dict(part=n, kind='move', axis=[1, 0, 0], keys=ease_keys(VICE_MOVE)) for n in _vice_jaw] +
+           [dict(part=n, kind='turn', axis=[1, 0, 0], centre=[0, 0, 27], keys=ease_keys(VICE_TURN)) for n in _vice_screw],
+    graph=[dict(name='Jaw opening', unit='mm', keys=ease_keys([(t, 60 + x) for t, x in VICE_MOVE])),
+           dict(name='Screw turns', unit='', keys=ease_keys([(t, -x / 2) for t, x in VICE_MOVE]))],
+    steps=lambda: common_start('machine_vice.iam') + [
+        step('joints', 'Let the screw turn in the end block', JOINT,
+             ['Find the joint between the end block bore and the screw journal. It should be a Revolution joint.',
+              'If it is not, click Insert Joint, choose Revolution, pick the bore edge in the end block, then the journal edge on the screw. Click OK.',
+              'The collar, pin, tommy bar and balls are fixed to the screw, so they are one Welded group with it.'],
+             'A revolution joint lets a part turn about one axis and nothing else: one degree of freedom.'),
+        step('joints', 'Let the jaw slide on the rails', JOINT,
+             ['Check for a Prismatic joint between the body rails and the moving jaw.',
+              'If it is missing, Insert Joint, Prismatic: pick a rail top face, then the underside of the jaw head. Click OK.',
+              'The jaw plate and its two screws are one Welded group with the moving jaw.']),
+        step('joints', 'Link the screw to the jaw', JOINT,
+             ['Click Insert Joint. Under Rolling Joints choose Screw.',
+              'Pick the cylindrical face of the screw thread, then the threaded hole in the moving jaw.',
+              'Pitch 2 mm. Click OK.'],
+             'The screw joint ties turning to moving: one turn of the screw moves the jaw 2 mm.'),
+        step('motion', 'Turn the tommy bar', 'Right click the Revolution joint > Properties > dof 1 (R) > Edit imposed motion',
+             ['Tick Enable imposed motion. Drive: Position.',
+              'In the Input Grapher: 0 degrees at 0.5 s and 7200 degrees (20 turns) at 6.5 s.', 'Click OK twice.']),
+    ] + common_end(8, 'the angle of the Revolution joint and the position of the Prismatic joint'))
+
+
 # ------------------------------------------------------------------ ESP 2023 lock gates
 def smooth(t, t0, t1):
     u = max(0.0, min(1.0, (t - t0) / (t1 - t0)))

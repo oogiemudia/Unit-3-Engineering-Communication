@@ -119,6 +119,23 @@ STAINLESS = dict(name='Stainless Steel', E=193000, nu=0.30, yield_strength=250)
 LEAF_WEIGHT = 87200          # N: one leaf and everything that turns with it, 8.89 t, from the CAD model (esp2023.leaf_mass)
 LEAF_PULL = 19500            # N: leaf weight x centre of gravity 1290 mm from the pivot / 5770 mm between the hinges
 
+
+# ------------------------------------------------------------------ machine vice (hub model 13)
+DUCTILE_IRON = dict(name='Iron, Ductile (EN-GJS-400; add to the library if needed: E 169 GPa)', E=169000, nu=0.29,
+                    yield_strength=276)
+CASES['machine_vice'] = dict(
+    part='moving jaw', material=DUCTILE_IRON,
+    story='The tommy bar is pulled with 200 N at its end. Through the M16 x 2 lead screw that clamps the work with about '
+          '10 kN, which pushes back on the face of the moving jaw while the screw thread holds it.',
+    fixed=[dict(test=cylinder(8), where='the M16 threaded hole (the lead screw holds the jaw here)')],
+    loads=[dict(kind='force', value=10000, dir=(1, 0, 0), test=plane('x', 111, sign=-1), where='the front (clamping) face',
+                how='Force, 10000 N, pushing the jaw back along the screw (away from the work)')],
+    hand_check='Screw: torque 200 N x 80 mm = 16 N m; clamping force = 2 pi T efficiency / pitch = 2 pi x 16000 x 0.2 / 2 '
+               '= about 10 kN. Jaw: the load acts on the jaw face, centred 38 mm above the screw axis, so the head bends where it '
+               'meets the tongue: M = 10000 x 38 = 380000 N mm; section 69 wide x 35 deep, Z = 69 x 35^2 / 6 = 14090 mm^3; '
+               'bending stress = M / Z = 27 MPa. The FEA peak (about 63 MPa) is at the sharp inside corner where the head meets the '
+               'tongue: a stress concentration of about 2.3, as expected for a corner with no fillet.')
+
 CASES.update(
     esp2023_skin_panel=dict(
         part='skin plate panel', material=S355, mesh_size=8,

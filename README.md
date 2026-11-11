@@ -44,6 +44,7 @@ The views in the demonstrations come from the same CAD models as everything else
 | L bracket | 3.1, 3.2 | Bent plate with an inside radius, a slot and a hole: views, hidden detail and dimensioning. | third angle, first angle | turntable, views |
 | Pin and housing fit | 3.2 | Limits and fits: a 20 H7 hole and a 20 g6 pin, clearance fit. | third angle, first angle, section A-A | turntable, views, explode, section |
 | Pneumatic cylinder | 3.1 | The real component behind the single-acting, spring-return cylinder symbol (ISO 1219-1:2012). | third angle, first angle, section A-A | turntable, views, explode, section |
+| Machine vice | 3.1, 3.2 | A 17-part assembly (our own design, of the kind found in online CAD libraries): parts list, section through the lead screw, standard fasteners, Inventor build steps part by part then the assembly, Dynamic Simulation of the screw closing the jaw, and Stress Analysis of the moving jaw. | third angle, first angle, section A-A | turntable, views, explode, section |
 
 ## ESP 2023 lock gates (Employer-Set Project, Task 2)
 
