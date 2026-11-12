@@ -16,7 +16,7 @@ top (the ground) and the YZ Plane is the right side.
 """
 import math
 import cadquery as cq
-from parts import (STEEL, ALU, BRASS, BLUE, GREEN, ORANGE, DARK, bolt, nut, washer)
+from parts import (STEEL, ALU, BRASS, BLUE, GREEN, ORANGE, DARK, bolt, nut, washer, drill_point)
 
 NEW_PART = 'File > New > Standard (mm).ipt'
 SKETCH = '3D Model tab > Sketch panel > Start 2D Sketch'
@@ -332,7 +332,7 @@ def hole_features():
     stages.append(top().pushPoints([(15, 0)]).hole(6.6))
     stages.append(top().pushPoints([(40, 0)]).cboreHole(6.6, 11, 6.5))
     stages.append(top().pushPoints([(68, 0)]).cskHole(6.6, 13, 90))
-    stages.append(top().pushPoints([(95, 0)]).hole(5, 15))
+    stages.append(top().pushPoints([(95, 0)]).hole(5, 15).cut(drill_point(95, 0, 5, 5)))
     P = 'hole features block'
     pos = ' Place the centre on the centre line of the top face, %s from the left end.'
     return [
@@ -355,7 +355,7 @@ def hole_features():
              [(P, stages[3], GREEN)]),
         step('Blind tapping drill hole', HOLE,
              ['Click Hole and click the top face.' + pos % '95',
-              'Type: Simple Hole. Diameter 5 mm (tapping drill for M6). Termination: Distance, 15 mm. Drill Point: Flat. Click OK.'],
+              'Type: Simple Hole. Diameter 5 mm (tapping drill for M6). Termination: Distance, 15 mm. Drill Point: Angle, 118 degrees. Click OK.'],
              [(P, stages[4], GREEN)],
              note='For a real tapped hole choose Tapped Hole, M6x1, and Inventor adds the 5 mm drill and a cosmetic thread.'),
     ]

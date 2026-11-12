@@ -140,7 +140,14 @@ def hole_features():
     b = top().pushPoints([(40, 0)]).cboreHole(6.6, 11, 6.5)      # counterbore for an M6 cap head screw
     b = top().pushPoints([(68, 0)]).cskHole(6.6, 13, 90)         # countersink for an M6 countersunk screw
     b = top().pushPoints([(95, 0)]).hole(5, 15)                  # blind tapping drill hole for M6, 15 deep
+    b = b.cut(drill_point(95, 0, 5, 5))                          # with the 118 degree drill point at the bottom
     return [('hole features block', b, GREEN)]
+
+
+def drill_point(x, y, z, dia, angle=118):
+    """The cone a twist drill leaves at the bottom of a blind hole (drawn at 120 degrees by convention)."""
+    h = dia / 2 / math.tan(math.radians(angle / 2))
+    return cq.Workplane('XY').add(cq.Solid.makeCone(dia / 2, 0, h, cq.Vector(x, y, z), cq.Vector(0, 0, -1)))
 
 
 # ------------------------------------------------------------------ 9 vee block
