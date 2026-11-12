@@ -112,7 +112,7 @@
    "command": "3D Model tab > Modify panel > Hole",
    "actions": [
     "Click Hole and click the top face. Place the centre on the centre line of the top face, 95 from the left end.",
-    "Type: Simple Hole. Diameter 5 mm (tapping drill for M6). Termination: Distance, 15 mm. Drill Point: Flat. Click OK."
+    "Type: Simple Hole. Diameter 5 mm (tapping drill for M6). Termination: Distance, 15 mm. Drill Point: Angle, 118 degrees. Click OK."
    ],
    "note": "For a real tapped hole choose Tapped Hole, M6x1, and Inventor adds the 5 mm drill and a cosmetic thread.",
    "parts": [
