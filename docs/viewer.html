@@ -108,6 +108,7 @@ body.render #caption{top:auto;bottom:3.5%;font-size:44px;transition:none}
   <button data-view="left">End view (left)</button>
   <label><input type="checkbox" id="persp"> Perspective</label>
   <label><input type="checkbox" id="edges" checked> Edges</label>
+  <label id="hiddenL" title="Thin dashed lines for the edges you cannot see. Shown in the front view, plan and end views."><input type="checkbox" id="hiddenDetail" checked> Hidden detail</label>
   <label id="explodeL"><span>Explode</span><input type="range" id="explode" min="0" max="1" step="0.01" value="0"></label>
   <label id="sectionL"><input type="checkbox" id="section"> Section A-A</label>
   <button id="spin">Spin</button>
@@ -307,7 +308,7 @@ async function load() {
   document.querySelectorAll('#info input[data-row]').forEach(cb => {
     const row = catalogueEntry.bom[+cb.dataset.row];
     cb.checked = row.instances.some(n => !(catalogueEntry.hide || []).includes(n));
-    cb.onchange = () => row.instances.forEach(n => setShown(n, cb.checked));
+    cb.onchange = () => { row.instances.forEach(n => setShown(n, cb.checked)); partsChanged = true; };
   });
   const box = new THREE.Box3().setFromObject(root);
   box.getCenter(centre); centre0 = centre.clone();
@@ -318,6 +319,7 @@ async function load() {
     sizeE = Math.max(sizeA, eb.getSize(new THREE.Vector3()).length() * 0.58);
   }
   size = sizeA;
+  await loadHidden();
   ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, size * 20);
   persp = new THREE.PerspectiveCamera(35, 1, 0.1, size * 20);
   cam = ortho;
@@ -330,13 +332,49 @@ async function load() {
   window.U3 = { ready: true, setState, loadSim, size, front: bz, iso: VIEWS.iso.toArray(), frame: () => renderer.render(scene, cam) };
 }
 
+// ---------------------------------------------------------------- hidden detail
+// The solid covers the edges behind it, so on its own the viewer shows no hidden detail. tools/build_hidden.py
+// works out, with the same hidden line removal as the drawing sheets, which edges and hole sides cannot be seen
+// in each principal view; they are drawn here as thin dashed lines, only when the camera looks square on to that
+// view with the orthographic camera (that is how a drawing shows them), and only with the model assembled.
+const hiddenViews = {};
+let partsChanged = false;
+async function loadHidden() {
+  let data = null;
+  try { const r = await fetch(BASE + 'hidden/' + NAME + '.json'); if (r.ok) data = await r.json(); } catch (e) { data = null; }
+  if (!data) { document.getElementById('hiddenL').style.display = 'none'; return; }
+  // the dash pattern is measured along the drawing sheet (the two coordinates across the view), so edges that
+  // land on the same line of the view dash in step and read as one dashed line
+  const across = { front: [0, 1], plan: [0, 2], right: [1, 2], left: [1, 2] };
+  for (const [view, pls] of Object.entries(data)) {
+    if (!pls.length) continue;
+    const pos = [], dist = [], [a, b] = across[view];
+    for (const pl of pls) for (let i = 0; i + 5 < pl.length; i += 3) {
+      pos.push(pl[i], pl[i + 1], pl[i + 2], pl[i + 3], pl[i + 4], pl[i + 5]);
+      dist.push(pl[i + a] + pl[i + b], pl[i + 3 + a] + pl[i + 3 + b]);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('lineDistance', new THREE.Float32BufferAttribute(dist, 1));
+    const m = new THREE.LineDashedMaterial({ color: 0x1D2B3A, dashSize: sizeA * 0.028, gapSize: sizeA * 0.018, depthTest: false, depthWrite: false });
+    const l = new THREE.LineSegments(g, m); l.renderOrder = 5; l.visible = false;
+    scene.add(l); hiddenViews[view] = l;
+  }
+}
+function updateHidden() {
+  const on = document.getElementById('hiddenDetail').checked && cam === ortho && tab === 'view' && !sectionOn && !partsChanged &&
+             parts.every(p => p.node.position.lengthSq() < 1e-9);
+  const d = cam.position.clone().sub(centre).normalize();
+  for (const [view, l] of Object.entries(hiddenViews)) l.visible = on && VIEWS[view].clone().normalize().dot(d) > 0.9995;
+}
+
 let spinning = false;
 function loop() {
   requestAnimationFrame(loop);
   if (RENDER) return;
   if (tab === 'sim' && sim && simPlaying) { const now = performance.now(); simT += (now - simLast) / 1000; simLast = now; if (simT > sim.duration) simT = 0; simFrame(); }
   if (spinning) { const p = cam.position.clone().sub(centre); p.applyAxisAngle(new THREE.Vector3(0, 1, 0), 0.01); cam.position.copy(centre.clone().add(p)); cam.lookAt(centre); }
-  controls.update(); renderer.render(scene, cam);
+  controls.update(); updateHidden(); renderer.render(scene, cam);
 }
 
 // used by the render tool: one call per frame
@@ -349,7 +387,7 @@ function setState(s) {
   if (s.edges !== undefined) for (const p of parts) if (p.edges) p.edges.visible = s.edges && !p.hidden;
   if (s.simT !== undefined && sim) { simPose(s.simT); simLook(s.simView || 'model'); }
   caption(s.caption || '');
-  renderer.render(scene, cam);
+  updateHidden(); renderer.render(scene, cam);
 }
 
 document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => {

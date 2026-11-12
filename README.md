@@ -28,6 +28,8 @@ Three step-by-step pages for the board. Click Next, or use the arrow keys or a p
 
 The views in the demonstrations come from the same CAD models as everything else, through `tools/demos.py`, so they agree with the drawing sheets and the 3D viewer. The 3D viewer links to the demonstrations that use the model on screen.
 
+**Hidden detail in the 3D viewer.** A shaded model covers the edges behind it, so on its own the viewer could not show hidden detail. `tools/build_hidden.py` runs the same hidden line removal as the drawing sheets for the front view, plan and both end views of every model, and saves the hidden edges and hole sides in `docs/<folder>/hidden/<model>.json`. The viewer draws them as thin dashed lines when you press Front view, Plan or End view (orthographic camera, model assembled, no section); the Hidden detail box turns them off. A hidden edge that sits exactly behind a visible edge is left out, as on a drawing. The views videos show them too.
+
 ## What is in it
 
 | Model | Criteria | Use it for | Drawings | Animations |
@@ -206,6 +208,7 @@ pip install cadquery trimesh playwright   # Playwright needs Chromium: python -m
 # also needed: ffmpeg and rsvg-convert (librsvg)
 python3 tools/build_models.py   # STEP, STL, GLB, edges, docs/models.json
 python3 tools/drawings.py       # drawing sheets (SVG and PNG)
+python3 tools/build_hidden.py   # hidden detail for the viewer's front, plan and end views (run before render.py)
 python3 tools/build_steps.py    # Build steps tab: a model of every stage (checks the last stage matches the finished model)
 python3 tools/build_sim.py      # Simulation tab: Dynamic Simulation steps and motion for the moving assemblies
 python3 tools/build_fea.py      # FEA tab: mesh and solve each load case (needs gmsh and scikit-fem)
