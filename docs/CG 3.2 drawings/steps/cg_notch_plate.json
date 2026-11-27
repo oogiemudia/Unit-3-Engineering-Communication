@@ -1,0 +1,137 @@
+{
+ "name": "cg_notch_plate",
+ "title": "CG 3.2: vee notch plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Vee notch plate: extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as notch_plate.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 90 by 50.",
+    "Finish Sketch. Extrude: Distance 10. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Vee notch plate: R20 corner",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: Radius 20, select the top left edge. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Vee notch plate: R10 corner",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: Radius 10, select the top right edge. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Vee notch plate: cut the 20 x 10 step",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 20 wide and 10 high at the bottom left corner.",
+    "Finish Sketch. Extrude: Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Vee notch plate: cut the vee notch",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw the vee: 15 wide on the top edge, starting 30 from the left, 10 deep, with its left side at 30 degrees to the vertical.",
+    "Finish Sketch. Extrude: Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Vee notch plate: hole 10 diameter",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = on the front face, 15 from the right end (75 from the left) and 15 above the base. Simple hole, diameter 10, Through All. OK. Save."
+   ],
+   "note": "The 10 thickness is assumed (the slide shows one view only).",
+   "parts": [
+    {
+     "name": "vee notch plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_notch_plate/step_06.glb",
+   "edges": "CG 3.2 drawings/steps/cg_notch_plate/step_06.json"
+  }
+ ]
+}

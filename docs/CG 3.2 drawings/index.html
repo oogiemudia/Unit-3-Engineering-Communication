@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CG 3.2 drawings</title>
+<meta name="description" content="CAD models of the drawings in the City and Guilds Unit 3 resources for criterion 3.2 (dimensions, limits and fits, geometric tolerances), each built step by step as in Autodesk Inventor, with build videos, drawings and STEP files.">
+<style>
+:root{--bg:#F4F6F8;--card:#FFFFFF;--ink:#16335B;--text:#1F2A37;--muted:#4E5A68;--line:#D5DCE4;--accent:#1565D8;--amber:#E8A33D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{background:var(--ink);color:#fff;padding:26px 16px 22px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+header a{color:#BFD6F6}
+h1{margin:4px 0 6px;font-size:28px}
+header p{margin:0;max-width:820px;color:#DCE6F2}
+h2{color:var(--ink);font-size:21px;margin:26px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#F4F6F8;border-bottom:1px solid var(--line)}
+.card .b{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:17px;color:var(--ink)}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;background:#E8EEF6;color:var(--ink);border-radius:999px;padding:2px 9px}
+.links{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:14px;margin-top:auto;padding-top:4px}
+a{color:var(--accent)}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;padding:5px 10px;font-weight:bold;font-size:14px}
+.box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:12px 16px;font-size:15px}
+.box p{margin:0 0 8px}.box p:last-child{margin:0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#E8EEF6;color:var(--ink)}
+tr:last-child td{border-bottom:0}
+footer{color:var(--muted);font-size:13px;padding:26px 0 30px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="../index.html">Unit 3 CAD hub</a>
+  <h1>CG 3.2 drawings</h1>
+  <p>Every part drawn in the City and Guilds Unit 3 resources for criterion 3.2 (PowerPoints 7, 8 and 9 and Worksheets 13, 14 and 15), built as a real CAD model. Each one is built step by step as in Autodesk Inventor, so beginners can see the drawing, then the part, then how it is made.</p>
+</div></header>
+<main class="wrap">
+<h2>How to use these</h2>
+<div class="box">
+  <p>Show the City and Guilds drawing first, then open the model: spin it, then switch to Front view, Plan and End view to see where each view of the drawing comes from.</p>
+  <p>Play the build video (or open Build steps and press Next step) to show how it is made, one Inventor command at a time. Each step names the command, where it is on the ribbon, and the sizes typed in.</p>
+  <p>The three fit models are made at the nominal size, as in Inventor: the fit comes from the tolerance classes on the drawing, not from modelling the hole and shaft different sizes.</p>
+</div>
+<h2>Models</h2>
+<div class="grid" id="grid"><p>Loading…</p></div>
+<h2>Sizes and where they come from</h2>
+<div class="tw"><table>
+<tr><th>Model</th><th>City and Guilds source</th><th>Sizes (given on the drawing, or assumed)</th></tr>
+<tr><td>Projection line block</td><td>PowerPoint 7 slide 3</td><td>45 long (given); 25 high, 20 deep, 20 x 6 step scaled from the slide</td></tr>
+<tr><td>Slotted bar</td><td>PowerPoint 7 slides 4 to 7</td><td>120 x 48 x 25 with six bottom steps, all scaled from slide 7 (the slides give no numbers)</td></tr>
+<tr><td>Radius plate</td><td>PowerPoint 7 slide 9 (a), (b)</td><td>R5 corner, R15 hollow with R5 blends (given); 60 x 40 x 10 plate assumed so both show on one part</td></tr>
+<tr><td>Domed pin</td><td>PowerPoint 7 slide 9 (c)</td><td>SR30 (given); 24 diameter and 50 long scaled from the slide</td></tr>
+<tr><td>The 10 plate</td><td>PowerPoint 7 slide 11</td><td>75 x 45, 10 plate, 10 x 5 step, notch 16 x 22 with R10, 12 x 45 degree chamfer, hole 10 at 10, 10 (all given)</td></tr>
+<tr><td>Vee notch plate</td><td>PowerPoint 7 slide 12</td><td>90 x 50, R20, R10, 20 x 10 step, vee 15 wide x 10 deep at 30 degrees, hole 10 at 15, 15 (given); 10 thick assumed</td></tr>
+<tr><td>Clearance fit 42 H9/d10</td><td>PowerPoint 8 slides 4 to 5, Worksheet 14</td><td>Hole 42.000 to 42.062, shaft 41.820 to 41.920; collar 72 x 40 and shaft 120 assumed</td></tr>
+<tr><td>Transition fit 57 H7/n6</td><td>PowerPoint 8 slides 8 to 9, Worksheet 14</td><td>Hole 57.000 to 57.030, shaft 57.020 to 57.039</td></tr>
+<tr><td>Interference fit 80 H7/s6</td><td>PowerPoint 8 slides 6 to 7, Worksheet 14</td><td>Hole 80.000 to 80.030, shaft 80.059 to 80.078</td></tr>
+<tr><td>Stepped shaft</td><td>PowerPoint 9 slide 5</td><td>50 +/- 1, 70 +/- 1, 120 +/- 2 (given); diameters 55 and 40 scaled from the slide</td></tr>
+<tr><td>Flanged locator</td><td>PowerPoint 9 slide 6, Worksheet 15</td><td>Inch drawing converted: flange 2.000 x 0.375, boss 1.000 x 0.500, bore 0.500, 3 x 0.250 on 1.500 PCD, slot 0.380 to 0.750 from centre</td></tr>
+<tr><td>Bracket</td><td>Worksheet 13, drawing 1</td><td>100 x 120 x 20 base, upright to 75 with R25 and R10 hole, R7.5 hole 20 from the corner (given); upright 50 thick from R25</td></tr>
+<tr><td>Hanger bracket</td><td>Worksheet 13, drawing 2</td><td>Plate 130 x 25 x 5, holes 6, web 100 to a 40 boss 125 below, arms 15, R10, R5, bore 20 (given); web 5 thick, holes 7.5 from the ends scaled</td></tr>
+<tr><td>Clevis bracket</td><td>Worksheet 13, drawing 3</td><td>Base 26 x 60, sides 4 and 3 thick, 60 to 20 x 35 high, boss 24 with M12, 2 x 6 CSK 2 x 45 degrees, 42 apart, 9 from the ends (given); boss 22 up scaled</td></tr>
+</table></div>
+</main>
+<footer class="wrap">The source drawings are in the City and Guilds T Level Engineering Unit 3 teaching resources; the models are our own, built by models/cg32.py. Files for every model (STEP, STL, GLB, drawings as SVG and PNG, videos and build steps) are in docs/CG 3.2 drawings/.</footer>
+<script>
+fetch('../models.json').then(r => r.json()).then(cat => {
+  const ms = cat.filter(m => m.folder === 'CG 3.2 drawings');
+  const q = s => encodeURIComponent(s).replace(/%2F/g, '/');
+  document.getElementById('grid').innerHTML = ms.map(m => {
+    const base = '../' + q(m.base || '');
+    const d = m.drawings || {};
+    const dl = [['third', 'Third angle'], ['first', 'First angle'], ['section', 'Section']]
+      .filter(([k]) => d[k]).map(([k, t]) => `<a href="../${q(d[k])}.png">${t}</a>`).join(' ');
+    const v = 'viewer.html?m=' + m.name;
+    const vids = [['build', 'Build'], ['turntable', 'Spin'], ['views', 'Views'], ['section', 'Section cut']]
+      .map(([k, t]) => `<a href="${base}media/${m.name}_${k}.mp4">${t}</a>`).join(' ');
+    return `<div class="card"><a href="../${v}"><img src="${base}media/${m.name}_iso.png" alt="${m.title}" loading="lazy"></a><div class="b">
+      <h3>${m.title}</h3><div class="chips"><span class="chip">${m.size_mm.map(x => Math.round(x * 10) / 10).join(' x ')} mm</span></div>
+      <p>${m.description}</p>
+      <div class="links"><a class="btn" href="../${v}">3D viewer</a><a href="../${v}&tab=steps">Build steps</a></div>
+      <div class="links">Drawings: ${dl} · <a href="../${q(m.files.step)}">STEP</a></div>
+      <div class="links">Videos: ${vids}</div></div></div>`;
+  }).join('');
+});
+</script>
+</body>
+</html>

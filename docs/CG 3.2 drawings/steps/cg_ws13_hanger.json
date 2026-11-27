@@ -1,0 +1,138 @@
+{
+ "name": "cg_ws13_hanger",
+ "title": "CG 3.2: Worksheet 13 hanger bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Worksheet 13 hanger bracket: extrude the top plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ws13_hanger.ipt.",
+    "Start 2D Sketch on the XY Plane (the top). Draw a rectangle 130 by 25, centred.",
+    "Finish Sketch. Extrude: Distance 5. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Worksheet 13 hanger bracket: two holes 6 diameter",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = on the top face, 7.5 from each end on the centre line. Simple hole, diameter 6, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Worksheet 13 hanger bracket: extrude the web",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the XZ Plane (the front). Draw lines from the plate 100 apart down to touch a circle 40 diameter 125 below the plate, and close it round the circle.",
+    "Finish Sketch. Extrude: Symmetric, Distance 5, Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Worksheet 13 hanger bracket: cut the window",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the web face. Draw a triangle 15 in from each edge (the 15 arm width), then Fillet the sketch corners: R10 at the top two, R5 at the bottom.",
+    "Finish Sketch. Extrude: Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Worksheet 13 hanger bracket: extrude the boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the web face. Draw a circle 40 diameter at the bottom of the web.",
+    "Finish Sketch. Extrude: Symmetric, Distance 15, Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Worksheet 13 hanger bracket: bore 20 diameter",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Concentric with the boss, diameter 20, Through All. OK. Save."
+   ],
+   "note": "The web thickness (5) and the hole positions (7.5 from the ends) are scaled from the worksheet drawing.",
+   "parts": [
+    {
+     "name": "Worksheet 13 hanger bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_hanger/step_06.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_hanger/step_06.json"
+  }
+ ]
+}

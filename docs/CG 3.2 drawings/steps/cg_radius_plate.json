@@ -1,0 +1,96 @@
+{
+ "name": "cg_radius_plate",
+ "title": "CG 3.2: radius plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Radius plate: extrude the plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as radius_plate.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 60 by 40.",
+    "Finish Sketch. Extrude: Distance 10. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "radius plate",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_radius_plate/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_radius_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Radius plate: R5 corner (slide 9 a)",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: Radius 5, select the top left edge (the one through the thickness). OK.",
+    "On the drawing this is dimensioned R5 with one arrowhead, from the centre of the arc."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "radius plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_radius_plate/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_radius_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Radius plate: R15 hollow",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a circle R15 centred on the top right corner.",
+    "Finish Sketch. Extrude: Profile = the quarter circle inside the plate, Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "radius plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_radius_plate/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_radius_plate/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Radius plate: R5 blends (slide 9 b)",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: Radius 5, select the two sharp edges where the R15 hollow meets the top and the side. OK. Save.",
+    "The edge now runs R5 into R15: the reverse curve of slide 9 (b)."
+   ],
+   "note": "Slide 9 shows (a) and (b) as separate sketches with no overall sizes; they are put on one 60 x 40 x 10 plate here so learners can see both.",
+   "parts": [
+    {
+     "name": "radius plate",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_radius_plate/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_radius_plate/step_04.json"
+  }
+ ]
+}

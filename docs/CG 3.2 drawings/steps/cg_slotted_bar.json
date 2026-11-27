@@ -1,0 +1,141 @@
+{
+ "name": "cg_slotted_bar",
+ "title": "CG 3.2: slotted bar (four arrangements)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Slotted bar (four arrangements): extrude the bar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as slotted_bar.ipt.",
+    "Start 2D Sketch on the XY Plane (the front). Draw a rectangle 120 long and 48 high, corner on the origin.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Distance 25. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Slotted bar (four arrangements): cut step 1 (17 wide, 6 up)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 17 wide and 6 high on the bottom edge, starting 0 from the left end.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Slotted bar (four arrangements): cut step 2 (25 wide, 14 up)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 25 wide and 14 high on the bottom edge, starting 17 from the left end.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Slotted bar (four arrangements): cut step 3 (15 wide, 18 up)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 15 wide and 18 high on the bottom edge, starting 63 from the left end.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Slotted bar (four arrangements): cut step 4 (28 wide, 4 up)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 28 wide and 4 high on the bottom edge, starting 78 from the left end.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Slotted bar (four arrangements): cut step 5 (14 wide, 22 up)",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 14 wide and 22 high on the bottom edge, starting 106 from the left end.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK.",
+    "Save."
+   ],
+   "note": "The slides show this bar with no numbers (they teach the arrangement, not the sizes). The 120 length and the step sizes are scaled from slide 7. On the drawing it is dimensioned four ways: parallel, running, chain and combined.",
+   "parts": [
+    {
+     "name": "slotted bar (four arrangements)",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_slotted_bar/step_06.glb",
+   "edges": "CG 3.2 drawings/steps/cg_slotted_bar/step_06.json"
+  }
+ ]
+}

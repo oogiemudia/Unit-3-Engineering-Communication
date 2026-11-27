@@ -1,0 +1,94 @@
+{
+ "name": "cg_ws13_bracket",
+ "title": "CG 3.2: Worksheet 13 bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Worksheet 13 bracket: extrude the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ws13_bracket.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 100 wide and 120 deep.",
+    "Finish Sketch. Extrude: Distance 20. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 bracket",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_bracket/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_bracket/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Worksheet 13 bracket: extrude the upright",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the side (YZ) plane. Draw the upright: 50 thick at the back of the base, up to 75, with an R25 arc on top centred 75 up.",
+    "Finish Sketch. Extrude: Distance 100, Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_bracket/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_bracket/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Worksheet 13 bracket: hole R10 through the upright",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Concentric with the R25 arc, diameter 20 (R10), Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_bracket/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_bracket/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Worksheet 13 bracket: hole R7.5 in the base",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = on the top of the base, 20 from the front and 20 from the right end, diameter 15 (R7.5), Through All. OK. Save."
+   ],
+   "note": "The worksheet drawing is first angle (the plan is below the front view), so the upright is at the back. Its R20 marks the hole position 20 from the corner: the pictorial view shows a square corner.",
+   "parts": [
+    {
+     "name": "Worksheet 13 bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_bracket/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_bracket/step_04.json"
+  }
+ ]
+}

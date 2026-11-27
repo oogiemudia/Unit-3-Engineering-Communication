@@ -444,11 +444,14 @@ from esp2025 import MODELS as ESP2025_MODELS  # noqa: E402
 from worldskill import MODELS as WORLDSKILL_MODELS  # noqa: E402
 # Additional CAD exercise: CAD models of fifteen exercise drawings (textbook sheets, tutorials and isometrics)
 from exercises import MODELS as EXERCISE_MODELS  # noqa: E402
+# CG 3.2 drawings: CAD models of the City and Guilds criterion 3.2 drawings (PowerPoints 7 to 9, Worksheets 13 to 15)
+from cg32 import MODELS as CG32_MODELS  # noqa: E402
 
 MODELS += LIBRARY_MODELS
 MODELS += ESP2023_MODELS + ESP2026_MODELS + ESP2024_MODELS + ESP2025_MODELS
 MODELS += WORLDSKILL_MODELS
 MODELS += EXERCISE_MODELS
+MODELS += CG32_MODELS
 
 
 def base_of(m):

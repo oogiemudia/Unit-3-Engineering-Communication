@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><style>path,line,circle,polygon{fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round}.vis{stroke-width:0.5}.hid{stroke-width:0.25;stroke-dasharray:2.5,1.2}.ctr{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5;stroke:#1565D8}.dim{stroke-width:0.25}.thin{stroke-width:0.25}.hat{stroke-width:0.18}.bord{stroke-width:0.7}.cut{stroke-width:0.25;stroke-dasharray:8,1.5,1.5,1.5}.cutend{stroke-width:0.7}rect.bord,rect.thin{fill:none;stroke:#111}text{font-family:Arial,Helvetica,sans-serif;fill:#111}.arrow{fill:#111;stroke:none}</style><rect x="0" y="0" width="420" height="297" fill="#fff" stroke="none"/><path class="hat" d="M152.00,192.00 L153.50,193.50 M152.00,189.00 L156.50,193.50 M152.00,186.00 L159.50,193.50 M152.00,183.00 L162.50,193.50 M152.00,180.00 L165.50,193.50 M152.00,177.00 L168.50,193.50 M152.00,174.00 L171.50,193.50 M152.00,171.00 L174.50,193.50 M152.00,168.00 L177.50,193.50 M152.00,165.00 L180.50,193.50 M152.00,162.00 L183.50,193.50 M152.00,159.00 L186.50,193.50 M152.00,156.00 L189.50,193.50 M152.00,153.00 L192.50,193.50 M152.00,150.00 L195.50,193.50 M152.00,147.00 L198.50,193.50 M152.00,144.00 L201.50,193.50 M152.00,141.00 L204.50,193.50 M152.00,138.00 L207.50,193.50 M152.00,135.00 L210.50,193.50 M152.00,132.00 L213.50,193.50 M152.00,129.00 L216.50,193.50 M152.00,126.00 L219.50,193.50 M152.04,123.04 L222.50,193.50 M152.49,120.49 L225.50,193.50 M153.41,118.41 L228.50,193.50 M154.71,116.71 L231.50,193.50 M156.32,115.32 L234.50,193.50 M158.25,114.25 L237.50,193.50 M160.62,113.62 L240.50,193.50 M163.50,113.50 L243.50,193.50 M166.50,113.50 L246.50,193.50 M169.50,113.50 L249.50,193.50 M172.50,113.50 L252.50,193.50 M175.50,113.50 L255.50,193.50 M178.50,113.50 L258.50,193.50 M181.50,113.50 L261.50,193.50 M184.50,113.50 L264.50,193.50 M187.50,113.50 L267.50,193.50 M190.50,113.50 L270.50,193.50 M193.50,113.50 L272.00,192.00 M196.50,113.50 L272.00,189.00 M199.50,113.50 L272.00,186.00 M202.50,113.50 L272.00,183.00 M205.50,113.50 L272.00,180.00 M208.50,113.50 L272.00,177.00 M211.50,113.50 L272.00,174.00 M214.50,113.50 L272.00,171.00 M217.50,113.50 L272.00,168.00 M220.50,113.50 L272.00,165.00 M223.50,113.50 L272.00,162.00 M226.50,113.50 L272.00,159.00 M229.50,113.50 L272.00,156.00 M232.50,113.50 L244.57,125.57 M259.93,140.93 L272.00,153.00 M235.88,113.88 L242.93,120.93 M264.57,142.57 L271.62,149.62"/>
+<path class="vis" d="M272.00,193.50 L272.00,152.23 M264.50,142.55 L266.05,143.09 L267.50,143.88 L268.79,144.89 L269.91,146.11 L270.80,147.49 L271.46,148.99 L271.86,150.59 L272.00,152.23 M272.00,193.50 L152.00,193.50 M264.50,142.55 L261.73,141.69 L259.05,140.56 L256.49,139.18 L254.08,137.56 L251.84,135.72 L249.78,133.66 L247.94,131.42 L246.32,129.01 L244.94,126.45 L243.81,123.77 L242.95,121.00 M233.27,113.50 L234.91,113.64 L236.51,114.04 L238.01,114.70 L239.39,115.59 L240.61,116.71 L241.62,118.00 L242.41,119.45 L242.95,121.00 M233.27,113.50 L162.00,113.50 M152.00,123.50 L152.15,121.76 L152.60,120.08 L153.34,118.50 L154.34,117.07 L155.57,115.84 L157.00,114.84 L158.58,114.10 L160.26,113.65 L162.00,113.50 M152.00,193.50 L152.00,123.50"/>
+<line class="ctr" x1="249.50" y1="152.30" x2="274.50" y2="152.30"/>
+<line class="ctr" x1="262.00" y1="139.80" x2="262.00" y2="164.80"/>
+<line class="ctr" x1="239.50" y1="113.50" x2="304.50" y2="113.50"/>
+<line class="ctr" x1="272.00" y1="81.00" x2="272.00" y2="146.00"/>
+<line class="ctr" x1="220.70" y1="123.50" x2="245.70" y2="123.50"/>
+<line class="ctr" x1="233.20" y1="111.00" x2="233.20" y2="136.00"/>
+<line class="ctr" x1="149.50" y1="123.50" x2="174.50" y2="123.50"/>
+<line class="ctr" x1="162.00" y1="111.00" x2="162.00" y2="136.00"/>
+<text x="212.00" y="201.50" font-size="3.00" text-anchor="middle" font-weight="bold">SECTION A-A</text>
+<path class="hid" d="M152.00,87.50 L272.00,87.50 M272.00,87.50 L272.00,67.50 M152.00,87.50 L152.00,67.50 M152.00,67.50 L272.00,67.50"/>
+<path class="vis" d="M272.00,87.50 L271.96,87.50 L271.82,87.50 L271.60,87.50 L271.30,87.50 L270.91,87.50 L270.45,87.50 L269.91,87.50 L269.29,87.50 L268.62,87.50 L267.89,87.50 L267.10,87.50 L266.27,87.50 L265.40,87.50 L264.50,87.50 M264.50,87.50 L262.31,87.50 L260.18,87.50 L258.12,87.50 L256.14,87.50 L254.25,87.50 L252.46,87.50 L250.79,87.50 L249.24,87.50 L247.82,87.50 L246.54,87.50 L245.40,87.50 L244.43,87.50 L243.61,87.50 L242.95,87.50 M242.95,87.50 L242.67,87.50 L242.31,87.50 L241.87,87.50 L241.35,87.50 L240.77,87.50 L240.11,87.50 L239.39,87.50 L238.62,87.50 L237.81,87.50 L236.95,87.50 L236.06,87.50 L235.14,87.50 L234.21,87.50 L233.27,87.50 M152.00,87.50 L152.06,87.50 L152.25,87.50 L152.56,87.50 L152.99,87.50 L153.53,87.50 L154.18,87.50 L154.93,87.50 L155.77,87.50 L156.68,87.50 L157.66,87.50 L158.70,87.50 L159.77,87.50 L160.88,87.50 L162.00,87.50 M162.00,87.50 L233.27,87.50 M272.00,87.50 L272.00,67.50 M272.00,67.50 L271.96,67.50 L271.82,67.50 L271.60,67.50 L271.30,67.50 L270.91,67.50 L270.45,67.50 L269.91,67.50 L269.29,67.50 L268.62,67.50 L267.89,67.50 L267.10,67.50 L266.27,67.50 L265.40,67.50 L264.50,67.50 M264.50,67.50 L262.31,67.50 L260.18,67.50 L258.12,67.50 L256.14,67.50 L254.25,67.50 L252.46,67.50 L250.79,67.50 L249.24,67.50 L247.82,67.50 L246.54,67.50 L245.40,67.50 L244.43,67.50 L243.61,67.50 L242.95,67.50 M152.00,87.50 L152.00,67.50 M242.95,67.50 L242.67,67.50 L242.31,67.50 L241.87,67.50 L241.35,67.50 L240.77,67.50 L240.11,67.50 L239.39,67.50 L238.62,67.50 L237.81,67.50 L236.95,67.50 L236.06,67.50 L235.14,67.50 L234.21,67.50 L233.27,67.50 M152.00,67.50 L152.06,67.50 L152.25,67.50 L152.56,67.50 L152.99,67.50 L153.53,67.50 L154.18,67.50 L154.93,67.50 L155.77,67.50 L156.68,67.50 L157.66,67.50 L158.70,67.50 L159.77,67.50 L160.88,67.50 L162.00,67.50 M162.00,67.50 L233.27,67.50 M264.50,87.50 L264.50,67.50 M242.95,87.50 L242.95,67.50 M233.27,87.50 L233.27,67.50 M162.00,87.50 L162.00,67.50"/>
+<line class="ctr" x1="262.00" y1="90.00" x2="262.00" y2="65.00"/>
+<line class="ctr" x1="272.00" y1="90.00" x2="272.00" y2="65.00"/>
+<line class="ctr" x1="233.27" y1="90.00" x2="233.27" y2="65.00"/>
+<line class="ctr" x1="162.00" y1="90.00" x2="162.00" y2="65.00"/>
+<text x="212.00" y="95.50" font-size="3.00" text-anchor="middle" font-weight="bold">PLAN</text>
+<line class="cut" x1="144.00" y1="77.50" x2="280.00" y2="77.50"/>
+<line class="cutend" x1="144.00" y1="77.50" x2="150.00" y2="77.50"/>
+<line class="cutend" x1="274.00" y1="77.50" x2="280.00" y2="77.50"/>
+<line class="cutend" x1="145.00" y1="77.50" x2="145.00" y2="84.50"/>
+<polygon class="arrow" points="145.00,86.00 145.90,83.00 144.10,83.00"/>
+<text x="141.50" y="86.50" font-size="4.50" text-anchor="middle" font-weight="bold">A</text>
+<line class="cutend" x1="279.00" y1="77.50" x2="279.00" y2="84.50"/>
+<polygon class="arrow" points="279.00,86.00 279.90,83.00 278.10,83.00"/>
+<text x="282.50" y="86.50" font-size="4.50" text-anchor="middle" font-weight="bold">A</text>
+<text x="22.00" y="248.00" font-size="2.80" text-anchor="start" font-weight="normal">Section A-A: the cutting plane runs through the centre. Hatching at 45 degrees shows cut material.</text>
+<rect class="bord" x="10" y="10" width="400" height="277"/>
+<rect class="thin" x="230" y="252" width="180" height="35"/>
+<line class="thin" x1="230.00" y1="259.00" x2="410.00" y2="259.00"/>
+<line class="thin" x1="230.00" y1="266.00" x2="410.00" y2="266.00"/>
+<line class="thin" x1="230.00" y1="273.00" x2="410.00" y2="273.00"/>
+<line class="thin" x1="230.00" y1="280.00" x2="410.00" y2="280.00"/>
+<line class="thin" x1="290.00" y1="252.00" x2="290.00" y2="280.00"/>
+<line class="thin" x1="350.00" y1="252.00" x2="350.00" y2="280.00"/>
+<text x="231.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Legal owner</text>
+<text x="231.50" y="258.10" font-size="1.94" text-anchor="start" font-weight="normal">T Level Engineering, Unit 3 (City and Guilds 3.2)</text>
+<text x="291.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Document type</text>
+<text x="291.50" y="258.10" font-size="2.90" text-anchor="start" font-weight="normal">Detail drawing</text>
+<text x="351.50" y="254.60" font-size="1.80" text-anchor="start" font-weight="normal">Identification number</text>
+<text x="351.50" y="258.10" font-size="3.20" text-anchor="start" font-weight="bold">CG-03-S</text>
+<text x="231.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Title</text>
+<text x="231.50" y="265.10" font-size="2.88" text-anchor="start" font-weight="bold">CG 3.2: radius plate, section A-A</text>
+<text x="291.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Material</text>
+<text x="291.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">See parts list</text>
+<text x="351.50" y="261.60" font-size="1.80" text-anchor="start" font-weight="normal">Revision</text>
+<text x="351.50" y="265.10" font-size="2.90" text-anchor="start" font-weight="normal">A</text>
+<text x="231.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Created by</text>
+<text x="231.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">Unit 3 CAD hub</text>
+<text x="291.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Approved by</text>
+<text x="291.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">(tutor)</text>
+<text x="351.50" y="268.60" font-size="1.80" text-anchor="start" font-weight="normal">Date of issue</text>
+<text x="351.50" y="272.10" font-size="2.90" text-anchor="start" font-weight="normal">2026-11-27</text>
+<text x="231.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Scale</text>
+<text x="231.50" y="279.10" font-size="3.20" text-anchor="start" font-weight="bold">2:1</text>
+<text x="291.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Units</text>
+<text x="291.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">mm</text>
+<text x="351.50" y="275.60" font-size="1.80" text-anchor="start" font-weight="normal">Sheet</text>
+<text x="351.50" y="279.10" font-size="2.90" text-anchor="start" font-weight="normal">1 of 1</text>
+<text x="231.50" y="282.80" font-size="1.80" text-anchor="start" font-weight="normal">Projection</text>
+<polygon class="vis" points="258.88,282.54 264.38,281.30 264.38,286.25 258.88,285.01"/>
+<circle class="vis" cx="254.47" cy="283.78" r="2.48"/>
+<circle class="vis" cx="254.47" cy="283.78" r="1.24"/>
+<line class="ctr" x1="250.50" y1="283.78" x2="265.88" y2="283.78"/>
+<line class="ctr" x1="254.47" y1="279.80" x2="254.47" y2="287.75"/>
+<text x="292.00" y="284.50" font-size="2.20" text-anchor="start" font-weight="normal">Third angle projection. Drawn from the CAD model with hidden line removal.</text></svg>

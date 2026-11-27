@@ -1,0 +1,137 @@
+{
+ "name": "cg_ten_plate",
+ "title": "CG 3.2: the 10 plate",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "The 10 plate: extrude the 10 plate",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ten_plate.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 75 by 45.",
+    "Finish Sketch. Extrude: Distance 10 (the leader note says 10 PLATE). OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "The 10 plate: cut the 10 x 5 step",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 10 wide and 5 deep at the top left corner.",
+    "Finish Sketch. Extrude: Cut, Through All. OK. The left edge is now 40 high."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "The 10 plate: cut the corner notch",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle from 59 along the top (10 + 49) to the right end, down to 23 above the base (12 + 11).",
+    "Finish Sketch. Extrude: Cut, Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "The 10 plate: R10 in the notch",
+   "command": "3D Model tab > Modify panel > Fillet",
+   "actions": [
+    "Fillet: Radius 10, select the inside corner edge of the notch. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "The 10 plate: chamfer the corner 12 x 45 degrees",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: Equal distance 12, select the bottom right edge. OK. The angle between the chamfer and the base is 135 degrees, as dimensioned."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "The 10 plate: hole 10 diameter",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = on the front face, 10 from the left and 10 from the bottom. Simple hole, diameter 10, Through All. OK. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "the 10 plate",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ten_plate/step_06.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ten_plate/step_06.json"
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "name": "cg_fit_clearance",
+ "title": "CG 3.2: clearance fit 42 H9/d10",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Housing: extrude the collar",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as housing.ipt.",
+    "Start 2D Sketch on the XZ Plane. Draw a circle 72 diameter on the origin.",
+    "Finish Sketch. Extrude: Distance 40. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Housing: the bore, 42 H9",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = Concentric on the end face, Simple hole, diameter 42, Through All.",
+    "Tolerance: in the Hole dialog (or on the drawing) set the fit class H9: hole 42.000 to 42.062. The model is made at the nominal 42; the limits go on the drawing."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Housing: chamfer the bore",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: Distance 1, select both bore edges (a lead in for the shaft). OK. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Shaft: extrude 42 d10",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as shaft.ipt.",
+    "Start 2D Sketch on the XZ Plane. Draw a circle 42 diameter.",
+    "Finish Sketch. Extrude: Distance 120. OK.",
+    "Tolerance: d10, so the shaft 41.820 to 41.920. Modelled at the nominal 42."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "Shaft",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Shaft: chamfer the lead end",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: Distance 1.5, select the circular edge at the lead end. OK. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "Shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_05.json"
+  },
+  {
+   "n": 6,
+   "title": "Assemble: shaft into housing",
+   "command": "Assemble tab > Component panel > Place",
+   "actions": [
+    "File > New > Standard (mm).iam and save it as fit_clearance.iam.",
+    "Place housing.ipt (grounded) and shaft.ipt.",
+    "Constrain: Insert, the shaft chamfer edge to the bore edge, offset 20 (half way in). OK.",
+    "Inspect tab > Analyze Interference shows none, because both parts are at the nominal size. The real fit (clearance) comes from the tolerances: use Design tab > Limits/Fits Mechanical to check it. Save."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Housing",
+     "colour": "#8A96A8",
+     "new": false,
+     "added": false,
+     "removed": false
+    },
+    {
+     "name": "Shaft",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_fit_clearance/step_06.glb",
+   "edges": "CG 3.2 drawings/steps/cg_fit_clearance/step_06.json"
+  }
+ ]
+}
