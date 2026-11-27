@@ -330,7 +330,8 @@ PROJECTS = {'ESP 2023': dict(owner='Lock Restoration Ltd', date='2026-11-10', pr
             'ESP 2025': dict(owner='WBEP Ltd for the health trust', date='2026-11-10', prefix='ESP25'),
             'GrabCAD models': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='GC'),
             'World Skill': dict(owner='WorldSkills UK CAD practice, 2022', date='2026-11-11', prefix='WS'),
-            'Additional CAD exercise': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='AX')}
+            'Additional CAD exercise': dict(owner='T Level Engineering, Unit 3', date='2026-11-11', prefix='AX'),
+            'CG 3.2 drawings': dict(owner='T Level Engineering, Unit 3 (City and Guilds 3.2)', date='2026-11-27', prefix='CG')}
 
 
 def owner_of(m):
@@ -352,7 +353,7 @@ def material_of(m):
         return ESP_MATERIAL[m['name']]
     if m['name'] in WORLDSKILL_MATERIAL:
         return WORLDSKILL_MATERIAL[m['name']]
-    if m.get('folder') == 'Additional CAD exercise':
+    if m.get('folder') in ('Additional CAD exercise', 'CG 3.2 drawings'):
         return m.get('material') or 'See parts list'
     if m.get('sub') or m.get('folder') == 'GrabCAD models':
         return 'See parts list'        # a sub-assembly: its parts list gives the material of each part

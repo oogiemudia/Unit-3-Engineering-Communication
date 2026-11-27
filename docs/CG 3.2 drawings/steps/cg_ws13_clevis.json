@@ -1,0 +1,117 @@
+{
+ "name": "cg_ws13_clevis",
+ "title": "CG 3.2: Worksheet 13 clevis bracket",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Worksheet 13 clevis bracket: extrude the base",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as ws13_clevis.ipt.",
+    "Start 2D Sketch on the XY Plane. Draw a rectangle 26 by 60.",
+    "Finish Sketch. Extrude: Distance 3. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 clevis bracket",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_clevis/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_clevis/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Worksheet 13 clevis bracket: extrude the two sides",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the YZ Plane (the end). Draw the trapezium: 60 at the base, 20 at the top, 35 high.",
+    "Finish Sketch. Extrude the left side 4 thick and the right side 3 thick, Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 clevis bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_clevis/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_clevis/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Worksheet 13 clevis bracket: boss 24 diameter",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the outside face of the left side. Draw a circle 24 diameter, 22 up and central.",
+    "Finish Sketch. Extrude: Distance 4, Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 clevis bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_clevis/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_clevis/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Worksheet 13 clevis bracket: M12 thread and 12 hole",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Concentric with the boss, Tapped hole, M12 x 1.75, through the boss and the left side.",
+    "Hole: in line, on the right side, Simple hole, diameter 12, Through. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "Worksheet 13 clevis bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_clevis/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_clevis/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Worksheet 13 clevis bracket: two countersunk holes 6 diameter",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Placement = on the base, 13 from the side and 9 from each end (42 apart). Countersink, diameter 6, countersink 2 x 45 degrees, Through All. OK. Save."
+   ],
+   "note": "The boss height (22) and its 4 projection are scaled from the worksheet drawing. The tapped hole is modelled at the tap drill size (10.2) with an M12 cosmetic thread, as Inventor does.",
+   "parts": [
+    {
+     "name": "Worksheet 13 clevis bracket",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_ws13_clevis/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_ws13_clevis/step_05.json"
+  }
+ ]
+}

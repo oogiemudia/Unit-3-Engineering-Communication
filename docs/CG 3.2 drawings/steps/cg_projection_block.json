@@ -1,0 +1,52 @@
+{
+ "name": "cg_projection_block",
+ "title": "CG 3.2: projection line block",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Projection line block: extrude the block",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as projection_block.ipt.",
+    "Start 2D Sketch on the XY Plane (the front). Draw a rectangle 45 wide and 25 high, corner on the origin. Add the 45 and 25 dimensions with the Dimension tool.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Distance 20. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "projection line block",
+     "colour": "#C9D3DD",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_projection_block/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_projection_block/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Projection line block: cut the step",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle from 20 along the top edge to the right end, 6 deep.",
+    "Finish Sketch. Extrude: Profile = the rectangle, Cut, Through All. OK. Save."
+   ],
+   "note": "Only the 45 is given on the slide; the 25 height, the 20 x 6 step and the 20 depth are scaled from it.",
+   "parts": [
+    {
+     "name": "projection line block",
+     "colour": "#C9D3DD",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_projection_block/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_projection_block/step_02.json"
+  }
+ ]
+}

@@ -1,0 +1,117 @@
+{
+ "name": "cg_flanged_locator",
+ "title": "CG 3.2: flanged locator (GDT)",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Flanged locator (GDT): extrude the flange",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as flanged_locator.ipt.",
+    "Start 2D Sketch on the XZ Plane (the front). Draw a circle 2.000 in (50.8 mm) diameter on the origin.",
+    "Finish Sketch. Extrude: Distance 0.375 in (9.53 mm). OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged locator (GDT)",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_flanged_locator/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_flanged_locator/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Flanged locator (GDT): extrude the boss",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the back face. Draw a circle 1.000 in (25.4 mm) diameter, concentric.",
+    "Finish Sketch. Extrude: Distance 0.500 in (12.7 mm), Join. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged locator (GDT)",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_flanged_locator/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_flanged_locator/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Flanged locator (GDT): centre bore",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Hole: Concentric on the front face, diameter 0.500 in (12.7 mm), Through All. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged locator (GDT)",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_flanged_locator/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_flanged_locator/step_03.json"
+  },
+  {
+   "n": 4,
+   "title": "Flanged locator (GDT): three holes on the pitch circle",
+   "command": "3D Model tab > Modify panel > Hole",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a construction circle 1.500 in (38.1 mm) diameter. Put hole centres on it at 3, 6 and 9 o'clock.",
+    "Finish Sketch. Hole: From Sketch, diameter 0.250 in (6.35 mm), Through the flange. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "flanged locator (GDT)",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_flanged_locator/step_04.glb",
+   "edges": "CG 3.2 drawings/steps/cg_flanged_locator/step_04.json"
+  },
+  {
+   "n": 5,
+   "title": "Flanged locator (GDT): slot at the top",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the front face. Draw a rectangle 0.380 in (9.65 mm) wide, centred on the vertical centre line, from the rim down to 0.750 in (19.05 mm) above the centre.",
+    "Finish Sketch. Extrude: Cut, Distance = the flange thickness. OK. Save."
+   ],
+   "note": "The City and Guilds drawing is in inches; each size is converted (x 25.4). The upper limit of each size is used (2.000, 1.000, 0.500). The GDT frames (perpendicularity, position, parallelism, flatness) go on the drawing, not in the model.",
+   "parts": [
+    {
+     "name": "flanged locator (GDT)",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_flanged_locator/step_05.glb",
+   "edges": "CG 3.2 drawings/steps/cg_flanged_locator/step_05.json"
+  }
+ ]
+}

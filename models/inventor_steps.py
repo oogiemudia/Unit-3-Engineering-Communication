@@ -687,3 +687,5 @@ STEPS.update(WORLDSKILL_STEPS)
 
 from exercises import STEPS as EXERCISE_STEPS  # noqa: E402
 STEPS.update(EXERCISE_STEPS)
+from cg32 import STEPS as CG32_STEPS  # noqa: E402
+STEPS.update(CG32_STEPS)

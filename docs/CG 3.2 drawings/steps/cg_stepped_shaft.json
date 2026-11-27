@@ -1,0 +1,73 @@
+{
+ "name": "cg_stepped_shaft",
+ "title": "CG 3.2: stepped shaft 120 +/- 2",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Stepped shaft 120 +/- 2: extrude the 55 diameter",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as stepped_shaft.ipt.",
+    "Start 2D Sketch on the YZ Plane (the end). Draw a circle 55 diameter on the origin.",
+    "Finish Sketch. Extrude: Distance 50 (50 +/- 1 on the drawing). OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "stepped shaft 120 +/- 2",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_stepped_shaft/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_stepped_shaft/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Stepped shaft 120 +/- 2: extrude the 40 diameter",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "Start 2D Sketch on the end face. Draw a circle 40 diameter, concentric.",
+    "Finish Sketch. Extrude: Distance 70 (70 +/- 1), Join. OK. Overall 120 (120 +/- 2)."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "stepped shaft 120 +/- 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_stepped_shaft/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_stepped_shaft/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Stepped shaft 120 +/- 2: chamfer both ends",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: Distance 1, select the two end edges. OK. Save."
+   ],
+   "note": "PowerPoint 9 slide 5 gives the lengths 50 +/- 1, 70 +/- 1 and 120 +/- 2 but no diameters; 55 and 40 are scaled from the slide.",
+   "parts": [
+    {
+     "name": "stepped shaft 120 +/- 2",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_stepped_shaft/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_stepped_shaft/step_03.json"
+  }
+ ]
+}

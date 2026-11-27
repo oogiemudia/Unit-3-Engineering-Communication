@@ -1,0 +1,74 @@
+{
+ "name": "cg_domed_pin",
+ "title": "CG 3.2: domed pin SR30",
+ "software": "Autodesk Inventor",
+ "steps": [
+  {
+   "n": 1,
+   "title": "Domed pin SR30: extrude the pin",
+   "command": "3D Model tab > Create panel > Extrude",
+   "actions": [
+    "File > New > Standard (mm).ipt and save it as domed_pin.ipt.",
+    "Start 2D Sketch on the YZ Plane (the end). Draw a circle 24 diameter on the origin.",
+    "Finish Sketch. Extrude: Distance 50. OK."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "domed pin SR30",
+     "colour": "#9AA6B2",
+     "new": true,
+     "added": false,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_domed_pin/step_01.glb",
+   "edges": "CG 3.2 drawings/steps/cg_domed_pin/step_01.json"
+  },
+  {
+   "n": 2,
+   "title": "Domed pin SR30: spherical end SR30",
+   "command": "3D Model tab > Create panel > Revolve",
+   "actions": [
+    "Start 2D Sketch on the XY Plane. Draw an arc of radius 30 across the end face, its centre on the axis, from the top edge to the bottom edge of the pin, and close it with a line down the end face.",
+    "Finish Sketch. Revolve: Profile = the dome, Axis = the pin axis, Full, Join. OK.",
+    "On the drawing this is SR30: S for spherical, R for radius."
+   ],
+   "note": null,
+   "parts": [
+    {
+     "name": "domed pin SR30",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": true,
+     "removed": false
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_domed_pin/step_02.glb",
+   "edges": "CG 3.2 drawings/steps/cg_domed_pin/step_02.json"
+  },
+  {
+   "n": 3,
+   "title": "Domed pin SR30: chamfer the other end",
+   "command": "3D Model tab > Modify panel > Chamfer",
+   "actions": [
+    "Chamfer: Distance 1, select the circular edge at the flat end. OK. Save."
+   ],
+   "note": "Only SR30 is given on slide 9 (c); the 24 diameter and 50 length are scaled from the slide.",
+   "parts": [
+    {
+     "name": "domed pin SR30",
+     "colour": "#9AA6B2",
+     "new": false,
+     "added": false,
+     "removed": true
+    }
+   ],
+   "overlay": false,
+   "glb": "CG 3.2 drawings/steps/cg_domed_pin/step_03.glb",
+   "edges": "CG 3.2 drawings/steps/cg_domed_pin/step_03.json"
+  }
+ ]
+}
